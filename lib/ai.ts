@@ -4,7 +4,7 @@ const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-export const MODEL = "claude-sonnet-4-20250514";
+export const MODEL = "claude-sonnet-4-5";
 
 // All Anthropic Claude API calls go through this file.
 // Do not import @anthropic-ai/sdk directly in route handlers or components.
