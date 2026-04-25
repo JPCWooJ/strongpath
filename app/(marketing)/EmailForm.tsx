@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-export function EmailForm({ dark = false }: { dark?: boolean }) {
+export function EmailForm({ dark = false, source = 'unknown' }: { dark?: boolean; source?: string }) {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
@@ -16,7 +16,7 @@ export function EmailForm({ dark = false }: { dark?: boolean }) {
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source }),
       })
 
       if (res.ok) {

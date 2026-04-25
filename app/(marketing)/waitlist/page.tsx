@@ -16,7 +16,7 @@ export default function WaitlistPage() {
         notified first.
       </p>
 
-      <EmailForm />
+      <EmailForm source="waitlist" />
 
       <p className="text-sm text-gray-400 italic leading-relaxed mt-12">
         This content is for informational and educational purposes only. It does not constitute
