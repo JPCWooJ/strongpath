@@ -4,6 +4,27 @@ Significant technical decisions for the StrongPath repo. Each entry records what
 
 ---
 
+## 2026-04-25 — Vercel env vars must be set via REST API, not PowerShell pipe
+
+**Status:** Accepted (operational rule)
+**Backlog item:** P0-04 (discovered during Klaviyo wiring)
+
+**Decision:** All Vercel environment variable values must be written via the Vercel REST API using explicit UTF-8 no-BOM encoding (`[System.Text.UTF8Encoding]::new($false)`). Never use PowerShell `echo $value | npx vercel env add` or any PowerShell pipe to set env var values.
+
+**Rationale:** PowerShell 5.1 on Windows prepends a UTF-16 BOM (U+FEFF, character value 65279) to strings when they pass through the pipeline. The Vercel CLI stores the BOM as part of the value. When the value is later used in an HTTP `Authorization` header, Node.js's `fetch()` throws `Cannot convert argument to a ByteString because the character at index N has a value of 65279 which is greater than 255` — because HTTP header values must be pure Latin-1 (≤ 255). The error only manifests in production (Vercel Functions); local dev reads from `.env.local` which was written directly without a pipe and has no BOM.
+
+**How to set Vercel env vars safely:**
+```powershell
+$utf8NoBom = [System.Text.UTF8Encoding]::new($false)
+$json = '{"key":"VAR_NAME","value":"value","type":"encrypted","target":["production","preview","development"]}'
+Invoke-RestMethod -Uri "https://api.vercel.com/v10/projects/$projectId/env?teamId=$teamId" `
+  -Method POST -Headers $hdrs -Body ($utf8NoBom.GetBytes($json))
+```
+
+**Verify after setting:** Decrypt and check `[int][char]$val[0]` — must not be 65279.
+
+---
+
 ## 2026-04-24 — Wire Sanity CMS to blog pages (P0-02)
 
 **Status:** Accepted
