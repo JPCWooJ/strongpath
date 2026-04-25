@@ -26,7 +26,7 @@
 | Styling | Tailwind CSS 3 | utility classes only, no custom CSS files |
 | CMS | Sanity 3 | `content/schemas/`, fetched via GROQ in `lib/sanity.ts` |
 | Database + Auth | Supabase | `lib/supabase.ts` |
-| AI | **Anthropic Claude API, model `claude-sonnet-4-20250514`** | `lib/ai.ts` |
+| AI | **Anthropic Claude API, model `claude-sonnet-4-5`** | `lib/ai.ts` |
 | Email — transactional | Resend | `lib/email.ts` |
 | Email — marketing | Klaviyo | `lib/email.ts` |
 | Payments | Stripe | `lib/stripe.ts` |
@@ -46,7 +46,7 @@
 ## 3. Non-negotiables
 
 <important if="writing code that uses an AI API">
-Use Anthropic Claude API. Never OpenAI. Model: `claude-sonnet-4-20250514`. The `@anthropic-ai/sdk` package. This is a platform decision, not a preference.
+Use Anthropic Claude API. Never OpenAI. Model: `claude-sonnet-4-5`. The `@anthropic-ai/sdk` package. This is a platform decision, not a preference.
 </important>
 
 <important if="adding or editing a blog page or post display">

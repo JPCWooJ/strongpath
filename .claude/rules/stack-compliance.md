@@ -18,7 +18,7 @@ Use these and only these for the layers they cover:
 | Styling | **Tailwind CSS 3** | Utility classes only. No custom CSS files. No CSS-in-JS. |
 | CMS | **Sanity 3** | GROQ queries live in `lib/sanity.ts`. |
 | Database + Auth | **Supabase** | Single client in `lib/supabase.ts`. |
-| AI | **Anthropic Claude API** (`@anthropic-ai/sdk`) | Model: `claude-sonnet-4-20250514`. Wrapper in `lib/ai.ts`. |
+| AI | **Anthropic Claude API** (`@anthropic-ai/sdk`) | Model: `claude-sonnet-4-5`. Wrapper in `lib/ai.ts`. |
 | Email — transactional | **Resend** | Wrapper in `lib/email.ts`. |
 | Email — marketing | **Klaviyo** | Same `lib/email.ts` file, separate functions. |
 | Payments | **Stripe** | Wrapper in `lib/stripe.ts`. |
@@ -88,3 +88,11 @@ Sometimes the canonical stack genuinely doesn't fit a task. When that happens:
 4. If not approved, find a way to solve the problem with the approved stack.
 
 Stack deviations are allowed. Silent stack deviations are not.
+
+---
+
+## Change log
+
+| Date | Change |
+|---|---|
+| April 24, 2026 | Updated model identifier from `claude-sonnet-4-20250514` to `claude-sonnet-4-5` to match STACK.md. Sonnet 4 retiring May 14, 2026. |
