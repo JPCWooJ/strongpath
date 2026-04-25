@@ -4,6 +4,19 @@ Significant technical decisions for the StrongPath repo. Each entry records what
 
 ---
 
+## 2026-04-24 — Wire Sanity CMS to blog pages (P0-02)
+
+**Status:** Accepted
+**Backlog item:** P0-02
+
+**Decision:** Embed Sanity Studio inside the Next.js app at `/studio` (via `app/studio/[[...tool]]/page.tsx` using `next-sanity`'s `<NextStudio>` component) rather than running it as a separate app in a `/sanity` folder. GROQ query helpers (`postsQuery`, `postQuery`) and the Sanity client live in `lib/sanity.ts` following the BP-05 wrapper pattern. Blog routes live in `app/(marketing)/blog/`. `next-sanity` pinned to v9 — v12+ requires Next.js 16, which is outside the current stack.
+
+**Rationale:** A single-repo, single-Vercel-deployment setup is simpler to maintain at this stage than a split repo. The embedded Studio approach (`<NextStudio>`) is the `next-sanity` v9 recommended pattern for Next.js 14 App Router. Sanity's own auth (Google/GitHub) gates Studio access, so no additional auth layer is needed in Phase 1 — revisit before launch. A bare layout at `app/studio/layout.tsx` prevents root layout CSS from conflicting with Studio's own styles.
+
+**Alternatives considered:** Separate `/sanity` folder with `sanity dev`. Rejected because it requires a second process, complicates Vercel deployment, and adds no benefit at current scale.
+
+---
+
 ## 2026-04-24 — Wire Anthropic Claude API (P0-01)
 
 **Status:** Accepted
