@@ -4,6 +4,19 @@ Significant technical decisions for the StrongPath repo. Each entry records what
 
 ---
 
+## 2026-04-24 — Wire Anthropic Claude API (P0-01)
+
+**Status:** Accepted
+**Backlog item:** P0-01
+
+**Decision:** Install `@anthropic-ai/sdk` and wire it through a single wrapper at `lib/ai.ts`. Model pinned to `claude-sonnet-4-5`. `ANTHROPIC_API_KEY` read from `process.env`. A dev-only verification route ships at `app/api/ai/test/route.ts`, guarded to return 404 in production; it will be removed or auth-protected before launch.
+
+**Rationale:** Follows BP-05 wrapper pattern (stack-compliance.md §4). All Claude API calls go through `lib/ai.ts`; no route handler or component imports `@anthropic-ai/sdk` directly. This keeps vendor surface area in one file, makes key rotation and model upgrades a single-file change, and satisfies the stack-compliance rule that forbids direct SDK imports outside `lib/`. `generateText()` defaults to `max_tokens: 1024` (advisor shape per STACK.md §AI Layer). Content-generation calls, when added, will get a separate function with `max_tokens: 4096`.
+
+**Alternatives considered:** None — Anthropic is the mandated AI provider (CLAUDE.md §3). The wrapper-per-file pattern is also mandated; no alternatives were evaluated.
+
+---
+
 ## 2026-04-22 — Replace hackathon archive with fresh repo
 
 **Status:** Accepted
