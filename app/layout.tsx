@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "StrongPath",
-  description: "Evidence-based strength for adults who refuse to accept muscle loss as inevitable.",
+  description: "An evidence-based strength platform for adults who refuse to accept muscle loss as inevitable.",
 };
 
 export default function RootLayout({
