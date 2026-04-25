@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Required for embedded Sanity Studio in Next.js 14
-  transpilePackages: ['next-sanity'],
+  // 'sanity' must be listed — the Studio code lives there, not just in next-sanity
+  transpilePackages: ['next-sanity', 'sanity', '@sanity/ui', '@sanity/icons'],
 }
 
 export default nextConfig;
