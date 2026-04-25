@@ -82,7 +82,7 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto px-6 py-16 text-center">
             <h2 className="text-2xl font-bold mb-2">Stay informed.</h2>
             <p className="text-gray-400 mb-8">Get updates when StrongPath launches.</p>
-            <EmailForm />
+            <EmailForm source="footer" />
           </div>
         </section>
       </main>
