@@ -4,6 +4,25 @@ Significant technical decisions for the StrongPath repo. Each entry records what
 
 ---
 
+## 2026-04-25 — FTC disclosure enforcement: ESLint rule (P0-05)
+
+**Status:** Accepted
+**Backlog item:** P0-05
+
+**Decision:** Enforce that any page importing `AmazonLink` also imports `FTCDisclosure` via a custom ESLint rule (`local-rules/amazon-link-requires-ftc-disclosure`) implemented with `eslint-plugin-local-rules` and defined in `eslint-local-rules.js`.
+
+**Alternatives considered:**
+- **Runtime dev-mode warning (React context):** Would require a shared context provider just to pass a boolean between sibling components. Adds runtime overhead, misses violations in headless test runs, and requires the developer to actively notice a console message.
+- **Shared layout wrapper:** Forces `FTCDisclosure` onto all marketing pages, even those without Amazon links. Wrong approach — the disclosure is required only when affiliate links are present.
+
+**Why ESLint rule:** Static analysis at lint time is the most reliable layer. `npm run lint` runs in CI and locally before commits; a violation blocks the PR rather than waiting for a manual console check. The rule is file-scoped: if `AmazonLink` is imported in a file, `FTCDisclosure` must also be imported in the same file. This is sufficient for Phase 1's flat page architecture (all Amazon links appear directly in page files).
+
+**Known limitation:** The rule does not catch the case where `AmazonLink` is in a deeply nested child component and `FTCDisclosure` is imported in a parent page. If the architecture grows more complex, revisit with an AST-based approach or a runtime Context check layered on top.
+
+**Implementation:** `eslint-plugin-local-rules` (dev-only, ~1 KB) + `eslint-local-rules.js` at repo root. No npm plugin publishing required.
+
+---
+
 ## 2026-04-25 — Vercel env vars must be set via REST API, not PowerShell pipe
 
 **Status:** Accepted (operational rule)

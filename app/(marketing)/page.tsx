@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { AmazonLink } from '@/components/AmazonLink'
+import { FTCDisclosure } from '@/components/FTCDisclosure'
 import { EmailForm } from './EmailForm'
 
 export const metadata: Metadata = {
@@ -17,6 +19,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <FTCDisclosure />
+
       {/* Hero */}
       <header className="bg-white border-b border-gray-100">
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
@@ -57,9 +61,9 @@ export default function HomePage() {
               Anchored in peer-reviewed research.
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-2">
-              <em>
-                Choosing the StrongPath: Reversing the Downward Spiral of Aging
-              </em>{' '}
+              <AmazonLink asin="1626344760" className="underline hover:text-gray-900 transition-colors">
+                <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>
+              </AmazonLink>{' '}
               (Fred Bartlit, Steven Droullard, Dr. Marni Boppart, ScD; 2018)
             </p>
             <p className="text-base text-gray-500">
