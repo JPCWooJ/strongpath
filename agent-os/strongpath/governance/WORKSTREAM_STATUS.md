@@ -1,9 +1,19 @@
 # WORKSTREAM_STATUS.md
 
 **StrongPath — Workstream Portfolio Status**
-Prepared by Chief of Staff • April 22, 2026 (initial); last updated May 1, 2026 (session 6)
+Prepared by Chief of Staff • April 22, 2026 (initial); last updated May 4, 2026 (session 16)
 Authority: Tier 3 (vertical). Inherits from AGENT_RULES.md, PROJECT_INSTRUCTIONS.md, BEST_PRACTICES.md, ACTIVE_VERTICALS.md.
 Owner: Chief of Staff chat.
+
+---
+
+## Distribution
+
+**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/strongpath/governance/WORKSTREAM_STATUS.md` (GitHub, public).
+
+**After commit to `main`:** Founder must refresh the Claude.ai project folder by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
+
+**OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
 
 ---
 
@@ -100,7 +110,7 @@ This file updates after any workstream transition (stood up, produced a delivera
 |---|---|
 | **Status** | 🟢 Producing — P0-00 through P0-05 shipped to `main` between April 22 and May 1, 2026. Active queue: P0-06 (design system), P0-07 (quiz funnel), P2-01 (fabricated metrics convention) |
 | **Owns** | `JPCWooJ/strongpath` repo (fresh repo, April 22, 2026); implementation-level docs in `strongpath/docs/`; CTO chat owns strategic technical input to `CODE_BACKLOG.md` |
-| **Consumes** | All Tier 1–3 files (via Claude Code's file-reading inside the repo); `STACK.md` as authoritative for tech decisions; `CODE_BACKLOG.md` at session start; `DESIGN.md` (new — gates P0-06) |
+| **Consumes** | All Tier 1–3 files (read directly from `agent-os/` in the repo); `STACK.md` as authoritative for tech decisions; `CODE_BACKLOG.md` at session start; `DESIGN.md` (new — gates P0-06) |
 | **Produces** | Code commits, deployed builds, database migrations, third-party integrations (Sanity ✅, Klaviyo ✅, Stripe pending, Sentry pending, Amazon Associates ✅ structurally) |
 | **Upstream gates** | P0-06 gated on `DESIGN.md` existing (Brand Ambassador validates Refero spec). P0-07 gated on P0-06 (quiz funnel slot ships as part of design system). |
 | **Downstream consumers** | Content Writer (Sanity ✅), Email Marketer (Klaviyo ✅, but engagement waits on P0-06), Analytics & Growth (GA4 events firing — verify), Paid Media Buyer (homepage ✅ structurally, design system pending, quiz funnel pending) |
@@ -160,6 +170,8 @@ This file updates after any workstream transition (stood up, produced a delivera
 
 The canonical files and which workstream owns, updates, and reads each.
 
+**Canonical home for all `.md` files:** `JPCWooJ/strongpath` repo, `agent-os/` tree (since May 4, 2026 — see Flag 8). OneDrive `.md` copies are stale and deprecated. Project folder copies and any other location are caches.
+
 | File | Owner | Read by | Tier |
 |---|---|---|---|
 | `ABOUT_ME.md` | Founder | All agents, all projects | 1 |
@@ -181,7 +193,7 @@ The canonical files and which workstream owns, updates, and reads each.
 | `COMMANDS_BACKLOG.md` | Chief of Staff | Every workstream that activates a command or prompt template; founder | 3 |
 | `EMAIL_SEQUENCES.md` *(planned)* | Email Marketer | Email Marketer; Paid Media (post-click nurture reference) | 3 |
 | `PAID_MEDIA.md` *(planned)* | Paid Media Buyer | Paid Media Buyer; Analytics & Growth | 3 |
-| `keyword-universe.md` | SEO Strategist | SEO Strategist internal working file; lives in OneDrive not chat project | 3 (OneDrive only) |
+| `keyword-universe.md` | SEO Strategist | SEO Strategist internal working file; lives in OneDrive not chat project | 3 (OneDrive only — non-`.md` rules apply) |
 
 **Map completeness note (Apr 22, 2026 update):** The prior version of this section flagged `GTM.md`, `QUIZ.md`, and `LESSONS_LEARNED.md` as references in the inheritance chain with no ownership rows. Those files were formally removed from `PROJECT_INSTRUCTIONS.md` Tier 3 inheritance on April 21, 2026 (per `PROJECT_INSTRUCTIONS.md` change log) — confirmed not written: `QUIZ.md` lives in code rather than prose; `GTM.md` content is distributed across `PROJECT_INSTRUCTIONS.md` + `PUBLISHING_PLAN.md` + `METRICS.md`; lessons learned have homes in `BEST_PRACTICES.md` §BP-14 and `ACTIVE_VERTICALS.md`. The inheritance chain and this map are now consistent. Gap closed.
 
@@ -248,20 +260,20 @@ The contradiction is known and documented. But a future agent reading `BEST_PRAC
 
 ### Flag 4 — File governance — your stated first concern — has three specific risk surfaces
 
-**Confidence: High.** *Resolved April 22, 2026.*
+**Confidence: High.** *Resolved April 22, 2026. Superseded May 4, 2026 — see Flag 8.*
 
 Five carry-forward items closed in Chief of Staff session 3:
 
 1. **`JPCWooJ/claude-playbook` repo** — archived April 22, 2026. OneDrive remains canonical Tier 1 home. Do not revive; re-evaluate at Day 90 retrospective.
 2. **`VERTICAL_TEMPLATE.md`** — remains in OneDrive `JCVC / eComm /` (correct location per four-folder rule). Tier 2 eComm Claude.ai project deferred until vertical #2 onboarding.
 3. **`WORKSTREAM_STATUS.md` ownership map** — `CODE_BACKLOG.md` and `COMMANDS_BACKLOG.md` rows added to §3; Chief of Staff §2.1 row updated.
-4. **GitHub-as-canonical-file-home migration** — deferred to Day 90 retrospective.
+4. **GitHub-as-canonical-file-home migration** — deferred to Day 90 retrospective. **Superseded May 4, 2026:** completed early — see Flag 8.
 5. **Four-folder rule discipline** — standing principle; codified in `AGENT_RULES.md` §File and Folder System. No file change needed.
 
 Original risk surfaces (4a–4c) remain valid and are carried forward for future sessions:
 
 - **Risk 4a:** Verbal/mental versioning drifts from file-level versioning. Fix: downstream inheritance headers reference canonical filenames only; Brand Ambassador notifies workstreams on material `BRAND.md` changes.
-- **Risk 4b:** OneDrive and Claude.ai project can diverge. Fix: file propagation checklist when any canonical file updates (candidate addendum to `AGENT_RULES.md`).
+- **Risk 4b:** OneDrive and Claude.ai project can diverge. **Resolved by Flag 8** — GitHub is now canonical for `.md`; both OneDrive and the project folder are caches.
 - **Risk 4c:** Workstream sub-folder discipline under `StrongPath /` not yet maintained. Fix: session-end "files saved where" artifact, enforced by Chief of Staff.
 
 ### Flag 5 — Tool literacy — your stated second concern — has a clear sequencing answer
@@ -304,6 +316,25 @@ Two coordination items follow from Flag 6 and need explicit handoffs:
 
 Neither item blocks P0-06. Both prevent the latent confusion of `BRAND.md` and `DESIGN.md` drifting silently. **Coordination (C).**
 
+### Flag 8 — GitHub is now canonical for `.md`; OneDrive `.md` copies deprecated
+
+**Confidence: High.** *New, May 4, 2026 (session 15 outcome, logged session 16).*
+
+Sessions 13–15 worked through the file-substrate question that had been parked since April 22 (Flag 4 carry-forward item 4). Outcome: the 17 canonical `.md` files now live in `JPCWooJ/strongpath` (public) under a new top-level `agent-os/` directory. PR #11 squash-merged to `main` on May 4, 2026. Drive is no longer in the picture for `.md`.
+
+**Canonical state:**
+
+- **GitHub** — `JPCWooJ/strongpath/agent-os/` is canonical for all 17 `.md` files. Structure: `portfolio/` (5 files), `strongpath/governance/` (4), `strongpath/brand/` (3), `strongpath/seo/` (3), `strongpath/operations/` (2), plus `agent-os/README.md`.
+- **OneDrive `.md` copies** — stale; deprecated; will be deleted later. Do not read, do not write.
+- **Claude.ai project folder (`/mnt/project/`)** — cache. Refreshed by re-uploading from GitHub copies after each canonical update.
+- **Non-`.md` assets** (book manuscript `.docx`, design reference images, brand assets) — remain on OneDrive. Decision pending stay vs move to Drive — logged in `CODE_BACKLOG.md` for later resolution.
+
+**Founder workflow:** VS Code + Claude Code in `C:\Users\Jeffrey\Dev\strongpath`. `gh auth login` complete; patch-apply / branch / push / PR / squash-merge flow rehearsed.
+
+**Cross-workstream impact:** every workstream chat that previously read OneDrive `.md` paths now reads GitHub paths. `PROJECT_INSTRUCTIONS.md` updated this session to point all workstreams at GitHub as source of truth. `AGENT_RULES.md` §Cloud Storage Access Patterns updated as needed.
+
+**Carry-forward:** `JPCWooJ/claude-playbook` repo still exists, unmaintained, flagged in memory; not in scope.
+
 ---
 
 ## 6. Change log
@@ -314,6 +345,7 @@ Neither item blocks P0-06. Both prevent the latent confusion of `BRAND.md` and `
 | April 22, 2026 | §2.1 Chief of Staff row updated to reflect ownership of `CODE_BACKLOG.md` and `COMMANDS_BACKLOG.md`. §3 file ownership map: added rows for `CODE_BACKLOG.md` and `COMMANDS_BACKLOG.md`. §3 "Gaps I see in the map" paragraph replaced with "Map completeness note" documenting closure. §2.5 Claude Code row updated for fresh `JPCWooJ/strongpath` repo. §4 gates diagram updated. §5 Flag 2 closed. §5 Flag 3 archive path corrected. | Chief of Staff session 3 (Flag 4 open) |
 | April 22, 2026 (later) | §5 Flag 4 closed — all five carry-forward items resolved (`claude-playbook` archived; `VERTICAL_TEMPLATE.md` stays in OneDrive; ownership map updated; GitHub migration deferred; four-folder discipline acknowledged). §5 Flag 5 closed — Asana disconnected and removed from `STACK.md`. Original Flag 4 risk surfaces (4a–4c) preserved as carry-forward for future sessions. | Chief of Staff session 3 (Flags 4 + 5 close-out) |
 | May 1, 2026 | Major session 6 update. (1) §2.2 Brand Ambassador — added `DESIGN.md` ownership; added Refero validation as in-flight work; added flags for Brief 7 eunoia, in-flight design validation, and `BRAND.md` §6.5 hook. (2) §2.4 Content Writer — Sanity gate cleared per CTO state-of-tech; first publish now waits on P0-06 design system; drafting can run in parallel. (3) §2.5 Claude Code — full row update reflecting workstream formalization, P0-00 through P0-05 done, P0-06 + P0-07 + P2-01 active, GitHub MCP trust gate parked. (4) §2.6 Email Marketer — Klaviyo gate cleared; engagement re-sequenced behind P0-06 (was Week 5–6 by calendar, now post-P0-06). (5) §2.7 Paid Media — quiz funnel gap surfaced and now P0-07; gates list expanded. (6) §3 file ownership map — added `DESIGN.md` row. (7) §4 critical gates — diagram and prose rewritten; P0-06 design system is the new top-of-portfolio gate; Content Writer drafting and P0-07 quiz funnel sequenced behind it. (8) §5 Flag 1 closed (Claude Code formalized). (9) §5 Flag 6 added — design quality as P0. (10) §5 Flag 7 added — DESIGN.md handoff and BRAND.md §6.5 hook. Prompted by founder review of current homepage as below credibility threshold + CTO state-of-tech check that surfaced the quiz funnel as a gap. | Chief of Staff session 6 |
+| May 4, 2026 | Header (canonical home), Distribution block, §2.5 Claude Code consumes line, §3 ownership-map preamble, Flag 4 supersession note, Risk 4b resolution, and new Flag 8 added — recording GitHub-canonical migration completed via PR #11 squash-merged to `main`. 17 canonical `.md` files now live in `JPCWooJ/strongpath/agent-os/`. OneDrive `.md` copies deprecated. Project folder is a cache. Non-`.md` assets remain on OneDrive pending stay-vs-move decision (logged in `CODE_BACKLOG.md`). | Chief of Staff session 16 |
 
 ---
 

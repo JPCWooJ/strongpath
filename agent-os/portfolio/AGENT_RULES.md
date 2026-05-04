@@ -1,7 +1,17 @@
 # AGENT_RULES.md — Universal Rules for All Claude Agents
 
 **Purpose:** These rules apply to every AI agent working with Jeff Camp, in every project, across every domain. They are non-negotiable defaults. Domain-specific projects may add rules on top of these, but never override them.  
-**Last updated:** May 3, 2026
+**Last updated:** May 4, 2026
+
+---
+
+## Distribution
+
+**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/portfolio/AGENT_RULES.md` (GitHub, public).
+
+**After commit to `main`:** Founder must refresh every Claude.ai project folder that includes this file by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
+
+**OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
 
 ---
 
@@ -132,93 +142,122 @@ Filenames never include version numbers. Version context lives inside the file �
 
 **Why this matters:** Version-in-filename references look like filenames but aren't. They cause agents to search for files that don't exist, conclude the file is missing, and either stall or invent content. The fix is prompt discipline — filenames in prompts match filenames on disk.
 
-### File and Folder System (Google Drive)
+### File and Folder System (GitHub)
 
-The Google Drive system for JCVC uses exactly **four top-level folders** under `JCVC /`:
+Canonical `.md` files live in **GitHub**, in the `JPCWooJ/strongpath` repo under the top-level `agent-os/` directory. Drive and OneDrive are not canonical for `.md`. Non-`.md` assets currently live on OneDrive pending a separate stay-vs-move decision.
 
 ```
-JCVC /
-├── Agent-OS /         ← Tier 1: universal files (AGENT_RULES, ABOUT_ME, HANDOFF_FORMAT)
-│   └── inbox /            Agent-pair inbox files (see §Agent Inbox)
-├── eComm /            ← Tier 2: eCommerce domain files (STACK, BEST_PRACTICES, ACTIVE_VERTICALS, VERTICAL_TEMPLATE)
-│   └── Skills-Backlog /   Portfolio-wide skills pending packaging into canonical form
-├── StrongPath /       ← Tier 3: first active vertical (BRAND, PERSONAS, PROJECT_INSTRUCTIONS, etc.)
-│   └── [Workstream-Name] /   One sub-folder per workstream chat when it starts producing files
-└── Archive /          ← Single portfolio-wide archive for superseded files
+JPCWooJ/strongpath/
+└── agent-os/
+    ├── README.md
+    ├── portfolio/                       ← Tier 1 (universal) + Tier 2 (eCommerce domain)
+    │   ├── ABOUT_ME.md
+    │   ├── ACTIVE_VERTICALS.md
+    │   ├── AGENT_RULES.md               ← this file
+    │   ├── BEST_PRACTICES.md
+    │   └── COMMANDS_BACKLOG.md
+    └── strongpath/                      ← Tier 3 (vertical: StrongPath)
+        ├── governance/
+        │   ├── PROJECT_INSTRUCTIONS.md
+        │   ├── WORKSTREAM_STATUS.md
+        │   ├── STACK.md
+        │   └── METRICS.md
+        ├── brand/
+        │   ├── BRAND.md
+        │   ├── PERSONAS.md
+        │   └── brand-references.md
+        ├── seo/
+        │   ├── CONTENT_PLAN.md
+        │   ├── PUBLISHING_PLAN.md
+        │   └── PRODUCT_CONCEPTS_BACKLOG.md
+        └── operations/
+            ├── CODE_BACKLOG.md
+            └── WORKSTREAM_CTO.md
 ```
 
 **Rules:**
 
-1. **One tier per folder, one folder per tier.** Tier 1 files live in `Agent-OS /`. Tier 2 in `eComm /`. Tier 3 (vertical-specific) in the vertical's folder.
-2. **Future domains sit alongside eComm at the JCVC root.** When a second domain launches (advisory practice, newsletter, etc.), it becomes its own top-level folder — it does not nest inside eComm.
-3. **Future verticals sit alongside StrongPath at the JCVC root.** Each vertical gets its own folder under `JCVC /`. Verticals do not nest inside `eComm /`.
-4. **Workstream sub-folders under a vertical are created only when the workstream starts producing working files.** Do not pre-create empty sub-folders for workstreams that haven't started.
-5. **Canonical files use simple names.** `AGENT_RULES.md`, `STACK.md`, `BRAND.md`. No version suffixes, no date prefixes. One file per canonical name per folder.
-6. **Drive is canonical; OneDrive is legacy.** Files migrating from OneDrive land in the equivalent Drive path. OneDrive copies become reference-only and are not maintained in parallel. See §Cloud Storage Access Patterns for the read/write surface details.
-7. **Folder names use hyphens, not spaces.** `Agent-OS`, `Skills-Backlog`, `Brand-Ambassador`. Drive accepts spaces but they cause friction in URLs, paths in agent prompts, and shell handling. Hyphens are the standard. The exceptions are top-level `JCVC`, `eComm`, `StrongPath`, `Archive` — single words, no separator needed.
+1. **GitHub is canonical for `.md`.** All 17 portfolio + StrongPath governing files live in `JPCWooJ/strongpath/agent-os/`. The Claude.ai project folder, OneDrive copies, and any other location are caches.
+2. **One directory per tier-and-scope.** Tier 1/2 files (universal + eCommerce domain) live in `agent-os/portfolio/`. Tier 3 (vertical-specific) lives under `agent-os/<vertical>/` — for StrongPath, that is `agent-os/strongpath/`, sub-divided by function (`governance/`, `brand/`, `seo/`, `operations/`).
+3. **Future verticals sit alongside `strongpath/`** under `agent-os/`. Vertical 2 onboarding adds `agent-os/<vertical-2>/` with the same `governance/ brand/ seo/ operations/` shape. Verticals do not nest.
+4. **Canonical files use simple names.** `AGENT_RULES.md`, `STACK.md`, `BRAND.md`. No version suffixes, no date prefixes. One file per canonical name per directory.
+5. **Updates flow through Claude Code.** Agents produce updated full files; founder commits via Claude Code (patch-apply / branch / push / PR / squash-merge to `main`); founder refreshes Claude.ai project folder by re-uploading from GitHub. Each updated file includes a Distribution block at the top documenting this requirement.
+6. **OneDrive holds non-`.md` assets only** (book manuscript `.docx`, design reference images, brand assets). Decision pending whether these move to Drive, GitHub, or stay on OneDrive — logged in `CODE_BACKLOG.md` §5.2. Until that decision, OneDrive remains the read surface for those assets.
+7. **OneDrive `.md` copies are stale and deprecated.** Do not read, do not write, do not propagate.
+8. **Drive is reserved for non-`.md` assets** when/if the stay-vs-move decision lands on Drive. No canonical `.md` work happens on Drive.
+
+**Archive:** A flat archive of superseded `.md` files is preserved in OneDrive at `OneDrive / JCVC / Archive /` for historical reference. Going forward, archiving happens via Git history (branches, tags, prior commits on `main`) rather than dated file copies in a flat folder. See §Archiving below.
 
 ### Cloud Storage Access Patterns
 
-JCVC canonical files live in **Google Drive**. OneDrive is in transition for legacy artifacts. Each substrate has its own MCP, its own toolset, and its own quirks. Agents read from whichever substrate the file currently lives on; agents write canonical files to Drive only.
+JCVC canonical `.md` files live in **GitHub** (`JPCWooJ/strongpath` repo, `agent-os/` directory). OneDrive holds non-`.md` legacy assets and is read-only via the Microsoft 365 MCP. Google Drive is reserved for non-`.md` assets if and when the stay-vs-move decision moves them; no canonical `.md` work happens on Drive.
 
-#### Google Drive (canonical)
+Each substrate has its own access pattern. Agents must use the right pattern for the right substrate.
 
-The Google Drive MCP gives agents full read and write access to canonical files. Two read tools exist and **they are not interchangeable.**
+#### GitHub (canonical for `.md`)
 
-**The tools:**
+GitHub is read by agents in two modes: (a) reading the current canonical file from the local Claude.ai project folder cache (`/mnt/project/`), and (b) producing updated full files that the founder commits via Claude Code.
 
-| Tool | What it does | Use it for |
-|---|---|---|
-| `Google Drive:create_file` | Creates or uploads a file (text or base64 content) | All canonical writes |
-| `Google Drive:download_file_content` | Downloads file as **base64-encoded raw bytes** | All canonical reads of `.md` files |
-| `Google Drive:read_file_content` | Returns a "natural language representation" with markdown special characters escaped | **Never use for `.md` canonical reads** |
-| `Google Drive:search_files` | Structured query syntax (filename, mimeType, parent, etc.) | Locating files by name or folder |
-| `Google Drive:get_file_metadata` | File metadata without content | Verification, audit |
+**Workflow:**
 
-**Critical trap — `read_file_content` corrupts markdown.**
+1. **Reading a canonical file:** read from `/mnt/project/<filename>` via the `view` tool. The project folder is a cache of the GitHub copy, refreshed by the founder after each commit. If the project folder is known to be stale (e.g. an update was just committed and the founder hasn't re-uploaded yet), surface that uncertainty rather than silently reading the cache.
+2. **Updating a canonical file:** produce the full updated file as an artifact via `create_file` to `/mnt/user-data/outputs/<filename>`, then `present_files` for the founder to download. Founder commits via Claude Code:
+   ```
+   gh repo clone JPCWooJ/strongpath   # already done; working copy at C:\Users\Jeffrey\Dev\strongpath
+   git checkout -b update/<short-description>
+   # apply patch or replace file
+   git add agent-os/<path>/<filename>.md
+   git commit -m "<message>"
+   git push -u origin update/<short-description>
+   gh pr create --base main
+   gh pr merge --squash
+   ```
+   After merge, founder re-uploads the updated file to the Claude.ai project folder so the cache reflects `main`.
+3. **Locating a canonical file:** use the directory tree in §File and Folder System (GitHub). All 17 files have stable paths.
 
-`read_file_content` is documented as a "natural language representation." In practice, it returns markdown with every special character (`#`, `*`, `-`, `` ` ``, `[`, `]`, `>`, `_`, `\`) escaped with a backslash, plus trailing-double-space line breaks inserted on every line. The escaped output is unparseable as markdown and unusable as a canonical read. This was not obvious — the tool name suggests it's the right one for reading, and a Drive write followed by a `read_file_content` looks superficially correct.
-
-**The verified clean pattern:**
-
-```
-1. Google Drive:download_file_content(fileId)
-2. base64-decode the `content` field
-3. Result is byte-identical to what was written
-```
-
-This was verified end-to-end on May 2, 2026 with a markdown file containing tables, code fences, blockquotes, em dashes, smart quotes, backslashes, and inline code. md5 match. Zero drift.
-
-**Correct workflow:**
-
-1. **Writing a canonical file:** produce the full file locally (`/home/claude/...`), base64-encode it, call `create_file` with `contentMimeType: "text/markdown"` and `disableConversionToGoogleType: true`. Confirm the returned `id`.
-2. **Reading a canonical file:** call `download_file_content` with the file ID. Base64-decode the `content` field. Operate on the decoded bytes.
-3. **Locating a canonical file:** `search_files` with a structured query (e.g. `title = 'BRAND.md' and parentId = '{folderId}'`).
+**Distribution block convention.** Every canonical `.md` file includes a Distribution block at the top stating: (a) the GitHub canonical path, (b) that the project folder is a cache requiring re-upload after each commit, (c) that OneDrive `.md` copies are deprecated. This makes the source-of-truth contract self-documenting in every file.
 
 **Never:**
 
-- Use `read_file_content` for any `.md` canonical file. The output is unusable.
-- Skip the `disableConversionToGoogleType: true` flag on `.md` writes. Without it, Drive may convert text uploads to Google Docs format and the `.md` extension becomes meaningless.
-- Trust that an apparent read failure means the file is corrupt. If `read_file_content` returns escape-soup, switch to `download_file_content` before raising the alarm.
+- Edit `/mnt/project/` files directly. The project folder is read-only and edits would not persist or propagate.
+- Treat the project folder as canonical. It is a cache; GitHub is canonical.
+- Skip the patch/branch/PR/squash-merge flow for canonical updates. `main` is protected by convention; updates land via PR.
 
-#### OneDrive / SharePoint (legacy / read-only)
+#### Google Drive (non-canonical for `.md`; reserved for non-`.md` assets pending decision)
 
-The Microsoft 365 MCP is **read-only.** No `create`, `update`, `upload`, or `delete` tool exists in the connector surface. OneDrive remains accessible for files that have not yet migrated, but no new canonical files are written there.
+The Google Drive MCP retains full read/write capability and is a viable substrate for non-`.md` binary assets (book manuscript `.docx`, design references, brand assets) if the stay-vs-move decision moves them off OneDrive. Until that decision lands, Drive is not in active use for this portfolio.
 
-**The tools:**
+**For historical reference only — the verified Drive `.md` read pattern (do not use for canonical reads):**
+
+The Drive MCP exposes a read-tool trap. `Google Drive:read_file_content` returns markdown with every special character (`#`, `*`, `-`, `` ` ``, `[`, `]`, `>`, `_`, `\`) escaped with a backslash, plus trailing-double-space line breaks inserted on every line. The output is unparseable. The clean pattern is `Google Drive:download_file_content` followed by base64-decoding the `content` field — verified May 2, 2026 to produce byte-identical reads (md5 match) on a markdown file with tables, code fences, blockquotes, em dashes, smart quotes, backslashes, and inline code.
+
+This pattern remains the correct one for any future Drive `.md` work that might surface (e.g. reading a session handoff stored in Drive). It is documented here so it is not forgotten. It does **not** apply to canonical `.md` files — those live on GitHub.
+
+**Drive write pattern (for non-`.md` assets, when decision allows):**
+
+1. Produce the file locally (`/home/claude/...` or `/mnt/user-data/outputs/`).
+2. For text content, use `create_file` with `textContent`. For binary, base64-encode and use `base64Content`.
+3. Set `contentMimeType` to the actual MIME type.
+4. For markdown specifically (only relevant for non-canonical Drive `.md` such as handoffs), set `disableConversionToGoogleType: true` so Drive does not silently convert to Google Docs.
+
+#### OneDrive / SharePoint (non-`.md` legacy / read-only)
+
+The Microsoft 365 MCP is **read-only.** No `create`, `update`, `upload`, or `delete` tool exists in the connector surface. OneDrive holds non-`.md` legacy assets — the book manuscript `.docx`, design reference images, brand assets. OneDrive `.md` copies are deprecated and stale; do not read them.
+
+**The tools (for non-`.md` reads):**
 
 | Tool | What it does | Reliability |
 |---|---|---|
 | `sharepoint_search` | Searches indexed content by query string | Variable — depends on Microsoft Search indexing |
 | `read_resource` | Reads a specific file by URI | High — works every time when URI is known |
 
-**Known friction (legacy reads):**
+**Known friction (non-`.md` reads):**
 
 1. **Indexing lag.** Newly saved files take 5-30 minutes (sometimes longer) before Microsoft's search index picks them up. A file that's definitely in OneDrive may not surface in search for up to an hour.
-2. **`.md` files index less reliably than `.docx`, `.pdf`, `.xlsx`.** Microsoft Search prioritizes Office formats. `.md` files are indexed as plain text with lower priority. This is a Microsoft limitation, not a fixable bug.
+2. **`.md` files index less reliably than `.docx`, `.pdf`, `.xlsx`.** Microsoft Search prioritizes Office formats. This is a Microsoft limitation. It no longer matters for canonical files — those live on GitHub — but may matter if a `.docx` or `.pdf` is searched for.
 3. **Folder filter behavior.** `folderName: "StrongPath"` uses partial matching and can hide files that are actually in the folder. If a known file doesn't surface with a folder filter, retry without the filter.
 
-**Correct workflow when a file is expected but not found:**
+**Correct workflow when a non-`.md` asset is expected but not found:**
 
 1. **First try:** `sharepoint_search` with a broad query (no folder filter). Include the filename if known.
 2. **If no results:** wait 15 minutes (for recently-saved files) and retry.
@@ -227,9 +266,9 @@ The Microsoft 365 MCP is **read-only.** No `create`, `update`, `upload`, or `del
 
 **Never:**
 
-- Claim a file is missing because search didn't return it. Search failure ≠ file missing.
+- Read OneDrive `.md` files. They are stale and deprecated. Read the GitHub canonical via `/mnt/project/`.
+- Claim a non-`.md` asset is missing because search didn't return it. Search failure ≠ file missing.
 - Propose creating a new version of a file because the old one "can't be found." Search again without filters. Ask Jeff to paste the URI. Wait for indexing.
-- Narrate indexing diagnostics to Jeff unnecessarily. If a file surfaces on retry, silent success is fine.
 - Attempt to write to OneDrive. The connector exposes no write surface. Produce the file locally, deliver via `present_files`, and let Jeff save it manually if a OneDrive copy is needed for legacy reasons.
 
 ### Archiving
@@ -462,6 +501,7 @@ When in doubt: bias toward action, document the decision, and move forward.
 | May 1, 2026 (latest) | Added: Rule 6 to §Agent-to-Agent Communication — when the founder will relay an agent-to-agent message into another chat, the sender must deliver the markdown inside a fenced code block (triple-backtick + `markdown` tag) so the syntax survives the paste. Without the fence, chat clients auto-render the markdown and the source is lost when copied. Prompted by two consecutive failures in this session: Chief of Staff sent rendered markdown to CTO, CTO replied with rendered markdown back. Both senders followed the rule as written; the rule was incomplete. The new rule names the delivery mechanic explicitly and gives a one-line test ("if the next thing that happens to this message is paste into another chat, fence it") so future agents do not need to infer it. | StrongPath Chief of Staff session 6 (latest) |
 | May 2, 2026 | Replaced: §OneDrive / SharePoint Access Patterns with §Cloud Storage Access Patterns — broader section covering both substrates. Drive is canonical; OneDrive is legacy / read-only. Documents the verified `Google Drive:download_file_content` + base64 decode pattern as the only correct read path for `.md` canonical files, and explicitly names `Google Drive:read_file_content` as a trap that escapes every markdown special character and returns unparseable output. Verified end-to-end May 2: write via `create_file` → read via `download_file_content` → byte-identical md5 match on a markdown file with tables, code fences, blockquotes, em dashes, and inline code. Also documents that the M365 MCP exposes no write surface — every M365 tool is read-only — so OneDrive cannot accept canonical writes from this chat. Renamed: §File and Folder System (OneDrive) to §File and Folder System (Google Drive); added Rule 6 stating Drive is canonical and OneDrive is legacy. Prompted by session 7 substrate thrash (Drive → GitHub → back to Drive) where the underlying problem was a tool-selection error (`read_file_content` vs `download_file_content`), not a substrate problem. | StrongPath Chief of Staff session 8 |
 | May 3, 2026 | Added: §Drive-First Delivery for Long Outputs, positioned between §Agent-to-Agent Communication and §Handoffs as the delivery mechanic both sections rely on. Codifies that long structured markdown payloads — handoffs, standups, inbox entries, multi-section status updates, confirmation-of-understanding messages — go in Drive, with a short pointer message in chat. Rule 1 uses the shape-test framing: structured markdown intended primarily for another agent to read goes in Drive regardless of length, with the ~200-word threshold as a secondary ceiling for outputs partially intended for the founder. Edited: §Agent-to-Agent Communication Rule 6 to defer to the new section for outputs over ~200 words (short messages still get fenced for relay; longer outputs go in Drive). Edited: §Handoffs delivery default to flip from "pasted into chat" to "written to Drive with a short pointer in chat." Prompted by three same-day failures across two agents (Camp FO CoS and Investment Advisor) authoring long structured markdown as chat outputs for the founder to copy-paste into other chats — the founder caught all three and noted that the entire point of the inbox/handoff Drive pattern is that long markdown lives in Drive and the founder relays a pointer. Camp FO CoS Session 5 fast-tracked this from the original Session 11 consolidated bundle plan after observing the failure rate compound across the portfolio in real time. | StrongPath Chief of Staff session 11 |
+| May 4, 2026 | **GitHub-canonical migration codified.** Added Distribution block at top. Rewrote §File and Folder System (Google Drive) → §File and Folder System (GitHub): canonical home is now `JPCWooJ/strongpath/agent-os/`, with `portfolio/` (Tier 1+2) and `strongpath/` subdivided into `governance/ brand/ seo/ operations/`. Rewrote §Cloud Storage Access Patterns: GitHub is canonical for `.md` (read via `/mnt/project/` cache, write via Claude Code patch/branch/PR/squash-merge); Drive reserved for non-`.md` assets pending stay-vs-move decision (clean Drive `.md` read pattern preserved for historical reference); OneDrive is non-`.md` legacy / read-only with `.md` copies explicitly deprecated. Distribution-block convention introduced as a self-documenting source-of-truth contract on every canonical file. Drive-first long-outputs guidance from May 3 entry remains in effect — handoffs and inbox messages may still use Drive; this update is about canonical `.md` files specifically. Prompted by Sessions 13–15 OneDrive→GitHub migration completing via PR #11 squash-merged to `main` on May 4. | StrongPath Chief of Staff session 16 |
 
 ---
 

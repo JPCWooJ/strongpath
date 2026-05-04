@@ -6,18 +6,30 @@ This project is the home of StrongPath, the first active vertical in the JCVC po
 
 ---
 
+## Distribution
+
+**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/strongpath/governance/PROJECT_INSTRUCTIONS.md` (GitHub, public).
+
+**After commit to `main`:** Founder must refresh the Claude.ai project folder by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
+
+**OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
+
+---
+
 ## The Inheritance Chain
 
 Three tiers of context apply to every chat in this project. Read them in this order.
 
 | Tier | Source | What It Governs |
 |------|--------|-----------------|
-| 1 — Universal | "Agent Operating System" project + `JPCWooJ/claude-playbook` repo | How Jeff operates, agent rules, MCP setup — applies to every JCVC project |
+| 1 — Universal | "Agent Operating System" project + `JPCWooJ/strongpath/agent-os/portfolio/` | How Jeff operates, agent rules, MCP setup — applies to every JCVC project |
 | 2 — Domain | "eCommerce" project (`STACK.md`, `BEST_PRACTICES.md`, `ACTIVE_VERTICALS.md`, `VERTICAL_TEMPLATE.md`) | Technology stack, operational best practices, portfolio-level decisions — applies to every eCommerce vertical |
 | 3 — Vertical | This project's files (`BRAND.md`, `PERSONAS.md`, `brand-references.md`, `PRODUCT_CONCEPTS_BACKLOG.md`, `DESIGN.md`, `CONTENT_PLAN.md`, `PUBLISHING_PLAN.md`, `METRICS.md`, `WORKSTREAM_STATUS.md`, `WORKSTREAM_CTO.md`, `CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`, and planned future deliverables: `EMAIL_SEQUENCES.md`, `PAID_MEDIA.md`) | StrongPath-specific standing decisions — applies only to StrongPath |
-| 4 — Repo | `JPCWooJ/strongpath/docs/` | Implementation-level decisions readable by Claude Code only |
+| 4 — Repo | `JPCWooJ/strongpath/strongpath/docs/` | Implementation-level decisions readable by Claude Code only |
 
 **Rule:** When Tier 3 is silent, Tier 2 governs. When Tier 2 is silent, Tier 1 governs. Never override a higher tier silently — flag the contradiction and propose updating the relevant file.
+
+**Source of truth for `.md` files:** GitHub (`JPCWooJ/strongpath/agent-os/`). The Claude.ai project folder, OneDrive, and any other location are caches. When canonical files update on GitHub, the founder refreshes the Claude.ai project folder by re-uploading from GitHub. Old OneDrive `.md` copies are deprecated; non-`.md` assets (book manuscript `.docx`, design references, brand assets) remain on OneDrive pending separate stay-vs-move decision.
 
 ---
 
@@ -29,9 +41,9 @@ Three tiers of context apply to every chat in this project. Read them in this or
 
 **The book's role is credibility, not source material.** *Choosing the StrongPath* establishes the brand's right to speak in the sarcopenia category by virtue of its bestseller status and credentialed co-authors. It is not a source document for article content. The manuscript is dated; the authors are not active in the business; and the book/product firewall in `BRAND.md` §9.1 already separates education (the book) from commerce (the product). Content is sourced from current peer-reviewed research and credible clinical guidance — see §Standing Decisions below.
 
-**Site:** https://strongpath.vercel.app (test deployment, built on Next.js 14, Supabase, Sanity, Vercel per canonical stack). *Note: this URL currently resolves to the archived hackathon build. Once the fresh `JPCWooJ/strongpath` repo (created April 22, 2026) deploys via P0-00, this reference updates.*
+**Site:** https://strongpath.vercel.app (Vercel deployment of `JPCWooJ/strongpath` repo, built on Next.js 14, Supabase, Sanity, Vercel per canonical stack).
 
-**GitHub:** https://github.com/JPCWooJ/strongpath (fresh repo created April 22, 2026; hackathon build archived as `JPCWooJ/strongpath-hackathon-archive`)
+**GitHub:** https://github.com/JPCWooJ/strongpath (public; canonical home for both the application code and the `agent-os/` governance tree)
 
 **Target customer:**
 - **Primary end user:** Adults 50-75, especially 55-72, beginning to notice physical decline.
@@ -77,35 +89,45 @@ This project operates on a **workstream-per-chat** model. Each chat in this proj
 
 ---
 
-## Canonical Workspace — OneDrive
+## Canonical Workspace — GitHub
 
-All StrongPath working files live in OneDrive under Jeff's JCVC account: `jeff@jcventurecap.com`.
+All canonical `.md` files live in the `JPCWooJ/strongpath` GitHub repo under the top-level `agent-os/` directory. The Claude.ai project folder is a cache; OneDrive `.md` copies are deprecated.
 
 ```
-OneDrive / JCVC / eComm Project / StrongPath /
-├── [Workstream Name] /        ← Each chat has its own sub-folder
-│   ├── brand-assets/          (Brand Ambassador sub-folders shown as example)
-│   ├── book-research/
-│   ├── authority-assets/
-│   ├── market-research/
-│   └── review-queue/
-├── BRAND.md                   ← Shared files at StrongPath/ root —
-├── PERSONAS.md                   every workstream chat reads them as
-├── brand-references.md           canonical ground truth
-├── PRODUCT_CONCEPTS_BACKLOG.md
-├── CONTENT_PLAN.md
-├── PUBLISHING_PLAN.md
-├── METRICS.md
-├── WORKSTREAM_STATUS.md
-├── CODE_BACKLOG.md
-└── COMMANDS_BACKLOG.md
+JPCWooJ/strongpath/
+├── agent-os/
+│   ├── README.md
+│   ├── portfolio/                       (5 files — Tier 1/2 universal + domain)
+│   │   ├── ABOUT_ME.md
+│   │   ├── ACTIVE_VERTICALS.md
+│   │   ├── AGENT_RULES.md
+│   │   ├── BEST_PRACTICES.md
+│   │   └── COMMANDS_BACKLOG.md
+│   └── strongpath/                      (Tier 3 vertical files)
+│       ├── governance/                  (4 files)
+│       │   ├── PROJECT_INSTRUCTIONS.md  ← this file
+│       │   ├── WORKSTREAM_STATUS.md
+│       │   ├── STACK.md
+│       │   └── METRICS.md
+│       ├── brand/                       (3 files)
+│       │   ├── BRAND.md
+│       │   ├── PERSONAS.md
+│       │   └── brand-references.md
+│       ├── seo/                         (3 files)
+│       │   ├── CONTENT_PLAN.md
+│       │   ├── PUBLISHING_PLAN.md
+│       │   └── PRODUCT_CONCEPTS_BACKLOG.md
+│       └── operations/                  (2 files)
+│           ├── CODE_BACKLOG.md
+│           └── WORKSTREAM_CTO.md
+└── (application code: app/, lib/, components/, etc.)
 ```
 
 **Rules:**
-- Each workstream chat operates against its own sub-folder under `StrongPath/`.
-- Shared canonical files (`BRAND.md`, `PERSONAS.md`, `brand-references.md`, `PRODUCT_CONCEPTS_BACKLOG.md`, `CONTENT_PLAN.md`, `PUBLISHING_PLAN.md`, `METRICS.md`, `WORKSTREAM_STATUS.md`, `CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`) live at the `StrongPath/` root — every workstream reads them as ground truth.
-- The book manuscript lives at `StrongPath/Brand Ambassador/book-research/Droullard_Bartlit_INT_09-27-17.docx`. Future personas and content work reference it from there.
-- The MCP Jeff uses to give Claude access to these files is Microsoft 365 (SharePoint/OneDrive). Google Drive was evaluated and not used for this project.
+- GitHub is canonical for `.md`. The Claude.ai project folder is refreshed by re-uploading from GitHub when canonical files update. OneDrive `.md` copies are stale and deprecated.
+- Non-`.md` assets remain on OneDrive pending separate stay-vs-move decision (logged in `CODE_BACKLOG.md` §5.2). This includes: book manuscript `.docx` (`Droullard_Bartlit_INT_09-27-17.docx`), design reference images, brand assets (logos, photography, color swatches).
+- Workstream sub-folders (Brand Ambassador's `book-research/`, `market-research/`, `review-queue/`, etc.) remain in OneDrive — these are working folders for non-canonical drafts, not source-of-truth files.
+- The MCP Jeff uses to access OneDrive non-`.md` assets is Microsoft 365 (SharePoint/OneDrive). Google Drive was evaluated and not used for this project.
 
 ---
 
@@ -128,13 +150,14 @@ OneDrive / JCVC / eComm Project / StrongPath /
 - Substantial deliverables go in files, not in chat responses.
 - Jeff prefers `.docx` format for founder review, then `.md` format for the canonical version read by other workstream chats. Produce both when appropriate.
 - Copy, email drafts, and brand reviews go inline in chat.
-- Strategy documents, content plans, and persona research go in OneDrive per the workspace structure above.
-- Code and technical docs go in the GitHub repo, not here.
+- Strategy documents, content plans, and persona research: canonical `.md` versions live in GitHub `agent-os/`; working drafts and non-`.md` reference material live in OneDrive workstream sub-folders.
+- Code and technical docs go in the GitHub repo (`strongpath/docs/`), not in `agent-os/`.
 
 ### When updating project files
 - Draft the full replacement file in the conversation per `AGENT_RULES.md` (File Authorship and Delivery).
-- Jeff archives the prior version and saves the new one; Claude does not edit project files directly.
-- Note the date and source of the update.
+- For canonical `.md` files: founder commits the updated file to GitHub via Claude Code (patch-apply / branch / push / PR / squash-merge to `main`), then refreshes the Claude.ai project folder by re-uploading. Each updated file should include a Distribution block at the top noting this requirement.
+- For non-canonical working files: founder saves to the relevant OneDrive workstream sub-folder.
+- Note the date and source of the update in the file's change log.
 - Never silently change a standing decision.
 
 ---
@@ -159,7 +182,7 @@ StrongPath-specific standing decisions:
 |----------|--------|------|
 | Book title spelled *Choosing the StrongPath* (one word, capital S and P) | GTM v2 review | April 2026 |
 | Bootstrap Phase 1 cap: <$5,000 cash until Day 90 targets hit | GTM v2 review | April 2026 |
-| Canonical workspace: OneDrive `/StrongPath/[Workstream Name]/`. Shared brand files at `StrongPath/` root. | Brand Ambassador session 1 | April 2026 |
+| Canonical home for `.md` files: `JPCWooJ/strongpath/agent-os/` (GitHub). Project folder and OneDrive are caches. Non-`.md` assets remain on OneDrive pending stay-vs-move decision. *(Supersedes April 2026 OneDrive-canonical decision.)* | Chief of Staff session 16 (Flag 8 in `WORKSTREAM_STATUS.md`) | May 4, 2026 |
 | Fred Bartlit and Steven Droullard are founding authors of record and Jeff's co-founders. Not active in operations. All rights transferred to Jeff. | Brand Ambassador session 1 | April 2026 |
 | Dr. Marni Boppart, ScD is a published co-author of the book and a cited research source. She is passive in Phase 1 and not an active brand authority. Never described as "medical director" or active advisor. | Brand Ambassador session 1 | April 2026 |
 | Jeff is the public founder face; not a clinician. He is the translator between the research and the reader. | Brand Ambassador session 1 | April 2026 |
@@ -196,7 +219,8 @@ For David-facing copy specifically: apply the eunoia test. The copy must meet Da
 | April 22, 2026 | Added new standing decision to §Standing Decisions: the book *Choosing the StrongPath* is a credibility asset, not a source document. Articles cite the book once for authority; content is sourced from current peer-reviewed research, credible clinical guidance, and Dr. Boppart's published work. Newer research wins when the manuscript and current research disagree. Added a matching paragraph to §What This Vertical Is clarifying the book's role. Updated §Site note acknowledging that `strongpath.vercel.app` currently points to the archived hackathon build and will update after P0-00 ships. Updated §GitHub reference to reflect the fresh repo. Updated §When updating project files to reference the generalized File Authorship and Delivery rule in `AGENT_RULES.md` (replaces the prior Canonical File Authorship reference). Prompted by Content Writer session where Jeff clarified the book's role and asked the decision to propagate portfolio-wide. | Chief of Staff session 4 |
 | April 22, 2026 (later) | No functional change — Claude Code already enumerated as the 9th row in §Workstream Model (added April 21 per Flag 1). Confirmed Claude Code's row is correct and complete; no revision needed. Separately confirmed this file's description matches current reality: 8 Claude.ai workstreams + 1 Claude Code implementation channel. | Chief of Staff session 4 |
 | May 1, 2026 | Tier 3 inheritance row updated. Added `DESIGN.md` (new vertical-level file, owned by Brand Ambassador in Phase 1, consumed by CTO via `CODE_BACKLOG.md` P0-06 — strategic visual direction lives in `BRAND.md` §6, tactical implementation tokens live in `DESIGN.md`). Added `WORKSTREAM_CTO.md` (added to project files in session 6 — was previously omitted from this row). | Chief of Staff session 6 |
+| May 4, 2026 | **GitHub-canonical migration codified.** Added Distribution block at top. Replaced §Canonical Workspace — OneDrive with §Canonical Workspace — GitHub showing the `agent-os/` directory tree as canonical home for all 17 `.md` files. Updated Tier 1 source (now `agent-os/portfolio/`). Updated Tier 4 path to current repo structure. Updated §Site (now points to fresh-repo Vercel deployment). Updated §GitHub. Updated §When producing deliverables and §When updating project files to reflect GitHub-as-canonical workflow. Added new standing decision: GitHub-canonical for `.md`, supersedes April 2026 OneDrive-canonical decision. Removed defunct hackathon-archive note. | Chief of Staff session 16 |
 
 ---
 
-*Last updated: April 22, 2026 (Chief of Staff session 4). Update this file when StrongPath's scope, priorities, or working methods change significantly.*
+*Last updated: May 4, 2026 (Chief of Staff session 16). Update this file when StrongPath's scope, priorities, or working methods change significantly.*
