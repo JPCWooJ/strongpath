@@ -1,7 +1,7 @@
 # AGENT_RULES.md — Universal Rules for All Claude Agents
 
 **Purpose:** These rules apply to every AI agent working with Jeff Camp, in every project, across every domain. They are non-negotiable defaults. Domain-specific projects may add rules on top of these, but never override them.  
-**Last updated:** May 4, 2026
+**Last updated:** May 5, 2026
 
 ---
 
@@ -142,6 +142,19 @@ Filenames never include version numbers. Version context lives inside the file �
 
 **Why this matters:** Version-in-filename references look like filenames but aren't. They cause agents to search for files that don't exist, conclude the file is missing, and either stall or invent content. The fix is prompt discipline — filenames in prompts match filenames on disk.
 
+### Version-Line Header Convention *(new May 5, 2026)*
+
+Every canonical `.md` file in the portfolio includes a `Version:` line in its header so any agent can read the current version of the file in one glance.
+
+**Rules:**
+
+1. **Required header field.** Every canonical `.md` file has a `Version:` line in its top-of-file metadata block (within the first ~10 lines). The value is either a version number (`v6`) or a date (`May 4, 2026`).
+2. **Updated on every substantive change.** Bump the version number or date when the file changes. The change log entry at the bottom of the file documents what changed.
+3. **Read by agents at session start.** The cache freshness check (see §Cloud Storage Access Patterns / GitHub) compares the version line in `/mnt/project/<filename>` to the version line in the live GitHub file. If they differ, the cache is stale.
+4. **No version line means file is non-canonical.** A `.md` file without a `Version:` header is not subject to the freshness contract and is not considered canonical for portfolio governance.
+
+This rule formalizes a convention most files already follow. It exists so the freshness check is mechanical: read the version line, compare to live, decide.
+
 ### File and Folder System (GitHub)
 
 Canonical `.md` files live in **GitHub**, in the `JPCWooJ/strongpath` repo under the top-level `agent-os/` directory. Drive and OneDrive are not canonical for `.md`. Non-`.md` assets currently live on OneDrive pending a separate stay-vs-move decision.
@@ -200,7 +213,7 @@ GitHub is read by agents in two modes: (a) reading the current canonical file fr
 
 **Workflow:**
 
-1. **Reading a canonical file:** read from `/mnt/project/<filename>` via the `view` tool. The project folder is a cache of the GitHub copy, refreshed by the founder after each commit. If the project folder is known to be stale (e.g. an update was just committed and the founder hasn't re-uploaded yet), surface that uncertainty rather than silently reading the cache.
+1. **Reading a canonical file:** read from `/mnt/project/<filename>` via the `view` tool. The project folder is a cache of the GitHub copy, refreshed by the founder after each commit. **Run the cache freshness check before acting** (see below). If the project folder is known to be stale, work from the live GitHub copy via raw URL (`web_fetch`) and surface the staleness to the founder.
 2. **Updating a canonical file:** produce the full updated file as an artifact via `create_file` to `/mnt/user-data/outputs/<filename>`, then `present_files` for the founder to download. Founder commits via Claude Code:
    ```
    gh repo clone JPCWooJ/strongpath   # already done; working copy at C:\Users\Jeffrey\Dev\strongpath
@@ -217,11 +230,23 @@ GitHub is read by agents in two modes: (a) reading the current canonical file fr
 
 **Distribution block convention.** Every canonical `.md` file includes a Distribution block at the top stating: (a) the GitHub canonical path, (b) that the project folder is a cache requiring re-upload after each commit, (c) that OneDrive `.md` copies are deprecated. This makes the source-of-truth contract self-documenting in every file.
 
+**Cache freshness check at session start *(new May 5, 2026)*.** Every Claude.ai session that will read or update a canonical file must verify the cache is current before acting on it. The check is:
+
+1. **Read the version line in `/mnt/project/<filename>`** (header, within the first ~10 lines).
+2. **Read the same line in the live GitHub raw URL:** `https://raw.githubusercontent.com/JPCWooJ/strongpath/main/agent-os/<path>/<filename>.md`. If the founder has not pasted the URL into chat yet, ask for it (`web_fetch` requires the URL be in user-provided text).
+3. **Compare.** If they match, work from `/mnt/project/`. If they differ, the cache is stale — work from the live version, and surface the staleness to the founder so the cache can be refreshed.
+4. **For session-to-session handoffs**, the §3.4 Canonical state at handoff table in `HANDOFF_FORMAT.md` provides the version reference; cross-check the cache against that table before acting.
+
+This check is non-negotiable for canonical files. It is the load-bearing protection against an agent silently working from a multi-session-stale cache and producing a PR that overwrites work the receiver was unaware of.
+
+**Trigger:** session 18 (May 5, 2026) saw a Chief of Staff session read a session-17 handoff that named only that session's deltas, default to `/mnt/project/` cache (which was many sessions stale), and draft a `WORKSTREAM_STATUS.md` update against the stale cache. The PR would have overwritten the live Flag 8 with a different one. Root cause: no requirement to verify cache freshness before acting on canonical files. This rule closes the gap.
+
 **Never:**
 
 - Edit `/mnt/project/` files directly. The project folder is read-only and edits would not persist or propagate.
 - Treat the project folder as canonical. It is a cache; GitHub is canonical.
 - Skip the patch/branch/PR/squash-merge flow for canonical updates. `main` is protected by convention; updates land via PR.
+- Skip the cache freshness check at session start when canonical files will be read or updated.
 
 #### Google Drive (non-canonical for `.md`; reserved for non-`.md` assets pending decision)
 
@@ -354,17 +379,19 @@ Good: [Agent writes 2000-word file to Drive, returns to chat with:]
 
 ### Handoffs
 
-A handoff is a specific kind of agent-to-agent communication: the structured `.md` message a workstream produces when it has completed a body of work that another agent must act on. Handoffs follow the format defined in `HANDOFF_FORMAT.md` (Tier 1, `JCVC / Agent-OS /`).
+A handoff is a specific kind of agent-to-agent communication: the structured `.md` message a workstream produces when it has completed a body of work that another agent must act on. Handoffs follow the format defined in `HANDOFF_FORMAT.md` (Tier 1, `agent-os/portfolio/`).
 
-**The six-section structure** (defined fully in `HANDOFF_FORMAT.md`):
+**The eight-section structure** (defined fully in `HANDOFF_FORMAT.md` v1.2):
 
 1. Header — sender → receiver, date, subject, status
 2. Last thing done / Next thing to do — required pair, scannable in 5 seconds
 3. Decision — substantive output of the work
-4. Files updated — table of canonical files changed, with versions
-5. Open backlog items — surfaced but unresolved, with explicit owner
-6. Unblocks — which workstreams are now free to act, on what
-7. Recommendation — sender's call on what should happen next
+4. Canonical state at handoff — required cumulative-state table for cache freshness check
+5. Decision dependencies — in-flight decisions not yet in canonical files
+6. Files updated — table of canonical files changed by this session, with versions
+7. Open backlog items — surfaced but unresolved, with explicit owner
+8. Unblocks — which workstreams are now free to act, on what
+9. Recommendation — sender's call on what should happen next
 
 **When to author a handoff** (vs. a normal markdown agent-to-agent message):
 
@@ -387,6 +414,7 @@ If only one or two are true, a normal markdown agent-to-agent message (per §Age
 5. **Receiver carries open backlog items forward** within the same session — to `CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`, or the relevant queue. Items in the Open backlog items section with the receiver as Owner are now the receiver's.
 6. **Length follows from the work, not a cap.** A handoff is as long as the work requires and no longer. The structure prevents bloat — every section either contains substance or contains its empty-state string.
 7. **The receiver's first action against a handoff is to confirm what was read and propose scope, not to begin execution.** This mirrors §One Thing at a Time and §Ask-Before-Instruct.
+8. **The receiver runs the cache freshness check on every file listed in §3.4 Canonical state at handoff before acting *(new May 5, 2026)*.** Per §Cloud Storage Access Patterns / GitHub. This check is non-negotiable; it is what makes the handoff actually deliver state, not just deltas.
 
 **Anti-pattern:** a workstream that ships a multi-session body of work and summarizes it in an unstructured chat message. The structure is what makes the receiver fast.
 
@@ -463,6 +491,7 @@ When making recommendations, tag confidence (implicitly or explicitly):
 ### Context Management
 - **Search past conversations before re-deriving decisions.** If a topic has been covered in this project, find it first.
 - **Project files are authoritative.** Every project has governing documents. If a recommendation conflicts with them, flag the contradiction explicitly rather than quietly deviating. If a better approach is discovered, propose updating the document — don't just implement the change silently.
+- **Run the cache freshness check at session start when canonical files are in scope.** Per §Cloud Storage Access Patterns / GitHub. The `/mnt/project/` cache is a snapshot of an unknown moment; it is not authoritative until verified against `main`.
 
 ### Documentation
 - When a session produces a decision that should become permanent, draft the update in the conversation and flag which project file should be updated.
@@ -502,6 +531,7 @@ When in doubt: bias toward action, document the decision, and move forward.
 | May 2, 2026 | Replaced: §OneDrive / SharePoint Access Patterns with §Cloud Storage Access Patterns — broader section covering both substrates. Drive is canonical; OneDrive is legacy / read-only. Documents the verified `Google Drive:download_file_content` + base64 decode pattern as the only correct read path for `.md` canonical files, and explicitly names `Google Drive:read_file_content` as a trap that escapes every markdown special character and returns unparseable output. Verified end-to-end May 2: write via `create_file` → read via `download_file_content` → byte-identical md5 match on a markdown file with tables, code fences, blockquotes, em dashes, and inline code. Also documents that the M365 MCP exposes no write surface — every M365 tool is read-only — so OneDrive cannot accept canonical writes from this chat. Renamed: §File and Folder System (OneDrive) to §File and Folder System (Google Drive); added Rule 6 stating Drive is canonical and OneDrive is legacy. Prompted by session 7 substrate thrash (Drive → GitHub → back to Drive) where the underlying problem was a tool-selection error (`read_file_content` vs `download_file_content`), not a substrate problem. | StrongPath Chief of Staff session 8 |
 | May 3, 2026 | Added: §Drive-First Delivery for Long Outputs, positioned between §Agent-to-Agent Communication and §Handoffs as the delivery mechanic both sections rely on. Codifies that long structured markdown payloads — handoffs, standups, inbox entries, multi-section status updates, confirmation-of-understanding messages — go in Drive, with a short pointer message in chat. Rule 1 uses the shape-test framing: structured markdown intended primarily for another agent to read goes in Drive regardless of length, with the ~200-word threshold as a secondary ceiling for outputs partially intended for the founder. Edited: §Agent-to-Agent Communication Rule 6 to defer to the new section for outputs over ~200 words (short messages still get fenced for relay; longer outputs go in Drive). Edited: §Handoffs delivery default to flip from "pasted into chat" to "written to Drive with a short pointer in chat." Prompted by three same-day failures across two agents (Camp FO CoS and Investment Advisor) authoring long structured markdown as chat outputs for the founder to copy-paste into other chats — the founder caught all three and noted that the entire point of the inbox/handoff Drive pattern is that long markdown lives in Drive and the founder relays a pointer. Camp FO CoS Session 5 fast-tracked this from the original Session 11 consolidated bundle plan after observing the failure rate compound across the portfolio in real time. | StrongPath Chief of Staff session 11 |
 | May 4, 2026 | **GitHub-canonical migration codified.** Added Distribution block at top. Rewrote §File and Folder System (Google Drive) → §File and Folder System (GitHub): canonical home is now `JPCWooJ/strongpath/agent-os/`, with `portfolio/` (Tier 1+2) and `strongpath/` subdivided into `governance/ brand/ seo/ operations/`. Rewrote §Cloud Storage Access Patterns: GitHub is canonical for `.md` (read via `/mnt/project/` cache, write via Claude Code patch/branch/PR/squash-merge); Drive reserved for non-`.md` assets pending stay-vs-move decision (clean Drive `.md` read pattern preserved for historical reference); OneDrive is non-`.md` legacy / read-only with `.md` copies explicitly deprecated. Distribution-block convention introduced as a self-documenting source-of-truth contract on every canonical file. Drive-first long-outputs guidance from May 3 entry remains in effect — handoffs and inbox messages may still use Drive; this update is about canonical `.md` files specifically. Prompted by Sessions 13–15 OneDrive→GitHub migration completing via PR #11 squash-merged to `main` on May 4. | StrongPath Chief of Staff session 16 |
+| May 5, 2026 | **Cache freshness rule added.** Added §Version-Line Header Convention — every canonical `.md` file has a `Version:` line in its header that agents read at session start. Added cache freshness check sub-section to §Cloud Storage Access Patterns / GitHub: every Claude.ai session that will read or update a canonical file verifies the cache against `main` before acting (read version line in `/mnt/project/<filename>`, fetch the same line from raw GitHub URL, compare, work from live if they differ). Updated §Handoffs Rule 8 to require receivers run the cache freshness check on every file in §3.4 Canonical state at handoff. Added bullet to §Context Management requiring the freshness check at session start. Companion update to `HANDOFF_FORMAT.md` v1.2 which adds §3.4 Canonical state at handoff (cumulative-state table) and §3.5 Decision dependencies. Prompted by Chief of Staff session 18, where the receiving CoS read a session-17 handoff that named only that session's deltas, defaulted to `/mnt/project/` cache (which was many sessions stale relative to `main`), drafted a `WORKSTREAM_STATUS.md` update against the stale cache, and produced a PR that would have overwritten the live Flag 8 with a different one. Root cause: no requirement to verify cache freshness before acting on canonical files, and no requirement for handoffs to surface cumulative state. Both gaps closed. | StrongPath Chief of Staff session 18 |
 
 ---
 
