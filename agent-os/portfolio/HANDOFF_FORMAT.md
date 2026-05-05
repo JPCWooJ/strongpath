@@ -1,8 +1,8 @@
 # HANDOFF_FORMAT.md
 
 **JCVC Portfolio — Handoff Message Format**
-Version: 1.1
-Last updated: May 1, 2026
+Version: 1.2
+Last updated: May 5, 2026
 Authority: Tier 1 (portfolio). Inherited by every JCVC vertical, every workstream, every agent.
 Owner: Chief of Staff (originating workstream when authoring a handoff; this file maintained by Chief of Staff).
 
@@ -16,7 +16,7 @@ Owner: Chief of Staff (originating workstream when authoring a handoff; this fil
 
 **OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
 
-**Drive copy at `JCVC / Agent-OS / HANDOFF_FORMAT.md` (file ID `11cF0pLrod4wcE5mb8apShm_8kprzSU2J`) is now superseded by this GitHub canonical.** The Drive copy should be deleted or marked deprecated after this migration is committed.
+**Drive copy at `JCVC / Agent-OS / HANDOFF_FORMAT.md` (file ID `11cF0pLrod4wcE5mb8apShm_8kprzSU2J`) is superseded by this GitHub canonical.** The Drive copy should be deleted or marked deprecated.
 
 ---
 
@@ -39,9 +39,9 @@ The handoff is a markdown message. The medium it is delivered through is a separ
 
 **Default delivery: pasted into chat.** Most handoffs go directly into the next chat as the opening message. No file save, no folder, no sync wait. The message *is* the handoff.
 
-**Exception: saved as a `.md` file.** When (a) the handoff carries audit-trail value (will be re-read weeks or months later), (b) the receiver is an agent not currently in chat (need to leave a message for a future session), or (c) the founder explicitly wants a permanent record. See §5 for save conventions.
+**Exception: saved as a `.md` file.** When (a) the handoff carries audit-trail value (will be re-read weeks or months later), (b) the receiver is an agent not currently in chat (need to leave a message for a future session), or (c) the founder explicitly wants a permanent record. See §6 for save conventions.
 
-The format is identical in both cases. The same six sections, the same ordering, the same empty-state strings. Format is the unit; delivery is downstream.
+The format is identical in both cases. The same eight sections, the same ordering, the same empty-state strings. Format is the unit; delivery is downstream.
 
 ---
 
@@ -60,7 +60,7 @@ A four-line header at the top of the message:
 **Status:** [Shipped / Blocked / Awaiting Review]
 ```
 
-- `[Sending Workstream]` is the workstream that authored the work. `[Receiving Workstream]` is the primary recipient. If the handoff goes to multiple recipients, the primary owner of the next action is named here; secondary recipients go in §3.6 Unblocks.
+- `[Sending Workstream]` is the workstream that authored the work. `[Receiving Workstream]` is the primary recipient. If the handoff goes to multiple recipients, the primary owner of the next action is named here; secondary recipients go in §3.7 Unblocks.
 - **Status** is one of three values:
   - **Shipped** — work is complete, recipient can act.
   - **Blocked** — work is paused on something the recipient must resolve before sender continues.
@@ -88,9 +88,46 @@ The substantive output of the handoff. What was decided, what was authored, what
 
 Keep this section dense. No throat-clearing, no recap of what the workstream is. The recipient already knows.
 
-### 3.4 Files updated
+### 3.4 Canonical state at handoff *(new in v1.2)*
 
-A markdown table listing every canonical file changed by this body of work. Two columns:
+A required table that gives the receiver the **cumulative state** of every canonical file relevant to the work it is about to do — not just the files this session touched.
+
+The problem this section solves: a handoff that lists only the deltas from one session can leave the receiver unaware that prior sessions made major changes. The receiver then defaults to the `/mnt/project/` cache, which can be many sessions stale, and produces work based on a worldview that diverged from `main` weeks ago. This section closes that gap.
+
+Format:
+
+```
+| File | Current version | Last touched | Notes |
+|---|---|---|---|
+| AGENT_RULES.md | May 4, 2026 (session 16) | session 16 | GitHub-canonical migration codified |
+| HANDOFF_FORMAT.md | v1.1 | session 6 (late) | unchanged this session |
+| WORKSTREAM_STATUS.md | session 16 | session 16 | Flag 8 added |
+```
+
+**Rules:**
+
+1. **Every Tier 1 file appears in this table on every handoff**, regardless of whether the current session touched it. Tier 1 is small enough that the cost of listing it is trivial, and the receiver needs to know the cumulative state.
+2. **Tier 2 and Tier 3 files appear when the receiver is likely to read or act on them.** The sender uses judgment. When in doubt, include — over-listing is cheap; under-listing is the failure mode this section exists to prevent.
+3. **The Current version column shows what is currently committed to `main`** at the moment the handoff is authored. The sender confirms this by reading the live raw GitHub URL (or the canonical file's header) at handoff-write time, not by reading the `/mnt/project/` cache.
+4. **The Last touched column names the session that last modified the file.** This lets the receiver tell at a glance which files have moved recently and which are stable. If unknown, write `unknown` rather than guessing.
+5. **The Notes column is a one-line description of what changed last** or other context the receiver needs. If nothing notable, write `unchanged this session` or leave blank.
+6. **If a file was modified by this session, the Notes column makes that explicit** — e.g. `updated this session: §3.4 added` rather than just naming the section in §3.6.
+
+If no canonical files exist that the receiver needs to be aware of (rare), write `*No canonical files relevant to this handoff.*` rather than omitting the section.
+
+### 3.5 Decision dependencies *(new in v1.2)*
+
+A short paragraph or tight bullet list naming any decisions, framings, or commitments the receiver needs to know about that are **not yet** reflected in canonical files.
+
+Example: a session that decided "GitHub will be canonical for `.md`" before any file was rewritten to reflect that decision. The decision is real and binding; canonical files have not caught up yet. The receiver needs to know.
+
+If the canonical files are fully caught up to all in-flight decisions, write `*None — canonical files reflect all current decisions.*`
+
+This section prevents the failure mode where a handoff says "files updated: BRAND.md v6" but a verbal decision made an hour earlier about how `BRAND.md` will be re-architected next session is not transmitted at all.
+
+### 3.6 Files updated
+
+A markdown table listing every canonical file changed *by this session's body of work specifically*. Two columns:
 
 ```
 | File | Version |
@@ -107,7 +144,9 @@ A markdown table listing every canonical file changed by this body of work. Two 
 
 If no canonical files changed, write `*No canonical files updated.*` instead of leaving the section empty. Empty sections look like the agent forgot to fill them in.
 
-### 3.5 Open backlog items
+**Note:** §3.4 (Canonical state) shows the cumulative state of all relevant files; §3.6 (Files updated) shows just this session's deltas. Both sections are required because they answer different questions: §3.4 says "what is true now," §3.6 says "what changed in this session."
+
+### 3.7 Open backlog items
 
 Items the body of work surfaced but did not resolve. The recipient or another workstream owns each one.
 
@@ -121,7 +160,7 @@ Format as a bulleted list. Each item names the owner explicitly:
 - Use `**Owner:**` and `**When:**` exactly. The bold-italic pair is the contract — recipients grep for it.
 - If there are no open items, write `*None.*` rather than omitting the section.
 
-### 3.6 Unblocks
+### 3.8 Unblocks
 
 Which workstreams are now free to begin or resume work, and what specifically they can do. This is the section that turns the handoff into action across the portfolio.
 
@@ -137,7 +176,7 @@ Format as a bulleted list, one bullet per workstream unblocked:
 - One bullet per workstream. If a workstream is *not* unblocked, do not list it — silence is the signal.
 - If no workstreams are unblocked (rare), write `*No downstream workstreams unblocked by this handoff.*`
 
-### 3.7 Recommendation
+### 3.9 Recommendation
 
 The sender's recommended next move for the recipient. One short paragraph or 1-3 short bullets.
 
@@ -157,13 +196,13 @@ If the sender has no recommendation, that itself is meaningful — write `*No re
 
 These rules apply to every handoff an agent authors:
 
-1. **Author in markdown.** The handoff is a markdown payload. Whether it gets pasted into chat or saved as a `.md` file is a delivery question (see §5).
+1. **Author in markdown.** The handoff is a markdown payload. Whether it gets pasted into chat or saved as a `.md` file is a delivery question (see §6).
 
 2. **No prose padding.** No "I hope this is helpful," no "let me know if you have questions," no recap of what the sending workstream is. Every line earns its place.
 
 3. **One handoff = one body of work.** If a workstream has shipped two unrelated things, author two handoffs. Bundling makes both harder to act on.
 
-4. **No section omitted, no section reordered.** All seven structural sections (header, Last/Next pair, Decision, Files updated, Open backlog items, Unblocks, Recommendation) appear in every handoff. Sections that have nothing to report use the explicit empty-state strings defined above (`*None.*`, `*No canonical files updated.*`, etc.) rather than being deleted.
+4. **No section omitted, no section reordered.** All eight structural sections — header, Last/Next pair, Decision, Canonical state at handoff, Decision dependencies, Files updated, Open backlog items, Unblocks, Recommendation — appear in every handoff. Sections that have nothing to report use the explicit empty-state strings defined above (`*None.*`, `*No canonical files updated.*`, `*None — canonical files reflect all current decisions.*`, etc.) rather than being deleted.
 
 5. **Cite versions, not "the latest."** "BRAND.md v6" is permanent and audit-ready. "the latest BRAND.md" rots the moment someone bumps the version.
 
@@ -171,13 +210,28 @@ These rules apply to every handoff an agent authors:
 
 7. **The sender authors the handoff. The receiver acknowledges.** Receiver's acknowledgment is a normal short markdown reply: what was logged, what's next, any clarifying questions. Receiver does not author a counter-handoff unless they themselves are shipping work back.
 
+8. **Fill §3.4 from `main`, not from cache.** When authoring §3.4 Canonical state at handoff, the sender confirms current versions by reading the live GitHub raw URL or the canonical file headers at handoff-write time — not by reading `/mnt/project/`. The cache is a snapshot of an unknown moment; the receiver depends on §3.4 being current.
+
 ---
 
-## 5. Delivery — paste vs. save
+## 5. Receiving rules
+
+When an agent receives a handoff:
+
+1. **Read all sections in order.** Do not skim to Recommendation.
+2. **Cross-check §3.4 against your `/mnt/project/` cache before any work.** For every file listed in §3.4, compare the version shown there to the version line in `/mnt/project/<filename>`. If they differ, your cache is stale and you must work from the live GitHub copy (request the raw URL from the founder, or read via Claude Code if available). This check is non-negotiable; it is the load-bearing protection against acting on stale state.
+3. **Log it.** If you are Chief of Staff, update `WORKSTREAM_STATUS.md` to reflect the handoff (sender's row updated with what shipped, receiver's row updated with what's next, any unblocks reflected in the relevant rows). If you are a workstream, update your local status notes.
+4. **Acknowledge in chat with the founder, not by counter-handoff.** Short reply: what you logged, what you're doing next, any clarifying questions.
+5. **Carry the open backlog items forward.** Items in §3.7 with you as Owner are now yours. Add them to your queue or to the relevant backlog file (`CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`, etc.) within the same session.
+6. **If the Recommendation conflicts with your read of the situation, push back.** The sender owns their domain expertise; you own yours. Disagreement gets resolved in chat with the founder, not silently overridden.
+
+---
+
+## 6. Delivery — paste vs. save
 
 A handoff is delivered one of two ways. The format is identical; only the channel differs.
 
-### 5.1 Pasted into chat (default)
+### 6.1 Pasted into chat (default)
 
 Use when:
 - The receiver is the next session of the same agent, or another agent currently in chat.
@@ -191,7 +245,7 @@ How:
 
 This is the most common case for session-to-session handoffs within the same workstream and for cross-workstream handoffs delivered to a chat that is already open.
 
-### 5.2 Saved as a `.md` file (exception)
+### 6.2 Saved as a `.md` file (exception)
 
 Use when:
 - The handoff carries audit-trail value (will be re-read weeks or months later).
@@ -203,18 +257,6 @@ How:
 - **Filename:** `YYYY-MM-DD_[sender]-to-[receiver]_[short-subject].md`. Example: `2026-05-01_brand-ambassador-to-chief-of-staff_brand-v6-ripple.md`. Lowercase, hyphens not underscores in the subject slug.
 - **Save location:** vertical handoffs go to `JCVC / [Vertical] / [Workstream] / handoffs /`. Portfolio-level handoffs go to `JCVC / Agent OS / handoffs /`. Founder creates the `handoffs /` sub-folder the first time a workstream produces one.
 - **Then deliver the same content to the receiver.** A saved file alone is not a handoff to an agent currently in chat — paste the markdown into the chat *as well as* saving it. The save is for posterity, not for delivery.
-
----
-
-## 6. Receiving rules
-
-When an agent receives a handoff:
-
-1. **Read all sections in order.** Do not skim to Recommendation.
-2. **Log it.** If you are Chief of Staff, update `WORKSTREAM_STATUS.md` to reflect the handoff (sender's row updated with what shipped, receiver's row updated with what's next, any unblocks reflected in the relevant rows). If you are a workstream, update your local status notes.
-3. **Acknowledge in chat with the founder, not by counter-handoff.** Short reply: what you logged, what you're doing next, any clarifying questions.
-4. **Carry the open backlog items forward.** Items in §3.5 with you as Owner are now yours. Add them to your queue or to the relevant backlog file (`CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`, etc.) within the same session.
-5. **If the Recommendation conflicts with your read of the situation, push back.** The sender owns their domain expertise; you own yours. Disagreement gets resolved in chat with the founder, not silently overridden.
 
 ---
 
@@ -238,6 +280,24 @@ Book is the credibility anchor for StrongPath. Authors are not. Author names app
 Two framings codified in BRAND.md §5:
 - **Platform-as-second-edition.** Book (2018) and platform (2026) are the same intellectual project in the form the medium calls for.
 - **Founder relay.** Public language is "legacy": Bartlit and Droullard entrusted Jeff with carrying the path forward. Lives on the About page only.
+
+## Canonical state at handoff
+
+| File | Current version | Last touched | Notes |
+|---|---|---|---|
+| AGENT_RULES.md | May 1, 2026 | session 6 (latest) | Agent-to-Agent Communication Rule 6 added |
+| HANDOFF_FORMAT.md | v1.1 | session 6 (late) | unchanged this session |
+| ACTIVE_VERTICALS.md | Apr 22, 2026 | session 3 | unchanged this session |
+| BEST_PRACTICES.md | Apr 20, 2026 | session 3 | unchanged this session |
+| BRAND.md | v6 | session 6 | updated this session: §5 book-as-anchor decision |
+| PERSONAS.md | v4 | session 6 | updated this session: author references removed |
+| brand-references.md | v2 | session 6 | updated this session |
+| CONTENT_PLAN.md | v3 | session 6 | updated this session |
+| PUBLISHING_PLAN.md | v2 | session 6 | updated this session |
+
+## Decision dependencies
+
+*None — canonical files reflect all current decisions.*
 
 ## Files updated
 
@@ -267,113 +327,13 @@ Delivery for this example: paste into the next Chief of Staff chat as the openin
 
 ### 7.2 Session-to-session handoff (Chief of Staff session N → session N+1)
 
-```
-# Chief of Staff → Chief of Staff Handoff
-**Date:** [date]
-**Subject:** Session [N] close — [short summary]
-**Status:** Shipped
-
-**Last thing done:** [substantive output from the closing session]
-**Next thing to do:** [first action the next session takes]
-
-## Decision
-
-[dense summary of decisions made, problems solved, files shipped this session]
-
-## Files updated
-
-| File | Version |
-|---|---|
-| [files modified this session] | [version] |
-
-## Open backlog items
-
-[anything surfaced but not resolved, with owner and when]
-
-## Unblocks
-
-[which workstreams are now free to act, on what]
-
-## Recommendation
-
-[sender's call on what the next session does first]
-```
+Same eight-section structure. The Canonical state at handoff section in §3.4 carries the same load: every Tier 1 file with current version, plus any Tier 2/3 files the next session will read.
 
 Delivery: paste into the next Chief of Staff chat as the opening message. This is the most common handoff in the portfolio.
 
-### 7.3 Build-shipping handoff (CTO → Chief of Staff, after first sprint)
+### 7.3 Build-shipping and review-requesting handoffs
 
-```
-# CTO → Chief of Staff Handoff
-**Date:** [date]
-**Subject:** First sprint (CC-1 to CC-4) shipped
-**Status:** Shipped
-
-**Last thing done:** CC-1 through CC-4 merged to main; trust gate criteria from WORKSTREAM_CTO.md §3.3 met.
-**Next thing to do:** Approve GitHub MCP scoping; update CODE_BACKLOG.md to reflect shipped sprint.
-
-## Decision
-
-[architectural calls, what shipped, what was deferred]
-
-## Files updated
-
-| File | Version |
-|---|---|
-| CODE_BACKLOG.md | [date] |
-| strongpath/CLAUDE.md | v1.1 |
-
-## Open backlog items
-
-- [items the sprint surfaced]
-
-## Unblocks
-
-- **Email Marketer:** Klaviyo flows can now be designed against working email capture.
-- **Content Writer:** Brief 1 publishing pipeline confirmed working end-to-end.
-
-## Recommendation
-
-[sender's call on what's next]
-```
-
-Delivery: paste into the next Chief of Staff chat. May also save as a `.md` file if the trust gate clearance is a moment worth recording in the audit trail.
-
-### 7.4 Review-requesting handoff (Content Writer → Brand Ambassador)
-
-```
-# Content Writer → Brand Ambassador Handoff
-**Date:** [date]
-**Subject:** Brief 7 draft, eunoia review requested
-**Status:** Awaiting Review
-
-**Last thing done:** Brief 7 draft complete; meets BRAND.md v6 voice rules and FTC compliance per ftc-fda-claim-review skill.
-**Next thing to do:** Brand Ambassador eunoia review per BRAND.md §[X]; return with edits or sign-off.
-
-## Decision
-
-[what the article is, who it's for, what's at stake on review]
-
-## Files updated
-
-| File | Version |
-|---|---|
-| brief-7-[slug].md | v1 (new, draft) |
-
-## Open backlog items
-
-*None.*
-
-## Unblocks
-
-*Awaiting review; nothing unblocked yet.*
-
-## Recommendation
-
-Eunoia review focus: [specific framings the writer wants checked]. Sign-off allows Week 3 publish per PUBLISHING_PLAN.md.
-```
-
-Delivery: paste into the Brand Ambassador chat. The Brief 7 draft itself is a separate artifact and is delivered alongside (chat attachment or canonical file location).
+Same structure. The Canonical state section reflects what is true on `main` at handoff-write time; the Files updated section shows what this session's work changed. Both are required.
 
 ---
 
@@ -384,6 +344,7 @@ Delivery: paste into the Brand Ambassador chat. The Brief 7 draft itself is a se
 | May 1, 2026 | Initial version (v1.0). Authored after Brand Ambassador BRAND.md v6 handoff demonstrated the de facto template; founder approved formalizing it as a Tier 1 portfolio standard. | Chief of Staff session 6 (early) |
 | May 1, 2026 (later) | v1.1. Reframed from "format of handoff *files*" to "format of handoff *messages*." The handoff is a markdown payload first; whether it lands in chat or in a file is a separate delivery question. New §2 (Format vs. delivery) sets up the distinction. New §5 (Delivery — paste vs. save) replaces what was implicit file-default behavior in v1.0. Default delivery is now paste-into-chat; file save is the exception. Authoring rules in §4 reworked to drop file-centric framing and emphasize the markdown-payload framing. Inheritance from `AGENT_RULES.md` §Agent-to-Agent Communication and §Handoffs made explicit in §1. New example §7.2 added for session-to-session handoffs (the most common case). Prompted by founder pushback in session 6 that the prior file-first framing created friction (OneDrive sync lag, redundant artifacts) without a corresponding benefit, and that markdown is the right medium for agent-to-agent communication regardless of whether it gets saved. | Chief of Staff session 6 (late) |
 | May 4, 2026 | Migrated to GitHub canonical at `JPCWooJ/strongpath/agent-os/portfolio/HANDOFF_FORMAT.md`. Added Distribution block. Drive copy at `JCVC / Agent-OS / HANDOFF_FORMAT.md` (file ID `11cF0pLrod4wcE5mb8apShm_8kprzSU2J`) is now superseded. Content otherwise unchanged from v1.1. Prompted by Chief of Staff (Portfolio Architecture) Session 17 sync audit, which found this Tier 1 file was Drive-only and never migrated during the May 4 GitHub-canonical cleanup. | Chief of Staff (Portfolio Architecture) session 17 |
+| May 5, 2026 | v1.2. Added §3.4 Canonical state at handoff — required cumulative-state table the receiver checks against its `/mnt/project/` cache before any work. Added §3.5 Decision dependencies — short section for in-flight decisions not yet reflected in canonical files. Renumbered Files updated, Open backlog items, Unblocks, and Recommendation accordingly. Updated §4 Authoring rules to require eight sections, not seven. Added §4 Rule 8: fill §3.4 from `main`, not from cache. Updated §5 Receiving rules with new Rule 2: cross-check §3.4 against the local cache before any work. Updated §7.1 example to show §3.4 in use. Renumbered §5 Delivery to §6, §6 Receiving to §5 (receiving rules logically precede delivery details). Prompted by Chief of Staff session 18, where the receiving CoS read a session-17 handoff that named only that session's deltas, defaulted to `/mnt/project/` cache, drafted a `WORKSTREAM_STATUS.md` update against a multi-session-stale cache, and produced a PR that would have overwritten current Flag 8 with a different one. Root cause: handoff format had no requirement to surface cumulative state, and no requirement on the receiver to verify cache freshness. This rule closes the gap. | Chief of Staff session 18 |
 
 ---
 
