@@ -1,4 +1,5 @@
 import { articleHref } from '@/lib/articles'
+import { mergePublishedPosts } from '@/lib/flagship-articles'
 import { client, postsQuery } from '@/lib/sanity'
 import type { Post } from '@/lib/sanity'
 import { absoluteUrl, siteMetadata } from '@/lib/site'
@@ -16,7 +17,7 @@ function escapeXml(value = '') {
 
 export async function GET() {
   const posts: Post[] = await client.fetch(postsQuery)
-  const items = posts
+  const items = mergePublishedPosts(posts)
     .map((post) => {
       const url = absoluteUrl(articleHref(post))
 
