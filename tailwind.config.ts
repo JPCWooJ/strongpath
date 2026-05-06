@@ -28,6 +28,14 @@ const config: Config = {
         "heading-lg": ["64px", { lineHeight: "1.12" }],
         display: ["86px", { lineHeight: "1" }],
       },
+      lineHeight: {
+        caption: "1.2",
+        body: "1.55",
+        subheading: "1.25",
+        heading: "1.25",
+        "heading-lg": "1.12",
+        display: "1",
+      },
       spacing: {
         8: "8px",
         9: "9px",
