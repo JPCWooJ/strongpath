@@ -8,16 +8,16 @@ export function ArticleList({ articles }: { articles: ArticleMeta[] }) {
       {articles.map((article) => (
         <article
           key={article.href}
-          className="grid gap-18 border-b border-inkwell py-28 md:grid-cols-[0.34fr_0.66fr]"
+          className="grid gap-18 border-b border-inkwell py-30 md:grid-cols-[0.28fr_0.72fr]"
         >
-          <div className="font-utility text-caption leading-caption text-inkwell/65">
+          <div className="border-t border-inkwell pt-12 font-utility text-caption leading-caption text-inkwell/65 md:border-t-0 md:pt-0">
             {article.category && <p>{article.category}</p>}
             {article.publishedAt && <p className="mt-8">{formatArticleDate(article.publishedAt)}</p>}
             {article.readingMinutes && <p className="mt-8">{article.readingMinutes} min read</p>}
           </div>
           <div>
             <Link href={article.href} className="group">
-              <h2 className="font-display text-[34px] font-normal leading-[1.08] text-inkwell group-hover:underline md:text-[44px]">
+              <h2 className="font-display text-[36px] font-normal leading-[1.06] text-inkwell group-hover:underline md:text-[48px]">
                 {article.title}
               </h2>
             </Link>
