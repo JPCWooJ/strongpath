@@ -1,3 +1,162 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-parchment: #f0ebdd;
+  --color-inkwell: #302f2c;
+  --color-activated-black: #000000;
+  --color-sunbeam-gradient: #ffb801;
+  --gradient-sunbeam-gradient: radial-gradient(
+    41.33% 41.33%,
+    rgb(255, 199, 56) 0px,
+    rgba(248, 233, 226, 0) 100%
+  );
+
+  --font-arial: Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  --text-caption: 13px;
+  --leading-caption: 1.2;
+  --text-body: 17px;
+  --leading-body: 1.55;
+  --text-subheading: 22px;
+  --leading-subheading: 1.25;
+  --text-heading: 36px;
+  --leading-heading: 1.25;
+  --text-heading-lg: 64px;
+  --leading-heading-lg: 1.12;
+  --text-display: 86px;
+  --leading-display: 1;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  --spacing-8: 8px;
+  --spacing-9: 9px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-18: 18px;
+  --spacing-30: 30px;
+  --spacing-40: 40px;
+  --spacing-60: 60px;
+  --spacing-90: 90px;
+
+  --section-gap: 30px;
+  --card-padding: 18px;
+  --element-gap: 12px;
+  --radius-links: 40px;
+
+  --surface-canvas: #f0ebdd;
+  --surface-accent-surface: #ffb801;
+  --surface-interactive-textstroke: #302f2c;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-body: 18px;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--surface-canvas);
+    color: var(--color-inkwell);
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.22), rgba(248, 233, 226, 0) 34rem),
+      var(--surface-canvas);
+    color: var(--color-inkwell);
+    font-family: var(--font-basel-grotesk), Inter, system-ui, sans-serif;
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--leading-body);
+    letter-spacing: normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--color-inkwell);
+    font-family: var(--font-big-daily-short), "Playfair Display", Georgia, serif;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: normal;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-inkwell);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background: rgba(255, 184, 1, 0.32);
+    color: var(--color-activated-black);
+  }
+}
+
+@layer components {
+  .sp-page-shell {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.2), rgba(248, 233, 226, 0) 32rem),
+      var(--surface-canvas);
+  }
+
+  .sp-container {
+    width: min(100% - 36px, 1120px);
+    margin-inline: auto;
+  }
+
+  .sp-editorial {
+    width: min(100% - 36px, 760px);
+    margin-inline: auto;
+  }
+
+  .sp-section {
+    padding-block: clamp(60px, 8vw, 90px);
+  }
+
+  .sp-kicker {
+    font-family: var(--font-arial);
+    font-size: var(--text-caption);
+    line-height: var(--leading-caption);
+  }
+
+  .sp-heading-display {
+    font-size: clamp(42px, 10vw, 86px);
+    line-height: var(--leading-display);
+  }
+
+  .sp-heading-lg {
+    font-size: clamp(36px, 7vw, 64px);
+    line-height: var(--leading-heading-lg);
+  }
+
+  .sp-heading {
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: var(--leading-heading);
+  }
+
+  .sp-body {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+  }
+
+  .sp-rule {
+    border-color: var(--color-inkwell);
+    opacity: 0.32;
+  }
+}

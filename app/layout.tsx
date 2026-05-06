@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-big-daily-short",
+  weight: ["400", "500", "600"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-basel-grotesk",
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   title: "StrongPath",
@@ -13,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${playfair.variable} ${inter.variable}`}>{children}</body>
     </html>
   );
 }
