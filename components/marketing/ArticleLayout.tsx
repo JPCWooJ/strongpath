@@ -55,16 +55,23 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
     <main>
       <article>
         <header className="border-b border-inkwell">
-          <div className="sp-container py-[72px] md:py-[96px]">
-            <div className="grid gap-40 lg:grid-cols-[0.32fr_0.68fr]">
-              <div className="font-utility text-caption leading-caption text-inkwell/65">
+          <div className="sp-container py-[72px] md:py-[104px]">
+            <div className="border-y border-inkwell py-18">
+              <div className="flex flex-wrap items-center justify-between gap-10 font-utility text-caption leading-caption text-inkwell/65">
+                <p>StrongPath article</p>
+                <p>Evidence-oriented health education</p>
+              </div>
+            </div>
+            <div className="grid gap-40 pt-48 lg:grid-cols-[0.28fr_0.72fr]">
+              <div className="border-t border-inkwell pt-18 font-utility text-caption leading-caption text-inkwell/65 lg:border-t-0 lg:pt-0">
                 {post.category && <p>{post.category}</p>}
                 {publishedAt && <p className="mt-8">{publishedAt}</p>}
                 {updatedAt && updatedAt !== publishedAt && <p className="mt-8">Updated {updatedAt}</p>}
                 {readingMinutes && <p className="mt-8">{readingMinutes} min read</p>}
+                {post.author && <p className="mt-8">By {post.author}</p>}
               </div>
               <div>
-                <h1 className="max-w-[920px] font-display text-[52px] font-normal leading-[1] text-inkwell md:text-[78px]">
+                <h1 className="max-w-[980px] font-display text-[54px] font-normal leading-[0.98] text-inkwell md:text-[86px]">
                   {post.title}
                 </h1>
                 {post.excerpt && (
@@ -91,14 +98,24 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
         </header>
 
         <div className="sp-container py-60">
-          <div className="grid gap-40 lg:grid-cols-[0.24fr_minmax(0,0.76fr)]">
+          <div className="grid gap-40 lg:grid-cols-[0.28fr_minmax(0,0.72fr)]">
             <aside className="hidden border-r border-inkwell pr-30 font-utility text-caption leading-caption text-inkwell/65 lg:block">
-              <p>StrongPath article</p>
+              <p className="text-inkwell">Source standard</p>
               <p className="mt-12">
-                Evidence-oriented health education. Not medical advice or a substitute for care.
+                Claims should rest on current peer-reviewed research, named institutional sources,
+                or clearly identified mechanisms.
+              </p>
+              <p className="mt-18 text-inkwell">Reader note</p>
+              <p className="mt-12">
+                Educational only. Not medical advice or a substitute for care from a qualified
+                professional.
               </p>
             </aside>
-            <div className="max-w-[780px]">
+            <div className="max-w-[800px]">
+              <div className="mb-34 border-y border-inkwell py-18 font-utility text-caption leading-caption text-inkwell/70">
+                StrongPath separates book credibility from claim substantiation. The book anchors
+                the work; current research carries specific health claims.
+              </div>
               {post.body ? (
                 <PortableText value={post.body} components={portableTextComponents} />
               ) : (

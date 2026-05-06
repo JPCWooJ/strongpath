@@ -9,22 +9,28 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="border-b border-inkwell bg-parchment">
-      <div className="sp-container flex min-h-[96px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
-        <div>
-          <Link href="/" className="font-display text-[42px] font-normal leading-none text-inkwell md:text-[54px]">
+      <div className="sp-container border-b border-inkwell/35 py-8">
+        <div className="flex flex-wrap items-center justify-between gap-8 font-utility text-caption leading-caption text-inkwell/65">
+          <p>Evidence-first strength publication</p>
+          <p>Muscle loss / resistance training / healthy aging</p>
+        </div>
+      </div>
+      <div className="sp-container flex min-h-[108px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
+        <Link href="/" className="group">
+          <p className="font-display text-[46px] font-normal leading-none text-inkwell md:text-[62px]">
             StrongPath
-          </Link>
-          <p className="mt-8 font-utility text-caption leading-caption text-inkwell/70">
+          </p>
+          <p className="mt-8 max-w-[460px] font-utility text-caption leading-caption text-inkwell/70">
             Strength, independence, and the research between them.
           </p>
-        </div>
+        </Link>
 
         <nav aria-label="Primary navigation" className="flex items-center gap-8 self-start md:self-end">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-links border border-transparent px-14 py-8 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:border-inkwell focus-visible:border-inkwell"
+              className="border-b border-transparent px-4 py-8 font-utility text-caption leading-caption text-inkwell/75 transition-colors hover:border-inkwell hover:text-inkwell focus-visible:border-inkwell"
             >
               {item.label}
             </Link>

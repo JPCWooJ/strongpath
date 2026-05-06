@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AmazonLink } from '@/components/AmazonLink'
+import { formatArticleDate } from '@/lib/articles'
+import { featuredFlagshipArticles } from '@/lib/flagship-articles'
 import { EmailForm } from './EmailForm'
 
 export const metadata: Metadata = {
@@ -71,6 +73,17 @@ const publishingTopics = [
     copy: 'A careful first-step guide for people who want specifics, not motivation slogans.',
   },
 ]
+
+const featuredArticles = featuredFlagshipArticles.map((article) => ({
+  title: article.title,
+  href: `/blog/${article.slug.current}`,
+  excerpt: article.excerpt,
+  category: article.category,
+  publishedAt: article.publishedAt,
+}))
+
+const leadArticle = featuredArticles[0]
+const secondaryArticles = featuredArticles.slice(1)
 
 export default function HomePage() {
   return (
@@ -309,6 +322,92 @@ export default function HomePage() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-inkwell">
+        <div className="sp-container py-40">
+          <div className="grid gap-18 md:grid-cols-3">
+            <div className="border-y border-inkwell py-18">
+              <p className="font-utility text-caption leading-caption text-inkwell/65">
+                Source posture
+              </p>
+              <p className="mt-10 font-display text-[30px] leading-[1.1] text-inkwell">
+                Current research carries claims.
+              </p>
+            </div>
+            <div className="border-y border-inkwell py-18">
+              <p className="font-utility text-caption leading-caption text-inkwell/65">
+                Editorial stance
+              </p>
+              <p className="mt-10 font-display text-[30px] leading-[1.1] text-inkwell">
+                Mechanisms before motivation.
+              </p>
+            </div>
+            <div className="border-y border-inkwell py-18">
+              <p className="font-utility text-caption leading-caption text-inkwell/65">
+                Reader promise
+              </p>
+              <p className="mt-10 font-display text-[30px] leading-[1.1] text-inkwell">
+                Calm, useful, and checkable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-inkwell">
+        <div className="sp-container py-[72px]">
+          <div className="grid gap-40 lg:grid-cols-[0.38fr_0.62fr]">
+            <div>
+              <p className="sp-kicker mb-18 text-inkwell/70">Now publishing</p>
+              <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
+                The first StrongPath essays are live.
+              </h2>
+              <p className="sp-body mt-24 text-inkwell/85">
+                These starter articles establish the editorial spine of the publication: muscle
+                loss, strength, evidence, and the practical meaning of healthy aging.
+              </p>
+            </div>
+            <div className="grid gap-0 border-t border-inkwell lg:grid-cols-[1.12fr_0.88fr]">
+              {leadArticle && (
+                <article className="border-b border-inkwell py-28 lg:border-r lg:pr-30">
+                  <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-caption leading-caption text-inkwell/65">
+                    {leadArticle.category && <p>{leadArticle.category}</p>}
+                    {leadArticle.publishedAt && <p>{formatArticleDate(leadArticle.publishedAt)}</p>}
+                  </div>
+                  <Link href={leadArticle.href} className="group mt-18 block">
+                    <h3 className="font-display text-[44px] font-normal leading-[1.02] text-inkwell group-hover:underline md:text-[58px]">
+                      {leadArticle.title}
+                    </h3>
+                  </Link>
+                  {leadArticle.excerpt && (
+                    <p className="mt-20 font-body text-[21px] font-medium leading-[1.45] text-inkwell/85">
+                      {leadArticle.excerpt}
+                    </p>
+                  )}
+                </article>
+              )}
+              <div className="grid lg:pl-30">
+                {secondaryArticles.map((article) => (
+                  <article key={article.href} className="border-b border-inkwell py-24">
+                    <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-caption leading-caption text-inkwell/65">
+                      {article.category && <p>{article.category}</p>}
+                      {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
+                    </div>
+                    <Link href={article.href} className="group mt-12 block">
+                      <h3 className="font-display text-[32px] font-normal leading-[1.08] text-inkwell group-hover:underline md:text-[38px]">
+                        {article.title}
+                      </h3>
+                    </Link>
+                    {article.excerpt && (
+                      <p className="sp-body mt-12 text-inkwell/85">{article.excerpt}</p>
+                    )}
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </div>
