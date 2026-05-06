@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { siteMetadata } from "@/lib/site";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -17,8 +18,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "StrongPath",
-  description: "An evidence-based strength platform for adults who refuse to accept muscle loss as inevitable.",
+  metadataBase: new URL(siteMetadata.url),
+  title: {
+    default: siteMetadata.title,
+    template: `%s | ${siteMetadata.name}`,
+  },
+  description: siteMetadata.description,
+  alternates: {
+    types: {
+      "application/rss+xml": siteMetadata.rssPath,
+    },
+  },
 };
 
 export default function RootLayout({
