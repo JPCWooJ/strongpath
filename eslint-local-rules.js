@@ -6,19 +6,21 @@ module.exports = {
       type: 'problem',
       docs: {
         description:
-          'Require FTCDisclosure to be imported alongside AmazonLink. FTC rules require affiliate disclosure above the fold on every page with Amazon links.',
+          'Require FTCDisclosure to be imported alongside AmazonLink, unless the shared marketing footer carries the disclosure.',
       },
       messages: {
         missingDisclosure:
           'AmazonLink is imported but FTCDisclosure is not. ' +
-          'FTC rules require affiliate disclosure above the fold on every page with Amazon links. ' +
-          'Import and render <FTCDisclosure /> on this page.',
+          'Import and render <FTCDisclosure /> on this page or use a shared layout that renders the disclosure.',
       },
       schema: [],
     },
     create(context) {
       let amazonLinkImportNode = null
       let hasFTCDisclosure = false
+      const filename = context.getFilename()
+      const usesMarketingFooterDisclosure =
+        filename.includes('app/(marketing)/') || filename.includes('app\\(marketing)\\')
 
       return {
         ImportDeclaration(node) {
@@ -26,7 +28,7 @@ module.exports = {
           if (node.source.value.includes('FTCDisclosure')) hasFTCDisclosure = true
         },
         'Program:exit'() {
-          if (amazonLinkImportNode && !hasFTCDisclosure) {
+          if (amazonLinkImportNode && !hasFTCDisclosure && !usesMarketingFooterDisclosure) {
             context.report({
               node: amazonLinkImportNode,
               messageId: 'missingDisclosure',

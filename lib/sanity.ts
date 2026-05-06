@@ -13,32 +13,77 @@ export type Post = {
   _id: string
   title: string
   slug: { current: string }
-  publishedAt: string
-  excerpt: string
-  author: string
-  mainImage: { asset: { _ref: string } }
+  publishedAt?: string
+  updatedAt?: string
+  excerpt?: string
+  author?: string
+  category?: string
+  tags?: string[]
+  seoTitle?: string
+  seoDescription?: string
+  canonicalUrl?: string
+  estimatedReadingMinutes?: number
+  mainImage?: { asset: { _ref: string } }
   body?: PortableTextBlock[]
 }
 
-// All posts — list view (no body, keeps payload small)
-export const postsQuery = groq`*[_type == "post" && defined(slug.current)] | order(publishedAt desc) {
+const publishedPostFilter = `_type == "post" && defined(slug.current) && draft != true`
+
+export const postsQuery = groq`*[${publishedPostFilter}] | order(publishedAt desc) {
   _id,
   title,
   slug,
   publishedAt,
+  updatedAt,
   excerpt,
   author,
+  category,
+  tags,
+  seoTitle,
+  seoDescription,
+  canonicalUrl,
+  estimatedReadingMinutes,
   mainImage
 }`
 
-// Single post by slug — includes body for full render
-export const postQuery = groq`*[_type == "post" && slug.current == $slug][0] {
+export const postSlugsQuery = groq`*[${publishedPostFilter}] {
+  "slug": slug.current
+}`
+
+export const postsByTagQuery = groq`*[
+  ${publishedPostFilter} &&
+  count((tags[])[lower(@) == lower($tag) || lower(@) match lower($tagDisplay)]) > 0
+] | order(publishedAt desc) {
   _id,
   title,
   slug,
   publishedAt,
+  updatedAt,
+  excerpt,
+  author,
+  category,
+  tags,
+  seoTitle,
+  seoDescription,
+  canonicalUrl,
+  estimatedReadingMinutes,
+  mainImage
+}`
+
+export const postQuery = groq`*[${publishedPostFilter} && slug.current == $slug][0] {
+  _id,
+  title,
+  slug,
+  publishedAt,
+  updatedAt,
   excerpt,
   body,
   author,
+  category,
+  tags,
+  seoTitle,
+  seoDescription,
+  canonicalUrl,
+  estimatedReadingMinutes,
   mainImage
 }`
