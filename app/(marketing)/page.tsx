@@ -1,110 +1,118 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AmazonLink } from '@/components/AmazonLink'
-import { FTCDisclosure } from '@/components/FTCDisclosure'
 import { EmailForm } from './EmailForm'
 
 export const metadata: Metadata = {
-  title: 'StrongPath - Strength for adults 55+',
+  title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
-    'Evidence-based strength guidance for adults and families who want to preserve capacity, confidence, and independence.',
+    'StrongPath is an evidence-based strength platform for adults and families facing age-related muscle loss.',
   openGraph: {
-    title: 'StrongPath - Strength for adults 55+',
+    title: 'StrongPath - Evidence-based strength for adults 55+',
     description:
-      'Evidence-based strength guidance for adults and families who want to preserve capacity, confidence, and independence.',
+      'Research-grounded strength guidance for adults who want to preserve capacity, independence, and good days.',
     type: 'website',
   },
 }
 
-const evidenceNotes = [
-  {
-    label: 'Strength',
-    title: 'Muscle and capacity',
-    copy: 'The quiet losses behind stairs, groceries, balance, recovery, and independence.',
-  },
-  {
-    label: 'Practice',
-    title: 'Training, protein, recovery',
-    copy: 'The basic pattern is not mysterious. The challenge is making it specific enough to follow.',
-  },
-  {
-    label: 'Trust',
-    title: 'A serious tone',
-    copy: 'No hype, no miracle language, no pressure. Just a careful case for strength.',
-  },
-]
-
 const adviceFailures = [
-  ['Walk more', 'Useful, but not enough to preserve strength on its own.'],
-  ['Be careful', 'Often true, rarely actionable. Caution needs a path.'],
-  ['Eat more protein', 'Directionally right, but too vague to become a plan.'],
-  ['Try some weights', 'The right instinct, missing the sequence: start, load, recover, progress.'],
+  ['Walk more', 'Walking matters. It does not train the muscles that help you rise, carry, climb, and recover.'],
+  ['Be careful', 'Caution can protect people. Without a plan, it often teaches them to do less and less.'],
+  ['Eat more protein', 'The direction is useful. Older adults need specifics: amount, timing, and how it supports training.'],
+  ['Try some weights', 'The right instinct needs a sequence: start low, learn form, add load, recover, progress.'],
 ]
 
-const pathways = [
+const readerPaths = [
   {
-    label: 'For you',
-    title: 'You have noticed the stairs.',
+    label: 'For adults noticing change',
+    title: 'The stairs are telling you something.',
     copy:
-      'You are not broken. You are paying attention. StrongPath begins with the question you are already asking: what actually works after 55?',
+      'You are not broken. You are paying attention. StrongPath explains what age-related muscle loss is, what the research says, and how to begin without being treated like a beginner in life.',
   },
   {
-    label: 'For family',
-    title: 'You want your parent to have more good days.',
+    label: 'For adult children',
+    title: 'You want your parent to keep more good days.',
     copy:
-      'Not out of panic. Out of love. The right guidance should protect dignity and make the next conversation easier.',
+      'The aim is dignity, not pressure. We help families understand what strength protects and how to make the next conversation calmer, clearer, and more useful.',
   },
   {
-    label: 'For clinicians',
-    title: 'You need a resource you can trust.',
+    label: 'For careful readers',
+    title: 'You want claims that can be checked.',
     copy:
-      'StrongPath is written to be useful to patients and respectable to the clinicians who care for them.',
+      'StrongPath cites current research and named sources. The book gives the work its foundation; current evidence carries the specific claims we publish.',
   },
 ]
 
-const publishingAnchors = [
-  'What muscle loss after 60 actually means',
-  'Resistance training for older adults',
-  'How to help aging parents stay strong',
-  'How much protein adults over 60 need',
-  'How to start lifting weights at 60',
+const evidenceSources = [
+  'Peer-reviewed studies on sarcopenia, resistance training, protein metabolism, and recovery',
+  'Named institutional sources including Harvard Health Publishing, Mayo Clinic, NIH, NIA, and ACSM',
+  'Plain-language summaries that separate what research shows from what it does not yet prove',
+]
+
+const publishingTopics = [
+  {
+    title: 'What is sarcopenia?',
+    copy: 'The plain-language guide to age-related muscle loss, why it is often missed, and what measurements matter.',
+  },
+  {
+    title: 'Resistance training for older adults',
+    copy: 'How to train strength safely and seriously, with progression that respects different starting points.',
+  },
+  {
+    title: 'How to help aging parents stay strong',
+    copy: 'A practical guide for families who want to support capacity without taking over.',
+  },
+  {
+    title: 'Protein after 60',
+    copy: 'What older adults need to know about protein, muscle repair, and training support.',
+  },
+  {
+    title: 'How to start lifting weights at 60',
+    copy: 'A careful first-step guide for people who want specifics, not motivation slogans.',
+  },
 ]
 
 export default function HomePage() {
   return (
-    <>
-      <FTCDisclosure />
-      <main className="overflow-hidden">
+    <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[42rem] bg-sunbeam-gradient opacity-80" />
+        <div className="absolute inset-x-0 top-0 h-[44rem] bg-sunbeam-gradient opacity-80" />
         <div className="sp-container relative py-[72px] md:py-[108px]">
-          <div className="grid gap-40 border-y border-inkwell py-18 md:grid-cols-[0.72fr_1.28fr] md:items-center">
+          <div className="grid gap-40 border-y border-inkwell py-18 md:grid-cols-[0.74fr_1.26fr] md:items-center">
             <p className="font-utility text-caption leading-caption text-inkwell/70">
-              Evidence-based strength for adults 55+
+              Evidence-based strength platform
             </p>
             <p className="font-utility text-caption leading-caption text-inkwell/70 md:text-right">
-              For people who want to stay capable, and for families helping someone they love.
+              For adults who refuse to accept muscle loss as inevitable, and for families helping
+              someone they love.
             </p>
           </div>
 
-          <div className="grid gap-60 pt-60 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <div className="grid gap-60 pt-60 lg:grid-cols-[1.04fr_0.96fr] lg:items-start">
             <div>
-              <p className="sp-kicker mb-18 text-inkwell/70">A more serious way to age strong</p>
-              <h1 className="max-w-[920px] font-display text-[58px] font-normal leading-[0.98] text-inkwell sm:text-[78px] lg:text-[104px]">
-                Strength is not a youth project.
+              <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
+              <h1 className="max-w-[960px] font-display text-[56px] font-normal leading-[0.98] text-inkwell sm:text-[78px] lg:text-[104px]">
+                Muscle loss is the problem. Strength is the path.
               </h1>
-              <p className="mt-40 max-w-[740px] font-body text-[22px] font-medium leading-[1.42] text-inkwell/85">
-                StrongPath helps adults preserve capacity, confidence, and independence with
-                research-grounded guidance that respects the reader.
+              <p className="mt-40 max-w-[760px] font-body text-[22px] font-medium leading-[1.42] text-inkwell/85">
+                StrongPath is an evidence-based strength platform for adults who want to preserve
+                capacity, independence, and good days. The work is built on the research foundation
+                behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
+                kept current through the research we publish now.
               </p>
             </div>
 
             <aside className="border border-inkwell bg-parchment p-18 lg:mt-20">
               <div className="border border-inkwell p-24 md:p-30">
-                <p className="font-utility text-caption leading-caption text-inkwell/65">
-                  The book behind the work
-                </p>
-                <div className="mt-30 flex min-h-[390px] flex-col justify-between border border-inkwell p-24">
+                <div className="flex flex-wrap items-center gap-10">
+                  <p className="font-utility text-caption leading-caption text-inkwell/65">
+                    The book behind the work
+                  </p>
+                  <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-gold">
+                    Amazon bestseller
+                  </p>
+                </div>
+                <div className="mt-30 flex min-h-[410px] flex-col justify-between border border-inkwell p-24">
                   <div>
                     <p className="font-display text-[50px] font-normal leading-[0.98] text-inkwell">
                       Choosing the StrongPath
@@ -124,8 +132,8 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="mt-18 font-body text-[18px] leading-body text-inkwell/85">
-                The work began with a book. StrongPath carries it forward as a practical resource
-                for the years when strength starts to matter more.
+                The book named the work. StrongPath extends it into a current website, a growing
+                publishing system, and future tools that help people put strength into practice.
               </p>
               <div className="mt-24 flex flex-col gap-12 sm:flex-row">
                 <AmazonLink
@@ -138,7 +146,7 @@ export default function HomePage() {
                   href="/waitlist"
                   className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
                 >
-                  Join the list
+                  Receive the guides
                 </Link>
               </div>
             </aside>
@@ -161,13 +169,14 @@ export default function HomePage() {
                 A parent begins organizing the day around what feels safe.
               </p>
               <p className="sp-body text-inkwell/85">
-                These moments are easy to dismiss because they arrive quietly. They are not a
-                verdict. They are a reason to get specific.
+                These are often signs of age-related muscle loss. The condition has a name:
+                sarcopenia. It affects muscle, strength, function, balance, recovery, and the small
+                freedoms that make a day feel normal.
               </p>
               <p className="sp-body text-inkwell/85">
-                Most people have already heard that they should stay active. What they need is
-                better than a slogan: a clear explanation of what strength requires, and how to
-                begin carefully.
+                StrongPath is not about vague aging. It is about the measurable loss of muscle and
+                strength, and the research-backed practices that help adults protect capacity over
+                time.
               </p>
             </div>
           </div>
@@ -180,12 +189,15 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Why the usual advice falls short</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.1] md:text-[58px]">
-                The advice is familiar. That is the problem.
+                Familiar advice is often too vague to use.
               </h2>
             </div>
             <div className="grid border-t border-inkwell">
               {adviceFailures.map(([title, copy]) => (
-                <div key={title} className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[0.36fr_0.64fr]">
+                <div
+                  key={title}
+                  className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[0.36fr_0.64fr]"
+                >
                   <h3 className="font-display text-[30px] font-normal leading-[1.12]">{title}</h3>
                   <p className="sp-body text-inkwell/85">{copy}</p>
                 </div>
@@ -198,24 +210,16 @@ export default function HomePage() {
       <section className="relative border-b border-inkwell">
         <div className="absolute inset-0 bg-sunbeam-gradient opacity-40" />
         <div className="sp-container relative py-[84px]">
-          <div className="mx-auto max-w-[980px] text-center">
-            <p className="sp-kicker mb-18 text-inkwell/70">What we believe</p>
+          <div className="mx-auto max-w-[990px] text-center">
+            <p className="sp-kicker mb-18 text-inkwell/70">What strength protects</p>
             <h2 className="font-display text-[50px] font-normal leading-[1.04] md:text-[78px]">
-              Serious health advice should feel calm.
+              Capacity is built in ordinary moments.
             </h2>
-            <p className="mx-auto mt-30 max-w-[720px] font-body text-[21px] font-medium leading-[1.45] text-inkwell/85">
-              No urgency theater. No miracle claims. No language that makes capable adults feel
-              diminished. Just a serious case for strength, written plainly.
+            <p className="mx-auto mt-30 max-w-[760px] font-body text-[21px] font-medium leading-[1.45] text-inkwell/85">
+              Getting out of a chair. Carrying groceries. Traveling with confidence. Visiting
+              family without planning around every step. Strength protects independence because it
+              protects the actions independence depends on.
             </p>
-          </div>
-          <div className="mt-60 grid gap-18 lg:grid-cols-3">
-            {evidenceNotes.map((note) => (
-              <article key={note.title} className="border border-inkwell bg-parchment p-24">
-                <p className="font-utility text-caption leading-caption text-inkwell/65">{note.label}</p>
-                <h3 className="mt-18 font-display text-[34px] font-normal leading-[1.1]">{note.title}</h3>
-                <p className="sp-body mt-18 text-inkwell/85">{note.copy}</p>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -226,15 +230,22 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Who this is for</p>
               <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
-                Different readers arrive with the same hope.
+                Two readers often arrive at the same page.
               </h2>
             </div>
             <div className="grid border-t border-inkwell">
-              {pathways.map((pathway) => (
-                <article key={pathway.label} className="grid gap-18 border-b border-inkwell py-30 md:grid-cols-[0.28fr_0.72fr]">
-                  <p className="font-utility text-caption leading-caption text-inkwell/65">{pathway.label}</p>
+              {readerPaths.map((pathway) => (
+                <article
+                  key={pathway.label}
+                  className="grid gap-18 border-b border-inkwell py-30 md:grid-cols-[0.32fr_0.68fr]"
+                >
+                  <p className="font-utility text-caption leading-caption text-inkwell/65">
+                    {pathway.label}
+                  </p>
                   <div>
-                    <h3 className="font-display text-[38px] font-normal leading-[1.08]">{pathway.title}</h3>
+                    <h3 className="font-display text-[38px] font-normal leading-[1.08]">
+                      {pathway.title}
+                    </h3>
                     <p className="sp-body mt-18 text-inkwell/85">{pathway.copy}</p>
                   </div>
                 </article>
@@ -247,20 +258,22 @@ export default function HomePage() {
       <section className="border-b border-inkwell">
         <div className="sp-container grid gap-0 lg:grid-cols-[1fr_1fr]">
           <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
-            <p className="sp-kicker mb-18 text-inkwell/70">For families</p>
+            <p className="sp-kicker mb-18 text-inkwell/70">The evidence standard</p>
             <h2 className="font-display text-[42px] font-normal leading-[1.08] md:text-[62px]">
-              The ask is not &ldquo;fix my parent.&rdquo; The ask is &ldquo;help them keep more good days.&rdquo;
+              The book is the foundation. Current research does the substantiating.
             </h2>
           </div>
           <div className="py-60 lg:pl-40">
             <p className="font-body text-[24px] font-medium leading-[1.38] text-inkwell">
-              The caregiver reader is not shopping from fear. He is acting from love.
+              StrongPath publishes for readers who want confidence without salesmanship.
             </p>
-            <p className="sp-body mt-24 text-inkwell/85">
-              The right guidance should protect a parent&apos;s dignity. It should make the next
-              conversation easier, not heavier. It should help the family move from worry to a
-              small, credible next step.
-            </p>
+            <div className="mt-30 grid border-t border-inkwell">
+              {evidenceSources.map((source) => (
+                <p key={source} className="border-b border-inkwell py-18 sp-body text-inkwell/85">
+                  {source}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -269,23 +282,32 @@ export default function HomePage() {
         <div className="sp-container py-60">
           <div className="grid gap-40 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p className="sp-kicker mb-18 text-inkwell/70">Coming first</p>
+              <p className="sp-kicker mb-18 text-inkwell/70">Start here</p>
               <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
-                A practical library for strength after 55.
+                What we publish first.
               </h2>
               <p className="sp-body mt-24 text-inkwell/85">
-                The first StrongPath guides focus on the questions people ask first: what is
-                happening, what works, how to start, and how to help someone you love begin.
+                The first StrongPath guides answer the questions that matter before a program,
+                purchase, or promise: what is happening, what works, how to start, and how to help
+                someone you love begin.
               </p>
             </div>
             <div className="grid border-t border-inkwell">
-              {publishingAnchors.map((anchor, index) => (
-                <div key={anchor} className="grid grid-cols-[52px_1fr] border-b border-inkwell py-18">
+              {publishingTopics.map((topic, index) => (
+                <article
+                  key={topic.title}
+                  className="grid gap-18 border-b border-inkwell py-22 md:grid-cols-[52px_1fr]"
+                >
                   <p className="font-utility text-caption leading-caption text-inkwell/60">
                     {String(index + 1).padStart(2, '0')}
                   </p>
-                  <p className="font-display text-[30px] font-normal leading-[1.12]">{anchor}</p>
-                </div>
+                  <div>
+                    <h3 className="font-display text-[30px] font-normal leading-[1.12]">
+                      {topic.title}
+                    </h3>
+                    <p className="sp-body mt-8 text-inkwell/85">{topic.copy}</p>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
@@ -301,11 +323,11 @@ export default function HomePage() {
               Receive the first guides.
             </h2>
             <p className="mx-auto mt-30 max-w-[680px] sp-body text-inkwell/85">
-              Get the first articles as they publish: muscle loss, resistance training, protein,
+              Get the first articles as they publish: sarcopenia, resistance training, protein,
               recovery, and how families can help a parent begin without pressure.
             </p>
             <div className="mt-30">
-              <EmailForm source="homepage_public_polish" />
+              <EmailForm source="homepage_substance_translation" />
             </div>
             <p className="mx-auto mt-30 max-w-[620px] font-utility text-caption leading-caption text-inkwell/70">
               Educational content only. StrongPath does not diagnose, treat, cure, or replace care
@@ -314,7 +336,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      </main>
-    </>
+    </main>
   )
 }

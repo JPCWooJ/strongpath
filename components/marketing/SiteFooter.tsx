@@ -1,3 +1,5 @@
+import { FTCDisclosure } from '@/components/FTCDisclosure'
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-inkwell bg-parchment">
@@ -20,10 +22,9 @@ export function SiteFooter() {
             Informational and educational only. Consult your physician before beginning any new
             exercise or supplement program.
           </p>
-          <p className="mt-12 font-utility text-caption leading-caption text-inkwell/70">
-            As an Amazon Associate, StrongPath earns from qualifying purchases at no additional cost
-            to you.
-          </p>
+          <div className="mt-12">
+            <FTCDisclosure />
+          </div>
         </div>
       </div>
     </footer>
