@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArticleList } from '@/components/marketing/ArticleList'
 import { getTagCounts, toArticleMeta } from '@/lib/articles'
+import { mergePublishedPosts } from '@/lib/flagship-articles'
 import { buildMetadata } from '@/lib/seo'
 import { client, postsQuery } from '@/lib/sanity'
 import type { Post } from '@/lib/sanity'
@@ -16,8 +17,9 @@ export const metadata = buildMetadata({
 
 export default async function BlogPage() {
   const posts: Post[] = await client.fetch(postsQuery)
-  const tagCounts = getTagCounts(posts)
-  const articles = posts.map(toArticleMeta)
+  const publishedPosts = mergePublishedPosts(posts)
+  const tagCounts = getTagCounts(publishedPosts)
+  const articles = publishedPosts.map(toArticleMeta)
 
   return (
     <main>
@@ -56,7 +58,7 @@ export default async function BlogPage() {
 
       <section>
         <div className="sp-container py-60">
-          {posts.length === 0 ? (
+          {publishedPosts.length === 0 ? (
             <p className="sp-body text-inkwell/75">No posts yet.</p>
           ) : (
             <ArticleList articles={articles} />

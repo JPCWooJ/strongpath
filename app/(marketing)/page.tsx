@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AmazonLink } from '@/components/AmazonLink'
+import { formatArticleDate } from '@/lib/articles'
+import { featuredFlagshipArticles } from '@/lib/flagship-articles'
 import { EmailForm } from './EmailForm'
 
 export const metadata: Metadata = {
@@ -71,6 +73,14 @@ const publishingTopics = [
     copy: 'A careful first-step guide for people who want specifics, not motivation slogans.',
   },
 ]
+
+const featuredArticles = featuredFlagshipArticles.map((article) => ({
+  title: article.title,
+  href: `/blog/${article.slug.current}`,
+  excerpt: article.excerpt,
+  category: article.category,
+  publishedAt: article.publishedAt,
+}))
 
 export default function HomePage() {
   return (
@@ -307,6 +317,41 @@ export default function HomePage() {
                     </h3>
                     <p className="sp-body mt-8 text-inkwell/85">{topic.copy}</p>
                   </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-inkwell">
+        <div className="sp-container py-[72px]">
+          <div className="grid gap-40 lg:grid-cols-[0.42fr_0.58fr]">
+            <div>
+              <p className="sp-kicker mb-18 text-inkwell/70">Now publishing</p>
+              <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
+                The first StrongPath essays are live.
+              </h2>
+              <p className="sp-body mt-24 text-inkwell/85">
+                These starter articles establish the editorial spine of the publication: muscle
+                loss, strength, evidence, and the practical meaning of healthy aging.
+              </p>
+            </div>
+            <div className="grid border-t border-inkwell">
+              {featuredArticles.map((article) => (
+                <article key={article.href} className="border-b border-inkwell py-24">
+                  <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-caption leading-caption text-inkwell/65">
+                    {article.category && <p>{article.category}</p>}
+                    {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
+                  </div>
+                  <Link href={article.href} className="group mt-12 block">
+                    <h3 className="font-display text-[34px] font-normal leading-[1.08] text-inkwell group-hover:underline md:text-[42px]">
+                      {article.title}
+                    </h3>
+                  </Link>
+                  {article.excerpt && (
+                    <p className="sp-body mt-14 text-inkwell/85">{article.excerpt}</p>
+                  )}
                 </article>
               ))}
             </div>
