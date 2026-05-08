@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { ArticleJsonLd } from '@/components/marketing/ArticleJsonLd'
 import { ArticleLayout } from '@/components/marketing/ArticleLayout'
 import { estimateReadingMinutes } from '@/lib/articles'
+import { findFlagshipArticle, flagshipArticles } from '@/lib/flagship-articles'
 import { buildArticleMetadata } from '@/lib/seo'
 import { client, postQuery, postSlugsQuery } from '@/lib/sanity'
 import type { Post } from '@/lib/sanity'
@@ -11,7 +12,10 @@ export const revalidate = 60
 
 export async function generateStaticParams() {
   const posts: Array<{ slug: string }> = await client.fetch(postSlugsQuery)
-  return posts.map((post) => ({ slug: post.slug }))
+  return [
+    ...flagshipArticles.map((post) => ({ slug: post.slug.current })),
+    ...posts.map((post) => ({ slug: post.slug })),
+  ]
 }
 
 export async function generateMetadata({
@@ -19,7 +23,8 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const post: Post | null = await client.fetch(postQuery, { slug: params.slug })
+  const post: Post | null =
+    findFlagshipArticle(params.slug) || (await client.fetch(postQuery, { slug: params.slug }))
 
   if (!post) return {}
 
@@ -27,7 +32,8 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const post: Post | null = await client.fetch(postQuery, { slug: params.slug })
+  const post: Post | null =
+    findFlagshipArticle(params.slug) || (await client.fetch(postQuery, { slug: params.slug }))
 
   if (!post) notFound()
 

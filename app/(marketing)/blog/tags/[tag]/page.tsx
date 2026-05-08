@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ArticleList } from '@/components/marketing/ArticleList'
 import { displayTag, normalizeTag, toArticleMeta } from '@/lib/articles'
+import { mergePublishedPosts } from '@/lib/flagship-articles'
 import { buildMetadata } from '@/lib/seo'
 import { client, postsQuery } from '@/lib/sanity'
 import type { Post } from '@/lib/sanity'
@@ -10,9 +11,10 @@ export const revalidate = 60
 
 export async function generateStaticParams() {
   const posts: Post[] = await client.fetch(postsQuery)
+  const publishedPosts = mergePublishedPosts(posts)
   const tags = new Set<string>()
 
-  posts.forEach((post) => {
+  publishedPosts.forEach((post) => {
     post.tags?.forEach((tag) => {
       tags.add(normalizeTag(tag))
     })
@@ -38,7 +40,9 @@ export async function generateMetadata({
 export default async function TagPage({ params }: { params: { tag: string } }) {
   const label = displayTag(params.tag)
   const allPosts: Post[] = await client.fetch(postsQuery)
-  const posts = allPosts.filter((post) => post.tags?.some((tag) => normalizeTag(tag) === params.tag))
+  const posts = mergePublishedPosts(allPosts).filter((post) =>
+    post.tags?.some((tag) => normalizeTag(tag) === params.tag)
+  )
 
   if (posts.length === 0) notFound()
 
