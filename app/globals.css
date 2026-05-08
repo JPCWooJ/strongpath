@@ -7,6 +7,8 @@
   --color-inkwell: #302f2c;
   --color-activated-black: #000000;
   --color-sunbeam-gradient: #ffb801;
+  --color-verdigris: #526c64;
+  --color-verdigris-wash: #dfe5dc;
   --gradient-sunbeam-gradient: radial-gradient(
     41.33% 41.33%,
     rgb(255, 199, 56) 0px,
@@ -51,6 +53,8 @@
 
   --surface-canvas: #f0ebdd;
   --surface-accent-surface: #ffb801;
+  --surface-complementary-accent: #526c64;
+  --surface-complementary-wash: #dfe5dc;
   --surface-interactive-textstroke: #302f2c;
 }
 

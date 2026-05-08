@@ -16,7 +16,11 @@ export function SiteHeader() {
         </div>
       </div>
       <div className="sp-container flex min-h-[116px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
-        <Link href="/" className="group">
+        <Link href="/" className="group relative isolate inline-block pb-2 pr-24">
+          <span
+            aria-hidden="true"
+            className="absolute -left-14 top-5 -z-10 h-[56px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/55 md:h-[70px]"
+          />
           <p className="font-display text-[46px] font-normal leading-none text-inkwell md:text-[62px]">
             StrongPath
           </p>
@@ -25,12 +29,15 @@ export function SiteHeader() {
           </p>
         </Link>
 
-        <nav aria-label="Primary navigation" className="flex items-center gap-8 self-start md:self-end">
+        <nav
+          aria-label="Primary navigation"
+          className="flex flex-wrap items-center gap-10 self-start md:self-end"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="border-b border-transparent px-4 py-8 font-utility text-caption leading-caption text-inkwell/75 transition-colors hover:border-inkwell hover:text-inkwell focus-visible:border-inkwell"
+              className="border border-inkwell/30 px-12 py-10 font-utility text-[15px] leading-none text-inkwell/82 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment focus-visible:border-inkwell"
             >
               {item.label}
             </Link>

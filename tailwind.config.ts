@@ -13,6 +13,8 @@ const config: Config = {
         inkwell: "#302f2c",
         "activated-black": "#000000",
         sunbeam: "#ffb801",
+        verdigris: "#526c64",
+        "verdigris-wash": "#dfe5dc",
       },
       fontFamily: {
         display: ["var(--font-big-daily-short)", "Playfair Display", "Georgia", "serif"],

@@ -116,7 +116,7 @@ export default function HomePage() {
               <div className="mt-34 flex flex-col gap-12 sm:flex-row">
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-inkwell bg-inkwell px-24 py-13 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell"
+                  className="inline-flex justify-center border border-verdigris bg-verdigris px-24 py-13 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:border-inkwell hover:bg-transparent hover:text-inkwell"
                 >
                   Join Waitlist
                 </Link>
