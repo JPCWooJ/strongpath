@@ -15,13 +15,13 @@ export function SiteHeader() {
           <p>Muscle loss / resistance training / healthy aging</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[108px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
+      <div className="sp-container flex min-h-[116px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
         <Link href="/" className="group">
           <p className="font-display text-[46px] font-normal leading-none text-inkwell md:text-[62px]">
             StrongPath
           </p>
-          <p className="mt-8 max-w-[460px] font-utility text-caption leading-caption text-inkwell/70">
-            Strength, independence, and the research between them.
+          <p className="mt-10 inline-block max-w-[560px] border-y border-inkwell/40 py-6 font-utility text-[15px] leading-[1.25] text-inkwell/78">
+            Strength, independence, and the research between them
           </p>
         </Link>
 

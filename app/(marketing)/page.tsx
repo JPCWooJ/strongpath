@@ -107,12 +107,26 @@ export default function HomePage() {
               <h1 className="max-w-[960px] font-display text-[56px] font-normal leading-[0.98] text-inkwell sm:text-[78px] lg:text-[104px]">
                 Muscle loss is the problem. Strength is the path.
               </h1>
-              <p className="mt-40 max-w-[760px] font-body text-[22px] font-medium leading-[1.42] text-inkwell/85">
+              <p className="mt-34 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/86">
                 StrongPath is an evidence-based strength platform for adults who want to preserve
                 capacity, independence, and good days. The work is built on the research foundation
                 behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
                 kept current through the research we publish now.
               </p>
+              <div className="mt-34 flex flex-col gap-12 sm:flex-row">
+                <Link
+                  href="/waitlist"
+                  className="inline-flex justify-center border border-inkwell bg-inkwell px-24 py-13 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell"
+                >
+                  Join Waitlist
+                </Link>
+                <Link
+                  href="#learn-more"
+                  className="inline-flex justify-center border border-inkwell px-24 py-13 font-body text-[18px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
 
             <aside className="border border-inkwell bg-parchment p-18 lg:mt-20">
@@ -151,13 +165,13 @@ export default function HomePage() {
               <div className="mt-24 flex flex-col gap-12 sm:flex-row">
                 <AmazonLink
                   asin="1626344760"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
                 >
                   View the book
                 </AmazonLink>
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
                 >
                   Receive the guides
                 </Link>
@@ -167,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
+      <section id="learn-more" className="scroll-mt-28 border-b border-inkwell">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
             <p className="sp-kicker mb-18 text-inkwell/70">The problem</p>
@@ -177,7 +191,7 @@ export default function HomePage() {
           </div>
           <div className="py-60 lg:pl-40">
             <div className="grid gap-30">
-              <p className="font-body text-[24px] font-medium leading-[1.38] text-inkwell">
+              <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
                 A stair gets longer. A chair gets lower. A grocery bag starts requiring two trips.
                 A parent begins organizing the day around what feels safe.
               </p>
@@ -228,7 +242,7 @@ export default function HomePage() {
             <h2 className="font-display text-[50px] font-normal leading-[1.04] md:text-[78px]">
               Capacity is built in ordinary moments.
             </h2>
-            <p className="mx-auto mt-30 max-w-[760px] font-body text-[21px] font-medium leading-[1.45] text-inkwell/85">
+            <p className="mx-auto mt-30 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/85">
               Getting out of a chair. Carrying groceries. Traveling with confidence. Visiting
               family without planning around every step. Strength protects independence because it
               protects the actions independence depends on.
@@ -277,7 +291,7 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="py-60 lg:pl-40">
-            <p className="font-body text-[24px] font-medium leading-[1.38] text-inkwell">
+            <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
               StrongPath publishes for readers who want confidence without salesmanship.
             </p>
             <div className="mt-30 grid border-t border-inkwell">
@@ -384,7 +398,7 @@ export default function HomePage() {
                     </h3>
                   </Link>
                   {leadArticle.excerpt && (
-                    <p className="mt-20 font-body text-[21px] font-medium leading-[1.45] text-inkwell/85">
+                    <p className="mt-20 font-body text-[23px] font-medium leading-[1.48] text-inkwell/85">
                       {leadArticle.excerpt}
                     </p>
                   )}
