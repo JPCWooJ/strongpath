@@ -9,22 +9,38 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="border-b border-inkwell bg-parchment">
-      <div className="sp-container flex min-h-[96px] flex-col justify-center gap-18 py-18 md:flex-row md:items-end md:justify-between">
-        <div>
-          <Link href="/" className="font-display text-[42px] font-normal leading-none text-inkwell md:text-[54px]">
+      <div className="sp-container border-b border-inkwell/35 py-8">
+        <div className="flex flex-wrap items-center justify-between gap-8 font-utility text-caption leading-caption text-inkwell/65">
+          <p>Evidence-first strength publication</p>
+          <p>Muscle loss / resistance training / healthy aging</p>
+        </div>
+      </div>
+      <div className="sp-container flex min-h-[124px] flex-col justify-center gap-24 py-22 md:flex-row md:items-end md:justify-between">
+        <div className="relative isolate pb-2 pr-24">
+          <span
+            aria-hidden="true"
+            className="absolute -left-14 top-5 -z-10 h-[58px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/55 md:h-[76px]"
+          />
+          <Link
+            href="/"
+            className="font-display text-[50px] font-normal leading-none text-inkwell md:text-[68px]"
+          >
             StrongPath
           </Link>
-          <p className="mt-8 font-utility text-caption leading-caption text-inkwell/70">
-            Strength, independence, and the research between them.
+          <p className="mt-10 inline-block max-w-[580px] border-y border-inkwell/40 py-6 font-utility text-[15px] leading-[1.25] text-inkwell/78">
+            Strength, independence, and the research between them
           </p>
         </div>
 
-        <nav aria-label="Primary navigation" className="flex items-center gap-8 self-start md:self-end">
+        <nav
+          aria-label="Primary navigation"
+          className="flex flex-wrap items-center gap-10 self-start md:self-end"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-links border border-transparent px-14 py-8 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:border-inkwell focus-visible:border-inkwell"
+              className="border border-inkwell/30 px-14 py-11 font-utility text-[15px] leading-none text-inkwell/82 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment focus-visible:border-inkwell"
             >
               {item.label}
             </Link>
