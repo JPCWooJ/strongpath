@@ -52,8 +52,10 @@ const evidenceSources = [
   'Plain-language summaries that separate what research shows from what it does not yet prove',
 ]
 
+// Authentic cover source: Google Books listing for ISBN 9781626344761.
+// https://books.google.com/books/about/Choosing_the_StrongPath.html?id=a3MftAEACAAJ
 const bookCoverUrl =
-  'https://books.google.com/books/content?id=gAxCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+  'https://books.google.com/books/content?id=a3MftAEACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api'
 
 const authoritySignals = [
   ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
@@ -189,9 +191,9 @@ export default function HomePage() {
             </div>
 
             <aside className="bg-parchment lg:mt-12">
-              <div className="border border-navy/25 bg-paper p-18">
-                <div className="border border-navy/30 bg-parchment p-24 md:p-30">
-                  <div className="flex flex-wrap items-center gap-10">
+              <div className="border border-navy/25 bg-paper p-18 md:p-24">
+                <div className="border border-navy/30 bg-parchment p-22 md:p-30">
+                  <div className="flex flex-wrap items-center justify-center gap-10 md:justify-start">
                     <p className="font-utility text-caption leading-caption text-inkwell/65">
                       Book authority
                     </p>
@@ -199,36 +201,24 @@ export default function HomePage() {
                       Amazon bestseller
                     </p>
                   </div>
-                  <div className="mt-30 grid min-h-[460px] border border-navy/35 bg-paper md:grid-cols-[0.78fr_1.22fr]">
-                    <div className="border-b border-navy/35 bg-parchment p-18 md:border-b-0 md:border-r">
+                  <div className="mt-26 border border-navy/35 bg-paper px-18 py-24 md:px-30 md:py-34">
+                    <div className="mx-auto max-w-[310px] border border-navy/20 bg-parchment p-12 md:max-w-[340px] md:p-16">
                       <Image
                         src={bookCoverUrl}
                         alt="Choosing the StrongPath book cover"
-                        width={220}
-                        height={330}
-                        className="mx-auto h-auto w-full max-w-[220px] border border-navy/35 bg-parchment"
+                        width={640}
+                        height={960}
+                        className="mx-auto h-auto w-full border border-navy/25 bg-parchment"
                         priority
                       />
                     </div>
-                    <div className="flex flex-col justify-between p-24">
-                      <div>
-                        <p className="font-display text-[48px] font-normal leading-[0.98] text-navy">
-                          Choosing the StrongPath
-                        </p>
-                        <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-navy">
-                          Reversing the Downward Spiral of Aging
-                        </p>
-                      </div>
-                      <div className="mt-40">
-                        <p className="font-utility text-caption leading-caption text-inkwell/75">
-                          by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                        </p>
-                        <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
-                          Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-                        </p>
-                      </div>
-                    </div>
                   </div>
+                  <p className="mt-22 text-center font-display text-[28px] font-normal leading-[1.08] text-navy md:text-left md:text-[34px]">
+                    <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>
+                  </p>
+                  <p className="mt-12 text-center font-utility text-caption leading-caption text-inkwell/72 md:text-left">
+                    by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+                  </p>
                   <div className="mt-24 grid border-t border-navy/30">
                     {bookNotes.map((note) => (
                       <p
