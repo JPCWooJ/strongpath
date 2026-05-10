@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { AmazonLink } from '@/components/AmazonLink'
 import { formatArticleDate } from '@/lib/articles'
@@ -51,6 +52,9 @@ const evidenceSources = [
   'Plain-language summaries that separate what research shows from what it does not yet prove',
 ]
 
+const bookCoverUrl =
+  'https://books.google.com/books/content?id=gAxCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+
 const authoritySignals = [
   ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
   ['Book', 'The research foundation behind Choosing the StrongPath.'],
@@ -70,6 +74,38 @@ const evidenceStandards = [
     'Claims are framed around what research supports and what still needs care.',
   ],
   ['Respect the reader', 'Plain language, no fear tactics, no miracle language.'],
+]
+
+const discoveryTools = [
+  {
+    label: 'Read',
+    title: 'The book that named the path',
+    copy:
+      'Start with the category-defining book, then use StrongPath to stay current as the research and recommendations evolve.',
+    href: 'amazon',
+  },
+  {
+    label: 'Learn',
+    title: 'The muscle-loss briefing',
+    copy:
+      'Understand why age-related muscle loss changes capacity, recovery, and independence before choosing a program or product.',
+    href: '/blog/why-muscle-loss-changes-everything-after-50',
+  },
+  {
+    label: 'Compare',
+    title: 'Product discovery, without hype',
+    copy:
+      'StrongPath will curate books, training tools, and practical supports through an evidence-first commerce lens.',
+    href: '/waitlist',
+  },
+]
+
+const topicalPathways = [
+  ['Sarcopenia', '/blog/tags/sarcopenia'],
+  ['Strength After 50', '/blog/tags/strength-after-50'],
+  ['Healthy Aging', '/blog/tags/healthy-aging'],
+  ['Resistance Training', '/blog/tags/resistance-training'],
+  ['Research', '/blog/tags/research'],
 ]
 
 const publishingTopics = [
@@ -164,22 +200,34 @@ export default function HomePage() {
                       Amazon bestseller
                     </p>
                   </div>
-                  <div className="mt-30 flex min-h-[460px] flex-col justify-between border border-inkwell bg-parchment p-24">
-                    <div>
-                      <p className="font-display text-[56px] font-normal leading-[0.96] text-inkwell">
-                        Choosing the StrongPath
-                      </p>
-                      <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
-                        Reversing the Downward Spiral of Aging
-                      </p>
+                  <div className="mt-30 grid min-h-[460px] border border-inkwell bg-parchment md:grid-cols-[0.78fr_1.22fr]">
+                    <div className="border-b border-inkwell bg-verdigris-wash/35 p-18 md:border-b-0 md:border-r">
+                      <Image
+                        src={bookCoverUrl}
+                        alt="Choosing the StrongPath book cover"
+                        width={220}
+                        height={330}
+                        className="mx-auto h-auto w-full max-w-[220px] border border-inkwell bg-parchment"
+                        priority
+                      />
                     </div>
-                    <div>
-                      <p className="font-utility text-caption leading-caption text-inkwell/75">
-                        by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                      </p>
-                      <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
-                        Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-                      </p>
+                    <div className="flex flex-col justify-between p-24">
+                      <div>
+                        <p className="font-display text-[48px] font-normal leading-[0.98] text-inkwell">
+                          Choosing the StrongPath
+                        </p>
+                        <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
+                          Reversing the Downward Spiral of Aging
+                        </p>
+                      </div>
+                      <div className="mt-40">
+                        <p className="font-utility text-caption leading-caption text-inkwell/75">
+                          by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+                        </p>
+                        <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
+                          Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                        </p>
+                      </div>
                     </div>
                   </div>
                   <div className="mt-24 grid border-t border-inkwell">
@@ -391,9 +439,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="border-b border-inkwell bg-verdigris-wash/28">
+        <div className="sp-container py-[76px]">
+          <div className="grid gap-50 lg:grid-cols-[0.68fr_1.32fr]">
+            <div>
+              <p className="sp-kicker mb-18 text-inkwell/70">Product discovery</p>
+              <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
+                Commerce attached to trust.
+              </h2>
+              <p className="sp-body mt-24 text-inkwell/85">
+                StrongPath will recommend tools only when they help readers understand, begin, or
+                sustain evidence-based strength work. The editorial standard comes first.
+              </p>
+            </div>
+            <div className="grid border-t border-inkwell md:grid-cols-3">
+              {discoveryTools.map((item) => (
+                <article
+                  key={item.title}
+                  className="flex min-h-[300px] flex-col justify-between border-b border-inkwell py-24 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                >
+                  <div>
+                    <p className="font-utility text-caption leading-caption text-verdigris">
+                      {item.label}
+                    </p>
+                    <h3 className="mt-18 font-display text-[34px] font-normal leading-[1.04] text-inkwell">
+                      {item.title}
+                    </h3>
+                    <p className="mt-18 font-body text-[18px] leading-[1.5] text-inkwell/82">
+                      {item.copy}
+                    </p>
+                  </div>
+                  {item.href === 'amazon' ? (
+                    <AmazonLink
+                      asin="1626344760"
+                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                    >
+                      View the book
+                    </AmazonLink>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                    >
+                      Open pathway
+                    </Link>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-b border-inkwell">
         <div className="sp-container py-[72px]">
-          <div className="grid gap-40 lg:grid-cols-[0.42fr_0.58fr]">
+          <div className="grid gap-40 lg:grid-cols-[0.4fr_0.6fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Now publishing</p>
               <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
@@ -403,6 +503,17 @@ export default function HomePage() {
                 These starter articles establish the editorial spine of the publication: muscle
                 loss, strength, evidence, and the practical meaning of healthy aging.
               </p>
+              <div className="mt-30 flex flex-wrap gap-10">
+                {topicalPathways.map(([label, href]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="border border-inkwell/35 px-12 py-8 font-utility text-caption leading-none text-inkwell/78 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </div>
             </div>
             <div className="grid border-t border-inkwell lg:grid-cols-[1.12fr_0.88fr]">
               {leadArticle && (
