@@ -7,18 +7,18 @@ import { formatArticleDate, normalizeTag } from '@/lib/articles'
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-48 font-display text-[42px] font-normal leading-[1.1] text-inkwell">
+      <h2 className="mt-48 font-display text-[40px] font-normal leading-[1.1] text-navy md:text-[46px]">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-34 font-display text-[30px] font-normal leading-[1.16] text-inkwell">
+      <h3 className="mt-34 font-display text-[30px] font-normal leading-[1.16] text-navy">
         {children}
       </h3>
     ),
-    normal: ({ children }) => <p className="sp-body mt-22 text-inkwell/88">{children}</p>,
+    normal: ({ children }) => <p className="sp-body mt-22 text-inkwell/90">{children}</p>,
     blockquote: ({ children }) => (
-      <blockquote className="my-34 border-l border-gold pl-24 font-display text-[30px] leading-[1.18] text-inkwell">
+      <blockquote className="my-34 border-l-[5px] border-gold pl-24 font-display text-[30px] leading-[1.18] text-navy">
         {children}
       </blockquote>
     ),
@@ -54,7 +54,7 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
   return (
     <main>
       <article>
-        <header className="border-b border-inkwell">
+        <header className="border-b border-navy bg-parchment">
           <div className="sp-container py-[72px] md:py-[96px]">
             <div className="grid gap-40 lg:grid-cols-[0.32fr_0.68fr]">
               <div className="font-utility text-caption leading-caption text-inkwell/65">
@@ -64,11 +64,11 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
                 {readingMinutes && <p className="mt-8">{readingMinutes} min read</p>}
               </div>
               <div>
-                <h1 className="max-w-[920px] font-display text-[52px] font-normal leading-[1] text-inkwell md:text-[78px]">
+                <h1 className="max-w-[920px] font-display text-[48px] font-normal leading-[0.98] text-navy md:text-[82px]">
                   {post.title}
                 </h1>
                 {post.excerpt && (
-                  <p className="mt-30 max-w-[760px] font-body text-[22px] font-medium leading-[1.45] text-inkwell/85">
+                  <p className="mt-30 max-w-[760px] font-body text-[22px] font-medium leading-[1.45] text-inkwell/86 md:text-[24px]">
                     {post.excerpt}
                   </p>
                 )}
@@ -78,7 +78,7 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
                       <Link
                         key={tag}
                         href={`/blog/tags/${normalizeTag(tag)}`}
-                        className="border border-inkwell/40 px-8 py-4 font-utility text-caption leading-caption text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                        className="border border-gold/70 px-8 py-4 font-utility text-caption leading-caption text-navy transition-colors hover:border-navy hover:bg-navy hover:text-paper"
                       >
                         {tag}
                       </Link>
@@ -90,9 +90,10 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
           </div>
         </header>
 
-        <div className="sp-container py-60">
+        <div className="bg-paper">
+          <div className="sp-container py-60">
           <div className="grid gap-40 lg:grid-cols-[0.24fr_minmax(0,0.76fr)]">
-            <aside className="hidden border-r border-inkwell pr-30 font-utility text-caption leading-caption text-inkwell/65 lg:block">
+            <aside className="hidden border-r border-navy/30 pr-30 font-utility text-caption leading-caption text-inkwell/65 lg:block">
               <p>StrongPath article</p>
               <p className="mt-12">
                 Evidence-oriented health education. Not medical advice or a substitute for care.
@@ -105,6 +106,7 @@ export function ArticleLayout({ post, readingMinutes }: { post: Post; readingMin
                 <p className="sp-body text-inkwell/85">This article is being prepared.</p>
               )}
             </div>
+          </div>
           </div>
         </div>
       </article>

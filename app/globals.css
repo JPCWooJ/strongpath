@@ -3,17 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-parchment: #f0ebdd;
-  --color-inkwell: #302f2c;
+  --color-parchment: #f4efe4;
+  --color-paper: #fbf7ed;
+  --color-navy: #07182b;
+  --color-navy-soft: #0d2238;
+  --color-inkwell: #17202a;
   --color-activated-black: #000000;
-  --color-sunbeam-gradient: #ffb801;
-  --color-verdigris: #526c64;
-  --color-verdigris-wash: #dfe5dc;
-  --gradient-sunbeam-gradient: radial-gradient(
-    41.33% 41.33%,
-    rgb(255, 199, 56) 0px,
-    rgba(248, 233, 226, 0) 100%
-  );
+  --color-gold: #b59652;
+  --color-gold-soft: #d1b36c;
 
   --font-arial: Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
@@ -51,11 +48,10 @@
   --element-gap: 12px;
   --radius-links: 40px;
 
-  --surface-canvas: #f0ebdd;
-  --surface-accent-surface: #ffb801;
-  --surface-complementary-accent: #526c64;
-  --surface-complementary-wash: #dfe5dc;
-  --surface-interactive-textstroke: #302f2c;
+  --surface-canvas: #f4efe4;
+  --surface-paper: #fbf7ed;
+  --surface-accent-surface: #b59652;
+  --surface-interactive-textstroke: #07182b;
 }
 
 @media (min-width: 768px) {
@@ -66,22 +62,22 @@
 
 @layer base {
   html {
-    background: var(--surface-canvas);
+    background: var(--color-navy);
     color: var(--color-inkwell);
+    overflow-x: hidden;
     text-rendering: optimizeLegibility;
   }
 
   body {
     min-height: 100vh;
-    background:
-      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.22), rgba(248, 233, 226, 0) 34rem),
-      var(--surface-canvas);
+    background: var(--surface-canvas);
     color: var(--color-inkwell);
     font-family: var(--font-basel-grotesk), Inter, system-ui, sans-serif;
     font-size: var(--text-body);
     font-weight: var(--font-weight-medium);
     line-height: var(--leading-body);
     letter-spacing: normal;
+    overflow-x: hidden;
   }
 
   h1,
@@ -106,21 +102,19 @@
   }
 
   ::selection {
-    background: rgba(255, 184, 1, 0.32);
-    color: var(--color-activated-black);
+    background: rgba(181, 150, 82, 0.36);
+    color: var(--color-navy);
   }
 }
 
 @layer components {
   .sp-page-shell {
     min-height: 100vh;
-    background:
-      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.2), rgba(248, 233, 226, 0) 32rem),
-      var(--surface-canvas);
+    background: var(--surface-canvas);
   }
 
   .sp-container {
-    width: min(100% - 36px, 1120px);
+    width: min(100% - 36px, 1180px);
     margin-inline: auto;
   }
 
@@ -140,7 +134,7 @@
   }
 
   .sp-heading-display {
-    font-size: clamp(42px, 10vw, 86px);
+    font-size: clamp(46px, 9vw, 104px);
     line-height: var(--leading-display);
   }
 
@@ -160,7 +154,7 @@
   }
 
   .sp-rule {
-    border-color: var(--color-inkwell);
-    opacity: 0.32;
+    border-color: var(--color-navy);
+    opacity: 0.22;
   }
 }

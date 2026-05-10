@@ -345,7 +345,9 @@ export function findFlagshipArticle(slug: string) {
 
 export function mergePublishedPosts(posts: Post[]) {
   const flagshipSlugs = new Set(flagshipArticles.map((article) => article.slug.current))
-  const externalPosts = posts.filter((post) => !flagshipSlugs.has(post.slug.current))
+  const externalPosts = posts.filter(
+    (post) => post.slug.current !== 'test-post-delete-me' && !flagshipSlugs.has(post.slug.current)
+  )
 
   return [...flagshipArticles, ...externalPosts].sort((a, b) => {
     const aTime = new Date(a.publishedAt || 0).getTime()

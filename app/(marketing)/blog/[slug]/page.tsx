@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   const posts: Array<{ slug: string }> = await client.fetch(postSlugsQuery)
   return [
     ...flagshipArticles.map((post) => ({ slug: post.slug.current })),
-    ...posts.map((post) => ({ slug: post.slug })),
+    ...posts.filter((post) => post.slug !== 'test-post-delete-me').map((post) => ({ slug: post.slug })),
   ]
 }
 
@@ -32,6 +32,8 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
+  if (params.slug === 'test-post-delete-me') notFound()
+
   const post: Post | null =
     findFlagshipArticle(params.slug) || (await client.fetch(postQuery, { slug: params.slug }))
 

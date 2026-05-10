@@ -23,11 +23,11 @@ export default async function BlogPage() {
 
   return (
     <main>
-      <section className="border-b border-inkwell">
+      <section className="border-b border-navy bg-parchment">
         <div className="sp-container grid gap-40 py-[72px] lg:grid-cols-[0.42fr_0.58fr]">
           <div>
             <p className="sp-kicker mb-18 text-inkwell/70">StrongPath articles</p>
-            <h1 className="font-display text-[54px] font-normal leading-[1] text-inkwell md:text-[82px]">
+            <h1 className="font-display text-[54px] font-normal leading-[0.98] text-navy md:text-[92px]">
               Research made practical.
             </h1>
           </div>
@@ -39,14 +39,14 @@ export default async function BlogPage() {
       </section>
 
       {Object.keys(tagCounts).length > 0 && (
-        <section className="border-b border-inkwell">
+        <section className="border-b border-navy/35 bg-paper">
           <div className="sp-container py-40">
             <div className="flex flex-wrap gap-8">
               {Object.entries(tagCounts).map(([tag, count]) => (
                 <Link
                   key={tag}
                   href={`/blog/tags/${tag}`}
-                  className="border border-inkwell/40 px-8 py-4 font-utility text-caption leading-caption text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                  className="border border-gold/70 px-8 py-4 font-utility text-caption leading-caption text-navy transition-colors hover:border-navy hover:bg-navy hover:text-paper"
                 >
                   {tag.replace(/-/g, ' ')} ({count})
                 </Link>
@@ -56,7 +56,7 @@ export default async function BlogPage() {
         </section>
       )}
 
-      <section>
+      <section className="bg-parchment">
         <div className="sp-container py-60">
           {publishedPosts.length === 0 ? (
             <p className="sp-body text-inkwell/75">No posts yet.</p>

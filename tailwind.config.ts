@@ -9,12 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        parchment: "#f0ebdd",
-        inkwell: "#302f2c",
+        parchment: "#f4efe4",
+        paper: "#fbf7ed",
+        navy: "#07182b",
+        "navy-soft": "#0d2238",
+        inkwell: "#17202a",
         "activated-black": "#000000",
-        sunbeam: "#ffb801",
-        verdigris: "#526c64",
-        "verdigris-wash": "#dfe5dc",
+        gold: "#b59652",
+        "gold-soft": "#d1b36c",
       },
       fontFamily: {
         display: ["var(--font-big-daily-short)", "Playfair Display", "Georgia", "serif"],
@@ -70,10 +72,7 @@ const config: Config = {
       borderRadius: {
         links: "40px",
       },
-      backgroundImage: {
-        "sunbeam-gradient":
-          "radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%)",
-      },
+      backgroundImage: {},
       maxWidth: {
         editorial: "760px",
         "site-wide": "1120px",

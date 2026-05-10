@@ -4,11 +4,11 @@ import { formatArticleDate, normalizeTag } from '@/lib/articles'
 
 export function ArticleList({ articles }: { articles: ArticleMeta[] }) {
   return (
-    <div className="grid border-t border-inkwell">
+    <div className="grid border-t border-navy/35">
       {articles.map((article) => (
         <article
           key={article.href}
-          className="grid gap-18 border-b border-inkwell py-28 md:grid-cols-[0.34fr_0.66fr]"
+          className="grid gap-18 border-b border-navy/35 py-30 md:grid-cols-[0.34fr_0.66fr]"
         >
           <div className="font-utility text-caption leading-caption text-inkwell/65">
             {article.category && <p>{article.category}</p>}
@@ -17,7 +17,7 @@ export function ArticleList({ articles }: { articles: ArticleMeta[] }) {
           </div>
           <div>
             <Link href={article.href} className="group">
-              <h2 className="font-display text-[34px] font-normal leading-[1.08] text-inkwell group-hover:underline md:text-[44px]">
+              <h2 className="font-display text-[34px] font-normal leading-[1.08] text-navy group-hover:underline md:text-[48px]">
                 {article.title}
               </h2>
             </Link>
@@ -30,7 +30,7 @@ export function ArticleList({ articles }: { articles: ArticleMeta[] }) {
                   <Link
                     key={tag}
                     href={`/blog/tags/${normalizeTag(tag)}`}
-                    className="border border-inkwell/40 px-8 py-4 font-utility text-caption leading-caption text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                    className="border border-gold/70 px-8 py-4 font-utility text-caption leading-caption text-navy transition-colors hover:border-navy hover:bg-navy hover:text-paper"
                   >
                     {tag}
                   </Link>

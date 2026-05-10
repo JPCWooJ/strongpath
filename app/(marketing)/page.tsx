@@ -144,17 +144,16 @@ const [leadArticle, ...secondaryArticles] = featuredArticles
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
-      <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[44rem] bg-sunbeam-gradient opacity-80" />
-        <div className="sp-container relative py-[72px] md:py-[108px]">
-          <div className="grid border-y border-inkwell md:grid-cols-3">
+      <section className="border-b border-navy bg-parchment">
+        <div className="sp-container py-[72px] md:py-[108px]">
+          <div className="grid border-y border-navy/35 md:grid-cols-3">
             {authoritySignals.map(([label, copy]) => (
               <div
                 key={label}
-                className="border-b border-inkwell py-16 md:border-b-0 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                className="border-b border-navy/35 py-16 md:border-b-0 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
                 <p className="font-utility text-caption leading-caption text-inkwell/62">{label}</p>
-                <p className="mt-8 font-body text-[18px] font-medium leading-[1.35] text-inkwell/86">
+                <p className="mt-8 max-w-[320px] font-body text-[17px] font-medium leading-[1.35] text-navy/90 sm:max-w-none sm:text-[18px]">
                   {copy}
                 </p>
               </div>
@@ -164,10 +163,10 @@ export default function HomePage() {
           <div className="grid gap-60 pt-60 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
-              <h1 className="max-w-[1040px] font-display text-[60px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[112px]">
+              <h1 className="max-w-[1040px] break-words font-display text-[46px] font-normal leading-[0.94] text-navy sm:text-[78px] lg:text-[104px]">
                 Muscle loss is the problem. Strength is the path.
               </h1>
-              <p className="mt-34 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/86">
+              <p className="mt-34 max-w-[780px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/88 md:text-[24px]">
                 StrongPath is an evidence-based strength platform for adults who want to preserve
                 capacity, independence, and good days. The work is built on the research foundation
                 behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
@@ -176,13 +175,13 @@ export default function HomePage() {
               <div className="mt-34 flex flex-col gap-12 sm:flex-row">
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-verdigris bg-verdigris px-24 py-14 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:border-inkwell hover:bg-transparent hover:text-inkwell"
+                  className="inline-flex justify-center border border-navy bg-navy px-24 py-14 font-body text-[18px] font-medium leading-none text-paper transition-colors hover:border-gold hover:bg-paper hover:text-navy"
                 >
                   Join Waitlist
                 </Link>
                 <Link
                   href="#learn-more"
-                  className="inline-flex justify-center border border-inkwell px-24 py-14 font-body text-[18px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                  className="inline-flex justify-center border border-gold px-24 py-14 font-body text-[18px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                 >
                   Learn More
                 </Link>
@@ -190,33 +189,33 @@ export default function HomePage() {
             </div>
 
             <aside className="bg-parchment lg:mt-12">
-              <div className="border border-inkwell bg-verdigris-wash/45 p-18">
-                <div className="border border-inkwell bg-parchment p-24 md:p-30">
+              <div className="border border-navy/25 bg-paper p-18">
+                <div className="border border-navy/30 bg-parchment p-24 md:p-30">
                   <div className="flex flex-wrap items-center gap-10">
                     <p className="font-utility text-caption leading-caption text-inkwell/65">
                       Book authority
                     </p>
-                    <p className="border border-verdigris px-10 py-4 font-utility text-caption leading-caption text-verdigris">
+                    <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-navy">
                       Amazon bestseller
                     </p>
                   </div>
-                  <div className="mt-30 grid min-h-[460px] border border-inkwell bg-parchment md:grid-cols-[0.78fr_1.22fr]">
-                    <div className="border-b border-inkwell bg-verdigris-wash/35 p-18 md:border-b-0 md:border-r">
+                  <div className="mt-30 grid min-h-[460px] border border-navy/35 bg-paper md:grid-cols-[0.78fr_1.22fr]">
+                    <div className="border-b border-navy/35 bg-parchment p-18 md:border-b-0 md:border-r">
                       <Image
                         src={bookCoverUrl}
                         alt="Choosing the StrongPath book cover"
                         width={220}
                         height={330}
-                        className="mx-auto h-auto w-full max-w-[220px] border border-inkwell bg-parchment"
+                        className="mx-auto h-auto w-full max-w-[220px] border border-navy/35 bg-parchment"
                         priority
                       />
                     </div>
                     <div className="flex flex-col justify-between p-24">
                       <div>
-                        <p className="font-display text-[48px] font-normal leading-[0.98] text-inkwell">
+                        <p className="font-display text-[48px] font-normal leading-[0.98] text-navy">
                           Choosing the StrongPath
                         </p>
-                        <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
+                        <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-navy">
                           Reversing the Downward Spiral of Aging
                         </p>
                       </div>
@@ -230,11 +229,11 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-24 grid border-t border-inkwell">
+                  <div className="mt-24 grid border-t border-navy/30">
                     {bookNotes.map((note) => (
                       <p
                         key={note}
-                        className="border-b border-inkwell py-12 font-utility text-caption leading-caption text-inkwell/76"
+                        className="border-b border-navy/30 py-12 font-utility text-caption leading-caption text-inkwell/76"
                       >
                         {note}
                       </p>
@@ -242,20 +241,20 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <p className="mt-18 border-l-[6px] border-verdigris pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
+              <p className="mt-18 border-l-[6px] border-gold pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
                 The book named the work. StrongPath extends it into a current website, a growing
                 publishing system, and future tools that help people put strength into practice.
               </p>
               <div className="mt-24 flex flex-col gap-12 sm:flex-row">
                 <AmazonLink
                   asin="1626344760"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                  className="inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                 >
                   View the book
                 </AmazonLink>
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                  className="inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                 >
                   Receive the guides
                 </Link>
@@ -265,7 +264,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="learn-more" className="scroll-mt-28 border-b border-inkwell">
+      <section id="learn-more" className="scroll-mt-28 border-b border-navy/35 bg-paper">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
             <p className="sp-kicker mb-18 text-inkwell/70">The problem</p>
@@ -294,7 +293,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
+      <section className="border-b border-navy/35 bg-parchment">
         <div className="sp-container py-60">
           <div className="grid gap-40 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
@@ -318,15 +317,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative border-b border-inkwell">
-        <div className="absolute inset-0 bg-sunbeam-gradient opacity-40" />
-        <div className="sp-container relative py-[84px]">
+      <section className="border-b border-navy/35 bg-navy text-paper">
+        <div className="sp-container py-[84px]">
           <div className="mx-auto max-w-[990px] text-center">
-            <p className="sp-kicker mb-18 text-inkwell/70">What strength protects</p>
-            <h2 className="font-display text-[50px] font-normal leading-[1.04] md:text-[78px]">
+            <p className="sp-kicker mb-18 text-gold-soft">What strength protects</p>
+            <h2 className="font-display text-[50px] font-normal leading-[1.04] text-paper md:text-[78px]">
               Capacity is built in ordinary moments.
             </h2>
-            <p className="mx-auto mt-30 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/85">
+            <p className="mx-auto mt-30 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-paper/82">
               Getting out of a chair. Carrying groceries. Traveling with confidence. Visiting
               family without planning around every step. Strength protects independence because it
               protects the actions independence depends on.
@@ -335,7 +333,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
+      <section className="border-b border-navy/35 bg-parchment">
         <div className="sp-container py-60">
           <div className="grid gap-40 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
@@ -366,7 +364,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell bg-verdigris-wash/35">
+      <section className="border-b border-navy/35 bg-paper">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
           <div className="border-b border-inkwell py-70 lg:border-b-0 lg:border-r lg:pr-40">
             <p className="sp-kicker mb-18 text-inkwell/70">The evidence standard</p>
@@ -403,7 +401,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
+      <section className="border-b border-navy/35 bg-parchment">
         <div className="sp-container py-[76px]">
           <div className="grid gap-50 lg:grid-cols-[0.82fr_1.18fr]">
             <div>
@@ -423,7 +421,7 @@ export default function HomePage() {
                   key={topic.title}
                   className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[64px_1fr]"
                 >
-                  <p className="border-l-[6px] border-verdigris pl-12 font-utility text-caption leading-caption text-inkwell/60">
+                  <p className="border-l-[6px] border-gold pl-12 font-utility text-caption leading-caption text-inkwell/60">
                     {String(index + 1).padStart(2, '0')}
                   </p>
                   <div>
@@ -439,7 +437,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell bg-verdigris-wash/28">
+      <section className="border-b border-navy/35 bg-paper">
         <div className="sp-container py-[76px]">
           <div className="grid gap-50 lg:grid-cols-[0.68fr_1.32fr]">
             <div>
@@ -459,7 +457,7 @@ export default function HomePage() {
                   className="flex min-h-[300px] flex-col justify-between border-b border-inkwell py-24 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
                 >
                   <div>
-                    <p className="font-utility text-caption leading-caption text-verdigris">
+                    <p className="font-utility text-caption leading-caption text-gold">
                       {item.label}
                     </p>
                     <h3 className="mt-18 font-display text-[34px] font-normal leading-[1.04] text-inkwell">
@@ -472,14 +470,14 @@ export default function HomePage() {
                   {item.href === 'amazon' ? (
                     <AmazonLink
                       asin="1626344760"
-                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                      className="mt-24 inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                     >
                       View the book
                     </AmazonLink>
                   ) : (
                     <Link
                       href={item.href}
-                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+                      className="mt-24 inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                     >
                       Open pathway
                     </Link>
@@ -491,7 +489,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
+      <section className="border-b border-navy/35 bg-parchment">
         <div className="sp-container py-[72px]">
           <div className="grid gap-40 lg:grid-cols-[0.4fr_0.6fr]">
             <div>
@@ -508,7 +506,7 @@ export default function HomePage() {
                   <Link
                     key={href}
                     href={href}
-                    className="border border-inkwell/35 px-12 py-8 font-utility text-caption leading-none text-inkwell/78 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment"
+                    className="border border-gold/70 px-12 py-8 font-utility text-caption leading-none text-navy transition-colors hover:border-navy hover:bg-navy hover:text-paper"
                   >
                     {label}
                   </Link>
@@ -557,10 +555,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative">
-        <div className="absolute inset-x-0 top-0 h-[24rem] bg-sunbeam-gradient opacity-45" />
-        <div className="sp-container relative py-[84px]">
-          <div className="mx-auto max-w-[840px] border-y border-inkwell py-40 text-center">
+      <section className="bg-paper">
+        <div className="sp-container py-[84px]">
+          <div className="mx-auto max-w-[840px] border-y border-navy/35 py-40 text-center">
             <p className="sp-kicker mb-18 text-inkwell/70">Stay close</p>
             <h2 className="font-display text-[48px] font-normal leading-[1.06] md:text-[72px]">
               Receive the first guides.

@@ -52,12 +52,12 @@ export function EmailForm({ source = 'unknown' }: { dark?: boolean; source?: str
         onChange={(e) => setEmail(e.target.value)}
         placeholder="your@email.com"
         required
-        className="w-full border border-inkwell bg-transparent px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell placeholder:text-inkwell/60 focus:outline-none sm:w-72"
+        className="w-full border border-navy/55 bg-paper px-18 py-10 font-body text-[17px] font-medium leading-none text-navy placeholder:text-inkwell/60 focus:outline-none sm:w-72"
       />
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="border border-inkwell bg-transparent px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment disabled:opacity-60"
+        className="border border-gold bg-navy px-18 py-10 font-body text-[16px] font-medium leading-none text-paper transition-colors hover:bg-paper hover:text-navy disabled:opacity-60"
       >
         {status === 'loading' ? 'Submitting...' : 'Notify me'}
       </button>
