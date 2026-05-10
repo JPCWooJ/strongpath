@@ -7,6 +7,8 @@
   --color-inkwell: #302f2c;
   --color-activated-black: #000000;
   --color-sunbeam-gradient: #ffb801;
+  --color-verdigris: #526c64;
+  --color-verdigris-wash: #dfe5dc;
   --gradient-sunbeam-gradient: radial-gradient(
     41.33% 41.33%,
     rgb(255, 199, 56) 0px,
@@ -16,11 +18,11 @@
   --font-arial: Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
 
-  --text-caption: 13px;
+  --text-caption: 14px;
   --leading-caption: 1.2;
-  --text-body: 17px;
-  --leading-body: 1.55;
-  --text-subheading: 22px;
+  --text-body: 18px;
+  --leading-body: 1.6;
+  --text-subheading: 24px;
   --leading-subheading: 1.25;
   --text-heading: 36px;
   --leading-heading: 1.25;
@@ -51,12 +53,14 @@
 
   --surface-canvas: #f0ebdd;
   --surface-accent-surface: #ffb801;
+  --surface-complementary-accent: #526c64;
+  --surface-complementary-wash: #dfe5dc;
   --surface-interactive-textstroke: #302f2c;
 }
 
 @media (min-width: 768px) {
   :root {
-    --text-body: 18px;
+    --text-body: 20px;
   }
 }
 
