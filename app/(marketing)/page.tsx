@@ -52,10 +52,10 @@ const evidenceSources = [
   'Plain-language summaries that separate what research shows from what it does not yet prove',
 ]
 
-// Authentic cover source: Google Books listing for ISBN 9781626344761.
-// https://books.google.com/books/about/Choosing_the_StrongPath.html?id=a3MftAEACAAJ
+// Authentic cover source: Amazon ISBN/ASIN image for Choosing the StrongPath (1626344760).
+// https://images-na.ssl-images-amazon.com/images/P/1626344760.01.L.jpg
 const bookCoverUrl =
-  'https://books.google.com/books/content?id=a3MftAEACAAJ&printsec=frontcover&img=1&zoom=0&source=gbs_api'
+  'https://images-na.ssl-images-amazon.com/images/P/1626344760.01.L.jpg'
 
 const authoritySignals = [
   ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
