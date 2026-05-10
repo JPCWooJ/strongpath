@@ -51,6 +51,27 @@ const evidenceSources = [
   'Plain-language summaries that separate what research shows from what it does not yet prove',
 ]
 
+const authoritySignals = [
+  ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
+  ['Book', 'The research foundation behind Choosing the StrongPath.'],
+  ['Tools', 'A growing platform for putting strength into practice.'],
+]
+
+const bookNotes = [
+  'Amazon bestseller in Aging, Weight Training, Exercise, and Longevity',
+  'Written with Marni Boppart, ScD, alongside Fred Bartlit and Steven Droullard',
+  "The source text for StrongPath's strength-first approach to aging",
+]
+
+const evidenceStandards = [
+  ['Name the condition', 'We write about age-related muscle loss, not vague decline.'],
+  [
+    'Separate signal from certainty',
+    'Claims are framed around what research supports and what still needs care.',
+  ],
+  ['Respect the reader', 'Plain language, no fear tactics, no miracle language.'],
+]
+
 const publishingTopics = [
   {
     title: 'What is sarcopenia?',
@@ -90,20 +111,24 @@ export default function HomePage() {
       <section className="relative border-b border-inkwell">
         <div className="absolute inset-x-0 top-0 h-[44rem] bg-sunbeam-gradient opacity-80" />
         <div className="sp-container relative py-[72px] md:py-[108px]">
-          <div className="grid gap-40 border-y border-inkwell py-18 md:grid-cols-[0.74fr_1.26fr] md:items-center">
-            <p className="font-utility text-caption leading-caption text-inkwell/70">
-              Evidence-based strength platform
-            </p>
-            <p className="font-utility text-caption leading-caption text-inkwell/70 md:text-right">
-              For adults who refuse to accept muscle loss as inevitable, and for families helping
-              someone they love.
-            </p>
+          <div className="grid border-y border-inkwell md:grid-cols-3">
+            {authoritySignals.map(([label, copy]) => (
+              <div
+                key={label}
+                className="border-b border-inkwell py-16 md:border-b-0 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+              >
+                <p className="font-utility text-caption leading-caption text-inkwell/62">{label}</p>
+                <p className="mt-8 font-body text-[18px] font-medium leading-[1.35] text-inkwell/86">
+                  {copy}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <div className="grid gap-60 pt-60 lg:grid-cols-[1.04fr_0.96fr] lg:items-start">
+          <div className="grid gap-60 pt-60 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
-              <h1 className="max-w-[960px] font-display text-[56px] font-normal leading-[0.98] text-inkwell sm:text-[78px] lg:text-[104px]">
+              <h1 className="max-w-[1040px] font-display text-[60px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[112px]">
                 Muscle loss is the problem. Strength is the path.
               </h1>
               <p className="mt-34 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/86">
@@ -128,36 +153,48 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className="border border-inkwell bg-parchment p-18 lg:mt-20">
-              <div className="border border-inkwell p-24 md:p-30">
-                <div className="flex flex-wrap items-center gap-10">
-                  <p className="font-utility text-caption leading-caption text-inkwell/65">
-                    The book behind the work
-                  </p>
-                  <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-gold">
-                    Amazon bestseller
-                  </p>
-                </div>
-                <div className="mt-30 flex min-h-[410px] flex-col justify-between border border-inkwell p-24">
-                  <div>
-                    <p className="font-display text-[50px] font-normal leading-[0.98] text-inkwell">
-                      Choosing the StrongPath
+            <aside className="bg-parchment lg:mt-12">
+              <div className="border border-inkwell bg-verdigris-wash/45 p-18">
+                <div className="border border-inkwell bg-parchment p-24 md:p-30">
+                  <div className="flex flex-wrap items-center gap-10">
+                    <p className="font-utility text-caption leading-caption text-inkwell/65">
+                      Book authority
                     </p>
-                    <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
-                      Reversing the Downward Spiral of Aging
+                    <p className="border border-verdigris px-10 py-4 font-utility text-caption leading-caption text-verdigris">
+                      Amazon bestseller
                     </p>
                   </div>
-                  <div>
-                    <p className="font-utility text-caption leading-caption text-inkwell/75">
-                      by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                    </p>
-                    <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
-                      Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-                    </p>
+                  <div className="mt-30 flex min-h-[460px] flex-col justify-between border border-inkwell bg-parchment p-24">
+                    <div>
+                      <p className="font-display text-[56px] font-normal leading-[0.96] text-inkwell">
+                        Choosing the StrongPath
+                      </p>
+                      <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
+                        Reversing the Downward Spiral of Aging
+                      </p>
+                    </div>
+                    <div>
+                      <p className="font-utility text-caption leading-caption text-inkwell/75">
+                        by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+                      </p>
+                      <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
+                        Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-24 grid border-t border-inkwell">
+                    {bookNotes.map((note) => (
+                      <p
+                        key={note}
+                        className="border-b border-inkwell py-12 font-utility text-caption leading-caption text-inkwell/76"
+                      >
+                        {note}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </div>
-              <p className="mt-18 font-body text-[18px] leading-body text-inkwell/85">
+              <p className="mt-18 border-l-[6px] border-verdigris pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
                 The book named the work. StrongPath extends it into a current website, a growing
                 publishing system, and future tools that help people put strength into practice.
               </p>
@@ -281,18 +318,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
-        <div className="sp-container grid gap-0 lg:grid-cols-[1fr_1fr]">
-          <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
+      <section className="border-b border-inkwell bg-verdigris-wash/35">
+        <div className="sp-container grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
+          <div className="border-b border-inkwell py-70 lg:border-b-0 lg:border-r lg:pr-40">
             <p className="sp-kicker mb-18 text-inkwell/70">The evidence standard</p>
-            <h2 className="font-display text-[42px] font-normal leading-[1.08] md:text-[62px]">
+            <h2 className="font-display text-[46px] font-normal leading-[1.04] md:text-[68px]">
               The book is the foundation. Current research does the substantiating.
             </h2>
+            <p className="mt-24 max-w-[520px] sp-body text-inkwell/80">
+              StrongPath earns attention by making claims checkable, practical, and calm.
+            </p>
           </div>
-          <div className="py-60 lg:pl-40">
+          <div className="py-70 lg:pl-40">
             <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
               StrongPath publishes for readers who want confidence without salesmanship.
             </p>
+            <div className="mt-30 grid border-t border-inkwell md:grid-cols-3">
+              {evidenceStandards.map(([title, copy]) => (
+                <article
+                  key={title}
+                  className="border-b border-inkwell py-22 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                >
+                  <h3 className="font-display text-[30px] font-normal leading-[1.08]">{title}</h3>
+                  <p className="mt-12 font-body text-[18px] leading-[1.5] text-inkwell/82">{copy}</p>
+                </article>
+              ))}
+            </div>
             <div className="mt-30 grid border-t border-inkwell">
               {evidenceSources.map((source) => (
                 <p key={source} className="border-b border-inkwell py-18 sp-body text-inkwell/85">
@@ -305,11 +356,11 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-inkwell">
-        <div className="sp-container py-60">
-          <div className="grid gap-40 lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="sp-container py-[76px]">
+          <div className="grid gap-50 lg:grid-cols-[0.82fr_1.18fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Start here</p>
-              <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
+              <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
                 What we publish first.
               </h2>
               <p className="sp-body mt-24 text-inkwell/85">
@@ -322,9 +373,9 @@ export default function HomePage() {
               {publishingTopics.map((topic, index) => (
                 <article
                   key={topic.title}
-                  className="grid gap-18 border-b border-inkwell py-22 md:grid-cols-[52px_1fr]"
+                  className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[64px_1fr]"
                 >
-                  <p className="font-utility text-caption leading-caption text-inkwell/60">
+                  <p className="border-l-[6px] border-verdigris pl-12 font-utility text-caption leading-caption text-inkwell/60">
                     {String(index + 1).padStart(2, '0')}
                   </p>
                   <div>
