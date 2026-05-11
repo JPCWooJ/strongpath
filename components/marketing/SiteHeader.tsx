@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const navItems = [
@@ -19,9 +20,17 @@ export function SiteHeader() {
         <div className="min-w-0 pb-2">
           <Link
             href="/"
-            className="block font-display text-[54px] font-normal leading-[0.9] text-paper sm:text-[68px] md:text-[82px]"
+            className="inline-flex max-w-full border border-gold/65 bg-parchment px-14 py-10 transition-colors hover:border-paper focus-visible:border-paper"
+            aria-label="StrongPath home"
           >
-            StrongPath
+            <Image
+              src="/brand/strongpath-wordmark-blue.png"
+              alt="StrongPath"
+              width={610}
+              height={138}
+              priority
+              className="h-auto w-[272px] sm:w-[338px] md:w-[382px]"
+            />
           </Link>
           <p className="mt-10 max-w-[320px] font-utility text-[14px] leading-[1.3] text-paper/86 sm:max-w-[640px] sm:text-[17px]">
             Strength, independence, and the research between them
