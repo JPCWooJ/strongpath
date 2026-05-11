@@ -26,10 +26,10 @@ export function SiteHeader() {
             <Image
               src="/brand/strongpath-wordmark-blue.png"
               alt="StrongPath"
-              width={610}
-              height={138}
+              width={650}
+              height={178}
               priority
-              className="h-auto w-[272px] sm:w-[338px] md:w-[382px]"
+              className="h-auto w-[278px] sm:w-[344px] md:w-[388px]"
             />
           </Link>
           <p className="mt-10 max-w-[320px] font-utility text-[14px] leading-[1.3] text-paper/86 sm:max-w-[640px] sm:text-[17px]">

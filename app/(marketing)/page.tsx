@@ -40,9 +40,9 @@ const readerPaths = [
   },
   {
     label: 'For careful readers',
-    title: 'You want claims that can be checked.',
+    title: 'You want confidence without hype.',
     copy:
-      'StrongPath cites current research and named sources. The book gives the work its foundation; current evidence carries the specific claims we publish.',
+      'StrongPath is written for people who want clear guidance, current research, and language careful enough to trust.',
   },
 ]
 
@@ -58,24 +58,24 @@ const bookCoverUrl =
   'https://images-na.ssl-images-amazon.com/images/P/1626344760.01.L.jpg'
 
 const authoritySignals = [
-  ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
-  ['Book', 'The research foundation behind Choosing the StrongPath.'],
-  ['Tools', 'A growing platform for putting strength into practice.'],
+  ['Publication', 'Evidence-based strength guidance for adults 55+ and the families helping them.'],
+  ['Book', 'A research-grounded case for choosing strength as we age.'],
+  ['Tools', 'Practical ways to turn better information into steadier action.'],
 ]
 
 const bookNotes = [
-  'Amazon bestseller in Aging, Weight Training, Exercise, and Longevity',
-  'Written with Marni Boppart, ScD, alongside Fred Bartlit and Steven Droullard',
-  "The source text for StrongPath's strength-first approach to aging",
+  'Recognized on Amazon bestseller lists in Aging, Weight Training, Exercise, and Longevity',
+  'By Fred Bartlit and Steven Droullard with Marni Boppart, ScD',
+  'A serious argument for protecting strength, capacity, and independence later in life',
 ]
 
 const evidenceStandards = [
-  ['Name the condition', 'We write about age-related muscle loss, not vague decline.'],
+  ['Start with the real condition', 'Age-related muscle loss is specific, measurable, and too often overlooked.'],
   [
-    'Separate signal from certainty',
-    'Claims are framed around what research supports and what still needs care.',
+    'Keep certainty honest',
+    'Research is presented carefully, with confidence where it is earned and restraint where it is needed.',
   ],
-  ['Respect the reader', 'Plain language, no fear tactics, no miracle language.'],
+  ['Respect the reader', 'Plain language, no fear tactics, and no miracle language.'],
 ]
 
 const discoveryTools = [
@@ -83,21 +83,21 @@ const discoveryTools = [
     label: 'Read',
     title: 'The book that named the path',
     copy:
-      'Start with the category-defining book, then use StrongPath to stay current as the research and recommendations evolve.',
+      'Start with the book that makes the case for strength as a practical answer to physical decline.',
     href: 'amazon',
   },
   {
     label: 'Learn',
-    title: 'The muscle-loss briefing',
+    title: 'Why muscle loss matters',
     copy:
       'Understand why age-related muscle loss changes capacity, recovery, and independence before choosing a program or product.',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
   },
   {
     label: 'Compare',
-    title: 'Product discovery, without hype',
+    title: 'Choose tools with care',
     copy:
-      'StrongPath will curate books, training tools, and practical supports through an evidence-first commerce lens.',
+      'StrongPath will help readers find useful books, training tools, and practical supports without wellness noise.',
     href: '/waitlist',
   },
 ]
@@ -172,7 +172,7 @@ export default function HomePage() {
                 StrongPath is an evidence-based strength platform for adults who want to preserve
                 capacity, independence, and good days. The work is built on the research foundation
                 behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
-                kept current through the research we publish now.
+                carried forward through practical, research-aware guidance.
               </p>
               <div className="mt-34 flex flex-col gap-12 sm:flex-row">
                 <Link
@@ -195,10 +195,10 @@ export default function HomePage() {
                 <div className="border border-navy/30 bg-parchment p-22 md:p-30">
                   <div className="flex flex-wrap items-center justify-center gap-10 md:justify-start">
                     <p className="font-utility text-caption leading-caption text-inkwell/65">
-                      Book authority
+                      From the StrongPath library
                     </p>
                     <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-navy">
-                      Amazon bestseller
+                      Amazon category bestseller
                     </p>
                   </div>
                   <div className="mt-26 border border-navy/35 bg-paper px-18 py-24 md:px-30 md:py-34">
@@ -232,8 +232,8 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="mt-18 border-l-[6px] border-gold pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
-                The book named the work. StrongPath extends it into a current website, a growing
-                publishing system, and future tools that help people put strength into practice.
+                The book gives StrongPath its foundation: a clear, serious case that strength can
+                protect the ordinary freedoms people want to keep.
               </p>
               <div className="mt-24 flex flex-col gap-12 sm:flex-row">
                 <AmazonLink
@@ -362,12 +362,14 @@ export default function HomePage() {
               The book is the foundation. Current research does the substantiating.
             </h2>
             <p className="mt-24 max-w-[520px] sp-body text-inkwell/80">
-              StrongPath earns attention by making claims checkable, practical, and calm.
+              StrongPath is for readers who want health guidance that is useful, calm, and
+              grounded enough to be trusted.
             </p>
           </div>
           <div className="py-70 lg:pl-40">
             <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
-              StrongPath publishes for readers who want confidence without salesmanship.
+              We separate encouraging ideas from careful evidence, so readers can move forward
+              without being sold a miracle.
             </p>
             <div className="mt-30 grid border-t border-inkwell md:grid-cols-3">
               {evidenceStandards.map(([title, copy]) => (
@@ -397,7 +399,7 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Start here</p>
               <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
-                What we publish first.
+                Start with the questions that matter.
               </h2>
               <p className="sp-body mt-24 text-inkwell/85">
                 The first StrongPath guides answer the questions that matter before a program,
@@ -433,11 +435,11 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Product discovery</p>
               <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
-                Commerce attached to trust.
+                Useful tools, chosen carefully.
               </h2>
               <p className="sp-body mt-24 text-inkwell/85">
-                StrongPath will recommend tools only when they help readers understand, begin, or
-                sustain evidence-based strength work. The editorial standard comes first.
+                StrongPath will recommend books, equipment, and practical supports only when they
+                help readers understand, begin, or sustain strength work.
               </p>
             </div>
             <div className="grid border-t border-inkwell md:grid-cols-3">
@@ -488,8 +490,8 @@ export default function HomePage() {
                 The first StrongPath essays are live.
               </h2>
               <p className="sp-body mt-24 text-inkwell/85">
-                These starter articles establish the editorial spine of the publication: muscle
-                loss, strength, evidence, and the practical meaning of healthy aging.
+                Begin with muscle loss, strength, evidence, and the practical meaning of healthy
+                aging.
               </p>
               <div className="mt-30 flex flex-wrap gap-10">
                 {topicalPathways.map(([label, href]) => (
