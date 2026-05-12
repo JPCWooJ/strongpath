@@ -58,9 +58,9 @@ const bookCoverUrl =
   'https://images-na.ssl-images-amazon.com/images/P/1626344760.01.L.jpg'
 
 const authoritySignals = [
-  ['Publication', 'Evidence-based strength guidance for adults 55+ and the families helping them.'],
-  ['Book', 'A research-grounded case for choosing strength as we age.'],
-  ['Tools', 'Practical ways to turn better information into steadier action.'],
+  ['Read', 'Clear guidance for people noticing change, and for families who want to help.'],
+  ['Understand', 'A serious book-born case for treating strength as part of a capable life.'],
+  ['Act', 'Careful next steps for building muscle, confidence, and better days.'],
 ]
 
 const bookNotes = [
@@ -166,7 +166,7 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
               <h1 className="max-w-[1040px] break-words font-display text-[46px] font-normal leading-[0.94] text-navy sm:text-[78px] lg:text-[104px]">
-                Muscle loss is the problem. Strength is the path.
+                Independence is built in muscle.
               </h1>
               <p className="mt-34 max-w-[780px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/88 md:text-[24px]">
                 StrongPath is an evidence-based strength platform for adults who want to preserve
@@ -191,44 +191,40 @@ export default function HomePage() {
             </div>
 
             <aside className="bg-parchment lg:mt-12">
-              <div className="border border-navy/25 bg-paper p-18 md:p-24">
-                <div className="border border-navy/30 bg-parchment p-22 md:p-30">
-                  <div className="flex flex-wrap items-center justify-center gap-10 md:justify-start">
-                    <p className="font-utility text-caption leading-caption text-inkwell/65">
-                      From the StrongPath library
-                    </p>
-                    <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-navy">
-                      Amazon category bestseller
-                    </p>
-                  </div>
-                  <div className="mt-26 border border-navy/35 bg-paper px-18 py-24 md:px-30 md:py-34">
-                    <div className="mx-auto max-w-[310px] border border-navy/20 bg-parchment p-12 md:max-w-[340px] md:p-16">
-                      <Image
-                        src={bookCoverUrl}
-                        alt="Choosing the StrongPath book cover"
-                        width={640}
-                        height={960}
-                        className="mx-auto h-auto w-full border border-navy/25 bg-parchment"
-                        priority
-                      />
-                    </div>
-                  </div>
-                  <p className="mt-22 text-center font-display text-[28px] font-normal leading-[1.08] text-navy md:text-left md:text-[34px]">
-                    <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>
+              <div className="border border-navy/25 bg-paper p-20 md:p-28">
+                <div className="flex flex-wrap items-center justify-center gap-10 md:justify-start">
+                  <p className="font-utility text-caption leading-caption text-inkwell/65">
+                    From the StrongPath library
                   </p>
-                  <p className="mt-12 text-center font-utility text-caption leading-caption text-inkwell/72 md:text-left">
-                    by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+                  <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-navy">
+                    Amazon category bestseller
                   </p>
-                  <div className="mt-24 grid border-t border-navy/30">
-                    {bookNotes.map((note) => (
-                      <p
-                        key={note}
-                        className="border-b border-navy/30 py-12 font-utility text-caption leading-caption text-inkwell/76"
-                      >
-                        {note}
-                      </p>
-                    ))}
-                  </div>
+                </div>
+                <div className="mt-24 bg-parchment px-14 py-18 md:px-20 md:py-24">
+                  <Image
+                    src={bookCoverUrl}
+                    alt="Choosing the StrongPath book cover"
+                    width={640}
+                    height={960}
+                    className="mx-auto h-auto w-full max-w-[330px] border border-navy/25 md:max-w-[390px]"
+                    priority
+                  />
+                </div>
+                <p className="mt-22 text-center font-display text-[28px] font-normal leading-[1.08] text-navy md:text-left md:text-[34px]">
+                  <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>
+                </p>
+                <p className="mt-12 text-center font-utility text-caption leading-caption text-inkwell/72 md:text-left">
+                  by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+                </p>
+                <div className="mt-24 grid border-t border-navy/30">
+                  {bookNotes.map((note) => (
+                    <p
+                      key={note}
+                      className="border-b border-navy/30 py-12 font-utility text-caption leading-caption text-inkwell/76"
+                    >
+                      {note}
+                    </p>
+                  ))}
                 </div>
               </div>
               <p className="mt-18 border-l-[6px] border-gold pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
