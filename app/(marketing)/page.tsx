@@ -141,12 +141,12 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <section className="border-b border-navy bg-parchment">
-        <div className="sp-container py-[72px] md:py-[108px]">
-          <div className="grid border-y border-navy/35 md:grid-cols-3">
+        <div className="sp-container py-[84px] md:py-[128px]">
+          <div className="grid border-y border-navy/25 md:grid-cols-3">
             {authoritySignals.map(([label, copy]) => (
               <div
                 key={label}
-                className="border-b border-navy/35 py-16 md:border-b-0 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                className="border-b border-navy/25 py-20 md:border-b-0 md:border-r md:px-24 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
               >
                 <p className="font-utility text-caption leading-caption text-inkwell/62">{label}</p>
                 <p className="mt-8 max-w-[320px] font-body text-[17px] font-medium leading-[1.35] text-navy/90 sm:max-w-none sm:text-[18px]">
@@ -156,37 +156,37 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="grid gap-60 pt-60 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
+          <div className="grid gap-70 pt-76 md:pt-96 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
-              <h1 className="max-w-[1040px] break-words font-display text-[46px] font-normal leading-[0.94] text-navy sm:text-[78px] lg:text-[104px]">
+              <h1 className="max-w-[1040px] break-words font-display text-[56px] font-normal leading-[0.94] text-navy sm:text-[88px] lg:text-[112px]">
                 Independence depends on strength.
               </h1>
-              <p className="mt-34 max-w-[780px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/88 md:text-[24px]">
+              <p className="mt-[42px] max-w-[600px] font-body text-[22px] font-medium leading-[1.52] text-inkwell/88 md:text-[24px]">
                 StrongPath is an evidence-based strength platform for adults who want to preserve
                 capacity, independence, and good days. The work is built on the research foundation
                 behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
                 carried forward through practical, research-aware guidance.
               </p>
-              <div className="mt-34 flex flex-col gap-12 sm:flex-row">
+              <div className="mt-[46px] flex flex-col gap-14 sm:flex-row sm:items-center">
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-navy bg-navy px-24 py-14 font-body text-[18px] font-medium leading-none text-paper transition-colors hover:border-gold hover:bg-paper hover:text-navy"
+                  className="inline-flex justify-center border border-navy bg-navy px-28 py-16 font-body text-[19px] font-medium leading-none text-paper transition-colors hover:border-gold hover:bg-paper hover:text-navy"
                 >
-                  Join Waitlist
+                  Take the Assessment
                 </Link>
                 <Link
-                  href="#learn-more"
-                  className="inline-flex justify-center border border-gold px-24 py-14 font-body text-[18px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
+                  href="/blog"
+                  className="inline-flex justify-center border border-gold px-22 py-13 font-body text-[18px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
                 >
-                  Learn More
+                  Explore Articles
                 </Link>
               </div>
             </div>
 
             <aside className="bg-parchment lg:mt-12">
-              <div className="border border-navy/25 bg-paper p-20 md:p-28">
-                <div className="border-b border-navy/25 pb-16 text-center md:text-left">
+              <div className="border border-navy/25 bg-paper p-24 md:p-34">
+                <div className="border-b border-navy/20 pb-20 text-center md:text-left">
                   <p className="font-display text-[28px] font-normal leading-[1.08] text-navy md:text-[34px]">
                     Amazon Best Seller
                   </p>
@@ -194,13 +194,13 @@ export default function HomePage() {
                     in Aging, Weight Training, Exercise, and Longevity
                   </p>
                 </div>
-                <div className="mt-24 bg-parchment px-14 py-18 md:px-20 md:py-24">
+                <div className="mt-30 bg-parchment px-16 py-22 md:px-22 md:py-28">
                   <Image
                     src={bookCoverUrl}
                     alt="Choosing the StrongPath book cover"
                     width={640}
                     height={960}
-                    className="mx-auto h-auto w-full max-w-[330px] border border-navy/25 md:max-w-[390px]"
+                    className="mx-auto h-auto w-full max-w-[340px] border border-navy/25 md:max-w-[430px]"
                     priority
                   />
                 </div>
@@ -210,15 +210,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="learn-more" className="scroll-mt-28 border-b border-navy/35 bg-paper">
+      <section id="learn-more" className="scroll-mt-28 border-b border-navy/20 bg-paper">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
+          <div className="border-b border-inkwell/80 py-76 md:py-96 lg:border-b-0 lg:border-r lg:pr-50">
             <p className="sp-kicker mb-18 text-inkwell/70">The problem</p>
             <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
               The first sign is usually ordinary.
             </h2>
           </div>
-          <div className="py-60 lg:pl-40">
+          <div className="py-76 md:py-96 lg:pl-50">
             <div className="grid gap-30">
               <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
                 A stair gets longer. A chair gets lower. A grocery bag starts requiring two trips.
@@ -239,8 +239,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-parchment">
-        <div className="sp-container py-60">
+      <section className="border-b border-navy/20 bg-parchment">
+        <div className="sp-container py-[80px] md:py-[110px]">
           <div className="grid gap-40 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Why the usual advice falls short</p>
@@ -263,8 +263,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-navy text-paper">
-        <div className="sp-container py-[84px]">
+      <section className="border-b border-navy/20 bg-navy text-paper">
+        <div className="sp-container py-[92px] md:py-[118px]">
           <div className="mx-auto max-w-[990px] text-center">
             <p className="sp-kicker mb-18 text-gold-soft">What strength protects</p>
             <h2 className="font-display text-[50px] font-normal leading-[1.04] text-paper md:text-[78px]">
@@ -279,8 +279,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-parchment">
-        <div className="sp-container py-60">
+      <section className="border-b border-navy/20 bg-parchment">
+        <div className="sp-container py-[80px] md:py-[112px]">
           <div className="grid gap-40 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Who this is for</p>
@@ -310,9 +310,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-paper">
+      <section className="border-b border-navy/20 bg-paper">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
-          <div className="border-b border-inkwell py-70 lg:border-b-0 lg:border-r lg:pr-40">
+          <div className="border-b border-inkwell/80 py-84 md:py-[110px] lg:border-b-0 lg:border-r lg:pr-50">
             <p className="sp-kicker mb-18 text-inkwell/70">The evidence standard</p>
             <h2 className="font-display text-[46px] font-normal leading-[1.04] md:text-[68px]">
               The book is the foundation. Current research does the substantiating.
@@ -322,7 +322,7 @@ export default function HomePage() {
               grounded enough to be trusted.
             </p>
           </div>
-          <div className="py-70 lg:pl-40">
+          <div className="py-84 md:py-[110px] lg:pl-50">
             <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
               We separate encouraging ideas from careful evidence, so readers can move forward
               without being sold a miracle.
@@ -349,8 +349,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-parchment">
-        <div className="sp-container py-[76px]">
+      <section className="border-b border-navy/20 bg-parchment">
+        <div className="sp-container py-[88px] md:py-[118px]">
           <div className="grid gap-50 lg:grid-cols-[0.82fr_1.18fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Start here</p>
@@ -385,8 +385,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-paper">
-        <div className="sp-container py-[76px]">
+      <section className="border-b border-navy/20 bg-paper">
+        <div className="sp-container py-[88px] md:py-[118px]">
           <div className="grid gap-50 lg:grid-cols-[0.68fr_1.32fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Product discovery</p>
@@ -437,8 +437,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-navy/35 bg-parchment">
-        <div className="sp-container py-[72px]">
+      <section className="border-b border-navy/20 bg-parchment">
+        <div className="sp-container py-[88px] md:py-[118px]">
           <div className="grid gap-40 lg:grid-cols-[0.4fr_0.6fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Now publishing</p>
@@ -504,7 +504,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-paper">
-        <div className="sp-container py-[84px]">
+        <div className="sp-container py-[92px] md:py-[124px]">
           <div className="mx-auto max-w-[840px] border-y border-navy/35 py-40 text-center">
             <p className="sp-kicker mb-18 text-inkwell/70">Stay close</p>
             <h2 className="font-display text-[48px] font-normal leading-[1.06] md:text-[72px]">
