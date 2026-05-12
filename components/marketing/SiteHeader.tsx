@@ -31,7 +31,16 @@ export function SiteHeader() {
               priority
               className="h-auto w-[278px] sm:w-[344px] md:w-[388px]"
             />
-            <span className="relative z-10 -mt-1 mb-1 ml-20 h-[3px] w-[83%] bg-[#00398e]/78" aria-hidden="true" />
+            <span
+              aria-hidden="true"
+              style={{
+                backgroundColor: 'rgba(0, 57, 142, 0.78)',
+                height: '3px',
+                marginLeft: '20px',
+                marginTop: '-4px',
+                width: '83%',
+              }}
+            />
           </Link>
           <p className="mt-10 max-w-[320px] font-utility text-[14px] leading-[1.3] text-paper/86 sm:max-w-[640px] sm:text-[17px]">
             Research-backed strength for lasting independence.
