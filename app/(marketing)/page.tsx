@@ -63,12 +63,6 @@ const authoritySignals = [
   ['Act', 'Small, serious steps can protect capacity, confidence, and ordinary good days.'],
 ]
 
-const bookNotes = [
-  'Recognized on Amazon bestseller lists in Aging, Weight Training, Exercise, and Longevity',
-  'By Fred Bartlit and Steven Droullard with Marni Boppart, ScD',
-  'A serious argument for protecting strength, capacity, and independence later in life',
-]
-
 const evidenceStandards = [
   ['Start with the real condition', 'Age-related muscle loss is specific, measurable, and too often overlooked.'],
   [
@@ -210,40 +204,6 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                <p className="mt-22 text-center font-display text-[28px] font-normal leading-[1.08] text-navy md:text-left md:text-[34px]">
-                  <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>
-                </p>
-                <p className="mt-12 text-center font-utility text-caption leading-caption text-inkwell/72 md:text-left">
-                  by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                </p>
-                <div className="mt-24 grid border-t border-navy/30">
-                  {bookNotes.map((note) => (
-                    <p
-                      key={note}
-                      className="border-b border-navy/30 py-12 font-utility text-caption leading-caption text-inkwell/76"
-                    >
-                      {note}
-                    </p>
-                  ))}
-                </div>
-              </div>
-              <p className="mt-18 border-l-[6px] border-gold pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
-                The book gives StrongPath its foundation: a clear, serious case that strength can
-                protect the ordinary freedoms people want to keep.
-              </p>
-              <div className="mt-24 flex flex-col gap-12 sm:flex-row">
-                <AmazonLink
-                  asin="1626344760"
-                  className="inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
-                >
-                  View the book
-                </AmazonLink>
-                <Link
-                  href="/waitlist"
-                  className="inline-flex justify-center border border-gold px-18 py-10 font-body text-[17px] font-medium leading-none text-navy transition-colors hover:bg-navy hover:text-paper"
-                >
-                  Receive the guides
-                </Link>
               </div>
             </aside>
           </div>
