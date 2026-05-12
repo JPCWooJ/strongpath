@@ -31,7 +31,7 @@ export function SiteHeader() {
               priority
               className="h-auto w-[278px] sm:w-[344px] md:w-[388px]"
             />
-            <span className="-mt-3 ml-20 h-[2px] w-[83%] bg-[#00398e]/62" aria-hidden="true" />
+            <span className="relative z-10 -mt-1 mb-1 ml-20 h-[3px] w-[83%] bg-[#00398e]/78" aria-hidden="true" />
           </Link>
           <p className="mt-10 max-w-[320px] font-utility text-[14px] leading-[1.3] text-paper/86 sm:max-w-[640px] sm:text-[17px]">
             Research-backed strength for lasting independence.
