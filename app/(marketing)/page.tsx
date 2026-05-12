@@ -58,9 +58,9 @@ const bookCoverUrl =
   'https://images-na.ssl-images-amazon.com/images/P/1626344760.01.L.jpg'
 
 const authoritySignals = [
-  ['Read', 'Clear guidance for people noticing change, and for families who want to help.'],
-  ['Understand', 'A serious book-born case for treating strength as part of a capable life.'],
-  ['Act', 'Careful next steps for building muscle, confidence, and better days.'],
+  ['Read', 'For people noticing change, and for families helping someone they love stay strong.'],
+  ['Understand', 'You are not alone. The research gives this work a name, and a way forward.'],
+  ['Act', 'Small, serious steps can protect capacity, confidence, and ordinary good days.'],
 ]
 
 const bookNotes = [
@@ -166,7 +166,7 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
               <h1 className="max-w-[1040px] break-words font-display text-[46px] font-normal leading-[0.94] text-navy sm:text-[78px] lg:text-[104px]">
-                Independence is built in muscle.
+                Independence depends on strength.
               </h1>
               <p className="mt-34 max-w-[780px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/88 md:text-[24px]">
                 StrongPath is an evidence-based strength platform for adults who want to preserve
@@ -192,12 +192,12 @@ export default function HomePage() {
 
             <aside className="bg-parchment lg:mt-12">
               <div className="border border-navy/25 bg-paper p-20 md:p-28">
-                <div className="flex flex-wrap items-center justify-center gap-10 md:justify-start">
-                  <p className="font-utility text-caption leading-caption text-inkwell/65">
-                    From the StrongPath library
+                <div className="border-b border-navy/25 pb-16 text-center md:text-left">
+                  <p className="font-display text-[28px] font-normal leading-[1.08] text-navy md:text-[34px]">
+                    Amazon Best Seller
                   </p>
-                  <p className="border border-gold px-10 py-4 font-utility text-caption leading-caption text-navy">
-                    Amazon category bestseller
+                  <p className="mt-8 font-utility text-[15px] font-medium leading-[1.32] text-inkwell/72">
+                    in Aging, Weight Training, Exercise, and Longevity
                   </p>
                 </div>
                 <div className="mt-24 bg-parchment px-14 py-18 md:px-20 md:py-24">

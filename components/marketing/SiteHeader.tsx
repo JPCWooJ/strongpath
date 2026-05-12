@@ -31,10 +31,10 @@ export function SiteHeader() {
               priority
               className="h-auto w-[278px] sm:w-[344px] md:w-[388px]"
             />
-            <span className="mt-7 h-px w-[88%] bg-[#00398e]/55" aria-hidden="true" />
+            <span className="-mt-3 ml-20 h-[2px] w-[83%] bg-[#00398e]/62" aria-hidden="true" />
           </Link>
           <p className="mt-10 max-w-[320px] font-utility text-[14px] leading-[1.3] text-paper/86 sm:max-w-[640px] sm:text-[17px]">
-            Strength, independence, and the research between them
+            Research-backed strength for lasting independence.
           </p>
         </div>
 
