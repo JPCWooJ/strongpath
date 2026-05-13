@@ -146,13 +146,17 @@ export default function HomePage() {
                 StrongPath helps adults and families understand age-related muscle loss, what
                 current research shows, and how strength preserves ordinary freedom.
               </p>
-              <div className="mt-28">
+              <div className="mt-26 flex max-w-[650px] flex-col gap-14 sm:flex-row sm:items-center sm:gap-20">
                 <Link
                   href="/waitlist"
-                  className="inline-flex w-full justify-center border border-inkwell/90 bg-inkwell px-30 py-[15px] font-body text-[17px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
+                  className="inline-flex w-full shrink-0 justify-center border border-inkwell/90 bg-inkwell px-30 py-[15px] font-body text-[17px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
                 >
                   Take the Assessment
                 </Link>
+                <p className="max-w-[310px] border-l border-inkwell/22 pl-14 font-body text-[16px] leading-[1.45] text-inkwell/68">
+                  For the stairs, the groceries, the visits, and the days that still feel like
+                  yours.
+                </p>
               </div>
             </div>
 
