@@ -8,14 +8,14 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-inkwell/70 bg-parchment">
-      <div className="sp-container border-b border-inkwell/20 py-10">
+    <header className="border-b border-inkwell/60 bg-parchment">
+      <div className="sp-container border-b border-inkwell/18 py-8">
         <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
           <p>Evidence-first strength publication</p>
           <p>Muscle loss / resistance training / healthy aging</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[150px] flex-col justify-center gap-28 py-30 md:min-h-[164px] md:flex-row md:items-end md:justify-between md:py-34">
+      <div className="sp-container flex min-h-[138px] flex-col justify-center gap-24 py-26 md:min-h-[152px] md:flex-row md:items-end md:justify-between md:py-30">
         <div className="relative isolate max-w-[780px] pb-3 pr-20">
           <span
             aria-hidden="true"
@@ -34,7 +34,7 @@ export function SiteHeader() {
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center gap-x-24 gap-y-12 border-t border-inkwell/20 pt-14 self-stretch md:self-end md:border-t-0 md:pt-0"
+          className="flex flex-wrap items-center gap-x-24 gap-y-12 border-t border-inkwell/18 pt-12 self-stretch md:self-end md:border-t-0 md:pt-0"
         >
           {navItems.map((item) => (
             <Link

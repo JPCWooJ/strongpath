@@ -132,9 +132,9 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[34rem] bg-sunbeam-gradient opacity-45" />
-        <div className="sp-container relative py-[42px] md:py-[64px] lg:py-[76px]">
-          <div className="grid gap-30 md:grid-cols-[minmax(0,0.7fr)_minmax(230px,0.4fr)] md:items-center md:gap-34 lg:grid-cols-[minmax(0,0.78fr)_minmax(340px,0.56fr)] lg:gap-56">
+        <div className="absolute inset-x-0 top-0 h-[32rem] bg-sunbeam-gradient opacity-45" />
+        <div className="sp-container relative pb-[54px] pt-[36px] md:pb-[68px] md:pt-[56px] lg:pb-[78px] lg:pt-[66px]">
+          <div className="grid gap-18 md:grid-cols-[minmax(0,0.7fr)_minmax(230px,0.4fr)] md:items-center md:gap-38 lg:grid-cols-[minmax(0,0.78fr)_minmax(340px,0.56fr)] lg:gap-64">
             <div>
               <p className="sp-kicker mb-24 text-inkwell/60">
                 Evidence-based strength after 55
@@ -156,13 +156,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className="relative border-y border-inkwell/30 bg-parchment/55 px-16 py-18 md:max-w-none md:px-18 md:py-22 lg:px-24 lg:py-28">
+            <aside className="relative border-t border-inkwell/30 pt-18 md:max-w-none md:border-t-0 md:pl-8 md:pt-0 lg:pl-14">
               <div
                 aria-hidden="true"
-                className="absolute bottom-14 left-14 right-14 top-14 hidden border border-inkwell/12 bg-[#f7f1e4]/45 md:block"
+                className="absolute left-0 top-[-14px] hidden h-px w-[78%] bg-inkwell/28 md:block lg:w-[84%]"
               />
               <div className="relative grid grid-cols-[112px_minmax(0,1fr)] items-start gap-18 sm:grid-cols-[156px_minmax(0,1fr)] md:block">
-                <div className="bg-parchment p-5 ring-1 ring-inkwell/70 md:mx-auto md:max-w-[238px] lg:max-w-[344px] lg:p-7">
+                <div className="bg-parchment p-4 ring-1 ring-inkwell/52 md:ml-auto md:max-w-[238px] lg:max-w-[344px] lg:p-6">
                   <Image
                     src={bookCoverUrl}
                     alt="Choosing the StrongPath book cover"
@@ -173,7 +173,7 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                <div className="md:mx-auto md:mt-16 md:max-w-[238px] lg:mt-18 lg:max-w-[344px]">
+                <div className="md:ml-auto md:mt-14 md:max-w-[238px] lg:mt-16 lg:max-w-[344px]">
                   <p className="font-utility text-[13px] leading-[1.38] text-inkwell/58">
                     Foundational authority
                   </p>
@@ -181,7 +181,7 @@ export default function HomePage() {
                     The category-defining book behind StrongPath. Amazon bestseller in Aging,
                     Weight Training, Exercise, and Longevity.
                   </p>
-                  <p className="mt-12 border-t border-inkwell/20 pt-12 font-utility text-[13px] leading-[1.38] text-inkwell/60">
+                  <p className="mt-14 border-t border-inkwell/18 pt-10 font-utility text-[13px] leading-[1.38] text-inkwell/60">
                     Built on the research foundation behind <em>Choosing the StrongPath</em>, with
                     current evidence carrying the claims we publish.
                   </p>
