@@ -135,54 +135,51 @@ export default function HomePage() {
       <section className="relative border-b border-inkwell">
         <div className="absolute inset-x-0 top-0 h-[38rem] bg-sunbeam-gradient opacity-55" />
         <div className="sp-container relative py-[72px] md:py-[128px]">
-          <div className="grid gap-40 lg:grid-cols-[minmax(0,1.04fr)_minmax(280px,0.58fr)] lg:items-end lg:gap-60">
-            <div className="max-w-[880px]">
-              <p className="sp-kicker mb-24 text-inkwell/68">
-                Evidence-based strength after 55
-              </p>
-              <h1 className="font-display text-[56px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[92px] xl:text-[112px]">
-                Strength protects independence.
-              </h1>
-              <p className="mt-34 max-w-[590px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/84 md:text-[24px]">
-                StrongPath helps adults and families understand age-related muscle loss, what
-                current research shows, and how strength preserves ordinary freedom.
-              </p>
-              <div className="mt-34">
-                <Link
-                  href="/waitlist"
-                  className="inline-flex w-full justify-center border border-inkwell bg-inkwell px-28 py-16 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
-                >
-                  Take the Assessment
-                </Link>
-              </div>
-              <div className="mt-24 max-w-[620px] border-t border-inkwell/30 pt-18">
-                <p className="font-utility text-caption leading-caption text-inkwell/68">
-                  Built on the research foundation behind <em>Choosing the StrongPath</em>, with
-                  current evidence carrying the claims we publish.
-                </p>
-              </div>
+          <div className="max-w-[980px]">
+            <p className="sp-kicker mb-24 text-inkwell/68">
+              Evidence-based strength after 55
+            </p>
+            <h1 className="max-w-[900px] font-display text-[56px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[108px]">
+              Strength protects independence.
+            </h1>
+            <p className="mt-34 max-w-[590px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/84 md:text-[24px]">
+              StrongPath helps adults and families understand age-related muscle loss, what current
+              research shows, and how strength preserves ordinary freedom.
+            </p>
+            <div className="mt-34">
+              <Link
+                href="/waitlist"
+                className="inline-flex w-full justify-center border border-inkwell bg-inkwell px-28 py-16 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
+              >
+                Take the Assessment
+              </Link>
             </div>
 
-            <aside className="border-t border-inkwell/35 pt-28 lg:border-l lg:border-t-0 lg:pl-34 lg:pt-0">
-              <div className="grid grid-cols-[112px_minmax(0,1fr)] items-end gap-20 sm:grid-cols-[150px_minmax(0,1fr)] lg:grid-cols-1 lg:gap-24">
+            <div className="mt-30 max-w-[760px] border-t border-inkwell/30 pt-20">
+              <p className="font-utility text-caption leading-caption text-inkwell/68">
+                Built on the research foundation behind <em>Choosing the StrongPath</em>, with
+                current evidence carrying the claims we publish.
+              </p>
+
+              <aside className="mt-24 grid grid-cols-[112px_minmax(0,1fr)] items-end gap-20 border-t border-inkwell/20 pt-24 sm:grid-cols-[150px_minmax(0,1fr)] md:max-w-[640px] md:grid-cols-[168px_minmax(0,1fr)] md:gap-26">
                 <Image
                   src={bookCoverUrl}
                   alt="Choosing the StrongPath book cover"
                   width={300}
                   height={450}
-                  className="h-auto w-full max-w-[210px] border border-inkwell bg-parchment lg:max-w-[270px]"
+                  className="h-auto w-full max-w-[168px] border border-inkwell bg-parchment"
                   priority
                 />
                 <div>
                   <p className="font-utility text-caption leading-caption text-inkwell/65">
                     Category-defining book
                   </p>
-                  <p className="mt-12 font-display text-[32px] font-normal leading-[1.05] text-inkwell md:text-[40px] lg:text-[44px]">
-                    Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                  <p className="mt-10 max-w-[420px] font-body text-[20px] font-medium leading-[1.38] text-inkwell/84 md:text-[22px]">
+                    An Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
                   </p>
                 </div>
-              </div>
-            </aside>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
