@@ -195,15 +195,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="learn-more" className="scroll-mt-28 border-b border-inkwell">
+      <section id="learn-more" className="scroll-mt-28 border-b border-inkwell/70 bg-parchment">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="border-b border-inkwell py-60 lg:border-b-0 lg:border-r lg:pr-40">
+          <div className="border-b border-inkwell/45 py-[78px] lg:border-b-0 lg:border-r lg:pr-48">
             <p className="sp-kicker mb-18 text-inkwell/70">The problem</p>
             <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
               The first sign is usually ordinary.
             </h2>
           </div>
-          <div className="py-60 lg:pl-40">
+          <div className="py-[78px] lg:pl-48">
             <div className="grid gap-30">
               <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
                 A stair gets longer. A chair gets lower. A grocery bag starts requiring two trips.
@@ -224,20 +224,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
-        <div className="sp-container py-60">
-          <div className="grid gap-40 lg:grid-cols-[0.9fr_1.1fr]">
+      <section className="border-b border-inkwell/55 bg-[#f6f0df]/45">
+        <div className="sp-container py-[92px]">
+          <div className="grid gap-48 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Why the usual advice falls short</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.1] md:text-[58px]">
                 Familiar advice is often too vague to use.
               </h2>
             </div>
-            <div className="grid border-t border-inkwell">
+            <div className="grid border-t border-inkwell/55">
               {adviceFailures.map(([title, copy]) => (
                 <div
                   key={title}
-                  className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[0.36fr_0.64fr]"
+                  className="grid gap-18 border-b border-inkwell/35 py-28 md:grid-cols-[0.36fr_0.64fr]"
                 >
                   <h3 className="font-display text-[30px] font-normal leading-[1.12]">{title}</h3>
                   <p className="sp-body text-inkwell/85">{copy}</p>
@@ -248,9 +248,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative border-b border-inkwell">
-        <div className="absolute inset-0 bg-sunbeam-gradient opacity-40" />
-        <div className="sp-container relative py-[84px]">
+      <section className="relative border-b border-inkwell/60">
+        <div className="absolute inset-0 bg-sunbeam-gradient opacity-28" />
+        <div className="sp-container relative py-[112px]">
           <div className="mx-auto max-w-[990px] text-center">
             <p className="sp-kicker mb-18 text-inkwell/70">What strength protects</p>
             <h2 className="font-display text-[50px] font-normal leading-[1.04] md:text-[78px]">
@@ -265,20 +265,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
-        <div className="sp-container py-60">
-          <div className="grid gap-40 lg:grid-cols-[0.72fr_1.28fr]">
+      <section className="border-b border-inkwell/55 bg-parchment">
+        <div className="sp-container py-[96px]">
+          <div className="grid gap-48 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Who this is for</p>
               <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
                 Two readers often arrive at the same page.
               </h2>
             </div>
-            <div className="grid border-t border-inkwell">
+            <div className="grid border-t border-inkwell/55">
               {readerPaths.map((pathway) => (
                 <article
                   key={pathway.label}
-                  className="grid gap-18 border-b border-inkwell py-30 md:grid-cols-[0.32fr_0.68fr]"
+                  className="grid gap-18 border-b border-inkwell/35 py-34 md:grid-cols-[0.32fr_0.68fr]"
                 >
                   <p className="font-utility text-caption leading-caption text-inkwell/65">
                     {pathway.label}
@@ -296,9 +296,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell bg-verdigris-wash/35">
+      <section className="border-b border-inkwell/60 bg-verdigris-wash/26">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
-          <div className="border-b border-inkwell py-70 lg:border-b-0 lg:border-r lg:pr-40">
+          <div className="border-b border-inkwell/45 py-[92px] lg:border-b-0 lg:border-r lg:pr-48">
             <p className="sp-kicker mb-18 text-inkwell/70">The evidence standard</p>
             <h2 className="font-display text-[46px] font-normal leading-[1.04] md:text-[68px]">
               The book is the foundation. Current research does the substantiating.
@@ -307,24 +307,24 @@ export default function HomePage() {
               StrongPath earns attention by making claims checkable, practical, and calm.
             </p>
           </div>
-          <div className="py-70 lg:pl-40">
+          <div className="py-[92px] lg:pl-48">
             <p className="font-body text-[26px] font-medium leading-[1.42] text-inkwell">
               StrongPath publishes for readers who want confidence without salesmanship.
             </p>
-            <div className="mt-30 grid border-t border-inkwell md:grid-cols-3">
+            <div className="mt-34 grid border-t border-inkwell/50 md:grid-cols-3">
               {evidenceStandards.map(([title, copy]) => (
                 <article
                   key={title}
-                  className="border-b border-inkwell py-22 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                  className="border-b border-inkwell/35 py-[26px] md:border-r md:border-inkwell/35 md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
                 >
                   <h3 className="font-display text-[30px] font-normal leading-[1.08]">{title}</h3>
                   <p className="mt-12 font-body text-[18px] leading-[1.5] text-inkwell/82">{copy}</p>
                 </article>
               ))}
             </div>
-            <div className="mt-30 grid border-t border-inkwell">
+            <div className="mt-34 grid border-t border-inkwell/50">
               {evidenceSources.map((source) => (
-                <p key={source} className="border-b border-inkwell py-18 sp-body text-inkwell/85">
+                <p key={source} className="border-b border-inkwell/35 py-20 sp-body text-inkwell/85">
                   {source}
                 </p>
               ))}
@@ -333,9 +333,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
-        <div className="sp-container py-[76px]">
-          <div className="grid gap-50 lg:grid-cols-[0.82fr_1.18fr]">
+      <section className="border-b border-inkwell/55 bg-[#f7f1e4]/55">
+        <div className="sp-container py-[104px]">
+          <div className="grid gap-[56px] lg:grid-cols-[0.82fr_1.18fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Start here</p>
               <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
@@ -347,11 +347,11 @@ export default function HomePage() {
                 someone you love begin.
               </p>
             </div>
-            <div className="grid border-t border-inkwell">
+            <div className="grid border-t border-inkwell/55">
               {publishingTopics.map((topic, index) => (
                 <article
                   key={topic.title}
-                  className="grid gap-18 border-b border-inkwell py-24 md:grid-cols-[64px_1fr]"
+                  className="grid gap-18 border-b border-inkwell/35 py-28 md:grid-cols-[64px_1fr]"
                 >
                   <p className="border-l-[6px] border-verdigris pl-12 font-utility text-caption leading-caption text-inkwell/60">
                     {String(index + 1).padStart(2, '0')}
@@ -369,9 +369,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell bg-verdigris-wash/28">
-        <div className="sp-container py-[76px]">
-          <div className="grid gap-50 lg:grid-cols-[0.68fr_1.32fr]">
+      <section className="border-b border-inkwell/60 bg-verdigris-wash/24">
+        <div className="sp-container py-[108px]">
+          <div className="grid gap-[56px] lg:grid-cols-[0.68fr_1.32fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Product discovery</p>
               <h2 className="font-display text-[48px] font-normal leading-[1.05] md:text-[72px]">
@@ -382,11 +382,11 @@ export default function HomePage() {
                 sustain evidence-based strength work. The editorial standard comes first.
               </p>
             </div>
-            <div className="grid border-t border-inkwell md:grid-cols-3">
+            <div className="grid border-t border-inkwell/50 md:grid-cols-3">
               {discoveryTools.map((item) => (
                 <article
                   key={item.title}
-                  className="flex min-h-[300px] flex-col justify-between border-b border-inkwell py-24 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
+                  className="flex min-h-[320px] flex-col justify-between border-b border-inkwell/35 py-30 md:border-r md:border-inkwell/35 md:px-22 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
                 >
                   <div>
                     <p className="font-utility text-caption leading-caption text-verdigris">
@@ -421,9 +421,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell">
-        <div className="sp-container py-[72px]">
-          <div className="grid gap-40 lg:grid-cols-[0.4fr_0.6fr]">
+      <section className="border-b border-inkwell/55 bg-parchment">
+        <div className="sp-container py-[104px]">
+          <div className="grid gap-[56px] lg:grid-cols-[0.4fr_0.6fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/70">Now publishing</p>
               <h2 className="font-display text-[44px] font-normal leading-[1.08] md:text-[64px]">
@@ -445,9 +445,9 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="grid border-t border-inkwell lg:grid-cols-[1.12fr_0.88fr]">
+            <div className="grid border-t border-inkwell/55 lg:grid-cols-[1.12fr_0.88fr]">
               {leadArticle && (
-                <article className="border-b border-inkwell py-28 lg:border-r lg:pr-30">
+                <article className="border-b border-inkwell/35 py-34 lg:border-r lg:border-inkwell/35 lg:pr-34">
                   <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-caption leading-caption text-inkwell/65">
                     {leadArticle.category && <p>{leadArticle.category}</p>}
                     {leadArticle.publishedAt && <p>{formatArticleDate(leadArticle.publishedAt)}</p>}
@@ -466,7 +466,7 @@ export default function HomePage() {
               )}
               <div className="grid lg:pl-30">
                 {secondaryArticles.map((article) => (
-                  <article key={article.href} className="border-b border-inkwell py-24">
+                  <article key={article.href} className="border-b border-inkwell/35 py-28">
                     <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-caption leading-caption text-inkwell/65">
                       {article.category && <p>{article.category}</p>}
                       {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
@@ -487,10 +487,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative">
-        <div className="absolute inset-x-0 top-0 h-[24rem] bg-sunbeam-gradient opacity-45" />
-        <div className="sp-container relative py-[84px]">
-          <div className="mx-auto max-w-[840px] border-y border-inkwell py-40 text-center">
+      <section className="relative bg-[#f6f0df]/45">
+        <div className="absolute inset-x-0 top-0 h-[24rem] bg-sunbeam-gradient opacity-32" />
+        <div className="sp-container relative py-[112px]">
+          <div className="mx-auto max-w-[840px] border-y border-inkwell/45 py-48 text-center">
             <p className="sp-kicker mb-18 text-inkwell/70">Stay close</p>
             <h2 className="font-display text-[48px] font-normal leading-[1.06] md:text-[72px]">
               Receive the first guides.
