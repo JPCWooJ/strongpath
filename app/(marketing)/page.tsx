@@ -55,18 +55,6 @@ const evidenceSources = [
 const bookCoverUrl =
   'https://books.google.com/books/content?id=gAxCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
 
-const authoritySignals = [
-  ['Publication', 'Evidence-first articles for adults 55+ and the families helping them.'],
-  ['Book', 'The research foundation behind Choosing the StrongPath.'],
-  ['Tools', 'A growing platform for putting strength into practice.'],
-]
-
-const bookNotes = [
-  'Amazon bestseller in Aging, Weight Training, Exercise, and Longevity',
-  'Written with Marni Boppart, ScD, alongside Fred Bartlit and Steven Droullard',
-  "The source text for StrongPath's strength-first approach to aging",
-]
-
 const evidenceStandards = [
   ['Name the condition', 'We write about age-related muscle loss, not vague decline.'],
   [
@@ -145,120 +133,54 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[44rem] bg-sunbeam-gradient opacity-80" />
-        <div className="sp-container relative py-[72px] md:py-[108px]">
-          <div className="grid border-y border-inkwell md:grid-cols-3">
-            {authoritySignals.map(([label, copy]) => (
-              <div
-                key={label}
-                className="border-b border-inkwell py-16 md:border-b-0 md:border-r md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-              >
-                <p className="font-utility text-caption leading-caption text-inkwell/62">{label}</p>
-                <p className="mt-8 font-body text-[18px] font-medium leading-[1.35] text-inkwell/86">
-                  {copy}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid gap-60 pt-60 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
-            <div>
-              <p className="sp-kicker mb-18 text-inkwell/70">Strength after 55</p>
-              <h1 className="max-w-[1040px] font-display text-[60px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[112px]">
-                Muscle loss is the problem. Strength is the path.
-              </h1>
-              <p className="mt-34 max-w-[780px] font-body text-[24px] font-medium leading-[1.48] text-inkwell/86">
-                StrongPath is an evidence-based strength platform for adults who want to preserve
-                capacity, independence, and good days. The work is built on the research foundation
-                behind <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em> and
-                kept current through the research we publish now.
+        <div className="absolute inset-x-0 top-0 h-[38rem] bg-sunbeam-gradient opacity-55" />
+        <div className="sp-container relative py-[72px] md:py-[128px]">
+          <div className="grid gap-40 lg:grid-cols-[minmax(0,1.04fr)_minmax(280px,0.58fr)] lg:items-end lg:gap-60">
+            <div className="max-w-[880px]">
+              <p className="sp-kicker mb-24 text-inkwell/68">
+                Evidence-based strength after 55
               </p>
-              <div className="mt-34 flex flex-col gap-12 sm:flex-row">
+              <h1 className="font-display text-[56px] font-normal leading-[0.96] text-inkwell sm:text-[84px] lg:text-[92px] xl:text-[112px]">
+                Strength protects independence.
+              </h1>
+              <p className="mt-34 max-w-[590px] font-body text-[22px] font-medium leading-[1.5] text-inkwell/84 md:text-[24px]">
+                StrongPath helps adults and families understand age-related muscle loss, what
+                current research shows, and how strength preserves ordinary freedom.
+              </p>
+              <div className="mt-34">
                 <Link
                   href="/waitlist"
-                  className="inline-flex justify-center border border-verdigris bg-verdigris px-24 py-14 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:border-inkwell hover:bg-transparent hover:text-inkwell"
+                  className="inline-flex w-full justify-center border border-inkwell bg-inkwell px-28 py-16 font-body text-[18px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
                 >
-                  Join Waitlist
+                  Take the Assessment
                 </Link>
-                <Link
-                  href="#learn-more"
-                  className="inline-flex justify-center border border-inkwell px-24 py-14 font-body text-[18px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
-                >
-                  Learn More
-                </Link>
+              </div>
+              <div className="mt-24 max-w-[620px] border-t border-inkwell/30 pt-18">
+                <p className="font-utility text-caption leading-caption text-inkwell/68">
+                  Built on the research foundation behind <em>Choosing the StrongPath</em>, with
+                  current evidence carrying the claims we publish.
+                </p>
               </div>
             </div>
 
-            <aside className="bg-parchment lg:mt-12">
-              <div className="border border-inkwell bg-verdigris-wash/45 p-18">
-                <div className="border border-inkwell bg-parchment p-24 md:p-30">
-                  <div className="flex flex-wrap items-center gap-10">
-                    <p className="font-utility text-caption leading-caption text-inkwell/65">
-                      Book authority
-                    </p>
-                    <p className="border border-verdigris px-10 py-4 font-utility text-caption leading-caption text-verdigris">
-                      Amazon bestseller
-                    </p>
-                  </div>
-                  <div className="mt-30 grid min-h-[460px] border border-inkwell bg-parchment md:grid-cols-[0.78fr_1.22fr]">
-                    <div className="border-b border-inkwell bg-verdigris-wash/35 p-18 md:border-b-0 md:border-r">
-                      <Image
-                        src={bookCoverUrl}
-                        alt="Choosing the StrongPath book cover"
-                        width={220}
-                        height={330}
-                        className="mx-auto h-auto w-full max-w-[220px] border border-inkwell bg-parchment"
-                        priority
-                      />
-                    </div>
-                    <div className="flex flex-col justify-between p-24">
-                      <div>
-                        <p className="font-display text-[48px] font-normal leading-[0.98] text-inkwell">
-                          Choosing the StrongPath
-                        </p>
-                        <p className="mt-18 font-display text-[26px] font-normal leading-[1.16] text-inkwell">
-                          Reversing the Downward Spiral of Aging
-                        </p>
-                      </div>
-                      <div className="mt-40">
-                        <p className="font-utility text-caption leading-caption text-inkwell/75">
-                          by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                        </p>
-                        <p className="mt-12 font-body text-[17px] leading-body text-inkwell/85">
-                          Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-24 grid border-t border-inkwell">
-                    {bookNotes.map((note) => (
-                      <p
-                        key={note}
-                        className="border-b border-inkwell py-12 font-utility text-caption leading-caption text-inkwell/76"
-                      >
-                        {note}
-                      </p>
-                    ))}
-                  </div>
+            <aside className="border-t border-inkwell/35 pt-28 lg:border-l lg:border-t-0 lg:pl-34 lg:pt-0">
+              <div className="grid grid-cols-[112px_minmax(0,1fr)] items-end gap-20 sm:grid-cols-[150px_minmax(0,1fr)] lg:grid-cols-1 lg:gap-24">
+                <Image
+                  src={bookCoverUrl}
+                  alt="Choosing the StrongPath book cover"
+                  width={300}
+                  height={450}
+                  className="h-auto w-full max-w-[210px] border border-inkwell bg-parchment lg:max-w-[270px]"
+                  priority
+                />
+                <div>
+                  <p className="font-utility text-caption leading-caption text-inkwell/65">
+                    Category-defining book
+                  </p>
+                  <p className="mt-12 font-display text-[32px] font-normal leading-[1.05] text-inkwell md:text-[40px] lg:text-[44px]">
+                    Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                  </p>
                 </div>
-              </div>
-              <p className="mt-18 border-l-[6px] border-verdigris pl-18 font-body text-[19px] leading-[1.48] text-inkwell/85">
-                The book named the work. StrongPath extends it into a current website, a growing
-                publishing system, and future tools that help people put strength into practice.
-              </p>
-              <div className="mt-24 flex flex-col gap-12 sm:flex-row">
-                <AmazonLink
-                  asin="1626344760"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
-                >
-                  View the book
-                </AmazonLink>
-                <Link
-                  href="/waitlist"
-                  className="inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
-                >
-                  Receive the guides
-                </Link>
               </div>
             </aside>
           </div>
