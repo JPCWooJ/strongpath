@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # PUBLISHING_PLAN.md
 
 **StrongPath — 90-Day Publishing Calendar and Internal Link Map**

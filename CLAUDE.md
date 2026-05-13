@@ -4,7 +4,7 @@
 
 **Version:** 1.3
 **Last updated:** April 22, 2026
-**Authority:** Tier 4 (repo). Inherits from `AGENT_RULES.md` (Tier 1), `PROJECT_INSTRUCTIONS.md` + `STACK.md` + `BEST_PRACTICES.md` (Tiers 2–3). Full governance files live in OneDrive (`JCVC / Agent OS /`, `JCVC / eComm /`, `JCVC / StrongPath /`); they are not in this repo. When you need them, ask the founder to paste the relevant section. The essentials from those files are embedded below.
+**Authority:** Repo execution guide. Inherits from `docs/governance/`, which is the active StrongPath governance source. If this file conflicts with `docs/governance/`, `docs/governance/` wins.
 
 ---
 
@@ -14,7 +14,7 @@
 
 **Branching.** `main` is the production branch and the default branch on GitHub. Vercel deploys from `main`. Do not commit directly to `main`. All work happens on short-lived feature branches named `feature/<short-description>` or `fix/<short-description>`, merged to `main` via PR after review. Delete feature branches after merge.
 
-**Next work lives in `CODE_BACKLOG.md`** (OneDrive, `StrongPath/` root). The founder or Chief of Staff will paste active items into your session. Do not invent work; execute the brief.
+**Next work lives in `agent-os/strongpath/operations/CODE_BACKLOG.md`** as an active operational reference. Canonical governance lives in `docs/governance/`. The founder or Chief of Staff may paste active items into your session. Do not invent work; execute the brief.
 
 ---
 
@@ -35,7 +35,7 @@
 
 **Key routes.** Marketing pages live in `app/(marketing)/`. Authenticated app in `app/(app)/`. API routes in `app/api/`.
 
-**Strategy and decisions** for this vertical live in `docs/decisions.md`. Stack deviations require an entry there.
+**Governance** lives in `docs/governance/`. **Strategy and decisions** for implementation history live in `docs/decisions.md`. Stack deviations require an entry there.
 
 **Repo status.** This is a fresh repo (created April 22, 2026) replacing an earlier hackathon build (archived at `JPCWooJ/strongpath-hackathon-archive`). The archive is read-only and exists only for reference — do not mirror its patterns, dependencies, or architectural choices unless explicitly instructed.
 
@@ -110,8 +110,8 @@ Full verification standards in `.claude/rules/verification.md`.
 
 ## 6. Boundaries — what this repo does not own
 
-- **Strategy.** Lives in `PROJECT_INSTRUCTIONS.md`, `BRAND.md`, `PERSONAS.md`, `CONTENT_PLAN.md`. Claude Code reads them when pasted in; it does not author them.
-- **Brand voice.** Lives in `BRAND.md` and `brand-references.md` (OneDrive). Claude Code enforces voice in user-facing strings via `.claude/rules/brand-discipline.md`; it does not define voice.
+- **Strategy.** Lives in `docs/governance/PROJECT_INSTRUCTIONS.md`, `docs/governance/BRAND.md`, `docs/governance/PERSONAS.md`, and the active operational `agent-os/strongpath/seo/CONTENT_PLAN.md`. Claude Code reads them; it does not author them unless explicitly scoped.
+- **Brand voice.** Lives in `docs/governance/BRAND.md`; `agent-os/strongpath/brand/brand-references.md` is a supporting operational reference. Claude Code enforces voice in user-facing strings via `.claude/rules/brand-discipline.md`; it does not define voice.
 - **Content drafts.** Article drafts live in Sanity CMS, authored by the Content Writer workstream. Claude Code wires Sanity to the blog; it does not write articles.
 - **Marketing copy, email flows, paid media creative.** Owned by their respective workstream chats.
 

@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # STACK.md — Canonical Tech Stack
 
 **Authority:** This document is the single source of truth for all technology decisions across all verticals.  

@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # PERSONAS.md
 
 *StrongPath — Customer Personas*

@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # BRAND.md — StrongPath Brand Bible
 
 **Purpose:** The single source of truth for how StrongPath sounds, looks, and shows up in the world. Every workstream chat (SEO, Content, Email, Paid Media, Community) reads this file as ground truth before producing any customer-facing output. When a piece of copy or creative is in doubt, it is checked against this document.

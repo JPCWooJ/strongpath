@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # PROJECT INSTRUCTIONS — StrongPath (Vertical 1)
 
 **Read this first. Every chat in this project starts here.**

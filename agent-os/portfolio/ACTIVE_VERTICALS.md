@@ -1,3 +1,8 @@
+﻿<!--
+OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
+Portfolio status reference. Not primary StrongPath governance. docs/governance/ wins on conflict.
+-->
+
 # ACTIVE_VERTICALS.md — Vertical Registry
 
 **Purpose:** Single source of truth for all active, in-progress, and planned verticals in the portfolio.  
@@ -118,7 +123,7 @@
 | April 2026 | Evaluated 40 MCP servers; 17 relevant, 23 rejected. Key gaps: no Sanity MCP, no Klaviyo MCP, no GA4 MCP — agents cannot fully operate these tools autonomously | MCP evaluation |
 | April 2026 | Vercel MCP failed to connect via both npm and HTTP methods on Windows — parked. Vercel dashboard + CLI sufficient for now | MCP setup session |
 | April 2026 | Never share API tokens in chat. If exposed, regenerate immediately. Use Notepad or password manager as intermediary when building CLI commands with credentials | MCP setup session |
-| April 2026 | OneDrive (Microsoft 365 MCP) is the canonical workspace for every StrongPath workstream. Google Drive MCP was unreliable on connection; Dropbox has no first-party Claude MCP. Microsoft 365 worked on first try. | Brand Ambassador session 1 |
+| April 2026 | Superseded workspace note: OneDrive was the original workspace for StrongPath workstreams. Active governance now lives in `docs/governance/`. | Brand Ambassador session 1; superseded May 2026 |
 | April 2026 | Each workstream chat gets its own OneDrive sub-folder under `StrongPath/`. Shared brand files live at the root. Clean handoffs between workstreams require workspace separation. | Brand Ambassador session 1 |
 | April 2026 | Session-per-deliverable pattern with structured handoff prompts saves significant tokens vs. extending one chat indefinitely. Pattern: finish deliverable → write handoff to next session → new chat reads canonical files rather than prior conversation. | Brand Ambassador session 1 |
 | April 2026 | Founder style is "defer to expert on craft, ask good questions on process." Agents should tag confidence levels (High / Calibrated / Outside my range) so the founder knows where to push and where to defer. | Brand Ambassador session 1 |

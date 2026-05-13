@@ -4,6 +4,8 @@
 
 Enforces the difference between "I wrote the code" and "the code works." Every session ends with work that has been verified, or with an honest flag that it couldn't be verified. Nothing ships on "should work" or "probably fine."
 
+This file is a Claude Code enforcement aid. Active StrongPath governance lives in `docs/governance/`.
+
 ---
 
 ## 1. Plan mode is the default

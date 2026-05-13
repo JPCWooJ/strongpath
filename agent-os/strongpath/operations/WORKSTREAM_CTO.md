@@ -1,3 +1,8 @@
+﻿<!--
+OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
+CTO workstream context. Not primary StrongPath governance. docs/governance/ wins on conflict.
+-->
+
 # WORKSTREAM_CTO.md
 
 **StrongPath — CTO Workstream Role Definition**
@@ -56,10 +61,10 @@ Ownership transfers from Chief of Staff to CTO at the end of step 3 (CTO onboard
 
 | File | Path | Notes |
 |---|---|---|
-| `STACK.md` | `OneDrive / JCVC / eComm /` | Tier 2 — CTO proposes changes; Chief of Staff approves cross-cutting changes that affect other verticals |
-| `CODE_BACKLOG.md` | `OneDrive / JCVC / StrongPath /` | Tier 3 — full ownership |
-| `COMMANDS_BACKLOG.md` (CC entries only) | `OneDrive / JCVC / StrongPath /` | Tier 3 — full ownership of Claude Code slash command candidates |
-| `BEST_PRACTICES.md` (BP-05, BP-08, BP-10, BP-13) | `OneDrive / JCVC / eComm /` | Tier 2 — CTO proposes; Chief of Staff approves cross-cutting changes |
+| `STACK.md` | Legacy/archived reference | Tier 2 — CTO proposes changes; Chief of Staff approves cross-cutting changes that affect other verticals |
+| `CODE_BACKLOG.md` | `agent-os/strongpath/operations/CODE_BACKLOG.md` | Active operational reference — full ownership |
+| `COMMANDS_BACKLOG.md` (CC entries only) | `agent-os/portfolio/COMMANDS_BACKLOG.md` | Operational reference for Claude Code slash command candidates |
+| `BEST_PRACTICES.md` (BP-05, BP-08, BP-10, BP-13) | `agent-os/portfolio/BEST_PRACTICES.md` | Active operational reference — CTO proposes; Chief of Staff approves cross-cutting changes |
 | `strongpath/CLAUDE.md` | `JPCWooJ/strongpath` repo | The Claude Code entry point — CTO authors and maintains |
 | `strongpath/.claude/rules/` | `JPCWooJ/strongpath` repo | Claude Code rule files |
 | `strongpath/.claude/commands/` | `JPCWooJ/strongpath` repo | Claude Code slash commands |
@@ -77,7 +82,7 @@ Ownership transfers from Chief of Staff to CTO at the end of step 3 (CTO onboard
 - Define and ship Claude Code slash commands. `/lighthouse`, `/brand-check`, `/affiliate-tag-audit`, `/disclaimer-check` are queued (CC-1 through CC-4).
 - Evaluate the GitHub repos the founder shared earlier and parked. Recommend keep / fork / discard during onboarding.
 - Define branch strategy, deploy strategy, CI/CD discipline.
-- Investigate and resolve OneDrive auto-save (currently parked at Chief of Staff).
+- Investigate and resolve non-markdown asset storage/sync issues (currently parked at Chief of Staff).
 - Own escalation when something breaks. Production incidents, deploy failures, third-party outages.
 
 ### 2.3 What the CTO does not do
@@ -313,7 +318,7 @@ This transfer happens at the end of step 3 (CTO onboarding session), not before.
 | `strongpath/docs/decisions.md` | 4 (repo) | Full transfer. |
 
 **Parked items moving with the role:**
-- OneDrive auto-save investigation (Microsoft 365 MCP).
+- Non-markdown asset storage/sync investigation.
 - GitHub repo evaluations (the SEO and web design tools the founder shared and parked).
 - Path B trust-gate execution (CTO's first onboarding parked item — scoped by the CTO once they have hands on the repo).
 

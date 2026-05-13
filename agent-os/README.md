@@ -1,8 +1,8 @@
 # agent-os/
 
-Canonical governance files for the JCVC portfolio and StrongPath vertical agents.
+Operational reference files for the JCVC portfolio and StrongPath vertical.
 
-This directory is the source of truth. Drive and OneDrive copies are deprecated. Claude.ai project folder copies are caches — when they disagree with this directory, this directory wins.
+This directory is not the active governance authority. StrongPath governance now lives in `docs/governance/`. When `agent-os/` conflicts with `docs/governance/`, `docs/governance/` wins.
 
 ## Structure
 
@@ -10,8 +10,8 @@ This directory is the source of truth. Drive and OneDrive copies are deprecated.
 portfolio/                   Portfolio-tier files (apply to every vertical)
   ABOUT_ME.md
   ACTIVE_VERTICALS.md
-  AGENT_RULES.md
-  BEST_PRACTICES.md
+  AGENT_RULES.md               Legacy portfolio context; not active StrongPath authority
+  BEST_PRACTICES.md            Active operational reference
   COMMANDS_BACKLOG.md
 
 strongpath/
@@ -27,23 +27,23 @@ strongpath/
     brand-references.md
 
   seo/                       SEO Strategist outputs
-    CONTENT_PLAN.md
+    CONTENT_PLAN.md            Active operational reference
     PUBLISHING_PLAN.md
     PRODUCT_CONCEPTS_BACKLOG.md
 
   operations/                Chief of Staff and CTO operational files
-    CODE_BACKLOG.md
-    WORKSTREAM_CTO.md
+    CODE_BACKLOG.md            Active operational reference
+    WORKSTREAM_CTO.md          Active operational reference
 ```
 
 ## How agents use this
 
-- **Claude Code sessions** read directly from this directory in the working tree.
-- **Claude.ai workstream chats** read from the project folder cache; refresh from this directory when canonical files change.
-- **Updates** are made by the responsible workstream (Brand Ambassador updates `brand/`, SEO updates `seo/`, etc.), committed with a clear message, and pushed to `main`.
+- **Claude Code sessions** read `docs/governance/` first.
+- **Operational references** in this directory may inform backlog, content, and workstream context.
+- **Updates** to active governance belong in `docs/governance/`.
 
 ## Migrated
 
-Migrated from OneDrive `JCVC/StrongPath/` on 2026-05-04. OneDrive copies are stale.
+Earlier governance was migrated here from OneDrive on 2026-05-04. That governance has since been normalized into `docs/governance/`.
 
-When the JCVC portfolio adds Vertical 2, `portfolio/` files stay here, and a sibling `vertical2/` folder is added next to `strongpath/`. Or `agent-os/` graduates to its own repo at that point — decision deferred until then.
+Future portfolio structure decisions should be made against `docs/governance/` first.

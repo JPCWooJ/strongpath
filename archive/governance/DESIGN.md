@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # DESIGN.md - StrongPath Design System
 
 This is the approved StrongPath design system for P0-06. It uses the Brand-Ambassador-approved Orson style reference as the tactical implementation specification for the StrongPath design-system build.

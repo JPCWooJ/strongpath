@@ -77,35 +77,31 @@ This project operates on a **workstream-per-chat** model. Each chat in this proj
 
 ---
 
-## Canonical Workspace — OneDrive
+## Canonical Governance Workspace — GitHub Repo
 
-All StrongPath working files live in OneDrive under Jeff's JCVC account: `jeff@jcventurecap.com`.
+Active StrongPath governance lives in this repo under `docs/governance/`.
 
 ```
-OneDrive / JCVC / eComm Project / StrongPath /
-├── [Workstream Name] /        ← Each chat has its own sub-folder
-│   ├── brand-assets/          (Brand Ambassador sub-folders shown as example)
-│   ├── book-research/
-│   ├── authority-assets/
-│   ├── market-research/
-│   └── review-queue/
-├── BRAND.md                   ← Shared files at StrongPath/ root —
-├── PERSONAS.md                   every workstream chat reads them as
-├── brand-references.md           canonical ground truth
-├── PRODUCT_CONCEPTS_BACKLOG.md
-├── CONTENT_PLAN.md
+docs/governance/
+├── AGENT_RULES.md
+├── CODEX_EXECUTION_STANDARD.md
+├── BRAND.md
+├── DESIGN.md
+├── PERSONAS.md
+├── PROJECT_INSTRUCTIONS.md
 ├── PUBLISHING_PLAN.md
-├── METRICS.md
-├── WORKSTREAM_STATUS.md
-├── CODE_BACKLOG.md
-└── COMMANDS_BACKLOG.md
+├── keyword-universe.md
+├── PRODUCT_CONCEPTS_BACKLOG.md
+├── CTO_AGENT_PROFILE.md
+├── CHIEF_OF_STAFF_AGENT_PROFILE.md
+└── UIUX_AGENT_PROFILE.md
 ```
 
 **Rules:**
-- Each workstream chat operates against its own sub-folder under `StrongPath/`.
-- Shared canonical files (`BRAND.md`, `PERSONAS.md`, `brand-references.md`, `PRODUCT_CONCEPTS_BACKLOG.md`, `CONTENT_PLAN.md`, `PUBLISHING_PLAN.md`, `METRICS.md`, `WORKSTREAM_STATUS.md`, `CODE_BACKLOG.md`, `COMMANDS_BACKLOG.md`) live at the `StrongPath/` root — every workstream reads them as ground truth.
-- The book manuscript lives at `StrongPath/Brand Ambassador/book-research/Droullard_Bartlit_INT_09-27-17.docx`. Future personas and content work reference it from there.
-- The MCP Jeff uses to give Claude access to these files is Microsoft 365 (SharePoint/OneDrive). Google Drive was evaluated and not used for this project.
+- `docs/governance/` is authoritative for StrongPath governance.
+- `archive/governance/` is historical and non-authoritative.
+- `agent-os/` contains active operational references and legacy portfolio context, not the primary StrongPath governance authority.
+- Non-markdown assets may live outside the repo as supporting reference material, but markdown governance is read from `docs/governance/`.
 
 ---
 
@@ -128,12 +124,12 @@ OneDrive / JCVC / eComm Project / StrongPath /
 - Substantial deliverables go in files, not in chat responses.
 - Jeff prefers `.docx` format for founder review, then `.md` format for the canonical version read by other workstream chats. Produce both when appropriate.
 - Copy, email drafts, and brand reviews go inline in chat.
-- Strategy documents, content plans, and persona research go in OneDrive per the workspace structure above.
-- Code and technical docs go in the GitHub repo, not here.
+- Strategy documents, content plans, and persona research that become canonical governance go in `docs/governance/`.
+- Active operational references may remain in `agent-os/` when they are backlog, workstream, or content-planning aids.
 
 ### When updating project files
-- Draft the full replacement file in the conversation per `AGENT_RULES.md` (File Authorship and Delivery).
-- Jeff archives the prior version and saves the new one; Claude does not edit project files directly.
+- Draft or patch the scoped governance file directly in the repo when instructed.
+- Archive prior governance versions under `archive/governance/` when normalization or replacement is required.
 - Note the date and source of the update.
 - Never silently change a standing decision.
 
@@ -159,7 +155,7 @@ StrongPath-specific standing decisions:
 |----------|--------|------|
 | Book title spelled *Choosing the StrongPath* (one word, capital S and P) | GTM v2 review | April 2026 |
 | Bootstrap Phase 1 cap: <$5,000 cash until Day 90 targets hit | GTM v2 review | April 2026 |
-| Canonical workspace: OneDrive `/StrongPath/[Workstream Name]/`. Shared brand files at `StrongPath/` root. | Brand Ambassador session 1 | April 2026 |
+| Superseded workspace note: OneDrive `/StrongPath/[Workstream Name]/` was the original workspace. Active governance now lives in `docs/governance/`. | Brand Ambassador session 1; superseded by governance normalization | April 2026; superseded May 2026 |
 | Fred Bartlit and Steven Droullard are founding authors of record and Jeff's co-founders. Not active in operations. All rights transferred to Jeff. | Brand Ambassador session 1 | April 2026 |
 | Dr. Marni Boppart, ScD is a published co-author of the book and a cited research source. She is passive in Phase 1 and not an active brand authority. Never described as "medical director" or active advisor. | Brand Ambassador session 1 | April 2026 |
 | Jeff is the public founder face; not a clinician. He is the translator between the research and the reader. | Brand Ambassador session 1 | April 2026 |

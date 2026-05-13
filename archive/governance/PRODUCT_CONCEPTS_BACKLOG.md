@@ -1,3 +1,9 @@
+﻿<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Do not use it as active governance unless the founder explicitly requests historical context.
+-->
+
 # PRODUCT_CONCEPTS_BACKLOG.md
 
 *StrongPath — Holding Pen for Founder-Originated Product Ideas*

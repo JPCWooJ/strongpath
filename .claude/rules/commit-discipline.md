@@ -4,6 +4,8 @@
 
 Enforces branching, commit cadence, and secrets hygiene. Violations of these rules produce the kinds of problems that are expensive to undo: secrets in git history, broken `main`, Vercel deploying untested code, lost work because commits were too large to bisect.
 
+This file is a Claude Code enforcement aid. Active StrongPath governance lives in `docs/governance/`.
+
 ---
 
 ## 1. Branching

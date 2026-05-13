@@ -2,9 +2,9 @@
 
 **Claude Code rule file. Loaded at the start of every session on the `strongpath` repo.**
 
-Enforces the canonical tech stack from `STACK.md`. Stack choices are portfolio-wide decisions, not per-project preferences. Adding a new dependency, swapping a library, or introducing a competing tool requires a written entry in `docs/decisions.md` and explicit founder approval.
+Enforces the approved StrongPath stack. Governance lives in `docs/governance/`; legacy stack context may exist in archived or operational references. Adding a new dependency, swapping a library, or introducing a competing tool requires a written entry in `docs/decisions.md` and explicit founder approval.
 
-Full stack rationale lives in `STACK.md` (OneDrive). This file is the enforcement surface.
+This file is the Claude Code enforcement surface and inherits from `docs/governance/`.
 
 ---
 
