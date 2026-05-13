@@ -1,3 +1,8 @@
+﻿<!--
+OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
+Portfolio practice reference. Not primary StrongPath governance. docs/governance/ wins on conflict.
+-->
+
 # BEST_PRACTICES.md — AI Agent eCommerce Playbook
 
 **Version:** 1.3  

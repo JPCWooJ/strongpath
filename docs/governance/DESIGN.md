@@ -1,9 +1,3 @@
-# DESIGN.md - StrongPath Design System
-
-This is the approved StrongPath design system for P0-06. It uses the Brand-Ambassador-approved Orson style reference as the tactical implementation specification for the StrongPath design-system build.
-
----
-
 # Orson — Style Reference
 > Warm parchment elegance.
 

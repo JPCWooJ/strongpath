@@ -436,7 +436,7 @@ In order of potency:
 
 A structural product opportunity sits inside this persona that deserves separate documentation. The caregiver is willing to pay for adherence on behalf of the parent — and for himself. The parent is a user; the caregiver is a user; both are on the path together. A StrongPath product that solves for family-mediated accountability — visibility into each other's training, low-friction encouragement across generations, AI-augmented check-ins when a family member is unavailable — addresses a pain point no one in the family can solve alone. The adherence mechanism is multi-directional: the caregiver nudges the parent, the parent's progress motivates the caregiver, and both reinforce each other over time. This is the single highest-value feature gap in the current product concept.
 
-*This concept is not a Phase 1 build. It is filed in `PRODUCT_CONCEPTS_BACKLOG.md` (at the StrongPath OneDrive root) as Entry 1. It is referenced here because product demand is a persona characteristic, and downstream workstream chats should know the demand exists without trying to activate it prematurely.*
+*This concept is not a Phase 1 build. It is filed in `PRODUCT_CONCEPTS_BACKLOG.md` as Entry 1. It is referenced here because product demand is a persona characteristic, and downstream workstream chats should know the demand exists without trying to activate it prematurely.*
 
 ---
 

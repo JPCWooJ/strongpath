@@ -1,3 +1,8 @@
+﻿<!--
+OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
+Content planning aid. Not primary StrongPath governance. docs/governance/ wins on conflict.
+-->
+
 # CONTENT_PLAN.md
 
 **StrongPath — Priority Article Briefs, v3**

@@ -1,5 +1,8 @@
 # AGENT_RULES.md — Universal Rules for All Claude Agents
 
+> Deprecated for active StrongPath governance. Use `docs/governance/AGENT_RULES.md`.
+> This file is retained as legacy portfolio context only and is non-authoritative for StrongPath when it conflicts with `docs/governance/`.
+
 **Purpose:** These rules apply to every AI agent working with Jeff Camp, in every project, across every domain. They are non-negotiable defaults. Domain-specific projects may add rules on top of these, but never override them.  
 **Last updated:** May 5, 2026
 
@@ -7,7 +10,7 @@
 
 ## Distribution
 
-**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/portfolio/AGENT_RULES.md` (GitHub, public).
+**Legacy home:** `JPCWooJ/strongpath` repo, `agent-os/portfolio/AGENT_RULES.md` (GitHub, public). Active StrongPath governance now lives in `docs/governance/`.
 
 **After commit to `main`:** Founder must refresh every Claude.ai project folder that includes this file by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
 
@@ -157,7 +160,7 @@ This rule formalizes a convention most files already follow. It exists so the fr
 
 ### File and Folder System (GitHub)
 
-Canonical `.md` files live in **GitHub**, in the `JPCWooJ/strongpath` repo under the top-level `agent-os/` directory. Drive and OneDrive are not canonical for `.md`. Non-`.md` assets currently live on OneDrive pending a separate stay-vs-move decision.
+Historical model: canonical `.md` files previously lived in **GitHub**, in the `JPCWooJ/strongpath` repo under the top-level `agent-os/` directory. Active StrongPath governance now lives in `docs/governance/`. Non-`.md` asset storage remains a separate operational decision.
 
 ```
 JPCWooJ/strongpath/
@@ -190,7 +193,7 @@ JPCWooJ/strongpath/
 
 **Rules:**
 
-1. **GitHub is canonical for `.md`.** All 17 portfolio + StrongPath governing files live in `JPCWooJ/strongpath/agent-os/`. The Claude.ai project folder, OneDrive copies, and any other location are caches.
+1. **StrongPath governance now lives in `docs/governance/`.** This historical section remains for portfolio context only.
 2. **One directory per tier-and-scope.** Tier 1/2 files (universal + eCommerce domain) live in `agent-os/portfolio/`. Tier 3 (vertical-specific) lives under `agent-os/<vertical>/` — for StrongPath, that is `agent-os/strongpath/`, sub-divided by function (`governance/`, `brand/`, `seo/`, `operations/`).
 3. **Future verticals sit alongside `strongpath/`** under `agent-os/`. Vertical 2 onboarding adds `agent-os/<vertical-2>/` with the same `governance/ brand/ seo/ operations/` shape. Verticals do not nest.
 4. **Canonical files use simple names.** `AGENT_RULES.md`, `STACK.md`, `BRAND.md`. No version suffixes, no date prefixes. One file per canonical name per directory.
@@ -199,15 +202,15 @@ JPCWooJ/strongpath/
 7. **OneDrive `.md` copies are stale and deprecated.** Do not read, do not write, do not propagate.
 8. **Drive is reserved for non-`.md` assets** when/if the stay-vs-move decision lands on Drive. No canonical `.md` work happens on Drive.
 
-**Archive:** A flat archive of superseded `.md` files is preserved in OneDrive at `OneDrive / JCVC / Archive /` for historical reference. Going forward, archiving happens via Git history (branches, tags, prior commits on `main`) rather than dated file copies in a flat folder. See §Archiving below.
+**Archive:** Superseded StrongPath governance files now live in `archive/governance/` for historical reference.
 
 ### Cloud Storage Access Patterns
 
-JCVC canonical `.md` files live in **GitHub** (`JPCWooJ/strongpath` repo, `agent-os/` directory). OneDrive holds non-`.md` legacy assets and is read-only via the Microsoft 365 MCP. Google Drive is reserved for non-`.md` assets if and when the stay-vs-move decision moves them; no canonical `.md` work happens on Drive.
+Historical model: JCVC `.md` files previously lived under `agent-os/`. Active StrongPath governance now lives in `docs/governance/`.
 
 Each substrate has its own access pattern. Agents must use the right pattern for the right substrate.
 
-#### GitHub (canonical for `.md`)
+#### GitHub (historical `.md` model)
 
 GitHub is read by agents in two modes: (a) reading the current canonical file from the local Claude.ai project folder cache (`/mnt/project/`), and (b) producing updated full files that the founder commits via Claude Code.
 
@@ -228,7 +231,7 @@ GitHub is read by agents in two modes: (a) reading the current canonical file fr
    After merge, founder re-uploads the updated file to the Claude.ai project folder so the cache reflects `main`.
 3. **Locating a canonical file:** use the directory tree in §File and Folder System (GitHub). All 17 files have stable paths.
 
-**Distribution block convention.** Every canonical `.md` file includes a Distribution block at the top stating: (a) the GitHub canonical path, (b) that the project folder is a cache requiring re-upload after each commit, (c) that OneDrive `.md` copies are deprecated. This makes the source-of-truth contract self-documenting in every file.
+**Historical distribution block convention.** Older governance files may include a Distribution block naming their former GitHub path and cache behavior. Active StrongPath governance now lives in `docs/governance/`.
 
 **Cache freshness check at session start *(new May 5, 2026)*.** Every Claude.ai session that will read or update a canonical file must verify the cache is current before acting on it. The check is:
 
@@ -291,7 +294,7 @@ The Microsoft 365 MCP is **read-only.** No `create`, `update`, `upload`, or `del
 
 **Never:**
 
-- Read OneDrive `.md` files. They are stale and deprecated. Read the GitHub canonical via `/mnt/project/`.
+- Read external markdown copies. Active StrongPath governance lives in `docs/governance/`.
 - Claim a non-`.md` asset is missing because search didn't return it. Search failure ≠ file missing.
 - Propose creating a new version of a file because the old one "can't be found." Search again without filters. Ask Jeff to paste the URI. Wait for indexing.
 - Attempt to write to OneDrive. The connector exposes no write surface. Produce the file locally, deliver via `present_files`, and let Jeff save it manually if a OneDrive copy is needed for legacy reasons.

@@ -4,7 +4,7 @@
 
 Enforces copy and language rules from `BRAND.md`. When writing any user-facing string — UI text, email templates, error messages, meta descriptions, alt text, button labels, page copy — apply these rules before committing. Copy that violates these rules must not ship.
 
-Full rules and rationale live in `BRAND.md` (OneDrive). This file is the enforcement surface; `BRAND.md` is the source of truth. If a rule here conflicts with `BRAND.md`, `BRAND.md` wins — flag the conflict to the founder.
+Full rules and rationale live in `docs/governance/BRAND.md`. This file is the Claude Code enforcement surface; `docs/governance/BRAND.md` is the source of truth. If a rule here conflicts with `docs/governance/BRAND.md`, flag the conflict to the founder.
 
 ---
 
@@ -71,7 +71,7 @@ The disclaimer appears on the page itself, not buried in the footer of the site.
 
 ## 6. FTC affiliate disclosure
 
-Any page with affiliate links (Amazon or otherwise) includes an FTC-compliant disclosure above the fold — not in the footer. Use the `<FTCDisclosure />` component from `components/FTCDisclosure.tsx`. See `BEST_PRACTICES.md` §BP-13 for canonical language.
+Any page with affiliate links (Amazon or otherwise) includes an FTC-compliant disclosure. Use the `<FTCDisclosure />` component from `components/FTCDisclosure.tsx`. Disclosure placement has an unresolved policy conflict between older above-the-fold guidance and founder review direction favoring restrained footer treatment; flag placement questions before changing implementation.
 
 ---
 

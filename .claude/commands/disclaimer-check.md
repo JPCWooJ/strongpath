@@ -6,7 +6,7 @@ Audit compliance-critical disclosures across the `strongpath` repo. Verify the m
 
 ### 1. Medical disclaimer on health-adjacent pages
 
-The canonical medical disclaimer text, per `BRAND.md` and embedded in `CLAUDE.md`:
+The canonical medical disclaimer text lives in `docs/governance/BRAND.md` and is embedded in `CLAUDE.md`:
 
 > *This content is for informational and educational purposes only. It does not constitute medical advice and is not a substitute for professional medical consultation. Always consult your physician before beginning any new exercise or supplement program.*
 
@@ -24,16 +24,15 @@ The canonical medical disclaimer text, per `BRAND.md` and embedded in `CLAUDE.md
 
 ### 2. FTC affiliate disclosure on pages with affiliate links
 
-Any page containing Amazon affiliate links (or any other affiliate links) must include an FTC-compliant disclosure **above the fold on that page** — not buried in the site-wide footer. Use the `<FTCDisclosure />` component from `components/FTCDisclosure.tsx`.
+Any page containing Amazon affiliate links (or any other affiliate links) must include an FTC-compliant disclosure. Use the `<FTCDisclosure />` component from `components/FTCDisclosure.tsx`. Disclosure placement has an unresolved policy conflict between older above-the-fold guidance and founder review direction favoring restrained footer treatment; flag placement questions before changing implementation.
 
 **What to verify:**
 - Every page containing an Amazon link (detected via `grep` for `amazon.com`) has `<FTCDisclosure />` rendered on that page.
-- The `<FTCDisclosure />` component is positioned above the fold — it should appear in the page structure before the first affiliate link, ideally in the header area or at the top of the main content region.
+- The `<FTCDisclosure />` component is rendered on affiliate-link pages.
 
 **What to flag:**
 - Pages with affiliate links but no `<FTCDisclosure />` rendered.
-- Pages where `<FTCDisclosure />` is rendered but positioned below the first affiliate link (below-the-fold placement).
-- Pages where affiliate disclosure appears only in the site-wide footer.
+- Pages where disclosure placement appears inconsistent with the latest founder direction or active governance.
 
 ## How to report
 

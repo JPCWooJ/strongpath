@@ -21,9 +21,9 @@ Valid tag formats in a URL:
    - Uses a different tag value (e.g., `tag=strongpath-20`, `tag=brandname-20`, `tag=<anything else>`).
    - Has the tag misformatted (typo, trailing whitespace, extra characters).
 
-3. **Check for the `<AmazonLink />` component.** If `components/AmazonLink.tsx` exists, confirm the tag is hardcoded inside it (not passed as a prop). If Amazon links exist anywhere as raw `<a href="amazon.com...">` tags instead of going through `<AmazonLink />`, flag those as architecture violations — per `BEST_PRACTICES.md` §BP-13, raw Amazon links are forbidden.
+3. **Check for the `<AmazonLink />` component.** If `components/AmazonLink.tsx` exists, confirm the tag is hardcoded inside it (not passed as a prop). If Amazon links exist anywhere as raw `<a href="amazon.com...">` tags instead of going through `<AmazonLink />`, flag those as architecture violations. `agent-os/portfolio/BEST_PRACTICES.md` is an active operational reference; `docs/governance/` wins on conflicts.
 
-4. **Check for FTC disclosure on affiliate pages.** For each page that contains an Amazon link, confirm an FTC affiliate disclosure appears above the fold on that page. The disclosure should use the `<FTCDisclosure />` component (per P0-05 in the backlog). Flag any page with Amazon links that lacks the disclosure or has it in the footer only.
+4. **Check for FTC disclosure on affiliate pages.** For each page that contains an Amazon link, confirm an FTC affiliate disclosure appears on that page. The disclosure should use the `<FTCDisclosure />` component (per P0-05 in the backlog). Disclosure placement has an unresolved policy conflict between older above-the-fold guidance and founder review direction favoring restrained footer treatment; flag placement questions before changing implementation.
 
 ## How to report
 

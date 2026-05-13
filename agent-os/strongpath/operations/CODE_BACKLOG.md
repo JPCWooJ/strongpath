@@ -1,3 +1,8 @@
+﻿<!--
+OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
+Implementation backlog. Not primary StrongPath governance. docs/governance/ wins on conflict.
+-->
+
 # CODE_BACKLOG.md
 
 **StrongPath — Code Work Backlog for Claude Code Sessions**
@@ -208,11 +213,11 @@ Homepage at `app/(marketing)/page.tsx` with hero, what-is-StrongPath block, cred
 
 ---
 
-### 4.7 OneDrive→GitHub `.md` migration
+### 4.7 Governance normalization
 
-**Shipped:** PR #11 squash-merged to `main`, May 4, 2026.
+**Shipped:** governance normalization pass, May 2026.
 
-17 canonical `.md` files migrated from OneDrive to `JPCWooJ/strongpath` under new top-level `agent-os/` directory. Structure: `portfolio/` (5), `strongpath/governance/` (4), `strongpath/brand/` (3), `strongpath/seo/` (3), `strongpath/operations/` (2), plus `agent-os/README.md`. GitHub is now canonical for `.md`; OneDrive `.md` copies deprecated. See `WORKSTREAM_STATUS.md` Flag 8 for cross-workstream impact. Not a code item per se — recorded here for audit trail since it shipped via the same repo PR mechanism.
+Active StrongPath governance is normalized under `docs/governance/`. `agent-os/` remains available for active operational references and legacy portfolio context. Not a code item per se — recorded here for audit trail since it shipped via the same repo PR mechanism.
 
 ---
 
@@ -238,7 +243,7 @@ Homepage at `app/(marketing)/page.tsx` with hero, what-is-StrongPath block, cred
 **Source:** Chief of Staff session 16 (May 4, 2026); follow-on to OneDrive→GitHub `.md` migration (Flag 8 in `WORKSTREAM_STATUS.md`)
 **Status:** Parked. Not blocking any Phase 1 target.
 
-**Context.** The May 4 migration moved all 17 canonical `.md` files to GitHub. Non-`.md` assets remain on OneDrive: book manuscript `.docx`, design reference images, brand assets (logos, photography, color swatches if any), any other binary references. Three options exist: (a) leave on OneDrive permanently (current state), (b) move to Google Drive for shared-link convenience and integration with Drive-based workflows, (c) commit a subset to the GitHub repo where appropriate (e.g., design references that should travel with the codebase). No urgency — assets are accessible where they sit.
+**Context.** Active StrongPath governance now lives in `docs/governance/`. Non-markdown assets remain outside the normalized governance set: book manuscript `.docx`, design reference images, brand assets (logos, photography, color swatches if any), any other binary references. Three options exist: (a) leave external assets where they are, (b) move to Google Drive for shared-link convenience and integration with Drive-based workflows, (c) commit a subset to the GitHub repo where appropriate (e.g., design references that should travel with the codebase). No urgency — assets are accessible where they sit.
 
 **Decision needed before this becomes an actionable item:** which assets stay on OneDrive, which move to Drive, which go into the GitHub repo. Founder + Chief of Staff to resolve. Until then, this item is a placeholder and should not be picked up by a Claude Code session.
 
@@ -283,7 +288,7 @@ When adding a new item to the Active list, follow this template. Keep it short �
 | April 22, 2026 | Major revision. Old `JPCWooJ/strongpath` hackathon repo archived as `strongpath-hackathon-archive`; fresh empty repo created at `JPCWooJ/strongpath`. §1 rule 5 corrected (branching: `main` + feature branches via PR, `team/ria` retired). All backlog items rewritten for fresh-repo context: P0-00 is now "Scaffold the fresh repo," P0-01 is "Wire Anthropic" (not "Replace OpenAI"), P0-03 is "Build minimal homepage" (not "Fix `/app` spinner" — no `/app` exists yet), P0-05 is prevention-first with `<AmazonLink />` component pattern, P2-01 is convention-setting. `ACTIVE_VERTICALS.md` still references the old repo structure and needs a follow-up edit. | Chief of Staff session 2 (Flag 6 prep) |
 | May 1, 2026 | **Backlog refreshed to current repo state.** P0-00 through P0-05 moved from §3 Active to §4 Done with PR/commit references — all six items shipped to `main` between April 22 and May 1 in active Claude Code sessions on the founder's local machine. Active list now shows P1-01 (full author credibility) at top, followed by P2-01 (fabricated metrics convention). P1-01 unblocked: prior status said "Blocked on P0-03 and P0-05" — both now shipped. Owner line updated to note ownership transfer to CTO at end of CTO onboarding step 3. Prompted by Chief of Staff session 6 — CTO chat flagged the file was stale after founder confirmed active build in progress. | Chief of Staff session 6 |
 | May 1, 2026 (later) | **Design re-sequencing.** Added P0-06 (design system implementation from a Refero spec validated by Brand Ambassador) and P0-07 (quiz funnel) at top of Active, ahead of all prior items. P1-01 (full author credibility section) moved to §5 Parked — its layout slot ships as part of P0-06, content fills the slot in a follow-up item once P0-06 closes. Original P1-01 brief preserved in Parked entry; note added flagging that the original brief references `BRAND.md v4` conventions retired in v6 and must be updated before execution. P2-01 (fabricated metrics convention) renumbered to §3.3, content unchanged. Prompted by founder review of the current shipped homepage as below the credibility threshold the brand requires; design quality gate added as a P0 that was not previously in the backlog. Quiz funnel surfaced as a parallel P0 gap during the same CTO state-of-tech check that prompted the re-sequencing. | Chief of Staff session 6 (latest) |
-| May 4, 2026 | Header date bumped; Distribution block added (GitHub canonical, OneDrive `.md` deprecated). §4.7 added — OneDrive→GitHub `.md` migration recorded as shipped via PR #11. §5.2 added — OneDrive non-`.md` asset cleanup parked pending stay-vs-move decision. | Chief of Staff session 16 |
+| May 4, 2026 | Historical note: GitHub markdown migration recorded as shipped via PR #11. §5.2 added — external non-markdown asset cleanup parked pending stay-vs-move decision. | Chief of Staff session 16 |
 
 ---
 

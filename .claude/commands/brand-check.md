@@ -12,7 +12,7 @@ Scan the `strongpath` repo for brand-discipline violations in user-facing copy. 
 
 3. **Boppart credential misuse.** If `Boppart` appears anywhere, verify the surrounding context refers to her as `co-author` only. Flag any instance that uses `medical director`, `current advisor`, `consultant`, `clinical director`, or similar language implying an active operational role.
 
-4. **Book citation format.** On pages that reference the book, confirm the first mention uses the canonical format per `BRAND.md` §5:
+4. **Book citation format.** On pages that reference the book, confirm the first mention uses the canonical format per `docs/governance/BRAND.md` §5:
    > *Choosing the StrongPath: Reversing the Downward Spiral of Aging* (Fred Bartlit, Steven Droullard, Dr. Marni Boppart, ScD; 2018). Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
    Flag the first mention on each page if it deviates.
 
