@@ -195,11 +195,12 @@ Agents must explicitly reference canonical governing files when relevant.
 
 Examples:
 
+- AGENT_RULES.md
+- CODEX_EXECUTION_STANDARD.md
 - BRAND.md
 - DESIGN.md
 - PERSONAS.md
 - PUBLISHING_PLAN.md
-- AGENT_RULES.md
 
 Rules:
 
@@ -252,14 +253,29 @@ Acceptance criteria must be:
 
 # 11. Screenshot and Review Requirements
 
-Every significant UI task requires:
+Primary review artifact:
 
-- desktop screenshots
-- tablet screenshots
-- mobile screenshots
-- dark/light mode verification if applicable
+- deployment preview URL
 
-No “done” claims without screenshots.
+Founder review should normally occur directly on the live deployment.
+
+Screenshots are optional unless:
+
+- responsive/mobile QA issues exist
+- layout instability appears
+- visual debugging is required
+- regression risk is high
+- founder cannot reliably review deployment directly
+
+When screenshots are requested:
+
+- capture only the affected areas
+- avoid excessive screenshot generation
+- prioritize operational efficiency
+
+The objective is:
+fast refinement loops with sufficient QA visibility, not exhaustive visual documentation.
+
 
 ---
 
@@ -269,12 +285,14 @@ Canonical workflow:
 
 1. Agent defines scoped task
 2. Codex implements
-3. Deployment generated
+3. Deployment preview generated
 4. Founder reviews live deployment
 5. Review agent critiques
 6. Refinement instructions generated
 7. Codex iterates
 8. Repeat until approved
+
+Screenshots should only be generated when operationally necessary.
 
 ---
 
@@ -384,7 +402,7 @@ Do not alter navigation or footer.
 IMPLEMENT
 - Reduce hero paragraph width to improve readability
 - Increase vertical spacing between hero and trust section
-- Reduce simultaneous CTA competition to one primary CTA
+- Reduce simultaneous competing CTAs above the fold to one primary CTA
 - Improve visual separation between editorial content and commerce modules
 
 FILES
@@ -399,9 +417,12 @@ ACCEPTANCE CRITERIA
 - single dominant CTA above fold
 - improved whitespace rhythm
 - no CLS/layout shift introduced
+- deployment preview URL provided for founder review
+- screenshots provided only if needed for mobile QA, regression review, or visual debugging
 
 DELIVERABLE
-Updated deployment + screenshots desktop/mobile.
+Updated deployment preview URL + concise change summary.
+Optional screenshots only if operationally necessary.
 ```
 
 ---
@@ -416,7 +437,7 @@ FILES MODIFIED
 KEY CHANGES
 KNOWN LIMITATIONS
 REVIEW URL
-SCREENSHOTS
+OPTIONAL SCREENSHOTS
 ```
 
 Avoid verbose explanations.
@@ -443,7 +464,11 @@ The objective is high-quality shipped product.
 
 Primary governance references:
 
+- AGENT_RULES.md
+- CODEX_EXECUTION_STANDARD.md
 - BRAND.md
+- DESIGN.md
+- PERSONAS.md
 - PUBLISHING_PLAN.md
 - keyword-universe.md
 - PRODUCT_CONCEPTS_BACKLOG.md
