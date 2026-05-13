@@ -8,18 +8,18 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-inkwell bg-parchment">
-      <div className="sp-container border-b border-inkwell/35 py-8">
-        <div className="flex flex-wrap items-center justify-between gap-8 font-utility text-caption leading-caption text-inkwell/65">
+    <header className="border-b border-inkwell/70 bg-parchment">
+      <div className="sp-container border-b border-inkwell/20 py-10">
+        <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
           <p>Evidence-first strength publication</p>
           <p>Muscle loss / resistance training / healthy aging</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[124px] flex-col justify-center gap-24 py-22 md:flex-row md:items-end md:justify-between">
-        <div className="relative isolate pb-2 pr-24">
+      <div className="sp-container flex min-h-[150px] flex-col justify-center gap-28 py-30 md:min-h-[164px] md:flex-row md:items-end md:justify-between md:py-34">
+        <div className="relative isolate max-w-[780px] pb-3 pr-20">
           <span
             aria-hidden="true"
-            className="absolute -left-14 top-5 -z-10 h-[58px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/55 md:h-[76px]"
+            className="absolute -left-14 top-5 -z-10 h-[58px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/42 md:h-[76px]"
           />
           <Link
             href="/"
@@ -27,20 +27,20 @@ export function SiteHeader() {
           >
             StrongPath
           </Link>
-          <p className="mt-10 inline-block max-w-[580px] border-y border-inkwell/40 py-6 font-utility text-[15px] leading-[1.25] text-inkwell/78">
+          <p className="mt-12 max-w-[580px] border-t border-inkwell/35 pt-7 font-utility text-[15px] leading-[1.28] text-inkwell/72">
             Strength, independence, and the research between them
           </p>
         </div>
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center gap-10 self-start md:self-end"
+          className="flex flex-wrap items-center gap-x-24 gap-y-12 border-t border-inkwell/20 pt-14 self-stretch md:self-end md:border-t-0 md:pt-0"
         >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="border border-inkwell/30 px-14 py-11 font-utility text-[15px] leading-none text-inkwell/82 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment focus-visible:border-inkwell"
+              className="border-b border-transparent py-5 font-utility text-[15px] leading-none text-inkwell/66 transition-colors hover:border-inkwell/45 hover:text-inkwell focus-visible:border-inkwell"
             >
               {item.label}
             </Link>
