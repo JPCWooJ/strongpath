@@ -132,21 +132,21 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[38rem] bg-sunbeam-gradient opacity-45" />
-        <div className="sp-container relative py-[76px] md:py-[132px]">
-          <div className="grid gap-48 lg:grid-cols-[minmax(0,0.92fr)_minmax(300px,0.5fr)] lg:items-end lg:gap-70">
+        <div className="absolute inset-x-0 top-0 h-[34rem] bg-sunbeam-gradient opacity-45" />
+        <div className="sp-container relative py-[64px] md:py-[104px] lg:py-[112px]">
+          <div className="grid gap-38 lg:grid-cols-[minmax(0,0.8fr)_minmax(340px,0.58fr)] lg:items-center lg:gap-56">
             <div>
               <p className="sp-kicker mb-24 text-inkwell/60">
                 Evidence-based strength after 55
               </p>
-              <h1 className="max-w-[800px] font-display text-[54px] font-normal leading-[0.95] text-inkwell sm:text-[80px] lg:text-[102px]">
+              <h1 className="max-w-[760px] font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[74px] lg:text-[94px]">
                 Strength protects independence.
               </h1>
-              <p className="mt-34 max-w-[560px] font-body text-[21px] font-normal leading-[1.56] text-inkwell/82 md:text-[23px]">
+              <p className="mt-28 max-w-[570px] font-body text-[21px] font-normal leading-[1.54] text-inkwell/82 md:text-[23px]">
                 StrongPath helps adults and families understand age-related muscle loss, what
                 current research shows, and how strength preserves ordinary freedom.
               </p>
-              <div className="mt-36">
+              <div className="mt-32">
                 <Link
                   href="/waitlist"
                   className="inline-flex w-full justify-center border border-inkwell/90 bg-inkwell px-30 py-[15px] font-body text-[17px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
@@ -155,7 +155,7 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              <div className="mt-32 max-w-[660px] border-t border-inkwell/22 pt-18">
+              <div className="mt-28 max-w-[610px] border-t border-inkwell/24 pt-16">
                 <p className="font-utility text-[13px] leading-[1.38] text-inkwell/60">
                   Built on the research foundation behind <em>Choosing the StrongPath</em>, with
                   current evidence carrying the claims we publish.
@@ -163,28 +163,28 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className="relative border-y border-inkwell/22 bg-parchment/35 px-16 py-24 md:max-w-[620px] lg:max-w-none lg:px-0 lg:py-0">
+            <aside className="relative border-y border-inkwell/30 bg-parchment/55 px-16 py-22 md:max-w-[620px] lg:max-w-none lg:px-24 lg:py-28">
               <div
                 aria-hidden="true"
-                className="absolute bottom-18 left-18 right-0 top-28 hidden border border-inkwell/14 bg-parchment/60 lg:block"
+                className="absolute bottom-14 left-14 right-14 top-14 hidden border border-inkwell/12 bg-[#f7f1e4]/45 lg:block"
               />
               <div className="relative grid grid-cols-[138px_minmax(0,1fr)] items-end gap-22 sm:grid-cols-[190px_minmax(0,1fr)] md:grid-cols-[240px_minmax(0,1fr)] lg:block">
-                <div className="bg-parchment p-5 ring-1 ring-inkwell/70 lg:mx-auto lg:max-w-[304px] lg:p-7">
+                <div className="bg-parchment p-5 ring-1 ring-inkwell/70 lg:mx-auto lg:max-w-[344px] lg:p-7">
                   <Image
                     src={bookCoverUrl}
                     alt="Choosing the StrongPath book cover"
                     width={333}
                     height={500}
-                    sizes="(min-width: 1024px) 304px, (min-width: 768px) 240px, (min-width: 640px) 190px, 138px"
-                    className="h-auto w-full max-w-[138px] bg-parchment sm:max-w-[190px] md:max-w-[240px] lg:max-w-[290px]"
+                    sizes="(min-width: 1024px) 330px, (min-width: 768px) 240px, (min-width: 640px) 190px, 138px"
+                    className="h-auto w-full max-w-[138px] bg-parchment sm:max-w-[190px] md:max-w-[240px] lg:max-w-[330px]"
                     priority
                   />
                 </div>
-                <div className="lg:mt-22">
+                <div className="lg:mx-auto lg:mt-18 lg:max-w-[344px]">
                   <p className="font-utility text-[13px] leading-[1.38] text-inkwell/58">
                     Foundational authority
                   </p>
-                  <p className="mt-10 max-w-[360px] font-body text-[19px] font-normal leading-[1.46] text-inkwell/82 md:text-[20px] lg:max-w-none">
+                  <p className="mt-8 max-w-[360px] font-body text-[19px] font-normal leading-[1.44] text-inkwell/82 md:text-[20px] lg:max-w-none">
                     The category-defining book behind StrongPath. Amazon bestseller in Aging,
                     Weight Training, Exercise, and Longevity.
                   </p>
