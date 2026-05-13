@@ -133,13 +133,13 @@ export default function HomePage() {
     <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
         <div className="absolute inset-x-0 top-0 h-[34rem] bg-sunbeam-gradient opacity-45" />
-        <div className="sp-container relative py-[64px] md:py-[104px] lg:py-[112px]">
+        <div className="sp-container relative py-[52px] md:py-[84px] lg:py-[88px]">
           <div className="grid gap-38 lg:grid-cols-[minmax(0,0.8fr)_minmax(340px,0.58fr)] lg:items-center lg:gap-56">
             <div>
               <p className="sp-kicker mb-24 text-inkwell/60">
                 Evidence-based strength after 55
               </p>
-              <h1 className="max-w-[760px] font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[74px] lg:text-[94px]">
+              <h1 className="max-w-[720px] font-display text-[48px] font-normal leading-[0.96] text-inkwell sm:text-[68px] lg:text-[88px]">
                 Strength protects independence.
               </h1>
               <p className="mt-28 max-w-[570px] font-body text-[21px] font-normal leading-[1.54] text-inkwell/82 md:text-[23px]">
