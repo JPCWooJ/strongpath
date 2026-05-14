@@ -72,6 +72,47 @@ export const postSchema = defineType({
       description: 'Optional editorial override. Leave blank to calculate from article body.',
     }),
     defineField({
+      name: 'sources',
+      title: 'Editorial Sources',
+      type: 'array',
+      description: 'Structured sources shown at the end of the article.',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              title: 'Source Title',
+              type: 'string',
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: 'publication',
+              title: 'Publication / Journal / Institution',
+              type: 'string',
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: 'year',
+              title: 'Year',
+              type: 'string',
+            }),
+            defineField({
+              name: 'href',
+              title: 'URL',
+              type: 'url',
+            }),
+          ],
+          preview: {
+            select: {
+              title: 'title',
+              subtitle: 'publication',
+            },
+          },
+        },
+      ],
+    }),
+    defineField({
       name: 'seoTitle',
       title: 'SEO Title',
       type: 'string',

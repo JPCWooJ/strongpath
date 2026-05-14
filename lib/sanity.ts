@@ -1,6 +1,13 @@
 import { createClient, groq } from 'next-sanity'
 import type { PortableTextBlock } from '@portabletext/react'
 
+export type ArticleSource = {
+  title: string
+  publication: string
+  year?: string
+  href?: string
+}
+
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
@@ -23,6 +30,7 @@ export type Post = {
   seoDescription?: string
   canonicalUrl?: string
   estimatedReadingMinutes?: number
+  sources?: ArticleSource[]
   mainImage?: { asset: { _ref: string } }
   body?: PortableTextBlock[]
 }
@@ -43,6 +51,7 @@ export const postsQuery = groq`*[${publishedPostFilter}] | order(publishedAt des
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`
 
@@ -67,6 +76,7 @@ export const postsByTagQuery = groq`*[
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`
 
@@ -85,5 +95,6 @@ export const postQuery = groq`*[${publishedPostFilter} && slug.current == $slug]
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`
