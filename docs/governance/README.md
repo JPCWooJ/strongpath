@@ -38,6 +38,7 @@ Use these files before implementation work, design refinement, content planning,
 - `SEO_SYSTEMS.md`
 - `INTERNAL_LINKING_SYSTEM.md`
 - `ARTICLE_SCORING_RUBRIC.md`
+- `EDITORIAL_WORKFLOW.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
