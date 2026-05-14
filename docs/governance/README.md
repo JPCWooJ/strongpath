@@ -40,6 +40,7 @@ Use these files before implementation work, design refinement, content planning,
 - `ARTICLE_SCORING_RUBRIC.md`
 - `EDITORIAL_WORKFLOW.md`
 - `CONTENT_BRIEF_STANDARD.md`
+- `CONTENT_UPDATE_POLICY.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
