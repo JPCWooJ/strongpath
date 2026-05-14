@@ -29,7 +29,7 @@ export function SiteHeader() {
           >
             StrongPath
           </Link>
-          <p className="mt-6 max-w-[580px] border-t border-inkwell/35 pt-5 font-utility text-[14px] leading-[1.25] text-inkwell/72">
+          <p className="mt-6 max-w-[580px] border-t border-inkwell/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-inkwell/82">
             Strength, independence, and the research between them
           </p>
         </div>
@@ -42,7 +42,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="border-b border-transparent py-4 font-utility text-[14px] leading-none text-inkwell/66 transition-colors hover:border-inkwell/45 hover:text-inkwell focus-visible:border-inkwell"
+              className="border-b border-transparent py-4 font-utility text-[14px] font-medium leading-none text-inkwell/78 transition-colors hover:border-inkwell/50 hover:text-inkwell focus-visible:border-inkwell"
             >
               {item.label}
             </Link>

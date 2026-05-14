@@ -147,7 +147,7 @@ export default function HomePage() {
                 Evidence-based strength after 55
               </p>
               <h1 className="max-w-[700px] font-display text-[44px] font-normal leading-[1.02] text-inkwell sm:text-[64px] lg:text-[82px]">
-                Strength protects independence.
+                Strength is independence.
               </h1>
               <p className="mt-16 max-w-[570px] font-body text-[20px] font-normal leading-[1.52] text-inkwell/82 md:text-[22px] lg:mt-18">
                 StrongPath helps adults and families understand age-related muscle loss, what
