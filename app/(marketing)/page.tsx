@@ -176,7 +176,7 @@ export default function HomePage() {
                 <p className="font-display text-[25px] font-medium leading-[1.02] text-inkwell md:text-[26px] lg:text-[30px]">
                   Amazon Bestseller
                 </p>
-                <div className="mt-10 inline-block bg-parchment p-4 ring-1 ring-inkwell/52 lg:p-6">
+                <div className="mt-10 bg-parchment p-4 ring-1 ring-inkwell/52 md:ml-auto md:max-w-[220px] lg:max-w-[314px] lg:p-6">
                   <Image
                     src={bookCoverUrl}
                     alt="Choosing the StrongPath book cover"
