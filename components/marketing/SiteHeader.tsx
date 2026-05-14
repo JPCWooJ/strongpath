@@ -2,45 +2,47 @@ import Link from 'next/link'
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Research' },
+  { href: '/blog', label: 'Articles' },
+  { href: '/blog/tags/sarcopenia', label: 'Sarcopenia' },
+  { href: '/blog/tags/resistance-training', label: 'Strength' },
   { href: '/waitlist', label: 'Waitlist' },
 ]
 
 export function SiteHeader() {
   return (
     <header className="border-b border-inkwell/60 bg-parchment">
-      <div className="sp-container border-b border-inkwell/18 py-6">
+      <div className="sp-container border-b border-inkwell/18 py-4">
         <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
           <p>Evidence-first strength publication</p>
-          <p>Muscle loss / resistance training / healthy aging</p>
+          <p>Articles / sarcopenia / resistance training</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[118px] flex-col justify-center gap-18 py-20 md:min-h-[128px] md:flex-row md:items-end md:justify-between md:py-22">
-        <div className="relative isolate max-w-[780px] pb-3 pr-20">
+      <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
+        <div className="relative isolate max-w-[780px] pb-2 pr-18">
           <span
             aria-hidden="true"
-            className="absolute -left-14 top-4 -z-10 h-[52px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/42 md:h-[66px]"
+            className="absolute -left-14 top-3 -z-10 h-[46px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/42 md:h-[58px]"
           />
           <Link
             href="/"
-            className="font-display text-[46px] font-normal leading-none text-inkwell md:text-[60px]"
+            className="font-display text-[42px] font-normal leading-none text-inkwell md:text-[56px]"
           >
             StrongPath
           </Link>
-          <p className="mt-8 max-w-[580px] border-t border-inkwell/35 pt-6 font-utility text-[14px] leading-[1.25] text-inkwell/72">
+          <p className="mt-6 max-w-[580px] border-t border-inkwell/35 pt-5 font-utility text-[14px] leading-[1.25] text-inkwell/72">
             Strength, independence, and the research between them
           </p>
         </div>
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center gap-x-22 gap-y-10 border-t border-inkwell/18 pt-10 self-stretch md:self-end md:border-t-0 md:pt-0"
+          className="flex flex-wrap items-center gap-x-16 gap-y-8 border-t border-inkwell/18 pt-8 self-stretch md:self-end md:border-t-0 md:pt-0"
         >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="border-b border-transparent py-5 font-utility text-[15px] leading-none text-inkwell/66 transition-colors hover:border-inkwell/45 hover:text-inkwell focus-visible:border-inkwell"
+              className="border-b border-transparent py-4 font-utility text-[14px] leading-none text-inkwell/66 transition-colors hover:border-inkwell/45 hover:text-inkwell focus-visible:border-inkwell"
             >
               {item.label}
             </Link>
