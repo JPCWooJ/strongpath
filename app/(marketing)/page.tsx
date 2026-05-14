@@ -118,10 +118,17 @@ const publishingTopics = [
   },
 ]
 
+const homepageExcerptOverrides: Record<string, string> = {
+  'why-muscle-loss-changes-everything-after-50':
+    'Age-related muscle loss is not a side issue. It changes strength, confidence, recovery, and the ordinary freedoms people want to keep.',
+  'what-actually-predicts-healthy-aging':
+    'Healthy aging is not best understood through vague aspiration. Physical function, gait speed, grip strength, and independence tell a more useful story.',
+}
+
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
   title: article.title,
   href: `/blog/${article.slug.current}`,
-  excerpt: article.excerpt,
+  excerpt: homepageExcerptOverrides[article.slug.current] ?? article.excerpt,
   category: article.category,
   publishedAt: article.publishedAt,
 }))
