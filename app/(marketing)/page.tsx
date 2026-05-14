@@ -142,7 +142,7 @@ export default function HomePage() {
         <div className="absolute inset-x-0 top-0 h-[28rem] bg-sunbeam-gradient opacity-45" />
         <div className="relative mx-auto w-[min(100%-36px,1180px)] pb-[28px] pt-[22px] md:pb-[34px] md:pt-[26px] lg:pb-[38px] lg:pt-[28px]">
           <div className="grid gap-16 md:grid-cols-[minmax(0,0.74fr)_minmax(230px,0.4fr)] md:items-start md:gap-28 lg:grid-cols-[minmax(0,0.82fr)_minmax(320px,0.54fr)] lg:gap-44">
-            <div>
+            <div className="md:pt-[76px] lg:pt-[104px]">
               <p className="sp-kicker mb-18 text-inkwell/60">
                 Evidence-based strength after 55
               </p>
@@ -172,8 +172,11 @@ export default function HomePage() {
                 aria-hidden="true"
                 className="absolute left-0 top-[-14px] hidden h-px w-[78%] bg-inkwell/28 md:block lg:w-[84%]"
               />
-              <div className="relative grid grid-cols-[112px_minmax(0,1fr)] items-start gap-18 sm:grid-cols-[156px_minmax(0,1fr)] md:block">
-                <div className="bg-parchment p-4 ring-1 ring-inkwell/52 md:ml-auto md:max-w-[220px] lg:max-w-[314px] lg:p-6">
+              <div className="relative md:ml-auto md:max-w-[220px] lg:max-w-[314px]">
+                <p className="font-display text-[25px] font-medium leading-[1.02] text-inkwell md:text-[26px] lg:text-[30px]">
+                  Amazon Bestseller
+                </p>
+                <div className="mt-10 inline-block bg-parchment p-4 ring-1 ring-inkwell/52 lg:p-6">
                   <Image
                     src={bookCoverUrl}
                     alt="Choosing the StrongPath book cover"
@@ -184,17 +187,9 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                <div className="md:ml-auto md:mt-10 md:max-w-[220px] lg:mt-12 lg:max-w-[314px]">
-                  <p className="font-utility text-[13px] font-medium leading-[1.25] text-inkwell/70">
-                    Amazon bestseller
-                  </p>
-                  <p className="mt-5 whitespace-nowrap font-utility text-[10px] leading-[1.3] text-inkwell/56 sm:text-[12px] md:text-[11px] lg:text-[12px]">
-                    Aging &bull; Weight Training &bull; Exercise &bull; Longevity
-                  </p>
-                  <p className="mt-8 border-t border-inkwell/18 pt-8 font-display text-[25px] font-normal leading-[1.02] text-inkwell md:text-[26px] lg:text-[30px]">
-                    Choosing the StrongPath
-                  </p>
-                </div>
+                <p className="mt-10 border-t border-inkwell/18 pt-8 font-utility text-[12px] font-medium leading-[1.35] text-inkwell/68 lg:text-[13px]">
+                  Bestseller Categories: Aging &bull; Weight Training &bull; Exercise &bull; Longevity
+                </p>
               </div>
             </aside>
           </div>
