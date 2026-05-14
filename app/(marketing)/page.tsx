@@ -140,7 +140,7 @@ export default function HomePage() {
     <main className="overflow-hidden">
       <section className="relative border-b border-inkwell">
         <div className="absolute inset-x-0 top-0 h-[28rem] bg-sunbeam-gradient opacity-45" />
-        <div className="relative mx-auto w-[min(100%-36px,1180px)] pb-[34px] pt-[22px] md:pb-[42px] md:pt-[26px] lg:pb-[46px] lg:pt-[28px]">
+        <div className="relative mx-auto w-[min(100%-36px,1180px)] pb-[28px] pt-[22px] md:pb-[34px] md:pt-[26px] lg:pb-[38px] lg:pt-[28px]">
           <div className="grid gap-16 md:grid-cols-[minmax(0,0.74fr)_minmax(230px,0.4fr)] md:items-start md:gap-28 lg:grid-cols-[minmax(0,0.82fr)_minmax(320px,0.54fr)] lg:gap-44">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/60">
@@ -184,17 +184,15 @@ export default function HomePage() {
                     priority
                   />
                 </div>
-                <div className="md:ml-auto md:mt-12 md:max-w-[220px] lg:mt-14 lg:max-w-[314px]">
-                  <p className="font-utility text-[13px] leading-[1.38] text-inkwell/58">
-                    Foundational authority
+                <div className="md:ml-auto md:mt-10 md:max-w-[220px] lg:mt-12 lg:max-w-[314px]">
+                  <p className="font-utility text-[13px] font-medium leading-[1.25] text-inkwell/70">
+                    Amazon bestseller
                   </p>
-                  <p className="mt-7 max-w-[360px] font-body text-[18px] font-normal leading-[1.4] text-inkwell/82 md:text-[18px] lg:max-w-none lg:text-[19px]">
-                    The category-defining book behind StrongPath. Amazon bestseller in Aging,
-                    Weight Training, Exercise, and Longevity.
+                  <p className="mt-5 whitespace-nowrap font-utility text-[10px] leading-[1.3] text-inkwell/56 sm:text-[12px] md:text-[11px] lg:text-[12px]">
+                    Aging &bull; Weight Training &bull; Exercise &bull; Longevity
                   </p>
-                  <p className="mt-12 border-t border-inkwell/18 pt-9 font-utility text-[13px] leading-[1.38] text-inkwell/60">
-                    Inspired by <em>Choosing the StrongPath</em> and kept current with named,
-                    checkable evidence.
+                  <p className="mt-8 border-t border-inkwell/18 pt-8 font-display text-[25px] font-normal leading-[1.02] text-inkwell md:text-[26px] lg:text-[30px]">
+                    Choosing the StrongPath
                   </p>
                 </div>
               </div>
