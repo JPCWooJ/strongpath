@@ -60,6 +60,30 @@ export const flagshipArticles: Post[] = [
     seoDescription:
       'Age-related muscle loss changes strength, balance, recovery, and independence. What adults over 50 should understand first.',
     estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Age and muscle loss',
+        publication: 'Harvard Health Publishing',
+        href: 'https://www.health.harvard.edu/exercise-and-fitness/age-and-muscle-loss',
+      },
+      {
+        title: 'Exercise and physical activity',
+        publication: 'National Institute on Aging',
+        href: 'https://www.nia.nih.gov/health/exercise-and-physical-activity',
+      },
+      {
+        title: 'Progression models in resistance training for healthy adults',
+        publication: 'American College of Sports Medicine',
+        year: '2009',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/19204579/',
+      },
+      {
+        title: 'Choosing the StrongPath: Reversing the Downward Spiral of Aging',
+        publication: 'StrongPath credibility anchor',
+        year: '2018',
+        href: 'https://www.amazon.com/dp/1626344760?tag=stron02-20',
+      },
+    ],
     body: [
       p(
         'Most people do not notice muscle loss as muscle loss. They notice the consequences. The suitcase feels less cooperative. Stairs take more planning. A low chair becomes a small negotiation. A parent starts declining invitations because the day now has too many physical variables.'
@@ -164,6 +188,30 @@ export const flagshipArticles: Post[] = [
     seoDescription:
       'Why strength loss after 50 deserves serious attention, and why generic activity advice is not enough.',
     estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Quantity and quality of exercise for developing and maintaining fitness',
+        publication: 'American College of Sports Medicine',
+        year: '2011',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/21694556/',
+      },
+      {
+        title: 'Exercise training and nutritional supplementation for physical frailty',
+        publication: 'The New England Journal of Medicine',
+        year: '1994',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/8179653/',
+      },
+      {
+        title: 'Progression models in resistance training for healthy adults',
+        publication: 'American College of Sports Medicine',
+        year: '2009',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/19204579/',
+      },
+      {
+        title: 'Strength and power training for older adults',
+        publication: 'Harvard Health Publishing',
+      },
+    ],
     body: [
       p(
         'The public conversation about aging is crowded with advice. Walk more. Eat better. Sleep. Stay social. Keep moving. Much of that advice is directionally right. It is also incomplete.'
@@ -255,6 +303,29 @@ export const flagshipArticles: Post[] = [
     seoDescription:
       'Gait speed, grip strength, muscle, and function are practical predictors of healthy aging. Here is why they matter.',
     estimatedReadingMinutes: 9,
+    sources: [
+      {
+        title: 'Gait speed and survival in older adults',
+        publication: 'JAMA',
+        year: '2011',
+        href: 'https://jamanetwork.com/journals/jama/fullarticle/644554',
+      },
+      {
+        title: 'Prognostic value of grip strength',
+        publication: 'The Lancet',
+        year: '2015',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/25982160/',
+      },
+      {
+        title: 'Exercise and physical activity',
+        publication: 'National Institute on Aging',
+        href: 'https://www.nia.nih.gov/health/exercise-and-physical-activity',
+      },
+      {
+        title: 'Current consensus literature on sarcopenia, muscle strength, and function',
+        publication: 'Peer-reviewed clinical research',
+      },
+    ],
     body: [
       p(
         'Healthy aging is often described in vague language. Vitality. Longevity. Staying young. Aging well. The words are familiar, but they do not help much when a person is deciding what to do on Tuesday morning.'
