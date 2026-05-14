@@ -198,28 +198,42 @@ export default function HomePage() {
 
       <section id="learn-more" className="scroll-mt-28 border-b border-inkwell/70 bg-parchment">
         <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="border-b border-inkwell/45 py-[78px] lg:border-b-0 lg:border-r lg:pr-48">
-            <p className="sp-kicker mb-18 text-inkwell/60">The problem</p>
+          <div className="border-b border-inkwell/45 bg-verdigris-wash/18 py-[78px] pl-14 lg:border-b-0 lg:border-l-[6px] lg:border-r lg:border-l-verdigris lg:pl-24 lg:pr-48">
+            <p className="mb-18 border-t border-inkwell/35 pt-8 font-utility text-[14px] font-medium leading-none text-inkwell/74">
+              The problem
+            </p>
             <h2 className="font-display text-[42px] font-normal leading-[1.04] md:text-[60px]">
               The first sign is usually ordinary.
             </h2>
           </div>
           <div className="py-[78px] lg:pl-48">
-            <div className="grid gap-30">
-              <p className="font-body text-[24px] font-normal leading-[1.52] text-inkwell/90">
+            <div className="grid gap-26">
+              <p className="border-l border-inkwell/25 pl-18 font-body text-[26px] font-medium leading-[1.45] text-inkwell/92 md:text-[28px]">
                 A stair gets longer. A chair gets lower. A grocery bag starts requiring two trips.
                 A parent begins organizing the day around what feels safe.
               </p>
               <p className="sp-body text-inkwell/85">
-                These are often signs of age-related muscle loss. The condition has a name:
-                sarcopenia. It affects muscle, strength, function, balance, recovery, and the small
-                freedoms that make a day feel normal.
+                These are often signs of age-related muscle loss. The condition has a name:{' '}
+                <strong className="font-medium text-inkwell">sarcopenia</strong>. It affects muscle,
+                strength, function, balance, recovery, and the small freedoms that make a day feel
+                normal.
               </p>
-              <p className="sp-body text-inkwell/85">
-                StrongPath is not about vague aging. It is about the measurable loss of muscle and
-                strength, and the research-backed practices that help adults protect independence over
-                time.
-              </p>
+              <div className="border-y border-inkwell/30 py-18">
+                <p className="sp-body text-inkwell/88">
+                  StrongPath is not about vague aging. It is about the{' '}
+                  <strong className="font-medium text-inkwell">
+                    measurable loss of muscle and strength
+                  </strong>
+                  , and the research-backed practices that help adults protect independence over
+                  time.
+                </p>
+              </div>
+              <Link
+                href="/blog/why-muscle-loss-changes-everything-after-50"
+                className="justify-self-start border-b border-inkwell/45 pb-3 font-utility text-[14px] font-medium leading-none text-inkwell/72 transition-colors hover:border-inkwell hover:text-inkwell"
+              >
+                Read the muscle-loss briefing
+              </Link>
             </div>
           </div>
         </div>
