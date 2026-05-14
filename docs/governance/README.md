@@ -41,6 +41,7 @@ Use these files before implementation work, design refinement, content planning,
 - `EDITORIAL_WORKFLOW.md`
 - `CONTENT_BRIEF_STANDARD.md`
 - `CONTENT_UPDATE_POLICY.md`
+- `TOPIC_CLUSTER_ARCHITECTURE.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
