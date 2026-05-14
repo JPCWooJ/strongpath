@@ -422,9 +422,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-inkwell/55 bg-parchment">
-        <div className="sp-container py-[104px]">
-          <div className="grid gap-[56px] lg:grid-cols-[0.4fr_0.6fr]">
+      <section id="research" className="scroll-mt-28 border-b border-inkwell/55 bg-parchment">
+        <div className="sp-container py-[110px]">
+          <div className="grid gap-[58px] lg:grid-cols-[0.38fr_0.62fr]">
             <div>
               <p className="sp-kicker mb-18 text-inkwell/60">Now publishing</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.05] md:text-[60px]">
@@ -434,22 +434,25 @@ export default function HomePage() {
                 These starter articles establish the editorial spine of the publication: muscle
                 loss, strength, evidence, and the practical meaning of healthy aging.
               </p>
-              <div className="mt-30 flex flex-wrap gap-10">
+              <div className="mt-32 flex flex-wrap gap-x-10 gap-y-8">
                 {topicalPathways.map(([label, href]) => (
                   <Link
                     key={href}
                     href={href}
-                    className="border border-inkwell/35 px-12 py-8 font-utility text-[13px] leading-none text-inkwell/70 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment"
+                    className="border border-inkwell/28 px-11 py-7 font-utility text-[13px] leading-none text-inkwell/66 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment"
                   >
                     {label}
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="grid border-t border-inkwell/55 lg:grid-cols-[1.12fr_0.88fr]">
+            <div className="grid border-t border-inkwell/60 lg:grid-cols-[1.08fr_0.92fr]">
               {leadArticle && (
-                <article className="border-b border-inkwell/35 py-34 lg:border-r lg:border-inkwell/35 lg:pr-34">
-                  <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/58">
+                <article className="border-b border-inkwell/35 py-36 lg:border-r lg:border-inkwell/30 lg:pr-34">
+                  <p className="mb-18 font-utility text-[13px] leading-none text-inkwell/58">
+                    Featured essay
+                  </p>
+                  <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/54">
                     {leadArticle.category && <p>{leadArticle.category}</p>}
                     {leadArticle.publishedAt && <p>{formatArticleDate(leadArticle.publishedAt)}</p>}
                   </div>
@@ -466,9 +469,12 @@ export default function HomePage() {
                 </article>
               )}
               <div className="grid lg:pl-30">
+                <p className="border-b border-inkwell/30 py-18 font-utility text-[13px] leading-none text-inkwell/58 lg:pl-0">
+                  Further reading
+                </p>
                 {secondaryArticles.map((article) => (
-                  <article key={article.href} className="border-b border-inkwell/35 py-28">
-                    <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/58">
+                  <article key={article.href} className="border-b border-inkwell/30 py-26">
+                    <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/54">
                       {article.category && <p>{article.category}</p>}
                       {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
                     </div>

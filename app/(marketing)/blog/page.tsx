@@ -23,30 +23,39 @@ export default async function BlogPage() {
 
   return (
     <main>
-      <section className="border-b border-inkwell">
-        <div className="sp-container grid gap-40 py-[72px] lg:grid-cols-[0.42fr_0.58fr]">
+      <section className="border-b border-inkwell/70 bg-parchment">
+        <div className="sp-container grid gap-34 py-[76px] lg:grid-cols-[0.44fr_0.56fr] lg:items-end">
           <div>
-            <p className="sp-kicker mb-18 text-inkwell/70">StrongPath articles</p>
-            <h1 className="font-display text-[54px] font-normal leading-[1] text-inkwell md:text-[82px]">
+            <p className="sp-kicker mb-18 text-inkwell/60">StrongPath research</p>
+            <h1 className="font-display text-[52px] font-normal leading-[1] text-inkwell md:text-[78px]">
               Research made practical.
             </h1>
           </div>
-          <p className="max-w-[640px] font-body text-[22px] font-medium leading-[1.45] text-inkwell/85">
-            Clear, evidence-oriented guidance on sarcopenia, strength training, protein, recovery,
-            and helping aging parents protect capacity.
-          </p>
+          <div className="max-w-[660px] border-t border-inkwell/28 pt-18">
+            <p className="font-body text-[22px] font-normal leading-[1.52] text-inkwell/84">
+              Clear, evidence-oriented guidance on sarcopenia, strength training, protein,
+              recovery, and helping aging parents protect capacity.
+            </p>
+            <p className="mt-18 font-utility text-[13px] leading-[1.45] text-inkwell/58">
+              Published for careful readers who want the research, the context, and the practical
+              meaning before advice.
+            </p>
+          </div>
         </div>
       </section>
 
       {Object.keys(tagCounts).length > 0 && (
-        <section className="border-b border-inkwell">
-          <div className="sp-container py-40">
-            <div className="flex flex-wrap gap-8">
+        <section className="border-b border-inkwell/50 bg-[#f7f1e4]/45">
+          <div className="sp-container grid gap-18 py-30 md:grid-cols-[0.24fr_0.76fr] md:items-start">
+            <p className="font-utility text-[13px] leading-[1.45] text-inkwell/56">
+              Research pathways
+            </p>
+            <div className="flex flex-wrap gap-x-10 gap-y-8">
               {Object.entries(tagCounts).map(([tag, count]) => (
                 <Link
                   key={tag}
                   href={`/blog/tags/${tag}`}
-                  className="border border-inkwell/40 px-8 py-4 font-utility text-caption leading-caption text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                  className="border border-inkwell/28 px-10 py-6 font-utility text-[13px] leading-none text-inkwell/66 transition-colors hover:border-inkwell hover:text-inkwell"
                 >
                   {tag.replace(/-/g, ' ')} ({count})
                 </Link>
@@ -56,8 +65,8 @@ export default async function BlogPage() {
         </section>
       )}
 
-      <section>
-        <div className="sp-container py-60">
+      <section className="bg-parchment">
+        <div className="sp-container py-[72px]">
           {publishedPosts.length === 0 ? (
             <p className="sp-body text-inkwell/75">No posts yet.</p>
           ) : (
