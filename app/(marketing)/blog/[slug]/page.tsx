@@ -40,7 +40,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const posts: Post[] = await client.fetch(postsQuery)
   const currentTags = new Set((post.tags || []).map(normalizeTag))
   const candidatePosts = mergePublishedPosts(posts).filter(
-    (candidate) => candidate.slug.current !== post.slug.current
+    (candidate) => candidate.slug.current !== post.slug.current && Boolean(candidate.category)
   )
   const scoredArticles = candidatePosts
     .map((candidate) => {
