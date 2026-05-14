@@ -34,6 +34,7 @@ Use these files before implementation work, design refinement, content planning,
 - `PUBLISHING_PLAN.md`
 - `CITATION_STANDARD.md`
 - `RESEARCH_SYSTEMS.md`
+- `CONTENT_QA.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
