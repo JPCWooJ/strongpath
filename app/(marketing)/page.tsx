@@ -227,9 +227,9 @@ export default function HomePage() {
               Take the StrongPath not the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
-              Muscle loss can make life smaller, one staircase, suitcase, and slow recovery at a
-              time. StrongPath helps adults and families protect the strength ordinary life depends
-              on.
+              Muscle loss can shrink your world, one staircase, suitcase, or slow recovery at a
+              time. StrongPath helps you and your family stay strong enough for the life you want
+              to keep.
             </p>
 
             <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
@@ -281,8 +281,8 @@ export default function HomePage() {
                   When ordinary tasks start to change.
                 </h2>
                 <p className="mt-10 font-body text-[16px] leading-[1.5] text-parchment/74">
-                  <cite>Choosing the StrongPath</cite> explains how muscle loss affects aging,
-                  recovery, and independence, and why resistance training belongs in the answer.
+                  <cite>Choosing the StrongPath</cite> shows what changes with age, why muscle
+                  matters, and how to begin training without guessing.
                 </p>
                 <AmazonLink
                   asin="1626344760"
@@ -470,9 +470,9 @@ export default function HomePage() {
         <div className="sp-container py-58 md:py-76">
           <div className="flex flex-col justify-between gap-18 md:flex-row md:items-end">
             <div>
-              <p className="sp-kicker mb-12 text-inkwell/56">Useful routes</p>
+              <p className="sp-kicker mb-12 text-inkwell/56">Keep going</p>
               <h2 className="max-w-[760px] font-display text-[42px] font-normal leading-[1.03] text-inkwell md:text-[64px]">
-                Read, choose, and act with more confidence.
+                Find the guide, book, or next step that fits.
               </h2>
             </div>
             <div className="flex flex-wrap gap-8">
