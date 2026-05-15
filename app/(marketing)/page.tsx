@@ -31,11 +31,11 @@ const homepageExcerptOverrides: Record<string, string> = {
 
 const articleUseCases: Record<string, string> = {
   'why-muscle-loss-changes-everything-after-50':
-    'Use this if ordinary tasks have started to feel harder, slower, or less automatic.',
+    'For the moment when small tasks start taking more effort than they used to.',
   'the-strength-crisis-nobody-talks-about':
-    'Use this if you have been told to move more, but still do not know how to get stronger.',
+    'For anyone walking more but still feeling weaker.',
   'what-actually-predicts-healthy-aging':
-    'Use this if you want to know what changes before daily life starts closing in.',
+    'For readers who want simple ways to understand what is changing.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
@@ -170,11 +170,9 @@ const topics = [
 ]
 
 function ArticleMeta({
-  category,
   publishedAt,
   readingMinutes,
 }: {
-  category?: string
   publishedAt?: string
   readingMinutes?: number
 }) {
@@ -182,7 +180,6 @@ function ArticleMeta({
 
   return (
     <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.35] text-parchment/64">
-      {category && <p>{category}</p>}
       {date && <p>{date}</p>}
       {readingMinutes && <p>{readingMinutes} min read</p>}
     </div>
@@ -340,15 +337,14 @@ export default function HomePage() {
       </section>
 
       <section id="featured-guide" className="scroll-mt-28 bg-inkwell text-parchment">
-        <div className="sp-container py-64 md:py-88">
+        <div className="sp-container pb-64 pt-34 md:pb-88 md:pt-44">
           {featuredGuide && (
             <article className="grid gap-40 lg:grid-cols-[0.52fr_1.48fr] lg:items-start">
               <div>
                 <p className="sp-kicker mb-18 text-parchment/58">
-                  Start here if life is starting to feel smaller
+                  When stairs, trips, or recovery start to change
                 </p>
                 <ArticleMeta
-                  category={featuredGuide.category}
                   publishedAt={featuredGuide.publishedAt}
                   readingMinutes={featuredGuide.readingMinutes}
                 />
@@ -385,7 +381,6 @@ export default function HomePage() {
               {supportingGuides.map((article) => (
                 <article key={article.href} className="border-b border-parchment/18 pb-22">
                   <ArticleMeta
-                    category={article.category}
                     publishedAt={article.publishedAt}
                     readingMinutes={article.readingMinutes}
                   />
