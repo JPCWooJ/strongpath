@@ -69,9 +69,9 @@ const startingPoints = [
   },
   {
     eyebrow: 'For careful decisions',
-    title: 'I want to know what actually works',
+    title: 'What Do the Experts Say?',
     pain: 'The advice is familiar: walk more, eat protein, lift weights. The hard part is knowing what matters most.',
-    promise: 'Separate useful guidance from noise before choosing exercises, equipment, supplements, or a routine.',
+    promise: 'See what the evidence supports before choosing exercises, equipment, supplements, or a routine.',
     href: '/blog/the-strength-crisis-nobody-talks-about',
     action: 'Read the evidence guide',
   },
@@ -80,7 +80,7 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book for the fuller explanation of muscle loss, aging, and what strength work is trying to protect.',
+    copy: 'Use the book to understand what muscle loss threatens and why strength work matters after 50.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
@@ -98,7 +98,7 @@ const nextSteps = [
   },
   {
     title: 'Choose with care',
-    copy: 'Use a stricter lens for equipment, supplements, and programs so action stays practical and evidence-led.',
+    copy: 'Look at equipment, supplements, and programs with a clearer standard before spending money.',
     action: 'Get the notes',
     href: '/waitlist',
   },
@@ -111,7 +111,7 @@ const trustSignals = [
   },
   {
     title: 'Current research',
-    copy: 'Specific health claims belong to current peer-reviewed and named institutional sources.',
+    copy: 'Health claims should point to current research and named sources.',
   },
   {
     title: 'No miracle claims',
@@ -134,7 +134,7 @@ const productPath = [
   {
     stage: 'Available now',
     title: 'Guides',
-    copy: 'Free editorial guidance on muscle loss, strength, healthy aging, and practical decisions.',
+    copy: 'Plain guidance on muscle loss, strength, healthy aging, and practical decisions.',
     href: '/blog',
     action: 'Browse guides',
   },
@@ -224,7 +224,7 @@ export default function HomePage() {
               Evidence-based strength after 50
             </p>
             <h1 className="font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[70px] lg:text-[86px]">
-              Choose the StrongPath before the frail trail.
+              Take the StrongPath not the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
               Muscle loss can make life smaller, one staircase, suitcase, and slow recovery at a
@@ -302,12 +302,12 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-12 text-inkwell/56">Find your starting point</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.02] text-inkwell md:text-[64px]">
-                Start with what is happening now.
+                Start today: Your First Step on the StrongPath
               </h2>
             </div>
             <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
-              Your own strength, a parent&apos;s changing routine, or the need to sort good advice
-              from noise each calls for a different first step.
+              Start with your own strength, a parent&apos;s changing routine, or the advice you are
+              trying to make sense of.
             </p>
           </div>
 
@@ -409,12 +409,11 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-12 text-inkwell/56">Recommended next steps</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.03] text-inkwell md:text-[64px]">
-                Useful actions, in the order most readers need them.
+                What to do next.
               </h2>
             </div>
             <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
-              Start with the clearest concern, use the book for depth, and keep moving toward
-              choices that make strength work easier to act on.
+              Read the guide, use the book for depth, and make the next choice less vague.
             </p>
           </div>
 
