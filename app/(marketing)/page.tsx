@@ -9,253 +9,456 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = {
   title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
-    'StrongPath is an evidence-based strength platform for adults and families facing age-related muscle loss.',
+    'Research-grounded strength guidance, books, guides, and practical pathways for adults and families facing age-related muscle loss.',
   openGraph: {
     title: 'StrongPath - Evidence-based strength for adults 55+',
     description:
-      'Research-grounded strength guidance for adults who want to preserve independence, confidence, and good days.',
+      'Find your starting point for strength, independence, caregiving, and evidence-based action after 50.',
     type: 'website',
   },
 }
 
-const adviceFailures = [
-  ['Walk more', 'Walking matters. It does not train the muscles that help you rise, carry, climb, and recover.'],
-  ['Be careful', 'Caution can protect people. Without a plan, it often teaches them to do less and less.'],
-  ['Eat more protein', 'The direction is useful. Older adults need specifics: amount, timing, and how it supports training.'],
-  ['Try some weights', 'The right instinct needs a sequence: start low, learn form, add load, recover, progress.'],
-]
-
-const readerPaths = [
-  {
-    label: 'For adults noticing change',
-    title: 'The stairs are telling you something.',
-    copy:
-      'You are not broken. You are paying attention. StrongPath explains what age-related muscle loss is, what the research says, and how to begin without being treated like a beginner in life.',
-  },
-  {
-    label: 'For adult children',
-    title: 'You want your parent to keep more good days.',
-    copy:
-      'The aim is dignity, not pressure. We help families understand what strength protects and how to make the next conversation calmer, clearer, and more useful.',
-  },
-  {
-    label: 'For careful readers',
-    title: 'You want claims that can be checked.',
-    copy:
-      'StrongPath cites current research and named sources, so readers can see where the guidance comes from and how carefully each claim is framed.',
-  },
-]
-
-const evidenceSources = [
-  'Peer-reviewed studies on sarcopenia, resistance training, protein metabolism, and recovery',
-  'Named institutional sources including Harvard Health Publishing, Mayo Clinic, NIH, NIA, and ACSM',
-  'Plain-language summaries that separate what research shows from what it does not yet prove',
-]
-
 const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
-
-const evidenceStandards = [
-  ['Name the condition', 'We write about age-related muscle loss, not vague decline.'],
-  [
-    'Separate signal from certainty',
-    'Claims are framed around what research supports and what still needs care.',
-  ],
-  ['Respect the reader', 'Plain language, no fear tactics, no miracle language.'],
-]
-
-const discoveryTools = [
-  {
-    label: 'Read',
-    title: 'The book that named the path',
-    copy:
-      'Start with the category-defining book, then use StrongPath to stay current as the research and recommendations evolve.',
-    href: 'amazon',
-  },
-  {
-    label: 'Learn',
-    title: 'The muscle-loss briefing',
-    copy:
-      'Understand why age-related muscle loss changes strength, recovery, and independence before choosing a program or product.',
-    href: '/blog/why-muscle-loss-changes-everything-after-50',
-  },
-  {
-    label: 'Compare',
-    title: 'Product discovery, without hype',
-    copy:
-      'Find books, training tools, and practical supports through an evidence-first editorial lens.',
-    href: '/waitlist',
-  },
-]
-
-const topicalPathways = [
-  ['Sarcopenia', '/blog/tags/sarcopenia'],
-  ['Strength After 50', '/blog/tags/strength-after-50'],
-  ['Healthy Aging', '/blog/tags/healthy-aging'],
-  ['Resistance Training', '/blog/tags/resistance-training'],
-  ['Research', '/blog/tags/research'],
-]
-
-const publishingTopics = [
-  {
-    title: 'What is sarcopenia?',
-    copy: 'The plain-language guide to age-related muscle loss, why it is often missed, and what measurements matter.',
-  },
-  {
-    title: 'Resistance training for older adults',
-    copy: 'How to train strength safely and seriously, with progression that respects different starting points.',
-  },
-  {
-    title: 'How to help aging parents stay strong',
-    copy: 'A practical guide for families who want to support independence without taking over.',
-  },
-  {
-    title: 'Protein after 60',
-    copy: 'What older adults need to know about protein, muscle repair, and training support.',
-  },
-  {
-    title: 'How to start lifting weights at 60',
-    copy: 'A careful first-step guide for people who want specifics, not motivation slogans.',
-  },
-]
 
 const homepageExcerptOverrides: Record<string, string> = {
   'why-muscle-loss-changes-everything-after-50':
-    'Age-related muscle loss is not a side issue. It changes strength, confidence, recovery, and the ordinary freedoms people want to keep.',
+    'What changes when muscle loss begins to affect stairs, groceries, chairs, balance, recovery, and confidence.',
+  'the-strength-crisis-nobody-talks-about':
+    'Why walking matters, why it is not enough by itself, and where real strength work enters the picture.',
   'what-actually-predicts-healthy-aging':
-    'Healthy aging is not best understood through vague aspiration. Physical function, gait speed, grip strength, and independence tell a more useful story.',
+    'The functional measures that tell a clearer story than vague healthy-aging advice.',
+}
+
+const articleUseCases: Record<string, string> = {
+  'why-muscle-loss-changes-everything-after-50':
+    'Use this if ordinary tasks have started to feel harder, slower, or less automatic.',
+  'the-strength-crisis-nobody-talks-about':
+    'Use this if you have been told to move more, but still do not know what to do about strength.',
+  'what-actually-predicts-healthy-aging':
+    'Use this if you want the measures and evidence behind the recommendations.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
   title: article.title,
   href: `/blog/${article.slug.current}`,
   excerpt: homepageExcerptOverrides[article.slug.current] ?? article.excerpt,
+  useCase: articleUseCases[article.slug.current],
   category: article.category,
   publishedAt: article.publishedAt,
+  readingMinutes: article.estimatedReadingMinutes,
 }))
 
-const [leadArticle, ...secondaryArticles] = featuredArticles
+const [featuredGuide, ...supportingGuides] = featuredArticles
+
+const startingPoints = [
+  {
+    eyebrow: 'For your own strength',
+    title: "I notice I'm getting weaker",
+    pain: 'Stairs feel longer. Groceries feel heavier. Getting up from low chairs takes more thought than it used to.',
+    promise: 'Understand what muscle loss can change, what matters first, and why strength work is different from general activity.',
+    href: '/blog/why-muscle-loss-changes-everything-after-50',
+    action: 'Start with muscle loss',
+  },
+  {
+    eyebrow: 'For a parent',
+    title: 'I want to help a parent',
+    pain: 'You can see someone you love losing strength, but you do not want to pressure, scare, or talk down to them.',
+    promise: 'Find a respectful way to frame the problem and a practical path you can put in front of the family.',
+    href: '/waitlist',
+    action: 'Get caregiver guidance',
+  },
+  {
+    eyebrow: 'For a real plan',
+    title: 'I want a serious strength plan',
+    pain: 'You have heard the usual advice to walk more, eat better, and lift weights, but the details are still unclear.',
+    promise: 'Start with research-backed guidance on strength, protein, recovery, progression, and tools worth considering.',
+    href: '/blog/the-strength-crisis-nobody-talks-about',
+    action: 'Read the strength guide',
+  },
+]
+
+const nextSteps = [
+  {
+    title: 'Start with the book',
+    copy: 'Read the category-defining StrongPath book for the larger argument about aging, strength, and independence.',
+    action: 'Buy on Amazon',
+    href: 'amazon',
+  },
+  {
+    title: 'Read the muscle-loss guide',
+    copy: 'Understand why muscle loss changes more than workouts, and why the first signs matter.',
+    action: 'Read the guide',
+    href: '/blog/why-muscle-loss-changes-everything-after-50',
+  },
+  {
+    title: 'Get practical notes',
+    copy: 'Receive careful guidance on strength, muscle loss, protein, recovery, and helping a parent begin.',
+    action: 'Get practical notes',
+    href: '/waitlist',
+  },
+  {
+    title: 'Choose with care',
+    copy: 'Use a stricter lens for equipment, supplements, and programs so action stays practical and evidence-led.',
+    action: 'Get the notes',
+    href: '/waitlist',
+  },
+]
+
+const trustSignals = [
+  {
+    title: 'Book first',
+    copy: 'The book gives StrongPath a serious foundation before any product recommendation appears.',
+  },
+  {
+    title: 'Current research',
+    copy: 'Specific health claims belong to current peer-reviewed and named institutional sources.',
+  },
+  {
+    title: 'No miracle claims',
+    copy: 'No anti-aging promises, no fear-led funnel, no claim stronger than the evidence supports.',
+  },
+  {
+    title: 'No supplement hype',
+    copy: 'No powders, pills, or promises get treated as shortcuts around strength work.',
+  },
+]
+
+const productPath = [
+  {
+    stage: 'Available now',
+    title: 'Book',
+    copy: 'The deeper starting point for readers who want the full StrongPath argument.',
+    href: 'amazon',
+    action: 'Buy on Amazon',
+  },
+  {
+    stage: 'Available now',
+    title: 'Guides',
+    copy: 'Free editorial guidance on muscle loss, strength, healthy aging, and practical decisions.',
+    href: '/blog',
+    action: 'Browse guides',
+  },
+  {
+    stage: 'For structure',
+    title: 'Strength plans',
+    copy: 'Use the guidance to ask better questions, avoid vague routines, and choose a plan that fits real life.',
+    href: '/waitlist',
+    action: 'Get practical notes',
+  },
+  {
+    stage: 'For decisions',
+    title: 'Tools',
+    copy: 'Learn which training supports deserve attention, which can wait, and which are mostly distraction.',
+    href: '/waitlist',
+    action: 'Get tool guidance',
+  },
+  {
+    stage: 'For caution',
+    title: 'Supplements',
+    copy: 'Read evidence-led notes before treating powders, pills, or promises as shortcuts.',
+    href: '/waitlist',
+    action: 'Get careful guidance',
+  },
+]
+
+const topics = [
+  ['Sarcopenia', '/blog/tags/sarcopenia'],
+  ['Strength After 50', '/blog/tags/strength-after-50'],
+  ['Resistance Training', '/blog/tags/resistance-training'],
+  ['Healthy Aging', '/blog/tags/healthy-aging'],
+  ['Caregiving', '/waitlist'],
+]
+
+function ArticleMeta({
+  category,
+  publishedAt,
+  readingMinutes,
+}: {
+  category?: string
+  publishedAt?: string
+  readingMinutes?: number
+}) {
+  const date = formatArticleDate(publishedAt)
+
+  return (
+    <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.35] text-parchment/64">
+      {category && <p>{category}</p>}
+      {date && <p>{date}</p>}
+      {readingMinutes && <p>{readingMinutes} min read</p>}
+    </div>
+  )
+}
+
+function CommerceLink({
+  href,
+  action,
+  className,
+}: {
+  href: string
+  action: string
+  className: string
+}) {
+  if (href === 'amazon') {
+    return (
+      <AmazonLink asin="1626344760" className={className}>
+        {action}
+      </AmazonLink>
+    )
+  }
+
+  return (
+    <Link href={href} className={className}>
+      {action}
+    </Link>
+  )
+}
 
 export default function HomePage() {
   return (
     <main className="overflow-hidden">
-      <section className="relative border-b border-inkwell">
-        <div className="absolute inset-x-0 top-0 h-[28rem] bg-sunbeam-gradient opacity-45" />
-        <div className="relative mx-auto w-[min(100%-36px,1180px)] pb-[28px] pt-[22px] md:pb-[34px] md:pt-[26px] lg:pb-[38px] lg:pt-[28px]">
-          <div className="grid gap-16 md:grid-cols-[minmax(0,0.74fr)_minmax(230px,0.4fr)] md:items-start md:gap-28 lg:grid-cols-[minmax(0,0.82fr)_minmax(320px,0.54fr)] lg:gap-44">
-            <div className="md:pt-[76px] lg:pt-[104px]">
-              <p className="sp-kicker mb-18 text-inkwell/60">
-                Evidence-based strength after 55
+      <section className="relative bg-parchment">
+        <div className="absolute inset-x-0 top-0 h-[360px] bg-sunbeam-gradient opacity-40" />
+        <div className="relative mx-auto grid w-[min(100%-36px,1180px)] gap-26 py-30 md:grid-cols-[minmax(0,1fr)_340px] md:items-center md:py-42 lg:grid-cols-[minmax(0,1fr)_390px] lg:gap-44">
+          <div className="max-w-[800px]">
+            <p className="sp-kicker mb-14 text-inkwell/60">
+              Evidence-based strength after 50
+            </p>
+            <h1 className="font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[70px] lg:text-[86px]">
+              Keep strength from becoming the thing that limits your life.
+            </h1>
+            <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
+              StrongPath helps adults and families understand muscle loss, choose credible next
+              steps, and find the books, guides, and practical options worth considering.
+            </p>
+
+            <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
+              <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
+                For adults noticing strength loss.
               </p>
-              <h1 className="max-w-[700px] font-display text-[44px] font-normal leading-[1.02] text-inkwell sm:text-[64px] lg:text-[82px]">
-                Strength is independence.
-              </h1>
-              <p className="mt-16 max-w-[570px] font-body text-[20px] font-normal leading-[1.52] text-inkwell/82 md:text-[22px] lg:mt-18">
-                StrongPath helps adults and families understand age-related muscle loss, what
-                current research shows, and how strength preserves ordinary freedom.
+              <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
+                For families helping a parent.
               </p>
-              <div className="mt-22 flex max-w-[650px] flex-col gap-12 sm:flex-row sm:items-center sm:gap-18">
-                <Link
-                  href="/waitlist"
-                  className="inline-flex w-full shrink-0 justify-center border border-inkwell/90 bg-inkwell px-30 py-[15px] font-body text-[17px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell sm:w-auto"
-                >
-                  Take the Assessment
-                </Link>
-                <p className="max-w-[310px] border-l border-inkwell/22 pl-14 font-body text-[16px] leading-[1.45] text-inkwell/68">
-                  For the stairs, the groceries, the visits, and the days that still feel like
-                  yours.
-                </p>
-              </div>
+              <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
+                For careful readers who want evidence first.
+              </p>
             </div>
 
-            <aside className="relative border-t border-inkwell/30 pt-16 md:max-w-none md:border-t-0 md:pl-6 md:pt-0 lg:pl-10">
-              <div
-                aria-hidden="true"
-                className="absolute left-0 top-[-14px] hidden h-px w-[78%] bg-inkwell/28 md:block lg:w-[84%]"
-              />
-              <div className="relative md:ml-auto md:max-w-[220px] lg:max-w-[314px]">
-                <p className="font-display text-[25px] font-medium leading-[1.02] text-inkwell md:text-[26px] lg:text-[30px]">
-                  Amazon Bestseller
-                </p>
-                <div className="mt-10 bg-parchment p-4 ring-1 ring-inkwell/52 md:ml-auto md:max-w-[220px] lg:max-w-[314px] lg:p-6">
-                  <Image
-                    src={bookCoverUrl}
-                    alt="Choosing the StrongPath book cover"
-                    width={333}
-                    height={500}
-                    sizes="(min-width: 1024px) 300px, (min-width: 768px) 220px, (min-width: 640px) 156px, 112px"
-                    className="h-auto w-full max-w-[112px] bg-parchment sm:max-w-[156px] md:max-w-[220px] lg:max-w-[300px]"
-                    priority
-                  />
-                </div>
-                <p className="mt-10 border-t border-inkwell/18 pt-8 font-utility text-[12px] font-medium leading-[1.35] text-inkwell/68 lg:text-[13px]">
-                  Bestseller Categories: Aging &bull; Weight Training &bull; Exercise &bull; Longevity
-                </p>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <section id="learn-more" className="scroll-mt-28 border-b border-inkwell/70 bg-parchment">
-        <div className="sp-container grid gap-0 lg:grid-cols-[0.78fr_1.22fr]">
-          <div className="border-b border-inkwell/45 bg-verdigris-wash/18 py-[78px] pl-14 lg:border-b-0 lg:border-l-[6px] lg:border-r lg:border-l-verdigris lg:pl-24 lg:pr-48">
-            <p className="mb-18 border-t border-inkwell/35 pt-8 font-utility text-[14px] font-medium leading-none text-inkwell/74">
-              The problem
-            </p>
-            <h2 className="font-display text-[42px] font-normal leading-[1.04] md:text-[60px]">
-              The first sign is usually ordinary.
-            </h2>
-          </div>
-          <div className="py-[78px] lg:pl-48">
-            <div className="grid gap-26">
-              <p className="border-l border-inkwell/25 pl-18 font-body text-[26px] font-medium leading-[1.45] text-inkwell/92 md:text-[28px]">
-                A stair gets longer. A chair gets lower. A grocery bag starts requiring two trips.
-                A parent begins organizing the day around what feels safe.
-              </p>
-              <p className="sp-body text-inkwell/85">
-                These are often signs of age-related muscle loss. The condition has a name:{' '}
-                <strong className="font-medium text-inkwell">sarcopenia</strong>. It affects muscle,
-                strength, function, balance, recovery, and the small freedoms that make a day feel
-                normal.
-              </p>
-              <div className="border-y border-inkwell/30 py-18">
-                <p className="sp-body text-inkwell/88">
-                  StrongPath is not about vague aging. It is about the{' '}
-                  <strong className="font-medium text-inkwell">
-                    measurable loss of muscle and strength
-                  </strong>
-                  , and the research-backed practices that help adults protect independence over
-                  time.
-                </p>
-              </div>
+            <div className="mt-26 flex flex-col gap-12 sm:flex-row sm:items-center">
               <Link
-                href="/blog/why-muscle-loss-changes-everything-after-50"
-                className="justify-self-start border-b border-inkwell/45 pb-3 font-utility text-[14px] font-medium leading-none text-inkwell/72 transition-colors hover:border-inkwell hover:text-inkwell"
+                href="#start-here"
+                className="inline-flex justify-center bg-inkwell px-24 py-13 font-body text-[17px] font-medium leading-none text-parchment transition-colors hover:bg-inkwell/86"
               >
-                Read the muscle-loss briefing
+                Find your starting point
+              </Link>
+              <Link
+                href="#featured-guide"
+                className="inline-flex justify-center border border-inkwell/46 px-24 py-13 font-body text-[17px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
+              >
+                Read the muscle-loss guide
               </Link>
             </div>
           </div>
+
+          <aside className="bg-inkwell p-18 text-parchment shadow-[0_22px_70px_rgba(48,47,44,0.22)]">
+            <p className="font-utility text-[13px] leading-none text-parchment/58">
+              The book behind the path
+            </p>
+            <div className="mt-14 grid grid-cols-[116px_1fr] gap-16 sm:grid-cols-[150px_1fr] md:grid-cols-1">
+              <div className="bg-parchment p-4">
+                <Image
+                  src={bookCoverUrl}
+                  alt="Choosing the StrongPath book cover"
+                  width={333}
+                  height={500}
+                  sizes="(min-width: 768px) 250px, 150px"
+                  className="h-auto w-full md:mx-auto md:max-w-[250px]"
+                  priority
+                />
+              </div>
+              <div>
+                <h2 className="font-display text-[30px] font-normal leading-[1.02] text-parchment md:mt-16">
+                  Read the deeper case for strength.
+                </h2>
+                <p className="mt-10 font-body text-[16px] leading-[1.5] text-parchment/74">
+                  <cite>Choosing the StrongPath</cite> is the serious starting point for readers
+                  who want the full argument before choosing a plan.
+                </p>
+                <AmazonLink
+                  asin="1626344760"
+                  className="mt-16 inline-flex bg-parchment px-18 py-10 font-body text-[15px] font-medium leading-none text-inkwell transition-colors hover:bg-parchment/86"
+                >
+                  Buy on Amazon
+                </AmazonLink>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section className="border-b border-inkwell/55 bg-[#f6f0df]/45">
-        <div className="sp-container py-[92px]">
-          <div className="grid gap-48 lg:grid-cols-[0.9fr_1.1fr]">
+      <section id="start-here" className="scroll-mt-28 bg-[#f7f1e4]">
+        <div className="sp-container py-54 md:py-72">
+          <div className="grid gap-18 md:grid-cols-[0.58fr_0.42fr] md:items-end">
             <div>
-              <p className="sp-kicker mb-18 text-inkwell/60">Why the usual advice falls short</p>
-              <h2 className="font-display text-[40px] font-normal leading-[1.06] md:text-[56px]">
-                Familiar advice is often too vague to use.
+              <p className="sp-kicker mb-12 text-inkwell/56">Find your starting point</p>
+              <h2 className="font-display text-[42px] font-normal leading-[1.02] text-inkwell md:text-[64px]">
+                Choose the situation that brought you here.
               </h2>
             </div>
-            <div className="grid border-t border-inkwell/55">
-              {adviceFailures.map(([title, copy]) => (
-                <div
-                  key={title}
-                  className="grid gap-18 border-b border-inkwell/35 py-28 md:grid-cols-[0.36fr_0.64fr]"
+            <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
+              The useful path is different for the person noticing changes, the adult child trying
+              to help, and the reader ready for a serious plan.
+            </p>
+          </div>
+
+          <div className="mt-28 grid gap-14 lg:grid-cols-3">
+            {startingPoints.map((item) => (
+              <article key={item.title} className="bg-parchment p-22 shadow-[0_10px_36px_rgba(48,47,44,0.08)]">
+                <p className="font-utility text-[13px] leading-none text-verdigris">{item.eyebrow}</p>
+                <h3 className="mt-18 font-display text-[36px] font-normal leading-[1.02] text-inkwell">
+                  {item.title}
+                </h3>
+                <p className="mt-14 font-body text-[18px] leading-[1.48] text-inkwell/80">
+                  {item.pain}
+                </p>
+                <p className="mt-14 border-t border-inkwell/18 pt-14 font-body text-[17px] leading-[1.48] text-inkwell/68">
+                  {item.promise}
+                </p>
+                <Link
+                  href={item.href}
+                  className="mt-22 inline-flex border-b border-inkwell/42 pb-3 font-utility text-[13px] font-medium leading-none text-inkwell/72 transition-colors hover:border-inkwell hover:text-inkwell"
                 >
-                  <h3 className="font-display text-[29px] font-normal leading-[1.1]">{title}</h3>
-                  <p className="sp-body text-inkwell/85">{copy}</p>
+                  {item.action}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-guide" className="scroll-mt-28 bg-inkwell text-parchment">
+        <div className="sp-container py-64 md:py-88">
+          {featuredGuide && (
+            <article className="grid gap-40 lg:grid-cols-[0.52fr_1.48fr] lg:items-start">
+              <div>
+                <p className="sp-kicker mb-18 text-parchment/58">
+                  Start here if strength is changing
+                </p>
+                <ArticleMeta
+                  category={featuredGuide.category}
+                  publishedAt={featuredGuide.publishedAt}
+                  readingMinutes={featuredGuide.readingMinutes}
+                />
+                {featuredGuide.useCase && (
+                  <p className="mt-26 border-l border-parchment/34 pl-16 font-body text-[20px] leading-[1.52] text-parchment/78">
+                    {featuredGuide.useCase}
+                  </p>
+                )}
+              </div>
+
+              <div>
+                <Link href={featuredGuide.href} className="group block">
+                  <h2 className="font-display text-[52px] font-normal leading-[0.98] text-parchment group-hover:underline md:text-[82px]">
+                    {featuredGuide.title}
+                  </h2>
+                </Link>
+                {featuredGuide.excerpt && (
+                  <p className="mt-24 max-w-[780px] font-body text-[22px] leading-[1.5] text-parchment/78 md:text-[26px]">
+                    {featuredGuide.excerpt}
+                  </p>
+                )}
+                <Link
+                  href={featuredGuide.href}
+                  className="mt-30 inline-flex bg-parchment px-22 py-12 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-parchment/86"
+                >
+                  Read the guide
+                </Link>
+              </div>
+            </article>
+          )}
+
+          {supportingGuides.length > 0 && (
+            <div className="mt-46 grid gap-18 border-t border-parchment/22 pt-24 md:grid-cols-2">
+              {supportingGuides.map((article) => (
+                <article key={article.href} className="border-b border-parchment/18 pb-22">
+                  <ArticleMeta
+                    category={article.category}
+                    publishedAt={article.publishedAt}
+                    readingMinutes={article.readingMinutes}
+                  />
+                  <Link href={article.href} className="group mt-10 block">
+                    <h3 className="font-display text-[34px] font-normal leading-[1.06] text-parchment group-hover:underline">
+                      {article.title}
+                    </h3>
+                  </Link>
+                  {article.useCase && (
+                    <p className="mt-12 font-body text-[17px] leading-[1.48] text-parchment/66">
+                      {article.useCase}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="bg-parchment">
+        <div className="sp-container py-58 md:py-76">
+          <div className="grid gap-22 md:grid-cols-[0.52fr_0.48fr] md:items-end">
+            <div>
+              <p className="sp-kicker mb-12 text-inkwell/56">Recommended next steps</p>
+              <h2 className="font-display text-[42px] font-normal leading-[1.03] text-inkwell md:text-[64px]">
+                Useful actions, in the order most readers need them.
+              </h2>
+            </div>
+            <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
+              Start with the clearest concern, use the book for depth, and keep moving toward
+              choices that make strength work easier to act on.
+            </p>
+          </div>
+
+          <div className="mt-30 grid gap-14 md:grid-cols-2 lg:grid-cols-4">
+            {nextSteps.map((item) => (
+              <article key={item.title} className="bg-[#f7f1e4] p-20">
+                <h3 className="font-display text-[32px] font-normal leading-[1.04] text-inkwell">
+                  {item.title}
+                </h3>
+                <p className="mt-14 font-body text-[17px] leading-[1.5] text-inkwell/74">
+                  {item.copy}
+                </p>
+                <CommerceLink
+                  href={item.href}
+                  action={item.action}
+                  className="mt-20 inline-flex border-b border-inkwell/40 pb-3 font-utility text-[13px] font-medium leading-none text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                />
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f6f0df]">
+        <div className="sp-container py-58 md:py-76">
+          <div className="grid gap-30 lg:grid-cols-[0.45fr_0.55fr] lg:items-start">
+            <div>
+              <p className="sp-kicker mb-12 text-inkwell/56">Why trust it</p>
+              <h2 className="font-display text-[42px] font-normal leading-[1.03] text-inkwell md:text-[62px]">
+                Trust starts with restraint.
+              </h2>
+              <p className="mt-18 font-body text-[19px] leading-[1.5] text-inkwell/74">
+                Useful recommendations start with clear evidence, careful language, and respect for
+                what health guidance can and cannot promise.
+              </p>
+            </div>
+            <div className="grid gap-12 sm:grid-cols-2">
+              {trustSignals.map((item) => (
+                <div key={item.title} className="bg-parchment p-18">
+                  <h3 className="font-display text-[30px] font-normal leading-[1.05] text-inkwell">
+                    {item.title}
+                  </h3>
+                  <p className="mt-9 font-body text-[17px] leading-[1.48] text-inkwell/72">
+                    {item.copy}
+                  </p>
                 </div>
               ))}
             </div>
@@ -263,268 +466,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative border-b border-inkwell/60">
-        <div className="absolute inset-0 bg-sunbeam-gradient opacity-28" />
-        <div className="sp-container relative py-[112px]">
-          <div className="mx-auto max-w-[990px] text-center">
-            <p className="sp-kicker mb-18 text-inkwell/60">What strength protects</p>
-            <h2 className="font-display text-[48px] font-normal leading-none md:text-[74px]">
-              Independence is built in ordinary moments.
-            </h2>
-            <p className="mx-auto mt-30 max-w-[740px] font-body text-[23px] font-normal leading-[1.56] text-inkwell/84">
-              Getting out of a chair. Carrying groceries. Traveling with confidence. Visiting
-              family without planning around every step. Strength protects independence because it
-              protects the actions independence depends on.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-inkwell/55 bg-parchment">
-        <div className="sp-container py-[96px]">
-          <div className="grid gap-48 lg:grid-cols-[0.72fr_1.28fr]">
+      <section className="bg-parchment">
+        <div className="sp-container py-58 md:py-76">
+          <div className="flex flex-col justify-between gap-18 md:flex-row md:items-end">
             <div>
-              <p className="sp-kicker mb-18 text-inkwell/60">Who this is for</p>
-              <h2 className="font-display text-[42px] font-normal leading-[1.05] md:text-[60px]">
-                Two readers often arrive at the same page.
+              <p className="sp-kicker mb-12 text-inkwell/56">Useful routes</p>
+              <h2 className="max-w-[760px] font-display text-[42px] font-normal leading-[1.03] text-inkwell md:text-[64px]">
+                Read, choose, and act with more confidence.
               </h2>
             </div>
-            <div className="grid border-t border-inkwell/55">
-              {readerPaths.map((pathway) => (
-                <article
-                  key={pathway.label}
-                  className="grid gap-18 border-b border-inkwell/35 py-34 md:grid-cols-[0.32fr_0.68fr]"
+            <div className="flex flex-wrap gap-8">
+              {topics.map(([label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  className="border border-inkwell/24 px-12 py-8 font-utility text-[13px] leading-none text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
                 >
-                  <p className="font-utility text-[13px] leading-[1.38] text-inkwell/58">
-                    {pathway.label}
-                  </p>
-                  <div>
-                    <h3 className="font-display text-[34px] font-normal leading-[1.06]">
-                      {pathway.title}
-                    </h3>
-                    <p className="sp-body mt-18 text-inkwell/85">{pathway.copy}</p>
-                  </div>
-                </article>
+                  {label}
+                </Link>
               ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      <section className="border-b border-inkwell/60 bg-verdigris-wash/26">
-        <div className="sp-container grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
-          <div className="border-b border-inkwell/45 py-[92px] lg:border-b-0 lg:border-r lg:pr-48">
-            <p className="sp-kicker mb-18 text-inkwell/60">The evidence standard</p>
-            <h2 className="font-display text-[44px] font-normal leading-[1.03] md:text-[64px]">
-              Start with authority. Stay with the evidence.
-            </h2>
-            <p className="mt-24 max-w-[520px] sp-body text-inkwell/80">
-              Health guidance should be clear enough to check and careful enough to trust.
-            </p>
-          </div>
-          <div className="py-[92px] lg:pl-48">
-            <p className="font-body text-[24px] font-normal leading-[1.5] text-inkwell/90">
-              Readers deserve to see where the guidance comes from, what it can support, and where
-              judgment still matters.
-            </p>
-            <div className="mt-34 grid border-t border-inkwell/50 md:grid-cols-3">
-              {evidenceStandards.map(([title, copy]) => (
-                <article
-                  key={title}
-                  className="border-b border-inkwell/35 py-[26px] md:border-r md:border-inkwell/35 md:px-18 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-                >
-                  <h3 className="font-display text-[28px] font-normal leading-[1.08]">{title}</h3>
-                  <p className="mt-12 font-body text-[18px] leading-[1.55] text-inkwell/82">{copy}</p>
-                </article>
-              ))}
-            </div>
-            <div className="mt-34 grid border-t border-inkwell/50">
-              {evidenceSources.map((source) => (
-                <p key={source} className="border-b border-inkwell/35 py-20 sp-body text-inkwell/85">
-                  {source}
+          <div className="mt-30 grid gap-12 md:grid-cols-2 lg:grid-cols-5">
+            {productPath.map((item) => (
+              <article key={item.title} className="bg-[#f7f1e4] p-18">
+                <p className="font-utility text-[12px] leading-none text-verdigris">{item.stage}</p>
+                <h3 className="mt-16 font-display text-[30px] font-normal leading-[1.04] text-inkwell">
+                  {item.title}
+                </h3>
+                <p className="mt-12 font-body text-[16px] leading-[1.48] text-inkwell/72">
+                  {item.copy}
                 </p>
-              ))}
-            </div>
+                <CommerceLink
+                  href={item.href}
+                  action={item.action}
+                  className="mt-18 inline-flex border-b border-inkwell/40 pb-3 font-utility text-[13px] font-medium leading-none text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                />
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="border-b border-inkwell/55 bg-[#f7f1e4]/55">
-        <div className="sp-container py-[104px]">
-          <div className="grid gap-[56px] lg:grid-cols-[0.82fr_1.18fr]">
-            <div>
-              <p className="sp-kicker mb-18 text-inkwell/60">Start here</p>
-              <h2 className="font-display text-[46px] font-normal leading-[1.03] md:text-[68px]">
-                What we publish first.
-              </h2>
-              <p className="sp-body mt-24 text-inkwell/85">
-                The first StrongPath guides answer the questions that matter before a program,
-                purchase, or promise: what is happening, what works, how to start, and how to help
-                someone you love begin.
-              </p>
-            </div>
-            <div className="grid border-t border-inkwell/55">
-              {publishingTopics.map((topic, index) => (
-                <article
-                  key={topic.title}
-                  className="grid gap-18 border-b border-inkwell/35 py-28 md:grid-cols-[64px_1fr]"
-                >
-                  <p className="border-l-[6px] border-verdigris pl-12 font-utility text-[13px] leading-[1.38] text-inkwell/56">
-                    {String(index + 1).padStart(2, '0')}
-                  </p>
-                  <div>
-                    <h3 className="font-display text-[29px] font-normal leading-[1.1]">
-                      {topic.title}
-                    </h3>
-                    <p className="sp-body mt-8 text-inkwell/85">{topic.copy}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-inkwell/60 bg-verdigris-wash/24">
-        <div className="sp-container py-[108px]">
-          <div className="grid gap-[56px] lg:grid-cols-[0.68fr_1.32fr]">
-            <div>
-              <p className="sp-kicker mb-18 text-inkwell/60">Product discovery</p>
-              <h2 className="font-display text-[46px] font-normal leading-[1.03] md:text-[68px]">
-                Commerce attached to trust.
-              </h2>
-              <p className="sp-body mt-24 text-inkwell/85">
-                StrongPath will recommend tools only when they help readers understand, begin, or
-                sustain evidence-based strength work. The editorial standard comes first.
-              </p>
-            </div>
-            <div className="grid border-t border-inkwell/50 md:grid-cols-3">
-              {discoveryTools.map((item) => (
-                <article
-                  key={item.title}
-                  className="flex min-h-[320px] flex-col justify-between border-b border-inkwell/35 py-30 md:border-r md:border-inkwell/35 md:px-22 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
-                >
-                  <div>
-                    <p className="font-utility text-[13px] leading-[1.38] text-verdigris">
-                      {item.label}
-                    </p>
-                    <h3 className="mt-18 font-display text-[31px] font-normal leading-[1.05] text-inkwell">
-                      {item.title}
-                    </h3>
-                    <p className="mt-18 font-body text-[18px] leading-[1.55] text-inkwell/82">
-                      {item.copy}
-                    </p>
-                  </div>
-                  {item.href === 'amazon' ? (
-                    <AmazonLink
-                      asin="1626344760"
-                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
-                    >
-                      View the book
-                    </AmazonLink>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="mt-24 inline-flex justify-center border border-inkwell px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
-                    >
-                      Open pathway
-                    </Link>
-                  )}
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="research" className="scroll-mt-28 border-b border-inkwell/55 bg-parchment">
-        <div className="sp-container py-[110px]">
-          <div className="grid gap-[58px] lg:grid-cols-[0.38fr_0.62fr]">
-            <div>
-              <p className="sp-kicker mb-18 text-inkwell/60">Now publishing</p>
-              <h2 className="font-display text-[42px] font-normal leading-[1.05] md:text-[60px]">
-                The first StrongPath essays are live.
-              </h2>
-              <p className="sp-body mt-24 text-inkwell/85">
-                Start with the articles that explain muscle loss, strength, evidence, and the
-                practical meaning of healthy aging.
-              </p>
-              <div className="mt-32 flex flex-wrap gap-x-10 gap-y-8">
-                {topicalPathways.map(([label, href]) => (
-                  <Link
-                    key={href}
-                    href={href}
-                    className="border border-inkwell/28 px-11 py-7 font-utility text-[13px] leading-none text-inkwell/66 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment"
-                  >
-                    {label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="grid border-t border-inkwell/60 lg:grid-cols-[1.08fr_0.92fr]">
-              {leadArticle && (
-                <article className="border-b border-inkwell/35 py-36 lg:border-r lg:border-inkwell/30 lg:pr-34">
-                  <p className="mb-18 font-utility text-[13px] leading-none text-inkwell/58">
-                    Featured essay
-                  </p>
-                  <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/54">
-                    {leadArticle.category && <p>{leadArticle.category}</p>}
-                    {leadArticle.publishedAt && <p>{formatArticleDate(leadArticle.publishedAt)}</p>}
-                  </div>
-                  <Link href={leadArticle.href} className="group mt-18 block">
-                    <h3 className="font-display text-[42px] font-normal leading-[1.01] text-inkwell group-hover:underline md:text-[54px]">
-                      {leadArticle.title}
-                    </h3>
-                  </Link>
-                  {leadArticle.excerpt && (
-                    <p className="mt-20 font-body text-[22px] font-normal leading-[1.52] text-inkwell/84">
-                      {leadArticle.excerpt}
-                    </p>
-                  )}
-                </article>
-              )}
-              <div className="grid lg:pl-30">
-                <p className="border-b border-inkwell/30 py-18 font-utility text-[13px] leading-none text-inkwell/58 lg:pl-0">
-                  Further reading
-                </p>
-                {secondaryArticles.map((article) => (
-                  <article key={article.href} className="border-b border-inkwell/30 py-26">
-                    <div className="flex flex-wrap gap-x-12 gap-y-4 font-utility text-[13px] leading-[1.38] text-inkwell/54">
-                      {article.category && <p>{article.category}</p>}
-                      {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
-                    </div>
-                    <Link href={article.href} className="group mt-12 block">
-                      <h3 className="font-display text-[30px] font-normal leading-[1.08] text-inkwell group-hover:underline md:text-[36px]">
-                        {article.title}
-                      </h3>
-                    </Link>
-                    {article.excerpt && (
-                      <p className="sp-body mt-14 text-inkwell/85">{article.excerpt}</p>
-                    )}
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="relative bg-[#f6f0df]/45">
-        <div className="absolute inset-x-0 top-0 h-[24rem] bg-sunbeam-gradient opacity-32" />
-        <div className="sp-container relative py-[112px]">
-          <div className="mx-auto max-w-[840px] border-y border-inkwell/45 py-48 text-center">
-            <p className="sp-kicker mb-18 text-inkwell/60">Stay close</p>
-            <h2 className="font-display text-[46px] font-normal leading-[1.03] md:text-[68px]">
-              Receive the first guides.
+      <section className="bg-inkwell text-parchment">
+        <div className="sp-container py-58 md:py-76">
+          <div className="mx-auto max-w-[880px] text-center">
+            <p className="sp-kicker mb-14 text-parchment/58">Get practical strength guidance</p>
+            <h2 className="font-display text-[44px] font-normal leading-[1.02] text-parchment md:text-[68px]">
+              Know what to read, buy, and ignore.
             </h2>
-            <p className="mx-auto mt-30 max-w-[680px] sp-body text-inkwell/85">
-              Get the first articles as they publish: sarcopenia, resistance training, protein,
-              recovery, and how families can help a parent begin without pressure.
+            <p className="mx-auto mt-22 max-w-[680px] font-body text-[20px] leading-[1.5] text-parchment/74">
+              Get careful notes on muscle loss, strength plans, protein, recovery, caregiver
+              decisions, equipment, and supplement claims.
             </p>
-            <div className="mt-30">
-              <EmailForm source="homepage_substance_translation" />
+            <div className="mx-auto mt-30 max-w-[560px]">
+              <EmailForm source="homepage_commercial_rebuild" />
             </div>
-            <p className="mx-auto mt-30 max-w-[620px] font-utility text-[13px] leading-[1.45] text-inkwell/62">
+            <p className="mx-auto mt-22 max-w-[620px] font-utility text-[13px] leading-[1.45] text-parchment/52">
               Educational content only. StrongPath does not diagnose, treat, cure, or replace care
               from your physician, physical therapist, or other qualified professional.
             </p>

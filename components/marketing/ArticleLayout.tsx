@@ -170,7 +170,7 @@ function ArticleEndCta() {
         href="/waitlist"
         className="mt-22 inline-block border border-inkwell px-16 py-12 font-utility text-caption leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment"
       >
-        Join the waitlist
+        Get practical guidance
       </Link>
     </section>
   )
