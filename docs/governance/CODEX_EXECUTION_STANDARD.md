@@ -197,6 +197,7 @@ Examples:
 
 - AGENT_RULES.md
 - CODEX_EXECUTION_STANDARD.md
+- COPY_GOVERNANCE_STANDARD.md
 - BRAND.md
 - DESIGN.md
 - PERSONAS.md
@@ -208,6 +209,8 @@ Rules:
 - never paraphrase critical brand rules loosely
 - use canonical files as execution constraints
 - do not let Codex reinterpret brand positioning
+- treat governance files as context, not automatically reusable public copy
+- apply COPY_GOVERNANCE_STANDARD.md before implementing homepage copy, article copy, commerce copy, CTAs, metadata, or email copy
 
 ---
 
@@ -237,6 +240,8 @@ Copy requests must define:
 - forbidden language
 
 Always reference BRAND.md voice rules when applicable.
+Always reference COPY_GOVERNANCE_STANDARD.md for public-facing copy, including homepage copy, article copy, commerce copy, CTAs, metadata, and email copy.
+Do not reuse internal/process language from governance files unless it is explicitly tagged `[PUBLIC_COPY_SAFE]` and still fits the reader-facing context.
 
 ---
 
@@ -466,6 +471,7 @@ Primary governance references:
 
 - AGENT_RULES.md
 - CODEX_EXECUTION_STANDARD.md
+- COPY_GOVERNANCE_STANDARD.md
 - BRAND.md
 - DESIGN.md
 - PERSONAS.md
@@ -482,11 +488,12 @@ When conflicts occur, resolve in this order:
 1. Founder instructions
 2. AGENT_RULES.md
 3. CODEX_EXECUTION_STANDARD.md
-4. BRAND.md
-5. DESIGN.md
-6. PERSONAS.md
-7. PUBLISHING_PLAN.md
-8. Feature-specific prompts
+4. COPY_GOVERNANCE_STANDARD.md
+5. BRAND.md
+6. DESIGN.md
+7. PERSONAS.md
+8. PUBLISHING_PLAN.md
+9. Feature-specific prompts
 
 ---
 
@@ -500,6 +507,7 @@ All StrongPath agents must:
 - isolate changes into reviewable increments
 - optimize for iteration speed
 - protect canonical brand standards
+- prevent internal/process copy leakage into public surfaces
 - avoid verbose explanation
 - produce copy/paste-ready Codex prompts
 

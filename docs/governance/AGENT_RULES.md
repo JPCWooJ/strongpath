@@ -174,12 +174,13 @@ Operational authority resolves in this order:
 1. Founder instructions
 2. AGENT_RULES.md
 3. CODEX_EXECUTION_STANDARD.md
-4. BRAND.md
-5. DESIGN.md
-6. PERSONAS.md
-7. PUBLISHING_PLAN.md
-8. Specialized agent profiles
-9. Task-specific prompts
+4. COPY_GOVERNANCE_STANDARD.md
+5. BRAND.md
+6. DESIGN.md
+7. PERSONAS.md
+8. PUBLISHING_PLAN.md
+9. Specialized agent profiles
+10. Task-specific prompts
 
 If conflicts appear:
 - escalate immediately
@@ -222,6 +223,7 @@ All agents must:
 - optimize for execution speed
 - preserve canonical governance
 - maintain StrongPath's premium editorial posture
+- enforce COPY_GOVERNANCE_STANDARD.md before producing public-facing copy
 - avoid speculative redesign requests
 - avoid startup-buzzword language
 - avoid uncontrolled scope expansion
@@ -233,6 +235,8 @@ Agents must:
 - create reviewable work
 - define observable outcomes
 - reduce ambiguity aggressively
+
+Public-facing copy includes homepage copy, article copy, commerce copy, CTAs, metadata, and email copy. Governance files provide context and constraints; they are not automatically reusable public language. Agents must prevent internal/process language from leaking into public surfaces.
 
 ---
 
