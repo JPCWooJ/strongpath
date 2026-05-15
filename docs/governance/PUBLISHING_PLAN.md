@@ -6,7 +6,21 @@ Authority: Tier 3 (vertical). Inherits from BRAND.md v6, PERSONAS.md v4, brand-r
 
 ---
 
+## Copy Governance Overlay
+
+**Copy-governance authority:** This file inherits the tag system from `COPY_GOVERNANCE_STANDARD.md`.
+
+**Production rule:** PUBLISHING_PLAN.md is an operational planning document. Its calendar language, launch sequencing, placeholder-page pattern, link-build instructions, founder checkpoints, and process narration must not be used as public-facing website, article, commerce, or email copy.
+
+**High-risk note:** This file contains phrases and concepts that can easily leak into homepage copy, including "first article," "publishes," "placeholder page," "get notified when this publishes," "we publish 1 article per week," "Phase 1," "Day 90," "paid traffic," and "commercial-intent pillar." These are internal process signals unless rewritten into reader-facing value.
+
+---
+
 ## Purpose
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Defines the operational purpose of this document. Not public copy.
 
 Session 3 deliverable. Turns the 10 article briefs in `CONTENT_PLAN.md` into a sequenced publishing plan and an internal link architecture.
 
@@ -19,6 +33,10 @@ Metrics live in a separate file (`METRICS.md`) per the standing decision.
 
 ## How to read this file
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal navigation for governance readers. Not public copy.
+
 - **§1** — Planning assumptions. The model this plan is built on.
 - **§2** — The 90-day calendar (week 1 through week 13).
 - **§3** — The internal link map, full graph.
@@ -30,6 +48,12 @@ Metrics live in a separate file (`METRICS.md`) per the standing decision.
 ---
 
 ## 1. Planning Assumptions
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Operational assumptions for publishing cadence, review capacity, affiliate implementation, and paid traffic gates. Do not surface publicly.
+
+**Public-leakage risk:** Contains launch/process language such as "first article published," "P0 fixes," "90-day output," and "minimum-to-ship-paid-traffic."
 
 Per session 3 calibration (founder, April 21, 2026):
 
@@ -49,11 +73,21 @@ One operational reality to name at the top: this calendar assumes the founder ca
 
 ## 2. The 90-Day Calendar
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal publishing schedule and sequencing. Not public copy.
+
+**Public-leakage risk:** Calendar and launch language can create "now publishing" or roadmap-style homepage leakage if copied directly.
+
 ### Structure
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 Each week has either a publish target, a founder-review target, or both. The plan front-loads the pillar pages that unlock internal linking; satellites come later and benefit from the hub articles already being live.
 
 ### Cadence pattern
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 - **Weeks 1–4 (Foundation):** 1 article/week. Slower start. Establishes pillar hubs before satellites ship.
 - **Weeks 5–9 (Execution):** 1 article/week. Completes the Pillar 3 execution track and builds David's caregiver arc.
@@ -62,6 +96,10 @@ Each week has either a publish target, a founder-review target, or both. The pla
 Total: **12 articles across 13 weeks.**
 
 ### The calendar
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal schedule table. Do not expose week numbers, brief numbers, drafting status, or founder-review status publicly.
 
 | Week | Publish | Under founder review | Content Writer drafting | Notes |
 |---|---|---|---|---|
@@ -81,12 +119,24 @@ Total: **12 articles across 13 weeks.**
 
 ### Critical milestones embedded in this calendar
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Business gate context. Not public copy.
+
+**Public-leakage risk:** Contains affiliate revenue, paid traffic, Day 90, and Phase 1 language.
+
 - **End of Week 4:** First four pillar articles live. The site has a minimum defensible Pillar 1, Pillar 3, and Pillar 4 foundation. First affiliate revenue possible from this point.
 - **End of Week 8:** Six articles live. Margaret track fully served through the first pillar + execution + commercial pillar. Caregiver track fully served through the David pillar.
 - **End of Week 11:** Ten articles live. BP-04 minimum cleared. Paid traffic can start.
 - **End of Week 13:** Twelve articles live. Phase 1 Day 90 milestone per ACTIVE_VERTICALS.md.
 
 ### Why this sequence, specifically
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Explains content architecture and sequencing. Use for planning only.
+
+**Public-leakage risk:** Contains "pillar," "affiliate," "authority moat," and implementation-cost language.
 
 Three architectural decisions drove the week-by-week ordering:
 
@@ -98,9 +148,17 @@ Three architectural decisions drove the week-by-week ordering:
 
 ### Weeks that deliberately do NOT publish
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Review-capacity planning only. Not public copy.
+
 - **Week 7 is a review-only week.** No article ships. Reasoning: the founder-review bottleneck is real, and weeks 1–6 front-load substantial review work (two pillars + a caregiver pillar + a protein pillar). Week 7 lets the founder catch up without the calendar slipping. If week 7 is not needed, the Brief 2 publication can slide forward to week 7 and every subsequent article shifts forward, completing the calendar at week 12 instead of week 13.
 
 ### Scenario planning
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Operational contingency planning. Not public copy.
 
 Three realistic paths:
 
@@ -111,6 +169,12 @@ Three realistic paths:
 **Path C (faster than expected).** Founder review is faster, or a writer is hired. 12 articles at 1.5/week = 8 weeks. In that case: accelerate to paid traffic sooner and use the extra weeks 9–13 for satellites that extend the 10-brief set (FAQ articles, test-specific satellites, supplement review articles once the session 1 Q1 "supplement keyword posture" decision is made).
 
 ### What gets published only after Day 90
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Future-scope planning only. Do not present as public roadmap or launch commitment.
+
+**Public-leakage risk:** Contains future product/content promises and Phase 2 language.
 
 These are Phase 2, not Phase 1. Flagging now so they're not forgotten:
 
@@ -123,9 +187,17 @@ These are Phase 2, not Phase 1. Flagging now so they're not forgotten:
 
 ## 3. Internal Link Map
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Internal SEO and article architecture. Not public copy except for individual anchor phrases after editorial review.
+
 Internal linking is not decorative. It's how Google understands site topical authority and how readers move from entry point to conversion. BP-08 and BP-09 both apply: every link must resolve to a functional page, and the architecture must be wired in CMS, not hardcoded.
 
 ### The link graph
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Internal implementation map. The "Anchor text" column may inform public links where accurate, but brief numbers, source sections, and graph rationale are not public copy.
 
 Below is the full graph of internal links between the 10 briefs. Each row specifies the source article, the target article, the anchor text, and which section of the source article carries the link.
 
@@ -195,6 +267,10 @@ Below is the full graph of internal links between the 10 briefs. Each row specif
 
 ### Link graph, at a glance
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** SEO architecture context. Not public copy.
+
 **In-degree (how many pages link TO each brief):**
 
 | Brief | In-degree | Role |
@@ -216,6 +292,10 @@ Every brief links out to 4–6 other articles plus the book affiliate plus the q
 
 ### Navigational links (not in the table above)
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Template and CTA implementation guidance. Not public copy.
+
 Every article on the site also carries:
 
 - **Header navigation:** Home, About, Blog index, Programs (when live), Shop, Quiz.
@@ -225,6 +305,10 @@ Every article on the site also carries:
 These are template-level links. The 61 links in the graph above are editorial links — specific recommendations for internal cross-referencing within article body copy.
 
 ### A note on URL slugs
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** URL planning guidance. Slugs become public URLs; the operational explanation does not.
 
 Each article needs a permanent URL slug. Recommendation — short, keyword-bearing, never change:
 
@@ -247,9 +331,17 @@ Set these at first-publish and never change. Changing a URL slug breaks external
 
 ## 4. Link-Build Sequence
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Implementation sequence for internal links. Not public copy.
+
+**Public-leakage risk:** Contains "publishes," "coming soon," "placeholder pages," and email-capture process language that must not leak into homepage copy.
+
 Publishing happens one article per week. Internal links must be wired as each article goes live — not in a retrofit pass at week 14. The sequence:
 
 ### How the link graph gets built over 13 weeks
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 **Week 1 (Brief 1 publishes, Sarcopenia).**
 No internal links to other StrongPath articles yet exist. Brief 1 will have *forward* links written into its markup (to Brief 3, Brief 5, Brief 9, etc.) that initially resolve to "coming soon" placeholder pages in Sanity. Every placeholder page has: a one-paragraph description of what the full article will cover, an email-capture form ("get notified when this publishes"), and a redirect pattern ready to swap in when the full article goes live.
@@ -271,6 +363,10 @@ Same pattern: each new publication triggers a round of link-swapping in every ea
 
 ### The "placeholder page" pattern
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Public-leakage risk:** Contains launch/process narration, "get notified when this publishes," and "we publish 1 article per week." Rewrite any placeholder public copy to reader benefit before use.
+
 Every article that isn't live yet gets a placeholder at its permanent URL slug. The placeholder contains:
 
 1. The article title ("Resistance Training for Older Adults" — exactly what it will be when published).
@@ -289,11 +385,17 @@ BP-09 is explicit: "no broken CTAs at launch." Placeholder pages are not broken 
 
 ### The one exception
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 **Brief 1 publishes in week 1 with no upstream links to *it* yet.** That's fine. Brief 1's SEO value doesn't depend on incoming internal links from other StrongPath articles in week 1 — it depends on the external links and the page's own content depth. Incoming internal links from Briefs 2, 3, 4, etc., will start flowing in weeks 2, 4, etc., as those articles publish. By week 11, Brief 1 has 9 incoming internal links — full hub authority.
 
 ---
 
 ## 5. Standing Operational Rules for Content Writer Chat
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Agent and workstream instructions. Not public copy.
 
 When the Content Writer chat stands up (expected session 4 or 5), these are the rules it operates under. Captured here so the brief-handoff is clean.
 
@@ -321,9 +423,15 @@ When the Content Writer chat stands up (expected session 4 or 5), these are the 
 
 ## 6. Founder Checkpoints During the 90 Days
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Founder decision schedule and business gates. Not public copy.
+
 Moments across the 13-week plan when founder decisions, approvals, or reviews are required. Flagged here so they don't arrive as surprises.
 
 ### Before Day 1 (week 0, the week before first publish)
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 - **Answer the five founder questions from CONTENT_PLAN.md §4.** Most critical: book chapter references (§4 Q1) and family-adherence product posture in Brief 7 (§4 Q5). Without these, the Content Writer chat cannot start Brief 1 cleanly.
 - **Confirm Amazon Associates tag integration.** `stron02-20`. Verify the tag is set in Sanity as an environment variable and that the affiliate disclosure is in the article template footer.
@@ -331,20 +439,28 @@ Moments across the 13-week plan when founder decisions, approvals, or reviews ar
 
 ### Week 4 (end of foundation phase)
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 - **Review Brief 1 performance at day 28.** Is it indexed in Google? Any traffic? Any backlinks? First data point on whether the SERP analysis predictions hold.
 - **Confirm or adjust the Week 7 review-week plan.** If review is on track, Week 7 is a catch-up week. If review is falling behind, Week 7 becomes mandatory buffer and downstream articles shift.
 
 ### Week 6–7 (mid-plan review)
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 - **Answer session 1 open question 1 (supplement keyword posture).** By week 7, first pillar is live and first commercial-intent pillar is imminent. If supplement reviews are going to land as stretch-satellites in weeks 12–13, the posture decision needs to be made by week 7.
 - **Assess founder review throughput.** Can the next 6 weeks sustain 1 article/week? Honest answer, not aspirational.
 
 ### Week 11 (10-article minimum crossed)
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 - **BP-04 paid-traffic gate opens.** First 10 articles live. Decision point: start Meta or Google Ads spending (session 5 for the Paid Media Buyer workstream), or hold for another 2–3 weeks of organic baseline first.
 - **Dr. Chen / clinician page decision** (session 1 open question 3). If the `/for-clinicians` page has not been built yet, decide whether to stand it up as a stretch-satellite in weeks 12–13 or defer to Phase 2.
 
 ### Week 13 (Day 90)
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 - **Phase 1 Day 90 retrospective.** Per PROJECT_INSTRUCTIONS, targets are: 1,200 subscribers, 4,000 organic sessions, $400–600 cumulative affiliate revenue, 45+ indexed pages. Measured in METRICS.md.
 - **Phase 2 go/no-go.** ACTIVE_VERTICALS.md frames Phase 2 as requiring Phase 1 targets to be hit. If hit, Phase 2 planning begins (supplement line, medical advisor hire, family-adherence app concept from PRODUCT_CONCEPTS_BACKLOG.md). If missed, retrospective on why and adjust.
@@ -352,6 +468,10 @@ Moments across the 13-week plan when founder decisions, approvals, or reviews ar
 ---
 
 ## 7. Change log
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance record. Do not use as public copy.
 
 | Date | Change | Session |
 |---|---|---|
