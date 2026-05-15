@@ -9,11 +9,11 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = {
   title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
-    'Book-led strength guidance for adults and families facing muscle loss after 50.',
+    'Book-led help for adults and families who want to stay strong for travel, stairs, recovery, and the people they love.',
   openGraph: {
     title: 'StrongPath - Evidence-based strength for adults 55+',
     description:
-      'Start with muscle loss, strength, caregiving, and practical action after 50.',
+      'Keep the strength for stairs, travel, caregiving, recovery, and the life you want after 50.',
     type: 'website',
   },
 }
@@ -22,20 +22,20 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 
 const homepageExcerptOverrides: Record<string, string> = {
   'why-muscle-loss-changes-everything-after-50':
-    'What changes when muscle loss starts showing up on stairs, with groceries, in chairs, balance, recovery, and confidence.',
+    'What changes when muscle loss starts showing up on stairs, with groceries, in chairs, on trips, and in recovery.',
   'the-strength-crisis-nobody-talks-about':
-    'Why walking helps, where it falls short, and what strength training adds.',
+    'Why walking helps, where it falls short, and what training adds when life asks more of your body.',
   'what-actually-predicts-healthy-aging':
-    'Grip strength, gait speed, and the simple tests that reveal more than vague aging advice.',
+    'The simple tests that help explain balance, confidence, and the ability to keep doing what you love.',
 }
 
 const articleUseCases: Record<string, string> = {
   'why-muscle-loss-changes-everything-after-50':
     'Use this if ordinary tasks have started to feel harder, slower, or less automatic.',
   'the-strength-crisis-nobody-talks-about':
-    'Use this if you have been told to move more, but still do not know what to do about strength.',
+    'Use this if you have been told to move more, but still do not know how to get stronger.',
   'what-actually-predicts-healthy-aging':
-    'Use this if you want to know what doctors and researchers actually measure.',
+    'Use this if you want to know what changes before daily life starts closing in.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
@@ -52,18 +52,18 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 
 const startingPoints = [
   {
-    eyebrow: 'For your own strength',
+    eyebrow: 'For your life',
     title: "I notice I'm getting weaker",
     pain: 'Stairs feel longer. Groceries feel heavier. Getting up from low chairs takes more thought than it used to.',
-    promise: 'Learn what may be happening and what to do before daily tasks get harder.',
+    promise: 'Learn what may be happening before trips, stairs, errands, and good days get smaller.',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
     action: 'Start with muscle loss',
   },
   {
     eyebrow: 'For a parent',
     title: 'I want to help a parent',
-    pain: 'A parent is moving less, recovering more slowly, or avoiding things they used to do.',
-    promise: 'Find words and next steps that respect your parent without ignoring what is changing.',
+    pain: 'A parent is walking less, recovering more slowly, or saying no to things they used to enjoy.',
+    promise: 'Find words and next steps that protect dignity without pretending nothing is changing.',
     href: '/waitlist',
     action: 'Get caregiver guidance',
   },
@@ -71,7 +71,7 @@ const startingPoints = [
     eyebrow: 'For careful decisions',
     title: 'What Do the Experts Say?',
     pain: 'Everyone says to walk, eat protein, and lift weights. The hard part is knowing what matters first.',
-    promise: 'See what the evidence supports before choosing exercises, equipment, supplements, or a routine.',
+    promise: 'See what is worth doing before you spend time, money, or hope on the wrong thing.',
     href: '/blog/the-strength-crisis-nobody-talks-about',
     action: 'Read the evidence guide',
   },
@@ -80,25 +80,25 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book to understand what muscle loss can take away, and how training helps protect independence.',
+    copy: 'Use the book to understand what muscle loss can take away, and how training helps protect the days you still want.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
   {
     title: 'Read the muscle-loss guide',
-    copy: 'See why the first signs matter, before stairs, balance, recovery, or confidence change more.',
+    copy: 'See why the first signs matter before stairs, balance, recovery, or confidence change more.',
     action: 'Read the guide',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
   },
   {
     title: 'Get practical notes',
-    copy: 'Get notes on strength, muscle loss, protein, recovery, and helping a parent begin.',
+    copy: 'Get notes on muscle loss, protein, recovery, and helping a parent begin without pressure.',
     action: 'Get practical notes',
     href: '/waitlist',
   },
   {
     title: 'Choose with care',
-    copy: 'Know what is useful, what can wait, and what is mostly noise before spending money.',
+    copy: 'Know what helps, what can wait, and what is mostly noise before spending money.',
     action: 'Get the notes',
     href: '/waitlist',
   },
@@ -107,11 +107,11 @@ const nextSteps = [
 const trustSignals = [
   {
     title: 'Book first',
-    copy: 'The book gives readers a serious place to start before any recommendation.',
+    copy: 'The book gives readers a serious place to start before buying anything else.',
   },
   {
     title: 'Current research',
-    copy: 'Health claims should point to current research and named sources.',
+    copy: 'Health claims should be easy to check, not taken on faith.',
   },
   {
     title: 'No miracle claims',
@@ -119,7 +119,7 @@ const trustSignals = [
   },
   {
     title: 'No supplement hype',
-    copy: 'No powders, pills, or promises get treated as shortcuts around strength work.',
+    copy: 'No powders, pills, or promises get treated as shortcuts to a stronger life.',
   },
 ]
 
@@ -127,28 +127,28 @@ const productPath = [
   {
     stage: 'Available now',
     title: 'Book',
-    copy: 'A practical foundation for understanding muscle loss, training, and independence after 50.',
+    copy: 'A practical starting point for keeping strength, confidence, and independence after 50.',
     href: 'amazon',
     action: 'Buy on Amazon',
   },
   {
     stage: 'Available now',
     title: 'Guides',
-    copy: 'Plain guidance on muscle loss, strength, healthy aging, and practical decisions.',
+    copy: 'Plain guidance for stairs, balance, travel, recovery, and helping a parent start.',
     href: '/blog',
     action: 'Browse guides',
   },
   {
     stage: 'For a plan',
     title: 'Strength plans',
-    copy: 'Ask better questions, avoid vague routines, and choose training that fits real life.',
+    copy: 'Avoid vague routines and choose training that fits your days, your body, and your family.',
     href: '/waitlist',
     action: 'Get practical notes',
   },
   {
     stage: 'For equipment',
     title: 'Tools',
-    copy: 'Learn which training supports are worth attention, which can wait, and which are mostly distraction.',
+    copy: 'Learn which training supports are worth attention, which can wait, and which mostly get in the way.',
     href: '/waitlist',
     action: 'Get tool guidance',
   },
@@ -221,26 +221,26 @@ export default function HomePage() {
         <div className="relative mx-auto grid w-[min(100%-36px,1180px)] gap-26 py-30 md:grid-cols-[minmax(0,1fr)_340px] md:items-center md:py-42 lg:grid-cols-[minmax(0,1fr)_390px] lg:gap-44">
           <div className="max-w-[800px]">
             <p className="sp-kicker mb-14 text-inkwell/60">
-              Evidence-based strength after 50
+              Stay strong for the life you want after 50
             </p>
             <h1 className="font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[70px] lg:text-[86px]">
               Take the StrongPath not the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
               Muscle loss as we age can shrink your world, one staircase, suitcase, or slow
-              recovery at a time. StrongPath helps you and your family stay strong enough to keep
+              recovery at a time. StrongPath helps you and your loved ones stay strong and live
               the life you want.
             </p>
 
             <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
               <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
-                For adults noticing strength loss.
+                For adults noticing daily life getting harder.
               </p>
               <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
                 For families helping a parent.
               </p>
               <p className="font-body text-[16px] leading-[1.42] text-inkwell/76">
-                For careful readers who want evidence first.
+                For careful readers tired of vague advice.
               </p>
             </div>
 
@@ -285,7 +285,7 @@ export default function HomePage() {
                 </h2>
                 <p className="mt-10 font-body text-[16px] leading-[1.5] text-parchment/74">
                   <cite>Choosing the StrongPath</cite> shows what changes with age, why muscle
-                  matters, and how to begin training without guessing.
+                  matters, and how to start rebuilding confidence without guessing.
                 </p>
                 <AmazonLink
                   asin="1626344760"
@@ -309,8 +309,8 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
-              Start with your own strength, a parent&apos;s changing routine, or the advice you are
-              trying to make sense of.
+              Start with what you are seeing in your own life, in a parent&apos;s routine, or in the
+              advice you are trying to sort out.
             </p>
           </div>
 
@@ -345,7 +345,7 @@ export default function HomePage() {
             <article className="grid gap-40 lg:grid-cols-[0.52fr_1.48fr] lg:items-start">
               <div>
                 <p className="sp-kicker mb-18 text-parchment/58">
-                  Start here if strength is changing
+                  Start here if life is starting to feel smaller
                 </p>
                 <ArticleMeta
                   category={featuredGuide.category}
@@ -416,7 +416,8 @@ export default function HomePage() {
               </h2>
             </div>
             <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
-              Read the guide, use the book for depth, and make the next choice less vague.
+              Read the guide, use the book for depth, and make the next choice feel less like a
+              guess.
             </p>
           </div>
 
@@ -449,8 +450,8 @@ export default function HomePage() {
                 Trust starts with restraint.
               </h2>
               <p className="mt-18 font-body text-[19px] leading-[1.5] text-inkwell/74">
-                Useful recommendations start with clear evidence, careful language, and respect for
-                what health guidance can and cannot promise.
+                You should not have to choose between doing nothing and believing every promise.
+                StrongPath keeps the advice careful so the next step feels safer.
               </p>
             </div>
             <div className="grid gap-12 sm:grid-cols-2">
@@ -520,8 +521,8 @@ export default function HomePage() {
               Know what to read, buy, and ignore.
             </h2>
             <p className="mx-auto mt-22 max-w-[680px] font-body text-[20px] leading-[1.5] text-parchment/74">
-              Get careful notes on muscle loss, strength plans, protein, recovery, caregiver
-              decisions, equipment, and supplement claims.
+              Get notes on muscle loss, protein, recovery, equipment, supplements, and helping a
+              parent start without pressure.
             </p>
             <div className="mx-auto mt-30 max-w-[560px]">
               <EmailForm source="homepage_commercial_rebuild" />
