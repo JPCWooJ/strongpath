@@ -116,6 +116,14 @@ StrongPath is:
 - bootstrap-aware
 - iterative
 
+StrongPath is now transitioning from:
+- platform formation
+to:
+- publication operations
+- audience formation
+- distribution systems
+- conversion learning loops
+
 Optimize for:
 - execution speed
 - implementation clarity
@@ -123,6 +131,11 @@ Optimize for:
 - low regression risk
 - visible progress
 - constrained refinement loops
+- publishing consistency
+- audience capture
+- distribution discipline
+- conversion clarity
+- lightweight KPI learning systems
 
 Avoid:
 - enterprise bureaucracy
@@ -131,6 +144,9 @@ Avoid:
 - unnecessary abstractions
 - speculative architecture
 - uncontrolled automation
+- enterprise analytics systems
+- vanity metrics
+- growth-hack behavior
 
 Prefer:
 - small scoped changes

@@ -305,6 +305,21 @@ Do not change spacing tokens outside scoped components.
 Preserve existing CMS wiring.
 ```
 
+Analytics and instrumentation changes must:
+
+- preserve existing conversion tracking
+- avoid breaking attribution flows
+- avoid duplicate event firing
+- avoid polluting analytics datasets
+- maintain lightweight operational simplicity
+
+All instrumentation tasks must specify:
+
+- exact events being tracked
+- source pages/components
+- success criteria
+- validation methodology
+
 ---
 
 # 15. Incremental Refinement Methodology
