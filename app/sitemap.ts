@@ -8,7 +8,7 @@ import { absoluteUrl } from '@/lib/site'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts: Post[] = await client.fetch(postsQuery)
   const publishedPosts = mergePublishedPosts(posts)
-  const staticRoutes: MetadataRoute.Sitemap = ['/', '/blog', '/waitlist'].map((path) => ({
+  const staticRoutes: MetadataRoute.Sitemap = ['/', '/blog'].map((path) => ({
     url: absoluteUrl(path),
     lastModified: new Date(),
     changeFrequency: path === '/' ? 'weekly' : 'monthly',
