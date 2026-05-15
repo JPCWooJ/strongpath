@@ -9,11 +9,11 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = {
   title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
-    'Research-grounded strength guidance, books, guides, and practical pathways for adults and families facing age-related muscle loss.',
+    'Book-led strength guidance for adults and families facing muscle loss after 50.',
   openGraph: {
     title: 'StrongPath - Evidence-based strength for adults 55+',
     description:
-      'Find your starting point for strength, independence, caregiving, and evidence-based action after 50.',
+      'Start with muscle loss, strength, caregiving, and practical action after 50.',
     type: 'website',
   },
 }
@@ -22,11 +22,11 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 
 const homepageExcerptOverrides: Record<string, string> = {
   'why-muscle-loss-changes-everything-after-50':
-    'What changes when muscle loss begins to affect stairs, groceries, chairs, balance, recovery, and confidence.',
+    'What changes when muscle loss starts showing up on stairs, with groceries, in chairs, balance, recovery, and confidence.',
   'the-strength-crisis-nobody-talks-about':
-    'Why walking matters, why it is not enough by itself, and where real strength work enters the picture.',
+    'Why walking helps, where it falls short, and what strength training adds.',
   'what-actually-predicts-healthy-aging':
-    'The functional measures that tell a clearer story than vague healthy-aging advice.',
+    'Grip strength, gait speed, and the simple tests that reveal more than vague aging advice.',
 }
 
 const articleUseCases: Record<string, string> = {
@@ -35,7 +35,7 @@ const articleUseCases: Record<string, string> = {
   'the-strength-crisis-nobody-talks-about':
     'Use this if you have been told to move more, but still do not know what to do about strength.',
   'what-actually-predicts-healthy-aging':
-    'Use this if you want the measures and evidence behind the recommendations.',
+    'Use this if you want to know what doctors and researchers actually measure.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
@@ -55,7 +55,7 @@ const startingPoints = [
     eyebrow: 'For your own strength',
     title: "I notice I'm getting weaker",
     pain: 'Stairs feel longer. Groceries feel heavier. Getting up from low chairs takes more thought than it used to.',
-    promise: 'Understand what muscle loss can change and what to do before ordinary tasks keep getting smaller.',
+    promise: 'Learn what may be happening and what to do before daily tasks get harder.',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
     action: 'Start with muscle loss',
   },
@@ -63,14 +63,14 @@ const startingPoints = [
     eyebrow: 'For a parent',
     title: 'I want to help a parent',
     pain: 'A parent is moving less, recovering more slowly, or avoiding things they used to do.',
-    promise: 'Find a respectful way to talk about strength without pressure, fear, or taking over.',
+    promise: 'Find words and next steps that respect your parent without ignoring what is changing.',
     href: '/waitlist',
     action: 'Get caregiver guidance',
   },
   {
     eyebrow: 'For careful decisions',
     title: 'What Do the Experts Say?',
-    pain: 'The advice is familiar: walk more, eat protein, lift weights. The hard part is knowing what matters most.',
+    pain: 'Everyone says to walk, eat protein, and lift weights. The hard part is knowing what matters first.',
     promise: 'See what the evidence supports before choosing exercises, equipment, supplements, or a routine.',
     href: '/blog/the-strength-crisis-nobody-talks-about',
     action: 'Read the evidence guide',
@@ -80,25 +80,25 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book to understand what muscle loss threatens and why strength work matters after 50.',
+    copy: 'Use the book to understand what muscle loss can take away, and how training helps protect independence.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
   {
     title: 'Read the muscle-loss guide',
-    copy: 'Understand why muscle loss changes more than workouts, and why the first signs matter.',
+    copy: 'See why the first signs matter, before stairs, balance, recovery, or confidence change more.',
     action: 'Read the guide',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
   },
   {
     title: 'Get practical notes',
-    copy: 'Receive careful guidance on strength, muscle loss, protein, recovery, and helping a parent begin.',
+    copy: 'Get notes on strength, muscle loss, protein, recovery, and helping a parent begin.',
     action: 'Get practical notes',
     href: '/waitlist',
   },
   {
     title: 'Choose with care',
-    copy: 'Look at equipment, supplements, and programs with a clearer standard before spending money.',
+    copy: 'Know what is useful, what can wait, and what is mostly noise before spending money.',
     action: 'Get the notes',
     href: '/waitlist',
   },
@@ -107,7 +107,7 @@ const nextSteps = [
 const trustSignals = [
   {
     title: 'Book first',
-    copy: 'The book gives StrongPath a serious foundation before any product recommendation appears.',
+    copy: 'The book gives readers a serious place to start before any recommendation.',
   },
   {
     title: 'Current research',
@@ -115,7 +115,7 @@ const trustSignals = [
   },
   {
     title: 'No miracle claims',
-    copy: 'No age-reversal promises, no fear-led funnel, no claim stronger than the evidence supports.',
+    copy: 'No age-reversal promises. No fear. No claim stronger than the evidence supports.',
   },
   {
     title: 'No supplement hype',
@@ -139,16 +139,16 @@ const productPath = [
     action: 'Browse guides',
   },
   {
-    stage: 'For structure',
+    stage: 'For a plan',
     title: 'Strength plans',
-    copy: 'Use the guidance to ask better questions, avoid vague routines, and choose a plan that fits real life.',
+    copy: 'Ask better questions, avoid vague routines, and choose training that fits real life.',
     href: '/waitlist',
     action: 'Get practical notes',
   },
   {
-    stage: 'For decisions',
+    stage: 'For equipment',
     title: 'Tools',
-    copy: 'Learn which training supports deserve attention, which can wait, and which are mostly distraction.',
+    copy: 'Learn which training supports are worth attention, which can wait, and which are mostly distraction.',
     href: '/waitlist',
     action: 'Get tool guidance',
   },
