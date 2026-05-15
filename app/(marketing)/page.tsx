@@ -227,9 +227,9 @@ export default function HomePage() {
               Take the StrongPath not the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
-              Muscle loss can shrink your world, one staircase, suitcase, or slow recovery at a
-              time. StrongPath helps you and your family stay strong enough for the life you want
-              to keep.
+              Muscle loss as we age can shrink your world, one staircase, suitcase, or slow
+              recovery at a time. StrongPath helps you and your family stay strong enough to keep
+              the life you want.
             </p>
 
             <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
@@ -261,8 +261,11 @@ export default function HomePage() {
           </div>
 
           <aside className="bg-inkwell p-18 text-parchment shadow-[0_22px_70px_rgba(48,47,44,0.22)]">
-            <p className="font-utility text-[13px] leading-none text-parchment/58">
-              The book behind the path
+            <p className="text-center font-display text-[32px] font-normal leading-none text-parchment">
+              Amazon Bestseller
+            </p>
+            <p className="mt-8 text-center font-utility text-[12px] leading-[1.35] text-parchment/62">
+              Aging • Weight Training • Exercise • Longevity
             </p>
             <div className="mt-14 grid grid-cols-[116px_1fr] gap-16 sm:grid-cols-[150px_1fr] md:grid-cols-1">
               <div className="bg-parchment p-4">
