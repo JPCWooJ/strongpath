@@ -115,7 +115,7 @@ const trustSignals = [
   },
   {
     title: 'No miracle claims',
-    copy: 'No anti-aging promises, no fear-led funnel, no claim stronger than the evidence supports.',
+    copy: 'No age-reversal promises, no fear-led funnel, no claim stronger than the evidence supports.',
   },
   {
     title: 'No supplement hype',
@@ -224,11 +224,12 @@ export default function HomePage() {
               Evidence-based strength after 50
             </p>
             <h1 className="font-display text-[50px] font-normal leading-[0.96] text-inkwell sm:text-[70px] lg:text-[86px]">
-              Keep strength from becoming the thing that limits your life.
+              Choose the StrongPath before the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
-              StrongPath helps adults and families understand muscle loss, choose credible next
-              steps, and find the books, guides, and practical options worth considering.
+              Age-related muscle loss is measurable, and often preventable. StrongPath gives adults
+              and families serious guidance for preserving strength, balance, recovery, travel,
+              caregiving, and the ordinary capabilities that keep life open.
             </p>
 
             <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
