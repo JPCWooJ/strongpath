@@ -55,32 +55,32 @@ const startingPoints = [
     eyebrow: 'For your own strength',
     title: "I notice I'm getting weaker",
     pain: 'Stairs feel longer. Groceries feel heavier. Getting up from low chairs takes more thought than it used to.',
-    promise: 'Understand what muscle loss can change, what matters first, and why strength work is different from general activity.',
+    promise: 'Understand what muscle loss can change and what to do before ordinary tasks keep getting smaller.',
     href: '/blog/why-muscle-loss-changes-everything-after-50',
     action: 'Start with muscle loss',
   },
   {
     eyebrow: 'For a parent',
     title: 'I want to help a parent',
-    pain: 'You can see someone you love losing strength, but you do not want to pressure, scare, or talk down to them.',
-    promise: 'Find a respectful way to frame the problem and a practical path you can put in front of the family.',
+    pain: 'A parent is moving less, recovering more slowly, or avoiding things they used to do.',
+    promise: 'Find a respectful way to talk about strength without pressure, fear, or taking over.',
     href: '/waitlist',
     action: 'Get caregiver guidance',
   },
   {
-    eyebrow: 'For a real plan',
-    title: 'I want a serious strength plan',
-    pain: 'You have heard the usual advice to walk more, eat better, and lift weights, but the details are still unclear.',
-    promise: 'Start with research-backed guidance on strength, protein, recovery, progression, and tools worth considering.',
+    eyebrow: 'For careful decisions',
+    title: 'I want to know what actually works',
+    pain: 'The advice is familiar: walk more, eat protein, lift weights. The hard part is knowing what matters most.',
+    promise: 'Separate useful guidance from noise before choosing exercises, equipment, supplements, or a routine.',
     href: '/blog/the-strength-crisis-nobody-talks-about',
-    action: 'Read the strength guide',
+    action: 'Read the evidence guide',
   },
 ]
 
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Read the category-defining StrongPath book for the larger argument about aging, strength, and independence.',
+    copy: 'Use the book for the fuller explanation of muscle loss, aging, and what strength work is trying to protect.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
@@ -127,7 +127,7 @@ const productPath = [
   {
     stage: 'Available now',
     title: 'Book',
-    copy: 'The deeper starting point for readers who want the full StrongPath argument.',
+    copy: 'A practical foundation for understanding muscle loss, training, and independence after 50.',
     href: 'amazon',
     action: 'Buy on Amazon',
   },
@@ -277,11 +277,11 @@ export default function HomePage() {
               </div>
               <div>
                 <h2 className="font-display text-[30px] font-normal leading-[1.02] text-parchment md:mt-16">
-                  Read the deeper case for strength.
+                  When ordinary tasks start to change.
                 </h2>
                 <p className="mt-10 font-body text-[16px] leading-[1.5] text-parchment/74">
-                  <cite>Choosing the StrongPath</cite> is the serious starting point for readers
-                  who want the full argument before choosing a plan.
+                  <cite>Choosing the StrongPath</cite> explains how muscle loss affects aging,
+                  recovery, and independence, and why resistance training belongs in the answer.
                 </p>
                 <AmazonLink
                   asin="1626344760"
@@ -301,12 +301,12 @@ export default function HomePage() {
             <div>
               <p className="sp-kicker mb-12 text-inkwell/56">Find your starting point</p>
               <h2 className="font-display text-[42px] font-normal leading-[1.02] text-inkwell md:text-[64px]">
-                Choose the situation that brought you here.
+                Start with what is happening now.
               </h2>
             </div>
             <p className="font-body text-[18px] leading-[1.5] text-inkwell/70">
-              The useful path is different for the person noticing changes, the adult child trying
-              to help, and the reader ready for a serious plan.
+              Your own strength, a parent&apos;s changing routine, or the need to sort good advice
+              from noise each calls for a different first step.
             </p>
           </div>
 
