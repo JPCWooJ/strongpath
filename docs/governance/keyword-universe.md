@@ -6,7 +6,21 @@ Authority: Tier 3 (vertical). Inherits from BRAND.md v3, PERSONAS.md v2, PROJECT
 
 ---
 
+## Copy Governance Overlay
+
+**Copy-governance authority:** This file inherits the four-tag system from `COPY_GOVERNANCE_STANDARD.md`.
+
+**Production rule:** Keywords are search inputs, not public copy. Raw keyword phrases may inform headlines, metadata, URLs, internal links, article briefs, and commerce planning only after editorial, claim-safety, and brand review.
+
+**High-risk note:** This document contains SEO process language, ranking language, volume/difficulty estimates, internal phase language, and raw keyword wording that can become spammy, claimy, or internally focused if copied into homepage, article, commerce, or email copy.
+
+---
+
 ## Purpose
+
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section to understand the SEO workstream and document purpose. Do not quote or paraphrase it in public copy.
 
 The seed vocabulary for every downstream SEO asset — pillar pages, satellite articles, internal linking architecture, paid-search negative lists, and AI-advisor topic coverage. Session 1 output. Session 2 turns selected clusters into article briefs. Session 3 turns briefs into the publishing calendar and internal linking map.
 
@@ -15,6 +29,10 @@ Not a commitment to write about every keyword. A map of the terrain.
 ---
 
 ## Method
+
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section for provenance, validation needs, and claim-review posture. Do not surface volume, difficulty, phase, skill, or process language in public-facing copy.
 
 Seed keywords derived from:
 1. BRAND.md section 3.2 (approved vocabulary) and section 7 (four messaging pillars)
@@ -43,6 +61,10 @@ The full excluded-keyword log is in Section 8.
 
 ## How to read this file
 
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section as a navigation guide for agents and operators. Do not reuse section descriptions as reader-facing explanation.
+
 **Section 2** — Seed terms by messaging pillar. The starting vocabulary, 24 seeds, one paragraph per pillar explaining the strategic frame.
 
 **Section 3** — Expanded keyword tables by persona-moment. Three tables (Margaret, David-Before, David-After), ~30-45 keywords each. This is the bulk of the file and the working map.
@@ -65,9 +87,17 @@ The full excluded-keyword log is in Section 8.
 
 ## 2. Seed Terms by Messaging Pillar
 
+**Copy tag: [STRATEGIC_CONTEXT_ONLY]**
+
+**Agent-use rule:** Use these seeds to understand topical coverage and search demand. Do not use pillar/process framing or raw seed lists as homepage, article, commerce, or email copy.
+
 24 seeds. These are the starting points for topical expansion. Most downstream keywords ladder up to one of these.
 
 ### Pillar 1 — Sarcopenia is real, measurable, and largely preventable
+
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Public-leakage risk:** "Preventable," "symptoms," and disease-adjacent sarcopenia language require careful evidence framing and may not be used as product or program claims.
 
 Educational backbone. Defines the problem. The primary Pillar 1 head term, `sarcopenia`, is high-difficulty (Cleveland Clinic, Mayo Clinic, NIA all rank) but the mid-tail and question-format variants are winnable. Strategy: build a comprehensive pillar page on `what is sarcopenia` that outranks thin informational content, then satellite articles on mechanism, measurement, and stage-specific response.
 
@@ -80,6 +110,10 @@ Educational backbone. Defines the problem. The primary Pillar 1 head term, `sarc
 
 ### Pillar 2 — Strength is the operating system of independence
 
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Public-leakage risk:** Functional-outcome language is useful, but fall-prevention, "seniors," and disease-risk wording must not become unsupported public claims.
+
 Reframes strength from aesthetic to functional. Outcome is not abs — it is carrying groceries at 75, walking a mile at 85, staying in your own home. High emotional-weight pillar. Keywords here skew toward functional-outcome queries (falls, balance, independence) rather than aesthetic queries (toning, weight loss, body composition). Caution: several seeds here brush fall-prevention territory, which is closer to disease-claim territory per the skill (flagged individually).
 
 7. strength training after 60
@@ -91,6 +125,10 @@ Reframes strength from aesthetic to functional. Outcome is not abs — it is car
 
 ### Pillar 3 — The research is clear; the execution is the hard part
 
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Public-leakage risk:** Protocol, program, protein, and "best exercises" language can sound like over-optimized commerce copy unless rewritten as practical editorial guidance.
+
 Most readers have heard "lift weights and eat protein." Our job: package it into a protocol a 65-year-old can follow. Keywords here skew execution-focused: protocols, programs, protein targets, progression, form. High commercial intent (these readers are close to buying a program). Also the pillar that will eventually carry the AI advisor and program pages.
 
 13. strength training protocol for older adults
@@ -101,6 +139,10 @@ Most readers have heard "lift weights and eat protein." Our job: package it into
 18. best exercises for sarcopenia
 
 ### Pillar 4 — You do not walk this alone
+
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Public-leakage risk:** Caregiver and future-membership strategy may inform article planning, but membership/program roadmap language is not public copy.
 
 Community and guidance pillar. Almost entirely David territory in Phase 1 (Margaret searches are self-oriented; David searches are parent-oriented or family-oriented). Carries caregiver content, family-training content, and eventually the membership. Lowest-volume pillar but highest conversion intent for David.
 
@@ -115,7 +157,15 @@ Community and guidance pillar. Almost entirely David territory in Phase 1 (Marga
 
 ## 3. Expanded Keyword Tables by Persona-Moment
 
+**Copy tag: [STRATEGIC_CONTEXT_ONLY]**
+
+**Agent-use rule:** Treat these tables as SEO research and brief inputs. Keyword rows, volume estimates, difficulty labels, intent labels, and strategic notes are not production copy.
+
 ### 3.1 Margaret — The Pre-Frail Adult
+
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Agent-use rule:** Use this section for reader language, search intent, and topic selection. Public copy may use selected phrases only after converting keyword wording into natural reader-facing prose.
 
 Self-oriented. Has noticed something. Not in crisis. Skeptical filter on overhyped content. High trust in editorial register and citation discipline. Copy must read at peer level — never "senior," never "elderly."
 
@@ -162,6 +212,10 @@ Volume skew: mid-tail informational queries. Commercial intent rises sharply onc
 
 ### 3.2 David — Before Moment
 
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Agent-use rule:** Use this section for caregiver concerns and article discovery pathways. Public copy must avoid making "elderly," "frailty," or fall-prevention language feel clinical, stigmatizing, or claimy.
+
 Parent is aging, not in crisis. David is acting preventively out of goodwill. Receptive to long content. Willing to give a book. Willing to start a conversation with a parent. The ideal StrongPath entry point.
 
 Volume skew: lower than Margaret's cluster because caregiver-preventive searches are a smaller slice of total search than self-oriented health searches. But the intent is extremely high and competition is thinner.
@@ -207,6 +261,10 @@ Volume skew: lower than Margaret's cluster because caregiver-preventive searches
 
 ### 3.3 David — After Moment
 
+**Copy tag: [STRATEGIC_CONTEXT_ONLY]**
+
+**Agent-use rule:** Use this section cautiously for post-event content planning. Acute recovery, surgery, fall, and rehab-adjacent queries require clinician review before becoming public article or commerce copy.
+
 Post-crisis. Parent has experienced an event — fall, surgery, skilled nursing stint, wake-up moment. David is newly persuaded that prevention matters. Highest-intent entry point in the whole persona map.
 
 Volume skew: lower total, but highest commercial intent and lowest acquisition cost per conversion. These are the queries most likely to convert on the first visit.
@@ -236,6 +294,10 @@ Volume skew: lower total, but highest commercial intent and lowest acquisition c
 
 ## 4. Cross-Cutting Clusters
 
+**Copy tag: [STRATEGIC_CONTEXT_ONLY]**
+
+**Agent-use rule:** Use this section to plan shared topic architecture and tool opportunities. Do not lift affiliate, calculator, internal-link, or email-capture language into public copy.
+
 Keywords that serve both Margaret and David with the same angle. Build once, internally link from both persona tracks.
 
 | # | Keyword | Est. Vol. | Difficulty | Intent | Pillar | FTC/FDA | Note |
@@ -261,6 +323,10 @@ Keywords that serve both Margaret and David with the same angle. Build once, int
 
 ## 5. High-Priority Clusters for Session 2
 
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section to prioritize briefs and production sequencing. Do not expose cluster ranking, pillar/satellite structure, commercial adjacency, or session language to readers.
+
 The 10 clusters that should become the first pillar pages and satellites. Session 2 produces one brief per cluster. Ranked by Phase 1 strategic value — which = highest intent + lowest difficulty + strongest book-citation support.
 
 | Rank | Cluster | Core Keyword | Persona-Moment | Pillar | Rationale |
@@ -285,6 +351,10 @@ The 10 clusters that should become the first pillar pages and satellites. Sessio
 ---
 
 ## 6. Long-Tail / Question-Format Bank
+
+**Copy tag: [EDITORIAL_REFERENCE_ONLY]**
+
+**Agent-use rule:** Use questions as research prompts, FAQ inputs, or article-brief material. Rewrite raw questions for public copy when they contain "reverse," "prevent," "elderly," clinical-rehab, or supplement-safety phrasing.
 
 Pulled from Google's People Also Ask, AnswerThePublic (3 searches on `sarcopenia`, `strength training over 60`, `how to help aging parents`), and Autocomplete expansion. These are the FAQ-section gold mines. Most are low-volume but convert because the intent is precise.
 
@@ -331,6 +401,10 @@ Session 2 brief pattern: cluster 5-8 related questions into a single FAQ section
 
 ## 7. "Her Words, Not Ours" Literal-Phrase Cluster
 
+**Copy tag: [PUBLIC_COPY_SAFE]**
+
+**Agent-use rule:** These phrases are the closest thing in this file to reader-facing language. They may be used in public copy only when the surrounding sentence is natural, respectful, and claim-safe; caution-marked phrases still require editorial handling.
+
 Verbatim from PERSONAS.md §5 for Margaret and David. These are not keywords for metadata — they are phrases that must appear in article headlines, openers, and meta descriptions because they match the reader's internal monologue. Rank reward is secondary; trust signal is primary.
 
 **Margaret verbatim (use in opener / H2 / meta description):**
@@ -356,6 +430,10 @@ Verbatim from PERSONAS.md §5 for Margaret and David. These are not keywords for
 ---
 
 ## 8. Excluded Keywords Log
+
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section as a negative keyword and prohibited-language reference. Do not use excluded terms as public headlines, section hooks, commerce copy, or email subject lines unless a later governance decision explicitly permits a narrow exception.
 
 High-volume or obvious keywords deliberately not pursued. One-line rationale per entry.
 
@@ -391,6 +469,12 @@ High-volume or obvious keywords deliberately not pursued. One-line rationale per
 
 ## 9. Brand-Term and Defensive SEO
 
+**Copy tag: [STRATEGIC_CONTEXT_ONLY]**
+
+**Agent-use rule:** Use this section for search ownership and site architecture planning. Public brand pages must still follow current `BRAND.md` author-surface restrictions and copy governance.
+
+**Public-leakage risk:** Author bio, credentials page, founder page, program page, and defensive SEO language may conflict with newer brand-surface rules if implemented without review.
+
 Navigational queries. StrongPath must own these results on its own domain. Thin content, but non-negotiable.
 
 | Keyword | Est. Vol. | Priority | Action |
@@ -411,6 +495,10 @@ Navigational queries. StrongPath must own these results on its own domain. Thin 
 
 ## 10. Open Questions for Founder Review
 
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Use this section for unresolved strategy decisions only. Do not expose recommendations, roadmap tradeoffs, claim-risk debates, or "founder review" language publicly.
+
 Before session 2 (brief production), these need decisions. Flagged here rather than buried in session 2 to keep the ask-before-instruct discipline.
 
 1. **Supplement keyword posture.** Creatine, whey, leucine, vitamin D all have meaningful commercial volume (X-2, X-4, X-5, X-6). Book/product firewall says educational content is fine; Amazon-affiliate product linking is also fine. The question is whether to *optimize* for these commercial-intent terms now (review articles) or defer until the own-brand supplement roadmap is clearer. My recommendation: **write the educational pieces now (safe) and add Amazon-affiliate product reviews after the first 10 pillar pages are live** — avoids a "supplement site cosplaying as education" reading that would damage the brand per BRAND.md §8.
@@ -426,6 +514,10 @@ Before session 2 (brief production), these need decisions. Flagged here rather t
 ---
 
 ## Change Log
+
+**Copy tag: [INTERNAL_ONLY]**
+
+**Agent-use rule:** Operational history only. Never public copy.
 
 | Date | Change | Session |
 |---|---|---|
