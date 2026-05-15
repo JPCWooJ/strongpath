@@ -8,13 +8,31 @@
 
 ---
 
+## Copy Governance Overlay
+
+**Copy-governance authority:** This file now inherits the tag system from `COPY_GOVERNANCE_STANDARD.md`. Tags in this document classify how a section may be used in public-facing work.
+
+**Production rule:** A section tagged `[PUBLIC_COPY_SAFE]` may be reused directly if it still fits the page context and legal requirements. Sections tagged `[EDITORIAL_REFERENCE_ONLY]`, `[INTERNAL_ONLY]`, or `[STRATEGIC_CONTEXT_ONLY]` must be rewritten into reader-facing copy before publication.
+
+**High-risk note:** BRAND.md contains intentionally strategic language such as "platform," "second edition," "Phase 1," "moat," and roadmap references. Those phrases are useful governance language, not default public copy.
+
+---
+
 ## 1. Positioning Statement
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** This section defines market position and strategic direction. Do not paste the positioning sentence or its unpacking directly into homepage, article, commerce, or email copy without rewriting for the reader.
 
 **StrongPath is the evidence-based strength platform for adults who refuse to accept muscle loss as inevitable — built on the same research foundation behind *Choosing the StrongPath: Reversing the Downward Spiral of Aging*, an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.**
 
 This sentence is the north star. If a campaign, article, or product does not ladder back to it, it does not belong in the brand.
 
 ### Unpacking the sentence
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Public-leakage risk:** Contains "platform," future-state product language, and brand-architecture explanation. Use for strategy; rewrite into reader benefit before publication.
 
 - **"Evidence-based"** — Every claim we make cites current peer-reviewed research, a named institutional source (Harvard Health, Mayo Clinic, NIH, academic institutions), or a mechanism. We are the serious option. Competitors shout; we cite.
 - **"Strength platform"** — Not a blog, not a supplement brand, not an app. A platform that will grow to include content, programs, a membership, an AI advisor, and eventually supplements. The platform is the second edition of the work *Choosing the StrongPath* started — same intellectual project, current medium. The book did the work the book could do in 2018; the platform does the work a website, app, and AI-enabled advisor can do in 2026 and beyond.
@@ -26,6 +44,10 @@ This sentence is the north star. If a campaign, article, or product does not lad
 ---
 
 ## 2. The Brand in Three Words
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** This section governs tone. The three words may guide public copy, but visible copy should usually be more concrete and reader-facing.
 
 **Serious. Direct. Hopeful.**
 
@@ -39,11 +61,17 @@ In that order. When they conflict, earlier beats later.
 
 ## 3. Voice
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** This section defines voice standards for writers and agents. It is not homepage copy.
+
 **The specialist, not the salesman.**
 
 StrongPath sounds like the well-regarded specialist you get referred to — not the urgent care clinic, not the influencer, not the supplement brand. Calm, informed, a little dry. Confident enough to say "most of what you have read about aging is wrong" without hedging. Disciplined enough to never overclaim what the science supports.
 
 ### 3.1 Voice rules
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 1. **Cite mechanisms, not miracles.** Resistance training, protein synthesis, motor unit recruitment, recovery. These words build trust. "Transform your body in 30 days" destroys it.
 2. **Write at a college reading level, not a medical journal.** We translate research. We are not performing it.
@@ -54,15 +82,25 @@ StrongPath sounds like the well-regarded specialist you get referred to — not 
 
 ### 3.2 Words we use
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
 *Strength. Capacity. Independence. Protocol. Research. Mechanism. Protein synthesis. Resistance. Recovery. Progression. Framework. Evidence. Path. Build. Maintain. Preserve. Sarcopenia (the muscle-mass side). Dynapenia (the strength side — the loss of force, as distinct from the loss of mass).*
 
 ### 3.3 Words we do not use
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** These prohibitions are production-safe as rules, but they are not reader-facing copy.
 
 *Anti-aging. Miracle. Breakthrough. Cure. Reverse. Secret. Hack. Fountain of youth. Transformation. Journey (overused). Lifestyle. Wellness (too soft). Longevity (crowded buzzword — use carefully, not our primary frame).*
 
 **Note on "reverse" / "reversing":** The word appears in the book's published subtitle (*Reversing the Downward Spiral of Aging*). It is allowed to appear inside an italicized book title when we cite the book — that is the authors' claim, not ours. It is **not** allowed in our own voice to describe what StrongPath, StrongPath programs, or StrongPath products do. The book/product firewall (Section 9.1) governs.
 
 ### 3.4 Phrases that fail the voice test
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** These are negative examples for review and training. Do not use them publicly except in an approved internal critique.
 
 - "Don't let age slow you down!" — exclamation point, generic, performative
 - "Unlock your best body at any age" — unlock, best body, both disqualifying
@@ -72,6 +110,10 @@ StrongPath sounds like the well-regarded specialist you get referred to — not 
 
 ### 3.5 Phrases that pass
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** These are directional examples, not automatic production copy. Any example containing a specific health claim, "reverse," or a protocol implication still requires legal and sourcing review before public use.
+
 - "Sarcopenia is not a disease of aging. It is a disease of disuse, and the research is clear on what reverses it."
 - "Most strength advice for people over 60 is either too cautious to work or too aggressive to be safe. There is a middle path, and it is well-documented."
 - "You do not need to train like an athlete. You need to train like a person whose independence depends on it — because it does."
@@ -80,9 +122,15 @@ StrongPath sounds like the well-regarded specialist you get referred to — not 
 
 ## 4. Tone by Audience
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Audience tone guidance may inform public copy, but persona descriptions and example openers require adaptation, sourcing, and copy review before publication.
+
 Voice is constant across StrongPath. Tone shifts by reader. Every asset identifies its primary audience before the first word is written.
 
 ### 4.1 The Pre-Frail Adult (55-72, end user)
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 **Tone:** Peer-level, respectful, specific.
 
@@ -92,6 +140,8 @@ The reader has noticed something — stairs are harder, groceries feel heavier, 
 
 ### 4.2 The Proactive Caregiver (45-60, adult child of an aging parent)
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
 **Tone:** Reassuring and directive. Reduces overwhelm. Hands them a credible path.
 
 The reader is watching a parent decline and feeling helpless. They have Googled, they are exhausted, they do not know who to trust. We become the trusted resource they can put in their parent's hands. Our job is to reduce their cognitive load.
@@ -99,6 +149,10 @@ The reader is watching a parent decline and feeling helpless. They have Googled,
 *Example open:* "If you are watching a parent lose strength and independence, you already know the Google search for answers is overwhelming and mostly unhelpful. Here is what the research actually says about age-related muscle loss, and here is a program your parent can start this week."
 
 ### 4.3 The Allied Health Professional (PT, OT, geriatric RN, primary care)
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** This section contains credentialing language appropriate for clinician-facing pages only. Do not reuse it on consumer homepage or commerce surfaces without adaptation.
 
 **Tone:** Professional, research-forward, peer-to-peer.
 
@@ -110,6 +164,12 @@ The reader recommends resources to patients and cannot afford to recommend somet
 
 ## 5. Authority Hierarchy
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** This section defines authority architecture. It should shape page structure and trust signals, not appear as visible explanatory narration.
+
+**Public-leakage risk:** Terms such as "moat," "Phase 1," "platform-as-second-edition," "citation record," and "Layer 1 / Layer 2" are governance terms. Rewrite into reader-facing trust language before publication.
+
 **This is the moat.** Every public-facing page surfaces the hierarchy above the fold or within the first scroll. Per BP-06, this is non-negotiable — the single biggest gap in the prior build was that the authority was invisible.
 
 Authority operates on two layers. **Credibility authority** establishes the brand's right to speak in the category. **Substantiation authority** proves the specific claims in any given piece of content. These are different jobs done by different inputs; they are not interchangeable. The two layers reinforce each other over time — sustained substantiation discipline builds the brand's credibility; the brand's credibility earns the reader's attention long enough for substantiation to do its work.
@@ -117,6 +177,8 @@ Authority operates on two layers. **Credibility authority** establishes the bran
 For Phase 1, no active medical advisor is on the brand. Credibility rests on the book, the platform-as-second-edition framing, and the brand's accumulating citation record. Substantiation rests on current third-party research. Overclaiming an active medical presence would be a credibility and legal risk.
 
 ### The two-layer authority model
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
 
 **Layer 1 — Credibility authority.** Three elements compound into Layer 1, and each reinforces the others:
 
@@ -132,11 +194,21 @@ This two-layer model protects the brand against two different risks. Overclaimin
 
 ### The founder narrative — the relay
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** This is founder/brand context. Public use is limited to approved About page and homepage book-section founder voice. Do not use as general-purpose brand copy.
+
+**Public-leakage risk:** Contains operational history, author availability, and relay framing that can sound internal or performative if surfaced outside approved contexts.
+
 StrongPath exists because Fred Bartlit and Steven Droullard wrote *Choosing the StrongPath* in 2018, the world listened, and the authors then asked Jeff Camp — a friend of close to thirty years — whether his background could carry the work further than they could carry it themselves. They entrusted him with their legacy and with the responsibility of bringing the path they had named to many more people than they could reach themselves. Fred is now in his nineties; Steven is well into his eighties. They are not operationally involved and will not be. They are not absent either — they are the previous runners on a relay, watching the next leg of the race they started.
 
 This is the founder narrative the brand operates from. It is a fact, not a device. It explains why the platform exists, why Jeff is operating it, and why the book is honored without being performed. The narrative lives on the About page and on the homepage book section in Jeff's first-person voice. In brand-voice copy elsewhere on the platform, the narrative is implicit — surfaced through editorial decisions, not declared in marketing language.
 
 ### Where authors appear
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Production rule for author visibility. Not public copy.
 
 The book's authors — Fred Bartlit, Steven Droullard, and Marni Boppart, ScD — appear on the platform in exactly two places, in both cases as the book's small-type credit line below the title:
 
@@ -146,6 +218,10 @@ The book's authors — Fred Bartlit, Steven Droullard, and Marni Boppart, ScD �
 The authors appear inside the book cover image wherever it is displayed — that is unavoidable and correct, and the cover image is treated as an object of authority per §6.3. They do not appear in article opener parentheticals, brief openers, third-party citations, brand-voice prose, social-media bios, email signatures, paid-media creative, or anywhere else on the platform. The first-person founder narrative on the About page and homepage is the one place author names are spoken in close-to-warm language; that language is Jeff's voice referring to his friends, not brand-voice attribution of views to active operators.
 
 ### Canonical citation format for the book
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** The exact book credit line and citation rules may be used on approved book-reference surfaces, subject to the author-visibility restrictions in this section.
 
 The book's Amazon-verified credit line, used on the homepage book section and on the Brief 10 page, in small type below the title:
 
@@ -160,6 +236,10 @@ Rules for citing the book elsewhere on any page:
 
 ### Order of prominence on every page
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** This is layout and trust-priority guidance. Convert into visible page copy only after rewriting for the reader.
+
 | # | Who / What | How to Reference |
 |---|------------|------------------|
 | 1 | The book — *Choosing the StrongPath: Reversing the Downward Spiral of Aging* | Cover visible. "Amazon bestseller in Aging, Weight Training, Exercise, and Longevity." Direct buy link with Amazon Associates tag `stron02-20`. Presented as credibility anchor and category proof — not as a citation for specific health claims. Author credit line in small type below the title appears only on the homepage book section and the Brief 10 page. |
@@ -170,6 +250,10 @@ Rules for citing the book elsewhere on any page:
 | 6 | Real testimonials | Only when they exist. Never fabricated. Outcomes + duration; no hype. |
 
 ### Authority rules
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Production governance. Do not publish as reader-facing copy.
 
 - **Author names appear only on the two permitted surfaces.** Homepage book section credit line and Brief 10 credit line. Nowhere else. The cover image is treated as an object; the names visible inside the cover art are part of the object.
 - **Never put Fred or Steven on camera for new content.** They are 94 and 80. Honor them as the authors who handed off the path; do not ask them to perform.
@@ -185,11 +269,17 @@ Rules for citing the book elsewhere on any page:
 
 ## 6. Visual Direction
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Design guidance for implementation. Not visible copy.
+
 **Editorial and institutional, not athletic or motivational.**
 
 The reference set is *The Atlantic*, Harvard Health Publishing, and the Mayo Clinic patient-facing site — not Men's Journal, Nike, or a supplement brand. We are the serious option. The design signals that before any word is read.
 
 ### 6.1 Color palette
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 Primary palette anchored in blue and gold, as specified by the founder. Final palette to be adjusted once the book cover is placed next to the design mockups — the cover dictates the final precise shades.
 
@@ -208,6 +298,8 @@ Primary palette anchored in blue and gold, as specified by the founder. Final pa
 
 ### 6.2 Typography
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 | Role | Font | Fallback |
 |------|------|----------|
 | **Headlines** | Tiempos Headline or Source Serif 4 | Georgia, serif |
@@ -221,6 +313,8 @@ The serif headline plus sans-serif body is the editorial signal. It says *we pub
 **Size minimums:** Body copy is 18px minimum on desktop, 17px minimum on mobile. A concession to the audience and a differentiator — most health sites publish at 14-16px.
 
 ### 6.3 Imagery
+
+**Copy tag:** `[INTERNAL_ONLY]`
 
 Photography direction, in order of preference:
 
@@ -237,6 +331,10 @@ Photography direction, in order of preference:
 
 ### 6.4 Layout principles
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Public-leakage risk:** Contains implementation rules such as "One primary action per page" and "Credentials appear before claims." Use to design pages, not as visible section copy.
+
 - **White space is a credibility signal.** Crowded pages feel like supplement funnels. Generous whitespace feels like *The Atlantic*.
 - **One primary action per page.** Hero CTA is singular. Secondary actions appear below the fold.
 - **Credentials appear before claims.** Author names, book cover, and Dr. Boppart's affiliation always precede the pitch.
@@ -246,21 +344,39 @@ Photography direction, in order of preference:
 
 ## 7. Messaging Pillars
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Pillars govern content strategy. Pillar names may inspire public copy, but the explanations include claims and product-roadmap references that require rewriting.
+
 Four pillars. Every piece of content — article, email, ad, video — ladders up to one of them. If it does not fit a pillar, it does not ship.
 
 ### Pillar 1 — Sarcopenia is real, measurable, and largely preventable
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains measurable health claims and "preventable" language. Any public use requires sourcing and legal review.
 
 Our educational backbone. Defines the problem without fear. Anchors in data (15% muscle loss from 50-70, 30%+ of adults over 60 affected, ICD-10 code since 2016) and in the three mechanisms (resistance training, protein, recovery).
 
 ### Pillar 2 — Strength is the operating system of independence
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
 Reframes strength from aesthetic to functional. The outcome the reader cares about is not abs — it is carrying groceries at 75, playing with grandchildren at 80, avoiding a nursing home at 85. Strength is the input; independence is the output. Carries the emotional weight.
 
 ### Pillar 3 — The research is clear; the execution is the hard part
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains future product references. Rewrite for current reader benefit before publication.
+
 Most readers have heard "lift weights and eat protein" before. Our job: package it into a protocol a 65-year-old can actually follow without hiring a trainer. Carries the programs and the AI advisor.
 
 ### Pillar 4 — You do not walk this alone
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains future membership reference. Do not publish as-is.
 
 Community, trusted resources, a credible guide. The caregiver pillar. The antidote to the overwhelming Google search. Over time, carries the membership.
 
@@ -268,7 +384,13 @@ Community, trusted resources, a credible guide. The caregiver pillar. The antido
 
 ## 8. What the Brand IS and IS NOT
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** This section is a brand review aid. It can guide copy, but visible public copy should be more specific to the reader's situation and next action.
+
 ### StrongPath IS
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 - Serious, research-grounded, and direct
 - A premium platform with editorial-quality content
@@ -282,6 +404,8 @@ Community, trusted resources, a credible guide. The caregiver pillar. The antido
 - Calm, confident, and a little dry
 
 ### StrongPath IS NOT
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 - Fear-based ("don't end up in a wheelchair")
 - Aspirational in a "look great naked at 70" way
@@ -298,9 +422,17 @@ Community, trusted resources, a credible guide. The caregiver pillar. The antido
 
 ## 9. Legal and Compliance Guardrails
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Production governance and compliance standards. Required disclaimers are public-copy safe only where explicitly marked.
+
 Sarcopenia is medical-adjacent. The FTC and FDA have jurisdiction over everything we publish that touches health. These rules are not suggestions.
 
 ### 9.1 The book/product firewall
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Public-leakage risk:** Contains allowed/prohibited examples. Use for review; do not publish the explanatory framework as customer-facing copy.
 
 **Three separate rules operate in parallel here, and all three matter.**
 
@@ -325,6 +457,8 @@ Sarcopenia is medical-adjacent. The FTC and FDA have jurisdiction over everythin
 
 ### 9.2 Verbs we use
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 **Allowed:** may support, may help maintain, is associated with, research suggests, some studies show, has been shown to (with citation), is consistent with.
 
 **Prohibited:** cures, treats, prevents (for supplements specifically — FDA-regulated), reverses, eliminates, guarantees, is clinically proven (unless we have a clinical trial).
@@ -332,6 +466,10 @@ Sarcopenia is medical-adjacent. The FTC and FDA have jurisdiction over everythin
 **Note on "reverse" / "reversing":** The word appears in the book's subtitle. It is allowed to appear inside the italicized book title when the book is cited. It is never used in our own voice.
 
 ### 9.3 Required disclaimers
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** The quoted disclaimer language is approved for public use where required.
 
 Every page that discusses health interventions carries the BP-04 medical disclaimer verbatim:
 
@@ -345,6 +483,8 @@ Every piece of content mentioning supplements carries:
 
 ### 9.4 Testimonials
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 Per BP-07, we never fabricate. When real testimonials are displayed, they include:
 - Full first name and last initial
 - Specific, quantified outcome with duration ("gained measurable strength over 12 weeks," not "changed my life")
@@ -353,9 +493,15 @@ Per BP-07, we never fabricate. When real testimonials are displayed, they includ
 
 ### 9.5 The AI advisor
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
 Per BP-05, the system prompt carries the full compliance block. Never diagnoses. Never recommends stopping medications. Never claims products treat, cure, or prevent disease. The Brand Ambassador reviews the advisor's system prompt before any change.
 
 ### 9.6 When in doubt, underpromise
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** This section may inform public tone, but its examples are review guidance, not default public copy.
 
 **Explicit rule.** When the research is ambiguous, when an outcome varies widely by individual, or when a claim feels strong enough to need hedging — underpromise. Brands that underpromise and cite their sources earn the reader. Brands that overpromise get clicks and lose trust. Conversion pressure will push toward bigger claims; this rule exists to push back.
 
@@ -366,6 +512,10 @@ Practical applications:
 - When a competitor overclaims, do not match their claim. Cite ours accurately and let the comparison speak for itself.
 
 ### 9.7 Third-party sourcing policy
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Sourcing governance for writers and agents. Not public copy.
 
 **Explicit rule.** Every specific claim in StrongPath content is substantiated by a current, named, third-party source. The book is not a substantiation source. The book is a credibility anchor for the brand as a whole; it does not carry individual claims in individual articles.
 
@@ -385,6 +535,10 @@ Practical applications:
 ---
 
 ## 10. The Brand Review Rubric
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal checklist for review. Not public copy.
 
 When reviewing any copy, email, ad, or creative, run through this checklist. A failure on any item is a rewrite.
 
@@ -441,6 +595,10 @@ When reviewing any copy, email, ad, or creative, run through this checklist. A f
 
 ## 11. Living Decisions Log
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance record. Do not use as public copy.
+
 Standing brand decisions made in Brand Ambassador sessions. Add to this list when a decision is made that future sessions should not re-debate.
 
 | Date | Decision | Rationale |
@@ -474,6 +632,10 @@ Standing brand decisions made in Brand Ambassador sessions. Add to this list whe
 ---
 
 ## Change Log
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance record. Do not use as public copy.
 
 | Date | Change | Session |
 |---|---|---|
