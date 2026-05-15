@@ -8,7 +8,21 @@ Prepared by Brand Ambassador  •  April 18, 2026
 
 ---
 
+## Copy Governance Overlay
+
+**Copy-governance authority:** This file inherits the tag system from `COPY_GOVERNANCE_STANDARD.md`. Persona material is usually source material for better public copy, not public copy itself.
+
+**Production rule:** Persona realism may be translated into public copy. Internal names, demographic assumptions, monetization notes, conversion psychology, founder reality-check notes, and acquisition strategy must not be copied directly into public-facing copy unless explicitly approved.
+
+**High-risk note:** PERSONAS.md intentionally contains internal names (Margaret, David, Dr. Chen), conversion language, objections, trust triggers, latent product demand, paid media guidance, and founder reality-check context. These are writing inputs, not default customer-facing language.
+
+---
+
 ## Changes from v1
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance context. Do not use as public copy.
 
 v2 was produced after a founder reality check on the Proactive Caregiver persona — the founder sits inside that persona and corrected v1 in material ways. The changes below are substantive enough that v2 is not an edit of v1; it is a reframed document. Read this list before reading the personas, because the reframe flows through the whole file.
 
@@ -24,6 +38,10 @@ v2 was produced after a founder reality check on the Proactive Caregiver persona
 
 ## Changes from v3
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance context. Do not use as public copy.
+
 v4 propagates BRAND.md v6 across the persona file. The two-layer authority model survives — credibility (Layer 1) and substantiation (Layer 2) — but Layer 1 is now compounded from three reinforcing elements (the book, the platform-as-second-edition, and the brand's accumulating citation record), and the book's authors no longer appear in brand-voice copy. The ripple lands in three places in this file:
 
 - **Dr. Chen §8 trust pyramid re-architected.** Item 1 promoted from "the book as credibility anchor (Boppart's credential)" to "citation discipline, visible." The book drops to item 2 as positional bestseller credibility. The platform-as-second-edition framing earns item 3. Boppart's individual credential is removed from her trust signals — under v6 she does not appear on the clinician-facing page.
@@ -34,6 +52,10 @@ v4 propagates BRAND.md v6 across the persona file. The two-layer authority model
 
 ## Purpose and Scope
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Governance instructions for teams and agents. Not public copy.
+
 **Purpose.** This file is the working portrait of the three readers StrongPath serves. It extends the tonal direction in BRAND.md section 4 into a full operational resource — the specific language each reader uses, the situations that bring them to us, the objections that stop them, and the messages that move them. Every downstream workstream — SEO, Content, Email, Paid Media, Community — reads this file before producing any customer-facing asset.
 
 **Authority.** Tier 3 (vertical-level). Inherits from BRAND.md. When this file is silent, BRAND.md governs. When this file and BRAND.md disagree, BRAND.md wins and this file is updated.
@@ -43,6 +65,10 @@ v4 propagates BRAND.md v6 across the persona file. The two-layer authority model
 **Last updated.** April 28, 2026
 
 ## How to Read This Document
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal operating guidance. Not public copy.
 
 Three personas. Two co-primary (The Pre-Frail Adult and The Proactive Caregiver), one Phase 2 priority (The Allied Health Professional — fully documented, not an active acquisition target in the first 90 days).
 
@@ -69,17 +95,33 @@ Each persona is structured identically:
 
 # Persona 1 — The Pre-Frail Adult
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Margaret's situation, language, objections, and trust signals should guide article, homepage, email, and commerce copy. Do not publish the persona name, demographic model, or internal conversion notes as visible copy.
+
 ## "Margaret" — 62, recently noticed the stairs
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal shorthand only. Do not name the persona publicly.
 
 *Co-primary persona. Phase 1 priority.*
 
 ### 1. Identity
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Strong source material for reader-recognition copy. Rewrite into direct reader language before publication.
 
 Margaret is 62 years old. She's noticed something. Not a diagnosis, not a crisis — a quiet accumulation. The stairs to her second-floor bedroom feel longer than they used to. She adjusted how she carries groceries from the car without realizing she had. Her knee did something strange getting off a low couch at her daughter's house, and she laughed it off in the moment. Later, she was not laughing.
 
 She is not frail. She is not declining. She is paying attention. And she is beginning to suspect that the advice she grew up on — walk 30 minutes a day, eat some fruits and vegetables — is not going to be enough for the next 25 years.
 
 ### 2. Demographics
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Targeting and audience-planning context. Do not surface demographic assumptions in public copy.
 
 | Field | Detail |
 |---|---|
@@ -93,6 +135,10 @@ She is not frail. She is not declining. She is paying attention. And she is begi
 
 ### 3. Psychographics
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains emotional drivers and fear language. Translate carefully so public copy respects the reader without overplaying anxiety.
+
 Margaret is defined by one trait: **she refuses to accept the default.** This trait shows up across every domain of her life — in her career, her parenting, her politics, her investments. She has spent forty years noticing when the official story doesn't match the evidence and quietly acting on what she sees. When she faces a problem, her instinct is to research, then act.
 
 She is not motivated by vanity. She does not want to "look 30 at 60." She does not want to be called "ageless" — she finds the word embarrassing. She wants to be **capable.** She wants to keep doing the things she does. She wants to travel with her husband. She wants to be the grandmother who actually plays on the floor. She wants to carry her own luggage. She wants, above all, the ability to stay in control of her own life for as long as possible.
@@ -105,6 +151,10 @@ She is skeptical of most health content on the internet. She has encountered eno
 
 ### 4. The Moment — Where She Is When She Finds Us
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Strong homepage, SEO, and article-entry source material. Rewrite into concrete reader situations.
+
 Most likely entry points:
 
 - **The stairs moment.** She notices something physical — a stair that felt harder, a grocery bag that felt heavier, a low chair she struggled to get out of. She Googles it at 11pm. She doesn't want to overreact. She wants data.
@@ -115,6 +165,12 @@ Most likely entry points:
 **Her emotional state at this moment.** Alert but not panicked. Intellectually curious. Mildly defensive — she does not want to be called old, frail, or at-risk, and will close any page that makes her feel those things. Ready to commit to something serious if the source is credible. Exhausted by content that treats her like she's 40 (boot camp) or 85 (chair yoga).
 
 ### 5. Her Words, Not Ours
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** Search phrases and reader language may inform headlines, links, metadata, and article copy when contextually accurate.
+
+**Public-leakage risk:** The "phrases she does not use" list is review guidance, not public copy.
 
 Phrases Margaret actually types into Google or says out loud:
 
@@ -143,6 +199,10 @@ Phrases she does **not** use — and that should never appear in copy aimed at h
 
 ### 6. Where She Lives
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Channel, partnership, and acquisition context. Not public copy.
+
 **Where she spends time:**
 
 - Reads *The Atlantic*, *The New York Times*, *The New Yorker*, often *The Wall Street Journal*
@@ -167,6 +227,10 @@ Phrases she does **not** use — and that should never appear in copy aimed at h
 
 ### 7. Objections — Why She Doesn't Convert on First Visit
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Use to remove friction and write trust-building copy. Do not publish conversion-analysis language.
+
 1. **"This looks like every other wellness site."** If the visual register is supplement-brand aesthetic — stock photos of grey-haired couples on beaches, gold-heavy palette, exclamation points, "unlock your best self" — she bounces in under 10 seconds. BRAND.md's editorial direction exists precisely because of this bounce.
 2. **"I don't need someone telling me to walk 10,000 steps."** She has read the basics. Content that rehashes "eat your vegetables, get your steps, sleep 8 hours" signals we have nothing new to offer.
 3. **"Is this a supplement pitch?"** If the first meaningful CTA is buying something, she distrusts the rest of the content retroactively. She wants the information to be the product at first touch.
@@ -176,6 +240,10 @@ Phrases she does **not** use — and that should never appear in copy aimed at h
 7. **"My doctor didn't mention this."** If her physician has not flagged sarcopenia as important, part of her wonders if we are overstating it. This is actually our opportunity — the book itself addresses this head-on (Chapter 5: *Why Most Doctors Do Not Understand Sarcopenia*).
 
 ### 8. What Earns Her Trust
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Translate into trust signals, proof points, and page architecture. Do not copy internal trust hierarchy language directly.
 
 In order of potency:
 
@@ -188,6 +256,10 @@ In order of potency:
 7. **A credible path, not a miracle.** She wants to see the protocol — what exactly, how often, what progression. Specifics beat promises every time.
 
 ### 9. Messages That Land
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Example openers include health claims and mechanism claims. Public use requires sourcing, legal review, and copy adaptation.
 
 **Openers that work for her:**
 
@@ -207,6 +279,10 @@ In order of potency:
 - "The single measure that predicts the next 20 years of your health"
 
 ### 10. Messages That Fail
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Negative examples for review only. Do not publish.
 
 **Openers that do not work for her:**
 
@@ -228,7 +304,15 @@ In order of potency:
 
 # Persona 2 — The Proactive Caregiver
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** David's goodwill-led caregiving posture should guide public copy for adult children and family support. Do not publish the persona name, founder mapping, or conversion notes.
+
 ## "David" — 54, watching his father age and choosing to act
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal shorthand only. Do not name the persona publicly.
 
 *Co-primary persona. Phase 1 priority. Distinct purchase psychology from the end user.*
 
@@ -248,6 +332,10 @@ In order of potency:
 
 ### 1. Identity
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Strong source material for caregiver-facing copy. Preserve goodwill and dignity; rewrite before publication.
+
 David is 54. His father is 83. His mother is 81. Both still live largely independently, but David has been watching the slope for several years now — his father has lost a step, his mother has lost weight she did not need to lose, their pace has changed, their world has gotten smaller. Nothing is acute. Nothing is a crisis. But David is not naïve, and he can see where this is going if nothing changes.
 
 David is not a caregiver in the professional sense. He has a job, a family, a marriage, a mortgage, two grown children, a dog. He is the person his family turns to because he is the kind of person who shows up — the son who flies in for the hospital stay, the sibling who talks to the doctors, the one who researches what comes next. He does this because he loves his parents. Not because he has to. Because he wants to.
@@ -257,6 +345,10 @@ His motivation is goodwill. He wants his parents to have good days. That is the 
 There is also, honestly, a second-order effect worth naming. David is 54. He has watched enough of his parents' generation to know what the alternative looks like. When he reads material written for his father and it lands on him too, he often starts training himself. This is not the dominant motivation — it is a byproduct of engaging with the StrongPath on behalf of someone he loves. But the byproduct is real, and the family-adherence dynamic it enables is one of the most important features of this persona.
 
 ### 2. Demographics
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Targeting and audience-planning context. Not public copy.
 
 | Field | Detail |
 |---|---|
@@ -270,6 +362,10 @@ There is also, honestly, a second-order effect worth naming. David is 54. He has
 
 ### 3. Psychographics
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains internal emotional model language. Public copy should show goodwill through practical framing, not explain the model.
+
 David is defined by **goodwill in action.** Aristotle's word for this is *eunoia* — goodwill, the wish for another's good for their own sake. It is the oldest and simplest motivation in caregiving, and it is the one that sustains the actual work once the easy part (giving someone a book) is over. Giving the book is easy. What comes after — encouraging, checking in, adapting, accepting that the parent may or may not follow through — that requires something more durable than fear or obligation.
 
 David has a practical turn of mind. He is a problem-solver by disposition and often by profession. Given a problem, his instinct is to research it, understand the mechanism, and then act. But the problem he is solving here is not a *problem* in the way a work problem is. It has no clean solution. The direction of travel is one-way. What he is really doing is working to increase the number of good days his parents have — and accepting that this is the best available outcome.
@@ -280,9 +376,15 @@ He is quietly frustrated that most primary care physicians have little to offer 
 
 ### 4. The Moment — Three Moments, Not One
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Guides segmentation and timing. Public copy may address the moments, but should not name the internal model unless approved.
+
 A critical v2 correction. v1 treated the caregiver's moment as a single event. In reality, there are three distinct moments — and only two of them are our audience. Confusing them will lead to wasted paid media and misaligned content.
 
 #### Moment 1 — The Before
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 **Where:** The parent is aging, not in crisis. David is watching the slope and wants to do something preventive. He has bandwidth. He can read long-form. He can give his parent a book and have a real conversation about it. This is StrongPath's ideal entry point — the research lands before an event, the parent is still coachable, and the caregiver has emotional space to be patient with adherence.
 
@@ -294,6 +396,10 @@ A critical v2 correction. v1 treated the caregiver's moment as a single event. I
 
 #### Moment 2 — The Crisis
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Audience-exclusion and restraint guidance. Do not target or exploit crisis language publicly.
+
 **Where:** An acute event has happened. A fall, a hospitalization, a surgery, a placement in skilled nursing. David is in navigation mode — where does my parent go, what does Medicare cover, how long is rehab, who provides home care, what is the discharge plan. He is not researching strength training. He is researching the healthcare system.
 
 **Emotional state:** Reactive, task-focused, running on adrenaline and logistics. Not receptive to prevention content. Not our audience in this moment.
@@ -303,6 +409,8 @@ A critical v2 correction. v1 treated the caregiver's moment as a single event. I
 **Priority:** Do not target. Paid media that bids on crisis-phase keywords burns money. SEO content that targets crisis queries competes with large, well-resourced systems (AARP, hospital discharge planning, state agencies) that are better positioned to answer them. StrongPath's place in the crisis moment is to not be in the way — we are waiting at the other end.
 
 #### Moment 3 — The After
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 **Where:** The acute phase has stabilized. The parent is in a facility or back home. The immediate logistics are handled. David's attention returns to the longer-term question: how do I prevent this from happening again, and how do I help my parent rebuild? Prevention is now no longer abstract — the parent has just demonstrated exactly why strength matters.
 
@@ -314,9 +422,17 @@ A critical v2 correction. v1 treated the caregiver's moment as a single event. I
 
 #### Across all three moments
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
 The underlying emotional engine is constant: love, goodwill, the wish to make his parent a little more comfortable. The tactical framing of our messaging shifts by moment, but the core motivation does not. Never mistake the changing tactical surface for a changing emotional core.
 
 ### 5. His Words, Not Ours
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** Reader language may inform public copy when respectful and contextually accurate.
+
+**Public-leakage risk:** Negative phrases remain review guidance only.
 
 Phrases David actually types into Google or says out loud (across Before and After moments):
 
@@ -345,6 +461,10 @@ Phrases he does **not** use:
 
 ### 6. Where He Lives
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Channel and acquisition context. Not public copy.
+
 **Where he spends time:**
 
 - Reads *The New York Times*, *The Wall Street Journal*, *The Atlantic*. Professional trade publications in his field.
@@ -370,6 +490,10 @@ Phrases he does **not** use:
 
 ### 7. Objections — Why He Doesn't Convert on First Visit
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Use to reduce friction and avoid fear-led copy. Do not publish conversion-analysis language.
+
 1. **"I've seen this before and it was a rehash."** He has purchased caregiver resources that turned out to be listicles. Our content has to be substantively different in the first three paragraphs.
 2. **"My parent won't do it."** His biggest practical concern is adherence. He has a realistic view of his parent's willingness to follow a new protocol. We have to speak to that — what a program looks like for someone who is not naturally athletic, who has given up once or twice, who is embarrassed by their own weakness. This is also why the family-networked product concept (see `PRODUCT_CONCEPTS_BACKLOG.md`) maps so directly onto this persona.
 3. **"Is this safe for them?"** He is careful about recommending anything that could hurt his parent. A program that starts too aggressive will be rejected; a program that starts too gentle will feel like theater. He needs to see that we understand the real safety considerations for an 80-year-old starting from a low baseline.
@@ -379,6 +503,10 @@ Phrases he does **not** use:
 7. **"Am I being sold fear?"** If the page leads with the nursing home as threat, or positions his parent's future as catastrophic, or performs emotional urgency — he disengages. Not because he doesn't care, but because he cares from a position of goodwill, not panic, and fear-based copy reads as manipulation.
 
 ### 8. What Earns His Trust
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Translate into trust signals and practical page choices.
 
 In order of potency:
 
@@ -391,6 +519,10 @@ In order of potency:
 7. **A clinical-caliber Q&A section.** The specific questions he has — "is this safe for someone with osteoporosis," "what if he has had a knee replacement," "what about blood pressure medication" — answered with real clinical nuance and appropriate disclaimers.
 
 ### 9. Messages That Land
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Example openers are drafts and may include claims, product implications, or tone choices that need review before use.
 
 **Openers that work for him — goodwill-leading, not fear-leading:**
 
@@ -411,6 +543,10 @@ In order of potency:
 - "The program I wish I had found a year earlier" (for After-moment)
 
 ### 10. Messages That Fail
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Negative examples for review only. Do not publish.
 
 **Openers that do not work for him — the fear-leading versions cut from v1:**
 
@@ -434,6 +570,12 @@ In order of potency:
 
 ### 11. Latent Product Demand
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Product and monetization strategy only. Do not surface as public promise, roadmap language, or launch copy.
+
+**Public-leakage risk:** Contains future product concepts, adherence mechanisms, and monetization implications. Especially unsafe for homepage, email, or commerce copy without founder approval and rewrite.
+
 A structural product opportunity sits inside this persona that deserves separate documentation. The caregiver is willing to pay for adherence on behalf of the parent — and for himself. The parent is a user; the caregiver is a user; both are on the path together. A StrongPath product that solves for family-mediated accountability — visibility into each other's training, low-friction encouragement across generations, AI-augmented check-ins when a family member is unavailable — addresses a pain point no one in the family can solve alone. The adherence mechanism is multi-directional: the caregiver nudges the parent, the parent's progress motivates the caregiver, and both reinforce each other over time. This is the single highest-value feature gap in the current product concept.
 
 *This concept is not a Phase 1 build. It is filed in `PRODUCT_CONCEPTS_BACKLOG.md` as Entry 1. It is referenced here because product demand is a persona characteristic, and downstream workstream chats should know the demand exists without trying to activate it prematurely.*
@@ -442,11 +584,25 @@ A structural product opportunity sits inside this persona that deserves separate
 
 # Persona 3 — The Allied Health Professional
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Clinician-facing tone, objections, and trust standards may guide professional pages and referral materials. Do not use clinician strategy language on consumer surfaces.
+
 ## "Dr. Chen" — 41, DPT, works at an outpatient clinic in a regional hospital
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Internal shorthand only. Do not name the persona publicly.
 
 *Documented for completeness. **Phase 2 priority — not an active Phase 1 acquisition target.** See Phase 1 Scope below.*
 
 ### Phase 1 Scope — Why This Persona Is Not Active at Launch
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Acquisition and prioritization context. Not public copy.
+
+**Public-leakage risk:** Contains launch scope, budget, and activation strategy. Must not appear in public copy.
 
 The Allied Health Professional is a critical long-term channel. PTs, OTs, and geriatric nurses refer patients to resources they trust, and over time this persona drives high-quality, low-CAC traffic and high-trust conversions. However:
 
@@ -462,11 +618,17 @@ With that framing established, the persona is documented below for the Phase 2 t
 
 ### 1. Identity
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Source material for clinician-facing copy. Rewrite into professional, resource-evaluation language.
+
 Dr. Chen is 41, a Doctor of Physical Therapy with nine years in practice. She works at a regional hospital's outpatient orthopedic and geriatric clinic, where she sees adults 60–90 for post-surgical rehab, balance and fall prevention, and general conditioning. She is good at her job. She knows the sarcopenia literature because she has to — it is the substrate of most of her caseload.
 
 She is also frustrated. The primary-care physicians who refer to her frequently have no conceptual model of muscle loss as a preventable condition. She gets patients at the point of intervention, not prevention, and she sees the pattern repeat. She wants to hand her patients a resource they can engage with between visits — one she can trust not to damage her reputation.
 
 ### 2. Demographics
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
 
 | Field | Detail |
 |---|---|
@@ -479,11 +641,15 @@ She is also frustrated. The primary-care physicians who refer to her frequently 
 
 ### 3. Psychographics
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
 Dr. Chen is defined by **professional accountability.** Every recommendation she makes carries her name. She will not recommend a resource that overclaims, misinforms, or generates bad outcomes, because her patients will bring it back to her and ask why. She is a careful reader — she looks at citations, author credentials, and clinical claims before she recommends anything.
 
 She is also, like many clinicians, quietly exhausted by the consumer health landscape. Her patients come in with misinformation from influencers, supplement companies, and social media. She spends real clinical time undoing what her patients have been told. A resource she can trust — that would reduce rather than add to her clinical load — is worth its weight in gold.
 
 ### 4. The Moment — Where She Is When She Finds Us
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
 
 Most likely entry points:
 
@@ -495,6 +661,10 @@ Most likely entry points:
 **Her emotional state.** Professional. Clinical-eyes-on. Evaluating. She is reading to decide — is this a resource I can recommend without professional risk? She is not emotionally engaged; she is credentialing us in her head while she reads.
 
 ### 5. Her Words, Not Ours
+
+**Copy tag:** `[PUBLIC_COPY_SAFE]`
+
+**Use:** Professional search terms and language may inform clinician-facing metadata, navigation, and copy when contextually accurate.
 
 Phrases Dr. Chen uses (in professional contexts):
 
@@ -514,6 +684,10 @@ She does **not** use — and will bounce from:
 - "Hack," "secret," "breakthrough," or "miracle" language
 
 ### 6. Where She Lives
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Professional channel strategy. Not public copy.
 
 **Professional media:**
 
@@ -535,6 +709,10 @@ She does **not** use — and will bounce from:
 
 ### 7. Objections — Why She Doesn't Recommend on First Visit
 
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** Use to shape clinician trust-building surfaces. Do not publish conversion-analysis language.
+
 1. **"Who wrote this? Are they credentialed?"** She scans for author credentials, reviewer credentials, and institutional affiliations within the first page. Anonymous or weakly credentialed content is a non-starter.
 2. **"Are the claims defensible?"** She is looking for in-line citations to primary research, proper hedging ("may help," "research suggests"), and no overclaims. The book/product firewall in BRAND.md section 9 is exactly the discipline she is checking for.
 3. **"Is this safe for my patient population?"** Her patients often have multiple comorbidities, polypharmacy, and functional limitations. She needs to see that the content understands contraindications and starting points for deconditioned populations.
@@ -542,6 +720,10 @@ She does **not** use — and will bounce from:
 5. **"Will my patients think I'm recommending a commercial product?"** Even if the product is good, she does not want to look like she is referring patients to a sales funnel. The editorial register of the site matters to her reputation.
 
 ### 8. What Earns Her Trust
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Contains "platform as second edition" and credentialing framework language. Rewrite into professional evaluation copy before publication.
 
 1. **Citation discipline, visible.** Dr. Chen's primary trust signal is what she sees in the article body — named peer-reviewed studies cited with author, year, and journal; current institutional sources (Harvard Health Publishing, Mayo Clinic, NIH, ACSM); landmark older studies cited where they remain the standard reference. She recognizes the names — Fielding, Fiatarone, Phillips, Peterson, Paddon-Jones — because they are the actual literature on her caseload's substrate. A platform that cites these rigorously, on every substantive claim, earns her read in a way that no single credential can. The brand-level discipline of citing well over time is the trust signal; per BRAND.md §5, this is also what builds the brand's accumulating authority on the topic.
 2. **The book as bestseller credibility.** *Choosing the StrongPath: Reversing the Downward Spiral of Aging* is an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity. The bestseller fact is what makes the book a credibility asset for the brand — market validation that the topic is serious and the framework was listened to. The book sits behind the platform as category proof; Dr. Chen does not need to read it to trust the platform, and she will not read a 2018 book to evaluate a 2026 resource. The book's role for her is positional, not informational.
@@ -551,6 +733,10 @@ She does **not** use — and will bounce from:
 6. **A clinician-facing page that speaks to her.** Not marketing copy. A page that says "here is what the resource contains, here is the credentialing, here is how to integrate it into patient education, here is what we do not do."
 
 ### 9. Messages That Land
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Public-leakage risk:** Clinician-facing example copy may be usable only on clinician pages after review. Do not place on consumer homepage or commerce surfaces.
 
 **Opener that works for her** (per BRAND.md 4.3):
 
@@ -565,6 +751,10 @@ Followed by:
 
 ### 10. Messages That Fail
 
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Negative examples for review only. Do not publish.
+
 - Any consumer-conversion urgency applied to her
 - Any "join our community" CTA — she is not joining a community, she is evaluating a resource
 - Any discount, sale, or promotional framing on the clinician-facing page
@@ -575,7 +765,15 @@ Followed by:
 
 # Cross-Persona Notes
 
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Strategic comparison and segmentation guidance. Not public copy.
+
 ## Shared Characteristics
+
+**Copy tag:** `[EDITORIAL_REFERENCE_ONLY]`
+
+**Use:** May inform broad public positioning after rewriting into reader-facing value.
 
 All three personas share:
 
@@ -585,6 +783,12 @@ All three personas share:
 - **Responsive to editorial, not commercial, register.** BRAND.md's Harvard Health / Mayo Clinic visual and tonal direction serves all three.
 
 ## Key Distinctions
+
+**Copy tag:** `[STRATEGIC_CONTEXT_ONLY]`
+
+**Use:** Conversion and segmentation matrix for internal planning. Not public copy.
+
+**Public-leakage risk:** Contains purchase psychology, acquisition priority, and phase language.
 
 **Purchase psychology differs fundamentally:**
 
@@ -598,6 +802,10 @@ All three personas share:
 | **Phase 1 priority** | Primary | Primary (Before and After; do not target Crisis) | Documented; Phase 2 active |
 
 ## How to Use These Personas Downstream
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Workstream instructions. Do not publish.
 
 **For SEO:** Keyword research should cover Margaret's phrases and David's Before-moment and After-moment phrases as distinct clusters. David's Crisis-moment queries are explicitly out-of-scope. Dr. Chen's search terms are a Phase 2 initiative.
 
@@ -614,6 +822,10 @@ All three personas share:
 ---
 
 ## Living Updates
+
+**Copy tag:** `[INTERNAL_ONLY]`
+
+**Use:** Historical governance record. Do not use as public copy.
 
 Add to this list when persona-relevant data emerges from real customer interactions, paid media results, email engagement, or other sources.
 
