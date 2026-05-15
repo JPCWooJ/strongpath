@@ -227,9 +227,9 @@ export default function HomePage() {
               Choose the StrongPath before the frail trail.
             </h1>
             <p className="mt-20 max-w-[680px] font-body text-[20px] leading-[1.48] text-inkwell/82 md:text-[23px]">
-              Age-related muscle loss is measurable, and often preventable. StrongPath gives adults
-              and families serious guidance for preserving strength, balance, recovery, travel,
-              caregiving, and the ordinary capabilities that keep life open.
+              Muscle loss can make life smaller, one staircase, suitcase, and slow recovery at a
+              time. StrongPath helps adults and families protect the strength ordinary life depends
+              on.
             </p>
 
             <div className="mt-24 grid max-w-[760px] gap-10 border-y border-inkwell/22 py-16 sm:grid-cols-3">
