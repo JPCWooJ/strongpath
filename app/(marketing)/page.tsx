@@ -337,7 +337,7 @@ export default function HomePage() {
       </section>
 
       <section id="featured-guide" className="scroll-mt-28 bg-inkwell text-parchment">
-        <div className="sp-container pb-40 pt-20 md:pb-64 md:pt-28">
+        <div className="sp-container pb-28 pt-14 md:pb-40 md:pt-18">
           {featuredGuide && (
             <article className="grid gap-40 lg:grid-cols-[0.52fr_1.48fr] lg:items-start">
               <div>
