@@ -7,7 +7,7 @@ export const siteMetadata = {
   locale: 'en_US',
   language: 'en-us',
   rssPath: '/rss.xml',
-  socialImage: '/opengraph-image',
+  socialImage: '/strongpath-og.png',
   publisher: {
     name: 'StrongPath',
   },

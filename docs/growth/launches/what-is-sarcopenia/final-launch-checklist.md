@@ -8,14 +8,14 @@
 - [x] CTA placement reviewed
 - [x] Citations present
 - [x] Commerce separation reviewed
-- [ ] OG image selected
+- [x] OG image selected
+- [x] Affiliate disclosure verified on `/book` if affiliate path is active
 - [ ] Mobile rendered review completed
-- [ ] Affiliate disclosure verified on `/book` if affiliate path is active
 
 ## Required After Publish
 
 - [ ] Live URL verified
 - [ ] SEO indexing verified
-- [ ] Beehiiv package queued
-- [ ] X distribution package queued
-- [ ] Homepage feature placement confirmed, if used
+- [x] Beehiiv package ready
+- [x] X distribution package ready
+- [x] Homepage feature placement confirmed, if used

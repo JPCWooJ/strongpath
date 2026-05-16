@@ -10,11 +10,11 @@
 
 - SEO indexed: verify after publish
 - Metadata: title, slug, meta title, meta description present
-- OG image: needed before launch
-- Mobile review: required before publish
-- CTA check: primary resistance-training article, secondary book page
-- Internal links: all `/blog` slugs and `/book` wired
-- Affiliate disclosure: needed if `/book` uses affiliate purchase path on destination
+- OG image: selected and wired
+- Mobile review: production build verified; screenshot command timed out
+- CTA check: primary live related article, secondary book page
+- Internal links: all live `/blog` slugs and `/book` verified locally
+- Affiliate disclosure: present on `/book`
 - Citation formatting: references present and source links included
 - COPY_GOVERNANCE_STANDARD: pass
 - Commerce separation: pass

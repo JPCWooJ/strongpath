@@ -45,7 +45,228 @@ const h2 = (text: string) => block('h2', [text])
 const h3 = (text: string) => block('h3', [text])
 const p = (...parts: BlockPart[]) => block('normal', parts)
 
+function li(text: string): PortableTextBlock {
+  blockIndex += 1
+  return {
+    _key: `b${blockIndex}`,
+    _type: 'block',
+    children: [span(text)],
+    markDefs: [],
+    style: 'normal',
+    listItem: 'bullet',
+    level: 1,
+  } as PortableTextBlock
+}
+
 export const flagshipArticles: Post[] = [
+  {
+    _id: 'flagship-what-is-sarcopenia',
+    title: 'What Is Sarcopenia?',
+    slug: { current: 'what-is-sarcopenia' },
+    publishedAt: '2026-05-16T09:00:00.000Z',
+    updatedAt: '2026-05-16T09:00:00.000Z',
+    excerpt:
+      'Sarcopenia is age-related loss of muscle strength, muscle quantity, and physical function. Here is what it means, why it matters, and what can help.',
+    author: 'StrongPath Editorial',
+    category: 'Muscle Loss',
+    tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50', 'Resistance Training'],
+    seoTitle: 'What Is Sarcopenia?',
+    seoDescription:
+      'Sarcopenia is age-related loss of muscle strength, muscle quantity, and physical function. Here is what it means, why it matters, and what can help.',
+    estimatedReadingMinutes: 8,
+    body: [
+      p(
+        'Sarcopenia is the age-related loss of muscle strength, muscle quantity, and physical function. In practice, it is one reason stairs, chairs, luggage, and recovery can start to feel different after midlife.'
+      ),
+      p('The word is clinical. The signs are usually practical.'),
+      p(
+        'The suitcase is harder to lift into the overhead bin. A low chair takes more planning. A jar lid goes to someone else without much discussion.'
+      ),
+      p(
+        'Muscle is what lets you stand, climb, carry, recover, balance, travel, and keep your days under your own direction.'
+      ),
+      p(
+        'StrongPath begins here because sarcopenia names the problem more precisely than "getting older."'
+      ),
+      h2('The short answer'),
+      p('Sarcopenia is age-related muscle failure.'),
+      p(
+        'In current consensus language, sarcopenia is not defined by muscle size alone. The European Working Group on Sarcopenia in Older People emphasizes low muscle strength as the primary sign. Low muscle quantity or quality helps confirm the diagnosis; poor physical performance points toward more severe sarcopenia. See ',
+        {
+          text: 'Cruz-Jentoft et al., 2019',
+          href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/',
+        },
+        '.'
+      ),
+      p(
+        'A person can look normal in clothes and still be losing force. The practical question is not only "how much muscle do I have?" It is also "what can my body still do?"'
+      ),
+      p(
+        'NIH News in Health recently summarized the patient-facing reality plainly: too much muscle loss can make it harder to stand from a chair, walk, open a jar, or carry groceries. NIH also reports that researchers estimate about 10-20% of older adults have sarcopenia. See ',
+        {
+          text: 'NIH News in Health, 2025',
+          href: 'https://newsinhealth.nih.gov/2025/04/slowing-sarcopenia',
+        },
+        '.'
+      ),
+      p('Those numbers should not be used to frighten anyone. They should be used to make the problem visible.'),
+      h2('Why sarcopenia matters'),
+      p(
+        "The meaning of sarcopenia is practical. A grocery bag is the ability to shop without help. A staircase is access to the bedroom, the train platform, the theater balcony, the second floor of a child's house."
+      ),
+      p(
+        'When muscle and strength decline, life can get smaller before anyone calls it a health problem. The person is still capable, but the margin has changed. Ordinary tasks ask for more planning.'
+      ),
+      p(
+        'That is why sarcopenia deserves the same seriousness people already give to cholesterol, blood pressure, and bone density. Health has to show up in the body you use every day.'
+      ),
+      h2('Why it is often missed'),
+      p('Sarcopenia often arrives as substitutions.'),
+      p('You use the handrail more. You choose the chair with arms. You carry less. You avoid the hill.'),
+      p(
+        'You stop getting on the floor because getting up is too costly. You pass on the beach walk because soft sand suddenly feels like work. A parent says, "I\'m just tired today," and the sentence repeats next week.'
+      ),
+      p(
+        'None of that is a diagnosis. It is a pattern, and the pattern gets missed because muscle loss does not always announce itself as muscle loss. It can look like caution, fatigue, or balance trouble.'
+      ),
+      p(
+        'There is another reason it gets missed: much of medicine is built around events and numbers. Blood pressure has a number. Cholesterol has a number. A fracture has an X-ray.'
+      ),
+      p('Sarcopenia can show up as a story before it shows up in a chart.'),
+      h2('Sarcopenia is about strength, not just size'),
+      p('The old public understanding of sarcopenia was mostly "muscle loss." That is still partly right. But it is incomplete.'),
+      p(
+        'Modern definitions put strength and function closer to the center. EWGSOP2 uses low muscle strength as the primary parameter because strength is a more reliable measure of muscle function than size alone. Muscle quantity and quality matter. Function is what the reader feels first.'
+      ),
+      p('Can you rise from a chair without using your arms?'),
+      p('Can you climb stairs without planning around them?'),
+      p('Can you carry a bag and still feel steady?'),
+      p('Can you walk quickly enough to cross the street with confidence?'),
+      p('Can you recover after a bad week without losing the next month?'),
+      p('These are not athletic questions. They are independence questions.'),
+      h2('The practical signs to watch'),
+      p('The early signals are usually ordinary:'),
+      li('standing from a low chair takes more effort'),
+      li('stairs feel slower or less automatic'),
+      li('groceries, laundry, luggage, or garden supplies feel heavier'),
+      li('opening jars or carrying a full pan feels less certain'),
+      li('grip strength seems lower'),
+      li('balance feels less reliable'),
+      li('walking speed has slowed'),
+      li('recovery after illness or travel takes longer'),
+      li('you avoid movements you used to do without thinking'),
+      li('a parent becomes more reluctant to leave the house'),
+      li('confidence shrinks before independence does'),
+      p(
+        'These signs do not prove sarcopenia. They are reasons to pay attention and, when appropriate, talk with a physician, physical therapist, or qualified clinician.'
+      ),
+      p(
+        'For families, this is where tone matters. The goal is not to confront a parent with decline. The goal is to protect independence in a way that respects dignity.'
+      ),
+      h2('What causes sarcopenia?'),
+      p('Sarcopenia has more than one cause. Age is part of it, but age is not the whole explanation.'),
+      p(
+        'Muscle changes over time. Nerves that drive muscle can change. Illness, medications, poor sleep, low protein intake, and chronic disease can all play a role. So can a quiet stretch of doing less: a surgery, a winter indoors, a year when walking replaced every other kind of training.'
+      ),
+      p(
+        'The simpler version is this: muscle adapts to what you ask of it. Ask less for long enough, and the body gives less back. Rebuild the demand carefully, and muscle and strength can respond.'
+      ),
+      h2('The evidence-based next step'),
+      p(
+        'The strongest practical answer to sarcopenia is not exotic: progressive resistance training, adequate protein, enough recovery, and a plan that starts at the right level.'
+      ),
+      p(
+        "The CDC's current older-adult activity guidance separates aerobic activity, muscle-strengthening activity, and balance activity. For adults 65 and older, the guidance includes at least two days a week of activities that strengthen muscles. See ",
+        {
+          text: 'CDC older adult activity guidance',
+          href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+        },
+        '.'
+      ),
+      p(
+        'A 2023 review of randomized trials in community-dwelling older adults with sarcopenia found that exercise and nutrition interventions were associated with improvements in several sarcopenia-related measures. The same review found broader benefits from moderate and moderate-to-vigorous resistance training than from low-intensity resistance training for several outcomes, while noting limitations in the evidence base. See ',
+        {
+          text: 'Lin et al., 2023',
+          href: 'https://link.springer.com/article/10.1186/s11556-023-00333-4',
+        },
+        '.'
+      ),
+      p('Read that carefully. It does not mean a person should begin aggressively. It means a plan that never progresses may not be enough.'),
+      p(
+        'For many adults, the right starting point is deliberately modest: learn the movement, match exercises to current ability, train consistently, add difficulty gradually, recover, repeat.'
+      ),
+      p(
+        'If you have had a recent fall, surgery, hospitalization, new diagnosis, unexplained weight loss, dizziness, chest pain, significant balance problems, or a major change in function, talk with a physician, physical therapist, or qualified clinician before beginning a new exercise plan.'
+      ),
+      h2('The StrongPath frame'),
+      p('Sarcopenia is one of the reasons StrongPath exists.'),
+      p(
+        'The platform is built on the same research foundation behind ',
+        {
+          text: 'Choosing the StrongPath: Reversing the Downward Spiral of Aging',
+          href: '/book',
+        },
+        ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.'
+      ),
+      p('The book is the credibility anchor. Current third-party research carries the specific claims in this article.'),
+      p(
+        "StrongPath's job is to keep that work current: cite the evidence directly, explain the mechanism plainly, and keep medical judgment where it belongs."
+      ),
+      p(
+        'The view is simple. Sarcopenia is measurable and consequential. It is not solved by vague wellness advice. It is not helped by panic. For many adults, strength can still be trained.'
+      ),
+      h2('Read next'),
+      p(
+        'For the broader StrongPath frame, read ',
+        {
+          text: 'Why Muscle Loss Changes Everything After 50',
+          href: '/blog/why-muscle-loss-changes-everything-after-50',
+        },
+        '.'
+      ),
+      p(
+        'For the strength-training context, read ',
+        {
+          text: 'The Strength Crisis Nobody Talks About',
+          href: '/blog/the-strength-crisis-nobody-talks-about',
+        },
+        '.'
+      ),
+      p(
+        'For functional measures and healthy-aging signals, read ',
+        {
+          text: 'What Actually Predicts Healthy Aging?',
+          href: '/blog/what-actually-predicts-healthy-aging',
+        },
+        '.'
+      ),
+      h2('Next step'),
+      p(
+        'Primary: ',
+        {
+          text: 'Read next: The Strength Crisis Nobody Talks About',
+          href: '/blog/the-strength-crisis-nobody-talks-about',
+        },
+        '.'
+      ),
+      p(
+        'Secondary: ',
+        {
+          text: 'Learn about Choosing the StrongPath',
+          href: '/book',
+        },
+        '.'
+      ),
+      h2('Medical note'),
+      p(
+        'This article is educational and is not medical advice. If you have a medical condition, recent fall, recent surgery, unexplained weight loss, chest pain, dizziness, significant balance problems, or a major change in function, work with a physician, physical therapist, or qualified clinician before starting a new exercise or nutrition plan.'
+      ),
+      h2('References'),
+      p(
+        'Cruz-Jentoft et al., 2019: EWGSOP2 sarcopenia definition and diagnosis; NIH News in Health, 2025: Slowing Sarcopenia; CDC, 2025: Older Adult Activity Overview; Lin et al., 2023: resistance training and sarcopenia review.'
+      ),
+    ],
+  },
   {
     _id: 'flagship-muscle-loss-after-50',
     title: 'Why Muscle Loss Changes Everything After 50',
