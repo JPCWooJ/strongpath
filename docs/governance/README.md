@@ -10,12 +10,13 @@ Use these files before implementation work, design refinement, content planning,
 2. `AGENT_RULES.md`
 3. `CODEX_EXECUTION_STANDARD.md`
 4. `BRAND.md`
-5. `DESIGN.md`
-6. `PERSONAS.md`
-7. `PROJECT_INSTRUCTIONS.md`
-8. `PUBLISHING_PLAN.md`
-9. Role-specific agent profiles
-10. Task-specific prompts
+5. `COPY_GOVERNANCE_STANDARD.md`
+6. `DESIGN.md`
+7. `PERSONAS.md`
+8. `PROJECT_INSTRUCTIONS.md`
+9. `PUBLISHING_PLAN.md`
+10. Role-specific agent profiles
+11. Task-specific prompts
 
 ## Active Canonical Files
 
@@ -28,6 +29,7 @@ Use these files before implementation work, design refinement, content planning,
 - `GTM_EXECUTION_PIPELINE.md`
 - `UIUX_AGENT_PROFILE.md`
 - `BRAND.md`
+- `COPY_GOVERNANCE_STANDARD.md`
 - `DESIGN.md`
 - `PERSONAS.md`
 - `PROJECT_INSTRUCTIONS.md`

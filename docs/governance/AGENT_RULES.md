@@ -191,11 +191,12 @@ Operational authority resolves in this order:
 2. AGENT_RULES.md
 3. CODEX_EXECUTION_STANDARD.md
 4. BRAND.md
-5. DESIGN.md
-6. PERSONAS.md
-7. PUBLISHING_PLAN.md
-8. Specialized agent profiles
-9. Task-specific prompts
+5. COPY_GOVERNANCE_STANDARD.md
+6. DESIGN.md
+7. PERSONAS.md
+8. PUBLISHING_PLAN.md
+9. Specialized agent profiles
+10. Task-specific prompts
 
 If conflicts appear:
 - escalate immediately
@@ -238,6 +239,7 @@ All agents must:
 - optimize for execution speed
 - preserve canonical governance
 - maintain StrongPath's premium editorial posture
+- preserve COPY_GOVERNANCE_STANDARD.md for public-facing copy
 - avoid speculative redesign requests
 - avoid startup-buzzword language
 - avoid uncontrolled scope expansion

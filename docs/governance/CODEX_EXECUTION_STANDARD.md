@@ -236,6 +236,7 @@ Copy requests must define:
 - forbidden language
 
 Always reference BRAND.md voice rules when applicable.
+Always reference COPY_GOVERNANCE_STANDARD.md for public-facing copy, CTAs, distribution copy, and article packaging.
 
 ---
 
@@ -459,6 +460,7 @@ The objective is high-quality shipped product.
 Primary governance references:
 
 - BRAND.md
+- COPY_GOVERNANCE_STANDARD.md
 - PUBLISHING_PLAN.md
 - keyword-universe.md
 - PRODUCT_CONCEPTS_BACKLOG.md
@@ -473,10 +475,11 @@ When conflicts occur, resolve in this order:
 2. AGENT_RULES.md
 3. CODEX_EXECUTION_STANDARD.md
 4. BRAND.md
-5. DESIGN.md
-6. PERSONAS.md
-7. PUBLISHING_PLAN.md
-8. Feature-specific prompts
+5. COPY_GOVERNANCE_STANDARD.md
+6. DESIGN.md
+7. PERSONAS.md
+8. PUBLISHING_PLAN.md
+9. Feature-specific prompts
 
 ---
 
