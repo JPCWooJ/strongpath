@@ -25,6 +25,7 @@ Use these files before implementation work, design refinement, content planning,
 - `CHIEF_OF_STAFF_AGENT_PROFILE.md`
 - `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
 - `GTM_AGENT_PROFILE.md`
+- `GTM_EXECUTION_PIPELINE.md`
 - `UIUX_AGENT_PROFILE.md`
 - `BRAND.md`
 - `DESIGN.md`
