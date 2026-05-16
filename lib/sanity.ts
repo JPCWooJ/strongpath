@@ -37,8 +37,16 @@ export type Post = {
   seoDescription?: string
   canonicalUrl?: string
   estimatedReadingMinutes?: number
+  sources?: ArticleSource[]
   mainImage?: { asset: { _ref: string } }
   body?: PortableTextBlock[]
+}
+
+export type ArticleSource = {
+  title: string
+  publication?: string
+  year?: string
+  href?: string
 }
 
 const publishedPostFilter = `_type == "post" && defined(slug.current) && draft != true`
@@ -57,6 +65,7 @@ export const postsQuery = groq`*[${publishedPostFilter}] | order(publishedAt des
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`
 
@@ -81,6 +90,7 @@ export const postsByTagQuery = groq`*[
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`
 
@@ -99,5 +109,6 @@ export const postQuery = groq`*[${publishedPostFilter} && slug.current == $slug]
   seoDescription,
   canonicalUrl,
   estimatedReadingMinutes,
+  sources,
   mainImage
 }`

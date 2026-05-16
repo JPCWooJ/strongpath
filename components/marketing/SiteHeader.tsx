@@ -2,45 +2,47 @@ import Link from 'next/link'
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/blog', label: 'Research' },
+  { href: '/blog', label: 'Articles' },
+  { href: '/blog/tags/sarcopenia', label: 'Sarcopenia' },
+  { href: '/blog/tags/resistance-training', label: 'Strength' },
   { href: '/waitlist', label: 'Waitlist' },
 ]
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-inkwell bg-parchment">
-      <div className="sp-container border-b border-inkwell/35 py-8">
-        <div className="flex flex-wrap items-center justify-between gap-8 font-utility text-caption leading-caption text-inkwell/65">
+    <header className="border-b border-inkwell/60 bg-parchment">
+      <div className="sp-container border-b border-inkwell/18 py-4">
+        <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
           <p>Evidence-first strength publication</p>
-          <p>Muscle loss / resistance training / healthy aging</p>
+          <p>Articles / sarcopenia / resistance training</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[124px] flex-col justify-center gap-24 py-22 md:flex-row md:items-end md:justify-between">
-        <div className="relative isolate pb-2 pr-24">
+      <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
+        <div className="relative isolate max-w-[780px] pb-2 pr-18">
           <span
             aria-hidden="true"
-            className="absolute -left-14 top-5 -z-10 h-[58px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/55 md:h-[76px]"
+            className="absolute -left-14 top-3 -z-10 h-[46px] w-[calc(100%+28px)] border-l-[6px] border-verdigris bg-verdigris-wash/42 md:h-[58px]"
           />
           <Link
             href="/"
-            className="font-display text-[50px] font-normal leading-none text-inkwell md:text-[68px]"
+            className="font-display text-[42px] font-normal leading-none text-inkwell md:text-[56px]"
           >
             StrongPath
           </Link>
-          <p className="mt-10 inline-block max-w-[580px] border-y border-inkwell/40 py-6 font-utility text-[15px] leading-[1.25] text-inkwell/78">
+          <p className="mt-6 max-w-[580px] border-t border-inkwell/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-inkwell/82">
             Strength, independence, and the research between them
           </p>
         </div>
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center gap-10 self-start md:self-end"
+          className="flex flex-wrap items-center gap-x-16 gap-y-8 border-t border-inkwell/18 pt-8 self-stretch md:self-end md:border-t-0 md:pt-0"
         >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="border border-inkwell/30 px-14 py-11 font-utility text-[15px] leading-none text-inkwell/82 transition-colors hover:border-inkwell hover:bg-inkwell hover:text-parchment focus-visible:border-inkwell"
+              className="border-b border-transparent py-4 font-utility text-[14px] font-medium leading-none text-inkwell/78 transition-colors hover:border-inkwell/50 hover:text-inkwell focus-visible:border-inkwell"
             >
               {item.label}
             </Link>
