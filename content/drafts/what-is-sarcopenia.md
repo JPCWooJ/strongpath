@@ -1,7 +1,7 @@
 ---
 title: "What Is Sarcopenia?"
 slug: "what-is-sarcopenia"
-status: "Founder review draft"
+status: "Publish ready"
 articleType: "Pillar article"
 primaryPersona: "Margaret"
 secondaryPersonas:
@@ -140,11 +140,17 @@ The view is simple. Sarcopenia is measurable and consequential. It is not solved
 
 ## Read next
 
-- [Internal link: Why Walking Is Not Enough to Preserve Strength]
-- [Internal link: Resistance Training for Older Adults: What the Research Supports]
-- [Internal link: How Much Protein Do Adults Over 60 Need?]
-- [Internal link: How to Help an Aging Parent Stay Strong]
-- [Internal link: Is It Too Late to Start Strength Training After 60?]
+- [Why Walking Is Not Enough to Preserve Strength](/blog/why-walking-is-not-enough-to-preserve-strength)
+- [Resistance Training for Older Adults: What the Research Supports](/blog/resistance-training-for-older-adults-what-the-research-supports)
+- [How Much Protein Do Adults Over 60 Need?](/blog/how-much-protein-do-adults-over-60-need)
+- [How to Help an Aging Parent Stay Strong](/blog/how-to-help-an-aging-parent-stay-strong)
+- [Is It Too Late to Start Strength Training After 60?](/blog/is-it-too-late-to-start-strength-training-after-60)
+
+## Next step
+
+Primary: [Read next: Resistance Training for Older Adults](/blog/resistance-training-for-older-adults-what-the-research-supports)
+
+Secondary: [Learn about *Choosing the StrongPath*](/book)
 
 ## Medical note
 
@@ -156,40 +162,3 @@ This article is educational and is not medical advice. If you have a medical con
 2. [NIH News in Health, 2025: Slowing Sarcopenia](https://newsinhealth.nih.gov/2025/04/slowing-sarcopenia)
 3. [CDC, 2025: Older Adult Activity Overview](https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html)
 4. [Lin et al., 2023: resistance training and sarcopenia review](https://link.springer.com/article/10.1186/s11556-023-00333-4)
-
-## EDITORIAL EXTRACTION PLAN
-
-### Why Walking Is Not Enough to Preserve Strength
-
-- Proposed slug: `why-walking-is-not-enough-to-preserve-strength`
-- Target reader: Margaret, with David as secondary
-- Purpose: Explain why walking is valuable but does not fully train strength, progression, power, grip, hips, trunk, and the ability to produce force when daily life asks for it.
-- Material extracted from current draft: the previous walking section, CDC aerobic/strength/balance distinction, and the explanation that walking supports general health but does not create progressive resistance across major muscle groups.
-
-### Resistance Training for Older Adults: What the Research Supports
-
-- Proposed slug: `resistance-training-older-adults-research`
-- Target reader: Margaret, with Dr. Chen as secondary
-- Purpose: Translate the research case for progressive resistance training without turning it into a protocol or medical claim.
-- Material extracted from current draft: the prior resistance-training section, the Lin et al. 2023 meta-analysis discussion, the distinction between progression and aggression, and the "start at the right level" language.
-
-### How Much Protein Do Adults Over 60 Need?
-
-- Proposed slug: `protein-needs-adults-over-60`
-- Target reader: Margaret
-- Purpose: Explain why protein matters for muscle maintenance and adaptation, while preserving medical/nutrition caveats.
-- Material extracted from current draft: the previous protein section, the PROT-AGE recommendation reference, protein-as-raw-material framing, and the warning that protein helps training work but does not replace the training signal.
-
-### How to Help an Aging Parent Stay Strong
-
-- Proposed slug: `help-aging-parent-stay-strong`
-- Target reader: David
-- Purpose: Give caregivers a goodwill-led, dignity-preserving path for noticing strength loss and opening the conversation.
-- Material extracted from current draft: parent examples from the opener, the "patterns not diagnosis" framing, the family tone guidance, and the line that the goal is to protect independence rather than confront decline.
-
-### Is It Too Late to Start Strength Training After 60?
-
-- Proposed slug: `too-late-start-strength-training-after-60`
-- Target reader: Margaret
-- Purpose: Answer late-start concern directly, with careful evidence language and clear safety boundaries.
-- Material extracted from current draft: the "strength can still be trained" framing, the modest-start guidance, the progression-without-aggression distinction, and the clinician referral caveats for higher-risk readers.
