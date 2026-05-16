@@ -98,51 +98,69 @@ function SarcopeniaHeroVisual() {
   return (
     <div
       role="img"
-      aria-label="Editorial illustration showing strength, muscle, and function as connected measures."
-      className="relative overflow-hidden border border-parchment/28 bg-[#151817] shadow-[0_28px_80px_rgba(0,0,0,0.28)]"
+      aria-label="Editorial illustration showing sarcopenia as a relationship between strength, muscle, and physical function."
+      className="relative overflow-hidden border border-parchment/28 bg-[#111513] shadow-[0_32px_90px_rgba(0,0,0,0.34)]"
     >
-      <div className="absolute -right-24 -top-24 h-52 w-52 rounded-full bg-sunbeam/70 blur-[2px]" />
-      <div className="absolute bottom-0 left-0 h-44 w-full bg-gradient-to-t from-verdigris/75 to-transparent" />
-      <div className="grid min-h-[390px] grid-rows-[1fr_auto] p-16 md:min-h-[520px] md:p-24">
-        <div className="relative overflow-hidden border border-parchment/24 bg-[#202522] p-18">
-          <div className="absolute left-18 top-18 z-10 font-utility text-[12px] uppercase leading-none text-parchment/58">
-            Strength, muscle, function
+      <div className="absolute -right-20 -top-16 h-56 w-56 bg-sunbeam/82" />
+      <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-verdigris/82 to-transparent" />
+      <div className="absolute left-0 top-0 h-full w-18 bg-verdigris" />
+      <div className="grid min-h-[400px] p-16 md:min-h-[520px] md:p-24">
+        <div className="relative overflow-hidden border border-parchment/24 bg-[#202522]">
+          <div className="absolute inset-0 opacity-80">
+            <div className="absolute left-[18%] top-[18%] h-40 w-px bg-parchment/10" />
+            <div className="absolute left-[42%] top-[10%] h-72 w-px bg-parchment/10" />
+            <div className="absolute right-[18%] top-[20%] h-56 w-px bg-parchment/10" />
+            <div className="absolute bottom-[30%] left-0 h-px w-full bg-parchment/10" />
           </div>
-          <div className="absolute inset-x-16 bottom-18 z-10 grid grid-cols-3 items-end gap-10">
-            {[
-              ['Strength', '88%'],
-              ['Muscle', '63%'],
-              ['Function', '78%'],
-            ].map(([label, height]) => (
-              <div key={label} className="grid gap-8">
-                <div className="flex h-64 items-end border border-parchment/22 bg-parchment/8 md:h-88">
-                  <div className="w-full bg-sunbeam" style={{ height }} />
-                </div>
-                <p className="font-utility text-[12px] leading-none text-parchment/62">{label}</p>
-              </div>
-            ))}
-          </div>
-          <div className="absolute left-1/2 top-[42%] h-40 w-40 -translate-x-1/2 rounded-full border border-parchment/34 bg-sunbeam" />
-          <div className="absolute left-1/2 top-[52%] h-44 w-[2px] -translate-x-1/2 bg-parchment/72" />
-          <div className="absolute left-[calc(50%-54px)] top-[58%] h-[2px] w-[108px] bg-parchment/72" />
-          <div className="absolute left-[calc(50%-36px)] top-[65%] h-[68px] w-[2px] rotate-[18deg] bg-parchment/72" />
-          <div className="absolute left-[calc(50%+36px)] top-[65%] h-[68px] w-[2px] rotate-[-18deg] bg-parchment/72" />
-          <div className="absolute left-[18%] top-[25%] h-28 w-28 border border-verdigris-wash/45" />
-          <div className="absolute right-[16%] top-[34%] h-36 w-36 border border-sunbeam/45" />
-          <div className="absolute inset-x-0 top-1/2 h-px bg-parchment/12" />
-        </div>
 
-        <div className="grid border-x border-b border-parchment/24 bg-parchment text-inkwell md:grid-cols-3">
-          {[
-            ['Primary signal', 'Low strength'],
-            ['Confirmation', 'Muscle quantity'],
-            ['Severity clue', 'Physical performance'],
-          ].map(([label, value]) => (
-            <div key={label} className="border-t border-inkwell/50 p-14 md:border-r md:last:border-r-0">
-              <p className="font-utility text-[12px] leading-none text-inkwell/54">{label}</p>
-              <p className="mt-8 font-display text-[23px] leading-[1] text-inkwell md:text-[25px]">{value}</p>
+          <div className="relative z-10 grid h-full grid-rows-[auto_1fr_auto] p-18 md:p-24">
+            <div className="flex items-start justify-between gap-12">
+              <p className="max-w-[170px] font-utility text-[12px] uppercase leading-[1.2] text-parchment/58">
+                Sarcopenia is not one measurement
+              </p>
+              <p className="border border-parchment/26 px-9 py-5 font-utility text-[12px] leading-none text-parchment/64">
+                Function first
+              </p>
             </div>
-          ))}
+
+            <div className="relative my-24 min-h-[210px] md:my-32 md:min-h-[280px]">
+              <div className="absolute left-1/2 top-1/2 h-122 w-122 -translate-x-1/2 -translate-y-1/2 rounded-full border border-parchment/18 bg-parchment/5 md:h-156 md:w-156" />
+              <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sunbeam shadow-[0_0_44px_rgba(255,184,1,0.32)] md:h-92 md:w-92" />
+              <div className="absolute left-1/2 top-1/2 h-px w-[72%] -translate-x-1/2 bg-parchment/45" />
+              <div className="absolute left-1/2 top-1/2 h-[72%] w-px -translate-y-1/2 bg-parchment/45" />
+              <div className="absolute left-1/2 top-1/2 h-px w-[62%] -translate-x-1/2 rotate-45 bg-parchment/28" />
+              <div className="absolute left-1/2 top-1/2 h-px w-[62%] -translate-x-1/2 -rotate-45 bg-parchment/28" />
+
+              {[
+                ['Strength', 'Primary signal', 'left-0 top-[12%]'],
+                ['Muscle', 'Quantity + quality', 'right-0 top-[20%]'],
+                ['Function', 'What life feels', 'left-[18%] bottom-0'],
+              ].map(([label, note, position]) => (
+                <div
+                  key={label}
+                  className={`absolute ${position} max-w-[138px] border border-parchment/24 bg-[#111513]/82 p-12 backdrop-blur-sm md:max-w-[158px]`}
+                >
+                  <p className="font-display text-[28px] leading-none text-parchment md:text-[34px]">
+                    {label}
+                  </p>
+                  <p className="mt-8 font-utility text-[12px] leading-[1.3] text-parchment/58">{note}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid border-t border-parchment/24 pt-14 md:grid-cols-3">
+              {[
+                ['Low strength', 'primary'],
+                ['Muscle quantity', 'confirmation'],
+                ['Physical performance', 'severity clue'],
+              ].map(([value, label]) => (
+                <div key={value} className="border-b border-parchment/16 py-10 last:border-b-0 md:border-b-0 md:border-r md:px-12 md:py-0 md:first:pl-0 md:last:border-r-0">
+                  <p className="font-display text-[24px] leading-[1.02] text-parchment md:text-[25px]">{value}</p>
+                  <p className="mt-6 font-utility text-[12px] uppercase leading-none text-parchment/46">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -178,7 +196,8 @@ function KeyTakeaways() {
 
 function EvidenceBreak() {
   return (
-    <section className="my-54 grid gap-14 md:my-64 md:grid-cols-[0.38fr_0.62fr] md:gap-18">
+    <section className="my-54 border-y border-inkwell py-18 md:my-64 md:py-24">
+      <div className="grid gap-14 md:grid-cols-[0.38fr_0.62fr] md:gap-18">
       <div className="border border-inkwell bg-inkwell p-20 text-parchment md:p-24">
         <p className="font-utility text-caption leading-caption text-parchment/62">What the research shows</p>
         <p className="mt-18 font-display text-[56px] leading-[0.9] text-sunbeam md:text-[72px]">
@@ -197,6 +216,7 @@ function EvidenceBreak() {
         <p className="mt-14 font-body text-[18px] leading-[1.58] text-inkwell/78">
           That distinction keeps the article practical without turning it into a prescription.
         </p>
+      </div>
       </div>
     </section>
   )
@@ -225,23 +245,53 @@ function EditorialRail({ post }: { post: Post }) {
   )
 }
 
+function MechanismStrip() {
+  return (
+    <section className="my-46 border border-inkwell bg-[#f7f1e4] md:my-58">
+      <div className="grid md:grid-cols-[0.45fr_0.55fr]">
+        <div className="border-b border-inkwell p-18 md:border-b-0 md:border-r md:p-22">
+          <p className="font-utility text-caption leading-caption text-inkwell/60">Visual thesis</p>
+          <p className="mt-12 font-display text-[32px] leading-[1.06] text-inkwell md:text-[40px]">
+            The diagnosis becomes practical when strength, muscle, and function are read together.
+          </p>
+        </div>
+        <div className="grid grid-cols-3">
+          {[
+            ['Strength', 'signal'],
+            ['Muscle', 'structure'],
+            ['Function', 'life'],
+          ].map(([term, role]) => (
+            <div key={term} className="border-r border-inkwell p-14 last:border-r-0 md:p-18">
+              <div className="h-32 border border-inkwell bg-verdigris-wash">
+                <div className="h-full bg-sunbeam" style={{ width: term === 'Muscle' ? '62%' : term === 'Function' ? '78%' : '88%' }} />
+              </div>
+              <p className="mt-14 font-display text-[25px] leading-none text-inkwell md:text-[30px]">{term}</p>
+              <p className="mt-6 font-utility text-[12px] uppercase leading-none text-inkwell/52">{role}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function FeatureDivider() {
   return (
-    <section className="my-54 grid gap-14 md:my-64 md:grid-cols-[0.34fr_0.66fr]">
-      <div className="border border-inkwell bg-verdigris p-18 text-parchment">
+    <section className="my-54 grid gap-0 border border-inkwell md:my-64 md:grid-cols-[0.34fr_0.66fr]">
+      <div className="bg-verdigris p-18 text-parchment md:p-24">
         <p className="font-utility text-caption leading-caption text-parchment/64">The practical test</p>
-        <p className="mt-16 font-display text-[38px] leading-[0.98] text-parchment md:text-[48px]">
+        <p className="mt-16 font-display text-[36px] leading-[1] text-parchment md:text-[46px]">
           Stairs. Chairs. Grip. Recovery.
         </p>
       </div>
-      <div className="grid border border-inkwell bg-parchment md:grid-cols-4">
+      <div className="grid bg-parchment md:grid-cols-4">
         {['Rise', 'Carry', 'Climb', 'Recover'].map((label, index) => (
           <div
             key={label}
-            className="border-b border-inkwell p-16 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0"
+            className="grid grid-cols-[44px_1fr] items-end border-t border-inkwell p-16 md:block md:border-l md:border-t-0 md:p-18"
           >
-            <p className="font-display text-[34px] leading-none text-sunbeam">{index + 1}</p>
-            <p className="mt-28 font-utility text-caption leading-caption text-inkwell/70">{label}</p>
+            <p className="font-display text-[34px] leading-none text-sunbeam md:text-[42px]">{index + 1}</p>
+            <p className="font-utility text-caption leading-caption text-inkwell/70 md:mt-40">{label}</p>
           </div>
         ))}
       </div>
@@ -432,6 +482,7 @@ export function ArticleLayout({
               {articleBody ? (
                 <>
                   <PortableText value={before} components={portableTextComponents} />
+                  {enhanced && <MechanismStrip />}
                   {enhanced && <FeatureDivider />}
                   {enhanced && <EvidenceBreak />}
                   {after.length > 0 && (
