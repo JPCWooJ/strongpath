@@ -28,6 +28,7 @@ The GTMAgent must follow:
 - PUBLISHING_PLAN.md
 - keyword-universe.md
 - METRICS.md
+- X_DISTRIBUTION_OPERATING_SYSTEM.md
 
 GitHub is canonical.
 
@@ -80,6 +81,8 @@ Primary early channels:
 - X/Twitter
 - founder-network distribution
 - selective community placement
+
+X/Twitter distribution must follow X_DISTRIBUTION_OPERATING_SYSTEM.md.
 
 ---
 

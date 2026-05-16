@@ -82,6 +82,21 @@ measure audience formation quality.
 
 ---
 
+## X/Twitter Distribution Metrics
+
+Track:
+- qualified article clicks from X
+- newsletter signups from X
+- saves/bookmarks
+- credible replies
+- relevant profile visits
+- repeat engagement from target networks
+
+Reference:
+X_DISTRIBUTION_OPERATING_SYSTEM.md
+
+---
+
 ## Email Metrics
 
 Track:

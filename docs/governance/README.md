@@ -23,6 +23,8 @@ Use these files before implementation work, design refinement, content planning,
 - `CODEX_EXECUTION_STANDARD.md`
 - `CTO_AGENT_PROFILE.md`
 - `CHIEF_OF_STAFF_AGENT_PROFILE.md`
+- `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `GTM_AGENT_PROFILE.md`
 - `UIUX_AGENT_PROFILE.md`
 - `BRAND.md`
 - `DESIGN.md`
@@ -30,7 +32,9 @@ Use these files before implementation work, design refinement, content planning,
 - `PROJECT_INSTRUCTIONS.md`
 - `PUBLISHING_PLAN.md`
 - `keyword-universe.md`
+- `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
+- `X_DISTRIBUTION_OPERATING_SYSTEM.md`
 
 ## Active Operational References
 
