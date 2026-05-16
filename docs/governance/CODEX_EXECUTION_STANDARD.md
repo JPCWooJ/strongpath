@@ -240,6 +240,29 @@ Always reference COPY_GOVERNANCE_STANDARD.md for public-facing copy, CTAs, distr
 
 ---
 
+# 9A. How To Handle GTM And Distribution Outputs
+
+GTM, launch, email, social, recirculation, and distribution outputs are operational deliverables.
+
+Codex must:
+
+- create markdown files in `docs/growth/`
+- use reusable launch folders and templates
+- commit the files into the repo
+- keep outputs version controlled and launch-repeatable
+- avoid dumping full GTM payloads into chat unless explicitly requested
+
+Default return format:
+
+```txt
+FILES CHANGED
+SHORT DIFF SUMMARY
+COMMIT HASH
+UNRESOLVED ISSUES
+```
+
+---
+
 # 10. Acceptance Criteria Standards
 
 Acceptance criteria must be:

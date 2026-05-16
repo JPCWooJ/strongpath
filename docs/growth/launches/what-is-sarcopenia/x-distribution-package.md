@@ -1,4 +1,4 @@
-# X Launch Package: What Is Sarcopenia?
+# X Distribution Package: What Is Sarcopenia?
 
 ## Primary Launch Post
 

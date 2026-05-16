@@ -301,6 +301,28 @@ Avoid:
 
 ---
 
+# 12A. GTM Distribution Deliverable Rule
+
+All GTM, launch, email, social, recirculation, and distribution assets must be:
+- created as markdown deliverables
+- committed into the repo
+- operationally reusable
+- version controlled
+- launch-repeatable
+- stored in the canonical growth structure
+- not dumped into chat unless explicitly requested
+
+Canonical location:
+`docs/growth/`
+
+Default chat response for GTM deliverables:
+- file paths
+- concise diff summary
+- commit hash
+- unresolved issues only
+
+---
+
 # 13. Operational Objective
 
 The objective is not:
