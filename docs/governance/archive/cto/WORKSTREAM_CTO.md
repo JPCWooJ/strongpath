@@ -1,11 +1,11 @@
 ﻿<!--
-OPERATIONAL CLASSIFICATION: ACTIVE OPERATIONAL REFERENCE
-CTO workstream context. Not primary StrongPath governance. docs/governance/ wins on conflict.
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Active CTO governance lives in docs/governance/CTO_AGENT_PROFILE.md and docs/governance/CODEX_EXECUTION_STANDARD.md.
+Do not use this file as active governance unless the founder explicitly requests historical context.
 -->
 
 # WORKSTREAM_CTO.md
-
-ARCHIVE WARNING: This file is archived, non-authoritative, and retained for historical reference only. Active CTO governance now lives in `docs/governance/CTO_AGENT_PROFILE.md` and `docs/governance/CODEX_EXECUTION_STANDARD.md`.
 
 **StrongPath — CTO Workstream Role Definition**
 Version: 1.0

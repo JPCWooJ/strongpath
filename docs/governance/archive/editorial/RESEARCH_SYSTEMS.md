@@ -1,3 +1,10 @@
+<!--
+ARCHIVE WARNING
+This file is archived, non-authoritative, and retained for historical reference only.
+Active editorial governance lives in docs/governance/EDITORIAL_SYSTEMS_AGENT_PROFILE.md, docs/governance/EDITORIAL_WORKFLOW.md, and docs/governance/EDITORIAL_STANDARDS.md.
+Do not use this file as active governance unless the founder explicitly requests historical context.
+-->
+
 # Research Systems
 
 ## Purpose
