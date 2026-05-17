@@ -23,23 +23,27 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 const homepageExcerptOverrides: Record<string, string> = {
   'what-is-sarcopenia':
     'A plain-language guide to age-related muscle loss, why it is often missed, and what helps protect strength and function.',
-  'why-muscle-loss-changes-everything-after-50':
-    'What changes when muscle loss starts showing up on stairs, with groceries, in chairs, on trips, and in recovery.',
-  'the-strength-crisis-nobody-talks-about':
-    'Why walking helps, where it falls short, and what training adds when life asks more of your body.',
-  'what-actually-predicts-healthy-aging':
-    'The simple tests that help explain balance, confidence, and the ability to keep doing what you love.',
+  'help-aging-parents-stay-strong':
+    'A practical guide for helping a parent protect strength, confidence, and independence without pressure.',
+  'resistance-training-older-adults':
+    'Why strength training belongs in serious healthy-aging guidance and how to think about starting safely.',
+  'protein-for-older-adults':
+    'How protein supports muscle maintenance and training adaptation, with careful boundaries around medical advice.',
+  'how-to-start-lifting-weights-at-60':
+    'A calm first-month frame for beginning resistance training with the right level of challenge and recovery.',
 }
 
 const articleUseCases: Record<string, string> = {
   'what-is-sarcopenia':
     'For the moment when stairs, chairs, luggage, or recovery start to feel different.',
-  'why-muscle-loss-changes-everything-after-50':
-    'For the moment when small tasks start taking more effort than they used to.',
-  'the-strength-crisis-nobody-talks-about':
-    'For anyone walking more but still feeling weaker.',
-  'what-actually-predicts-healthy-aging':
-    'For readers who want simple ways to understand what is changing.',
+  'help-aging-parents-stay-strong':
+    'For adult children who want to help without making a parent feel managed.',
+  'resistance-training-older-adults':
+    'For anyone walking more but still noticing strength, balance, or recovery changing.',
+  'protein-for-older-adults':
+    'For readers trying to connect food, training, and muscle without supplement hype.',
+  'how-to-start-lifting-weights-at-60':
+    'For the first week when lifting needs to feel specific, safe, and possible.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
@@ -64,13 +68,13 @@ const startingPoints = [
   {
     title: 'I want to help a parent',
     copy: 'A parent is walking less, recovering more slowly, or saying no to things they used to enjoy.',
-    href: '/waitlist',
-    action: 'Get caregiver guidance',
+    href: '/blog/help-aging-parents-stay-strong',
+    action: 'Read the caregiver guide',
   },
   {
     title: 'I want the evidence',
     copy: 'Everyone says to walk, eat protein, and lift weights. The hard part is knowing what matters first.',
-    href: '/blog/the-strength-crisis-nobody-talks-about',
+    href: '/blog/resistance-training-older-adults',
     action: 'Read the evidence guide',
   },
 ]

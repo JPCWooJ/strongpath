@@ -45,6 +45,66 @@ const h2 = (text: string) => block('h2', [text])
 const h3 = (text: string) => block('h3', [text])
 const p = (...parts: BlockPart[]) => block('normal', parts)
 
+function partsFromMarkdown(text: string): BlockPart[] {
+  const parts: BlockPart[] = []
+  const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g
+  let cursor = 0
+  let match: RegExpExecArray | null
+
+  while ((match = linkPattern.exec(text)) !== null) {
+    if (match.index > cursor) parts.push(text.slice(cursor, match.index))
+    parts.push({ text: match[1], href: match[2] })
+    cursor = match.index + match[0].length
+  }
+
+  if (cursor < text.length) parts.push(text.slice(cursor))
+  return parts.length ? parts : [text]
+}
+
+function articleMarkdown(markdown: string): PortableTextBlock[] {
+  const blocks: PortableTextBlock[] = []
+  const lines = markdown.trim().split(/\r?\n/)
+  let paragraph: string[] = []
+
+  const flushParagraph = () => {
+    if (paragraph.length === 0) return
+    blocks.push(p(...partsFromMarkdown(paragraph.join(' '))))
+    paragraph = []
+  }
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim()
+
+    if (!line) {
+      flushParagraph()
+      continue
+    }
+
+    if (line.startsWith('## ')) {
+      flushParagraph()
+      blocks.push(h2(line.slice(3)))
+      continue
+    }
+
+    if (line.startsWith('### ')) {
+      flushParagraph()
+      blocks.push(h3(line.slice(4)))
+      continue
+    }
+
+    if (line.startsWith('- ')) {
+      flushParagraph()
+      blocks.push(li(line.slice(2)))
+      continue
+    }
+
+    paragraph.push(line)
+  }
+
+  flushParagraph()
+  return blocks
+}
+
 function li(text: string): PortableTextBlock {
   blockIndex += 1
   return {
@@ -58,7 +118,7 @@ function li(text: string): PortableTextBlock {
   } as PortableTextBlock
 }
 
-export const flagshipArticles: Post[] = [
+const allFlagshipArticles: Post[] = [
   {
     _id: 'flagship-what-is-sarcopenia',
     title: 'What Is Sarcopenia?',
@@ -293,6 +353,537 @@ export const flagshipArticles: Post[] = [
         'Cruz-Jentoft et al., 2019: EWGSOP2 sarcopenia definition and diagnosis; NIH News in Health, 2025: Slowing Sarcopenia; CDC, 2025: Older Adult Activity Overview; Lin et al., 2023: resistance training and sarcopenia review.'
       ),
     ],
+  },
+  {
+    _id: 'flagship-help-aging-parents-stay-strong',
+    title: 'How to Help Aging Parents Stay Strong',
+    slug: { current: 'help-aging-parents-stay-strong' },
+    publishedAt: '2026-05-17T09:10:00.000Z',
+    updatedAt: '2026-05-17T09:10:00.000Z',
+    excerpt:
+      'A calm, practical guide for adult children who want to help a parent protect strength, confidence, and independence without pressure or fear.',
+    author: 'StrongPath Editorial',
+    category: 'Caregiving',
+    tags: ['Caregiving', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
+    seoTitle: 'How to Help Aging Parents Stay Strong',
+    seoDescription:
+      'How adult children can help aging parents protect strength and independence with dignity, evidence, and a practical first step.',
+    estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Sarcopenia: revised European consensus on definition and diagnosis',
+        publication: 'Age and Ageing',
+        year: '2019',
+        href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/',
+      },
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+      {
+        title: 'Evidence-based recommendations for optimal dietary protein intake in older people',
+        publication: 'Journal of the American Medical Directors Association',
+        year: '2013',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/23867520/',
+      },
+      {
+        title: 'STEADI - Older Adult Fall Prevention',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/steadi/',
+      },
+    ],
+    body: articleMarkdown(`
+Helping an aging parent stay strong is not a persuasion project. It is a dignity project.
+
+The first signs are usually small. A parent carries less. The stairs take longer. A chair with arms becomes the preferred chair. Errands get bundled because leaving the house now costs more. None of this proves a diagnosis, but it can be a signal that strength, balance, confidence, or recovery has less margin than it used to.
+
+The goal is not to win an argument about aging. The goal is to help a parent keep more of the life they still want.
+
+## Start with what they care about
+
+Most parents do not want to be managed. They want to remain themselves. That means the conversation should begin with their values, not your anxiety.
+
+Ask what feels harder lately. Ask what they miss doing. Ask what would make the next trip, holiday, walk, garden project, or visit easier. The practical answers are often better than abstract health language.
+
+StrongPath uses the word sarcopenia because it names age-related loss of muscle strength, muscle quantity, and function. But the word is only useful if it leads to something human: standing more easily, climbing stairs with less hesitation, carrying groceries with more confidence, and recovering with more reserve.
+
+If you need the plain-language foundation first, read [What Is Sarcopenia?](/blog/what-is-sarcopenia).
+
+## Notice patterns, not isolated moments
+
+A hard day is not a trend. A cautious week after illness is not a character flaw. What matters is the pattern.
+
+- standing from a low chair takes more effort
+- walking speed has slowed
+- stairs are avoided or negotiated
+- groceries, laundry, or luggage feel heavier
+- balance feels less automatic
+- recovery after illness, travel, or a fall takes longer
+- confidence outside the house has narrowed
+
+These signs do not diagnose sarcopenia or frailty. They are reasons to pay attention and, when appropriate, involve a physician, physical therapist, or qualified clinician.
+
+## Make the first step smaller than your fear
+
+Adult children often want a full plan: gym, trainer, protein, appointments, equipment, schedule. That impulse is understandable. It can also overwhelm the person you are trying to help.
+
+Start with one concrete step that respects autonomy.
+
+That could be asking their clinician about strength and balance. It could be a physical therapy evaluation after a fall or a major change in function. It could be two supervised strength sessions a week. It could be walking plus simple sit-to-stand practice if that is the safe starting point.
+
+The right first step depends on the parent. The principle is steady: make the path visible, specific, and manageable.
+
+## Why strength belongs in the conversation
+
+Current sarcopenia consensus places muscle strength close to the center of the problem. Strength is not only an athletic trait. It is the capacity behind chairs, stairs, grip, balance, and recovery.
+
+The CDC's older-adult activity guidance includes muscle-strengthening activity at least two days a week, along with aerobic activity and balance work. That matters because many families still treat walking as the whole plan. Walking is valuable. It is not the same as training strength.
+
+If your parent has avoided lifting for decades, the first message should not be "you need to lift heavy." A better message is: strength can be trained carefully, and the starting point can be matched to the body in front of us.
+
+## Talk about independence, not decline
+
+Fear can make the conversation feel urgent, but fear usually makes a parent feel cornered.
+
+Try language that protects agency:
+
+- "I want it to be easier for you to do the things you already care about."
+- "Would it help to ask your doctor whether strength or balance work would be appropriate?"
+- "Could we make the first step small enough to try for two weeks?"
+- "What would make this feel respectful instead of annoying?"
+
+The tone matters because the relationship matters. You are not trying to make a parent into a project. You are trying to become useful without taking over.
+
+## Protein and recovery are part of the picture
+
+Training asks the body to adapt. Food and recovery help make adaptation possible.
+
+Protein needs can be higher in older adults than many people assume, especially when illness, low appetite, weight loss, or training changes the equation. The PROT-AGE group recommended higher daily protein intake for healthy older adults than the standard adult RDA, with individualized medical judgment for people with kidney disease or other conditions.
+
+That does not mean every parent needs a supplement. It means low appetite, skipped meals, unexplained weight loss, and low protein intake deserve attention.
+
+For the dedicated StrongPath guide, read [How Much Protein Do Older Adults Need?](/blog/protein-for-older-adults).
+
+## When to involve a clinician
+
+Do not turn every strength conversation into a medical emergency. Do involve qualified care when the risk is real.
+
+Ask for medical or physical therapy guidance if your parent has had a recent fall, surgery, hospitalization, chest pain, dizziness, unexplained weight loss, significant balance problems, rapidly changing function, or a condition that affects safe exercise.
+
+A good clinician can help identify the starting level, screen for risks, and make the plan safer.
+
+## A practical path
+
+The most useful family plan is usually simple:
+
+- name the functional problem without shame
+- ask what the parent wants to keep doing
+- choose one safe first step
+- make strength and balance visible in the weekly routine
+- support protein, sleep, and recovery
+- check whether confidence and daily function improve
+
+This is not about forcing a parent into a wellness identity. It is about preserving ordinary freedom.
+
+## Read next
+
+For the training foundation, read [Resistance Training for Older Adults](/blog/resistance-training-older-adults).
+
+For the book behind StrongPath, visit [Choosing the StrongPath](/book).
+
+## Medical note
+
+This article is educational and is not medical advice. If your parent has a medical condition, recent fall, recent surgery, unexplained weight loss, chest pain, dizziness, significant balance problems, or a major change in function, work with a physician, physical therapist, or other qualified clinician before beginning a new exercise or nutrition plan.
+`),
+  },
+  {
+    _id: 'flagship-resistance-training-older-adults',
+    title: 'Resistance Training for Older Adults',
+    slug: { current: 'resistance-training-older-adults' },
+    publishedAt: '2026-05-17T09:20:00.000Z',
+    updatedAt: '2026-05-17T09:20:00.000Z',
+    excerpt:
+      'Resistance training is not bodybuilding advice for older adults. It is a practical way to train the strength that supports chairs, stairs, balance, recovery, and independence.',
+    author: 'StrongPath Editorial',
+    category: 'Strength Training',
+    tags: ['Resistance Training', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
+    seoTitle: 'Resistance Training for Older Adults',
+    seoDescription:
+      'What resistance training means for older adults, why it matters, how to start safely, and how to avoid unsupported claims.',
+    estimatedReadingMinutes: 9,
+    sources: [
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+      {
+        title: 'Sarcopenia: revised European consensus on definition and diagnosis',
+        publication: 'Age and Ageing',
+        year: '2019',
+        href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/',
+      },
+      {
+        title:
+          'Exercise and nutritional intervention for sarcopenia in community-dwelling older adults',
+        publication: 'European Review of Aging and Physical Activity',
+        year: '2023',
+        href: 'https://link.springer.com/article/10.1186/s11556-023-00333-4',
+      },
+      {
+        title: 'Exercise training and nutritional supplementation for physical frailty in very elderly people',
+        publication: 'New England Journal of Medicine',
+        year: '1994',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/8179653/',
+      },
+    ],
+    body: articleMarkdown(`
+Resistance training is a simple idea that has been made to feel more complicated than it is.
+
+It means training muscles against resistance: weights, machines, bands, body weight, cables, or carefully chosen household movements. The method can vary. The principle is the same: muscles adapt when they are asked to produce force, recover, and then meet a slightly better-matched challenge over time.
+
+For older adults, that is not vanity. It is health infrastructure.
+
+## Why resistance training matters after 50
+
+Strength is the hidden capacity behind ordinary life. It helps with standing from a chair, climbing stairs, lifting luggage, carrying groceries, catching balance, getting off the floor, and recovering after illness or travel.
+
+Age-related muscle loss is often discussed as a loss of size, but modern sarcopenia definitions emphasize strength and function. A person can look similar in clothes and still have less force available for daily tasks.
+
+That is why resistance training deserves a central place in healthy-aging guidance. It trains the system that daily life keeps asking for.
+
+## Walking is valuable. It is not the same stimulus.
+
+Walking supports cardiovascular health, routine, mood, glucose control, and participation. StrongPath is not anti-walking.
+
+But walking is not a complete strength plan. It usually does not ask the major muscle groups to produce progressively greater force. It may maintain some capacity, especially for people starting from a low baseline, but it does not replace targeted strengthening for hips, legs, back, shoulders, and grip.
+
+The CDC's older-adult activity guidance separates aerobic activity from muscle-strengthening activity and balance work. That separation is useful. It tells readers that "stay active" is not precise enough.
+
+## What a good program includes
+
+A credible resistance-training plan for older adults is usually built around major movement patterns:
+
+- sitting down and standing up
+- stepping, hinging, and squatting to the appropriate depth
+- pushing and pulling with the upper body
+- carrying or gripping
+- controlled core and balance demands
+
+The exercises do not need to look dramatic. They need to match the person and progress over time.
+
+For one person, the right start might be supervised machine training. For another, it may be physical therapy. For another, it may be body-weight sit-to-stands, wall pushups, and band rows. The question is not whether the plan looks impressive. The question is whether it is safe, specific, repeatable, and able to progress.
+
+## Progression is the point
+
+The body adapts to demand. If the demand never changes, the adaptation often stalls.
+
+Progression can mean more weight, more repetitions, slower control, a larger range of motion, a harder variation, or better consistency. It does not have to mean aggressive loading. It does mean the plan should not remain permanently easy unless maintenance is the explicit goal.
+
+A 2023 review of exercise and nutrition interventions for community-dwelling older adults with sarcopenia found that exercise and nutrition interventions were associated with improvements in several sarcopenia-related outcomes. The review also reported broader benefits from moderate and moderate-to-vigorous resistance training than from low-intensity resistance training for several outcomes, while noting limits in the evidence base.
+
+The careful takeaway is not "start hard." The careful takeaway is "start appropriately and build."
+
+## Safety is not the opposite of challenge
+
+Older adults are often protected from challenge so thoroughly that they lose the chance to adapt. That is not safety. It is undertraining with good intentions.
+
+Real safety means choosing the right entry point, monitoring symptoms, respecting pain, using qualified help when risk is higher, and progressing gradually. It also means not pretending that doing nothing is risk-free.
+
+Strength declines when it is not trained. Balance can become less reliable. Confidence can narrow. The safest long-term plan often includes well-chosen challenge.
+
+## What to ask before starting
+
+Before beginning, ask:
+
+- What movements matter most for daily life right now?
+- Is there a fall history, recent surgery, dizziness, chest pain, or major change in function?
+- Would a physical therapist, clinician, or qualified coach make the start safer?
+- What can be repeated twice a week for the next month?
+- How will progress be measured without turning the plan into pressure?
+
+The answers keep the plan grounded.
+
+## A reasonable beginner rhythm
+
+Many adults can begin with two full-body sessions per week, separated by recovery days, plus walking or other aerobic activity as appropriate. Sessions can be short. The goal is consistent exposure to the movements and enough challenge to create adaptation.
+
+A beginner session might include a chair-rise pattern, a supported hinge or squat, a row, a press, a carry, and simple balance work. The exact exercises should fit the person's capacity and medical context.
+
+If you are starting after 60, read [How to Start Lifting Weights at 60](/blog/how-to-start-lifting-weights-at-60).
+
+## The StrongPath standard
+
+StrongPath will not sell resistance training as a miracle. It is not a cure for aging. It does not replace medical care. It is not safe to prescribe the same plan to every body.
+
+But the evidence is strong enough to say this clearly: resistance training belongs in the center of serious healthy-aging guidance. It is one of the most practical ways to protect the strength that makes daily life more possible.
+
+## Read next
+
+For the clinical problem resistance training helps address, read [What Is Sarcopenia?](/blog/what-is-sarcopenia).
+
+For protein and adaptation, read [How Much Protein Do Older Adults Need?](/blog/protein-for-older-adults).
+
+## Medical note
+
+This article is educational and is not medical advice. If you have a medical condition, recent fall, recent surgery, unexplained weight loss, chest pain, dizziness, significant balance problems, or a major change in function, work with a physician, physical therapist, or other qualified clinician before beginning a new exercise plan.
+`),
+  },
+  {
+    _id: 'flagship-protein-for-older-adults',
+    title: 'How Much Protein Do Older Adults Need?',
+    slug: { current: 'protein-for-older-adults' },
+    publishedAt: '2026-05-17T09:30:00.000Z',
+    updatedAt: '2026-05-17T09:30:00.000Z',
+    excerpt:
+      'Protein is not a magic fix for aging. It is one of the basic inputs older bodies need to maintain and rebuild muscle, especially alongside resistance training.',
+    author: 'StrongPath Editorial',
+    category: 'Nutrition',
+    tags: ['Protein', 'Nutrition', 'Sarcopenia', 'Strength After 50'],
+    seoTitle: 'How Much Protein Do Older Adults Need?',
+    seoDescription:
+      'A careful guide to protein for older adults: why it matters, what expert groups recommend, and when medical guidance is needed.',
+    estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Evidence-based recommendations for optimal dietary protein intake in older people',
+        publication: 'Journal of the American Medical Directors Association',
+        year: '2013',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/23867520/',
+      },
+      {
+        title: 'ESPEN guideline on clinical nutrition and hydration in geriatrics',
+        publication: 'Clinical Nutrition',
+        year: '2019',
+        href: 'https://www.espen.org/files/ESPEN-Guidelines/ESPEN_guideline_on_clincal_nutrition_and_hydration_in_geriatrics.pdf',
+      },
+      {
+        title: 'Nutrition for Older Adults',
+        publication: 'Nutrition.gov',
+        year: '2025',
+        href: 'https://www.nutrition.gov/topics/nutrition-life-stage/older-adults',
+      },
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+    ],
+    body: articleMarkdown(`
+Protein is easy to overmarket and easy to underestimate.
+
+For older adults, the useful middle is this: protein is not a magic fix for aging, but it is one of the basic inputs the body needs to maintain and rebuild muscle. It matters more when appetite falls, weight changes, illness interrupts normal eating, or resistance training becomes part of the plan.
+
+StrongPath treats protein as part of the strength system, not as a standalone promise.
+
+## Why protein matters
+
+Muscle is constantly being broken down and rebuilt. Protein supplies amino acids the body uses in that process.
+
+As adults age, several things can make muscle maintenance harder: lower appetite, lower total food intake, chronic disease, inactivity, medication effects, illness, and a quieter reduction in physical demand. Resistance training asks muscle to adapt. Adequate protein helps support that adaptation.
+
+The practical point is not to chase a trend. It is to avoid building a strength plan while ignoring the material the body needs to respond.
+
+## What expert groups recommend
+
+The standard adult Recommended Dietary Allowance for protein is 0.8 grams per kilogram of body weight per day. Some expert groups have argued that many older adults may need more than that.
+
+The PROT-AGE study group recommended that healthy older adults consume an average daily intake in the range of 1.0 to 1.2 grams per kilogram of body weight per day, with higher intakes sometimes considered for older adults who are active, exercising, or dealing with acute or chronic disease. They also emphasized individualization and medical judgment.
+
+ESPEN's geriatric nutrition guideline similarly supports protein intake above the standard adult RDA for many older adults, while recognizing clinical context.
+
+These are not personal prescriptions. They are evidence-informed ranges to discuss with a clinician, dietitian, or qualified professional when medical conditions are present.
+
+## What that means in plain English
+
+For a 150-pound adult, 1.0 to 1.2 grams per kilogram per day is roughly 68 to 82 grams of protein per day. For a 180-pound adult, it is roughly 82 to 98 grams per day.
+
+Those numbers are not a command. They are a reference point. The right target depends on body size, kidney function, medical history, appetite, training, weight change, and clinician guidance.
+
+The biggest practical issue is often not precision. It is whether protein is showing up reliably at meals.
+
+## Spread it across the day
+
+Many older adults eat lightly early in the day and rely on a larger dinner. That pattern may leave protein too low or too concentrated.
+
+A simple first improvement is to include a meaningful protein source at breakfast, lunch, and dinner. Examples can include eggs, yogurt, cottage cheese, fish, poultry, lean meat, tofu, beans, lentils, milk, soy milk, or other options that fit the person's preferences, budget, and medical context.
+
+Supplements can be useful for some people, especially when appetite is low or meals are hard to prepare. They are not automatically necessary.
+
+## Protein works best with training
+
+Protein without resistance training is incomplete. Resistance training without adequate protein is also incomplete.
+
+The body needs both signal and substrate: the training signal that says "adapt," and the nutritional support to help adaptation happen. That is why StrongPath keeps linking nutrition to movement rather than treating either one as a miracle.
+
+For the training guide, read [Resistance Training for Older Adults](/blog/resistance-training-older-adults).
+
+## When to be cautious
+
+Older adults with kidney disease, liver disease, significant chronic illness, active cancer treatment, complex medication regimens, recent hospitalization, unexplained weight loss, swallowing problems, or major appetite changes should not treat a general article as a nutrition prescription.
+
+In those cases, the right next step is medical or dietitian guidance. Protein can be important, but the plan should fit the person.
+
+## Helping a parent eat enough
+
+If you are helping an aging parent, avoid turning every meal into surveillance. Start with the least invasive question: what foods still sound good and are easy enough to prepare?
+
+Small changes can help: a higher-protein breakfast, ready-to-eat options, smaller but more frequent meals, or pairing protein with foods the parent already likes. The best plan is the one that respects dignity and actually happens.
+
+For the family conversation, read [How to Help Aging Parents Stay Strong](/blog/help-aging-parents-stay-strong).
+
+## The StrongPath position
+
+Protein is not anti-aging magic. It will not replace strength training. It will not override illness, sleep, medication issues, or medical care.
+
+But low protein intake can make a strength plan harder to benefit from. For many older adults, improving protein quality, distribution, and consistency is a practical piece of protecting muscle and function.
+
+## Medical note
+
+This article is educational and is not medical advice. If you have kidney disease, liver disease, diabetes, heart failure, cancer, unexplained weight loss, swallowing difficulty, a recent hospitalization, or any major medical condition, work with a physician, registered dietitian, or other qualified clinician before changing protein intake.
+`),
+  },
+  {
+    _id: 'flagship-start-lifting-weights-at-60',
+    title: 'How to Start Lifting Weights at 60',
+    slug: { current: 'how-to-start-lifting-weights-at-60' },
+    publishedAt: '2026-05-17T09:40:00.000Z',
+    updatedAt: '2026-05-17T09:40:00.000Z',
+    excerpt:
+      'Starting strength training at 60 is not about becoming someone else. It is about building a careful, repeatable path back to usable strength.',
+    author: 'StrongPath Editorial',
+    category: 'Strength Training',
+    tags: ['Lifting Weights', 'Strength After 50', 'Resistance Training', 'Healthy Aging'],
+    seoTitle: 'How to Start Lifting Weights at 60',
+    seoDescription:
+      'How to begin lifting weights at 60 with a safe first step, simple movement patterns, progression, recovery, and medical common sense.',
+    estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+      {
+        title: 'Quantity and quality of exercise for developing and maintaining cardiorespiratory, musculoskeletal, and neuromotor fitness',
+        publication: 'Medicine & Science in Sports & Exercise',
+        year: '2011',
+        href: 'https://pubmed.ncbi.nlm.nih.gov/21694556/',
+      },
+      {
+        title: 'Sarcopenia: revised European consensus on definition and diagnosis',
+        publication: 'Age and Ageing',
+        year: '2019',
+        href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/',
+      },
+      {
+        title:
+          'Exercise and nutritional intervention for sarcopenia in community-dwelling older adults',
+        publication: 'European Review of Aging and Physical Activity',
+        year: '2023',
+        href: 'https://link.springer.com/article/10.1186/s11556-023-00333-4',
+      },
+    ],
+    body: articleMarkdown(`
+Starting to lift weights at 60 is not a personality change. It is a practical decision.
+
+You do not need to become a gym person. You do not need to chase youth. You do not need to punish your body for getting older. You need a safe first step, a few useful movements, enough consistency to learn, and a plan that can progress without rushing.
+
+The goal is usable strength: chairs, stairs, bags, balance, travel, and recovery.
+
+## First, define the starting point
+
+The right beginning depends on the body in front of you.
+
+If you have chest pain, dizziness, unexplained weight loss, a recent fall, recent surgery, significant balance problems, a new diagnosis, or a major change in function, start with medical or physical therapy guidance.
+
+If you are generally stable but inexperienced, you can still benefit from qualified coaching or a supervised beginner program. Good instruction early can make the work calmer and safer.
+
+## Start with movement patterns, not random exercises
+
+A good beginner plan usually includes a few patterns:
+
+- sit-to-stand or squat pattern
+- hinge pattern for hips and back
+- push pattern
+- pull pattern
+- carry or grip pattern
+- balance or controlled stepping pattern
+
+The version should fit your ability. A squat might begin as standing from a chair. A push might begin at a wall. A carry might begin with a light grocery bag. The movement should be controlled, repeatable, and challenging enough to matter.
+
+## Twice a week is a serious start
+
+Many adults can begin with two full-body sessions per week. That is enough to practice consistently, create a training signal, and leave room for recovery.
+
+A first month does not need to be elaborate. It needs to be repeatable. Learn the movements. Stop before form breaks down. Track what you did. Add difficulty gradually when the work becomes clearly easier.
+
+The CDC's older-adult activity guidance includes muscle-strengthening activity at least two days a week. That is a useful public-health floor, not a complicated performance target.
+
+## Choose weights that teach, not intimidate
+
+The right weight lets you complete the movement with control while still feeling like the final few repetitions require attention.
+
+Too light forever may not create enough stimulus. Too heavy too soon can teach poor movement or create avoidable setbacks. The art is finding the middle: enough challenge to adapt, enough control to repeat.
+
+Progress can be small. Add one repetition. Use a slightly heavier dumbbell. Slow the lowering phase. Increase range of motion. Improve consistency. These changes count.
+
+## Expect soreness, but respect warning signs
+
+Some muscle soreness can happen when training is new. Sharp pain, chest pain, dizziness, unusual shortness of breath, joint pain that worsens, or symptoms that do not settle are different. Stop and get appropriate guidance.
+
+Training should build trust in your body over time. It should not create dread.
+
+## Protein, sleep, and recovery matter
+
+Lifting is the signal. Recovery is where adaptation happens.
+
+That means sleep, food, rest days, and adequate protein all matter. Older adults may need more attention to protein than they did earlier in life, especially when appetite is lower or training begins.
+
+For the nutrition foundation, read [How Much Protein Do Older Adults Need?](/blog/protein-for-older-adults).
+
+## A simple first-month frame
+
+A practical first month might look like this:
+
+- two full-body strength sessions each week
+- five to seven movements per session
+- one to three sets per movement
+- comfortable walking or other aerobic activity as appropriate
+- balance practice if needed
+- no dramatic jumps in load
+- one written note after each session
+
+The written note can be simple: exercises, weight or variation, repetitions, and how it felt. Tracking removes guesswork and keeps progress grounded.
+
+## What success feels like
+
+Success may not feel like transformation. It may feel like the same stairs with less negotiation. A bag carried with more confidence. A chair that no longer needs both hands. A trip that feels less physically expensive.
+
+Those are not small wins. They are the point.
+
+## The StrongPath position
+
+It is not too late by default. It is also not smart to pretend every 60-year-old should start the same way.
+
+The right path is specific: screen for risk, start at the right level, train the major patterns, recover, and progress. That is how lifting becomes a tool for independence instead of an identity you have to perform.
+
+## Read next
+
+For the broader evidence frame, read [Resistance Training for Older Adults](/blog/resistance-training-older-adults).
+
+For the clinical problem behind the work, read [What Is Sarcopenia?](/blog/what-is-sarcopenia).
+
+## Medical note
+
+This article is educational and is not medical advice. If you have a medical condition, recent fall, recent surgery, unexplained weight loss, chest pain, dizziness, significant balance problems, or a major change in function, work with a physician, physical therapist, or other qualified clinician before beginning a new exercise plan.
+`),
   },
   {
     _id: 'flagship-muscle-loss-after-50',
@@ -584,6 +1175,18 @@ export const flagshipArticles: Post[] = [
     ],
   },
 ]
+
+const activeFlagshipSlugs = new Set([
+  'what-is-sarcopenia',
+  'help-aging-parents-stay-strong',
+  'resistance-training-older-adults',
+  'protein-for-older-adults',
+  'how-to-start-lifting-weights-at-60',
+])
+
+export const flagshipArticles = allFlagshipArticles.filter((article) =>
+  activeFlagshipSlugs.has(article.slug.current)
+)
 
 export const featuredFlagshipArticles = flagshipArticles
 
