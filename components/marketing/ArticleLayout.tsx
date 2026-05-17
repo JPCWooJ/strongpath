@@ -17,37 +17,23 @@ const SARCOPENIA_HERO_IMAGE = {
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-38 border-t border-[#2E6171]/30 pt-18 font-display text-[29px] font-normal leading-[1.16] text-[#0B2545] md:mt-46 md:text-[34px]">
+      <h2 className="border-t border-[#2E6171]/25 pt-18 font-display font-normal text-[#0B2545]">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-26 font-display text-[24px] font-normal leading-[1.2] text-[#0B2545] md:text-[28px]">
-        {children}
-      </h3>
+      <h3 className="font-display font-normal text-[#0B2545]">{children}</h3>
     ),
-    normal: ({ children }) => (
-      <p className="mt-14 font-body text-[18px] leading-[1.65] text-[#1A1D24]/88 md:text-[19px] md:leading-[1.68]">
-        {children}
-      </p>
-    ),
+    normal: ({ children }) => <p>{children}</p>,
     blockquote: ({ children }) => (
-      <blockquote className="my-28 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 font-display text-[25px] leading-[1.2] text-[#0B2545] md:my-34 md:px-24 md:text-[31px]">
+      <blockquote className="border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-16 font-display font-normal not-italic text-[#0B2545]">
         {children}
       </blockquote>
     ),
   },
   list: {
-    bullet: ({ children }) => (
-      <ul className="mt-16 list-disc space-y-7 pl-24 font-body text-[18px] leading-[1.6] text-[#1A1D24]/88 md:text-[19px]">
-        {children}
-      </ul>
-    ),
-    number: ({ children }) => (
-      <ol className="mt-16 list-decimal space-y-7 pl-24 font-body text-[18px] leading-[1.6] text-[#1A1D24]/88 md:text-[19px]">
-        {children}
-      </ol>
-    ),
+    bullet: ({ children }) => <ul>{children}</ul>,
+    number: ({ children }) => <ol>{children}</ol>,
   },
   marks: {
     link: ({ children, value }) => {
@@ -111,11 +97,11 @@ function KeyTakeaways() {
   ]
 
   return (
-    <section className="mb-30 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 md:mb-38 md:px-24 md:py-22">
+    <section className="mb-28 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 md:mb-34 md:px-22 md:py-20">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Key takeaways</p>
       <ul className="mt-14 space-y-8">
         {takeaways.map((takeaway) => (
-          <li key={takeaway} className="font-body text-[17px] leading-[1.52] text-[#1A1D24]/86">
+          <li key={takeaway} className="font-body text-[17px] leading-[1.5] text-[#1A1D24]/86">
             {takeaway}
           </li>
         ))}
@@ -126,12 +112,12 @@ function KeyTakeaways() {
 
 function EvidenceBox() {
   return (
-    <section className="my-34 border border-[#2E6171]/45 bg-[#dfe5dc]/70 px-18 py-18 md:my-42 md:px-24 md:py-22">
+    <section className="my-34 border border-[#2E6171]/40 bg-[#dfe5dc]/70 px-18 py-18 md:my-40 md:px-22 md:py-20">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Evidence note</p>
-      <p className="mt-12 font-display text-[28px] leading-[1.16] text-[#0B2545] md:text-[32px]">
+      <p className="mt-12 font-display text-[25px] leading-[1.18] text-[#0B2545] md:text-[29px]">
         Current consensus puts strength and function near the center.
       </p>
-      <p className="mt-12 font-body text-[17px] leading-[1.6] text-[#1A1D24]/78 md:text-[18px]">
+      <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
         StrongPath treats the book as the credibility anchor and current third-party research as
         the substantiation layer for specific health claims.
       </p>
@@ -143,7 +129,7 @@ function EditorialSources({ post }: { post: Post }) {
   if (!post.sources?.length) return null
 
   return (
-    <section aria-labelledby="article-sources" className="mt-46 border-t border-[#2E6171]/35 pt-22">
+    <section aria-labelledby="article-sources" className="mt-44 border-t border-[#2E6171]/35 pt-20">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Sources</p>
       <h2
         id="article-sources"
@@ -186,7 +172,7 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
   if (articles.length === 0) return null
 
   return (
-    <section aria-labelledby="related-reading" className="mt-46 border-t border-[#2E6171]/35 pt-22">
+    <section aria-labelledby="related-reading" className="mt-44 border-t border-[#2E6171]/35 pt-20">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Continue reading</p>
       <h2
         id="related-reading"
@@ -241,7 +227,7 @@ export function ArticleLayout({
     <main className="bg-parchment">
       <article>
         <header className="border-b border-[#2E6171]/25 bg-[#FAF8F5]">
-          <div className="sp-container py-28 md:py-38">
+          <div className="sp-container py-28 md:py-36">
             <div className="max-w-[900px]">
               <div className="flex flex-wrap gap-x-12 gap-y-6 font-utility text-[13px] leading-[1.2] text-[#5A6472]">
                 {post.category && <p>{post.category}</p>}
@@ -249,11 +235,11 @@ export function ArticleLayout({
                 {updatedAt && updatedAt !== publishedAt && <p>Updated {updatedAt}</p>}
                 {readingMinutes && <p>{readingMinutes} min read</p>}
               </div>
-              <h1 className="mt-18 max-w-[760px] font-display text-[48px] font-normal leading-[1.02] text-[#0B2545] md:text-[72px] md:leading-[0.98]">
+              <h1 className="mt-18 max-w-[760px] font-display text-[46px] font-normal leading-[1.02] text-[#0B2545] md:text-[68px] md:leading-[0.98]">
                 {post.title}
               </h1>
               {post.excerpt && (
-                <p className="mt-18 max-w-[720px] font-body text-[19px] leading-[1.5] text-[#1A1D24]/76 md:text-[22px]">
+                <p className="mt-16 max-w-[720px] font-body text-[19px] leading-[1.48] text-[#1A1D24]/76 md:text-[21px]">
                   {post.excerpt}
                 </p>
               )}
@@ -272,7 +258,7 @@ export function ArticleLayout({
               )}
             </div>
             {enhanced && (
-              <figure className="mt-24 overflow-hidden border border-[#2E6171]/25 bg-parchment md:mt-28">
+              <figure className="mt-22 overflow-hidden border border-[#2E6171]/25 bg-parchment md:mt-26">
                 <Image
                   src={SARCOPENIA_HERO_IMAGE.src}
                   alt={SARCOPENIA_HERO_IMAGE.alt}
@@ -297,12 +283,14 @@ export function ArticleLayout({
           </div>
         </header>
 
-        <div className="sp-container py-26 md:py-34">
+        <div className="sp-container py-24 md:py-32">
           <div className="mx-auto max-w-[700px]">
             <div>
               {enhanced && <KeyTakeaways />}
               {articleBody ? (
-                <PortableText value={articleBody} components={portableTextComponents} />
+                <div className="prose prose-lg max-w-none font-body prose-headings:font-display prose-headings:font-normal prose-headings:text-[#0B2545] prose-h2:mb-3 prose-h2:mt-10 prose-h2:text-[30px] prose-h2:leading-[1.16] prose-h3:mt-8 prose-h3:text-[24px] prose-p:my-3 prose-p:text-[18px] prose-p:leading-[1.66] prose-p:text-[#1A1D24]/88 prose-a:text-[#0B2545] prose-a:decoration-[#B8860B] prose-a:underline-offset-4 prose-ul:my-4 prose-li:my-1 prose-li:text-[#1A1D24]/88 prose-strong:text-[#0B2545] md:prose-h2:mt-12 md:prose-h2:text-[34px] md:prose-h3:text-[28px] md:prose-p:text-[19px] md:prose-p:leading-[1.68]">
+                  <PortableText value={articleBody} components={portableTextComponents} />
+                </div>
               ) : (
                 <p className="font-body text-[18px] leading-[1.68] text-[#1A1D24]/85">
                   This article is being prepared.
