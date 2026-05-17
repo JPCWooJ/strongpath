@@ -2,74 +2,47 @@
 
 ## Purpose
 
-Canonical source of truth for StrongPath operational KPIs.
+Canonical KPI system for StrongPath operations.
 
-The objective of this file is:
-- lightweight operational visibility
-- learning-loop acceleration
-- publishing accountability
-- conversion-path visibility
-- distribution effectiveness measurement
+Use metrics to:
 
-This is NOT:
-- enterprise BI
-- advanced attribution modeling
-- investor reporting
-- vanity dashboarding
+- detect execution quality
+- improve learning speed
+- measure audience formation
+- measure distribution effectiveness
+- protect conversion-path visibility
 
-StrongPath is still in:
-- publication formation
-- audience formation
-- learning-loop optimization
+Do not build enterprise BI.
 
-Metrics should support:
-- execution clarity
-- iteration speed
-- operational learning
+## Invariants
 
----
+- Operational beats theoretical.
+- Directional beats perfect.
+- Simple beats complex.
+- Audience quality beats traffic volume.
+- Conversion clarity beats attribution complexity.
+- Learning signals beat vanity metrics.
 
-# Core Philosophy
+## Primary KPIs
 
-Measure:
-- learning velocity
-- publishing consistency
-- audience quality
-- conversion clarity
-
-Do NOT optimize for:
-- traffic vanity
-- social vanity
-- dashboard complexity
-- premature CAC modeling
-- enterprise analytics infrastructure
-
-Rules:
-- simple beats complex
-- directional beats perfect
-- operational beats theoretical
-
----
-
-# Primary Operational KPIs
-
-## Publishing Operations
+### Publishing
 
 Track:
+
 - articles published per week
 - publishing consistency
 - draft backlog
 - article update cadence
 
-Initial target:
-- 1–2 high-quality articles/week
+Target:
 
----
+- 1-2 high-quality articles/week
 
-## Audience Metrics
+### Audience
 
 Track:
-- total sessions
+
+- sessions
 - organic sessions
 - returning visitors
 - pages/session
@@ -77,14 +50,20 @@ Track:
 - top landing pages
 - top acquisition sources
 
-Primary objective:
-measure audience formation quality.
-
----
-
-## X/Twitter Distribution Metrics
+### Email
 
 Track:
+
+- total subscribers
+- subscriber growth/week
+- signup conversion rate
+- article email CTR
+- top signup pages
+
+### X/Twitter
+
+Track:
+
 - qualified article clicks from X
 - newsletter signups from X
 - saves/bookmarks
@@ -93,126 +72,77 @@ Track:
 - repeat engagement from target networks
 
 Reference:
-X_DISTRIBUTION_OPERATING_SYSTEM.md
 
----
+- `X_DISTRIBUTION_OPERATING_SYSTEM.md`
 
-## Email Metrics
-
-Track:
-- total subscribers
-- subscriber growth/week
-- article email CTR
-- signup conversion rate
-- top signup pages
-
-Primary objective:
-build owned audience.
-
----
-
-## Quiz Metrics
+### Quiz
 
 Track:
+
 - quiz starts
 - quiz completion rate
 - article-to-quiz conversion
-- quiz abandonment points
+- abandonment points
 
-Primary objective:
-improve conversion-path clarity.
-
----
-
-## Commerce Metrics
+### Commerce
 
 Track:
+
 - affiliate clicks
 - affiliate CTR
 - top affiliate pages
 - top-converting content
 
-Primary objective:
-validate trust-first commerce.
+## Review Cadence
 
----
+Weekly:
 
-# KPI Review Cadence
-
-## Weekly
-
-Review:
 - publishing consistency
 - traffic movement
 - email growth
 - quiz conversion
-- top-performing pages
+- top pages
+- X distribution signals
 
-Goal:
-fast operational learning.
+Monthly:
 
----
-
-## Monthly
-
-Review:
 - content cluster performance
 - traffic-source quality
 - returning visitor trend
 - conversion-path performance
-- audience-compounding behavior
+- subscriber compounding
 
-Goal:
-identify strategic refinement opportunities.
+## Dashboard Standard
 
----
+Preferred:
 
-# Dashboard Philosophy
-
-Preferred stack:
-- simple
-- lightweight
-- operationally maintainable
-
-Avoid:
-- enterprise analytics stacks
-- custom BI infrastructure
-- unnecessary dashboards
-- over-instrumentation
-
-Preferred approach:
-- Vercel analytics
+- Vercel Analytics
 - GA4
+- Beehiiv metrics
 - lightweight spreadsheet tracking
 - simple KPI summaries
 
----
+Avoid:
 
-# Operational Warnings
+- custom BI
+- premature attribution modeling
+- over-instrumentation
+- vanity dashboards
+
+## Warnings
 
 Do not:
+
 - optimize for traffic spikes
 - chase low-quality acquisition
 - distort editorial quality for clicks
 - create SEO-content farms
 - overreact to short-term volatility
 
-StrongPath compounds through:
-- trust
-- authority
-- consistency
-- repetition
-- distribution discipline
-
----
-
-# Operational Objective
-
-The objective is:
-
-a lightweight, disciplined measurement system that accelerates learning and supports sustainable publication growth.
-
----
+## Status
 
 Status: Canonical
-Last Updated: May 2026
+
+Owner: GTM / Editorial Operations
+
+Scope: StrongPath Operational KPI Governance

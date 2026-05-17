@@ -2,71 +2,58 @@
 
 ## Purpose
 
-Define StrongPath's publication and GTM execution control system.
+Canonical control system for StrongPath publication and GTM execution.
 
 Objectives:
 
-- remove founder as operational bottleneck
-- preserve strategic control
-- preserve editorial quality
-- make workflow state explicit
-- route approvals by risk
-- support automation without autonomous chaos
+- remove founder as workflow manager
+- preserve strategic approval
+- make state visible
+- route work by risk
+- prevent automation chaos
 
 Operating principle:
 
 - Agents prepare.
 - Systems route.
-- Founder decides only where judgment materially matters.
+- Founder decides only where judgment matters.
 
-## 1. Single Source Of Truth
+## 1. Source Of Truth
 
-Canonical governance:
-
-- GitHub `docs/governance/`
-
-Operational mirror:
-
-- Drive copies for backup and access
-
-Rules:
-
-- GitHub is canonical.
-- Drive mirrors GitHub.
+- GitHub `docs/governance/` is canonical.
+- Drive is backup/mirror.
 - One operational tracker holds current state.
-- One item has one owner and one next action.
-- Do not create parallel governance.
-- Do not let Drive drift from Git.
+- One item has one state, one owner, one next action.
 
-## 2. Execution Priority Rules
+No parallel governance.
+No hidden status.
+No Drive/Git drift.
 
-Resolve execution tradeoffs in this order:
+## 2. Priorities
+
+Resolve tradeoffs in order:
 
 1. Trust before reach.
 2. Editorial quality before speed.
 3. Distribution before optimization.
-4. Publication consistency before cadence expansion.
+4. Consistency before cadence expansion.
 5. Repeatability before scale.
-6. Operational stability before automation expansion.
-7. Approved patterns before new experiments.
-8. Clear ownership before parallel execution.
+6. Stability before automation expansion.
+7. Approved patterns before experiments.
+8. Ownership before parallel work.
 
-Rule:
+## 3. Owners
 
-- If a faster path creates ambiguity, use the clearer path.
+Editorial Systems Agent:
 
-## 3. Ownership Model
-
-Editorial Systems Agent owns:
-
-- article readiness
+- readiness
 - sequencing
-- internal links
-- CTA packaging
-- metadata readiness
-- editorial risk review
+- links
+- CTA package
+- metadata
+- editorial risk
 
-GTM Agent owns:
+GTM Agent:
 
 - distribution plan
 - Beehiiv draft
@@ -75,73 +62,52 @@ GTM Agent owns:
 - KPI loop
 - weekly review
 
-CTO owns:
+CTO:
 
 - website publishing
-- CMS automation
-- integrations
-- analytics/tracking
+- CMS/integrations
+- tracking
 - deployment verification
-- technical regression prevention
+- automation reliability
 
-Founder owns:
+Founder:
 
 - strategic judgment
-- defined approvals
+- sensitive approvals
 - major overrides
 
 ## 4. Operating Modes
 
-Mode determines workflow intensity and founder involvement.
+Normal Publishing:
 
-### Normal Publishing Mode
+- routine approved patterns
+- agents route forward
+- founder review only on trigger
 
-Use for routine articles using approved patterns.
+Launch:
 
-Rules:
+- major launch, new positioning, coordinated campaign
+- founder approves sequence and final package
+- GTM owns launch checklist
+- CTO verifies production readiness
 
-- Agents route work forward.
-- Founder review only if approval rules trigger.
-- Recurring approved packages can auto-route.
+Experiment:
 
-### Launch Mode
+- new format, channel, cadence, or automation
+- define variable first
+- founder approves strategic experiments
+- track result and decision
 
-Use for major public launches, new positioning, or coordinated campaigns.
+High-Risk Review:
 
-Rules:
+- sensitive claim, medical risk, reputational risk, legal/compliance risk, positioning uncertainty
+- stop auto-routing
+- prepare issue package
+- founder approval required
 
-- Founder approval required for sequencing and final distribution package.
-- GTM Agent owns launch checklist.
-- CTO verifies production readiness.
-- No unscheduled channel execution.
+## 5. States
 
-### Experiment Mode
-
-Use for new distribution formats, cadence tests, channel tests, or automation tests.
-
-Rules:
-
-- Define variable before execution.
-- Founder approval required for new strategic experiments.
-- Routine low-risk experiments may proceed under approved patterns.
-- Track result and decision.
-
-### High-Risk Review Mode
-
-Use for sensitive claims, medical risk, reputational risk, legal/compliance risk, or positioning uncertainty.
-
-Rules:
-
-- Stop auto-routing.
-- Editorial Systems Agent prepares issue summary.
-- Founder approval required.
-- CTO executes only after decision.
-
-## 5. Pipeline States
-
-Every article or campaign must have one current state.
-
-States:
+Allowed states:
 
 - Intake
 - Editorial Review
@@ -153,17 +119,22 @@ States:
 - Under Review
 - Archived
 
-State visibility required:
+Required fields:
 
-- current state
-- current owner
+- item
+- state
+- mode
+- owner
 - next action
-- approval needed: yes/no
-- blocker, if any
+- approval needed
+- blocker
+- target date
+- URL/status
+- KPI status
 
-## 6. State Transition Logic
+## 6. State Transitions
 
-Valid transitions:
+Valid:
 
 - Intake -> Editorial Review
 - Editorial Review -> Approved
@@ -180,62 +151,52 @@ Valid transitions:
 - Under Review -> Archived
 - Distributed -> Archived
 
-Who can move state:
+State authority:
 
-- Editorial Systems Agent: Intake, Editorial Review, Ready for Founder Review, Approved for routine editorial patterns.
-- GTM Agent: Scheduled, Distributed, Under Review for GTM performance review.
-- CTO: Published after technical verification.
+- Editorial Systems Agent: Intake, Editorial Review, Ready for Founder Review, routine Approved.
+- GTM Agent: Scheduled, Distributed, GTM Under Review.
+- CTO: Published after verification.
 - Founder: Approved for strategic, sensitive, launch, or high-risk items.
 
-Invalid transitions:
+Invalid:
 
 - Intake -> Published
-- Editorial Review -> Scheduled without approval path
+- Editorial Review -> Scheduled
 - Ready for Founder Review -> Scheduled
 - Approved -> Distributed before Published
-- Scheduled -> Archived without owner note
 - Published -> Archived before distribution review
 
-Escalation triggers:
+Escalate:
 
 - unclear owner
 - missing next action
-- blocked more than 24 hours without reason
-- sensitive claim detected
+- blocker > 24h
+- sensitive claim
 - launch timing conflict
 - automation failure
 - duplicate state records
-- founder approval requested without prepared package
+- founder approval requested without package
 
-## 7. Approval Compression
+## 7. Approval Routing
 
 Founder reviews packages, not workflows.
-
-Rules:
-
-- Bundle related decisions when possible.
-- Present recommendation, risk, and approve/decline choice.
-- Do not ask founder to inspect raw process state.
-- Recurring approved patterns auto-route forward.
-- Routine low-risk articles can bypass founder review.
-- Founder review is reserved for material judgment.
 
 Founder review required:
 
 - new positioning
 - sensitive claims
-- major strategic shifts
-- new distribution experiments
-- major launch moments
-- high-risk editorial judgment
-- first use of a new operating pattern
+- major strategic shift
+- new distribution experiment
+- launch moment
+- high-risk judgment
+- first use of new operating pattern
 
 Founder review not required:
 
-- routine articles following approved patterns
-- metadata packaging
-- internal link recommendations
-- CTA packaging within approved patterns
+- routine approved patterns
+- metadata
+- internal links
+- CTA packaging within pattern
 - Beehiiv draft preparation
 - X package preparation
 - Postiz preparation
@@ -243,114 +204,100 @@ Founder review not required:
 - weekly reporting
 - execution of approved patterns
 
-## 8. Article Intake From Drive
+Rules:
 
-Inputs:
+- bundle decisions when possible
+- present recommendation + risk + approve/decline
+- auto-route recurring approved patterns
 
-- article draft
-- source notes
-- citations or evidence links
-- intended audience
-- target publishing window
-- related StrongPath coverage
+## 8. Pipeline
 
-Editorial Systems Agent actions:
+### Intake
+
+Input:
+
+- draft
+- sources
+- citations
+- audience
+- target window
+- related coverage
+
+Editorial Systems Agent:
 
 - confirm access
-- classify article type
-- identify target reader
-- identify evidence requirements
-- identify missing source material
-- identify internal links
-- identify CTA fit
+- classify type
+- identify reader
+- identify evidence gaps
+- identify links
+- identify CTA
 - set state
-
-Output:
-
-- intake note
-- owner
-- current state
-- blocker
-- next action
 
 SLA:
 
-- same day when submitted during business hours.
+- same business day
 
-## 9. Editorial Readiness Review
+### Editorial Review
 
-Editorial Systems Agent reviews:
+Check:
 
-- headline clarity
-- claim support
-- evidence quality
+- headline
+- claims
+- evidence
 - structure
 - reader relevance
-- tone alignment
-- CTA fit
-- internal links
-- metadata readiness
+- tone
+- CTA
+- links
+- metadata
 - health-claim risk
 
 Outcomes:
 
-- Approved pattern; proceed
-- Ready for founder review
-- Needs agent revision
-- Blocked
-
-Rules:
-
-- Agents prepare revisions before founder review.
-- Founder receives a decision package.
-- Sensitive claims route to High-Risk Review Mode.
+- approved pattern; proceed
+- ready for founder review
+- needs agent revision
+- blocked
 
 SLA:
 
-- within 24 hours of intake when source material is available.
+- within 24h when source material is available
 
-## 10. Publication Sequencing
+### Sequencing
 
-Editorial Systems Agent determines:
+Editorial Systems Agent:
 
 - priority
 - cluster fit
-- internal link dependencies
-- editorial calendar fit
-- SEO or audience-formation role
+- link dependencies
+- calendar fit
 
-GTM Agent determines:
+GTM Agent:
 
 - distribution timing
 - newsletter timing
 - X cadence
-- founder amplification timing
+- founder amplification
 - KPI expectations
 
 Rules:
 
-- No article publishes without distribution path.
-- No distribution package proceeds without URL or publish time.
-- Ready work cannot stall without blocker.
+- no article without distribution path
+- no distribution without URL or publish time
+- no stalled work without blocker
 
-## 11. Website Publishing
+### Website Publishing
 
-CTO actions:
+CTO verifies:
 
-- publish to website or CMS
-- verify rendering
-- verify metadata
-- verify social preview
-- verify mobile layout
-- verify internal links
-- verify CTA placement
-- verify analytics
-- verify no draft or noindex state remains
-
-Editorial Systems Agent actions:
-
-- confirm page matches approved intent
-- confirm links and CTA match package
+- rendering
+- metadata
+- social preview
+- mobile layout
+- links
+- CTA
+- analytics
+- no draft/noindex
 
 Output:
 
@@ -361,101 +308,57 @@ Output:
 
 SLA:
 
-- package ready within 24 hours of approval.
+- publishing package within 24h of approval
 
-## 12. Beehiiv Newsletter
+### Beehiiv
 
 GTM Agent prepares:
 
-- subject line
+- subject
 - preview text
 - body
-- article summary
-- primary CTA
-- secondary links
+- summary
+- CTA
 - send timing
 
 Editorial Systems Agent checks:
 
-- editorial fidelity
-- evidence tone
-- claim accuracy
+- fidelity
+- tone
+- claims
 - article alignment
-
-Rules:
-
-- Extend article value.
-- Avoid hype.
-- Avoid urgency tricks.
-- Avoid generic marketing language.
 
 Approval:
 
-- founder approval required for final send unless recurring pattern is pre-approved.
+- founder approval for final send unless recurring pattern is pre-approved
 
-## 13. X Distribution Package
+### X / Social
 
-GTM Agent uses `X_DISTRIBUTION_OPERATING_SYSTEM.md`.
-
-Required package:
+GTM Agent prepares:
 
 - primary X post
 - 2-4 alternate angles
 - founder amplification post
-- likely-reply prompts
-- target adjacency list
+- reply prompts
+- adjacency targets
 - posting window
-- link placement recommendation
+- link placement
 - KPI expectations
+- Postiz schedule
 
 Rules:
 
-- Every post stands alone.
-- Prioritize qualified attention.
-- Avoid engagement bait.
-- Reframe rather than repost.
-- First-hour engagement coverage required.
-
-Approval:
-
-- required for sensitive positioning, new experiments, launch moments, or first use of major package.
-- not required for routine approved patterns.
+- use `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+- every post stands alone
+- first-hour X coverage required
+- no duplicate scheduling
+- no unapproved sensitive content
 
 SLA:
 
-- ready within 24 hours of publication approval.
+- package within 24h of publication approval
 
-## 14. Postiz / Social Scheduling
-
-GTM Agent prepares:
-
-- approved post copy
-- article URL
-- media assets
-- schedule
-- founder amplification timing
-- follow-up angles
-
-CTO supports:
-
-- Postiz setup
-- account connections
-- scheduling automation
-- tracking parameters
-- troubleshooting
-
-Rules:
-
-- Do not schedule unapproved sensitive content.
-- Do not schedule duplicates.
-- Do not schedule before article timing is confirmed.
-- Preserve X cadence standards.
-
-State path:
-
-- Approved -> Scheduled -> Published -> Distributed
-
-## 15. KPI Tracking
+### KPI Review
 
 GTM Agent tracks:
 
@@ -463,7 +366,7 @@ GTM Agent tracks:
 - source attribution
 - newsletter signups
 - qualified X clicks
-- Beehiiv opens and clicks
+- Beehiiv opens/clicks
 - saves/bookmarks
 - credible replies
 - relevant profile visits
@@ -472,34 +375,22 @@ GTM Agent tracks:
 
 CTO ensures:
 
-- tracking works
-- URLs are stable
-- events are not duplicated
-- analytics stay lightweight
-
-Rules:
-
-- Track learning signals.
-- Do not optimize for vanity.
-- Do not overbuild attribution.
-
-References:
-
-- `METRICS.md`
-- `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+- stable URLs
+- working tracking
+- no duplicate events
 
 SLA:
 
-- KPI review weekly.
-- Major article first readout within 7 days of distribution.
+- weekly KPI review
+- major article readout within 7 days
 
-## 16. Weekly Review Loop
+## 9. Weekly Review
 
 GTM Agent prepares:
 
-- articles published
-- distribution completed
-- strongest traffic sources
+- published articles
+- completed distribution
+- strongest sources
 - newsletter performance
 - X performance
 - subscriber growth
@@ -510,9 +401,9 @@ GTM Agent prepares:
 
 Editorial Systems Agent contributes:
 
-- sequencing recommendations
-- internal link opportunities
-- article update opportunities
+- sequence updates
+- link opportunities
+- article updates
 - content gaps
 
 CTO contributes:
@@ -522,175 +413,133 @@ CTO contributes:
 - automation opportunities
 - implementation blockers
 
-Founder checkpoint:
+Founder approves:
 
-- approve priorities
-- approve strategic changes
-- approve major governance updates
+- next priorities
+- strategic changes
+- major governance changes
 
-SLA:
+## 10. Automation Governance
 
-- prepared once per week before founder review.
+Automation may:
 
-## 17. Automation Governance
-
-Automation may prepare, package, route, and report.
+- prepare
+- package
+- route
+- report
 
 Human review required:
 
-- article readiness classification
+- readiness classification
 - sensitive claim routing
-- final website publication verification
-- Beehiiv send approval unless pre-approved pattern
-- first use of new X package pattern
-- launch sequence approval
+- final website verification
+- Beehiiv send unless pre-approved
+- first use of new X pattern
+- launch sequence
 - governance changes
 
 Prohibited automation:
 
-- autonomous publishing of unapproved articles
+- unapproved article publishing
 - autonomous newsletter sends
-- autonomous sensitive-claim approval
-- autonomous strategic sequencing changes
-- autonomous governance edits
-- autonomous expansion of cadence without approval
+- sensitive-claim approval
+- strategic sequencing changes
+- governance edits
+- cadence expansion
 
-Audit rules:
+Audit:
 
-- automation output must show source, owner, state, and next action.
-- automated packages must be reviewable before execution.
-- KPI automation must be checked weekly.
-- failed automation must be visible in tracker.
+- output shows source, owner, state, next action
+- packages are reviewable before execution
+- KPI automation checked weekly
+- failures visible in tracker
 
-Rollback rules:
+Rollback:
 
-- pause automation on repeated error
-- revert to manual routing for affected stage
-- document issue and owner
+- pause on repeated error
+- revert affected stage to manual routing
+- assign owner
 - resume only after verification
 
-Escalate when:
+## 11. Automation Targets
 
-- automation changes state incorrectly
-- automation produces low-quality packages
-- automation obscures approval status
-- automation creates duplicate records
-- automation publishes or schedules without approval
+Automate after workflow stability:
 
-## 18. Automation Targets
-
-Automate after workflow is stable.
-
-Targets:
-
-- article ingestion from Drive
-- intake status generation
-- metadata packaging
-- internal link suggestion
-- Beehiiv draft generation
-- X package generation
-- Postiz schedule preparation
-- UTM/tracking creation
+- Drive ingestion
+- intake status
+- metadata package
+- link suggestions
+- Beehiiv draft
+- X package
+- Postiz preparation
+- UTM creation
 - KPI collection
-- weekly report generation
+- weekly report
 - state tracking
 
 Rule:
 
-- Automate repeatable preparation before execution authority.
+- automate preparation before execution authority
 
-## 19. Execution SLAs
-
-Default timing:
+## 12. SLAs
 
 - Intake: same business day.
-- Editorial review: within 24 hours.
-- Sequence recommendation: within 24 hours of readiness.
-- Website publishing package: within 24 hours of approval.
-- Distribution package: within 24 hours of publication approval.
-- Beehiiv draft: before scheduled send review.
+- Editorial review: 24h.
+- Sequence recommendation: 24h after readiness.
+- Website package: 24h after approval.
+- Distribution package: 24h after publication approval.
+- Beehiiv draft: before send review.
 - Postiz schedule: before launch window.
 - First-hour X coverage: mandatory.
 - KPI review: weekly.
 
-Rule:
+Missed SLA requires blocker + next action.
 
-- Missed SLA requires blocker and next action.
-
-## 20. State Visibility
-
-Use one operational tracker.
-
-Required fields:
-
-- item name
-- current state
-- operating mode
-- owner
-- next action
-- approval needed
-- blocker
-- target date
-- live URL
-- distribution status
-- KPI readout status
-
-Rules:
-
-- No hidden workflow state.
-- No side-channel approvals.
-- No duplicate status locations.
-- No item without owner.
-- No owner without next action.
-
-## 21. Failure Modes
+## 13. Failure Modes
 
 Prevent:
 
-- article published without distribution
+- article without distribution
 - duplicate posting
-- stale article backlog
-- founder bottleneck reintroduced
+- stale backlog
+- founder as project manager
 - unclear approval state
-- low-quality automation drift
+- automation drift
 - KPI blindness
-- disconnected editorial and distribution timing
-- untracked campaign performance
-- Drive/Git governance drift
+- disconnected editorial/distribution timing
+- untracked performance
+- governance drift
 - autonomous publishing without approval
 
-Corrective action:
+Correct:
 
 - assign owner
 - set state
 - name blocker
 - define next action
-- escalate only if judgment materially matters
+- escalate only when judgment matters
 
-## 22. Operational Drift Prevention
+## 14. Drift Prevention
 
-Rules:
+No:
 
-- No side-channel execution.
-- No undocumented workflow.
-- No duplicate approvals.
-- No founder-as-default-project-manager.
-- No invisible blockers.
-- No untracked article state.
-- No unowned distribution package.
-- No governance updates outside Git.
+- side-channel execution
+- undocumented workflow
+- duplicate approvals
+- invisible blockers
+- untracked article state
+- unowned distribution package
+- governance updates outside Git
 
 If drift appears:
 
 - stop affected workflow
-- restore state in tracker
+- restore tracker state
 - assign owner
 - document next action
-- escalate only if decision authority is required
+- escalate only if authority is required
 
-## 23. Standard Handoff Format
-
-Every handoff includes:
+## 15. Handoff Format
 
 ```txt
 STATUS
@@ -702,32 +551,29 @@ MODE
 OWNER
 <agent or role>
 
-REQUIRED ACTION
+ACTION
 <single action>
 
-APPROVAL NEEDED
+APPROVAL
 <yes/no>
 
 BLOCKER
 <none or named blocker>
 
-NEXT STEP
+NEXT
 <single next step>
 ```
 
-## 24. Operating Rules
+## 16. Invariants
 
 - Agents prepare before founder review.
-- Agents recommend; founder decides.
-- Systems route work by state.
-- One item, one state, one owner.
 - Founder reviews packages, not workflows.
-- Approved patterns auto-route forward.
-- No article publishes without distribution path.
-- No distribution package proceeds without KPI expectations.
+- Approved patterns auto-route.
+- One item, one state, one owner.
+- No article without distribution path.
+- No distribution without KPI expectations.
 - No automation obscures approval.
 - No channel execution without owner.
-- No duplicate governance standards.
 - No growth activity degrades trust.
 
 ## Status

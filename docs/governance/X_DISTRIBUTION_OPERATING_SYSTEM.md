@@ -2,637 +2,527 @@
 
 ## Purpose
 
-Govern how StrongPath uses X/Twitter as an editorial distribution platform.
+Govern StrongPath X/Twitter usage as editorial distribution.
 
 Scope:
 
-- Posting.
-- Replies.
-- Article amplification.
-- Network seeding.
-- Experimentation.
-- Account behavior.
+- posts
+- replies
+- article amplification
+- network seeding
+- experiments
+- account health
 
-StrongPath is:
+Not:
 
-- Evidence-based.
-- Editorial-first.
-- Trust-preserving.
-- Non-hype.
-- Not a creator-economy growth account.
-- Not an engagement farm.
+- creator growth
+- engagement farming
+- rage bait
+- hype marketing
 
 ## 1. Algorithm Primitives
 
 X rewards predicted user value.
 
-Core mechanics:
+Mechanics:
 
-- Candidate retrieval: graph, topic, interaction memory, and network overlap.
-- Ranking: predicted engagement, dwell, reply value, user fit, and negative feedback.
-- Filtering: duplicate, stale, unsafe, blocked, muted, low-quality, or ineligible content.
-- Conversation ranking: reply quality, relevance, credibility, and spam risk.
-- Diversity controls: reduce excessive repetition from the same author or pattern.
+- retrieval: graph, topic, interaction memory, network overlap
+- ranking: engagement, dwell, reply value, fit, negative feedback
+- filtering: duplicate, stale, unsafe, muted, blocked, low-quality content
+- conversation ranking: reply quality, relevance, credibility, spam risk
+- diversity: limits repeated author/pattern exposure
 
-Operating translation:
+Translation:
 
-- Be consistently useful to a credible audience.
-- Earn repeated interaction from relevant accounts.
-- Publish posts worth reading, saving, replying to, and discussing.
-- Avoid signals that train negative feedback.
+- be consistently useful to credible audiences
+- earn repeated relevant interaction
+- create posts worth reading, saving, replying to, and sharing
+- avoid negative feedback loops
 
 ## 2. Invariants
 
-- Never sacrifice trust for reach.
+- Trust before reach.
 - Qualified attention > impressions.
-- Relationship memory compounds distribution probability.
-- Topic consistency compounds retrieval probability.
+- Relationship memory compounds distribution.
+- Topic consistency compounds retrieval.
 - Credible adjacency compounds reach quality.
-- Every post must stand alone without click dependency.
+- Every post stands alone without click dependency.
 - Replies are distribution assets.
 - Reply quality > posting quantity.
-- Useful specificity beats broad motivation.
-- Dwell must be earned, not manipulated.
+- Dwell is earned, not manipulated.
 - Links extend value; they do not replace value.
-- Ideas can persist; posts decay quickly.
+- Posts decay; ideas can persist.
 - Reframing > reposting.
 - Never optimize for outrage.
 
 ## 3. Account Health
 
-Maintain behavioral consistency.
-
-Rules:
-
-- Avoid long inactivity.
-- Avoid sudden cadence spikes.
-- Avoid abrupt topic drift.
-- Maintain consistent editorial lanes.
-- Maintain consistent voice and evidence standards.
-- Avoid switching between institutional analysis and casual hype.
-- Preserve algorithmic trust through predictable quality.
-
-Risks:
-
-- Burst posting after silence.
-- Random-topic experimentation.
-- Repetitive link drops.
-- Low reply presence.
-- High negative feedback.
-- Low-trust network engagement.
-
-## 4. Candidate Retrieval
-
-Distribution starts before ranking.
-
-Increase retrieval probability through:
-
-- Graph proximity: operate near credible health, longevity, fitness, medicine, science, and policy networks.
-- Interaction memory: create repeated high-quality interactions with relevant accounts.
-- Network overlap: become visible inside clusters where credible readers already interact.
-- Topic adjacency: publish inside recognizable thematic lanes.
-- Relationship compounding: repeated useful interactions increase future distribution probability.
-
-Rule:
-
-- Relationship memory compounds distribution probability.
-
-## 5. Out-of-Network Reach
-
-Earn non-follower reach through credible expansion.
+Maintain consistency.
 
 Do:
 
-- Publish posts credible followers want to engage with.
-- Reply usefully inside adjacent expert conversations.
-- Keep topic lanes consistent.
-- Make posts understandable without brand familiarity.
-- Build qualified spillover from trusted networks.
-
-Do not:
-
-- Chase general virality.
-- Attract low-quality engagement.
-- Trade expert credibility for broad attention.
-
-## 6. Topic Clusters
-
-Core lanes:
-
-- Muscle loss and aging.
-- Strength as health infrastructure.
-- Evidence-based longevity.
-- Training behavior after 50.
-- GLP-1, weight loss, and lean mass preservation.
-- Preventive health behavior.
-- Older-adult performance and independence.
-
-Rules:
-
-- Every post maps to a lane.
-- New topics require adjacency to an existing lane.
-- Repeat themes through sharper angles, not recycled wording.
-- Avoid random commentary.
-- Train audience expectation.
-
-## 7. Adjacency Mapping
-
-Protect adjacency quality.
-
-High-value adjacency:
-
-- Clinicians.
-- Researchers.
-- Physical therapists.
-- Strength coaches.
-- Dietitians.
-- Longevity operators.
-- Public health voices.
-- Serious patient-education accounts.
-
-Neutral adjacency:
-
-- General wellness accounts.
-- Business operators.
-- Newsletter writers.
-- Fitness consumers.
-- Health-curious readers.
-
-Dangerous adjacency:
-
-- Rage bait.
-- Conspiracy health.
-- Medical misinformation.
-- Anti-science clusters.
-- Supplement hype.
-- Unsupported biohacking.
-- Engagement-farming accounts.
-
-Rules:
-
-- Prioritize high-value adjacency.
-- Use neutral adjacency selectively.
-- Avoid dangerous adjacency.
-- Do not enter low-trust networks for reach.
-- Correct misinformation only when restraint and authority are possible.
-
-## 8. Network Seeding
-
-Build credible network memory.
-
-Engage with:
-
-- Clinicians discussing aging, muscle, obesity, frailty, exercise, and prevention.
-- Researchers sharing evidence relevant to StrongPath lanes.
-- Operators building serious health, fitness, and longevity products.
-- Journalists and editors covering health systems, aging, and medicine.
-- Bridge accounts followed by both expert and lay audiences.
-
-Conversation entry rules:
-
-- Add evidence, distinction, or practical framing.
-- Avoid self-promotion as the first move.
-- Link only when the article directly answers the conversation.
-- Prefer useful replies over agreement signals.
-
-Bridge account rule:
-
-- Use bridge accounts to connect expert credibility with broader readership without diluting standards.
-
-## 9. Cadence Standard
-
-Default operating rhythm:
-
-- 1-2 strong posts per day when warranted.
-- 3-5 substantive replies per day.
-- 2-4 amplification angles per major article.
-- 1-2 founder amplification posts per major article.
-
-Rules:
-
-- Do not post to fill quota.
-- Do not disappear after publishing.
-- Space posts to avoid internal competition.
-- Keep cadence stable.
-- Prefer fewer strong posts over more weak posts.
-
-## 10. Early Engagement Window
-
-First 30-60 minutes matter.
-
-Rules:
-
-- Stay available after publishing.
-- Reply quickly to credible comments.
-- Clarify, expand, and point to evidence.
-- Prioritize high-value adjacency.
-- Avoid post-and-disappear behavior.
-- Do not inflate engagement with weak replies.
-
-## 11. Dwell Without Manipulation
-
-Optimize for qualified attention.
-
-Use:
-
-- Specific opening lines.
-- Practical stakes.
-- Evidence framing.
-- Useful distinctions.
-- Unfinished informational tension.
-- Concrete reader relevance.
+- post regularly
+- keep cadence stable
+- stay in topic lanes
+- keep voice consistent
+- preserve evidence standard
 
 Avoid:
 
-- Clickbait.
-- False urgency.
-- Manufactured controversy.
-- Mystery-box hooks.
-- Overpromising.
-- Outrage framing.
+- long inactivity
+- sudden spikes
+- abrupt topic drift
+- repetitive link drops
+- low reply presence
+- low-trust engagement
 
-Opening-line rule:
+## 4. Retrieval And Reach
 
-- The first line should make a serious reader want the second line.
+Increase retrieval probability through:
 
-## 12. Post Frameworks
+- graph proximity to credible health/longevity/fitness/medicine/science networks
+- repeated high-quality interactions
+- overlap with clusters where credible readers already interact
+- topic adjacency inside known lanes
+- relationship compounding
 
-Use repeatable editorial structures.
+Out-of-network reach comes from:
 
-Problem -> implication -> evidence:
+- credible follower engagement
+- useful replies in adjacent expert conversations
+- consistent topic lanes
+- posts understandable without brand familiarity
+- qualified spillover from trusted networks
 
-- Name the issue.
-- Explain why it matters.
-- Anchor in evidence.
+Do not chase general virality.
 
-Misconception -> clarification -> application:
+## 5. Topic Lanes
 
-- Identify the mistaken belief.
-- Correct it precisely.
-- Show what changes in practice.
+Core lanes:
 
-Observation -> distinction -> article:
-
-- Start with a real pattern.
-- Separate similar ideas.
-- Link to deeper analysis.
-
-Scenario -> mechanism -> recommendation:
-
-- Describe the situation.
-- Explain the mechanism.
-- Give a grounded action.
-
-Evidence -> interpretation -> decision:
-
-- Cite the finding.
-- Explain the meaning.
-- Translate into behavior.
-
-## 13. Thread Mechanics
-
-Threads are for compression, not education sprawl.
-
-Preference:
-
-- Compressed threads.
-- Clear sequence.
-- High signal per post.
-- Thread quality > thread frequency.
-
-Length:
-
-- Preferred: 3-6 posts.
-- Maximum: 8 posts unless exceptional.
-
-Use a thread when:
-
-- The idea requires sequence.
-- Multiple distinctions must be preserved.
-- Several evidence points must connect.
-- A single post would overload the argument.
-
-Use a single post when:
-
-- One idea carries the point.
-- The goal is a sharp observation.
-- The link is supporting evidence.
-- The post can stand alone.
+- muscle loss and aging
+- strength as health infrastructure
+- evidence-based longevity
+- training after 50
+- GLP-1, weight loss, lean mass
+- preventive health behavior
+- older-adult performance and independence
 
 Rules:
 
-- One unit of meaning per post.
-- No filler transitions.
-- No bloated educational threads.
-- No artificial suspense.
-- Resolve the point.
-- Link only after value is established.
-- Skimmable readers should understand the argument.
+- every post maps to a lane
+- new topics require adjacency
+- repeat themes through sharper angles
+- avoid random commentary
 
-## 14. Link-Post Strategy
+## 6. Adjacency
 
-Links follow value.
+High-value:
+
+- clinicians
+- researchers
+- physical therapists
+- strength coaches
+- dietitians
+- longevity operators
+- public health voices
+- serious patient-education accounts
+
+Neutral:
+
+- general wellness
+- business operators
+- newsletter writers
+- fitness consumers
+- health-curious readers
+
+Dangerous:
+
+- rage bait
+- conspiracy health
+- medical misinformation
+- anti-science clusters
+- supplement hype
+- unsupported biohacking
+- engagement farming
 
 Rules:
 
-- Never publish a bare link.
-- Lead with idea, evidence, or implication.
-- Make the post useful without the click.
-- Place the link after context.
-- Test link placement deliberately.
-- Avoid repetitive link-only patterns.
+- prioritize high-value adjacency
+- use neutral selectively
+- avoid dangerous adjacency
+- do not enter low-trust networks for reach
 
-Good link post:
+## 7. Network Seeding
 
-- Standalone insight.
-- Clear relevance.
-- Article as deeper source.
+Engage with:
 
-Bad link post:
+- clinicians on aging, muscle, obesity, frailty, exercise, prevention
+- researchers sharing relevant evidence
+- serious health/fitness/longevity operators
+- journalists/editors covering health systems, aging, medicine
+- bridge accounts connecting expert and lay audiences
 
-- Headline repeat.
-- Generic teaser.
-- No value without click.
+Entry rules:
 
-## 15. Article Amplification
+- add evidence, distinction, or practical framing
+- avoid self-promotion as first move
+- link only when directly useful
+- prefer useful replies over agreement signals
+
+## 8. Cadence
+
+Default:
+
+- 1-2 strong posts/day when warranted
+- 3-5 substantive replies/day
+- 2-4 amplification angles/major article
+- 1-2 founder amplification posts/major article
+
+Rules:
+
+- do not fill quota
+- do not disappear after publishing
+- space posts
+- prefer fewer strong posts
+
+## 9. Early Window
+
+First 30-60 minutes:
+
+- stay available
+- answer credible replies
+- clarify with evidence
+- prioritize high-value adjacency
+- avoid weak engagement inflation
+
+## 10. Post Construction
+
+Opening rule:
+
+- first line makes a serious reader want line two
+
+Use:
+
+- specificity
+- practical stakes
+- evidence framing
+- useful distinctions
+- unfinished informational tension
+
+Avoid:
+
+- clickbait
+- false urgency
+- manufactured controversy
+- mystery-box hooks
+- overpromising
+- outrage
+
+Frameworks:
+
+- problem -> implication -> evidence
+- misconception -> clarification -> application
+- observation -> distinction -> article
+- scenario -> mechanism -> recommendation
+- evidence -> interpretation -> decision
+
+## 11. Thread Mechanics
+
+Threads compress sequence.
+
+Default:
+
+- 3-6 posts
+- 8 max unless exceptional
+
+Use thread when:
+
+- idea requires sequence
+- distinctions must be preserved
+- evidence points must connect
+- single post overloads argument
+
+Use single post when:
+
+- one idea carries the point
+- goal is sharp observation
+- link is supporting evidence
+- post stands alone
+
+Rules:
+
+- one unit of meaning per post
+- no filler
+- no educational sprawl
+- no artificial suspense
+- resolve the point
+- link after value
+
+## 12. Link Strategy
+
+Rules:
+
+- never publish bare link
+- lead with idea/evidence/implication
+- make post useful without click
+- place link after context
+- avoid repetitive link-only patterns
+
+Good:
+
+- standalone insight
+- clear relevance
+- article as deeper source
+
+Bad:
+
+- headline repeat
+- generic teaser
+- no value without click
+
+## 13. Article Amplification
 
 Per major article:
 
-1. Publish article.
-2. Publish primary X post with strongest editorial claim.
-3. Stay active for 30-60 minutes.
-4. Reply to credible engagement.
-5. Seed relevant conversations where appropriate.
-6. Reframe 1-3 additional angles over several days.
-7. Use Jeff for founder context where useful.
-8. Track saves, replies, qualified clicks, and subscriber impact.
+1. publish article
+2. publish strongest editorial claim
+3. cover first 30-60 minutes
+4. reply to credible engagement
+5. seed relevant conversations
+6. reframe 1-3 angles over several days
+7. use founder context where useful
+8. track qualified signals
 
-Angle types:
+Angles:
 
-- Evidence.
-- Practical implication.
-- Misconception correction.
-- Founder/editorial note.
-- Audience-specific application.
+- evidence
+- practical implication
+- misconception correction
+- founder/editorial note
+- audience-specific application
 
-## 16. Distribution Decay
-
-Posts decay quickly. Ideas can persist.
+## 14. Distribution Decay
 
 Rules:
 
-- Do not repost identical posts repeatedly.
-- Reframe durable ideas through new angles.
-- Reuse audience problems, not identical wording.
-- Let data decide which idea deserves another pass.
-- Avoid repetitive article promotion patterns.
+- posts decay quickly
+- durable ideas can persist
+- do not repost identical copy
+- reframe through new angles
+- reuse audience problems, not wording
+- avoid repetitive promotion
 
-Resurfacing methods:
+Resurface with:
 
-- New evidence lead.
-- Different audience frame.
-- Practical checklist.
-- Reply expansion.
-- Quote-post with added context.
+- new evidence
+- different audience frame
+- practical checklist
+- reply expansion
+- quote-post context
 
-Invariant:
-
-- Reframing > reposting.
-
-## 17. Reply Strategy
-
-Replies are distribution assets.
+## 15. Reply Strategy
 
 Prioritize:
 
-- Expert conversations.
-- Serious reader questions.
-- Misconceptions StrongPath can correct.
-- Bridge-account discussions.
-- Replies that may earn saves, profile visits, or article clicks.
+- expert conversations
+- serious reader questions
+- correctable misconceptions
+- bridge-account discussions
+- replies that may earn saves, profile visits, or article clicks
 
 Rules:
 
-- Add substance.
-- Stay calm.
-- Avoid dunking.
-- Avoid generic agreement.
-- Do not argue with bad-faith accounts.
-- Prefer precision over volume.
+- add substance
+- stay calm
+- avoid dunking
+- avoid generic agreement
+- ignore bad-faith accounts
+- precision over volume
 
-## 18. Bookmark Optimization
+## 16. Bookmark Utility
 
-Bookmarks signal durable utility.
+Save-worthy formats:
 
-Design save-worthy posts as:
-
-- Practical checklists.
-- Reference-style distinctions.
-- Evidence summaries.
-- Decision rules.
-- Common mistake corrections.
-- Durable frameworks.
-- Practical decision support.
+- checklists
+- reference distinctions
+- evidence summaries
+- decision rules
+- mistake corrections
+- durable frameworks
+- practical decision support
 
 Rules:
 
-- Make posts useful later, not only interesting now.
-- Compress practical value.
-- Support reader decisions.
-- Favor durable reference behavior.
-- Avoid vague inspiration.
-- Do not ask for bookmarks.
+- useful later > interesting now
+- compress practical value
+- support reader decisions
+- do not ask for bookmarks
 
-## 19. Engagement Quality
+## 17. Engagement Quality
 
-Strong signals:
+Strong:
 
-- Credible replies.
-- Saves/bookmarks.
-- Qualified clicks.
-- Relevant profile visits.
-- Repeat engagement from target networks.
-- Long dwell from serious readers.
+- credible replies
+- saves/bookmarks
+- qualified clicks
+- relevant profile visits
+- repeat target-network engagement
+- long dwell from serious readers
 
-Risk signals:
+Risk:
 
-- Drive-by likes from irrelevant accounts.
-- Rage replies.
-- Meme quote-posting.
-- Low-context debate.
-- Bot-like engagement.
-- Low-trust follower growth.
-- Mutes, blocks, reports.
+- irrelevant drive-by likes
+- rage replies
+- meme quote-posting
+- low-context debate
+- bot-like engagement
+- low-trust follower growth
+- mutes, blocks, reports
 
 Rule:
 
-- Optimize for the audience StrongPath wants to keep.
+- optimize for the audience StrongPath wants to keep
 
-## 20. Media Strategy
+## 18. Media
 
-Use visuals only when they improve comprehension.
+Use visuals only for comprehension.
 
-Approved formats:
+Allowed:
 
-- Simple charts.
-- Article screenshots.
-- Excerpt cards.
-- Evidence graphics.
-- Conceptual distinctions.
+- simple charts
+- article screenshots
+- excerpt cards
+- evidence graphics
+- conceptual distinctions
 
 Rules:
 
-- Keep visuals restrained.
-- Ensure mobile readability.
-- Use evidence-oriented design.
-- Avoid meme aesthetics.
-- Avoid over-produced influencer visuals.
-- Do not use visuals to manufacture drama.
+- restrained
+- mobile-readable
+- evidence-oriented
+- no memes
+- no influencer gloss
+- no manufactured drama
 
-## 21. Founder vs Brand
+## 19. Founder vs Brand
 
 StrongPath account:
 
-- Institutional voice.
-- Article distribution.
-- Evidence framing.
-- Editorial standards.
-- Topic consistency.
+- institutional voice
+- article distribution
+- evidence framing
+- editorial standards
+- topic consistency
 
 Jeff account:
 
-- Founder context.
-- Personal credibility.
-- Selective amplification.
-- Conversation entry.
-- Relationship building.
+- founder context
+- personal credibility
+- selective amplification
+- conversation entry
+- relationship building
 
 Rules:
 
-- Jeff should add context, not duplicate.
-- StrongPath remains canonical source.
-- Founder voice may be warmer.
-- Brand voice stays institutional.
+- Jeff adds context, not duplication
+- StrongPath remains canonical source
+- founder voice can be warmer
+- brand voice stays institutional
 
-## 22. Experiment Standard
+## 20. Experiments
 
-Test one variable at a time.
+Test one variable:
 
-Permitted variables:
-
-- Thread vs single post.
-- Image vs text.
-- Link in first post vs reply.
-- Cadence spacing.
-- Opening-line structure.
-- Evidence-first vs implication-first.
-- Founder amplification timing.
+- thread vs single post
+- image vs text
+- link in first post vs reply
+- cadence spacing
+- opening structure
+- evidence-first vs implication-first
+- founder amplification timing
 
 Rules:
 
-- Define test before posting.
-- Track at least 3 comparable attempts.
-- Do not overfit one post.
-- Preserve trust during experiments.
-- Retire formats that create reach without relevance.
+- define before posting
+- track 3 comparable attempts
+- do not overfit one post
+- preserve trust
+- retire reach without relevance
 
-## 23. KPI System
+## 21. KPIs
 
 Primary:
 
-- Qualified article clicks.
-- Newsletter signups from X.
-- Saves/bookmarks.
-- Credible replies.
-- Relevant profile visits.
-- Repeat engagement from target networks.
+- qualified article clicks
+- newsletter signups from X
+- saves/bookmarks
+- credible replies
+- relevant profile visits
+- repeat target-network engagement
 
 Secondary:
 
-- Impressions.
-- Likes.
-- Reposts.
-- Follower growth.
+- impressions
+- likes
+- reposts
+- follower growth
 
 Negative:
 
-- Mutes.
-- Blocks.
-- Reports.
-- Bad-faith replies.
-- Low-trust follower growth.
-- Topic drift.
+- mutes
+- blocks
+- reports
+- bad-faith replies
+- low-trust follower growth
+- topic drift
 
-Decision rule:
-
-- Promote formats that increase qualified attention and trust.
-
-## 24. Operating Loop
+## 22. Operating Loop
 
 Daily:
 
-- Publish only strong posts.
-- Leave substantive replies.
-- Monitor the first hour after publishing.
-- Avoid low-quality engagement.
+- publish only strong posts
+- leave substantive replies
+- cover first hour
+- avoid low-quality engagement
 
 Per article:
 
-- Extract 3-5 angles.
-- Publish one primary post.
-- Support with first-hour replies.
-- Reframe over several days.
-- Track qualified engagement.
+- extract 3-5 angles
+- publish primary post
+- support with replies
+- reframe over days
+- track qualified engagement
 
 Weekly:
 
-- Review best posts and replies.
-- Identify high-value adjacency gained.
-- Identify dangerous adjacency to avoid.
-- Run one controlled experiment.
-- Update GTM notes.
+- review best posts/replies
+- identify high-value adjacency
+- identify dangerous adjacency
+- run one controlled experiment
+- update GTM notes
 
 Monthly:
 
-- Review topic-lane performance.
-- Review subscriber conversion.
-- Review founder vs brand contribution.
-- Promote durable rules.
-- Retire weak patterns.
+- review topic-lane performance
+- review subscriber conversion
+- review founder vs brand contribution
+- promote durable rules
+- retire weak patterns
 
-## 25. Behaviors To Avoid
+## 23. Do Not
 
-Do not:
-
-- Rage bait.
-- Engagement farm.
-- Post generic motivation.
-- Chase broad virality.
-- Overpost links.
-- Publish bloated threads.
-- Use threads as default format.
-- Reply to bad-faith accounts for visibility.
-- Drift into unsupported health claims.
-- Use meme formats as core distribution.
-- Trade credibility for short-term reach.
-
-## 26. Governance Maintenance
-
-Update when:
-
-- X ranking mechanics materially change.
-- StrongPath identifies repeatable distribution patterns.
-- New GTM channels interact with X.
-- Founder and brand roles need refinement.
-- KPI evidence contradicts current practice.
-
-Update standard:
-
-- Compress before expanding.
-- Preserve invariants.
-- Replace weak rules with stronger rules.
-- Avoid social-media guru language.
-- Keep executable by humans and AI agents.
+- rage bait
+- engagement farm
+- post generic motivation
+- chase broad virality
+- overpost links
+- publish bloated threads
+- default to threads
+- reply to bad faith for visibility
+- drift into unsupported health claims
+- use memes as core distribution
+- trade credibility for reach
 
 ## Status
 
