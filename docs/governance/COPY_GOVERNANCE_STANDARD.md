@@ -10,7 +10,7 @@ This file defines required copy posture for public-facing StrongPath writing: br
 
 Status: Canonical  
 Layer: Core editorial governance  
-Primary dependencies: `BRAND.md`, `PERSONAS.md`, `CITATION_STANDARD.md`, `CONTENT_QA.md`, `SEO_SYSTEMS.md`  
+Primary dependencies: `BRAND.md`, `PERSONAS.md`, `EDITORIAL_STANDARDS.md`
 Last updated: May 2026
 
 ## Governing References
@@ -21,9 +21,7 @@ This document inherits from:
 2. `CODEX_EXECUTION_STANDARD.md`
 3. `BRAND.md`
 4. `PERSONAS.md`
-5. `CITATION_STANDARD.md`
-6. `CONTENT_QA.md`
-7. `SEO_SYSTEMS.md`
+5. `EDITORIAL_STANDARDS.md`
 
 When copy opportunity conflicts with brand, persona, citation, QA, legal, or commerce rules, the stricter trust standard wins.
 
@@ -95,7 +93,7 @@ The word "reversing" appears only inside the italicized book title *Choosing the
 
 ## 6. Citation And Evidence Awareness
 
-Copy must preserve the source hierarchy in `CITATION_STANDARD.md`.
+Copy must preserve the source hierarchy in `EDITORIAL_STANDARDS.md`.
 
 Rules:
 

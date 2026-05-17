@@ -34,20 +34,20 @@ Use these files before implementation work, design refinement, content planning,
 - `PERSONAS.md`
 - `PROJECT_INSTRUCTIONS.md`
 - `PUBLISHING_PLAN.md`
-- `CITATION_STANDARD.md`
-- `RESEARCH_SYSTEMS.md`
-- `CONTENT_QA.md`
-- `SEO_SYSTEMS.md`
-- `INTERNAL_LINKING_SYSTEM.md`
-- `ARTICLE_SCORING_RUBRIC.md`
 - `EDITORIAL_WORKFLOW.md`
-- `CONTENT_BRIEF_STANDARD.md`
-- `CONTENT_UPDATE_POLICY.md`
-- `TOPIC_CLUSTER_ARCHITECTURE.md`
+- `EDITORIAL_STANDARDS.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
 - `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+
+## Active Editorial Governance
+
+- `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `EDITORIAL_WORKFLOW.md`
+- `EDITORIAL_STANDARDS.md`
+
+Superseded editorial standards are archived under `docs/governance/archive/editorial/` and are not active governance.
 
 ## Active Operational References
 
@@ -63,7 +63,7 @@ When these files conflict with `docs/governance/`, `docs/governance/` wins.
 
 ## Archive
 
-Archived governance files live in `archive/governance/`.
+Archived governance files live in `archive/governance/` or `docs/governance/archive/`.
 
 Those files are non-authoritative and retained for historical reference only. Do not use archive files as implementation guidance unless the founder explicitly asks for historical context.
 

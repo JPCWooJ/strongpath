@@ -3,38 +3,29 @@
 ## Purpose
 
 - Define the minimum workflow for StrongPath articles.
-- Protect evidence, brand, reader trust, and publishing speed.
-- Keep process light enough to ship.
+- Keep article production fast, evidence-safe, and low ceremony.
+- Point detailed standards to `EDITORIAL_STANDARDS.md`.
 
-## Governing Files
+## Active Editorial Governance
 
-- `AGENT_RULES.md`
-- `CODEX_EXECUTION_STANDARD.md`
-- `BRAND.md`
-- `PERSONAS.md`
-- `PUBLISHING_PLAN.md`
-- `CITATION_STANDARD.md`
-- `CONTENT_QA.md`
-- `SEO_SYSTEMS.md`
-- `INTERNAL_LINKING_SYSTEM.md`
-- `ARTICLE_SCORING_RUBRIC.md`
-- `EDITORIAL_ART_DIRECTION_SYSTEM.md`
+- `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `EDITORIAL_WORKFLOW.md`
+- `EDITORIAL_STANDARDS.md`
 
-Specialized files govern their own domain.
+Detailed rules for citations, claims, briefs, QA, scoring, research, SEO, links, presentation, refresh, deprecation, hard stops, and escalation live in `EDITORIAL_STANDARDS.md`.
 
 ## Core Rules
 
 - GitHub is canonical.
-- Occam's Razor: simplest proven workflow wins.
-- No governance sprawl.
-- No vague prompts; every task needs observable acceptance criteria.
+- Simplest proven workflow wins.
 - Founder is not QA.
 - Founder review is for founder-level judgment only.
 - Template first for article presentation.
 - Deploy implementation work by default unless explicitly excluded.
 - After two failed editorial or visual iterations, switch to proven baseline or rollback.
+- No governance sprawl.
 
-## Article Lifecycle
+## Lifecycle
 
 - Idea
 - Approved topic
@@ -53,60 +44,50 @@ Do not skip from draft to publish ready.
 
 ## Topic Gate
 
-Approve a topic only when it has:
+Approve only when clear:
 
-- clear reader
-- clear intent
-- clear article role
-- safe claim territory
-- plausible evidence support
+- reader
+- intent
+- article role
+- claim territory
+- evidence support
 - internal-linking role
 
-Defer or reject unsafe claims, weak evidence, premature commerce, or unclear reader need.
+Defer unsafe claims, weak evidence, unclear reader need, duplicate intent, or premature commerce.
 
 ## Brief Gate
 
 Minimum brief:
 
-- working title
+- title
 - reader/persona
-- search or editorial intent
+- intent
 - article role
-- required claims
+- approved claims
 - do-not-claim list
 - source requirements
 - internal links
 - CTA direction
-- founder questions, if any
+- risk/founder questions, if any
 
 The brief is the contract. Cut or escalate unsupported additions.
 
-## Drafting Rules
-
-- Answer reader intent early.
-- Stay inside approved evidence.
-- Use StrongPath voice.
-- Cite or cut health, safety, mechanism, intervention, and quantitative claims.
-- Keep commerce after education.
-- Include planned internal links.
-- Add safety limits when relevant.
-
-## Required QA
+## QA Gate
 
 Before publish ready:
 
-- editorial structure passes
+- structure passes
 - brand/persona fit passes
 - claims are supported or removed
 - citations and source links work
-- metadata is claim-safe
+- metadata and headings are claim-safe
 - internal links are relevant and safe
 - commerce firewall passes
-- article presentation follows the publication baseline
-- desktop and mobile layouts pass
+- article presentation follows baseline
+- desktop/mobile pass
 - build/typecheck pass when implementation is involved
 
-## Founder Gates
+## Founder Gate
 
 Use founder review only for:
 
@@ -115,10 +96,10 @@ Use founder review only for:
 - David-facing emotional sensitivity
 - medical/legal risk
 - commerce or affiliate sensitivity
-- book, founder, author, or platform framing changes
+- book, founder, author, product, quiz, program, or platform framing
 - unresolved reviewer disagreement
 
-Founder packets must include:
+Founder packet:
 
 - exact decision needed
 - risk
@@ -127,7 +108,7 @@ Founder packets must include:
 
 Do not ask founder to find routine QA defects.
 
-## Publish-Ready Standard
+## Publish Ready
 
 Publish ready means:
 
@@ -138,38 +119,12 @@ Publish ready means:
 - title, metadata, headings, and CTA are claim-safe
 - page is deployable and readable on mobile
 
-## Updates
+## Maintenance
 
-Refresh when:
-
-- sources age out
-- links break
-- research changes
-- article overlaps a stronger page
-- governance changes
-- claim language no longer fits
-- internal links need rerouting
-
-Refresh only what changed. Rerun affected QA.
-
-## Deprecation
-
-Deprecate or archive when:
-
-- article is inaccurate
-- source support cannot be maintained
-- claim territory becomes unsafe
-- article duplicates a stronger page
-- article no longer fits scope
-
-State:
-
-- reason
-- replacement page, if any
-- links to update
-- merge, archive, or remove action
-
-Do not leave deprecated articles in active reader pathways.
+- Refresh when sources age out, links break, research changes, governance changes, article overlaps stronger page, or claim language no longer fits.
+- Merge or replace duplicate/weak pages.
+- Deprecate/archive inaccurate, unsupported, risky, or out-of-scope pages.
+- Do not leave deprecated pages in active reader pathways.
 
 ## Escalation Format
 
