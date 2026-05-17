@@ -1,9 +1,30 @@
+const canonicalSiteUrl = 'https://www.strongpath.com'
+const staleVercelHostname = ['strongpath', 'vercel', 'app'].join('.')
+
+function resolveSiteUrl() {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, '')
+
+  if (!configuredUrl) return canonicalSiteUrl
+
+  try {
+    const parsedUrl = new URL(
+      configuredUrl.includes('://') ? configuredUrl : `https://${configuredUrl}`
+    )
+
+    if (parsedUrl.hostname === staleVercelHostname) return canonicalSiteUrl
+
+    return parsedUrl.origin
+  } catch {
+    return configuredUrl
+  }
+}
+
 export const siteMetadata = {
   name: 'StrongPath',
   title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
     'Evidence-based strength guidance for adults and families facing age-related muscle loss.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://strongpath.vercel.app',
+  url: resolveSiteUrl(),
   locale: 'en_US',
   language: 'en-us',
   rssPath: '/rss.xml',
