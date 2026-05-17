@@ -33,7 +33,7 @@ strongpath/
 
   operations/                Chief of Staff and CTO operational files
     CODE_BACKLOG.md            Active operational reference
-    WORKSTREAM_CTO.md          Active operational reference
+    WORKSTREAM_CTO.md          Archived under docs/governance/archive/cto/
 ```
 
 ## How agents use this

@@ -5,10 +5,12 @@ CTO workstream context. Not primary StrongPath governance. docs/governance/ wins
 
 # WORKSTREAM_CTO.md
 
+ARCHIVE WARNING: This file is archived, non-authoritative, and retained for historical reference only. Active CTO governance now lives in `docs/governance/CTO_AGENT_PROFILE.md` and `docs/governance/CODEX_EXECUTION_STANDARD.md`.
+
 **StrongPath — CTO Workstream Role Definition**
 Version: 1.0
 Last updated: May 1, 2026
-Authority: Tier 3 (vertical). Inherits from `AGENT_RULES.md`, `PROJECT_INSTRUCTIONS.md`, `BEST_PRACTICES.md`, `STACK.md`, `ACTIVE_VERTICALS.md`.
+Archived authority: superseded by `docs/governance/CTO_AGENT_PROFILE.md` and `docs/governance/CODEX_EXECUTION_STANDARD.md`.
 Owner: Chief of Staff chat (until CTO is onboarded; ownership of tech-stack files transfers to CTO at end of step 3).
 
 ---
@@ -373,4 +375,4 @@ Repo-level files (`strongpath/CLAUDE.md`, `.claude/rules/`, `docs/decisions.md`)
 
 ---
 
-*This file is the canonical role definition for the CTO workstream on StrongPath. It updates when the role's scope or operating model changes — most likely at Day 30, Day 60, and Day 90 retrospectives, or when a Design workstream split happens. The structure is portfolio-generic and is a candidate for promotion to a Tier 2 `WORKSTREAM_CTO_TEMPLATE.md` when vertical #2 onboards.*
+*Archived May 17, 2026 during CTO governance compression. Retained for historical context only.*

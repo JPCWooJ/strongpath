@@ -9,14 +9,9 @@ Use these files before implementation work, design refinement, content planning,
 1. Founder instructions
 2. `AGENT_RULES.md`
 3. `CODEX_EXECUTION_STANDARD.md`
-4. `BRAND.md`
-5. `COPY_GOVERNANCE_STANDARD.md`
-6. `DESIGN.md`
-7. `PERSONAS.md`
-8. `PROJECT_INSTRUCTIONS.md`
-9. `PUBLISHING_PLAN.md`
-10. Role-specific agent profiles
-11. Task-specific prompts
+4. Role-specific agent profiles
+5. Lane-specific governance files
+6. Task-specific prompts
 
 ## Active Canonical Files
 
@@ -41,6 +36,13 @@ Use these files before implementation work, design refinement, content planning,
 - `PRODUCT_CONCEPTS_BACKLOG.md`
 - `X_DISTRIBUTION_OPERATING_SYSTEM.md`
 
+## Active CTO Governance
+
+- `CTO_AGENT_PROFILE.md`
+- `CODEX_EXECUTION_STANDARD.md`
+
+Superseded CTO role/process material is archived under `docs/governance/archive/cto/` and is not active governance.
+
 ## Active Editorial Governance
 
 - `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
@@ -55,7 +57,6 @@ These files are active operational references, not primary governance authoritie
 
 - `agent-os/strongpath/seo/CONTENT_PLAN.md`
 - `agent-os/strongpath/operations/CODE_BACKLOG.md`
-- `agent-os/strongpath/operations/WORKSTREAM_CTO.md`
 - `agent-os/portfolio/BEST_PRACTICES.md`
 - `agent-os/portfolio/ACTIVE_VERTICALS.md`
 

@@ -7,8 +7,8 @@ Implementation backlog. Not primary StrongPath governance. docs/governance/ wins
 
 **StrongPath — Code Work Backlog for Claude Code Sessions**
 Maintained by Chief of Staff • May 4, 2026
-Authority: Tier 3 (vertical). Inherits from `AGENT_RULES.md`, `PROJECT_INSTRUCTIONS.md`, `STACK.md`, `BEST_PRACTICES.md`, `ACTIVE_VERTICALS.md`.
-Owner: Chief of Staff chat (transfers to CTO at end of CTO onboarding step 3).
+Authority: Active operational reference. CTO execution rules live in `docs/governance/CTO_AGENT_PROFILE.md` and `docs/governance/CODEX_EXECUTION_STANDARD.md`.
+Owner: CTO Agent, with Chief of Staff owning cross-workstream sequencing.
 
 ---
 
@@ -26,54 +26,32 @@ Owner: Chief of Staff chat (transfers to CTO at end of CTO onboarding step 3).
 
 The queue of code work to be executed by Claude Code sessions against the `JPCWooJ/strongpath` repo. Each item is scoped so that a fresh Claude Code session can read the item and begin execution without needing to re-derive context from chat history.
 
-Claude Code is an implementation channel, not a strategic workstream (see `PROJECT_INSTRUCTIONS.md` §Workstream Model). This file is how strategy becomes code.
+Claude Code is the implementation channel. This file is how approved strategy becomes code.
 
-**On scope and reusability.** This file's *structure* is portfolio-generic — §1 standing rules for Claude Code sessions, §2 priority legend, and §6 item template all generalize across every eCommerce vertical. This file's *items* are StrongPath-specific. When vertical #2 onboards, the structure is a candidate for promotion to a Tier 2 `VERTICAL_TEMPLATE.md` section (or a dedicated `CODE_BACKLOG_TEMPLATE.md`) in the eCommerce domain. Each vertical then instances its own `CODE_BACKLOG.md` from the template with its own items. Not yet done — this is a 30-60 day item, triggered either by vertical #2 onboarding or by roughly two-thirds of StrongPath's current items shipping.
+Keep backlog items short, scoped, and executable by a fresh Codex session.
 
 ---
 
 ## How to use this file
 
-### For the founder
-
-1. Before opening a Claude Code session, read the item at the top of the **Active** list (§3).
-2. Open a Claude Code session at the `strongpath` repo root: `cd ~/path/to/strongpath && claude`.
-3. Paste the item's **Brief** into Claude Code as the session's opening prompt. Claude Code auto-loads `strongpath/CLAUDE.md` and `.claude/rules/` alongside your prompt.
-4. When the item ships, move it from Active to Done (§4) and note the PR/commit reference.
-5. If an item surfaces a new item during execution, capture it in Parked (§5) or Done-and-follow-ups — do not let it collide with the current item.
-
-### For Chief of Staff (this chat)
-
-1. New items arrive from: (a) other workstreams flagging dependencies, (b) `ACTIVE_VERTICALS.md` P0/P1/P2 lists, (c) observations during sessions, (d) founder direct request.
-2. Write each item per the template in §6. The brief must be scoped tight enough that a fresh Claude Code session can execute it.
-3. Prioritize: **P0** blocks Day 1, **P1** blocks Phase 1 targets, **P2** improves quality but doesn't block, **P3** nice-to-have.
-4. Re-order the Active list whenever priority shifts. The top item is always the next one to execute.
-
-### What an item is NOT
-
-- Not a full technical spec. Claude Code does its own exploration.
-- Not a prescription for how to solve the problem. State goals and constraints, not step-by-step instructions (per `AGENT_RULES.md` tone guidance — applies to briefing Claude Code too).
-- Not open-ended. Every item has an acceptance criterion you can check in 60 seconds.
+- Work the top item in **Active** unless the founder gives a newer instruction.
+- Paste the item's **Brief** into a fresh Codex session at repo root.
+- Move shipped items to **Done** with commit/PR reference.
+- Capture follow-ups in **Parked** unless they are the next approved task.
+- Keep new items short: context, brief, acceptance criteria, out of scope.
 
 ---
 
 ## 1. Standing rules for Claude Code sessions
 
-These rules apply to every Claude Code session on this repo. They are encoded in `strongpath/CLAUDE.md` and in `.claude/rules/`, but also stated here so the founder can remind Claude Code when needed.
+Full execution rules live in `docs/governance/CODEX_EXECUTION_STANDARD.md`.
 
-1. **Always use plan mode for anything beyond a trivial edit.** Per Boris Cherny / Anthropic official guidance. Plan mode produces a written plan the founder reviews before execution.
-
-2. **Respect the canonical stack.** `STACK.md` is authoritative. Anthropic Claude API, never OpenAI. Next.js 14, Supabase, Sanity, Vercel, Klaviyo, Resend, Stripe, Sentry. Stack deviations require a written justification in `strongpath/docs/decisions.md`.
-
-3. **Respect the book/product firewall in any user-facing code output.** Copy in code (UI strings, email templates, error messages) must follow `BRAND.md` §9.1. Research claims attach to the book, not the product. "Reverse" and "reversing" never appear in our own voice — only inside the italicized book title.
-
-4. **Affiliate tag `stron02-20` on every Amazon link.** Non-negotiable. Per `BRAND.md` §11.
-
-5. **Branching: `main` is production, short-lived feature branches via PR.** `main` is the default branch on GitHub and the branch Vercel deploys from. Never commit directly to `main`. Work on `feature/<short-description>` or `fix/<short-description>` branches, commit often, open a PR to `main`, merge after review, delete the feature branch.
-
-6. **Commit often.** At least once per logical unit of work. Per Anthropic official guidance and community consensus.
-
-7. **No secrets in code or chat.** Use `.env` files; confirm `.env` is gitignored before committing.
+Minimum reminders:
+- use Anthropic, never OpenAI
+- preserve the book/product firewall
+- keep Amazon tag `stron02-20`
+- use feature branches and PR review
+- never commit secrets
 
 ---
 
