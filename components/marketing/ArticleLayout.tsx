@@ -17,7 +17,7 @@ const SARCOPENIA_HERO_IMAGE = {
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="border-t border-[#2E6171]/25 pt-18 font-display font-normal text-[#0B2545]">
+      <h2 className="border-t border-[#2E6171]/24 pt-14 font-display font-normal text-[#0B2545]">
         {children}
       </h2>
     ),
@@ -97,7 +97,7 @@ function KeyTakeaways() {
   ]
 
   return (
-    <section className="mb-28 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 md:mb-34 md:px-22 md:py-20">
+    <section className="mb-24 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-16 py-16 md:mb-30 md:px-20 md:py-18">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Key takeaways</p>
       <ul className="mt-14 space-y-8">
         {takeaways.map((takeaway) => (
@@ -112,9 +112,9 @@ function KeyTakeaways() {
 
 function EvidenceBox() {
   return (
-    <section className="my-34 border border-[#2E6171]/40 bg-[#dfe5dc]/70 px-18 py-18 md:my-40 md:px-22 md:py-20">
+    <section className="my-30 border border-[#2E6171]/34 bg-[#dfe5dc]/65 px-16 py-16 md:my-36 md:px-20 md:py-18">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Evidence note</p>
-      <p className="mt-12 font-display text-[25px] leading-[1.18] text-[#0B2545] md:text-[29px]">
+      <p className="mt-10 font-display text-[24px] leading-[1.18] text-[#0B2545] md:text-[28px]">
         Current consensus puts strength and function near the center.
       </p>
       <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
@@ -129,7 +129,7 @@ function EditorialSources({ post }: { post: Post }) {
   if (!post.sources?.length) return null
 
   return (
-    <section aria-labelledby="article-sources" className="mt-44 border-t border-[#2E6171]/35 pt-20">
+    <section aria-labelledby="article-sources" className="mt-38 border-t border-[#2E6171]/32 pt-18">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Sources</p>
       <h2
         id="article-sources"
@@ -172,7 +172,7 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
   if (articles.length === 0) return null
 
   return (
-    <section aria-labelledby="related-reading" className="mt-44 border-t border-[#2E6171]/35 pt-20">
+    <section aria-labelledby="related-reading" className="mt-38 border-t border-[#2E6171]/32 pt-18">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Continue reading</p>
       <h2
         id="related-reading"
@@ -226,8 +226,8 @@ export function ArticleLayout({
   return (
     <main className="bg-parchment">
       <article>
-        <header className="border-b border-[#2E6171]/25 bg-[#FAF8F5]">
-          <div className="sp-container py-28 md:py-36">
+        <header className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
+          <div className="sp-container py-26 md:py-34">
             <div className="max-w-[900px]">
               <div className="flex flex-wrap gap-x-12 gap-y-6 font-utility text-[13px] leading-[1.2] text-[#5A6472]">
                 {post.category && <p>{post.category}</p>}
@@ -235,11 +235,11 @@ export function ArticleLayout({
                 {updatedAt && updatedAt !== publishedAt && <p>Updated {updatedAt}</p>}
                 {readingMinutes && <p>{readingMinutes} min read</p>}
               </div>
-              <h1 className="mt-18 max-w-[760px] font-display text-[46px] font-normal leading-[1.02] text-[#0B2545] md:text-[68px] md:leading-[0.98]">
+              <h1 className="mt-16 max-w-[760px] font-display text-[44px] font-normal leading-[1.03] text-[#0B2545] md:text-[66px] md:leading-[0.99]">
                 {post.title}
               </h1>
               {post.excerpt && (
-                <p className="mt-16 max-w-[720px] font-body text-[19px] leading-[1.48] text-[#1A1D24]/76 md:text-[21px]">
+                <p className="mt-14 max-w-[720px] font-body text-[18px] leading-[1.52] text-[#1A1D24]/76 md:text-[21px]">
                   {post.excerpt}
                 </p>
               )}
@@ -258,7 +258,7 @@ export function ArticleLayout({
               )}
             </div>
             {enhanced && (
-              <figure className="mt-22 overflow-hidden border border-[#2E6171]/25 bg-parchment md:mt-26">
+              <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-parchment md:mt-24">
                 <Image
                   src={SARCOPENIA_HERO_IMAGE.src}
                   alt={SARCOPENIA_HERO_IMAGE.alt}
@@ -283,12 +283,12 @@ export function ArticleLayout({
           </div>
         </header>
 
-        <div className="sp-container py-24 md:py-32">
-          <div className="mx-auto max-w-[700px]">
+        <div className="sp-container py-22 md:py-30">
+          <div className="mx-auto max-w-[680px]">
             <div>
               {enhanced && <KeyTakeaways />}
               {articleBody ? (
-                <div className="prose prose-lg max-w-none font-body prose-headings:font-display prose-headings:font-normal prose-headings:text-[#0B2545] prose-h2:mb-3 prose-h2:mt-10 prose-h2:text-[30px] prose-h2:leading-[1.16] prose-h3:mt-8 prose-h3:text-[24px] prose-p:my-3 prose-p:text-[18px] prose-p:leading-[1.66] prose-p:text-[#1A1D24]/88 prose-a:text-[#0B2545] prose-a:decoration-[#B8860B] prose-a:underline-offset-4 prose-ul:my-4 prose-li:my-1 prose-li:text-[#1A1D24]/88 prose-strong:text-[#0B2545] md:prose-h2:mt-12 md:prose-h2:text-[34px] md:prose-h3:text-[28px] md:prose-p:text-[19px] md:prose-p:leading-[1.68]">
+                <div className="prose prose-lg max-w-none font-body prose-headings:font-display prose-headings:font-normal prose-headings:text-[#0B2545] prose-h2:mb-3 prose-h2:mt-9 prose-h2:text-[29px] prose-h2:leading-[1.17] prose-h3:mt-7 prose-h3:text-[23px] prose-p:my-3 prose-p:text-[18px] prose-p:leading-[1.64] prose-p:text-[#1A1D24]/88 prose-a:text-[#0B2545] prose-a:decoration-[#B8860B] prose-a:underline-offset-4 prose-ul:my-4 prose-li:my-1 prose-li:text-[#1A1D24]/88 prose-strong:text-[#0B2545] md:prose-h2:mt-10 md:prose-h2:text-[33px] md:prose-h3:text-[27px] md:prose-p:text-[19px] md:prose-p:leading-[1.66]">
                   <PortableText value={articleBody} components={portableTextComponents} />
                 </div>
               ) : (

@@ -22,16 +22,16 @@ export default async function BlogPage() {
   const articles = publishedPosts.map(toArticleMeta)
 
   return (
-    <main>
-      <section className="border-b border-inkwell">
-        <div className="sp-container grid gap-40 py-[72px] lg:grid-cols-[0.42fr_0.58fr]">
+    <main className="bg-parchment">
+      <section className="border-b border-[#2E6171]/28 bg-[#FAF8F5]">
+        <div className="sp-container grid gap-18 py-34 md:py-48 lg:grid-cols-[0.38fr_0.62fr] lg:items-end lg:gap-34">
           <div>
-            <p className="sp-kicker mb-18 text-inkwell/70">StrongPath articles</p>
-            <h1 className="font-display text-[54px] font-normal leading-[1] text-inkwell md:text-[82px]">
-              Research made practical.
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">StrongPath articles</p>
+            <h1 className="mt-12 font-display text-[46px] font-normal leading-[1.02] text-[#0B2545] md:text-[72px] md:leading-[0.98]">
+              Research made practical
             </h1>
           </div>
-          <p className="max-w-[640px] font-body text-[22px] font-medium leading-[1.45] text-inkwell/85">
+          <p className="max-w-[660px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/78 md:text-[21px]">
             Clear, evidence-oriented guidance on sarcopenia, strength training, protein, recovery,
             and helping aging parents protect capacity.
           </p>
@@ -39,14 +39,14 @@ export default async function BlogPage() {
       </section>
 
       {Object.keys(tagCounts).length > 0 && (
-        <section className="border-b border-inkwell">
-          <div className="sp-container py-40">
+        <section className="border-b border-[#2E6171]/25">
+          <div className="sp-container py-18 md:py-22">
             <div className="flex flex-wrap gap-8">
               {Object.entries(tagCounts).map(([tag, count]) => (
                 <Link
                   key={tag}
                   href={`/blog/tags/${tag}`}
-                  className="border border-inkwell/40 px-8 py-4 font-utility text-caption leading-caption text-inkwell/70 transition-colors hover:border-inkwell hover:text-inkwell"
+                  className="border border-[#2E6171]/32 px-9 py-5 font-utility text-[13px] leading-none text-[#1A1D24]/68 transition-colors hover:border-[#0B2545] hover:text-[#0B2545]"
                 >
                   {tag.replace(/-/g, ' ')} ({count})
                 </Link>
@@ -57,9 +57,9 @@ export default async function BlogPage() {
       )}
 
       <section>
-        <div className="sp-container py-60">
+        <div className="sp-container py-28 md:py-40">
           {publishedPosts.length === 0 ? (
-            <p className="sp-body text-inkwell/75">No posts yet.</p>
+            <p className="font-body text-[18px] leading-[1.6] text-[#1A1D24]/75">No posts yet.</p>
           ) : (
             <ArticleList articles={articles} />
           )}
