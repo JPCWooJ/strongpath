@@ -4,19 +4,15 @@ import Link from 'next/link'
 import { AmazonLink } from '@/components/AmazonLink'
 import { formatArticleDate } from '@/lib/articles'
 import { featuredFlagshipArticles } from '@/lib/flagship-articles'
+import { buildMetadata } from '@/lib/seo'
 import { EmailForm } from './EmailForm'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: 'StrongPath - Evidence-based strength for adults 55+',
   description:
     'Book-led help for adults and families who want to stay strong for travel, stairs, recovery, and the people they love.',
-  openGraph: {
-    title: 'StrongPath - Evidence-based strength for adults 55+',
-    description:
-      'Keep the strength for stairs, travel, caregiving, recovery, and the life you want after 50.',
-    type: 'website',
-  },
-}
+  path: '/',
+})
 
 const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 
