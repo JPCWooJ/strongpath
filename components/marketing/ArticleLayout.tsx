@@ -9,7 +9,7 @@ import { formatArticleDate, normalizeTag } from '@/lib/articles'
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-46 border-t border-inkwell/22 pt-22 font-display text-[32px] font-normal leading-[1.1] text-inkwell md:mt-58 md:pt-28 md:text-[42px]">
+      <h2 className="mt-36 border-t border-inkwell/24 pt-18 font-display text-[32px] font-normal leading-[1.08] text-inkwell md:mt-46 md:pt-22 md:text-[42px]">
         {children}
       </h2>
     ),
@@ -19,7 +19,7 @@ const portableTextComponents: PortableTextComponents = {
       </h3>
     ),
     normal: ({ children }) => (
-      <p className="mt-18 font-body text-[18px] leading-[1.68] text-inkwell/88 md:text-[20px] md:leading-[1.72]">
+      <p className="mt-16 font-body text-[18px] leading-[1.66] text-inkwell/88 md:text-[20px] md:leading-[1.7]">
         {children}
       </p>
     ),
@@ -65,15 +65,30 @@ function getPlainBlockText(block: unknown) {
 function getArticleBody(post: Post) {
   if (!post.body || !post.sources?.length) return post.body
 
-  const sourceHeadingIndex = post.body.findIndex(
-    (block) =>
-      'style' in block &&
-      block.style === 'h2' &&
-      getPlainBlockText(block).trim().toLowerCase() === 'sources referenced'
-  )
+  const body = post.body
+  const legacyRenderedSections = new Set(['read next', 'next step', 'references', 'sources referenced'])
+  const retainedHeadings = new Set(['medical note'])
 
-  if (sourceHeadingIndex === -1) return post.body
-  return post.body.slice(0, sourceHeadingIndex)
+  return body.filter((block, index) => {
+    const currentHeading =
+      'style' in block && block.style === 'h2'
+        ? getPlainBlockText(block).trim().toLowerCase()
+        : null
+
+    if (currentHeading && legacyRenderedSections.has(currentHeading)) return false
+
+    const previousHeading = [...body]
+      .slice(0, index)
+      .reverse()
+      .find((candidate) => 'style' in candidate && candidate.style === 'h2')
+
+    if (!previousHeading) return true
+
+    const sectionHeading = getPlainBlockText(previousHeading).trim().toLowerCase()
+    if (retainedHeadings.has(sectionHeading)) return true
+
+    return !legacyRenderedSections.has(sectionHeading)
+  })
 }
 
 function isSarcopeniaArticle(post: Post) {
@@ -97,34 +112,40 @@ function splitBodyForEditorialBreak(body?: PortableTextBlock[]) {
 
 function SarcopeniaHeroVisual() {
   return (
-    <figure className="relative overflow-hidden bg-activated-black">
-      <Image
-        src="https://images.pexels.com/photos/7927939/pexels-photo-7927939.jpeg?auto=compress&cs=tinysrgb&w=1400"
-        alt="Older woman holding dumbbells during a strength training session"
-        width={1400}
-        height={1800}
-        unoptimized
-        className="h-[360px] w-full object-cover opacity-[0.82] grayscale contrast-110 md:h-[520px]"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-activated-black/72 via-activated-black/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 p-18 md:p-24">
-        <p className="max-w-[360px] font-display text-[31px] leading-[1.03] text-parchment md:text-[42px]">
-          Strength is often the first signal. Function is where readers feel the change.
-        </p>
-        <div className="mt-18 grid border-y border-parchment/32 bg-activated-black/42 text-parchment backdrop-blur-sm md:grid-cols-3">
+    <figure className="relative overflow-hidden border border-parchment/28 bg-parchment text-inkwell shadow-[18px_18px_0_rgba(255,184,1,0.18)]">
+      <div className="grid md:grid-cols-[0.72fr_0.28fr]">
+        <div className="relative min-h-[360px] overflow-hidden md:min-h-[540px]">
+          <Image
+            src="/images/sarcopenia-functional-field.svg"
+            alt="Editorial illustration of stairs, a chair, and strength markers representing sarcopenia as loss of function"
+            width={1400}
+            height={980}
+            unoptimized
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-activated-black/28 via-activated-black/0 to-transparent" />
+        </div>
+        <div className="grid border-t border-inkwell/25 md:border-l md:border-t-0">
           {[
-            ['Low strength', 'primary signal'],
-            ['Muscle quantity', 'confirmation'],
-            ['Physical performance', 'severity clue'],
-          ].map(([value, label]) => (
-            <div key={value} className="border-b border-parchment/18 py-10 last:border-b-0 md:border-b-0 md:border-r md:px-12 md:last:border-r-0">
-              <p className="font-utility text-[12px] uppercase leading-none text-parchment/48">{label}</p>
-              <p className="mt-6 font-body text-[16px] font-medium leading-[1.25] text-parchment">{value}</p>
+            ['01', 'Strength', 'The first signal in modern consensus language.'],
+            ['02', 'Muscle', 'The structure that confirms what function is already telling us.'],
+            ['03', 'Function', 'The part readers feel in stairs, chairs, bags, and recovery.'],
+          ].map(([number, label, copy]) => (
+            <div key={label} className="border-b border-inkwell/25 p-16 last:border-b-0 md:p-18">
+              <p className="font-utility text-[12px] leading-none text-verdigris">{number}</p>
+              <p className="mt-10 font-display text-[28px] leading-none text-inkwell md:text-[32px]">
+                {label}
+              </p>
+              <p className="mt-10 font-utility text-[13px] leading-[1.45] text-inkwell/68">
+                {copy}
+              </p>
             </div>
           ))}
         </div>
       </div>
-      <figcaption className="sr-only">Photo via Pexels, used as editorial illustration.</figcaption>
+      <figcaption className="border-t border-inkwell/25 px-14 py-8 font-utility text-[12px] leading-[1.35] text-inkwell/55">
+        Local editorial illustration. Used to frame sarcopenia through functional strength, not fear.
+      </figcaption>
     </figure>
   )
 }
@@ -137,16 +158,25 @@ function KeyTakeaways() {
   ]
 
   return (
-    <section className="my-36 border-y border-inkwell py-20 md:my-44 md:py-24">
-      <p className="font-utility text-caption leading-caption text-inkwell/58">Key takeaways</p>
-      <div className="mt-18 grid gap-14 md:grid-cols-3 md:gap-20">
+    <section className="my-30 border-y border-inkwell bg-[#f7f1e4] py-18 md:my-38 md:py-22">
+      <div className="flex items-baseline justify-between gap-16">
+        <p className="font-utility text-caption leading-caption text-inkwell/58">In this guide</p>
+        <p className="hidden font-utility text-[12px] leading-none text-inkwell/45 md:block">
+          strength / muscle / function
+        </p>
+      </div>
+      <div className="mt-16 grid gap-0 border-t border-inkwell/24 md:grid-cols-3">
         {takeaways.map((takeaway, index) => (
           <div
             key={takeaway}
-            className="grid grid-cols-[30px_1fr] gap-12 md:block"
+            className="grid grid-cols-[34px_1fr] gap-12 border-b border-inkwell/24 py-14 last:border-b-0 md:block md:border-b-0 md:border-r md:px-18 md:last:border-r-0"
           >
-            <p className="font-display text-[25px] leading-none text-verdigris md:text-[30px]">{index + 1}</p>
-            <p className="font-body text-[17px] leading-[1.5] text-inkwell/86 md:mt-12">{takeaway}</p>
+            <p className="font-display text-[28px] leading-none text-verdigris md:text-[34px]">
+              {index + 1}
+            </p>
+            <p className="font-body text-[17px] leading-[1.5] text-inkwell/86 md:mt-12">
+              {takeaway}
+            </p>
           </div>
         ))}
       </div>
@@ -156,27 +186,32 @@ function KeyTakeaways() {
 
 function EvidenceBreak() {
   return (
-    <section className="my-42 border-y border-inkwell py-20 md:my-54 md:py-24">
-      <div className="grid gap-18 md:grid-cols-[0.34fr_0.66fr]">
-      <div className="bg-inkwell p-20 text-parchment md:p-24">
-        <p className="font-utility text-caption leading-caption text-parchment/62">What the research shows</p>
-        <p className="mt-18 font-display text-[56px] leading-[0.9] text-sunbeam md:text-[72px]">
-          2 days
-        </p>
-        <p className="mt-10 font-body text-[17px] leading-[1.45] text-parchment/76">
-          CDC guidance for adults 65+ includes muscle-strengthening activity at least two days a week.
-        </p>
-      </div>
-      <div className="relative overflow-hidden bg-[#f7f1e4] p-20 md:p-24">
-        <div className="absolute right-0 top-0 h-full w-10 bg-verdigris" />
-        <p className="font-utility text-caption leading-caption text-inkwell/62">Why this matters</p>
-        <p className="mt-18 max-w-[520px] font-display text-[32px] leading-[1.06] text-inkwell md:text-[44px]">
-          Walking can support health. Strength has to be trained.
-        </p>
-        <p className="mt-14 font-body text-[18px] leading-[1.58] text-inkwell/78">
-          That distinction keeps the article practical without turning it into a prescription.
-        </p>
-      </div>
+    <section className="my-34 border-y border-inkwell py-18 md:my-44 md:py-22">
+      <div className="grid md:grid-cols-[0.38fr_0.62fr]">
+        <div className="bg-inkwell p-20 text-parchment md:p-24">
+          <p className="font-utility text-caption leading-caption text-parchment/62">
+            Source-adjacent note
+          </p>
+          <p className="mt-16 font-display text-[60px] leading-[0.9] text-sunbeam md:text-[76px]">
+            2
+          </p>
+          <p className="mt-8 font-body text-[17px] leading-[1.45] text-parchment/76">
+            CDC guidance for adults 65+ includes muscle-strengthening activity at least two days a
+            week.
+          </p>
+        </div>
+        <div className="border-t border-inkwell bg-parchment p-20 md:border-l md:border-t-0 md:p-24">
+          <p className="font-utility text-caption leading-caption text-inkwell/62">
+            Editorial meaning
+          </p>
+          <p className="mt-16 max-w-[520px] font-display text-[32px] leading-[1.06] text-inkwell md:text-[44px]">
+            Walking can support health. Strength has to be trained.
+          </p>
+          <p className="mt-14 font-body text-[18px] leading-[1.58] text-inkwell/78">
+            The distinction gives the reader a useful next frame without turning the article into a
+            prescription.
+          </p>
+        </div>
       </div>
     </section>
   )
@@ -207,26 +242,32 @@ function EditorialRail({ post }: { post: Post }) {
 
 function MechanismStrip() {
   return (
-    <section className="my-42 bg-[#f7f1e4] md:my-52">
-      <div className="grid border-y border-inkwell md:grid-cols-[0.45fr_0.55fr]">
+    <section className="my-34 bg-[#f7f1e4] md:my-44">
+      <div className="grid border-y border-inkwell md:grid-cols-[0.42fr_0.58fr]">
         <div className="border-b border-inkwell p-18 md:border-b-0 md:border-r md:p-22">
-          <p className="font-utility text-caption leading-caption text-inkwell/60">Visual thesis</p>
+          <p className="font-utility text-caption leading-caption text-inkwell/60">
+            Visual thesis
+          </p>
           <p className="mt-12 font-display text-[32px] leading-[1.06] text-inkwell md:text-[40px]">
-            The diagnosis becomes practical when strength, muscle, and function are read together.
+            Sarcopenia is not one measurement. It is a loss of margin.
           </p>
         </div>
-        <div className="grid grid-cols-3">
+        <div className="grid">
           {[
-            ['Strength', 'signal'],
-            ['Muscle', 'structure'],
-            ['Function', 'life'],
+            ['Strength', 'the body can produce force'],
+            ['Muscle', 'the tissue is still available'],
+            ['Function', 'daily life still has room'],
           ].map(([term, role]) => (
-            <div key={term} className="border-r border-inkwell p-14 last:border-r-0 md:p-18">
-              <div className="h-28 border border-inkwell bg-verdigris-wash">
-                <div className="h-full bg-sunbeam" style={{ width: term === 'Muscle' ? '62%' : term === 'Function' ? '78%' : '88%' }} />
-              </div>
-              <p className="mt-14 font-display text-[25px] leading-none text-inkwell md:text-[30px]">{term}</p>
-              <p className="mt-6 font-utility text-[12px] uppercase leading-none text-inkwell/52">{role}</p>
+            <div
+              key={term}
+              className="grid grid-cols-[0.34fr_0.66fr] border-b border-inkwell last:border-b-0"
+            >
+              <p className="bg-verdigris px-14 py-13 font-display text-[26px] leading-none text-parchment md:px-18 md:text-[32px]">
+                {term}
+              </p>
+              <p className="px-14 py-14 font-body text-[17px] leading-[1.4] text-inkwell/78 md:px-18">
+                {role}
+              </p>
             </div>
           ))}
         </div>
@@ -237,28 +278,50 @@ function MechanismStrip() {
 
 function FeatureDivider() {
   return (
-    <figure className="my-42 md:my-54">
-      <div className="relative overflow-hidden bg-activated-black">
+    <figure className="my-34 md:my-44">
+      <div className="relative overflow-hidden border-y border-inkwell bg-activated-black">
         <Image
-          src="https://images.pexels.com/photos/6815699/pexels-photo-6815699.jpeg?auto=compress&cs=tinysrgb&w=1400"
-          alt="Older adults exercising in a gym"
-          width={1400}
-          height={934}
+          src="/images/choosing-the-strongpath-cover.jpg"
+          alt="Cover of Choosing the StrongPath"
+          width={333}
+          height={500}
           unoptimized
-          className="h-[300px] w-full object-cover opacity-[0.86] grayscale contrast-110 md:h-[430px]"
+          className="ml-auto h-[300px] w-full max-w-[360px] object-contain p-24 opacity-[0.92] md:h-[420px] md:p-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-activated-black/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.82),rgba(0,0,0,0.42),rgba(0,0,0,0.08))]" />
         <div className="absolute bottom-0 left-0 max-w-[520px] p-18 md:p-24">
-          <p className="font-utility text-caption leading-caption text-parchment/62">The practical test</p>
+          <p className="font-utility text-caption leading-caption text-parchment/62">Authority object</p>
           <p className="mt-10 font-display text-[34px] leading-[1.02] text-parchment md:text-[48px]">
-            Stairs, chairs, carrying, and recovery are where strength becomes visible.
+            The book anchors credibility. Current research carries the claims.
           </p>
         </div>
       </div>
       <figcaption className="mt-8 font-utility text-[12px] leading-[1.35] text-inkwell/50">
-        Editorial image via Pexels. Used to support the article&apos;s functional-strength framing.
+        The cover is treated as an authority object, not as substantiation for medical claims.
       </figcaption>
     </figure>
+  )
+}
+
+function FunctionFieldNotes() {
+  return (
+    <section className="my-34 grid border-y border-inkwell md:my-44 md:grid-cols-[0.5fr_0.5fr]">
+      <div className="bg-verdigris p-20 text-parchment md:p-24">
+        <p className="font-utility text-caption leading-caption text-parchment/62">Field notes</p>
+        <p className="mt-14 font-display text-[36px] leading-[1.04] md:text-[48px]">
+          Sarcopenia often arrives as substitutions.
+        </p>
+      </div>
+      <div className="grid divide-y divide-inkwell/24 bg-[#f7f1e4]">
+        {['The handrail gets used more.', 'The chair with arms becomes preferred.', 'The hill disappears from the route.', 'The parent says, "I am just tired today."'].map(
+          (note) => (
+            <p key={note} className="p-16 font-body text-[18px] leading-[1.48] text-inkwell/82 md:p-18">
+              {note}
+            </p>
+          )
+        )}
+      </div>
+    </section>
   )
 }
 
@@ -397,7 +460,7 @@ export function ArticleLayout({
                   {updatedAt && updatedAt !== publishedAt && <p>Updated {updatedAt}</p>}
                   {readingMinutes && <p>{readingMinutes} min read</p>}
                 </div>
-                <h1 className="mt-22 max-w-[880px] font-display text-[52px] font-normal leading-[0.94] text-parchment md:text-[82px] lg:text-[100px]">
+                <h1 className="mt-22 max-w-[880px] font-display text-[46px] font-normal leading-[0.98] text-parchment md:text-[82px] md:leading-[0.94] lg:text-[100px]">
                   {post.title}
                 </h1>
                 {post.excerpt && (
@@ -446,6 +509,7 @@ export function ArticleLayout({
                 <>
                   <PortableText value={before} components={portableTextComponents} />
                   {enhanced && <MechanismStrip />}
+                  {enhanced && <FunctionFieldNotes />}
                   {enhanced && <FeatureDivider />}
                   {enhanced && <EvidenceBreak />}
                   {after.length > 0 && (

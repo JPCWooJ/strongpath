@@ -74,6 +74,33 @@ export const flagshipArticles: Post[] = [
     seoDescription:
       'Sarcopenia is age-related loss of muscle strength, muscle quantity, and physical function. Here is what it means, why it matters, and what can help.',
     estimatedReadingMinutes: 8,
+    sources: [
+      {
+        title: 'Sarcopenia: revised European consensus on definition and diagnosis',
+        publication: 'Age and Ageing',
+        year: '2019',
+        href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6322506/',
+      },
+      {
+        title: 'Slowing Sarcopenia',
+        publication: 'NIH News in Health',
+        year: '2025',
+        href: 'https://newsinhealth.nih.gov/2025/04/slowing-sarcopenia',
+      },
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+      {
+        title:
+          'Exercise and nutritional intervention for sarcopenia in community-dwelling older adults',
+        publication: 'European Review of Aging and Physical Activity',
+        year: '2023',
+        href: 'https://link.springer.com/article/10.1186/s11556-023-00333-4',
+      },
+    ],
     body: [
       p(
         'Sarcopenia is the age-related loss of muscle strength, muscle quantity, and physical function. In practice, it is one reason stairs, chairs, luggage, and recovery can start to feel different after midlife.'
