@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { PortableText } from '@portabletext/react'
-import type { PortableTextBlock, PortableTextComponents } from '@portabletext/react'
+import type { PortableTextComponents } from '@portabletext/react'
 import type { Post } from '@/lib/sanity'
 import type { ArticleMeta } from '@/lib/articles'
 import { formatArticleDate, normalizeTag } from '@/lib/articles'
@@ -17,34 +17,34 @@ const SARCOPENIA_HERO_IMAGE = {
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="mt-48 border-t border-[#2E6171]/35 pt-20 font-display text-[30px] font-normal leading-[1.15] text-[#0B2545] md:mt-56 md:text-[36px]">
+      <h2 className="mt-38 border-t border-[#2E6171]/30 pt-18 font-display text-[29px] font-normal leading-[1.16] text-[#0B2545] md:mt-46 md:text-[34px]">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mt-30 font-display text-[25px] font-normal leading-[1.2] text-[#0B2545] md:text-[29px]">
+      <h3 className="mt-26 font-display text-[24px] font-normal leading-[1.2] text-[#0B2545] md:text-[28px]">
         {children}
       </h3>
     ),
     normal: ({ children }) => (
-      <p className="mt-15 font-body text-[18px] leading-[1.68] text-[#1A1D24]/88 md:text-[19px] md:leading-[1.7]">
+      <p className="mt-14 font-body text-[18px] leading-[1.65] text-[#1A1D24]/88 md:text-[19px] md:leading-[1.68]">
         {children}
       </p>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="my-34 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 font-display text-[25px] leading-[1.2] text-[#0B2545] md:my-42 md:px-24 md:text-[31px]">
+      <blockquote className="my-28 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 font-display text-[25px] leading-[1.2] text-[#0B2545] md:my-34 md:px-24 md:text-[31px]">
         {children}
       </blockquote>
     ),
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="mt-18 list-disc space-y-8 pl-24 font-body text-[18px] leading-[1.62] text-[#1A1D24]/88 md:text-[19px]">
+      <ul className="mt-16 list-disc space-y-7 pl-24 font-body text-[18px] leading-[1.6] text-[#1A1D24]/88 md:text-[19px]">
         {children}
       </ul>
     ),
     number: ({ children }) => (
-      <ol className="mt-18 list-decimal space-y-8 pl-24 font-body text-[18px] leading-[1.62] text-[#1A1D24]/88 md:text-[19px]">
+      <ol className="mt-16 list-decimal space-y-7 pl-24 font-body text-[18px] leading-[1.6] text-[#1A1D24]/88 md:text-[19px]">
         {children}
       </ol>
     ),
@@ -103,32 +103,6 @@ function isSarcopeniaArticle(post: Post) {
   return post.slug.current === 'what-is-sarcopenia'
 }
 
-function ArticleToc({ body }: { body?: PortableTextBlock[] }) {
-  const headings =
-    body
-      ?.filter((block) => 'style' in block && block.style === 'h2')
-      .map((block) => getPlainBlockText(block))
-      .filter(Boolean)
-      .slice(0, 7) || []
-
-  if (headings.length === 0) return null
-
-  return (
-    <aside className="hidden lg:block">
-      <div className="sticky top-24 border-l border-[#2E6171]/35 pl-18">
-        <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Article map</p>
-        <ol className="mt-16 space-y-10">
-          {headings.map((heading) => (
-            <li key={heading} className="font-utility text-[13px] leading-[1.35] text-[#1A1D24]/68">
-              {heading}
-            </li>
-          ))}
-        </ol>
-      </div>
-    </aside>
-  )
-}
-
 function KeyTakeaways() {
   const takeaways = [
     'Sarcopenia is about strength, muscle, and function, not appearance alone.',
@@ -137,9 +111,9 @@ function KeyTakeaways() {
   ]
 
   return (
-    <section className="my-34 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 md:my-42 md:px-24 md:py-22">
+    <section className="mb-30 border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-18 md:mb-38 md:px-24 md:py-22">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Key takeaways</p>
-      <ul className="mt-16 space-y-10">
+      <ul className="mt-14 space-y-8">
         {takeaways.map((takeaway) => (
           <li key={takeaway} className="font-body text-[17px] leading-[1.52] text-[#1A1D24]/86">
             {takeaway}
@@ -152,7 +126,7 @@ function KeyTakeaways() {
 
 function EvidenceBox() {
   return (
-    <section className="my-42 border border-[#2E6171]/45 bg-[#dfe5dc]/70 px-18 py-18 md:my-52 md:px-24 md:py-22">
+    <section className="my-34 border border-[#2E6171]/45 bg-[#dfe5dc]/70 px-18 py-18 md:my-42 md:px-24 md:py-22">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Evidence note</p>
       <p className="mt-12 font-display text-[28px] leading-[1.16] text-[#0B2545] md:text-[32px]">
         Current consensus puts strength and function near the center.
@@ -169,7 +143,7 @@ function EditorialSources({ post }: { post: Post }) {
   if (!post.sources?.length) return null
 
   return (
-    <section aria-labelledby="article-sources" className="mt-56 border-t border-[#2E6171]/35 pt-24">
+    <section aria-labelledby="article-sources" className="mt-46 border-t border-[#2E6171]/35 pt-22">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Sources</p>
       <h2
         id="article-sources"
@@ -212,7 +186,7 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
   if (articles.length === 0) return null
 
   return (
-    <section aria-labelledby="related-reading" className="mt-56 border-t border-[#2E6171]/35 pt-24">
+    <section aria-labelledby="related-reading" className="mt-46 border-t border-[#2E6171]/35 pt-22">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Continue reading</p>
       <h2
         id="related-reading"
@@ -267,7 +241,7 @@ export function ArticleLayout({
     <main className="bg-parchment">
       <article>
         <header className="border-b border-[#2E6171]/25 bg-[#FAF8F5]">
-          <div className="sp-container py-34 md:py-48">
+          <div className="sp-container py-28 md:py-38">
             <div className="max-w-[900px]">
               <div className="flex flex-wrap gap-x-12 gap-y-6 font-utility text-[13px] leading-[1.2] text-[#5A6472]">
                 {post.category && <p>{post.category}</p>}
@@ -298,14 +272,14 @@ export function ArticleLayout({
               )}
             </div>
             {enhanced && (
-              <figure className="mt-28 overflow-hidden border border-[#2E6171]/25 bg-parchment">
+              <figure className="mt-24 overflow-hidden border border-[#2E6171]/25 bg-parchment md:mt-28">
                 <Image
                   src={SARCOPENIA_HERO_IMAGE.src}
                   alt={SARCOPENIA_HERO_IMAGE.alt}
                   width={1600}
                   height={1067}
                   priority
-                  className="aspect-[16/9] w-full object-cover object-center md:aspect-[2.15/1]"
+                  className="aspect-[16/9] w-full object-cover object-center md:aspect-[2.35/1]"
                 />
                 <figcaption className="border-t border-[#2E6171]/20 px-12 py-8 font-utility text-[12px] leading-[1.35] text-[#5A6472]">
                   {SARCOPENIA_HERO_IMAGE.credit}. Source:{' '}
@@ -323,9 +297,9 @@ export function ArticleLayout({
           </div>
         </header>
 
-        <div className="sp-container py-34 md:py-48">
-          <div className="grid gap-36 lg:grid-cols-[minmax(0,700px)_220px] lg:items-start lg:justify-center">
-            <div className="max-w-[700px]">
+        <div className="sp-container py-26 md:py-34">
+          <div className="mx-auto max-w-[700px]">
+            <div>
               {enhanced && <KeyTakeaways />}
               {articleBody ? (
                 <PortableText value={articleBody} components={portableTextComponents} />
@@ -338,7 +312,6 @@ export function ArticleLayout({
               <EditorialSources post={post} />
               <RelatedReading articles={relatedArticles} />
             </div>
-            <ArticleToc body={articleBody} />
           </div>
         </div>
       </article>
