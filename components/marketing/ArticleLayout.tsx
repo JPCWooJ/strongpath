@@ -93,6 +93,23 @@ function isCaregivingArticle(post: Post) {
   return post.slug.current === 'help-aging-parents-stay-strong'
 }
 
+function isBalanceMobilityArticle(post: Post) {
+  return (
+    ['balance-and-mobility-after-50', 'balance-mobility-after-50'].includes(post.slug.current) ||
+    post.title.trim().toLowerCase() === 'balance and mobility after 50'
+  )
+}
+
+function getIndexBeforeFirstSection(body: Post['body']) {
+  if (!body) return -1
+
+  const firstHeadingIndex = body.findIndex(
+    (block) => 'style' in block && typeof block.style === 'string' && block.style.startsWith('h')
+  )
+
+  return firstHeadingIndex > 0 ? firstHeadingIndex - 1 : -1
+}
+
 function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (!body) return -1
 
@@ -112,6 +129,10 @@ function getCommerceCtaIndex(post: Post, body?: Post['body']) {
     return body.findIndex((block) =>
       getPlainBlockText(block).startsWith('The goal is not to win an argument about aging.')
     )
+  }
+
+  if (isBalanceMobilityArticle(post)) {
+    return getIndexBeforeFirstSection(body)
   }
 
   return -1
@@ -197,6 +218,33 @@ function getCommerceModule(post: Post): CommerceModule | null {
         {
           label: 'Resistance bands',
           imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  if (isBalanceMobilityArticle(post)) {
+    return {
+      heading: 'Balance and mobility basics',
+      body:
+        'We keep a short list of practical basics for balance, mobility, stretching, and recovery after 50.',
+      href: 'https://www.amazon.com/shop/stron02/list/SIMAOLZ5IIZI?ref_=aip_sf_list_spv_ons_mixed_d',
+      items: [
+        {
+          label: 'Balance pad',
+          imageUrl: 'https://m.media-amazon.com/images/I/618vhCUg+pL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Yoga blocks',
+          imageUrl: 'https://m.media-amazon.com/images/I/61ni0epHWFL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Foam roller',
+          imageUrl: 'https://m.media-amazon.com/images/I/61-NGQxfxHL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Stretching strap',
+          imageUrl: 'https://m.media-amazon.com/images/I/71+I0Ft-CJL._AC_SL1500_.jpg',
         },
       ],
     }
