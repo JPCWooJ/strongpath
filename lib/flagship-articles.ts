@@ -202,7 +202,7 @@ const allFlagshipArticles: Post[] = [
         "The meaning of sarcopenia is practical. A grocery bag is the ability to shop without help. A staircase is access to the bedroom, the train platform, the theater balcony, the second floor of a child's house."
       ),
       p(
-        'When muscle and strength decline, life can get smaller before anyone calls it a health problem. The person is still capable, but the margin has changed. Ordinary tasks ask for more planning.'
+        'When muscle and strength decline, life can get smaller before anyone calls it a health problem. The person may still be independent, but the margin has changed. Ordinary tasks ask for more planning.'
       ),
       p(
         'That is why sarcopenia deserves the same seriousness people already give to cholesterol, blood pressure, and bone density. Health has to show up in the body you use every day.'
@@ -546,7 +546,7 @@ Resistance training is a simple idea that has been made to feel more complicated
 
 It means training muscles against resistance: weights, machines, bands, body weight, cables, or carefully chosen household movements. The method can vary. The principle is the same: muscles adapt when they are asked to produce force, recover, and then meet a slightly better-matched challenge over time.
 
-For older adults, that is not vanity. It is part of staying capable.
+For older adults, that is not vanity. It is part of staying strong enough for daily life.
 
 ## Why resistance training matters after 50
 
@@ -1045,7 +1045,7 @@ This article is educational and is not medical advice. If you have a medical con
       ),
       h2('Why families feel the crisis first'),
       p(
-        'Adult children often notice strength loss before the parent wants to discuss it. The refrigerator is still full. The bills are paid. The parent is still capable. But there are small edits to daily life: fewer errands, less confidence outside the house, more fatigue after ordinary tasks.'
+        'Adult children often notice strength loss before the parent wants to discuss it. The refrigerator is still full. The bills are paid. The parent is still independent. But there are small edits to daily life: fewer errands, less confidence outside the house, more fatigue after ordinary tasks.'
       ),
       p(
         'The right response is not panic. It is respect plus specificity. The parent deserves dignity. The family deserves a credible explanation. Both deserve guidance that does not make the problem feel larger than the person.'

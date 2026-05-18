@@ -8,7 +8,7 @@ export function SiteFooter() {
           <p className="font-display text-[32px] leading-none">StrongPath</p>
           <p className="mt-18 font-utility text-caption leading-caption text-inkwell/75">
             Practical strength guidance for adults, families, and clinicians who want people to
-            stay capable longer.
+            stay strong, active, and independent longer.
           </p>
         </div>
         <div>

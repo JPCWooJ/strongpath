@@ -13,7 +13,7 @@ export function SiteHeader() {
     <header className="border-b border-inkwell/60 bg-parchment">
       <div className="sp-container border-b border-inkwell/18 py-4">
         <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
-          <p>Strength for the life you still want to live</p>
+          <p>Strength for family, freedom, and daily life</p>
           <p>For adults, families, and clinicians</p>
         </div>
       </div>
@@ -30,7 +30,7 @@ export function SiteHeader() {
             StrongPath
           </Link>
           <p className="mt-6 max-w-[580px] border-t border-inkwell/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-inkwell/82">
-            Stay capable for the people, places, and days that matter.
+            Stay strong for the people you love and the days you want to keep.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = buildMetadata({
   title: 'StrongPath - Strength for life after 50',
   description:
-    'Practical help for adults and families who want to stay capable for the people, places, and days that matter.',
+    'Practical strength guidance for adults and families who want to stay strong, active, and independent longer.',
   path: '/',
 })
 
@@ -78,7 +78,7 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book to understand why strength matters for travel, family, independence, and the days you still want.',
+    copy: 'Use the book to understand why strength matters for travel, family, independence, and the days you love.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
@@ -170,12 +170,12 @@ export default function HomePage() {
         <div className="sp-container grid gap-26 py-24 md:py-36 lg:grid-cols-[minmax(0,1fr)_330px] lg:gap-44">
           <div className="max-w-[820px]">
             <h1 className="font-display text-[48px] font-normal leading-[1.01] text-[#0B2545] md:text-[76px] md:leading-[0.98]">
-              Stay strong for the life you still want to live.
+              Walk the StrongPath. Stay strong for your family, your freedom, and the life you love.
             </h1>
             <p className="mt-16 max-w-[690px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/80 md:text-[22px]">
-              Strength is not about looking younger. It is about getting out of a chair, carrying
-              your own bags, walking with the people you love, and keeping more of the life you
-              still want.
+              Strength shows up in the moments that matter: walking with your spouse, playing with
+              your grandchildren, carrying your own bags, helping a parent, and staying independent
+              longer.
             </p>
             <div className="mt-18 flex flex-col gap-10 sm:flex-row sm:items-center">
               <Link
