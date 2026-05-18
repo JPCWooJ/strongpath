@@ -10,6 +10,11 @@ const nextConfig = {
         hostname: 'books.google.com',
         pathname: '/books/content',
       },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+        pathname: '/images/I/**',
+      },
     ],
   },
 }

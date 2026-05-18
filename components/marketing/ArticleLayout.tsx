@@ -105,7 +105,20 @@ function getStarterEquipmentCtaIndex(body?: Post['body']) {
   )
 }
 
-const starterEquipmentItems = ['Resistance bands', 'Exercise mat', 'Dumbbells']
+const starterEquipmentItems = [
+  {
+    label: 'Resistance bands',
+    imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
+  },
+  {
+    label: 'Exercise mat',
+    imageUrl: 'https://m.media-amazon.com/images/I/81Y26toqdTL._AC_SL1500_.jpg',
+  },
+  {
+    label: 'Dumbbells',
+    imageUrl: 'https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SL1500_.jpg',
+  },
+]
 
 function StarterEquipmentCta() {
   return (
@@ -116,34 +129,25 @@ function StarterEquipmentCta() {
             Start with the basics
           </h2>
           <p className="mt-9 max-w-[580px] font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-            You do not need a full gym to begin. A few simple pieces of equipment are enough to
-            make strength training at home more practical.
+            We keep a short list of simple starter equipment for resistance training after 50:
+            bands, a mat, and manageable dumbbells.
           </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-3">
-          {starterEquipmentItems.map((item, index) => (
-            <div key={item} className="border border-[#2E6171]/22 bg-parchment p-10">
-              <div className="flex h-64 items-center justify-center bg-[#dfe5dc]/55">
-                {index === 0 && (
-                  <div className="flex items-center gap-5">
-                    <span className="h-26 w-26 rounded-full border-[5px] border-[#2E6171]" />
-                    <span className="h-2 w-24 bg-[#2E6171]" />
-                    <span className="h-26 w-26 rounded-full border-[5px] border-[#2E6171]" />
-                  </div>
-                )}
-                {index === 1 && (
-                  <div className="h-32 w-72 rounded-[18px] border border-[#2E6171]/55 bg-[#2E6171]/22 shadow-[inset_0_0_0_5px_rgba(250,248,245,0.7)]" />
-                )}
-                {index === 2 && (
-                  <div className="flex items-center gap-4">
-                    <span className="h-32 w-18 bg-[#2E6171]" />
-                    <span className="h-5 w-38 bg-[#2E6171]" />
-                    <span className="h-32 w-18 bg-[#2E6171]" />
-                  </div>
-                )}
+          {starterEquipmentItems.map((item) => (
+            <div key={item.label} className="border border-[#2E6171]/22 bg-parchment p-10">
+              <div className="flex aspect-[4/3] items-center justify-center bg-white p-8">
+                <Image
+                  src={item.imageUrl}
+                  alt={item.label}
+                  width={500}
+                  height={500}
+                  sizes="(min-width: 640px) 180px, 100vw"
+                  className="h-full w-full object-contain"
+                />
               </div>
               <p className="mt-8 text-center font-utility text-[13px] font-medium leading-[1.25] text-[#0B2545]">
-                {item}
+                {item.label}
               </p>
             </div>
           ))}
