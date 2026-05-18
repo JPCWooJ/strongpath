@@ -89,6 +89,10 @@ function isProteinArticle(post: Post) {
   return post.slug.current === 'protein-for-older-adults'
 }
 
+function isCaregivingArticle(post: Post) {
+  return post.slug.current === 'help-aging-parents-stay-strong'
+}
+
 function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (!body) return -1
 
@@ -101,6 +105,12 @@ function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (isProteinArticle(post)) {
     return body.findIndex((block) =>
       getPlainBlockText(block).startsWith('StrongPath treats protein as part of the strength system')
+    )
+  }
+
+  if (isCaregivingArticle(post)) {
+    return body.findIndex((block) =>
+      getPlainBlockText(block).startsWith('The goal is not to win an argument about aging.')
     )
   }
 
@@ -160,6 +170,33 @@ function getCommerceModule(post: Post): CommerceModule | null {
         {
           label: 'Shaker bottle',
           imageUrl: 'https://m.media-amazon.com/images/I/71iiyCEpDmL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  if (isCaregivingArticle(post)) {
+    return {
+      heading: 'Help them start simply',
+      body:
+        'Supporting an aging parent is easier when the first step feels manageable. This list includes simple equipment for gentle movement, grip work, stretching, and at-home strength.',
+      href: 'https://www.amazon.com/shop/stron02/list/1R83PY59K8IQF?ref_=aip_sf_list_spv_ons_mixed_d',
+      items: [
+        {
+          label: 'Chair exercise guide',
+          imageUrl: 'https://m.media-amazon.com/images/I/71u6OgLdxxL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Grip strengthener',
+          imageUrl: 'https://m.media-amazon.com/images/I/712DtOtiLnL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Exercise mat',
+          imageUrl: 'https://m.media-amazon.com/images/I/71eYq88bbSL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Resistance bands',
+          imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
         },
       ],
     }
