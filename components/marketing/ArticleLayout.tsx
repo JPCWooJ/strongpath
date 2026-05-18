@@ -118,8 +118,8 @@ function EvidenceBox() {
         Current consensus puts strength and function near the center.
       </p>
       <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-        StrongPath treats the book as the credibility anchor and current third-party research as
-        the substantiation layer for specific health claims.
+        StrongPath starts with the book and uses current third-party sources for specific health
+        claims in the articles.
       </p>
     </section>
   )
@@ -135,7 +135,7 @@ function EditorialSources({ post }: { post: Post }) {
         id="article-sources"
         className="mt-10 font-display text-[30px] font-normal leading-[1.15] text-[#0B2545] md:text-[34px]"
       >
-        Editorial source record
+        Sources for this article
       </h2>
       <div className="mt-20 border-t border-[#2E6171]/35">
         {post.sources.map((source) => (

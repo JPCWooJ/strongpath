@@ -85,9 +85,9 @@ export default function BookPage() {
       <section className="border-b border-[#2E6171]/24">
         <div className="sp-container grid gap-18 py-30 md:py-42 lg:grid-cols-[0.34fr_0.66fr] lg:gap-36">
           <div>
-            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Publication role</p>
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Where the work began</p>
             <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-              The credibility anchor, not the citation layer.
+              The book is the starting point. The articles carry it forward.
             </h2>
           </div>
           <div className="max-w-[720px] space-y-14 font-body text-[18px] leading-[1.62] text-[#1A1D24]/80">
@@ -97,9 +97,9 @@ export default function BookPage() {
               travel, family, and the work of keeping good days possible.
             </p>
             <p>
-              Current third-party research substantiates specific health claims in StrongPath
-              articles. The book is the starting point for the platform, not a substitute for
-              present-day evidence, clinician judgment, or individualized care.
+              StrongPath articles use current third-party sources for specific health claims. The
+              book remains the starting point, not a substitute for present-day evidence, clinician
+              judgment, or individualized care.
             </p>
           </div>
         </div>

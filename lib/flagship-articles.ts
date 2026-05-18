@@ -295,7 +295,7 @@ const allFlagshipArticles: Post[] = [
         },
         ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.'
       ),
-      p('The book is the credibility anchor. Current third-party research carries the specific claims in this article.'),
+      p('The book is where the StrongPath work began. Current third-party sources carry the specific claims in this article.'),
       p(
         "StrongPath's job is to keep that work current: cite the evidence directly, explain the mechanism plainly, and keep medical judgment where it belongs."
       ),
@@ -942,7 +942,7 @@ This article is educational and is not medical advice. If you have a medical con
           text: 'Choosing the StrongPath: Reversing the Downward Spiral of Aging',
           href: 'https://www.amazon.com/dp/1626344760?tag=stron02-20',
         },
-        ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity. The book gives the work its credibility anchor. Current research carries the specific claims we publish.'
+        ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity. The book is where the StrongPath work began. Current research carries the specific claims we publish.'
       ),
       h2('The loss is physical, but the meaning is personal'),
       p(

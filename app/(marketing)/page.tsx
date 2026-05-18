@@ -194,7 +194,7 @@ export default function HomePage() {
           </div>
 
           <aside className="border border-[#2E6171]/28 bg-parchment p-14 md:p-16">
-            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Credibility anchor</p>
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Amazon bestseller</p>
             <div className="mt-12 grid grid-cols-[88px_1fr] gap-12 lg:grid-cols-1">
               <Image
                 src={bookCoverUrl}
