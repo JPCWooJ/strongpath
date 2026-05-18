@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Choosing the StrongPath',
   description:
-    'The book behind StrongPath: Choosing the StrongPath: Reversing the Downward Spiral of Aging, and the publication path built from its research foundation.',
+    'The book behind StrongPath, and the current articles that carry its strength work forward.',
   path: '/book',
 })
 
@@ -21,12 +21,12 @@ const readingPath = [
   },
   {
     title: 'Resistance Training for Older Adults',
-    copy: 'See how resistance training supports the ordinary movements people want to keep: standing, carrying, climbing, and traveling.',
+    copy: 'See how lifting supports the ordinary movements people want to keep: standing, carrying, climbing, and traveling.',
     href: '/blog/resistance-training-older-adults',
   },
   {
     title: 'How to Help Aging Parents Stay Strong',
-    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the conversation harder.',
+    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the talk harder.',
     href: '/blog/help-aging-parents-stay-strong',
   },
 ]
@@ -45,8 +45,8 @@ export default function BookPage() {
               Reversing the Downward Spiral of Aging
             </p>
             <p className="mt-18 max-w-[690px] font-body text-[18px] leading-[1.58] text-[#1A1D24]/78 md:text-[21px]">
-              StrongPath carries the book&apos;s work forward with current publishing on muscle loss,
-              strength, recovery, protein, and the ordinary work of staying capable after 50.
+              StrongPath carries the book&apos;s work forward with current articles on muscle loss,
+              strength, recovery, protein, and staying capable after 50.
             </p>
             <p className="mt-14 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/58">
               by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD
@@ -92,14 +92,14 @@ export default function BookPage() {
           </div>
           <div className="max-w-[720px] space-y-14 font-body text-[18px] leading-[1.62] text-[#1A1D24]/80">
             <p>
-              The book gives StrongPath its founding frame: muscle loss is consequential, strength
-              can be trained, and guidance should stay close to real life: stairs, bags, chairs,
-              travel, family, and the work of keeping good days possible.
+              The book gives StrongPath its starting point: muscle loss matters, strength can be
+              trained, and useful guidance should stay close to real life: stairs, bags, chairs,
+              travel, family, and good days.
             </p>
             <p>
               StrongPath articles use current third-party sources for specific health claims. The
-              book remains the starting point, not a substitute for present-day evidence, clinician
-              judgment, or individualized care.
+              book remains the beginning of the work, not a substitute for present-day evidence,
+              clinician judgment, or individualized care.
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function BookPage() {
         <div className="sp-container py-30 md:py-42">
           <div className="flex flex-col justify-between gap-12 border-b border-[#2E6171]/28 pb-16 md:flex-row md:items-end">
             <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Reading path</p>
+              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Read next</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
                 Where to go next
               </h2>

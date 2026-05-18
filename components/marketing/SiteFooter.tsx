@@ -7,14 +7,13 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-[32px] leading-none">StrongPath</p>
           <p className="mt-18 font-utility text-caption leading-caption text-inkwell/75">
-            Strength guidance for adults 55+, families, and clinicians who want practical next
-            steps.
+            Practical strength guidance for adults, families, and clinicians.
           </p>
         </div>
         <div>
           <p className="font-display text-[22px] leading-none">Our standard</p>
           <p className="mt-18 font-utility text-caption leading-caption text-inkwell/75">
-            Current sources. Plain language. No miracle claims.
+            Careful sources. Plain language. No big promises.
           </p>
         </div>
         <div>

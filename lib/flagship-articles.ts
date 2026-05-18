@@ -132,7 +132,7 @@ const allFlagshipArticles: Post[] = [
     tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50', 'Resistance Training'],
     seoTitle: 'What Is Sarcopenia?',
     seoDescription:
-      'What sarcopenia means, why ordinary tasks can start to feel different, and what research supports next.',
+      'What sarcopenia means, why chairs and stairs can start to feel different, and what may help next.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -165,7 +165,7 @@ const allFlagshipArticles: Post[] = [
       p(
         'Sarcopenia is the age-related loss of muscle strength, muscle quantity, and physical function. In practice, it is one reason stairs, chairs, luggage, and recovery can start to feel different after midlife.'
       ),
-      p('The word is clinical. The signs are usually practical.'),
+      p('The word is clinical. The first signs are usually ordinary.'),
       p(
         'The suitcase is harder to lift into the overhead bin. A low chair takes more planning. A jar lid goes to someone else without much discussion.'
       ),
@@ -230,7 +230,7 @@ const allFlagshipArticles: Post[] = [
       p('Can you carry a bag and still feel steady?'),
       p('Can you walk quickly enough to cross the street with confidence?'),
       p('Can you recover after a bad week without losing the next month?'),
-      p('These are not athletic questions. They are independence questions.'),
+      p('These are not athletic questions. They are daily-life questions.'),
       h2('The practical signs to watch'),
       p('The early signals are usually ordinary:'),
       li('standing from a low chair takes more effort'),
@@ -248,7 +248,7 @@ const allFlagshipArticles: Post[] = [
         'These signs do not prove sarcopenia. They are reasons to pay attention and, when appropriate, talk with a physician, physical therapist, or qualified clinician.'
       ),
       p(
-        'For families, this is where tone matters. The goal is not to confront a parent with decline. The goal is to protect independence in a way that respects dignity.'
+        'For families, tone matters. The goal is not to confront a parent with decline. It is to help them keep more good days in a way that respects dignity.'
       ),
       h2('What causes sarcopenia?'),
       p('Sarcopenia has more than one cause. Age is part of it, but age is not the whole explanation.'),
@@ -288,16 +288,16 @@ const allFlagshipArticles: Post[] = [
       h2('The StrongPath frame'),
       p('Sarcopenia is one of the reasons StrongPath exists.'),
       p(
-        'The platform is built on the same research foundation behind ',
+        'StrongPath builds on the same research foundation behind ',
         {
           text: 'Choosing the StrongPath: Reversing the Downward Spiral of Aging',
           href: '/book',
         },
         ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.'
       ),
-      p('The book is where the StrongPath work began. Current third-party sources carry the specific claims in this article.'),
+      p('The book is where the StrongPath work began. Current third-party sources support the specific claims in this article.'),
       p(
-        "StrongPath's job is to keep that work current: cite the evidence directly, explain the mechanism plainly, and keep medical judgment where it belongs."
+        "StrongPath's job is to keep that work current: use careful sources, explain the mechanism plainly, and keep medical judgment where it belongs."
       ),
       p(
         'The view is simple. Sarcopenia is measurable and consequential. It is not solved by vague advice. It is not helped by panic. For many adults, strength can still be trained.'
@@ -361,7 +361,7 @@ const allFlagshipArticles: Post[] = [
     publishedAt: '2026-05-17T09:10:00.000Z',
     updatedAt: '2026-05-17T09:10:00.000Z',
     excerpt:
-      'A practical guide for adult children who want to help a parent stay strong without pressure, fear, or taking over.',
+      'A practical guide for adult children who want to help a parent keep more good days without pressure, fear, or taking over.',
     author: 'StrongPath Editorial',
     category: 'Caregiving',
     tags: ['Caregiving', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
@@ -406,7 +406,7 @@ The goal is not to win an argument about aging. The goal is to help a parent kee
 
 Most parents do not want to be managed. They want to remain themselves. That means the conversation should begin with their values, not your anxiety.
 
-Ask what feels harder lately. Ask what they miss doing. Ask what would make the next trip, holiday, walk, garden project, or visit easier. The practical answers are often better than abstract health language.
+Ask what feels harder lately. Ask what they miss doing. Ask what would make the next trip, holiday, walk, garden project, or visit easier. The real answers are often better than abstract health language.
 
 StrongPath uses the word sarcopenia because it names age-related loss of muscle strength, muscle quantity, and function. But the word is only useful if it leads to something human: standing more easily, climbing stairs with less hesitation, carrying groceries with more confidence, and recovering with more reserve.
 
@@ -438,7 +438,7 @@ The right first step depends on the parent. The principle is steady: make the pa
 
 ## Why strength belongs in the conversation
 
-Current sarcopenia consensus places muscle strength close to the center of the problem. Strength is not only an athletic trait. It is the capacity behind chairs, stairs, grip, balance, and recovery.
+Current sarcopenia consensus places muscle strength close to the center of the problem. Strength is not only an athletic trait. It is what helps with chairs, stairs, grip, balance, and recovery.
 
 The CDC's older-adult activity guidance includes muscle-strengthening activity at least two days a week, along with aerobic activity and balance work. That matters because many families still treat walking as the whole plan. Walking is valuable. It is not the same as training strength.
 
@@ -486,7 +486,7 @@ The most useful family plan is usually simple:
 - support protein, sleep, and recovery
 - check whether confidence and daily function improve
 
-This is not about forcing a parent into a new identity. It is about preserving ordinary freedom.
+This is not about forcing a parent into a new identity. It is about making ordinary freedom easier to keep.
 
 ## Read next
 
@@ -506,7 +506,7 @@ This article is educational and is not medical advice. If your parent has a medi
     publishedAt: '2026-05-17T09:20:00.000Z',
     updatedAt: '2026-05-17T09:20:00.000Z',
     excerpt:
-      'Resistance training is a practical way to train the strength behind chairs, stairs, balance, carrying, travel, and recovery.',
+      'Resistance training helps train the strength behind chairs, stairs, balance, carrying, travel, and recovery.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Resistance Training', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
@@ -546,11 +546,11 @@ Resistance training is a simple idea that has been made to feel more complicated
 
 It means training muscles against resistance: weights, machines, bands, body weight, cables, or carefully chosen household movements. The method can vary. The principle is the same: muscles adapt when they are asked to produce force, recover, and then meet a slightly better-matched challenge over time.
 
-For older adults, that is not vanity. It is health infrastructure.
+For older adults, that is not vanity. It is part of staying capable.
 
 ## Why resistance training matters after 50
 
-Strength is the hidden capacity behind ordinary life. It helps with standing from a chair, climbing stairs, lifting luggage, carrying groceries, catching balance, getting off the floor, and recovering after illness or travel.
+Strength is easy to miss until it changes. It helps with standing from a chair, climbing stairs, lifting luggage, carrying groceries, catching balance, getting off the floor, and recovering after illness or travel.
 
 Age-related muscle loss is often discussed as a loss of size, but modern sarcopenia definitions emphasize strength and function. A person can look similar in clothes and still have less force available for daily tasks.
 
@@ -560,7 +560,7 @@ That is why resistance training deserves a central place in healthy-aging guidan
 
 Walking supports cardiovascular health, routine, mood, glucose control, and participation. StrongPath is not anti-walking.
 
-But walking is not a complete strength plan. It usually does not ask the major muscle groups to produce progressively greater force. It may maintain some capacity, especially for people starting from a low baseline, but it does not replace targeted strengthening for hips, legs, back, shoulders, and grip.
+But walking is not a complete strength plan. It usually does not ask the major muscle groups to produce progressively greater force. It may help people maintain some ability, especially when starting from a low baseline, but it does not replace targeted strengthening for hips, legs, back, shoulders, and grip.
 
 The CDC's older-adult activity guidance separates aerobic activity from muscle-strengthening activity and balance work. That separation is useful. It tells readers that "stay active" is not precise enough.
 
@@ -618,9 +618,9 @@ If you are starting after 60, read [How to Start Lifting Weights at 60](/blog/ho
 
 ## The StrongPath standard
 
-StrongPath will not sell resistance training as a miracle. It is not a cure for aging. It does not replace medical care. It is not safe to prescribe the same plan to every body.
+StrongPath will not oversell resistance training. It is not a cure for aging. It does not replace medical care. It is not safe to prescribe the same plan to every body.
 
-But the evidence is strong enough to say this clearly: resistance training belongs in the center of serious healthy-aging guidance. It is one of the most practical ways to protect the strength that makes daily life more possible.
+But the evidence is strong enough to say this clearly: resistance training belongs near the center of serious guidance after 50. It is one of the most practical ways to support the strength that makes daily life more possible.
 
 ## Read next
 
@@ -640,13 +640,13 @@ This article is educational and is not medical advice. If you have a medical con
     publishedAt: '2026-05-17T09:30:00.000Z',
     updatedAt: '2026-05-17T09:30:00.000Z',
     excerpt:
-      'Protein is not a magic fix. It is one of the basic inputs older bodies need to maintain and rebuild muscle, especially alongside resistance training.',
+      'Protein is not a magic fix. It is one of the basic inputs older bodies need for muscle, especially alongside resistance training.',
     author: 'StrongPath Editorial',
     category: 'Nutrition',
     tags: ['Protein', 'Nutrition', 'Sarcopenia', 'Strength After 50'],
     seoTitle: 'How Much Protein Do Older Adults Need?',
     seoDescription:
-      'A careful guide to protein for older adults: why it matters, what expert groups recommend, and when medical guidance is needed.',
+      'A careful guide to protein after 50: why it matters, what expert groups recommend, and when medical guidance is needed.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -687,7 +687,7 @@ Muscle is constantly being broken down and rebuilt. Protein supplies amino acids
 
 As adults age, several things can make muscle maintenance harder: lower appetite, lower total food intake, chronic disease, inactivity, medication effects, illness, and a quieter reduction in physical demand. Resistance training asks muscle to adapt. Adequate protein helps support that adaptation.
 
-The practical point is not to chase a trend. It is to avoid building a strength plan while ignoring the material the body needs to respond.
+The point is not to chase a trend. It is to avoid building a strength plan while ignoring the material the body needs to respond.
 
 ## What expert groups recommend
 
@@ -705,7 +705,7 @@ For a 150-pound adult, 1.0 to 1.2 grams per kilogram per day is roughly 68 to 82
 
 Those numbers are not a command. They are a reference point. The right target depends on body size, kidney function, medical history, appetite, training, weight change, and clinician guidance.
 
-The biggest practical issue is often not precision. It is whether protein is showing up reliably at meals.
+The biggest issue is often not precision. It is whether protein is showing up reliably at meals.
 
 ## Spread it across the day
 
@@ -719,7 +719,7 @@ Supplements can be useful for some people, especially when appetite is low or me
 
 Protein without resistance training is incomplete. Resistance training without adequate protein is also incomplete.
 
-The body needs both signal and substrate: the training signal that says "adapt," and the nutritional support to help adaptation happen. That is why StrongPath keeps linking nutrition to movement rather than treating either one as a miracle.
+The body needs both signal and substrate: the training signal that says "adapt," and the nutritional support to help adaptation happen. That is why StrongPath keeps linking nutrition to movement rather than treating either one as the whole answer.
 
 For the training guide, read [Resistance Training for Older Adults](/blog/resistance-training-older-adults).
 
@@ -741,7 +741,7 @@ For the family conversation, read [How to Help Aging Parents Stay Strong](/blog/
 
 Protein is not magic. It will not replace strength training. It will not override illness, sleep, medication issues, or medical care.
 
-But low protein intake can make a strength plan harder to benefit from. For many older adults, improving protein quality, distribution, and consistency is a practical piece of protecting muscle and function.
+But low protein intake can make a strength plan harder to benefit from. For many older adults, improving protein quality, distribution, and consistency is one practical piece of supporting muscle and function.
 
 ## Medical note
 
@@ -755,7 +755,7 @@ This article is educational and is not medical advice. If you have kidney diseas
     publishedAt: '2026-05-17T09:40:00.000Z',
     updatedAt: '2026-05-17T09:40:00.000Z',
     excerpt:
-      'Starting strength training at 60 is not about becoming someone else. It is about making the first month careful, repeatable, and useful.',
+      'Starting strength training at 60 is not about becoming someone else. It is about making the first month safe, repeatable, and useful.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Lifting Weights', 'Strength After 50', 'Resistance Training', 'Healthy Aging'],
@@ -791,7 +791,7 @@ This article is educational and is not medical advice. If you have kidney diseas
       },
     ],
     body: articleMarkdown(`
-Starting to lift weights at 60 is not a personality change. It is a practical decision.
+Starting to lift weights at 60 is not a personality change. It is a practical decision about the life you want to keep living.
 
 You do not need to become a gym person. You do not need to chase youth. You do not need to punish your body for getting older. You need a safe first step, a few useful movements, enough consistency to learn, and a plan that can progress without rushing.
 
@@ -872,7 +872,7 @@ Those are not small wins. They are the point.
 
 It is not too late by default. It is also not smart to pretend every 60-year-old should start the same way.
 
-The right path is specific: screen for risk, start at the right level, train the major patterns, recover, and progress. That is how lifting becomes a tool for independence instead of an identity you have to perform.
+The right path is specific: screen for risk, start at the right level, train the major patterns, recover, and progress. That is how lifting becomes a tool for ordinary life instead of an identity you have to perform.
 
 ## Read next
 
@@ -909,7 +909,7 @@ This article is educational and is not medical advice. If you have a medical con
       p(
         'The clinical word is sarcopenia. The more useful plain-English version is age-related muscle loss. Both point to the same reality: muscle is not decoration. Muscle is the tissue that lets a person stand, carry, climb, recover, travel, and remain in charge of daily life.'
       ),
-      h2('Muscle is the operating system of capacity'),
+      h2('Muscle gives daily life more room'),
       p(
         'Cardiovascular fitness matters. Blood pressure matters. Sleep, food, medication, and medical care all matter. But muscle has a special role because it sits under so many daily functions at once.'
       ),
@@ -937,12 +937,12 @@ This article is educational and is not medical advice. If you have a medical con
         '.'
       ),
       p(
-        'StrongPath is built on the research foundation behind ',
+        'StrongPath builds from the work behind ',
         {
           text: 'Choosing the StrongPath: Reversing the Downward Spiral of Aging',
           href: 'https://www.amazon.com/dp/1626344760?tag=stron02-20',
         },
-        ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity. The book is where the StrongPath work began. Current research carries the specific claims we publish.'
+        ', an Amazon bestseller in Aging, Weight Training, Exercise, and Longevity. The book is where the StrongPath work began. Current research supports the specific claims we publish.'
       ),
       h2('The loss is physical, but the meaning is personal'),
       p(
@@ -995,20 +995,20 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'the-strength-crisis-nobody-talks-about' },
     publishedAt: '2026-05-06T09:10:00.000Z',
     excerpt:
-      'Older adults are often told to stay active, but the more precise problem is loss of strength for real life.',
+      'Older adults are often told to stay active. The harder problem is losing strength for real life.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Strength Training', 'Resistance Training', 'Healthy Aging'],
     seoTitle: 'The Strength Crisis Nobody Talks About',
     seoDescription:
-      'Why strength loss after 50 deserves serious attention, and why generic activity advice is not enough.',
+      'Why strength loss after 50 deserves serious attention, and why vague activity advice is not enough.',
     estimatedReadingMinutes: 8,
     body: [
       p(
         'The public conversation about aging is crowded with advice. Walk more. Eat better. Sleep. Stay social. Keep moving. Much of that advice is directionally right. It is also incomplete.'
       ),
       p(
-        'The crisis hiding underneath is strength. Not fitness aesthetics. Not athletic identity. Strength: the ability to produce force, control movement, recover from stress, and keep doing ordinary things without turning every day into a negotiation.'
+        'The issue underneath is strength. Not fitness aesthetics. Not athletic identity. Strength: the ability to produce force, control movement, recover from stress, and keep doing ordinary things without turning every day into a negotiation.'
       ),
       p(
         'When strength declines, people do not simply become less fit. They lose options. They stop taking certain trips. They avoid certain stairs. They become more cautious with grandchildren, luggage, showers, curbs, and winter sidewalks. Life gets smaller by inches.'
@@ -1018,7 +1018,7 @@ This article is educational and is not medical advice. If you have a medical con
         'A person can be active and still undertrained for strength. Walking, gardening, golf, yoga, swimming, and housework all have value. But the body adapts to the demands placed on it. If the demand never asks muscles to produce more force, strength may keep declining quietly.'
       ),
       p(
-        'This is where generic advice fails. "Stay active" sounds reasonable, but it does not tell a 62-year-old woman what to do after her doctor says, "You should lift weights." It does not tell an adult child how to help a parent who is still independent but clearly losing capacity.'
+        'This is where vague advice fails. "Stay active" sounds reasonable, but it does not tell a 62-year-old woman what to do after her doctor says, "You should lift weights." It does not tell an adult child how to help a parent who is still independent but clearly losing strength.'
       ),
       p(
         'The missing word is progression. Strength improves when the body is asked to do a little more over time, with enough recovery to adapt. That principle is not hype. It is the basis of resistance training.'
@@ -1051,7 +1051,7 @@ This article is educational and is not medical advice. If you have a medical con
         'The right response is not panic. It is respect plus specificity. The parent deserves dignity. The family deserves a credible explanation. Both deserve guidance that does not make the problem feel larger than the person.'
       ),
       p(
-        'A strength plan can become a way to protect good days: getting out of the house more easily, carrying what needs to be carried, visiting family with less hesitation, recovering from illness with more reserve.'
+        'A strength plan can become a way to support good days: getting out of the house more easily, carrying what needs to be carried, visiting family with less hesitation, recovering from illness with more reserve.'
       ),
       h2('Why the crisis stays invisible'),
       p(
@@ -1062,10 +1062,10 @@ This article is educational and is not medical advice. If you have a medical con
       ),
       h2('A better public message'),
       p(
-        'The better message is simple: strength is health infrastructure. It supports balance, independence, metabolic function, bone loading, recovery, and participation. It deserves a place in the center of the aging conversation.'
+        'The better message is simple: strength helps people keep participating. It supports balance, independence, metabolic function, bone loading, recovery, and ordinary life.'
       ),
       p(
-        'That does not require bright promises or aggressive marketing. It requires a calmer standard: cite the evidence, name the mechanism, respect the reader, and give people a path they can begin carefully.'
+        'That does not require bright promises or aggressive marketing. It requires a calmer standard: use careful evidence, name the mechanism, respect the reader, and give people a place to begin.'
       ),
       h2('What StrongPath will keep publishing'),
       p(
@@ -1086,20 +1086,20 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'what-actually-predicts-healthy-aging' },
     publishedAt: '2026-05-06T09:20:00.000Z',
     excerpt:
-      'Aging well is easier to understand through physical function: gait speed, grip strength, getting up, carrying, and balance.',
+      'Aging well is easier to understand through physical function: walking pace, grip, getting up, carrying, and balance.',
     author: 'StrongPath Editorial',
     category: 'Research',
     tags: ['Healthy Aging', 'Gait Speed', 'Grip Strength', 'Research'],
     seoTitle: 'What Actually Predicts Healthy Aging?',
     seoDescription:
-      'Gait speed, grip strength, muscle, and function are practical signals for later life. Here is why they matter.',
+      'Walking pace, grip strength, muscle, and function are useful signals for later life. Here is why they matter.',
     estimatedReadingMinutes: 9,
     body: [
       p(
         'Aging well is often described in vague language. Vitality. Longevity. Staying young. The words are familiar, but they do not help much when a person is deciding what to do on Tuesday morning.'
       ),
       p(
-        'A better question is more concrete: what predicts whether a person can keep living with capacity? What signals tell us that the body still has margin?'
+        'A better question is more concrete: what signals suggest a person still has margin for daily life?'
       ),
       p(
         'The research points toward physical function. Not as the only thing that matters, but as one of the clearest windows into how the body is holding up. How fast a person walks. How strongly a person grips. Whether rising from a chair is easy or costly. Whether balance and strength are still available when life asks for them.'
@@ -1159,11 +1159,11 @@ This article is educational and is not medical advice. If you have a medical con
         'If you are helping a parent, the same frame applies with extra care. The goal is not to confront them with decline. The goal is to support good days in a way that respects their dignity.'
       ),
       p(
-        'If you are a clinician evaluating StrongPath, the standard is citation discipline. Claims should connect to current research and named sources. Where the evidence is uncertain, the language should say so.'
+        'If you are a clinician evaluating StrongPath, the standard is simple: claims should connect to current research and named sources. Where the evidence is uncertain, the language should say so.'
       ),
       h2('A more useful definition of later life'),
       p(
-        'Aging well is not a promise to avoid illness or stay unchanged. It is the work of preserving as much usable life as possible: movement, confidence, recovery, participation, and independence.'
+        'Aging well is not a promise to avoid illness or stay unchanged. It is the work of keeping as much usable life as possible: movement, confidence, recovery, participation, and independence.'
       ),
       p(
         'That is why StrongPath focuses on strength. It is not the whole answer. It is one of the most practical places to begin.'

@@ -39,7 +39,7 @@ export function ArticleList({ articles }: { articles: ArticleMeta[] }) {
     <div>
       <article className="grid gap-18 border-y border-[#2E6171]/30 py-24 md:grid-cols-[0.35fr_0.65fr] md:gap-28 md:py-34">
         <div>
-          <p className="font-utility text-[13px] leading-none text-[#2E6171]">Featured guide</p>
+          <p className="font-utility text-[13px] leading-none text-[#2E6171]">Start here</p>
           <div className="mt-12">
             <MetaLine article={featuredArticle} />
           </div>

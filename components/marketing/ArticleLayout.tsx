@@ -93,7 +93,7 @@ function KeyTakeaways() {
   const takeaways = [
     'Sarcopenia is about strength, muscle, and function, not appearance alone.',
     'Early signs often show up in stairs, chairs, luggage, walking speed, grip, and recovery.',
-    'The practical response is progressive resistance training, adequate protein, recovery, and the right level of guidance.',
+    'The next step is usually simple: the right lifting, enough protein, recovery, and a safe place to begin.',
   ]
 
   return (
@@ -113,13 +113,13 @@ function KeyTakeaways() {
 function EvidenceBox() {
   return (
     <section className="my-30 border border-[#2E6171]/34 bg-[#dfe5dc]/65 px-16 py-16 md:my-36 md:px-20 md:py-18">
-      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Evidence note</p>
+      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">What the evidence says</p>
       <p className="mt-10 font-display text-[24px] leading-[1.18] text-[#0B2545] md:text-[28px]">
-        Current consensus puts strength and function near the center.
+        Strength and function matter, not muscle size alone.
       </p>
       <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-        StrongPath starts with the book and uses current third-party sources for specific health
-        claims in the articles.
+        StrongPath starts with the book, then uses current third-party sources for the health
+        claims in each article.
       </p>
     </section>
   )
