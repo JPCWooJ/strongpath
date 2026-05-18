@@ -39,6 +39,7 @@ export type Post = {
   estimatedReadingMinutes?: number
   sources?: ArticleSource[]
   mainImage?: { asset: { _ref: string } }
+  heroImage?: ArticleImage
   body?: PortableTextBlock[]
 }
 
@@ -47,6 +48,16 @@ export type ArticleSource = {
   publication?: string
   year?: string
   href?: string
+}
+
+export type ArticleImage = {
+  src: string
+  alt: string
+  credit: string
+  sourceUrl: string
+  licenseUrl: string
+  caption?: string
+  objectPosition?: string
 }
 
 const publishedPostFilter = `_type == "post" && defined(slug.current) && draft != true`

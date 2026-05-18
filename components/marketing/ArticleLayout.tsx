@@ -6,14 +6,6 @@ import type { Post } from '@/lib/sanity'
 import type { ArticleMeta } from '@/lib/articles'
 import { formatArticleDate, normalizeTag } from '@/lib/articles'
 
-const SARCOPENIA_HERO_IMAGE = {
-  src: '/images/articles/sarcopenia-hero-resistance-training.jpg',
-  alt: 'Older adults doing resistance-band strength work in a gym',
-  credit: 'Photo by Yan Krukau on Pexels',
-  sourceUrl: 'https://www.pexels.com/photo/elderly-people-working-out-at-the-gym-6815699/',
-  licenseUrl: 'https://www.pexels.com/license/',
-}
-
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
@@ -184,15 +176,27 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
         {articles.slice(0, 4).map((article) => (
           <article
             key={article.href}
-            className="grid gap-8 border-b border-[#2E6171]/25 py-16 md:grid-cols-[0.25fr_0.75fr]"
+            className="grid gap-10 border-b border-[#2E6171]/25 py-16 md:grid-cols-[112px_minmax(0,1fr)] md:gap-14"
           >
-            <div className="font-utility text-[13px] leading-[1.35] text-[#5A6472]">
-              {article.category && <p>{article.category}</p>}
-              {article.readingMinutes && <p className="mt-6">{article.readingMinutes} min read</p>}
-            </div>
+            {article.image && (
+              <Link href={article.href} className="group block">
+                <Image
+                  src={article.image.src}
+                  alt={article.image.alt}
+                  width={300}
+                  height={220}
+                  className="aspect-[16/10] w-full border border-[#2E6171]/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
+                  style={{ objectPosition: article.image.objectPosition }}
+                />
+              </Link>
+            )}
             <div>
+              <div className="font-utility text-[13px] leading-[1.35] text-[#5A6472]">
+                {article.category && <p>{article.category}</p>}
+                {article.readingMinutes && <p className="mt-4">{article.readingMinutes} min read</p>}
+              </div>
               <Link href={article.href} className="group">
-                <h3 className="font-display text-[25px] font-normal leading-[1.12] text-[#0B2545] group-hover:underline md:text-[28px]">
+                <h3 className="mt-8 font-display text-[25px] font-normal leading-[1.12] text-[#0B2545] group-hover:underline md:text-[28px]">
                   {article.title}
                 </h3>
               </Link>
@@ -222,6 +226,7 @@ export function ArticleLayout({
   const updatedAt = formatArticleDate(post.updatedAt)
   const articleBody = getArticleBody(post)
   const enhanced = isSarcopeniaArticle(post)
+  const heroImage = post.heroImage
 
   return (
     <main className="bg-parchment">
@@ -257,23 +262,25 @@ export function ArticleLayout({
                 </div>
               )}
             </div>
-            {enhanced && (
+            {heroImage && (
               <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-parchment md:mt-24">
                 <Image
-                  src={SARCOPENIA_HERO_IMAGE.src}
-                  alt={SARCOPENIA_HERO_IMAGE.alt}
+                  src={heroImage.src}
+                  alt={heroImage.alt}
                   width={1600}
                   height={1067}
                   priority
                   className="aspect-[16/9] w-full object-cover object-center md:aspect-[2.35/1]"
+                  style={{ objectPosition: heroImage.objectPosition }}
                 />
                 <figcaption className="border-t border-[#2E6171]/20 px-12 py-8 font-utility text-[12px] leading-[1.35] text-[#5A6472]">
-                  {SARCOPENIA_HERO_IMAGE.credit}. Source:{' '}
-                  <a href={SARCOPENIA_HERO_IMAGE.sourceUrl} className="underline underline-offset-4">
+                  {heroImage.caption && <span>{heroImage.caption} </span>}
+                  {heroImage.credit}. Source:{' '}
+                  <a href={heroImage.sourceUrl} className="underline underline-offset-4">
                     Pexels
                   </a>
                   . License:{' '}
-                  <a href={SARCOPENIA_HERO_IMAGE.licenseUrl} className="underline underline-offset-4">
+                  <a href={heroImage.licenseUrl} className="underline underline-offset-4">
                     Pexels License
                   </a>
                   .
