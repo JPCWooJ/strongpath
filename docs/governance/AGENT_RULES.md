@@ -185,18 +185,18 @@ Reference:
 
 # 7. Canonical Governance Hierarchy
 
+`docs/governance/README.md` is the canonical source for governance authority order.
+
 Operational authority resolves in this order:
 
 1. Founder instructions
 2. AGENT_RULES.md
 3. CODEX_EXECUTION_STANDARD.md
-4. BRAND.md
-5. COPY_GOVERNANCE_STANDARD.md
-6. DESIGN.md
-7. PERSONAS.md
-8. PUBLISHING_PLAN.md
-9. Specialized agent profiles
-10. Task-specific prompts
+4. Role-specific agent profiles
+5. Lane-specific governance files
+6. Task-specific prompts
+
+Use the relevant role profile and lane-specific files for the work in front of you.
 
 If conflicts appear:
 - escalate immediately

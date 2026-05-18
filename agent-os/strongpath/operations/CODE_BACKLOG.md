@@ -12,13 +12,9 @@ Owner: CTO Agent, with Chief of Staff owning cross-workstream sequencing.
 
 ---
 
-## Distribution
+## Source Status
 
-**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/strongpath/operations/CODE_BACKLOG.md` (GitHub, public).
-
-**After commit to `main`:** Founder must refresh the Claude.ai project folder by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
-
-**OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
+This file is an active operational reference in the repo, not primary governance. Use it for code queue context. Use `docs/governance/` for authority, role boundaries, implementation standards, and conflict resolution.
 
 ---
 
@@ -218,7 +214,7 @@ Active StrongPath governance is normalized under `docs/governance/`. `agent-os/`
 ### 5.2 P3 — OneDrive non-`.md` asset cleanup *(decision pending: stay vs move to Drive)*
 
 **Priority:** P3
-**Source:** Chief of Staff session 16 (May 4, 2026); follow-on to OneDrive→GitHub `.md` migration (Flag 8 in `WORKSTREAM_STATUS.md`)
+**Source:** Chief of Staff session 16 (May 4, 2026); follow-on to the completed governance normalization into `docs/governance/`.
 **Status:** Parked. Not blocking any Phase 1 target.
 
 **Context.** Active StrongPath governance now lives in `docs/governance/`. Non-markdown assets remain outside the normalized governance set: book manuscript `.docx`, design reference images, brand assets (logos, photography, color swatches if any), any other binary references. Three options exist: (a) leave external assets where they are, (b) move to Google Drive for shared-link convenience and integration with Drive-based workflows, (c) commit a subset to the GitHub repo where appropriate (e.g., design references that should travel with the codebase). No urgency — assets are accessible where they sit.
@@ -262,7 +258,7 @@ When adding a new item to the Active list, follow this template. Keep it short �
 | Date | Change | Session |
 |---|---|---|
 | April 21, 2026 | Initial version. Seeded with 5 P0 items + 1 P1 + 1 P2 pulled from `ACTIVE_VERTICALS.md` §Critical Fixes. Item template and standing rules for Claude Code sessions captured. | Chief of Staff session 1 (Flag 1) |
-| April 21, 2026 (later) | Added "On scope and reusability" paragraph to §Purpose. Documents that this file's structure is portfolio-generic and is a candidate for promotion to a Tier 2 template when vertical #2 onboards. | Chief of Staff session 1 (Flag 1 addendum) |
+| April 21, 2026 (later) | Added scope and reusability context. | Chief of Staff session 1 (Flag 1 addendum) |
 | April 22, 2026 | Major revision. Old `JPCWooJ/strongpath` hackathon repo archived as `strongpath-hackathon-archive`; fresh empty repo created at `JPCWooJ/strongpath`. §1 rule 5 corrected (branching: `main` + feature branches via PR, `team/ria` retired). All backlog items rewritten for fresh-repo context: P0-00 is now "Scaffold the fresh repo," P0-01 is "Wire Anthropic" (not "Replace OpenAI"), P0-03 is "Build minimal homepage" (not "Fix `/app` spinner" — no `/app` exists yet), P0-05 is prevention-first with `<AmazonLink />` component pattern, P2-01 is convention-setting. `ACTIVE_VERTICALS.md` still references the old repo structure and needs a follow-up edit. | Chief of Staff session 2 (Flag 6 prep) |
 | May 1, 2026 | **Backlog refreshed to current repo state.** P0-00 through P0-05 moved from §3 Active to §4 Done with PR/commit references — all six items shipped to `main` between April 22 and May 1 in active Claude Code sessions on the founder's local machine. Active list now shows P1-01 (full author credibility) at top, followed by P2-01 (fabricated metrics convention). P1-01 unblocked: prior status said "Blocked on P0-03 and P0-05" — both now shipped. Owner line updated to note ownership transfer to CTO at end of CTO onboarding step 3. Prompted by Chief of Staff session 6 — CTO chat flagged the file was stale after founder confirmed active build in progress. | Chief of Staff session 6 |
 | May 1, 2026 (later) | **Design re-sequencing.** Added P0-06 (design system implementation from a Refero spec validated by Brand Ambassador) and P0-07 (quiz funnel) at top of Active, ahead of all prior items. P1-01 (full author credibility section) moved to §5 Parked — its layout slot ships as part of P0-06, content fills the slot in a follow-up item once P0-06 closes. Original P1-01 brief preserved in Parked entry; note added flagging that the original brief references `BRAND.md v4` conventions retired in v6 and must be updated before execution. P2-01 (fabricated metrics convention) renumbered to §3.3, content unchanged. Prompted by founder review of the current shipped homepage as below the credibility threshold the brand requires; design quality gate added as a P0 that was not previously in the backlog. Quiz funnel surfaced as a parallel P0 gap during the same CTO state-of-tech check that prompted the re-sequencing. | Chief of Staff session 6 (latest) |

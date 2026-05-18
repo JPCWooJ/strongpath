@@ -7,7 +7,7 @@ Content planning aid. Not primary StrongPath governance. docs/governance/ wins o
 
 **StrongPath — Priority Article Briefs, v3**
 Prepared by SEO Strategist • updated April 28, 2026 (v3); April 21, 2026 (v2); initial version April 20, 2026 (v1)
-Authority: Tier 3 (vertical). Inherits from BRAND.md v6, PERSONAS.md v4, BEST_PRACTICES.md (BP-04, BP-06), PROJECT_INSTRUCTIONS.md, AGENT_RULES.md, keyword-universe.md.
+Authority: Active operational content reference. Inherits from BRAND.md, PERSONAS.md, BEST_PRACTICES.md (BP-04, BP-06), PROJECT_INSTRUCTIONS.md, AGENT_RULES.md, and keyword-universe.md.
 
 ---
 

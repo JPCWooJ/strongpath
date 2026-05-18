@@ -1,7 +1,7 @@
 # BRAND.md — StrongPath Brand Bible
 
 **Purpose:** The single source of truth for how StrongPath sounds, looks, and shows up in the world. Every workstream chat (SEO, Content, Email, Paid Media, Community) reads this file as ground truth before producing any customer-facing output. When a piece of copy or creative is in doubt, it is checked against this document.
-**Authority:** Tier 3 (vertical-level). Inherits from `AGENT_RULES.md`, `BEST_PRACTICES.md`, and `PROJECT_INSTRUCTIONS.md`. When this file is silent, those govern.
+**Authority:** Active StrongPath brand governance. Inherits from `AGENT_RULES.md`, `PROJECT_INSTRUCTIONS.md`, and `docs/governance/README.md`. When this file is silent, those govern.
 **Owner:** Brand Ambassador workstream.
 **Version:** v6 (canonical)
 **Last updated:** April 28, 2026

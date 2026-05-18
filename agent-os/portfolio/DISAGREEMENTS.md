@@ -1,7 +1,8 @@
 # DISAGREEMENTS.md
 
 **JCVC Portfolio — Disagreement Log**
-Authority: Tier 1 (portfolio). Inherited by every JCVC vertical, every workstream, every agent.
+Status: Legacy portfolio reference. Not active StrongPath governance.
+Authority: `docs/governance/` wins for StrongPath.
 Owner: Chief of Staff (this file maintained portfolio-wide).
 Last updated: May 2, 2026
 
@@ -9,13 +10,7 @@ Last updated: May 2, 2026
 
 ## Distribution
 
-**Canonical home:** `JPCWooJ/strongpath` repo, `agent-os/portfolio/DISAGREEMENTS.md` (GitHub, public).
-
-**After commit to `main`:** Founder must refresh every Claude.ai project folder that includes this file by re-uploading from the GitHub copy. The `/mnt/project/` cache is the previous version until that re-upload happens.
-
-**OneDrive `.md` copies are deprecated and stale.** Do not read from OneDrive for any `.md` file.
-
-**Drive copy at `JCVC / Agent-OS / DISAGREEMENTS.md` (file ID `19X5ouJ24DY28TKIEmh_cf0mgkmTNYhDh`) is now superseded by this GitHub canonical.** The Drive copy should be deleted or marked deprecated after this migration is committed.
+This file is retained for portfolio context only. It does not define StrongPath execution rules.
 
 ---
 
@@ -81,8 +76,8 @@ Authoring rules:
 | Date | Change | Session |
 |---|---|---|
 | May 2, 2026 | Initial version. File pattern established. First entry: Refresh-before-acting violation logged as self-correction. | Camp FO Chief of Staff Session 2 |
-| May 4, 2026 | Migrated to GitHub canonical at `JPCWooJ/strongpath/agent-os/portfolio/DISAGREEMENTS.md`. Added Distribution block. Drive copy at `JCVC / Agent-OS / DISAGREEMENTS.md` (file ID `19X5ouJ24DY28TKIEmh_cf0mgkmTNYhDh`) is now superseded. Content otherwise unchanged. Prompted by Chief of Staff (Portfolio Architecture) Session 17 sync audit, which found this Tier 1 file was Drive-only and never migrated during the May 4 GitHub-canonical cleanup. | Chief of Staff (Portfolio Architecture) session 17 |
+| May 4, 2026 | Migrated from Drive into the repo as a portfolio reference. | Chief of Staff (Portfolio Architecture) session 17 |
 
 ---
 
-*This file is portfolio Tier 1. It applies to every vertical, every workstream, every agent. Updates require Chief of Staff authorship and founder approval, same as any Tier 1 file.*
+*This file is a legacy portfolio reference. For StrongPath, `docs/governance/` is authoritative.*

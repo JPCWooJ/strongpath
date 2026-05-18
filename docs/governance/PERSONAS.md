@@ -36,7 +36,7 @@ v4 propagates BRAND.md v6 across the persona file. The two-layer authority model
 
 **Purpose.** This file is the working portrait of the three readers StrongPath serves. It extends the tonal direction in BRAND.md section 4 into a full operational resource — the specific language each reader uses, the situations that bring them to us, the objections that stop them, and the messages that move them. Every downstream workstream — SEO, Content, Email, Paid Media, Community — reads this file before producing any customer-facing asset.
 
-**Authority.** Tier 3 (vertical-level). Inherits from BRAND.md. When this file is silent, BRAND.md governs. When this file and BRAND.md disagree, BRAND.md wins and this file is updated.
+**Authority.** Active StrongPath persona governance. Inherits from BRAND.md. When this file is silent, BRAND.md governs. When this file and BRAND.md disagree, BRAND.md wins and this file is updated.
 
 **Owner.** Brand Ambassador workstream.
 

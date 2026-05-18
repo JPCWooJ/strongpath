@@ -2,7 +2,7 @@
 
 **StrongPath — SEO Keyword Universe, v1**
 Prepared by SEO Strategist • April 20, 2026
-Authority: Tier 3 (vertical). Inherits from BRAND.md v3, PERSONAS.md v2, PROJECT_INSTRUCTIONS.md, BEST_PRACTICES.md (BP-04), AGENT_RULES.md.
+Authority: Active StrongPath keyword reference. Inherits from BRAND.md, PERSONAS.md, PROJECT_INSTRUCTIONS.md, BEST_PRACTICES.md (BP-04), and AGENT_RULES.md.
 
 ---
 

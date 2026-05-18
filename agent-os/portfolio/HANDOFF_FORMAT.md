@@ -2,7 +2,8 @@
 
 Version: 2.0
 Last updated: May 5, 2026
-Authority: Tier 1 (portfolio). Inherited by every JCVC vertical, every workstream, every agent.
+Status: Legacy portfolio reference. Not active StrongPath governance.
+Authority: `docs/governance/` wins for StrongPath.
 
 ---
 

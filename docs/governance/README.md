@@ -6,12 +6,23 @@ Use these files before implementation work, design refinement, content planning,
 
 ## Governance Hierarchy
 
+This README is the canonical source for governance authority order.
+
 1. Founder instructions
 2. `AGENT_RULES.md`
 3. `CODEX_EXECUTION_STANDARD.md`
 4. Role-specific agent profiles
 5. Lane-specific governance files
 6. Task-specific prompts
+
+Role-specific profiles:
+- `CTO_AGENT_PROFILE.md`
+- `CHIEF_OF_STAFF_AGENT_PROFILE.md`
+- `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `GTM_AGENT_PROFILE.md`
+- `UIUX_AGENT_PROFILE.md`
+
+Lane-specific governance includes brand, design, copy, personas, editorial, GTM, metrics, publishing, keyword, and product-backlog files.
 
 ## Active Canonical Files
 
@@ -71,5 +82,5 @@ Those files are non-authoritative and retained for historical reference only. Do
 ## Deprecated Governance Locations
 
 - OneDrive markdown copies are not canonical.
-- `agent-os/` is not the active governance authority.
+- `agent-os/` is not the active governance authority. It contains legacy context and active operational references only.
 - `.claude/rules/` are enforcement aids for Claude Code sessions; they inherit from `docs/governance/`.

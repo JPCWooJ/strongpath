@@ -81,7 +81,7 @@ Portfolio status reference. Not primary StrongPath governance. docs/governance/ 
 | UptimeRobot | ✅ | Documented in `docs/uptime-monitoring.md` |
 
 ### Critical Fixes Required Before Traffic
-*Updated May 1, 2026. Old fixes (1992-era hackathon build) superseded by fresh-repo P0-00 through P0-05. The current critical-fixes list is now maintained in `CODE_BACKLOG.md` §3 Active and reflected in `WORKSTREAM_STATUS.md` §4 Critical Gates. This table summarizes for the inheritance chain.*
+*Updated May 1, 2026. Old fixes (1992-era hackathon build) superseded by fresh-repo P0-00 through P0-05. The current critical-fixes list is maintained in `agent-os/strongpath/operations/CODE_BACKLOG.md`. This table is a portfolio status summary, not active governance.*
 
 | Priority | Fix | Status | Source |
 |----------|-----|--------|--------|

@@ -2,14 +2,15 @@
 
 **StrongPath — Slash Commands and Reusable Prompts Backlog**
 Maintained by Chief of Staff • April 21, 2026
-Authority: Tier 3 (vertical). Inherits from `AGENT_RULES.md`, `PROJECT_INSTRUCTIONS.md`, `BEST_PRACTICES.md`, `WORKSTREAM_STATUS.md`.
-Owner: Chief of Staff chat.
+Status: Legacy operational backlog, not active StrongPath governance.
+Authority: `docs/governance/` wins on conflict. Use `CODEX_EXECUTION_STANDARD.md` and `.claude/commands/` for active implementation-command behavior.
+Owner: Chief of Staff / CTO coordination.
 
 ---
 
 ## Purpose
 
-Holding pen for repeated workflows that should become slash commands (Claude Code, `.claude/commands/*.md`) or reusable prompt templates (Claude.ai workstream chats). Community consensus, echoed by Boris Cherny: *"if you do something more than once a day, turn it into a skill or command."*
+Holding pen for repeated workflows that may become slash commands in `.claude/commands/*.md` or reusable prompt templates.
 
 This file is a backlog, not a roadmap. Items here are candidates. Flag 6 will determine which get built first.
 
@@ -20,7 +21,7 @@ This file is a backlog, not a roadmap. Items here are candidates. Flag 6 will de
 - **`[portfolio]`** — the workflow generalizes across every eCommerce vertical in the portfolio. The entry itself (shape, trigger, workflow description) transfers to vertical #2 with only light editing. Example: `/lighthouse` runs against `BP-10` thresholds, which are portfolio-wide.
 - **`[vertical]`** — the workflow is specific to StrongPath — it depends on StrongPath's personas, brand vocabulary, authority asset, or other StrongPath-unique context. The entry does not transfer to vertical #2 without substantive rewriting. Example: the Eunoia test is a StrongPath concept; the persona-voice check uses Margaret/David/Chen.
 
-The tagging is preparation for a future split. When vertical #2 onboards, `[portfolio]` entries promote to a Tier 2 `COMMANDS_BACKLOG_TEMPLATE.md` (or similar, housed in the eCommerce domain); `[vertical]` entries stay here in StrongPath's file. Today, with one vertical, both tags live in one file — the tagging is forward-looking, not operational yet.
+The tags are historical planning aids, not active governance or a required future split.
 
 **What this file is not.** A commitment to build every item. A complete list — new items arrive as they emerge from workstream sessions.
 
@@ -170,7 +171,7 @@ When an entry is activated into a real slash command or prompt template, record 
 | Date | Change | Session |
 |---|---|---|
 | April 21, 2026 | Initial version. Seeded with 6 Claude Code slash command candidates and 7 Claude.ai prompt template candidates. Activation deferred to Flag 6. | Chief of Staff session 1 (Flag 1) |
-| April 21, 2026 (later) | Added `[portfolio]` / `[vertical]` scope tags to every entry. 10 entries tagged `[portfolio]` (generalize across verticals); 3 entries tagged `[vertical]` (StrongPath-specific — `/brand-check`, Eunoia test, persona-voice check). CC-3 (`/affiliate-tag-audit`) workflow description generalized so the entry is portfolio-readable while StrongPath's specific tag value (`stron02-20`) is preserved as the current instance. Tagging is forward-looking: when vertical #2 onboards, `[portfolio]` entries promote to a Tier 2 domain file. | Chief of Staff session 1 (Flag 1 addendum) |
+| April 21, 2026 (later) | Added `[portfolio]` / `[vertical]` scope tags to every entry. 10 entries tagged `[portfolio]` and 3 entries tagged `[vertical]`. Tags are historical planning aids only. | Chief of Staff session 1 (Flag 1 addendum) |
 
 ---
 
