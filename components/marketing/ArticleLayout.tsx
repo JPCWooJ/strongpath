@@ -93,6 +93,10 @@ function isCaregivingArticle(post: Post) {
   return post.slug.current === 'help-aging-parents-stay-strong'
 }
 
+function isLiftingWeightsArticle(post: Post) {
+  return post.slug.current === 'how-to-start-lifting-weights-at-60'
+}
+
 function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (!body) return -1
 
@@ -111,6 +115,12 @@ function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (isCaregivingArticle(post)) {
     return body.findIndex((block) =>
       getPlainBlockText(block).startsWith('The goal is not to win an argument about aging.')
+    )
+  }
+
+  if (isLiftingWeightsArticle(post)) {
+    return body.findIndex((block) =>
+      getPlainBlockText(block).startsWith('The goal is usable strength:')
     )
   }
 
@@ -197,6 +207,29 @@ function getCommerceModule(post: Post): CommerceModule | null {
         {
           label: 'Resistance bands',
           imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  if (isLiftingWeightsArticle(post)) {
+    return {
+      heading: 'Start with the basics',
+      body:
+        'We keep a short list of simple starter equipment for strength training after 50: resistance bands, a comfortable mat, and manageable dumbbells.',
+      href: 'https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist',
+      items: [
+        {
+          label: 'Resistance bands',
+          imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Exercise mat',
+          imageUrl: 'https://m.media-amazon.com/images/I/81Y26toqdTL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Dumbbells',
+          imageUrl: 'https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SL1500_.jpg',
         },
       ],
     }
