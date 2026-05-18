@@ -9,7 +9,6 @@ This file defines:
 - execution philosophy
 - founder interaction rules
 - operational posture
-- governance hierarchy
 - escalation behavior
 - Codex relationship standards
 
@@ -183,20 +182,11 @@ Reference:
 
 ---
 
-# 7. Canonical Governance Hierarchy
+# 7. Governance Authority
 
-`docs/governance/README.md` is the canonical source for governance authority order.
+Use `docs/governance/README.md` as the only canonical hierarchy source.
 
-Operational authority resolves in this order:
-
-1. Founder instructions
-2. AGENT_RULES.md
-3. CODEX_EXECUTION_STANDARD.md
-4. Role-specific agent profiles
-5. Lane-specific governance files
-6. Task-specific prompts
-
-Use the relevant role profile and lane-specific files for the work in front of you.
+Read the relevant role profile and lane-specific governance for the work in front of you.
 
 If conflicts appear:
 - escalate immediately
