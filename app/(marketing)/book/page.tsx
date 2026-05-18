@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Choosing the StrongPath',
   description:
-    'The book behind StrongPath, and the current articles that carry its strength work forward.',
+    'The book behind StrongPath, and the current articles that carry its strength work into daily life.',
   path: '/book',
 })
 
@@ -45,8 +45,8 @@ export default function BookPage() {
               Reversing the Downward Spiral of Aging
             </p>
             <p className="mt-18 max-w-[690px] font-body text-[18px] leading-[1.58] text-[#1A1D24]/78 md:text-[21px]">
-              StrongPath carries the book&apos;s work forward with current articles on muscle loss,
-              strength, recovery, protein, and staying capable after 50.
+              StrongPath carries the book&apos;s work forward for readers who want strength to show
+              up in daily life: chairs, bags, travel, recovery, and the people they love.
             </p>
             <p className="mt-14 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/58">
               by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD

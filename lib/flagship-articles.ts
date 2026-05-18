@@ -486,7 +486,7 @@ The most useful family plan is usually simple:
 - support protein, sleep, and recovery
 - check whether confidence and daily function improve
 
-This is not about forcing a parent into a new identity. It is about making ordinary freedom easier to keep.
+This is not about forcing a parent into a new identity. It is about helping them keep more of the days they value.
 
 ## Read next
 
@@ -891,7 +891,7 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'why-muscle-loss-changes-everything-after-50' },
     publishedAt: '2026-05-06T09:00:00.000Z',
     excerpt:
-      'Age-related muscle loss can change stairs, balance, recovery, confidence, and the ordinary freedoms people want to keep.',
+      'Age-related muscle loss can change stairs, balance, recovery, confidence, and the daily independence people want to keep.',
     author: 'StrongPath Editorial',
     category: 'Muscle Loss',
     tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50'],

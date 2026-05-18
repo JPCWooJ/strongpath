@@ -10,7 +10,7 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = buildMetadata({
   title: 'StrongPath - Strength for life after 50',
   description:
-    'Practical help for adults and families who want strength for stairs, travel, recovery, and the people they love.',
+    'Practical help for adults and families who want to stay capable for the people, places, and days that matter.',
   path: '/',
 })
 
@@ -57,19 +57,19 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 const startingPoints = [
   {
     title: "I'm noticing weakness",
-    copy: 'Stairs feel longer. Groceries feel heavier. Getting up from a low chair takes more thought than it used to.',
+    copy: 'Maybe it is the stairs. Maybe it is a chair, a suitcase, or a walk that used to feel easy. Start by understanding what changes with age.',
     href: '/blog/what-is-sarcopenia',
     action: 'Start with sarcopenia',
   },
   {
     title: 'I want to help a parent',
-    copy: 'A parent is walking less, recovering more slowly, or quietly skipping things they used to enjoy.',
+    copy: 'When you love someone, you notice what they stop doing. StrongPath helps you support them without pressure or fear.',
     href: '/blog/help-aging-parents-stay-strong',
     action: 'Read the caregiver guide',
   },
   {
     title: 'I want to know what helps',
-    copy: 'Walking, protein, lifting, recovery: the hard part is knowing what matters first.',
+    copy: 'Walking matters. Protein matters. Lifting matters. The hard part is knowing what to do first.',
     href: '/blog/resistance-training-older-adults',
     action: 'Read the lifting guide',
   },
@@ -78,7 +78,7 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book to understand why strength matters for travel, family, work, and ordinary freedom.',
+    copy: 'Use the book to understand why strength matters for travel, family, independence, and the days you still want.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
@@ -173,8 +173,9 @@ export default function HomePage() {
               Stay strong for the life you still want to live.
             </h1>
             <p className="mt-16 max-w-[690px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/80 md:text-[22px]">
-              Stairs. Groceries. Chairs. Travel. Walks with family. StrongPath helps adults and
-              families understand what changes with age, what is worth doing, and how to begin.
+              Strength is not about looking younger. It is about getting out of a chair, carrying
+              your own bags, walking with the people you love, and keeping more of the life you
+              still want.
             </p>
             <div className="mt-18 flex flex-col gap-10 sm:flex-row sm:items-center">
               <Link
@@ -229,7 +230,7 @@ export default function HomePage() {
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Start here</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
-                Start with the moment you are living.
+                Start where strength is starting to matter.
               </h2>
             </div>
             <div className="divide-y divide-[#2E6171]/22 border-y border-[#2E6171]/25">
