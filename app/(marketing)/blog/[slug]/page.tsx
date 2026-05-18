@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ArticleJsonLd } from '@/components/marketing/ArticleJsonLd'
 import { ArticleLayout } from '@/components/marketing/ArticleLayout'
-import { estimateReadingMinutes, toArticleMeta } from '@/lib/articles'
+import { estimateReadingMinutes, isPublicArticleSlug, toArticleMeta } from '@/lib/articles'
 import { findFlagshipArticle, flagshipArticles } from '@/lib/flagship-articles'
 import { buildArticleMetadata } from '@/lib/seo'
 import { client, postQuery, postSlugsQuery } from '@/lib/sanity'
@@ -14,7 +14,7 @@ export async function generateStaticParams() {
   const posts: Array<{ slug: string }> = await client.fetch(postSlugsQuery)
   return [
     ...flagshipArticles.map((post) => ({ slug: post.slug.current })),
-    ...posts.map((post) => ({ slug: post.slug })),
+    ...posts.filter((post) => isPublicArticleSlug(post.slug)).map((post) => ({ slug: post.slug })),
   ]
 }
 
@@ -23,6 +23,8 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
+  if (!isPublicArticleSlug(params.slug)) return {}
+
   const post: Post | null =
     findFlagshipArticle(params.slug) || (await client.fetch(postQuery, { slug: params.slug }))
 
@@ -32,6 +34,8 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
+  if (!isPublicArticleSlug(params.slug)) notFound()
+
   const post: Post | null =
     findFlagshipArticle(params.slug) || (await client.fetch(postQuery, { slug: params.slug }))
 

@@ -1,5 +1,6 @@
 import type { PortableTextBlock } from '@portabletext/react'
 import type { Post } from '@/lib/sanity'
+import { isPublicPost } from '@/lib/articles'
 
 type LinkPart = {
   text: string
@@ -1196,7 +1197,9 @@ export function findFlagshipArticle(slug: string) {
 
 export function mergePublishedPosts(posts: Post[]) {
   const flagshipSlugs = new Set(flagshipArticles.map((article) => article.slug.current))
-  const externalPosts = posts.filter((post) => !flagshipSlugs.has(post.slug.current))
+  const externalPosts = posts.filter(
+    (post) => !flagshipSlugs.has(post.slug.current) && isPublicPost(post)
+  )
 
   return [...flagshipArticles, ...externalPosts].sort((a, b) => {
     const aTime = new Date(a.publishedAt || 0).getTime()

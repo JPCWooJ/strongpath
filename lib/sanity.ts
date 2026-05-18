@@ -49,7 +49,8 @@ export type ArticleSource = {
   href?: string
 }
 
-const publishedPostFilter = `_type == "post" && defined(slug.current) && draft != true`
+const publicSlugFilter = `!(slug.current match "*draft*") && !(slug.current match "*test*") && !(slug.current match "*delete*")`
+const publishedPostFilter = `_type == "post" && defined(slug.current) && draft != true && !(_id in path("drafts.**")) && ${publicSlugFilter}`
 
 export const postsQuery = groq`*[${publishedPostFilter}] | order(publishedAt desc) {
   _id,
