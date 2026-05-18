@@ -69,6 +69,7 @@ export function buildArticleMetadata(post: Post): Metadata {
     updatedAt: post.updatedAt,
     authors: post.author ? [post.author] : [siteMetadata.publisher.name],
     tags: post.tags,
+    image: post.heroImage ? absoluteUrl(post.heroImage.src) : undefined,
     canonicalUrl: post.canonicalUrl,
   })
 }

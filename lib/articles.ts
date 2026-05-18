@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/react'
-import type { Post } from '@/lib/sanity'
+import type { ArticleImage, Post } from '@/lib/sanity'
 
 export type ArticleMeta = {
   href: string
@@ -11,6 +11,7 @@ export type ArticleMeta = {
   category?: string
   tags: string[]
   readingMinutes?: number
+  image?: ArticleImage
 }
 
 export function articleHref(post: Pick<Post, 'slug'>) {
@@ -95,6 +96,7 @@ export function toArticleMeta(post: Post): ArticleMeta {
     category: post.category,
     tags: post.tags || [],
     readingMinutes: post.estimatedReadingMinutes || estimateReadingMinutes(post),
+    image: post.heroImage,
   }
 }
 

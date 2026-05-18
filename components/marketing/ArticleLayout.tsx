@@ -6,14 +6,6 @@ import type { Post } from '@/lib/sanity'
 import type { ArticleMeta } from '@/lib/articles'
 import { formatArticleDate, normalizeTag } from '@/lib/articles'
 
-const SARCOPENIA_HERO_IMAGE = {
-  src: '/images/articles/sarcopenia-hero-resistance-training.jpg',
-  alt: 'Older adults doing resistance-band strength work in a gym',
-  credit: 'Photo by Yan Krukau on Pexels',
-  sourceUrl: 'https://www.pexels.com/photo/elderly-people-working-out-at-the-gym-6815699/',
-  licenseUrl: 'https://www.pexels.com/license/',
-}
-
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
@@ -93,48 +85,108 @@ function isResistanceTrainingArticle(post: Post) {
   return post.slug.current === 'resistance-training-older-adults'
 }
 
-function hasArticleVisual(post: Post) {
-  return isSarcopeniaArticle(post) || isResistanceTrainingArticle(post)
+function isProteinArticle(post: Post) {
+  return post.slug.current === 'protein-for-older-adults'
 }
 
-function getStarterEquipmentCtaIndex(body?: Post['body']) {
+function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (!body) return -1
 
-  return body.findIndex((block) =>
-    getPlainBlockText(block).startsWith('For older adults, that is not vanity.')
-  )
+  if (isResistanceTrainingArticle(post)) {
+    return body.findIndex((block) =>
+      getPlainBlockText(block).startsWith('For older adults, that is not vanity.')
+    )
+  }
+
+  if (isProteinArticle(post)) {
+    return body.findIndex((block) =>
+      getPlainBlockText(block).startsWith('StrongPath treats protein as part of the strength system')
+    )
+  }
+
+  return -1
 }
 
-const starterEquipmentItems = [
-  {
-    label: 'Resistance bands',
-    imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
-  },
-  {
-    label: 'Exercise mat',
-    imageUrl: 'https://m.media-amazon.com/images/I/81Y26toqdTL._AC_SL1500_.jpg',
-  },
-  {
-    label: 'Dumbbells',
-    imageUrl: 'https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SL1500_.jpg',
-  },
-]
+type CommerceModule = {
+  heading: string
+  body: string
+  href: string
+  items: Array<{ label: string; imageUrl: string }>
+}
 
-function StarterEquipmentCta() {
+function getCommerceModule(post: Post): CommerceModule | null {
+  if (isResistanceTrainingArticle(post)) {
+    return {
+      heading: 'Start with the basics',
+      body:
+        'We keep a short list of simple starter equipment for resistance training after 50: bands, a mat, and manageable dumbbells.',
+      href: 'https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist',
+      items: [
+        {
+          label: 'Resistance bands',
+          imageUrl: 'https://m.media-amazon.com/images/I/71Dw6U5ZNVL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Exercise mat',
+          imageUrl: 'https://m.media-amazon.com/images/I/81Y26toqdTL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Dumbbells',
+          imageUrl: 'https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  if (isProteinArticle(post)) {
+    return {
+      heading: 'Protein basics',
+      body:
+        'We keep a short list of practical protein and recovery basics after 50: a food scale, protein options, and a simple shaker bottle.',
+      href: 'https://www.amazon.com/shop/stron02',
+      items: [
+        {
+          label: 'Food scale',
+          imageUrl: 'https://m.media-amazon.com/images/I/91YrLTBnMcL._SL1500_.jpg',
+        },
+        {
+          label: 'Whey protein',
+          imageUrl: 'https://m.media-amazon.com/images/I/71aEQamI-aL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Unflavored whey',
+          imageUrl: 'https://m.media-amazon.com/images/I/71U0ZXt4lFL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Shaker bottle',
+          imageUrl: 'https://m.media-amazon.com/images/I/71iiyCEpDmL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  return null
+}
+
+function ArticleCommerceCta({ module }: { module: CommerceModule }) {
+  const gridClassName =
+    module.items.length === 3
+      ? 'grid gap-8 sm:grid-cols-3'
+      : 'grid gap-8 sm:grid-cols-2 lg:grid-cols-4'
+
   return (
     <aside className="not-prose my-22 border border-[#2E6171]/32 bg-[#FAF8F5] p-16 md:my-28 md:p-20">
       <div className="grid gap-16">
         <div>
           <h2 className="font-display text-[30px] font-normal leading-[1.1] text-[#0B2545] md:text-[36px]">
-            Start with the basics
+            {module.heading}
           </h2>
           <p className="mt-9 max-w-[580px] font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-            We keep a short list of simple starter equipment for resistance training after 50:
-            bands, a mat, and manageable dumbbells.
+            {module.body}
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-3">
-          {starterEquipmentItems.map((item) => (
+        <div className={gridClassName}>
+          {module.items.map((item) => (
             <div key={item.label} className="border border-[#2E6171]/22 bg-parchment p-10">
               <div className="flex aspect-[4/3] items-center justify-center bg-white p-8">
                 <Image
@@ -153,7 +205,7 @@ function StarterEquipmentCta() {
           ))}
         </div>
         <a
-          href="https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist"
+          href={module.href}
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0B2545] px-18 py-12 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] sm:w-fit sm:min-w-[148px]"
@@ -263,15 +315,27 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
         {articles.slice(0, 4).map((article) => (
           <article
             key={article.href}
-            className="grid gap-8 border-b border-[#2E6171]/25 py-16 md:grid-cols-[0.25fr_0.75fr]"
+            className="grid gap-10 border-b border-[#2E6171]/25 py-16 md:grid-cols-[112px_minmax(0,1fr)] md:gap-14"
           >
-            <div className="font-utility text-[13px] leading-[1.35] text-[#5A6472]">
-              {article.category && <p>{article.category}</p>}
-              {article.readingMinutes && <p className="mt-6">{article.readingMinutes} min read</p>}
-            </div>
+            {article.image && (
+              <Link href={article.href} className="group block">
+                <Image
+                  src={article.image.src}
+                  alt={article.image.alt}
+                  width={300}
+                  height={220}
+                  className="aspect-[16/10] w-full border border-[#2E6171]/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
+                  style={{ objectPosition: article.image.objectPosition }}
+                />
+              </Link>
+            )}
             <div>
+              <div className="font-utility text-[13px] leading-[1.35] text-[#5A6472]">
+                {article.category && <p>{article.category}</p>}
+                {article.readingMinutes && <p className="mt-4">{article.readingMinutes} min read</p>}
+              </div>
               <Link href={article.href} className="group">
-                <h3 className="font-display text-[25px] font-normal leading-[1.12] text-[#0B2545] group-hover:underline md:text-[28px]">
+                <h3 className="mt-8 font-display text-[25px] font-normal leading-[1.12] text-[#0B2545] group-hover:underline md:text-[28px]">
                   {article.title}
                 </h3>
               </Link>
@@ -302,17 +366,15 @@ export function ArticleLayout({
   const articleBody = getArticleBody(post)
   const renderedArticleBody = articleBody ?? []
   const enhanced = isSarcopeniaArticle(post)
-  const showArticleVisual = hasArticleVisual(post)
-  const showStarterEquipmentCta = isResistanceTrainingArticle(post)
-  const starterEquipmentCtaIndex = showStarterEquipmentCta
-    ? getStarterEquipmentCtaIndex(renderedArticleBody)
-    : -1
+  const heroImage = post.heroImage
+  const commerceModule = getCommerceModule(post)
+  const commerceCtaIndex = commerceModule ? getCommerceCtaIndex(post, renderedArticleBody) : -1
   const articleBodyBeforeCta =
-    starterEquipmentCtaIndex >= 0
-      ? renderedArticleBody.slice(0, starterEquipmentCtaIndex + 1)
+    commerceCtaIndex >= 0
+      ? renderedArticleBody.slice(0, commerceCtaIndex + 1)
       : renderedArticleBody
   const articleBodyAfterCta =
-    starterEquipmentCtaIndex >= 0 ? renderedArticleBody.slice(starterEquipmentCtaIndex + 1) : []
+    commerceCtaIndex >= 0 ? renderedArticleBody.slice(commerceCtaIndex + 1) : []
 
   return (
     <main className="bg-parchment">
@@ -348,23 +410,25 @@ export function ArticleLayout({
                 </div>
               )}
             </div>
-            {showArticleVisual && (
+            {heroImage && (
               <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-parchment md:mt-24">
                 <Image
-                  src={SARCOPENIA_HERO_IMAGE.src}
-                  alt={SARCOPENIA_HERO_IMAGE.alt}
+                  src={heroImage.src}
+                  alt={heroImage.alt}
                   width={1600}
                   height={1067}
                   priority
                   className="aspect-[16/9] w-full object-cover object-center md:aspect-[2.35/1]"
+                  style={{ objectPosition: heroImage.objectPosition }}
                 />
                 <figcaption className="border-t border-[#2E6171]/20 px-12 py-8 font-utility text-[12px] leading-[1.35] text-[#5A6472]">
-                  {SARCOPENIA_HERO_IMAGE.credit}. Source:{' '}
-                  <a href={SARCOPENIA_HERO_IMAGE.sourceUrl} className="underline underline-offset-4">
+                  {heroImage.caption && <span>{heroImage.caption} </span>}
+                  {heroImage.credit}. Source:{' '}
+                  <a href={heroImage.sourceUrl} className="underline underline-offset-4">
                     Pexels
                   </a>
                   . License:{' '}
-                  <a href={SARCOPENIA_HERO_IMAGE.licenseUrl} className="underline underline-offset-4">
+                  <a href={heroImage.licenseUrl} className="underline underline-offset-4">
                     Pexels License
                   </a>
                   .
@@ -381,7 +445,9 @@ export function ArticleLayout({
               {articleBody ? (
                 <div className="prose prose-lg max-w-none font-body prose-headings:font-display prose-headings:font-normal prose-headings:text-[#0B2545] prose-h2:mb-3 prose-h2:mt-9 prose-h2:text-[29px] prose-h2:leading-[1.17] prose-h3:mt-7 prose-h3:text-[23px] prose-p:my-3 prose-p:text-[18px] prose-p:leading-[1.64] prose-p:text-[#1A1D24]/88 prose-a:text-[#0B2545] prose-a:decoration-[#B8860B] prose-a:underline-offset-4 prose-ul:my-4 prose-li:my-1 prose-li:text-[#1A1D24]/88 prose-strong:text-[#0B2545] md:prose-h2:mt-10 md:prose-h2:text-[33px] md:prose-h3:text-[27px] md:prose-p:text-[19px] md:prose-p:leading-[1.66]">
                   <PortableText value={articleBodyBeforeCta} components={portableTextComponents} />
-                  {starterEquipmentCtaIndex >= 0 && <StarterEquipmentCta />}
+                  {commerceModule && commerceCtaIndex >= 0 && (
+                    <ArticleCommerceCta module={commerceModule} />
+                  )}
                   {articleBodyAfterCta && articleBodyAfterCta.length > 0 && (
                     <PortableText value={articleBodyAfterCta} components={portableTextComponents} />
                   )}

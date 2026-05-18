@@ -46,6 +46,57 @@ const h2 = (text: string) => block('h2', [text])
 const h3 = (text: string) => block('h3', [text])
 const p = (...parts: BlockPart[]) => block('normal', parts)
 
+const pexelsLicenseUrl = 'https://www.pexels.com/license/'
+
+const launchArticleImages: Record<string, NonNullable<Post['heroImage']>> = {
+  'what-is-sarcopenia': {
+    src: '/images/articles/sarcopenia-stairs.jpg',
+    alt: 'An older woman holding a handrail while navigating subway stairs',
+    credit: 'Photo by Mathias Reding on Pexels',
+    sourceUrl: 'https://www.pexels.com/photo/elderly-woman-on-stairs-16124521/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'Sarcopenia often shows up first in ordinary places: stairs, transit, errands, and recovery.',
+    objectPosition: 'center 52%',
+  },
+  'help-aging-parents-stay-strong': {
+    src: '/images/articles/caregiver-walking.jpg',
+    alt: 'A younger woman walking beside an older woman on a city sidewalk',
+    credit: 'Photo by Sofia Marquet on Pexels',
+    sourceUrl:
+      'https://www.pexels.com/photo/woman-helping-elderly-woman-to-walk-on-sidewalk-18968358/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'The best support protects dignity while making the next step easier to take.',
+    objectPosition: 'center 55%',
+  },
+  'resistance-training-older-adults': {
+    src: '/images/articles/sarcopenia-hero-resistance-training.jpg',
+    alt: 'Older adults doing resistance-band strength work in a gym',
+    credit: 'Photo by Yan Krukau on Pexels',
+    sourceUrl: 'https://www.pexels.com/photo/elderly-people-working-out-at-the-gym-6815699/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'Resistance training belongs in serious healthy-aging guidance because strength is trainable.',
+    objectPosition: 'center 46%',
+  },
+  'protein-for-older-adults': {
+    src: '/images/articles/protein-kitchen.jpg',
+    alt: 'An older woman preparing food at a kitchen stove',
+    credit: 'Photo by Mikhail Nilov on Pexels',
+    sourceUrl: 'https://www.pexels.com/photo/a-woman-cooking-at-the-kitchen-6972747/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'Food supports the work of training; it is not a shortcut or a miracle claim.',
+    objectPosition: 'center 46%',
+  },
+  'how-to-start-lifting-weights-at-60': {
+    src: '/images/articles/lifting-at-home.jpg',
+    alt: 'An older man lifting light dumbbells at home',
+    credit: 'Photo by Alena Darmel on Pexels',
+    sourceUrl: 'https://www.pexels.com/photo/an-elderly-man-lifting-dumbbells-7322452/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'A useful first month starts modestly: learn the movement, recover, and progress with care.',
+    objectPosition: 'center 52%',
+  },
+}
+
 function partsFromMarkdown(text: string): BlockPart[] {
   const parts: BlockPart[] = []
   const linkPattern = /\[([^\]]+)\]\(([^)]+)\)/g
@@ -1185,7 +1236,12 @@ const activeFlagshipSlugs = new Set([
   'how-to-start-lifting-weights-at-60',
 ])
 
-export const flagshipArticles = allFlagshipArticles.filter((article) =>
+const flagshipArticlesWithImages = allFlagshipArticles.map((article) => ({
+  ...article,
+  heroImage: launchArticleImages[article.slug.current] ?? article.heroImage,
+}))
+
+export const flagshipArticles = flagshipArticlesWithImages.filter((article) =>
   activeFlagshipSlugs.has(article.slug.current)
 )
 

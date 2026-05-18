@@ -50,6 +50,7 @@ const featuredArticles = featuredFlagshipArticles.map((article) => ({
   category: article.category,
   publishedAt: article.publishedAt,
   readingMinutes: article.estimatedReadingMinutes,
+  image: article.heroImage,
 }))
 
 const [featuredGuide, ...supportingGuides] = featuredArticles
@@ -260,39 +261,54 @@ export default function HomePage() {
       <section className="bg-[#0B2545] text-parchment">
         <div className="sp-container py-30 md:py-44">
           {featuredGuide && (
-            <article className="grid gap-18 md:grid-cols-[0.3fr_0.7fr] md:gap-32">
-              <div>
-                <p className="font-utility text-[13px] leading-none text-[#dfe5dc]">Featured guide</p>
-                <div className="mt-12">
-                  <ArticleMeta
-                    publishedAt={featuredGuide.publishedAt}
-                    readingMinutes={featuredGuide.readingMinutes}
-                    tone="light"
+            <article className="grid gap-20 md:grid-cols-[0.43fr_0.57fr] md:items-start md:gap-32">
+              {featuredGuide.image && (
+                <Link href={featuredGuide.href} className="group block">
+                  <Image
+                    src={featuredGuide.image.src}
+                    alt={featuredGuide.image.alt}
+                    width={1000}
+                    height={700}
+                    priority
+                    className="aspect-[4/3] w-full border border-parchment/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
+                    style={{ objectPosition: featuredGuide.image.objectPosition }}
                   />
+                </Link>
+              )}
+              <div className="md:pt-2">
+                <div>
+                  <p className="font-utility text-[13px] leading-none text-[#dfe5dc]">Featured guide</p>
+                  <div className="mt-12">
+                    <ArticleMeta
+                      publishedAt={featuredGuide.publishedAt}
+                      readingMinutes={featuredGuide.readingMinutes}
+                      tone="light"
+                    />
+                  </div>
+                  {featuredGuide.useCase && (
+                    <p className="mt-14 border-l border-[#B8860B] pl-12 font-body text-[16px] leading-[1.5] text-parchment/74 md:text-[18px]">
+                      {featuredGuide.useCase}
+                    </p>
+                  )}
                 </div>
-                {featuredGuide.useCase && (
-                  <p className="mt-14 border-l border-[#B8860B] pl-12 font-body text-[16px] leading-[1.5] text-parchment/74 md:text-[18px]">
-                    {featuredGuide.useCase}
-                  </p>
-                )}
-              </div>
-              <div>
-                <Link href={featuredGuide.href} className="group">
-                  <h2 className="max-w-[820px] font-display text-[42px] font-normal leading-[1.03] text-parchment group-hover:underline md:text-[68px] md:leading-[1]">
-                    {featuredGuide.title}
-                  </h2>
-                </Link>
-                {featuredGuide.excerpt && (
-                  <p className="mt-14 max-w-[720px] font-body text-[18px] leading-[1.55] text-parchment/74 md:text-[21px]">
-                    {featuredGuide.excerpt}
-                  </p>
-                )}
-                <Link
-                  href={featuredGuide.href}
-                  className="mt-18 inline-flex min-h-[42px] items-center bg-parchment px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
-                >
-                  Read the guide
-                </Link>
+                <div className="mt-16 md:mt-20">
+                  <Link href={featuredGuide.href} className="group">
+                    <h2 className="max-w-[820px] font-display text-[40px] font-normal leading-[1.03] text-parchment group-hover:underline md:text-[62px] md:leading-[1]">
+                      {featuredGuide.title}
+                    </h2>
+                  </Link>
+                  {featuredGuide.excerpt && (
+                    <p className="mt-14 max-w-[720px] font-body text-[18px] leading-[1.55] text-parchment/74 md:text-[21px]">
+                      {featuredGuide.excerpt}
+                    </p>
+                  )}
+                  <Link
+                    href={featuredGuide.href}
+                    className="mt-18 inline-flex min-h-[42px] items-center bg-parchment px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
+                  >
+                    Read the guide
+                  </Link>
+                </div>
               </div>
             </article>
           )}
@@ -318,11 +334,23 @@ export default function HomePage() {
 
           <div className="divide-y divide-[#2E6171]/22">
             {supportingGuides.map((article) => (
-              <article key={article.href} className="grid gap-10 py-18 md:grid-cols-[0.25fr_0.75fr] md:gap-24 md:py-22">
-                <ArticleMeta publishedAt={article.publishedAt} readingMinutes={article.readingMinutes} />
+              <article key={article.href} className="grid gap-12 py-18 md:grid-cols-[132px_minmax(0,1fr)] md:gap-20 md:py-22">
+                {article.image && (
+                  <Link href={article.href} className="group block">
+                    <Image
+                      src={article.image.src}
+                      alt={article.image.alt}
+                      width={420}
+                      height={300}
+                      className="aspect-[16/10] w-full border border-[#2E6171]/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
+                      style={{ objectPosition: article.image.objectPosition }}
+                    />
+                  </Link>
+                )}
                 <div>
+                  <ArticleMeta publishedAt={article.publishedAt} readingMinutes={article.readingMinutes} />
                   <Link href={article.href} className="group">
-                    <h3 className="max-w-[760px] font-display text-[30px] font-normal leading-[1.08] text-[#0B2545] group-hover:underline md:text-[40px]">
+                    <h3 className="mt-8 max-w-[760px] font-display text-[29px] font-normal leading-[1.08] text-[#0B2545] group-hover:underline md:text-[38px]">
                       {article.title}
                     </h3>
                   </Link>
