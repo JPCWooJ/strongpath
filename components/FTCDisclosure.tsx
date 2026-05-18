@@ -2,8 +2,7 @@
 export function FTCDisclosure() {
   return (
     <p className="font-utility text-caption leading-caption text-inkwell/70">
-      Affiliate disclosure: as an Amazon Associate, StrongPath earns from qualifying purchases at no
-      additional cost to you.
+      As an Amazon Associate, StrongPath may earn from qualifying purchases.
     </p>
   )
 }

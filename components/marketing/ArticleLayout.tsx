@@ -14,6 +14,9 @@ const SARCOPENIA_HERO_IMAGE = {
   licenseUrl: 'https://www.pexels.com/license/',
 }
 
+const medicalDisclaimer =
+  'This content is for informational and educational purposes only. It does not constitute medical advice and is not a substitute for professional medical consultation. Always consult your physician before beginning any new exercise or supplement program.'
+
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
@@ -209,6 +212,16 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
   )
 }
 
+function MedicalDisclaimer() {
+  return (
+    <section className="mt-38 border-t border-[#2E6171]/32 pt-18">
+      <p className="font-utility text-[13px] leading-[1.5] text-[#5A6472]">
+        {medicalDisclaimer}
+      </p>
+    </section>
+  )
+}
+
 export function ArticleLayout({
   post,
   readingMinutes,
@@ -298,6 +311,7 @@ export function ArticleLayout({
               )}
               {enhanced && <EvidenceBox />}
               <EditorialSources post={post} />
+              <MedicalDisclaimer />
               <RelatedReading articles={relatedArticles} />
             </div>
           </div>

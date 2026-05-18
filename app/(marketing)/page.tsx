@@ -15,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
+const amazonDisclosure = 'As an Amazon Associate, StrongPath may earn from qualifying purchases.'
 
 const homepageExcerptOverrides: Record<string, string> = {
   'what-is-sarcopenia':
@@ -150,9 +151,14 @@ function CommerceLink({
 }) {
   if (href === 'amazon') {
     return (
-      <AmazonLink asin="1626344760" className={className}>
-        {action}
-      </AmazonLink>
+      <>
+        <p className="mt-12 font-utility text-[12px] leading-[1.4] text-[#1A1D24]/58">
+          {amazonDisclosure}
+        </p>
+        <AmazonLink asin="1626344760" className={className}>
+          {action}
+        </AmazonLink>
+      </>
     )
   }
 
@@ -210,6 +216,9 @@ export default function HomePage() {
                 </p>
                 <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72">
                   Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                </p>
+                <p className="mt-10 font-utility text-[12px] leading-[1.4] text-[#1A1D24]/58">
+                  {amazonDisclosure}
                 </p>
                 <AmazonLink
                   asin="1626344760"
