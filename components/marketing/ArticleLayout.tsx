@@ -93,6 +93,10 @@ function isResistanceTrainingArticle(post: Post) {
   return post.slug.current === 'resistance-training-older-adults'
 }
 
+function hasArticleVisual(post: Post) {
+  return isSarcopeniaArticle(post) || isResistanceTrainingArticle(post)
+}
+
 function getStarterEquipmentCtaIndex(body?: Post['body']) {
   if (!body) return -1
 
@@ -103,23 +107,27 @@ function getStarterEquipmentCtaIndex(body?: Post['body']) {
 
 function StarterEquipmentCta() {
   return (
-    <aside className="not-prose my-24 border border-[#2E6171]/30 bg-[#FAF8F5] px-16 py-16 md:my-30 md:px-20 md:py-18">
-      <h2 className="font-display text-[28px] font-normal leading-[1.12] text-[#0B2545] md:text-[32px]">
-        Starter equipment
-      </h2>
-      <p className="mt-9 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-        A few simple basics can make starting easier: resistance bands, a comfortable mat, and
-        manageable dumbbells.
-      </p>
-      <a
-        href="https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist"
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        className="mt-14 inline-flex min-h-[40px] items-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
-      >
-        Shop the list
-      </a>
-      <p className="mt-10 font-utility text-[12px] leading-[1.4] text-[#5A6472]">
+    <aside className="not-prose my-24 border border-[#2E6171]/32 bg-[#FAF8F5] p-16 md:my-30 md:p-20">
+      <div className="grid gap-14 md:grid-cols-[1fr_auto] md:items-center">
+        <div>
+          <h2 className="font-display text-[28px] font-normal leading-[1.12] text-[#0B2545] md:text-[32px]">
+            Starter equipment
+          </h2>
+          <p className="mt-9 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
+            A few simple basics can make starting easier: resistance bands, a comfortable mat, and
+            manageable dumbbells.
+          </p>
+        </div>
+        <a
+          href="https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist"
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          className="inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] md:min-w-[136px]"
+        >
+          Shop the list
+        </a>
+      </div>
+      <p className="mt-12 border-t border-[#2E6171]/20 pt-10 font-utility text-[12px] leading-[1.4] text-[#5A6472]">
         StrongPath may earn from qualifying Amazon purchases.
       </p>
     </aside>
@@ -260,6 +268,7 @@ export function ArticleLayout({
   const articleBody = getArticleBody(post)
   const renderedArticleBody = articleBody ?? []
   const enhanced = isSarcopeniaArticle(post)
+  const showArticleVisual = hasArticleVisual(post)
   const showStarterEquipmentCta = isResistanceTrainingArticle(post)
   const starterEquipmentCtaIndex = showStarterEquipmentCta
     ? getStarterEquipmentCtaIndex(renderedArticleBody)
@@ -305,7 +314,7 @@ export function ArticleLayout({
                 </div>
               )}
             </div>
-            {enhanced && (
+            {showArticleVisual && (
               <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-parchment md:mt-24">
                 <Image
                   src={SARCOPENIA_HERO_IMAGE.src}
