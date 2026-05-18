@@ -42,6 +42,54 @@ Resolve tradeoffs in order:
 7. Approved patterns before experiments.
 8. Ownership before parallel work.
 
+## Search Visibility Standard
+
+Google Search optimization is a required quality layer in the StrongPath publication and distribution workflow. It is not a separate governance lane.
+
+SEO exists to help Google discover, understand, and present StrongPath’s people-first content. It must never override editorial quality, brand trust, evidence standards, or reader usefulness.
+
+Search-targeted content must:
+
+- serve a defined StrongPath audience: Margaret, David, or a future founder-approved audience
+- satisfy the reader’s actual intent
+- provide non-commodity value, not thin summary content
+- demonstrate authority through sourcing, specificity, and StrongPath’s editorial point of view
+- preserve the brand voice: serious, direct, hopeful
+- support the reader’s next action without creating an aggressive funnel
+
+Health and YMYL-sensitive content requires:
+
+- current third-party sourcing
+- conservative claim language
+- medical disclaimer where applicable
+- clear distinction between education and medical advice
+- no unsupported treatment, cure, prevention, reversal, or guarantee claims
+
+Before publishing, search-relevant pages must confirm:
+
+- crawlable URL
+- crawlable internal links
+- unique title
+- useful meta description
+- canonical URL
+- no accidental noindex
+- sitemap inclusion for strategic pages
+- visible DOM text for key content
+- mobile-readable page experience
+- no broken primary CTA or core internal links
+
+Prohibited:
+
+- keyword stuffing
+- doorway pages
+- shadow domains
+- deceptive redirects
+- link schemes
+- inauthentic mentions
+- fake freshness/date changes
+- scaled AI content without unique value
+- pages created primarily to rank rather than serve readers
+
 ## 3. Owners
 
 Editorial Systems Agent:

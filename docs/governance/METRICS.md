@@ -50,6 +50,15 @@ Track:
 - top landing pages
 - top acquisition sources
 
+Google Search:
+
+- organic impressions
+- organic clicks
+- organic CTR
+- indexed pages / indexing errors
+- top organic landing pages
+- high-impression / low-CTR pages
+
 ### Email
 
 Track:
