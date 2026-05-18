@@ -11,7 +11,7 @@ export const revalidate = 60
 export const metadata = buildMetadata({
   title: 'StrongPath Articles',
   description:
-    'Practical articles on muscle loss, lifting, protein, recovery, and helping aging parents have more good days.',
+    'Practical articles on muscle loss, lifting, protein, recovery, and helping aging parents keep more of the days they value.',
   path: '/blog',
 })
 
@@ -32,8 +32,8 @@ export default async function BlogPage() {
             </h1>
           </div>
           <p className="max-w-[660px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/78 md:text-[21px]">
-            Clear guidance on sarcopenia, lifting, protein, recovery, and helping a parent keep
-            more good days without fear or pressure.
+            Clear guidance for adults who want to stay capable, families helping out of love, and
+            clinicians who need patient-facing resources that stay practical and careful.
           </p>
         </div>
       </section>

@@ -91,9 +91,9 @@ function isSarcopeniaArticle(post: Post) {
 
 function KeyTakeaways() {
   const takeaways = [
-    'Sarcopenia is about strength, muscle, and function, not appearance alone.',
-    'Early signs often show up in stairs, chairs, luggage, walking speed, grip, and recovery.',
-    'The next step is usually simple: the right lifting, enough protein, recovery, and a safe place to begin.',
+    'Sarcopenia is about the strength and function that keep daily life open, not appearance alone.',
+    'Early signs often show up when ordinary movements ask for more planning than they used to.',
+    'The next step is usually practical: the right lifting, enough protein, recovery, and a safe place to begin.',
   ]
 
   return (
@@ -118,8 +118,8 @@ function EvidenceBox() {
         Strength and function matter, not muscle size alone.
       </p>
       <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-        StrongPath starts with the book, then uses current third-party sources for the health
-        claims in each article.
+        StrongPath starts with the book, then uses current third-party sources so readers,
+        families, and clinicians can see what each claim rests on.
       </p>
     </section>
   )

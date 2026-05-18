@@ -126,13 +126,13 @@ const allFlagshipArticles: Post[] = [
     publishedAt: '2026-05-16T09:00:00.000Z',
     updatedAt: '2026-05-16T09:00:00.000Z',
     excerpt:
-      'Sarcopenia is the age-related muscle loss that can make chairs, stairs, jars, luggage, and recovery feel different.',
+      'Sarcopenia is the age-related muscle loss that can make ordinary life feel smaller before anyone has a name for it.',
     author: 'StrongPath Editorial',
     category: 'Muscle Loss',
     tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50', 'Resistance Training'],
     seoTitle: 'What Is Sarcopenia?',
     seoDescription:
-      'What sarcopenia means, why chairs and stairs can start to feel different, and what may help next.',
+      'What sarcopenia means, why ordinary movement can start to feel different, and what may help next.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -163,17 +163,17 @@ const allFlagshipArticles: Post[] = [
     ],
     body: [
       p(
-        'Sarcopenia is the age-related loss of muscle strength, muscle quantity, and physical function. In practice, it is one reason stairs, chairs, luggage, and recovery can start to feel different after midlife.'
+        'Sarcopenia is the age-related loss of muscle strength, muscle quantity, and physical function. In practice, it is one reason ordinary movement can start asking for more planning after midlife.'
       ),
       p('The word is clinical. The first signs are usually ordinary.'),
       p(
         'The suitcase is harder to lift into the overhead bin. A low chair takes more planning. A jar lid goes to someone else without much discussion.'
       ),
       p(
-        'Muscle is what lets you stand, climb, carry, recover, balance, travel, and keep your days under your own direction.'
+        'Muscle is what lets you stand, climb, carry, recover, balance, travel, and keep your days more under your own direction.'
       ),
       p(
-        'StrongPath begins here because sarcopenia names the problem more precisely than "getting older."'
+        'StrongPath begins here because sarcopenia names the problem more precisely than "getting older," and precision makes the next step less overwhelming.'
       ),
       h2('The short answer'),
       p('Sarcopenia is age-related muscle failure.'),
@@ -248,7 +248,7 @@ const allFlagshipArticles: Post[] = [
         'These signs do not prove sarcopenia. They are reasons to pay attention and, when appropriate, talk with a physician, physical therapist, or qualified clinician.'
       ),
       p(
-        'For families, tone matters. The goal is not to confront a parent with decline. It is to help them keep more good days in a way that respects dignity.'
+        'For families, tone matters. The goal is not to confront a parent with decline. It is to help someone you love keep more good days in a way that respects dignity.'
       ),
       h2('What causes sarcopenia?'),
       p('Sarcopenia has more than one cause. Age is part of it, but age is not the whole explanation.'),
@@ -361,13 +361,13 @@ const allFlagshipArticles: Post[] = [
     publishedAt: '2026-05-17T09:10:00.000Z',
     updatedAt: '2026-05-17T09:10:00.000Z',
     excerpt:
-      'A practical guide for adult children who want to help a parent keep more good days without pressure, fear, or taking over.',
+      'A practical guide for adult children who want to help a parent keep more good days without turning love into pressure.',
     author: 'StrongPath Editorial',
     category: 'Caregiving',
     tags: ['Caregiving', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
     seoTitle: 'How to Help Aging Parents Stay Strong',
     seoDescription:
-      'How adult children can help aging parents stay strong with dignity, goodwill, and a practical first step.',
+      'How adult children can help aging parents stay strong with dignity, goodwill, and one practical first step.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -396,7 +396,7 @@ const allFlagshipArticles: Post[] = [
       },
     ],
     body: articleMarkdown(`
-Helping an aging parent stay strong is not a persuasion project. It is a dignity project.
+Helping an aging parent stay strong is not a persuasion project. It is love made practical.
 
 The first signs are usually small. A parent carries less. The stairs take longer. A chair with arms becomes the preferred chair. Errands get bundled because leaving the house now costs more. None of this proves a diagnosis, but it can be a signal that strength, balance, confidence, or recovery has less margin than it used to.
 
@@ -408,7 +408,7 @@ Most parents do not want to be managed. They want to remain themselves. That mea
 
 Ask what feels harder lately. Ask what they miss doing. Ask what would make the next trip, holiday, walk, garden project, or visit easier. The real answers are often better than abstract health language.
 
-StrongPath uses the word sarcopenia because it names age-related loss of muscle strength, muscle quantity, and function. But the word is only useful if it leads to something human: standing more easily, climbing stairs with less hesitation, carrying groceries with more confidence, and recovering with more reserve.
+StrongPath uses the word sarcopenia because it names age-related loss of muscle strength, muscle quantity, and function. But the word is only useful if it leads to something human: standing more easily, leaving the house with less hesitation, carrying groceries with more confidence, and recovering with more reserve.
 
 If you need the plain-language foundation first, read [What Is Sarcopenia?](/blog/what-is-sarcopenia).
 
@@ -434,7 +434,7 @@ Start with one concrete step that respects autonomy.
 
 That could be asking their clinician about strength and balance. It could be a physical therapy evaluation after a fall or a major change in function. It could be two supervised strength sessions a week. It could be walking plus simple sit-to-stand practice if that is the safe starting point.
 
-The right first step depends on the parent. The principle is steady: make the path visible, specific, and manageable.
+The right first step depends on the parent. The principle is steady: make the path visible, specific, and small enough to respect the person taking it.
 
 ## Why strength belongs in the conversation
 
@@ -506,7 +506,7 @@ This article is educational and is not medical advice. If your parent has a medi
     publishedAt: '2026-05-17T09:20:00.000Z',
     updatedAt: '2026-05-17T09:20:00.000Z',
     excerpt:
-      'Resistance training helps train the strength behind chairs, stairs, balance, carrying, travel, and recovery.',
+      'Resistance training helps train the strength behind the ordinary freedoms people want to keep.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Resistance Training', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
@@ -546,7 +546,7 @@ Resistance training is a simple idea that has been made to feel more complicated
 
 It means training muscles against resistance: weights, machines, bands, body weight, cables, or carefully chosen household movements. The method can vary. The principle is the same: muscles adapt when they are asked to produce force, recover, and then meet a slightly better-matched challenge over time.
 
-For older adults, that is not vanity. It is part of staying capable.
+For older adults, that is not vanity. It is part of staying capable for the life still in front of them.
 
 ## Why resistance training matters after 50
 
@@ -606,7 +606,7 @@ Before beginning, ask:
 - What can be repeated twice a week for the next month?
 - How will progress be measured without turning the plan into pressure?
 
-The answers keep the plan grounded.
+The answers keep the plan grounded in the body and the life in front of you.
 
 ## A reasonable beginner rhythm
 
@@ -640,7 +640,7 @@ This article is educational and is not medical advice. If you have a medical con
     publishedAt: '2026-05-17T09:30:00.000Z',
     updatedAt: '2026-05-17T09:30:00.000Z',
     excerpt:
-      'Protein is not a magic fix. It is one of the basic inputs older bodies need for muscle, especially alongside resistance training.',
+      'Protein is not a magic fix. It is one practical input that helps the body respond when strength work becomes part of the plan.',
     author: 'StrongPath Editorial',
     category: 'Nutrition',
     tags: ['Protein', 'Nutrition', 'Sarcopenia', 'Strength After 50'],
@@ -755,7 +755,7 @@ This article is educational and is not medical advice. If you have kidney diseas
     publishedAt: '2026-05-17T09:40:00.000Z',
     updatedAt: '2026-05-17T09:40:00.000Z',
     excerpt:
-      'Starting strength training at 60 is not about becoming someone else. It is about making the first month safe, repeatable, and useful.',
+      'Starting strength training at 60 is not about becoming someone else. It is about making the first month safe, repeatable, and worth coming back to.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Lifting Weights', 'Strength After 50', 'Resistance Training', 'Healthy Aging'],
@@ -795,7 +795,7 @@ Starting to lift weights at 60 is not a personality change. It is a practical de
 
 You do not need to become a gym person. You do not need to chase youth. You do not need to punish your body for getting older. You need a safe first step, a few useful movements, enough consistency to learn, and a plan that can progress without rushing.
 
-The goal is usable strength: chairs, stairs, bags, balance, travel, and recovery.
+The goal is usable strength: the kind that makes chairs, stairs, bags, balance, travel, and recovery feel less costly.
 
 ## First, define the starting point
 

@@ -13,8 +13,8 @@ export function SiteHeader() {
     <header className="border-b border-inkwell/60 bg-parchment">
       <div className="sp-container border-b border-inkwell/18 py-4">
         <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-inkwell/58">
-          <p>Strength for ordinary life after 50</p>
-          <p>For adults, families, and clinicians</p>
+          <p>Strength for the life people still want after 50</p>
+          <p>For adults, families, and clinicians who need practical resources</p>
         </div>
       </div>
       <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
@@ -30,7 +30,7 @@ export function SiteHeader() {
             StrongPath
           </Link>
           <p className="mt-6 max-w-[580px] border-t border-inkwell/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-inkwell/82">
-            Stairs, groceries, travel, family, and staying capable
+            Stay strong enough for ordinary freedom
           </p>
         </div>
 

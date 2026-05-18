@@ -23,7 +23,7 @@ export const siteMetadata = {
   name: 'StrongPath',
   title: 'StrongPath - Strength for life after 50',
   description:
-    'Practical strength guidance for adults and families facing age-related muscle loss.',
+    'Practical strength guidance for adults and families who want to stay capable for the life they care about.',
   url: resolveSiteUrl(),
   locale: 'en_US',
   language: 'en-us',

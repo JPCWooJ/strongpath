@@ -7,7 +7,7 @@ import { buildMetadata } from '@/lib/seo'
 export const metadata: Metadata = buildMetadata({
   title: 'Choosing the StrongPath',
   description:
-    'The book behind StrongPath, and the current articles that carry its strength work forward.',
+    'The book behind StrongPath, and the current articles that carry its practical strength work into daily life.',
   path: '/book',
 })
 
@@ -16,17 +16,17 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 const readingPath = [
   {
     title: 'What Is Sarcopenia?',
-    copy: 'Start with the change many people notice before they have a name for it: chairs, stairs, grip, balance, and slower recovery.',
+    copy: 'Start with the change many people notice before they have a name for it: the day asks for more, and the body has less margin.',
     href: '/blog/what-is-sarcopenia',
   },
   {
     title: 'Resistance Training for Older Adults',
-    copy: 'See how lifting supports the ordinary movements people want to keep: standing, carrying, climbing, and traveling.',
+    copy: 'See how lifting supports the ordinary movements people want to keep: standing, carrying, climbing, traveling, and staying in the room.',
     href: '/blog/resistance-training-older-adults',
   },
   {
     title: 'How to Help Aging Parents Stay Strong',
-    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the talk harder.',
+    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the conversation smaller.',
     href: '/blog/help-aging-parents-stay-strong',
   },
 ]
@@ -45,8 +45,9 @@ export default function BookPage() {
               Reversing the Downward Spiral of Aging
             </p>
             <p className="mt-18 max-w-[690px] font-body text-[18px] leading-[1.58] text-[#1A1D24]/78 md:text-[21px]">
-              StrongPath carries the book&apos;s work forward with current articles on muscle loss,
-              strength, recovery, protein, and staying capable after 50.
+              StrongPath carries the book&apos;s work forward for readers who want to stay strong
+              enough for ordinary freedom: getting up, carrying what matters, traveling, recovering,
+              and staying involved in the lives they care about.
             </p>
             <p className="mt-14 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/58">
               by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD
@@ -93,8 +94,9 @@ export default function BookPage() {
           <div className="max-w-[720px] space-y-14 font-body text-[18px] leading-[1.62] text-[#1A1D24]/80">
             <p>
               The book gives StrongPath its starting point: muscle loss matters, strength can be
-              trained, and useful guidance should stay close to real life: stairs, bags, chairs,
-              travel, family, and good days.
+              trained, and useful guidance should stay close to the life people are trying to keep.
+              Stairs, bags, chairs, travel, family, and good days are not examples. They are the
+              point.
             </p>
             <p>
               StrongPath articles use current third-party sources for specific health claims. The

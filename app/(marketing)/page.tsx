@@ -10,7 +10,7 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = buildMetadata({
   title: 'StrongPath - Strength for life after 50',
   description:
-    'Practical help for adults and families who want strength for stairs, travel, recovery, and the people they love.',
+    'Practical help for adults and families who want to stay strong enough for the life and people they care about.',
   path: '/',
 })
 
@@ -18,28 +18,28 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 
 const homepageExcerptOverrides: Record<string, string> = {
   'what-is-sarcopenia':
-    'Muscle loss often shows up first in ordinary places: chairs, stairs, jars, luggage, and slower recovery.',
+    'Muscle loss often shows up first as a smaller life: chairs take more thought, stairs ask for more, recovery takes longer.',
   'help-aging-parents-stay-strong':
-    'How to help a parent have more good days without making them feel managed, pressured, or diminished.',
+    'How to help a parent keep more good days without making love feel like management.',
   'resistance-training-older-adults':
-    'What lifting means when the goal is standing up, carrying groceries, walking farther, and recovering better.',
+    'What lifting means when the goal is carrying what needs carrying, getting up with confidence, and staying in the day.',
   'protein-for-older-adults':
-    'How protein fits into strength and recovery without turning food into a sales pitch.',
+    'How protein supports strength and recovery without turning meals into pressure or supplements into a promise.',
   'how-to-start-lifting-weights-at-60':
-    'A practical first-month frame for lifting at 60 with the right challenge, recovery, and common sense.',
+    'A first-month frame for lifting at 60 that feels specific, calm, and possible enough to repeat.',
 }
 
 const articleUseCases: Record<string, string> = {
   'what-is-sarcopenia':
-    'For the moment when stairs, chairs, luggage, or recovery start to feel different.',
+    'For the moment when ordinary movement starts asking for more of you.',
   'help-aging-parents-stay-strong':
-    'For adult children who want to help without making a parent feel managed.',
+    'For adult children trying to be useful because they love someone, not because they want control.',
   'resistance-training-older-adults':
-    'For anyone walking more but still noticing strength, balance, or recovery changing.',
+    'For readers who are active, but still feel strength, balance, or recovery changing.',
   'protein-for-older-adults':
     'For readers trying to connect food, training, and muscle without supplement hype.',
   'how-to-start-lifting-weights-at-60':
-    'For the first week when lifting needs to feel specific, safe, and possible.',
+    'For the first week when lifting needs to feel clear enough to begin.',
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
@@ -57,19 +57,19 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 const startingPoints = [
   {
     title: "I'm noticing weakness",
-    copy: 'Stairs feel longer. Groceries feel heavier. Getting up from a low chair takes more thought than it used to.',
+    copy: 'The change may be quiet at first: a longer pause before stairs, a heavier bag, a low chair that asks for a plan.',
     href: '/blog/what-is-sarcopenia',
     action: 'Start with sarcopenia',
   },
   {
     title: 'I want to help a parent',
-    copy: 'A parent is walking less, recovering more slowly, or quietly skipping things they used to enjoy.',
+    copy: 'You are noticing a parent quietly skipping things they used to enjoy, and you want to help without taking over.',
     href: '/blog/help-aging-parents-stay-strong',
     action: 'Read the caregiver guide',
   },
   {
     title: 'I want to know what helps',
-    copy: 'Walking, protein, lifting, recovery: the hard part is knowing what matters first.',
+    copy: 'Walking, lifting, protein, recovery: the hard part is knowing what matters first and what can wait.',
     href: '/blog/resistance-training-older-adults',
     action: 'Read the lifting guide',
   },
@@ -78,19 +78,19 @@ const startingPoints = [
 const nextSteps = [
   {
     title: 'Start with the book',
-    copy: 'Use the book to understand why strength matters for travel, family, work, and ordinary freedom.',
+    copy: 'Use the book to understand why strength matters for the trips, family days, work, and ordinary freedom people want to keep.',
     action: 'Buy on Amazon',
     href: 'amazon',
   },
   {
     title: 'Read the sarcopenia guide',
-    copy: 'See why the first signs matter before stairs, balance, recovery, or confidence narrow further.',
+    copy: 'See why the first signs matter while there is still room to choose a better first step.',
     action: 'Read the guide',
     href: '/blog/what-is-sarcopenia',
   },
   {
     title: 'Get practical notes',
-    copy: 'Get notes on muscle loss, protein, recovery, and helping a parent begin without making it a fight.',
+    copy: 'Get notes on strength, protein, recovery, and helping a parent begin in a way that protects dignity.',
     action: 'Get practical notes',
     href: '/waitlist',
   },
@@ -99,15 +99,15 @@ const nextSteps = [
 const trustSignals = [
   {
     title: 'Book first',
-    copy: 'The book gives readers a serious place to start before StrongPath asks them to buy anything else.',
+    copy: 'The book gives readers a serious place to start before StrongPath asks them to believe anything else.',
   },
   {
     title: 'Careful sources',
-    copy: 'Health claims should be easy to check. Readers should not have to take them on faith.',
+    copy: 'Health claims should be easy to check, especially when a reader may bring this page to a physician, PT, or parent.',
   },
   {
     title: 'No big promises',
-    copy: 'No age-reversal promises. No fear. No claim stronger than the evidence supports.',
+    copy: 'No fear, no age-reversal promises, and no claim stronger than the evidence can carry.',
   },
 ]
 
@@ -173,8 +173,8 @@ export default function HomePage() {
               Stay strong for the life you still want to live.
             </h1>
             <p className="mt-16 max-w-[690px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/80 md:text-[22px]">
-              Stairs. Groceries. Chairs. Travel. Walks with family. StrongPath helps adults and
-              families understand what changes with age, what is worth doing, and how to begin.
+              StrongPath helps adults and families understand the strength changes that can make
+              ordinary life smaller, and the practical steps that can help keep more of it open.
             </p>
             <div className="mt-18 flex flex-col gap-10 sm:flex-row sm:items-center">
               <Link
@@ -409,8 +409,8 @@ export default function HomePage() {
               Get clearer about what helps.
             </h2>
             <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-parchment/74 md:text-[19px]">
-              Get notes on muscle loss, protein, recovery, equipment, supplements, and helping a
-              parent begin without making it a fight.
+              Get practical notes on strength, protein, recovery, equipment, supplements, and
+              helping a parent begin in a way that feels respectful.
             </p>
             <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
               <EmailForm source="homepage_publication_baseline" />

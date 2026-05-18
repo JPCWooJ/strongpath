@@ -3,7 +3,7 @@ import { EmailForm } from '../EmailForm'
 
 export const metadata: Metadata = {
   title: 'Join the Waitlist — StrongPath',
-  description: 'Get practical notes from StrongPath when they are ready.',
+  description: 'Get practical StrongPath notes for staying capable and helping people you love.',
   robots: { index: false, follow: false },
 }
 
@@ -12,8 +12,8 @@ export default function WaitlistPage() {
     <main className="max-w-xl mx-auto px-6 py-24 text-center">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Join the waitlist.</h1>
       <p className="text-lg text-gray-600 leading-relaxed mb-10">
-        Get practical notes on muscle loss, lifting, protein, recovery, and helping a parent begin
-        without pressure.
+        Get practical notes on strength, recovery, protein, and helping a parent begin in a way
+        that protects dignity and keeps the next step small enough to take.
       </p>
 
       <EmailForm source="waitlist" />
