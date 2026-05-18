@@ -101,28 +101,58 @@ function getStarterEquipmentCtaIndex(body?: Post['body']) {
   if (!body) return -1
 
   return body.findIndex((block) =>
-    getPlainBlockText(block).startsWith('A beginner session might include a chair-rise pattern')
+    getPlainBlockText(block).startsWith('For older adults, that is not vanity.')
   )
 }
 
+const starterEquipmentItems = ['Resistance bands', 'Exercise mat', 'Dumbbells']
+
 function StarterEquipmentCta() {
   return (
-    <aside className="not-prose my-24 border border-[#2E6171]/32 bg-[#FAF8F5] p-16 md:my-30 md:p-20">
-      <div className="grid gap-14 md:grid-cols-[1fr_auto] md:items-center">
+    <aside className="not-prose my-22 border border-[#2E6171]/32 bg-[#FAF8F5] p-16 md:my-28 md:p-20">
+      <div className="grid gap-16">
         <div>
-          <h2 className="font-display text-[28px] font-normal leading-[1.12] text-[#0B2545] md:text-[32px]">
-            Starter equipment
+          <h2 className="font-display text-[30px] font-normal leading-[1.1] text-[#0B2545] md:text-[36px]">
+            Start with the basics
           </h2>
-          <p className="mt-9 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-            A few simple basics can make starting easier: resistance bands, a comfortable mat, and
-            manageable dumbbells.
+          <p className="mt-9 max-w-[580px] font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
+            You do not need a full gym to begin. A few simple pieces of equipment are enough to
+            make strength training at home more practical.
           </p>
+        </div>
+        <div className="grid gap-8 sm:grid-cols-3">
+          {starterEquipmentItems.map((item, index) => (
+            <div key={item} className="border border-[#2E6171]/22 bg-parchment p-10">
+              <div className="flex h-64 items-center justify-center bg-[#dfe5dc]/55">
+                {index === 0 && (
+                  <div className="flex items-center gap-5">
+                    <span className="h-26 w-26 rounded-full border-[5px] border-[#2E6171]" />
+                    <span className="h-2 w-24 bg-[#2E6171]" />
+                    <span className="h-26 w-26 rounded-full border-[5px] border-[#2E6171]" />
+                  </div>
+                )}
+                {index === 1 && (
+                  <div className="h-32 w-72 rounded-[18px] border border-[#2E6171]/55 bg-[#2E6171]/22 shadow-[inset_0_0_0_5px_rgba(250,248,245,0.7)]" />
+                )}
+                {index === 2 && (
+                  <div className="flex items-center gap-4">
+                    <span className="h-32 w-18 bg-[#2E6171]" />
+                    <span className="h-5 w-38 bg-[#2E6171]" />
+                    <span className="h-32 w-18 bg-[#2E6171]" />
+                  </div>
+                )}
+              </div>
+              <p className="mt-8 text-center font-utility text-[13px] font-medium leading-[1.25] text-[#0B2545]">
+                {item}
+              </p>
+            </div>
+          ))}
         </div>
         <a
           href="https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist"
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] md:min-w-[136px]"
+          className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0B2545] px-18 py-12 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] sm:w-fit sm:min-w-[148px]"
         >
           Shop the list
         </a>
