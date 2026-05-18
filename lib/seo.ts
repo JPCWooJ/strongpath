@@ -34,6 +34,10 @@ export function buildMetadata({
   return {
     title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: url,
     },

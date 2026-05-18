@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { EmailForm } from '../EmailForm'
 
 export const metadata: Metadata = {
-  title: 'Join the Waitlist — StrongPath',
+  title: 'Join the Waitlist',
   description: 'Get practical notes from StrongPath when they are ready.',
-  robots: { index: false, follow: false },
+  robots: { index: false, follow: true },
 }
 
 export default function WaitlistPage() {

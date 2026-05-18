@@ -17,6 +17,17 @@ export function articleHref(post: Pick<Post, 'slug'>) {
   return `/blog/${post.slug.current}`
 }
 
+export function isPublicArticleSlug(slug?: string) {
+  if (!slug) return false
+
+  const normalizedSlug = slug.trim().toLowerCase()
+  return !normalizedSlug.startsWith('test-') && !normalizedSlug.includes('delete-me')
+}
+
+export function isPublicArticle(post: Pick<Post, 'slug'>) {
+  return isPublicArticleSlug(post.slug.current)
+}
+
 export function normalizeTag(tag: string) {
   return tag
     .trim()

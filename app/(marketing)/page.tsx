@@ -8,7 +8,7 @@ import { buildMetadata } from '@/lib/seo'
 import { EmailForm } from './EmailForm'
 
 export const metadata: Metadata = buildMetadata({
-  title: 'StrongPath - Strength for life after 50',
+  title: 'Strength for life after 50',
   description:
     'Practical help for adults and families who want strength for stairs, travel, recovery, and the people they love.',
   path: '/',
@@ -116,7 +116,7 @@ const topics = [
   ['Strength After 50', '/blog/tags/strength-after-50'],
   ['Resistance Training', '/blog/tags/resistance-training'],
   ['Healthy Aging', '/blog/tags/healthy-aging'],
-  ['Caregiving', '/waitlist'],
+  ['Caregiving', '/blog/tags/caregiving'],
 ]
 
 function ArticleMeta({

@@ -31,7 +31,7 @@ export async function generateMetadata({
   const label = displayTag(params.tag)
 
   return buildMetadata({
-    title: `${label} Articles - StrongPath`,
+    title: `${label} Articles`,
     description: `StrongPath articles tagged ${label}.`,
     path: `/blog/tags/${params.tag}`,
   })
