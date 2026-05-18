@@ -126,13 +126,13 @@ const allFlagshipArticles: Post[] = [
     publishedAt: '2026-05-16T09:00:00.000Z',
     updatedAt: '2026-05-16T09:00:00.000Z',
     excerpt:
-      'Sarcopenia is age-related loss of muscle strength, muscle quantity, and physical function. Here is what it means, why it matters, and what can help.',
+      'Sarcopenia is the age-related muscle loss that can make chairs, stairs, jars, luggage, and recovery feel different.',
     author: 'StrongPath Editorial',
     category: 'Muscle Loss',
     tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50', 'Resistance Training'],
     seoTitle: 'What Is Sarcopenia?',
     seoDescription:
-      'Sarcopenia is age-related loss of muscle strength, muscle quantity, and physical function. Here is what it means, why it matters, and what can help.',
+      'What sarcopenia means, why ordinary tasks can start to feel different, and what research supports next.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -258,7 +258,7 @@ const allFlagshipArticles: Post[] = [
       p(
         'The simpler version is this: muscle adapts to what you ask of it. Ask less for long enough, and the body gives less back. Rebuild the demand carefully, and muscle and strength can respond.'
       ),
-      h2('The evidence-based next step'),
+      h2('The next practical step'),
       p(
         'The strongest practical answer to sarcopenia is not exotic: progressive resistance training, adequate protein, enough recovery, and a plan that starts at the right level.'
       ),
@@ -300,7 +300,7 @@ const allFlagshipArticles: Post[] = [
         "StrongPath's job is to keep that work current: cite the evidence directly, explain the mechanism plainly, and keep medical judgment where it belongs."
       ),
       p(
-        'The view is simple. Sarcopenia is measurable and consequential. It is not solved by vague wellness advice. It is not helped by panic. For many adults, strength can still be trained.'
+        'The view is simple. Sarcopenia is measurable and consequential. It is not solved by vague advice. It is not helped by panic. For many adults, strength can still be trained.'
       ),
       h2('Read next'),
       p(
@@ -361,13 +361,13 @@ const allFlagshipArticles: Post[] = [
     publishedAt: '2026-05-17T09:10:00.000Z',
     updatedAt: '2026-05-17T09:10:00.000Z',
     excerpt:
-      'A calm, practical guide for adult children who want to help a parent protect strength, confidence, and independence without pressure or fear.',
+      'A practical guide for adult children who want to help a parent stay strong without pressure, fear, or taking over.',
     author: 'StrongPath Editorial',
     category: 'Caregiving',
     tags: ['Caregiving', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
     seoTitle: 'How to Help Aging Parents Stay Strong',
     seoDescription:
-      'How adult children can help aging parents protect strength and independence with dignity, evidence, and a practical first step.',
+      'How adult children can help aging parents stay strong with dignity, goodwill, and a practical first step.',
     estimatedReadingMinutes: 8,
     sources: [
       {
@@ -486,7 +486,7 @@ The most useful family plan is usually simple:
 - support protein, sleep, and recovery
 - check whether confidence and daily function improve
 
-This is not about forcing a parent into a wellness identity. It is about preserving ordinary freedom.
+This is not about forcing a parent into a new identity. It is about preserving ordinary freedom.
 
 ## Read next
 
@@ -506,13 +506,13 @@ This article is educational and is not medical advice. If your parent has a medi
     publishedAt: '2026-05-17T09:20:00.000Z',
     updatedAt: '2026-05-17T09:20:00.000Z',
     excerpt:
-      'Resistance training is not bodybuilding advice for older adults. It is a practical way to train the strength that supports chairs, stairs, balance, recovery, and independence.',
+      'Resistance training is a practical way to train the strength behind chairs, stairs, balance, carrying, travel, and recovery.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Resistance Training', 'Strength After 50', 'Sarcopenia', 'Healthy Aging'],
     seoTitle: 'Resistance Training for Older Adults',
     seoDescription:
-      'What resistance training means for older adults, why it matters, how to start safely, and how to avoid unsupported claims.',
+      'What resistance training means after 50, why it matters for daily life, and how to think about starting safely.',
     estimatedReadingMinutes: 9,
     sources: [
       {
@@ -640,7 +640,7 @@ This article is educational and is not medical advice. If you have a medical con
     publishedAt: '2026-05-17T09:30:00.000Z',
     updatedAt: '2026-05-17T09:30:00.000Z',
     excerpt:
-      'Protein is not a magic fix for aging. It is one of the basic inputs older bodies need to maintain and rebuild muscle, especially alongside resistance training.',
+      'Protein is not a magic fix. It is one of the basic inputs older bodies need to maintain and rebuild muscle, especially alongside resistance training.',
     author: 'StrongPath Editorial',
     category: 'Nutrition',
     tags: ['Protein', 'Nutrition', 'Sarcopenia', 'Strength After 50'],
@@ -739,7 +739,7 @@ For the family conversation, read [How to Help Aging Parents Stay Strong](/blog/
 
 ## The StrongPath position
 
-Protein is not anti-aging magic. It will not replace strength training. It will not override illness, sleep, medication issues, or medical care.
+Protein is not magic. It will not replace strength training. It will not override illness, sleep, medication issues, or medical care.
 
 But low protein intake can make a strength plan harder to benefit from. For many older adults, improving protein quality, distribution, and consistency is a practical piece of protecting muscle and function.
 
@@ -755,7 +755,7 @@ This article is educational and is not medical advice. If you have kidney diseas
     publishedAt: '2026-05-17T09:40:00.000Z',
     updatedAt: '2026-05-17T09:40:00.000Z',
     excerpt:
-      'Starting strength training at 60 is not about becoming someone else. It is about building a careful, repeatable path back to usable strength.',
+      'Starting strength training at 60 is not about becoming someone else. It is about making the first month careful, repeatable, and useful.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Lifting Weights', 'Strength After 50', 'Resistance Training', 'Healthy Aging'],
@@ -864,7 +864,7 @@ The written note can be simple: exercises, weight or variation, repetitions, and
 
 ## What success feels like
 
-Success may not feel like transformation. It may feel like the same stairs with less negotiation. A bag carried with more confidence. A chair that no longer needs both hands. A trip that feels less physically expensive.
+Success may not feel dramatic. It may feel like the same stairs with less negotiation. A bag carried with more confidence. A chair that no longer needs both hands. A trip that feels less physically expensive.
 
 Those are not small wins. They are the point.
 
@@ -891,13 +891,13 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'why-muscle-loss-changes-everything-after-50' },
     publishedAt: '2026-05-06T09:00:00.000Z',
     excerpt:
-      'Age-related muscle loss is not a side issue. It changes capacity, confidence, recovery, and the ordinary freedoms people want to keep.',
+      'Age-related muscle loss can change stairs, balance, recovery, confidence, and the ordinary freedoms people want to keep.',
     author: 'StrongPath Editorial',
     category: 'Muscle Loss',
     tags: ['Sarcopenia', 'Muscle Loss', 'Strength After 50'],
     seoTitle: 'Why Muscle Loss Changes Everything After 50',
     seoDescription:
-      'Age-related muscle loss changes strength, balance, recovery, and independence. What adults over 50 should understand first.',
+      'Age-related muscle loss can change strength, balance, recovery, and daily life. What adults over 50 should understand first.',
     estimatedReadingMinutes: 8,
     body: [
       p(
@@ -995,7 +995,7 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'the-strength-crisis-nobody-talks-about' },
     publishedAt: '2026-05-06T09:10:00.000Z',
     excerpt:
-      'Older adults are often told to stay active, but the more precise problem is loss of strength. That is the crisis hiding in plain sight.',
+      'Older adults are often told to stay active, but the more precise problem is loss of strength for real life.',
     author: 'StrongPath Editorial',
     category: 'Strength Training',
     tags: ['Strength Training', 'Resistance Training', 'Healthy Aging'],
@@ -1069,7 +1069,7 @@ This article is educational and is not medical advice. If you have a medical con
       ),
       h2('What StrongPath will keep publishing'),
       p(
-        'StrongPath will keep building from this foundation: what sarcopenia is, why resistance training matters, how protein and recovery support adaptation, how to help aging parents begin, and how to evaluate claims without getting pulled into wellness noise.'
+        'StrongPath will keep building from this foundation: what sarcopenia is, why resistance training matters, how protein and recovery support adaptation, how to help aging parents begin, and how to evaluate claims without getting pulled into noise.'
       ),
       p(
         'The crisis is real. It is also workable. That combination is the reason to take strength seriously now.'
@@ -1086,17 +1086,17 @@ This article is educational and is not medical advice. If you have a medical con
     slug: { current: 'what-actually-predicts-healthy-aging' },
     publishedAt: '2026-05-06T09:20:00.000Z',
     excerpt:
-      'Healthy aging is not best understood through vague aspiration. Physical function, gait speed, grip strength, and capacity tell a more useful story.',
+      'Aging well is easier to understand through physical function: gait speed, grip strength, getting up, carrying, and balance.',
     author: 'StrongPath Editorial',
     category: 'Research',
     tags: ['Healthy Aging', 'Gait Speed', 'Grip Strength', 'Research'],
     seoTitle: 'What Actually Predicts Healthy Aging?',
     seoDescription:
-      'Gait speed, grip strength, muscle, and function are practical predictors of healthy aging. Here is why they matter.',
+      'Gait speed, grip strength, muscle, and function are practical signals for later life. Here is why they matter.',
     estimatedReadingMinutes: 9,
     body: [
       p(
-        'Healthy aging is often described in vague language. Vitality. Longevity. Staying young. Aging well. The words are familiar, but they do not help much when a person is deciding what to do on Tuesday morning.'
+        'Aging well is often described in vague language. Vitality. Longevity. Staying young. The words are familiar, but they do not help much when a person is deciding what to do on Tuesday morning.'
       ),
       p(
         'A better question is more concrete: what predicts whether a person can keep living with capacity? What signals tell us that the body still has margin?'
@@ -1156,14 +1156,14 @@ This article is educational and is not medical advice. If you have a medical con
         'If you are noticing decline, start by naming the right problem. Not "I am getting old." Not "this is just what happens." A more useful frame is: "I may be losing strength, and strength can be trained."'
       ),
       p(
-        'If you are helping a parent, the same frame applies with extra care. The goal is not to confront them with decline. The goal is to protect capacity and good days in a way that respects their dignity.'
+        'If you are helping a parent, the same frame applies with extra care. The goal is not to confront them with decline. The goal is to support good days in a way that respects their dignity.'
       ),
       p(
         'If you are a clinician evaluating StrongPath, the standard is citation discipline. Claims should connect to current research and named sources. Where the evidence is uncertain, the language should say so.'
       ),
-      h2('A better definition of healthy aging'),
+      h2('A more useful definition of later life'),
       p(
-        'Healthy aging is not a promise to avoid illness or stay unchanged. It is the work of preserving as much usable life as possible: movement, confidence, recovery, participation, and independence.'
+        'Aging well is not a promise to avoid illness or stay unchanged. It is the work of preserving as much usable life as possible: movement, confidence, recovery, participation, and independence.'
       ),
       p(
         'That is why StrongPath focuses on strength. It is not the whole answer. It is one of the most practical places to begin.'

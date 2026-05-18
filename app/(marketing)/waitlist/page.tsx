@@ -12,8 +12,8 @@ export default function WaitlistPage() {
     <main className="max-w-xl mx-auto px-6 py-24 text-center">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Join the waitlist.</h1>
       <p className="text-lg text-gray-600 leading-relaxed mb-10">
-        StrongPath is an evidence-based strength platform launching soon. Enter your email to be
-        notified first.
+        StrongPath is building practical guidance for staying strong after 50. Enter your email to
+        be notified first.
       </p>
 
       <EmailForm source="waitlist" />

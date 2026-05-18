@@ -21,9 +21,9 @@ function resolveSiteUrl() {
 
 export const siteMetadata = {
   name: 'StrongPath',
-  title: 'StrongPath - Evidence-based strength for adults 55+',
+  title: 'StrongPath - Strength for life after 50',
   description:
-    'Evidence-based strength guidance for adults and families facing age-related muscle loss.',
+    'Practical strength guidance for adults and families facing age-related muscle loss.',
   url: resolveSiteUrl(),
   locale: 'en_US',
   language: 'en-us',

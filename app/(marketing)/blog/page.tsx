@@ -11,7 +11,7 @@ export const revalidate = 60
 export const metadata = buildMetadata({
   title: 'StrongPath Articles',
   description:
-    'Evidence-based articles on age-related muscle loss, resistance training, protein, recovery, and helping aging parents stay strong.',
+    'Practical articles on muscle loss, strength training, protein, recovery, and helping aging parents stay capable.',
   path: '/blog',
 })
 
@@ -28,12 +28,12 @@ export default async function BlogPage() {
           <div>
             <p className="font-utility text-[13px] leading-none text-[#2E6171]">StrongPath articles</p>
             <h1 className="mt-12 font-display text-[46px] font-normal leading-[1.02] text-[#0B2545] md:text-[72px] md:leading-[0.98]">
-              Research made practical
+              Strength, explained for real life
             </h1>
           </div>
           <p className="max-w-[660px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/78 md:text-[21px]">
-            Clear, evidence-oriented guidance on sarcopenia, strength training, protein, recovery,
-            and helping aging parents protect capacity.
+            Clear guidance on sarcopenia, lifting, protein, recovery, and helping a parent stay
+            capable without fear or pressure.
           </p>
         </div>
       </section>

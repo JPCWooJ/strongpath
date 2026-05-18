@@ -16,17 +16,17 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 const readingPath = [
   {
     title: 'What Is Sarcopenia?',
-    copy: 'Start with the clinical problem StrongPath is built to make plain: age-related loss of muscle strength, muscle quantity, and function.',
+    copy: 'Start with the change many people notice before they have a name for it: chairs, stairs, grip, balance, and slower recovery.',
     href: '/blog/what-is-sarcopenia',
   },
   {
     title: 'Resistance Training for Older Adults',
-    copy: 'See why strength training is treated as health infrastructure, not as athletic identity or wellness decoration.',
+    copy: 'See how resistance training supports the ordinary movements people want to keep: standing, carrying, climbing, and traveling.',
     href: '/blog/resistance-training-older-adults',
   },
   {
     title: 'How to Help Aging Parents Stay Strong',
-    copy: 'Use the family guide when the real question is how to help without pressure, fear, or taking over.',
+    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the conversation harder.',
     href: '/blog/help-aging-parents-stay-strong',
   },
 ]
@@ -45,9 +45,8 @@ export default function BookPage() {
               Reversing the Downward Spiral of Aging
             </p>
             <p className="mt-18 max-w-[690px] font-body text-[18px] leading-[1.58] text-[#1A1D24]/78 md:text-[21px]">
-              StrongPath is built from the research foundation behind the book and extends it
-              through current, evidence-based publishing on muscle loss, strength, recovery,
-              protein, and the ordinary work of staying capable after 50.
+              StrongPath carries the book&apos;s work forward with current publishing on muscle loss,
+              strength, recovery, protein, and the ordinary work of staying capable after 50.
             </p>
             <p className="mt-14 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/58">
               by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD
@@ -94,7 +93,8 @@ export default function BookPage() {
           <div className="max-w-[720px] space-y-14 font-body text-[18px] leading-[1.62] text-[#1A1D24]/80">
             <p>
               The book gives StrongPath its founding frame: muscle loss is consequential, strength
-              can be trained, and aging guidance should stay practical enough to protect real life.
+              can be trained, and guidance should stay close to real life: stairs, bags, chairs,
+              travel, family, and the work of keeping good days possible.
             </p>
             <p>
               Current third-party research substantiates specific health claims in StrongPath
