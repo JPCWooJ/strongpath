@@ -89,6 +89,43 @@ function isSarcopeniaArticle(post: Post) {
   return post.slug.current === 'what-is-sarcopenia'
 }
 
+function isResistanceTrainingArticle(post: Post) {
+  return post.slug.current === 'resistance-training-older-adults'
+}
+
+function getStarterEquipmentCtaIndex(body?: Post['body']) {
+  if (!body) return -1
+
+  return body.findIndex((block) =>
+    getPlainBlockText(block).startsWith('A beginner session might include a chair-rise pattern')
+  )
+}
+
+function StarterEquipmentCta() {
+  return (
+    <aside className="not-prose my-24 border border-[#2E6171]/30 bg-[#FAF8F5] px-16 py-16 md:my-30 md:px-20 md:py-18">
+      <h2 className="font-display text-[28px] font-normal leading-[1.12] text-[#0B2545] md:text-[32px]">
+        Starter equipment
+      </h2>
+      <p className="mt-9 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
+        A few simple basics can make starting easier: resistance bands, a comfortable mat, and
+        manageable dumbbells.
+      </p>
+      <a
+        href="https://www.amazon.com/shop/stron02/list/3I5YGXSRXAGNC?ref_=aipsflist"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="mt-14 inline-flex min-h-[40px] items-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+      >
+        Shop the list
+      </a>
+      <p className="mt-10 font-utility text-[12px] leading-[1.4] text-[#5A6472]">
+        StrongPath may earn from qualifying Amazon purchases.
+      </p>
+    </aside>
+  )
+}
+
 function KeyTakeaways() {
   const takeaways = [
     'Sarcopenia is about strength, muscle, and function, not appearance alone.',
@@ -221,7 +258,18 @@ export function ArticleLayout({
   const publishedAt = formatArticleDate(post.publishedAt)
   const updatedAt = formatArticleDate(post.updatedAt)
   const articleBody = getArticleBody(post)
+  const renderedArticleBody = articleBody ?? []
   const enhanced = isSarcopeniaArticle(post)
+  const showStarterEquipmentCta = isResistanceTrainingArticle(post)
+  const starterEquipmentCtaIndex = showStarterEquipmentCta
+    ? getStarterEquipmentCtaIndex(renderedArticleBody)
+    : -1
+  const articleBodyBeforeCta =
+    starterEquipmentCtaIndex >= 0
+      ? renderedArticleBody.slice(0, starterEquipmentCtaIndex + 1)
+      : renderedArticleBody
+  const articleBodyAfterCta =
+    starterEquipmentCtaIndex >= 0 ? renderedArticleBody.slice(starterEquipmentCtaIndex + 1) : []
 
   return (
     <main className="bg-parchment">
@@ -289,7 +337,11 @@ export function ArticleLayout({
               {enhanced && <KeyTakeaways />}
               {articleBody ? (
                 <div className="prose prose-lg max-w-none font-body prose-headings:font-display prose-headings:font-normal prose-headings:text-[#0B2545] prose-h2:mb-3 prose-h2:mt-9 prose-h2:text-[29px] prose-h2:leading-[1.17] prose-h3:mt-7 prose-h3:text-[23px] prose-p:my-3 prose-p:text-[18px] prose-p:leading-[1.64] prose-p:text-[#1A1D24]/88 prose-a:text-[#0B2545] prose-a:decoration-[#B8860B] prose-a:underline-offset-4 prose-ul:my-4 prose-li:my-1 prose-li:text-[#1A1D24]/88 prose-strong:text-[#0B2545] md:prose-h2:mt-10 md:prose-h2:text-[33px] md:prose-h3:text-[27px] md:prose-p:text-[19px] md:prose-p:leading-[1.66]">
-                  <PortableText value={articleBody} components={portableTextComponents} />
+                  <PortableText value={articleBodyBeforeCta} components={portableTextComponents} />
+                  {starterEquipmentCtaIndex >= 0 && <StarterEquipmentCta />}
+                  {articleBodyAfterCta && articleBodyAfterCta.length > 0 && (
+                    <PortableText value={articleBodyAfterCta} components={portableTextComponents} />
+                  )}
                 </div>
               ) : (
                 <p className="font-body text-[18px] leading-[1.68] text-[#1A1D24]/85">
