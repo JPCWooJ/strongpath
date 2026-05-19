@@ -66,49 +66,49 @@ const startingPoints = [
     title: 'I want to help a parent',
     copy: 'When you love someone, you notice what they stop doing. StrongPath helps you support them without pressure or fear.',
     href: '/blog/help-aging-parents-stay-strong',
-    action: 'Read the caregiver guide',
+    action: 'Read the article',
   },
   {
     title: 'I want to know what helps',
     copy: 'Walking matters. Protein matters. Lifting matters. The hard part is knowing what to do first.',
     href: '/blog/resistance-training-older-adults',
-    action: 'Read the lifting guide',
+    action: 'Read the article',
   },
 ]
 
 const nextSteps = [
   {
-    title: 'Start with the book',
-    copy: 'Use the book to understand why strength matters for travel, family, independence, and the days you love.',
-    action: 'Buy on Amazon',
+    title: 'If you want the full story',
+    copy: 'Start with the book that gave StrongPath its name and its foundation.',
+    action: 'View the book',
     href: 'amazon',
   },
   {
-    title: 'Read the sarcopenia guide',
-    copy: 'See why the first signs matter before stairs, balance, recovery, or confidence narrow further.',
-    action: 'Read the guide',
+    title: 'If your body feels different',
+    copy: 'Read the article on sarcopenia and why strength, muscle, and function change with age.',
+    action: 'Read the article',
     href: '/blog/what-is-sarcopenia',
   },
   {
-    title: 'Get practical notes',
-    copy: 'Get notes on muscle loss, protein, recovery, and helping a parent begin without making it a fight.',
-    action: 'Get practical notes',
+    title: 'If you want help staying on the path',
+    copy: 'Get practical notes on strength, protein, recovery, and helping a parent begin.',
+    action: 'Get the notes',
     href: '/waitlist',
   },
 ]
 
 const trustSignals = [
   {
-    title: 'Book first',
-    copy: 'The book gives readers a serious place to start before StrongPath asks them to buy anything else.',
+    title: 'The book started the path',
+    copy: 'Choosing the StrongPath helped name the problem: muscle loss changes how people live. StrongPath carries that work forward for adults and families today.',
   },
   {
-    title: 'Careful sources',
-    copy: 'Health claims should be easy to check. Readers should not have to take them on faith.',
+    title: 'The work is practical',
+    copy: 'We focus on what people can actually use: strength training, protein, recovery, and small steps that support better days.',
   },
   {
-    title: 'No big promises',
-    copy: 'No age-reversal promises. No fear. No claim stronger than the evidence supports.',
+    title: 'Families need a way in',
+    copy: 'When a parent is getting weaker, pressure rarely helps. A clear article, a better conversation, and one small next step can.',
   },
 ]
 
@@ -183,7 +183,7 @@ export default function HomePage() {
                 href="/blog/what-is-sarcopenia"
                 className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f]"
               >
-                Read the sarcopenia guide
+                Read about sarcopenia
               </Link>
               <Link
                 href="/blog"
@@ -277,7 +277,7 @@ export default function HomePage() {
               )}
               <div className="md:pt-2">
                 <div>
-                  <p className="font-utility text-[13px] leading-none text-[#dfe5dc]">Featured guide</p>
+                  <p className="font-utility text-[13px] leading-none text-[#dfe5dc]">Featured article</p>
                   <div className="mt-12">
                     <ArticleMeta
                       publishedAt={featuredGuide.publishedAt}
@@ -306,7 +306,7 @@ export default function HomePage() {
                     href={featuredGuide.href}
                     className="mt-18 inline-flex min-h-[42px] items-center bg-parchment px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
                   >
-                    Read the guide
+                    Read the article
                   </Link>
                 </div>
               </div>
@@ -319,7 +319,7 @@ export default function HomePage() {
         <div className="sp-container py-30 md:py-42">
           <div className="flex flex-col justify-between gap-12 border-b border-[#2E6171]/28 pb-16 md:flex-row md:items-end">
             <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Latest guides</p>
+              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Latest articles</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
                 Read next
               </h2>
@@ -369,10 +369,10 @@ export default function HomePage() {
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container grid gap-20 py-30 md:py-42 lg:grid-cols-[0.38fr_0.62fr] lg:gap-34">
           <div>
-            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Why trust it</p>
-              <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-                Serious help does not need big promises.
-              </h2>
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Why StrongPath</p>
+            <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
+              Strength is how you keep more of your life.
+            </h2>
           </div>
           <div className="grid gap-12 md:grid-cols-3">
             {trustSignals.map((item) => (
@@ -393,9 +393,9 @@ export default function HomePage() {
         <div className="sp-container py-30 md:py-42">
           <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
             <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Recommended next steps</p>
+              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-                What to do next
+                Start where the need is clearest.
               </h2>
             </div>
             <div className="grid gap-12 md:grid-cols-3">
@@ -438,8 +438,8 @@ export default function HomePage() {
               Get clearer about what helps.
             </h2>
             <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-parchment/74 md:text-[19px]">
-              Get notes on muscle loss, protein, recovery, equipment, supplements, and helping a
-              parent begin without making it a fight.
+              Get practical notes on strength, protein, recovery, and helping a parent begin
+              without pressure.
             </p>
             <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
               <EmailForm source="homepage_publication_baseline" />

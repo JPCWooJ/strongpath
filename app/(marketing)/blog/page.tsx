@@ -11,7 +11,7 @@ export const revalidate = 60
 export const metadata = buildMetadata({
   title: 'StrongPath Articles',
   description:
-    'Clear articles on muscle loss, lifting, protein, recovery, and helping a parent stay strong and independent - written for people who want useful answers, not hype.',
+    'Clear articles on muscle loss, lifting, protein, recovery, and helping a parent stay strong and independent.',
   path: '/blog',
 })
 
@@ -33,7 +33,7 @@ export default async function BlogPage() {
           </div>
           <p className="max-w-[660px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/78 md:text-[21px]">
             Clear articles on muscle loss, lifting, protein, recovery, and helping a parent stay
-            strong and independent - written for people who want useful answers, not hype.
+            strong and independent.
           </p>
         </div>
       </section>

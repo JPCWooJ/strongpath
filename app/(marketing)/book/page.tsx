@@ -26,7 +26,7 @@ const readingPath = [
   },
   {
     title: 'How to Help Aging Parents Stay Strong',
-    copy: 'Use the family guide when love is the reason for the search, and pressure would only make the talk harder.',
+    copy: 'Read this when love is the reason for the search, and pressure would only make the talk harder.',
     href: '/blog/help-aging-parents-stay-strong',
   },
 ]
@@ -62,7 +62,7 @@ export default function BookPage() {
                 href="/blog/what-is-sarcopenia"
                 className="inline-flex min-h-[44px] items-center justify-center border border-[#2E6171]/45 px-18 py-11 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:border-[#0B2545]"
               >
-                Read the sarcopenia guide
+                Read about sarcopenia
               </Link>
             </div>
             <p className="mt-14 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/58">
@@ -97,9 +97,9 @@ export default function BookPage() {
               travel, family, and good days.
             </p>
             <p>
-              StrongPath articles use current third-party sources for specific health claims. The
-              book remains the beginning of the work, not a substitute for present-day evidence,
-              clinician judgment, or individualized care.
+              The articles keep that foundation close to daily life: how muscle loss shows up, how
+              strength work begins, how food and recovery fit in, and how families can help without
+              taking over.
             </p>
           </div>
         </div>

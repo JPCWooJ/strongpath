@@ -12,9 +12,9 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
-          <p className="font-display text-[22px] leading-none">Our standard</p>
+          <p className="font-display text-[22px] leading-none">For real life</p>
           <p className="mt-18 font-utility text-caption leading-caption text-inkwell/75">
-            Careful sources. Plain language. No big promises.
+            Strength training, protein, recovery, and family conversations made easier to begin.
           </p>
         </div>
         <div>

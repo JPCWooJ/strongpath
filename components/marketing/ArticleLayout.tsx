@@ -319,8 +319,8 @@ function EvidenceBox() {
         Strength and function matter, not muscle size alone.
       </p>
       <p className="mt-10 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
-        StrongPath starts with the book, then uses current third-party sources for the health
-        claims in each article.
+        The goal is practical strength: standing, climbing, carrying, recovering, and keeping more
+        good days in reach.
       </p>
     </section>
   )
