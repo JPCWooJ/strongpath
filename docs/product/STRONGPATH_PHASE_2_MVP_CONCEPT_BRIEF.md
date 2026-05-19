@@ -133,3 +133,45 @@ MVP 1 is web-first.
 3. UI/UX defines quiz/results flow.
 4. GTM defines launch test and email/Amazon conversion path.
 5. Codex builds MVP 1 prototype.
+## 15. MVP 1 Implementation Path
+Fastest path: add a web-first `/starter-plan` route inside the existing Next.js marketing app. Use static typed config, existing email capture, existing article routes, and existing Amazon affiliate link handling. No auth, database, dashboard, subscriptions, wearables, or external repo code.
+
+Reuse existing StrongPath code:
+- `app/(marketing)/layout.tsx`
+- `app/(marketing)/EmailForm.tsx`
+- `app/api/subscribe/route.ts`
+- `lib/email.ts`
+- `components/AmazonLink.tsx`
+- `lib/articles.ts`
+- `lib/flagship-articles.ts`
+
+Minimum typed config:
+- `PlanPath`: `myself | parent`
+- `IntakeAnswers`: path, age range, baseline, confidence, equipment, goal, safety flag
+- `StarterPlan`: level, summary, preview, sessions, articles, equipment, disclaimer
+
+Likely files:
+- `app/(marketing)/starter-plan/page.tsx`
+- `app/(marketing)/starter-plan/StarterPlanGenerator.tsx`
+- `app/(marketing)/starter-plan/starter-plan-config.ts`
+- `app/(marketing)/starter-plan/starter-plan-types.ts`
+
+Build sequence:
+1. Add typed config and recommendation rules.
+2. Add `/starter-plan` route.
+3. Build path selection and 5-7 question intake.
+4. Generate preview client-side.
+5. Capture email through existing `/api/subscribe` with source `starter-plan-generator`.
+6. Reveal full 2-week plan after capture.
+7. Render related articles and Amazon equipment links.
+8. Add safety/disclaimer routing.
+9. Run typecheck, lint, and build.
+
+Risks/blockers:
+- Editorial must approve exercise categories and plan language.
+- Amazon ASINs must be selected.
+- Deeper Klaviyo segmentation would require a small profile-property extension.
+- Parent-path copy must avoid surveillance/compliance framing.
+- External repos remain pattern references only.
+
+First Codex build task: build the `/starter-plan` MVP 1 prototype using static typed config, existing subscribe API, related article links, and `AmazonLink`.
