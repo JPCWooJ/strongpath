@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-const navItems = [
+const navItems: Array<{ href: string; label: string; primary?: boolean }> = [
   { href: '/', label: 'Home' },
   { href: '/blog', label: 'Articles' },
   { href: '/blog/tags/sarcopenia', label: 'Sarcopenia' },
   { href: '/blog/tags/resistance-training', label: 'Strength' },
-  { href: '/waitlist', label: 'Waitlist' },
+  { href: '/waitlist', label: 'Join StrongPath', primary: true },
 ]
 
 export function SiteHeader() {
@@ -42,7 +42,11 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="border-b border-transparent py-4 font-utility text-[14px] font-medium leading-none text-inkwell/78 transition-colors hover:border-inkwell/50 hover:text-inkwell focus-visible:border-inkwell"
+              className={
+                item.primary
+                  ? 'inline-flex min-h-10 items-center justify-center border border-inkwell bg-inkwell px-18 py-10 font-utility text-[14px] font-medium leading-none text-parchment transition-colors hover:bg-transparent hover:text-inkwell focus-visible:bg-transparent focus-visible:text-inkwell'
+                  : 'border-b border-transparent py-4 font-utility text-[14px] font-medium leading-none text-inkwell/78 transition-colors hover:border-inkwell/50 hover:text-inkwell focus-visible:border-inkwell'
+              }
             >
               {item.label}
             </Link>
