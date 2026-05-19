@@ -53,7 +53,7 @@ This is not facility-management software at MVP. Facilities and professionals ar
 
 ## 6. MVP 1 - StrongPath Starter Plan Generator
 
-The first MVP should be a lightweight educational protocol engine and personalized recommendation system for the aging adult or self-directed reader. It should remain an editorial-first experience with calm UX, conservative claims, and a clear education-not-care boundary.
+The first MVP should be a lightweight educational protocol engine and personalized recommendation system for adults across the StrongPath audience, including adults 75+ when recommendations are age-appropriate and conservative. It should remain an editorial-first experience with calm UX, conservative claims, and a clear education-not-care boundary.
 
 Core elements:
 
@@ -66,6 +66,8 @@ Core elements:
 - Amazon list integration for relevant equipment
 - safety/disclaimer logic that routes higher-risk users to consult a physician, physical therapist, or qualified professional before starting
 
+Higher-risk users should receive more conservative recommendations plus consult-a-physician-or-PT language. Age alone is not an exclusion criterion. Clinical/advisor review is not required before MVP 1, but all exercise content must pass StrongPath safety, brand, claim, and recommendation-language standards before use.
+
 MVP account strategy:
 
 - Phase 1: email capture, lightweight personalization, no heavy account system
@@ -77,7 +79,7 @@ Success test: users complete the quiz, accept the plan as credible, provide an e
 
 ## 7. MVP 2 - Caregiver Plan Generator
 
-The second MVP adapts the same recommendation engine for the adult child helping a parent.
+The second MVP adapts the same recommendation engine for the adult child helping a parent. Caregiver-generated plans may be emailed or shared as educational workout plans, with language that preserves the parent's dignity and avoids medical, diagnostic, or treatment framing.
 
 Core elements:
 
@@ -103,7 +105,7 @@ Core elements:
 - weekly Good Days Summary showing completed sessions and simple participation patterns
 - family/caregiver visibility for invited participants only
 
-The loop should feel warm, not surveillant. Visibility exists to make encouragement easier, not to police the aging adult.
+The loop should feel warm, not surveillant. Visibility exists for support, encouragement, shared progress, and more good days. It should not frame the adult child as monitoring, controlling, or enforcing compliance.
 
 Potential future integrations may leverage wearable/device telemetry, caregiver accountability workflows, and family adherence systems. These are strategically aligned but not MVP 1 requirements.
 
@@ -123,7 +125,7 @@ Future layers can be evaluated after manual demand is validated:
 
 **PRODUCT_CONCEPTS_BACKLOG.md:** Origin seed. Entry 1, "Family-Networked Accountability App," frames the core opportunity: family as the adherence mechanism, with AI assisting rather than replacing human encouragement.
 
-**Workout.cool:** Directional reference for selective lightweight fork/adaptation, not full fork/replatform. StrongPath should aggressively reuse exercise taxonomy, progression logic, movement database structures, onboarding/questionnaire flows, protocol assembly mechanics, and equipment mappings. StrongPath should not inherit heavy app architecture, generic exercise positioning, broad subscription complexity, unnecessary auth layers, or social/tracker behaviors.
+**Workout.cool:** Directional reference for selective lightweight fork/adaptation, not full fork/replatform. StrongPath should aggressively reuse exercise taxonomy, progression logic, movement database structures, onboarding/questionnaire flows, protocol assembly mechanics, and equipment mappings. StrongPath should not inherit heavy app architecture, generic exercise positioning, broad subscription complexity, unnecessary auth layers, or social/tracker behaviors. Workout.cool is a starting point, not authority; all exercise content must be filtered through StrongPath safety, brand, and claim standards.
 
 **GeriLife:** Directional reference for making invisible activity visible through shared notes, family/caregiver visibility, and multi-stakeholder views. The lesson is that care coordination often starts by showing what happened.
 
@@ -152,6 +154,13 @@ Future layers can be evaluated after manual demand is validated:
 - complex wearable integrations before manual demand validation
 - heavy account system before conversion validates
 - marketing internal AI orchestration as the product promise
+- rehab protocols
+- disease-specific plans
+- fall-prevention claims
+- post-surgery or post-fall recovery plans
+- high-risk balance drills
+- HIIT
+- heavy barbell or kettlebell work
 
 ## 13. Key Open Questions For Agents
 
@@ -168,6 +177,12 @@ Future layers can be evaluated after manual demand is validated:
 - What disclaimer and claim guardrails are required?
 - What generated-plan language is allowed?
 - How should recommendation framing align with BRAND.md guardrails?
+- What exercise safety taxonomy is required?
+- What recommendation-language rules govern plan outputs?
+- What quiz safety routing determines conservative recommendations?
+- What disclaimer blocks are required on quiz, plan, caregiver-share, and email surfaces?
+- What evidence map supports exercise categories and recommendation rules?
+- What plan-output template and caregiver share template are needed?
 
 **UI/UX:**
 
