@@ -5,7 +5,7 @@ const navItems: Array<{ href: string; label: string; primary?: boolean }> = [
   { href: '/blog', label: 'Articles' },
   { href: '/blog/tags/sarcopenia', label: 'Sarcopenia' },
   { href: '/blog/tags/resistance-training', label: 'Strength' },
-  { href: '/waitlist', label: 'Join StrongPath', primary: true },
+  { href: '/starter-plan', label: 'Join StrongPath', primary: true },
 ]
 
 export function SiteHeader() {
