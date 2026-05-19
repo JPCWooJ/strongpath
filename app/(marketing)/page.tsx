@@ -195,8 +195,10 @@ export default function HomePage() {
           </div>
 
           <aside className="border border-[#2E6171]/28 bg-parchment p-14 md:p-16">
-            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Amazon bestseller</p>
-            <div className="mt-12 grid grid-cols-[88px_1fr] gap-12 lg:grid-cols-1">
+            <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
+              Amazon bestseller
+            </p>
+            <div className="mt-12 grid grid-cols-[88px_minmax(0,1fr)] gap-12 lg:grid-cols-1">
               <Image
                 src={bookCoverUrl}
                 alt="Choosing the StrongPath book cover"
@@ -211,14 +213,17 @@ export default function HomePage() {
                   Choosing the StrongPath
                 </p>
                 <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72">
-                  Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+                  Bestseller in Aging, Weight Training, Exercise, and Longevity.
                 </p>
                 <AmazonLink
                   asin="1626344760"
-                  className="mt-12 inline-flex min-h-[40px] items-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                  className="mt-12 inline-flex min-h-[42px] w-full items-center justify-center bg-[#0B2545] px-14 py-10 font-body text-[15px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] sm:w-fit"
                 >
                   Buy on Amazon
                 </AmazonLink>
+                <p className="mt-8 font-utility text-[11px] leading-[1.35] text-[#5A6472]">
+                  StrongPath may earn from qualifying Amazon purchases.
+                </p>
               </div>
             </div>
           </aside>
