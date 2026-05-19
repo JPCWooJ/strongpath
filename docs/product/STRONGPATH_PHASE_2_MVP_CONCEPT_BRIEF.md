@@ -57,7 +57,7 @@ The first MVP should be a lightweight educational protocol engine and personaliz
 
 Core elements:
 
-- quiz/intake covering age range, starting baseline, confidence, equipment access, goals, and basic safety flags
+- quiz/intake covering age range, starting baseline, confidence, equipment access, goals, and basic safety flags, limited to 5-8 low-friction steps
 - 2-week starter plan with simple session structure
 - personalized recommendations matched to starting level
 - exercise recommendations framed as educational options, not prescriptions
@@ -67,6 +67,10 @@ Core elements:
 - safety/disclaimer logic that routes higher-risk users to consult a physician, physical therapist, or qualified professional before starting
 
 Higher-risk users should receive more conservative recommendations plus consult-a-physician-or-PT language. Age alone is not an exclusion criterion. Clinical/advisor review is not required before MVP 1, but all exercise content must pass StrongPath safety, brand, claim, and recommendation-language standards before use.
+
+The quiz flow should feel calm, educational, and useful from the first screen. It should not require an account before value is shown. Results should include a starting-level summary, conservative recommendation framing, a clear first step, educational-not-medical positioning, related guide/article pathways, and restrained commerce integration.
+
+Email capture should use a hybrid model: partial preview before capture, full plan after capture. The conversion logic is trust before conversion, not gating the entire experience before the reader understands the value.
 
 MVP account strategy:
 
@@ -91,6 +95,8 @@ Core elements:
 - optional email to parent with consent-aware language
 - caregiver follow-up sequence through Beehiiv or equivalent email infrastructure
 
+Caregiver UX should be encouragement-first. The parent should be described as the person in control of what is shared, and visibility should be framed as support, not surveillance, compliance, or control.
+
 Success test: adult children complete the flow, share the plan, and opt into follow-up because they believe the product helps them support a parent without creating pressure.
 
 ## 8. MVP 3 - Family Strength Loop
@@ -106,6 +112,8 @@ Core elements:
 - family/caregiver visibility for invited participants only
 
 The loop should feel warm, not surveillant. Visibility exists for support, encouragement, shared progress, and more good days. It should not frame the adult child as monitoring, controlling, or enforcing compliance.
+
+The Good Days Summary should be a simple weekly summary with a warm, supportive tone. It should not become a heavy dashboard, scorecard, or over-metricized performance report.
 
 Potential future integrations may leverage wearable/device telemetry, caregiver accountability workflows, and family adherence systems. These are strategically aligned but not MVP 1 requirements.
 
@@ -125,11 +133,11 @@ Future layers can be evaluated after manual demand is validated:
 
 **PRODUCT_CONCEPTS_BACKLOG.md:** Origin seed. Entry 1, "Family-Networked Accountability App," frames the core opportunity: family as the adherence mechanism, with AI assisting rather than replacing human encouragement.
 
-**Workout.cool:** Directional reference for selective lightweight fork/adaptation, not full fork/replatform. StrongPath should aggressively reuse exercise taxonomy, progression logic, movement database structures, onboarding/questionnaire flows, protocol assembly mechanics, and equipment mappings. StrongPath should not inherit heavy app architecture, generic exercise positioning, broad subscription complexity, unnecessary auth layers, or social/tracker behaviors. Workout.cool is a starting point, not authority; all exercise content must be filtered through StrongPath safety, brand, and claim standards.
+**Workout.cool:** Directional reference for selective lightweight fork/adaptation, not full fork/replatform. StrongPath should aggressively reuse exercise taxonomy, progression logic, movement database structures, onboarding/questionnaire flows, protocol assembly mechanics, and equipment mappings. StrongPath should not inherit heavy app architecture, generic exercise positioning, broad subscription complexity, unnecessary auth layers, or social/tracker behaviors. Workout.cool is a starting point, not authority; all exercise content must be filtered through StrongPath safety, brand, and claim standards. UI lesson: use lightweight onboarding and practical protocol generation without importing unnecessary product complexity.
 
-**GeriLife:** Directional reference for making invisible activity visible through shared notes, family/caregiver visibility, and multi-stakeholder views. The lesson is that care coordination often starts by showing what happened.
+**GeriLife:** Directional reference for making invisible activity visible through shared notes, family/caregiver visibility, and multi-stakeholder views. The lesson is that care coordination often starts by showing what happened. UI lesson: keep caregiving language supportive and dignity-preserving, not supervisory.
 
-**Awesome Wearables Health Monitoring:** Directional reference for future integration paths through Apple HealthKit, Google Fit, Samsung Health, Human API, existing wearables, activity tracking, recovery data, and private family reinforcement loops.
+**Awesome Wearables Health Monitoring:** Directional reference for future integration paths through Apple HealthKit, Google Fit, Samsung Health, Human API, existing wearables, activity tracking, recovery data, and private family reinforcement loops. UI lesson: wearable data may become useful later, but MVP value should not depend on device setup or telemetry.
 
 ## 11. What We Should Keep
 
@@ -153,6 +161,11 @@ Future layers can be evaluated after manual demand is validated:
 - expensive video library before validation
 - complex wearable integrations before manual demand validation
 - heavy account system before conversion validates
+- heavy auth
+- complex dashboards
+- notifications system
+- RPM-style monitoring
+- app dependency; MVP should be web-first
 - marketing internal AI orchestration as the product promise
 - rehab protocols
 - disease-specific plans
@@ -189,6 +202,9 @@ Future layers can be evaluated after manual demand is validated:
 - What is the simplest quiz/results flow?
 - How do we make family visibility feel warm, not surveillant?
 - What does the starter plan page look like?
+- What is the minimum useful partial preview before email capture?
+- What does parent-controlled visibility language look like?
+- How do we keep the Good Days Summary supportive without becoming dashboard-heavy?
 
 **GTM:**
 
