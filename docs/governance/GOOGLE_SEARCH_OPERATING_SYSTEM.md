@@ -8,12 +8,15 @@ SEO exists to make useful, reliable content discoverable, crawlable, understanda
 
 SEO does not replace content value.
 
+This standard follows Google Search source guidance. When SEO folklore conflicts with Google guidance, Google guidance wins.
+
 ## 1. Search Operating Thesis
 
 - Google visibility compounds when useful content is technically accessible and trusted by users.
 - Technical SEO supports discovery and understanding.
 - Content quality controls whether visibility is worth earning.
 - Search optimization starts after the page has a clear audience, intent, and useful answer.
+- Technical SEO creates eligibility; usefulness, trust, and intent satisfaction create performance.
 - No tactic outranks sustained usefulness, trust, and crawlable execution.
 
 ## 2. Crawl / Index / Serve Model
@@ -46,6 +49,7 @@ Publish only when:
 - title accurately describes the page
 - page is complete enough for the task
 - reader has a useful next step
+- page would still deserve to exist if Google sent it zero traffic
 
 Reject or revise when:
 
@@ -56,6 +60,13 @@ Reject or revise when:
 - reader would need to search again
 - page is mass-produced, thin, or generic
 - date is updated without substantive improvement
+- overlapping pages answer the same intent with minor keyword variations
+
+Title/snippet integrity:
+
+- titles and meta descriptions are promises to users
+- they must accurately represent the page
+- they must not overstate, tease, or clickbait
 
 ## 4. E-E-A-T / YMYL Gate
 
@@ -144,6 +155,7 @@ Rules:
 - use `robots.txt` to control crawling of low-value or state-changing URLs
 - use redirects for moved URLs
 - use canonicals for duplicate or similar URLs
+- consolidate, redirect, or clearly differentiate overlapping pages
 - do not rely on images, video, canvas, CSS content, or plugin-rendered text for key meaning
 
 ## 7. Search Feedback Loop
@@ -171,6 +183,7 @@ Decide:
 - noindex: page is useful operationally but not search-worthy
 - redirect: URL moved or a better canonical destination exists
 - hold: data is inconclusive or page is too new
+- do nothing / wait: proposed update would not improve reader usefulness
 
 Rules:
 
