@@ -10,8 +10,16 @@ This document translates public `xai-org/x-algorithm` mechanics into execution r
 
 - X visibility comes from retrieval eligibility, predicted user value, and low negative-feedback risk.
 - The system retrieves candidates, ranks them by predicted actions, filters unsafe/irrelevant items, and diversifies the feed.
+- Model: eligibility -> retrieval -> ranking -> feedback.
 - Relationship memory, topic consistency, and useful engagement compound distribution probability.
 - Reach without qualified engagement is weak signal.
+
+Operating model:
+
+- eligibility: content must survive filters and account-quality checks
+- retrieval: content must be selected from in-network or out-of-network sources
+- ranking: content is scored by predicted user actions
+- feedback: user actions train future retrieval and ranking
 
 ## 2. Retrieval
 
@@ -24,8 +32,9 @@ Sources:
 Rules:
 
 - earn in-network visibility through follower relevance and account consistency
-- earn out-of-network visibility through topic fit, engagement history, and credible network overlap
+- earn out-of-network visibility through topic fit, user similarity, interaction history, and credible network overlap
 - build repeated interaction with the audience you want retrieved against
+- repeated interactions from the right audience build future distribution probability
 - keep content understandable without prior account context
 
 ## 3. Ranking
@@ -58,6 +67,7 @@ Rules:
 
 - optimize for useful actions from the right audience
 - avoid actions likely to create mute, block, report, or not-interested feedback
+- negative feedback is more damaging than casual likes are helpful
 - treat profile clicks, dwell, replies, follows, and shares as stronger quality signals than casual likes
 
 ## 4. Filtering And Suppression
@@ -83,6 +93,13 @@ Rules:
 - avoid unsafe, spam-like, or policy-risk content
 - preserve account trust before reach
 
+Account-quality gate:
+
+- Does this strengthen the account's desired topic identity?
+- Is this useful without a click?
+- Could this attract the right audience?
+- Could this trigger low-quality engagement or negative feedback?
+
 ## 5. Diversity And Freshness
 
 The feed attenuates repeated author exposure and filters old or already-served candidates.
@@ -106,6 +123,7 @@ Rules:
 - place the link after context when possible
 - use links for deeper proof, source, product, or next step
 - avoid repetitive link-drop patterns
+- repeated link behavior can reduce account quality and user value even when single posts are acceptable
 
 ## 7. Reply Strategy
 
@@ -136,6 +154,12 @@ Rules:
 - cover the first 30-60 minutes after important posts
 - prioritize reply quality over posting quantity
 - do not fill quota with weak posts
+
+Decision rule:
+
+- post when the idea is strong enough to stand alone
+- reply when a credible conversation is the better distribution opportunity
+- wait when the post would be filler, repetitive, or likely to attract the wrong audience
 
 ## 9. Experiments
 
