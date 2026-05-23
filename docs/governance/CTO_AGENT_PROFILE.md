@@ -34,6 +34,7 @@ Supporting references:
 - `docs/decisions.md`
 - `agent-os/strongpath/operations/CODE_BACKLOG.md`
 - `.claude/rules/`
+- `spkarpathy-rules.md` for prompts, reports, markdown files, handoffs, workflow docs, and governance updates
 
 Non-CTO governance wins inside its lane:
 - `BRAND.md` and `DESIGN.md` for brand/design constraints

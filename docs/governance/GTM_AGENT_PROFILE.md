@@ -30,6 +30,7 @@ Read when relevant:
 - `METRICS.md`
 - `GTM_EXECUTION_PIPELINE.md`
 - `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+- `spkarpathy-rules.md`
 
 GitHub is canonical.
 

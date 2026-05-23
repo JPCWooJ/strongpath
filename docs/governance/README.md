@@ -39,6 +39,7 @@ Lane-specific governance includes brand, design, copy, personas, editorial, GTM,
 - `DESIGN.md`
 - `PERSONAS.md`
 - `PROJECT_INSTRUCTIONS.md`
+- `spkarpathy-rules.md`
 - `PUBLISHING_PLAN.md`
 - `EDITORIAL_WORKFLOW.md`
 - `EDITORIAL_STANDARDS.md`

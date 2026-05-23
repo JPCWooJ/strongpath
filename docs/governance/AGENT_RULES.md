@@ -180,6 +180,8 @@ Agents must:
 Reference:
 `CODEX_EXECUTION_STANDARD.md`
 
+Apply `spkarpathy-rules.md` when producing prompts, reports, markdown files, handoffs, workflow docs, or governance updates.
+
 ---
 
 # 7. Governance Authority

@@ -21,6 +21,7 @@ Use these with:
 - `docs/governance/DESIGN.md`
 - `docs/governance/PERSONAS.md`
 - `docs/governance/PUBLISHING_PLAN.md`
+- `docs/governance/spkarpathy-rules.md`
 
 GitHub is canonical. Read repo files first.
 

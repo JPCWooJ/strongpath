@@ -17,6 +17,7 @@ Follow only:
 - CODEX_EXECUTION_STANDARD.md
 - BRAND.md
 - DESIGN.md
+- spkarpathy-rules.md
 
 ---
 

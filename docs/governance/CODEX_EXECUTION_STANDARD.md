@@ -35,6 +35,8 @@ DELIVERABLE
 
 Keep the brief short. Remove anything that does not change implementation behavior.
 
+Apply `spkarpathy-rules.md` to prompts, reports, markdown files, handoffs, workflow docs, and governance updates.
+
 ## Scope Rules
 
 Good tasks are:

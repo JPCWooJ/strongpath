@@ -28,6 +28,7 @@ The Chief of Staff Agent must follow:
 - PERSONAS.md
 - PROJECT_INSTRUCTIONS.md
 - PUBLISHING_PLAN.md
+- spkarpathy-rules.md
 
 ---
 
