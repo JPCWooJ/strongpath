@@ -95,6 +95,16 @@ const launchArticleImages: Record<string, NonNullable<Post['heroImage']>> = {
     caption: 'A useful first month starts modestly: learn the movement, recover, and progress with care.',
     objectPosition: 'center 52%',
   },
+  'balance-and-mobility-after-50': {
+    src: '/images/articles/caregiver-walking.jpg',
+    alt: 'A younger woman walking beside an older woman on a city sidewalk',
+    credit: 'Photo by Sofia Marquet on Pexels',
+    sourceUrl:
+      'https://www.pexels.com/photo/woman-helping-elderly-woman-to-walk-on-sidewalk-18968358/',
+    licenseUrl: pexelsLicenseUrl,
+    caption: 'Balance and mobility matter most when they support ordinary movement.',
+    objectPosition: 'center 55%',
+  },
 }
 
 function partsFromMarkdown(text: string): BlockPart[] {
@@ -938,6 +948,131 @@ This article is educational and is not medical advice. If you have a medical con
 `),
   },
   {
+    _id: 'flagship-balance-and-mobility-after-50',
+    title: 'Balance and Mobility After 50',
+    slug: { current: 'balance-and-mobility-after-50' },
+    publishedAt: '2026-05-23T09:00:00.000Z',
+    updatedAt: '2026-05-23T09:00:00.000Z',
+    excerpt:
+      'Balance and mobility are part of daily strength: stairs, uneven ground, getting up and down, reaching, carrying, and recovering position.',
+    author: 'StrongPath Editorial',
+    category: 'Mobility',
+    tags: ['Balance', 'Mobility', 'Strength After 50', 'Healthy Aging'],
+    seoTitle: 'Balance and Mobility After 50',
+    seoDescription:
+      'Why balance and mobility after 50 support daily independence, ordinary movement, and conservative at-home practice.',
+    estimatedReadingMinutes: 7,
+    sources: [
+      {
+        title: 'Older Adult Activity: An Overview',
+        publication: 'CDC',
+        year: '2025',
+        href: 'https://www.cdc.gov/physical-activity-basics/guidelines/older-adults.html',
+      },
+      {
+        title: 'WHO guidelines on physical activity and sedentary behaviour',
+        publication: 'World Health Organization',
+        year: '2020',
+        href: 'https://www.who.int/publications/i/item/9789240015128',
+      },
+      {
+        title: 'Physical Activity Guidelines for Americans, 2nd edition',
+        publication: 'Office of Disease Prevention and Health Promotion',
+        year: '2025',
+        href: 'https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines',
+      },
+    ],
+    body: articleMarkdown(`
+Balance and mobility after 50 are not a side path from strength. They are how strength stays usable.
+
+The question is not whether someone can do a gym exercise in isolation. The question is whether strength shows up in daily life: stairs, uneven ground, getting up and down, reaching overhead, carrying a bag, changing direction, and recovering position when movement gets less predictable.
+
+That is the StrongPath frame. Balance and mobility are part of preserving daily capacity.
+
+## What balance and mobility mean
+
+Balance is the ability to control position. Mobility is the ability to move through useful ranges. Strength is the ability to produce force inside those ranges.
+
+They work together. A stronger leg helps on stairs, but the ankle, hip, foot, trunk, and nervous system still have to organize the movement. More mobility can make a position easier to reach, but it matters most when the body can control it.
+
+This is why balance work should not be treated as a novelty. It belongs next to [resistance training for older adults](/blog/resistance-training-older-adults), protein, recovery, and ordinary walking.
+
+## Why it matters after 50
+
+After 50, many people do not first notice a dramatic change. They notice a smaller margin.
+
+A curb asks for more attention. Getting off the floor takes more planning. A sloped driveway feels different. Reaching for something while holding a bag feels less automatic. A parent may still be independent, but the movement budget has narrowed.
+
+None of this means decline is fixed. It means the plan should train the parts of daily movement that are easiest to ignore.
+
+The CDC's older-adult activity guidance includes aerobic activity, muscle-strengthening activity, and balance activity. That matters because balance is not a substitute for strength, and strength is not a substitute for balance.
+
+## Start conservatively
+
+The first rule is simple: make practice stable enough to repeat.
+
+For many adults, that means starting near a counter, wall, sturdy chair, or rail. It means small ranges, slow control, and stopping before fatigue makes the movement sloppy. It means choosing exercises that feel specific, not intimidating.
+
+Useful starting categories:
+
+- supported stance work
+- sit-to-stand practice
+- step-up practice
+- gentle reaching
+- ankle and hip mobility
+- light carries
+- controlled floor-to-stand practice when appropriate
+
+The goal is not to prove anything. The goal is to rebuild movement options carefully.
+
+## Simple tools can help
+
+Tools do not create balance or mobility by themselves. Practice does.
+
+Simple tools can make practice easier to set up. A balance pad can make supported stance work more specific. Yoga blocks can bring the floor closer. A foam roller can support recovery and positioning. A stretching strap can help with controlled range without forcing it.
+
+Use tools as supports, not promises.
+
+## Mobility is not stretching forever
+
+Mobility work is useful when it supports something real.
+
+Can you reach overhead without holding your breath? Can you get down and up with control? Can you take a longer step when the sidewalk asks for it? Can you rotate enough to look behind you, carry something, or move around a crowded room?
+
+That is different from chasing flexibility for its own sake. StrongPath is interested in mobility that gives daily life more room.
+
+If you are rebuilding from a low starting point, read [How to Start Lifting Weights at 60](/blog/how-to-start-lifting-weights-at-60). The principle is the same: start modestly, learn the pattern, recover, and progress with care.
+
+## For adult children
+
+If you are reading for a parent, keep the tone respectful.
+
+The best first step may not be saying "you need balance exercises." It may be helping set up one easier habit: a clear walking path, a stable chair, a few minutes of supported movement, or a practical conversation with a physical therapist.
+
+The goal is more good days, not a lecture. For the broader family frame, read [How to Help Aging Parents Stay Strong](/blog/help-aging-parents-stay-strong).
+
+## When to get guidance
+
+Balance and mobility are practical topics, but they can touch medical issues.
+
+If dizziness, faintness, chest pain, new neurological symptoms, recent surgery, recent fall, unexplained weight loss, significant pain, or a major change in function is part of the picture, work with a physician, physical therapist, or qualified clinician before beginning a new exercise plan.
+
+That is not a failure of independence. It is good judgment.
+
+## The StrongPath position
+
+Strength, balance, and mobility are one system in daily life.
+
+The point is not to train for a performance identity. The point is to keep more everyday movement available: stairs, errands, travel, family visits, lifting, carrying, reaching, and recovering position.
+
+For the clinical problem underneath many strength and function changes, read [What Is Sarcopenia?](/blog/what-is-sarcopenia).
+
+## Medical note
+
+This article is educational and is not medical advice. If you have a medical condition, recent fall, recent surgery, unexplained weight loss, chest pain, dizziness, significant balance problems, new neurological symptoms, or a major change in function, work with a physician, physical therapist, or other qualified clinician before beginning a new exercise plan.
+`),
+  },
+  {
     _id: 'flagship-muscle-loss-after-50',
     title: 'Why Muscle Loss Changes Everything After 50',
     slug: { current: 'why-muscle-loss-changes-everything-after-50' },
@@ -1234,6 +1369,7 @@ const activeFlagshipSlugs = new Set([
   'resistance-training-older-adults',
   'protein-for-older-adults',
   'how-to-start-lifting-weights-at-60',
+  'balance-and-mobility-after-50',
 ])
 
 const flagshipArticlesWithImages = allFlagshipArticles.map((article) => ({

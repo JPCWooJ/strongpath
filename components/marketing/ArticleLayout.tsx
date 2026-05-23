@@ -97,6 +97,10 @@ function isLiftingWeightsArticle(post: Post) {
   return post.slug.current === 'how-to-start-lifting-weights-at-60'
 }
 
+function isBalanceMobilityArticle(post: Post) {
+  return post.slug.current === 'balance-and-mobility-after-50'
+}
+
 function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (!body) return -1
 
@@ -121,6 +125,12 @@ function getCommerceCtaIndex(post: Post, body?: Post['body']) {
   if (isLiftingWeightsArticle(post)) {
     return body.findIndex((block) =>
       getPlainBlockText(block).startsWith('The goal is usable strength:')
+    )
+  }
+
+  if (isBalanceMobilityArticle(post)) {
+    return body.findIndex((block) =>
+      getPlainBlockText(block).startsWith('Balance and mobility after 50 are not a side path')
     )
   }
 
@@ -230,6 +240,33 @@ function getCommerceModule(post: Post): CommerceModule | null {
         {
           label: 'Dumbbells',
           imageUrl: 'https://m.media-amazon.com/images/I/61vh3p7XXUL._AC_SL1500_.jpg',
+        },
+      ],
+    }
+  }
+
+  if (isBalanceMobilityArticle(post)) {
+    return {
+      heading: 'Balance and mobility basics',
+      body:
+        'We keep a short list of practical basics for balance, mobility, stretching, and recovery after 50.',
+      href: 'https://www.amazon.com/shop/stron02/list/SIMAOLZ5IIZI?ref_=aip_sf_list_spv_ons_mixed_d',
+      items: [
+        {
+          label: 'Balance pad',
+          imageUrl: 'https://m.media-amazon.com/images/I/618vhCUg+pL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Yoga blocks',
+          imageUrl: 'https://m.media-amazon.com/images/I/61ni0epHWFL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Foam roller',
+          imageUrl: 'https://m.media-amazon.com/images/I/61-NGQxfxHL._AC_SL1500_.jpg',
+        },
+        {
+          label: 'Stretching strap',
+          imageUrl: 'https://m.media-amazon.com/images/I/71+I0Ft-CJL._AC_SL1500_.jpg',
         },
       ],
     }
