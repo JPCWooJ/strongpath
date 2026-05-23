@@ -49,7 +49,7 @@ Filename:
 6. CMS publishing package: prepare title, description, slug, canonical, OG/social metadata, excerpt, and publish status; exclude public read-time display.
 7. Internal linking: define inbound and outbound article links.
 8. Amazon/e-commerce module: recommend none, book, quiz, program, or product path; include disclosure requirement.
-9. X distribution package: apply `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md` and `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`.
+9. X distribution package: define GTM distribution intent and apply `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md`, `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`, and `docs/growth/workflows/X_POST_CREATION_WORKFLOW.md`.
 10. Beehiiv package: prepare subject, preview text, summary, CTA, and send timing.
 11. Google Business Profile recommendation: recommend post, no post, or hold.
 12. KPI tracking row: create the measurement row before publish.
@@ -93,7 +93,7 @@ Required checks:
 - StrongPath Google Search Playbook
 - internal links
 - Amazon affiliate module
-- X distribution handoff
+- X distribution handoff: GTM intent present; final public copy produced or polished through `docs/growth/workflows/X_POST_CREATION_WORKFLOW.md` before founder posting
 - Beehiiv handoff
 - KPI row / measurement
 

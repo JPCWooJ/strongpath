@@ -125,7 +125,19 @@ Rules:
 - no article without distribution path
 - no distribution without KPI expectations
 
-## 6. No-Link Post Workflow
+## 6. Public Copy Workflow
+
+Apply `docs/growth/workflows/X_POST_CREATION_WORKFLOW.md` before founder handoff.
+
+Rules:
+
+- GTM owns distribution intent; Editorial owns final public copy.
+- GTM does not finalize public X copy unless explicitly requested.
+- Editorial must polish X posts for voice, clarity, rhythm, claim safety, and persona fit.
+- Launch packages should route final X copy through the workflow.
+- Founder receives final paste-ready copy only.
+
+## 7. No-Link Post Workflow
 
 Use no-link posts to:
 
@@ -149,7 +161,7 @@ Rules:
 - useful without a link
 - route to an article only when context makes the link useful
 
-## 7. Reply / Network Seeding Workflow
+## 8. Reply / Network Seeding Workflow
 
 Build credible adjacency in:
 
@@ -192,7 +204,7 @@ Reply rules:
 Use Jeff for relationship-sensitive or founder-context replies.
 Use `@StrongPathHQ` for institutional, evidence, and article-context replies.
 
-## 8. X-To-Article / Email / Commerce Paths
+## 9. X-To-Article / Email / Commerce Paths
 
 Article path:
 
@@ -217,7 +229,7 @@ Rule:
 
 - never let conversion pressure degrade editorial trust
 
-## 9. Daily Operating Rules
+## 10. Daily Operating Rules
 
 Decide:
 
@@ -236,7 +248,7 @@ Daily execution:
 - avoid quota posting
 - preserve claim discipline
 
-## 10. Weekly KPI Review
+## 11. Weekly KPI Review
 
 Primary:
 
@@ -277,7 +289,7 @@ Low-view rule:
 - diagnose graph, timing, hook, link behavior, and topic fit
 - next action is usually reply seeding or a no-link post, not another link
 
-## 11. What To Avoid
+## 12. What To Avoid
 
 - creator-economy tactics
 - engagement farming
