@@ -4,74 +4,104 @@
 
 Apply `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md` to StrongPath X execution.
 
-The algorithm operating system governs. This playbook defines StrongPath account roles, article distribution, conversion paths, and review loops.
+The algorithm operating system governs. This playbook defines the StrongPath application layer: account roles, topic lanes, article distribution, conversion paths, and KPI review.
 
-## 1. Channel Thesis
+## 1. Operating Rules
 
-- X is an editorial distribution and network-seeding channel.
-- StrongPath optimizes for qualified attention, not creator growth.
-- Trust, evidence, and useful distinction beat impressions.
-- Every post must stand alone without click dependency.
+- qualified attention > creator growth
+- every post stands alone without click dependency
+- replies are distribution assets
+- reframing beats reposting
+- avoid repetitive link drops
+- no hype, rage bait, generic motivation, fear-led caregiver framing, or unsupported health claims
+- X builds trust, article traffic, email capture, and eventual product interest
 
-## 2. Account Roles
+Pre-post gate:
 
-`@StrongPathHQ`:
+- Does this strengthen StrongPath's topic identity?
+- Is it useful without a click?
+- Will it attract Margaret, David, Dr. Chen-adjacent professionals, or credible network adjacency?
+- Could it invite low-quality engagement, negative feedback, or claim risk?
 
-- institutional voice
+## 2. @StrongPathHQ Role
+
+Use `@StrongPathHQ` as the institutional editorial account.
+
+Own:
+
 - article distribution
-- evidence framing
+- evidence-framed posts
+- no-link distinctions
+- credible network replies
 - topic consistency
-- canonical source of record
+- canonical source-of-record behavior
 
-Jeff / founder:
+Rules:
 
-- founder context
+- serious, direct, hopeful
+- cite mechanisms, not miracles
+- use links selectively
+- preserve account topic identity
+- never exceed article evidence
+
+## 3. Jeff / Founder Amplification Role
+
+Use Jeff when founder context increases trust.
+
+Own:
+
 - selective amplification
-- relationship building
-- warm but disciplined replies
-- conversation entry where personal credibility helps
+- founder notes
+- relationship-sensitive replies
+- warm context around the mission
+- bridge conversations where personal credibility helps
 
 Rules:
 
-- Jeff adds context, not duplicate copy
-- brand voice stays serious, direct, hopeful
-- founder voice may be warmer
-- no claim exceeds article evidence
+- add context, not duplicate brand copy
+- do not speak as a clinician, scientist, or medical authority
+- do not overuse founder amplification
+- do not make claims stronger than `@StrongPathHQ`
+- keep founder voice warmer, not looser
 
-## 3. Topic Lanes
+## 4. Approved Topic Lanes
 
-Approved lanes:
+Active lanes:
 
-- muscle loss and aging
+- sarcopenia / age-related muscle loss
 - strength as independence
-- resistance training after 50/60
+- resistance training after 50 / 60
 - protein, recovery, and execution
-- aging parents and family support
+- helping aging parents stay strong
 - evidence that older adults can regain strength
-- GLP-1 / weight loss / lean-mass risk when evidence supports it
+- GLP-1 / weight loss / lean-mass risk when well sourced
 - book and platform credibility
+- clinician / PT / professional adjacency, respect-first
 
 Rules:
 
-- every post maps to a lane
-- avoid random commentary
-- avoid anti-aging, hacks, miracle, cure, reversal, and outrage framing
-- clinician-facing content remains respect-first and Phase 2 unless organically relevant
+- every post maps to one lane
+- new lanes require founder approval
+- keep Dr. Chen targeting Phase 2 unless organic
+- avoid anti-aging, hacks, miracle, cure, reversal, outrage, and crisis-care framing
 
-## 4. Article Amplification
+## 5. Article Amplification Workflow
 
-Per major article:
+For each approved article:
 
-1. extract 3-5 X angles
-2. publish primary `@StrongPathHQ` post
-3. cover first 30-60 minutes
-4. answer credible replies
-5. seed 3-5 relevant conversations
-6. reframe 1-3 angles over several days
-7. use Jeff amplification when founder context improves trust
-8. track qualified signals
+1. Select primary persona, lane, and angle.
+2. Prepare primary `@StrongPathHQ` post.
+3. Prepare 2-4 alternate angles.
+4. Prepare optional Jeff amplification.
+5. Prepare reply prompts and adjacency targets.
+6. Schedule through Postiz with spacing.
+7. Verify live URL before link post.
+8. Cover the first 30-60 minutes.
+9. Answer credible replies.
+10. Reframe 1-3 angles over several days.
+11. Track qualified signals.
 
-Angles:
+Approved angles:
 
 - evidence
 - misconception correction
@@ -80,15 +110,22 @@ Angles:
 - founder/editorial note
 - decision rule
 
-## 5. No-Link Posts
+Rules:
+
+- no identical reposts
+- no duplicate scheduling
+- no article without distribution path
+- no distribution without KPI expectations
+
+## 6. No-Link Post Workflow
 
 Use no-link posts to:
 
 - build topic memory
 - earn saves/bookmarks
-- test hooks before article amplification
-- enter expert-adjacent conversations
+- test angles before article amplification
 - explain one useful distinction
+- enter expert-adjacent conversations
 
 Formats:
 
@@ -97,48 +134,52 @@ Formats:
 - scenario -> mechanism -> recommendation
 - evidence -> interpretation -> decision
 
-## 6. Reply / Network Seeding
+Rules:
 
-Engage with:
+- one idea per post
+- practical utility over motivation
+- useful without a link
+- route to an article only when context makes the link useful
 
-- clinicians
-- researchers
-- physical therapists
-- strength coaches
-- dietitians
-- serious health writers
-- public health voices
-- bridge accounts between expert and lay audiences
+## 7. Reply / Network Seeding Workflow
+
+Build credible adjacency in:
+
+- health
+- aging
+- strength
+- physical therapy
+- longevity
+- caregiver networks
+- serious health writing
+
+Reply when a credible conversation is a better distribution opportunity than a standalone post.
 
 Reply rules:
 
 - add evidence, distinction, or practical framing
-- avoid self-promotion as first move
 - link only when directly useful
+- avoid self-promotion as the first move
 - ignore bad-faith accounts
+- log high-value adjacency
 - protect adjacency quality
 
-Avoid:
+Use Jeff for relationship-sensitive or founder-context replies.
+Use `@StrongPathHQ` for institutional, evidence, and article-context replies.
 
-- conspiracy health clusters
-- supplement hype
-- anti-science accounts
-- rage-bait threads
-- generic wellness engagement loops
-
-## 7. X-To-Article / Email / Commerce Paths
+## 8. X-To-Article / Email / Commerce Paths
 
 Article path:
 
 - post gives standalone value
-- article link provides depth, sourcing, or protocol
-- replies answer objections and route to article only when useful
+- article provides depth, sourcing, or protocol
+- replies answer objections before routing
 
 Email path:
 
 - article click -> newsletter or quiz capture
 - high-utility post -> newsletter prompt only when context fits
-- caregiver content -> caregiver-relevant capture path
+- caregiver post -> caregiver-relevant capture path
 
 Commerce path:
 
@@ -147,33 +188,29 @@ Commerce path:
 - product-adjacent post -> education before commerce
 - disclosure and claim discipline govern all commerce links
 
-## 8. Operating Loop
+Rule:
 
-Daily:
+- never let conversion pressure degrade editorial trust
+
+## 9. Daily Operating Rules
+
+Decide:
+
+- Post when the idea is strong enough to stand alone.
+- Reply when the conversation creates the better distribution opportunity.
+- Wait when the post would be filler, repetitive, or likely to attract the wrong audience.
+
+Daily execution:
 
 - publish only strong posts
 - leave 3-5 substantive replies when warranted
-- monitor first-hour engagement
+- cover first-hour engagement for important posts
+- check for scheduled duplicates
+- keep cadence stable
 - avoid quota posting
+- preserve claim discipline
 
-Per article:
-
-- prepare primary post
-- prepare 2-4 alternate angles
-- prepare Jeff amplification option
-- prepare reply prompts
-- schedule with spacing
-- track qualified clicks and replies
-
-Weekly:
-
-- review top posts and replies
-- identify high-value adjacency
-- identify dangerous adjacency
-- run one controlled experiment
-- update GTM notes
-
-## 9. KPI Review
+## 10. Weekly KPI Review
 
 Primary:
 
@@ -200,7 +237,15 @@ Negative:
 - low-trust follower growth
 - topic drift
 
-## 10. What To Avoid
+Weekly decisions:
+
+- promote
+- reframe
+- retire
+- hold
+- run one controlled experiment
+
+## 11. What To Avoid
 
 - creator-economy tactics
 - engagement farming
@@ -212,7 +257,10 @@ Negative:
 - unsupported health claims
 - fear-led caregiver framing
 - commercial claims stronger than evidence
-- chasing reach outside credible adjacency
+- low-trust network adjacency
+- duplicate scheduling
+- post-and-disappear behavior
+- treating impressions as success
 
 ## Status
 
