@@ -22,6 +22,10 @@ Use this operating loop:
 7. Verify before claiming done. If verification is blocked, say exactly what is unverified.
 8. Keep chat output short. Do not dump long artifacts into chat when a repo file is the deliverable.
 
+Validator handling:
+- If an official skill validator is blocked by missing local Python packages, do not change repo dependencies to fix it.
+- Manually check `SKILL.md` frontmatter for valid `name` and `description`, run repo-safe checks such as `git diff --check`, and report the validator issue under `UNRESOLVED ISSUES`.
+
 Default return format:
 
 ```txt
