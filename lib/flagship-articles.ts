@@ -96,14 +96,13 @@ const launchArticleImages: Record<string, NonNullable<Post['heroImage']>> = {
     objectPosition: 'center 52%',
   },
   'balance-and-mobility-after-50': {
-    src: '/images/articles/caregiver-walking.jpg',
-    alt: 'A younger woman walking beside an older woman on a city sidewalk',
-    credit: 'Photo by Sofia Marquet on Pexels',
-    sourceUrl:
-      'https://www.pexels.com/photo/woman-helping-elderly-woman-to-walk-on-sidewalk-18968358/',
+    src: '/images/articles/sarcopenia-stairs.jpg',
+    alt: 'An older woman holding a handrail while navigating subway stairs',
+    credit: 'Photo by Mathias Reding on Pexels',
+    sourceUrl: 'https://www.pexels.com/photo/elderly-woman-on-stairs-16124521/',
     licenseUrl: pexelsLicenseUrl,
     caption: 'Balance and mobility matter when they help everyday movement feel steadier.',
-    objectPosition: 'center 55%',
+    objectPosition: 'center 52%',
   },
 }
 

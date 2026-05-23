@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { ArticleJsonLd } from '@/components/marketing/ArticleJsonLd'
 import { ArticleLayout } from '@/components/marketing/ArticleLayout'
-import { estimateReadingMinutes, isPublicArticleSlug, toArticleMeta } from '@/lib/articles'
+import { isPublicArticleSlug, toArticleMeta } from '@/lib/articles'
 import { findFlagshipArticle, flagshipArticles } from '@/lib/flagship-articles'
 import { buildArticleMetadata } from '@/lib/seo'
 import { client, postQuery, postSlugsQuery } from '@/lib/sanity'
@@ -46,7 +46,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <ArticleJsonLd post={post} />
       <ArticleLayout
         post={post}
-        readingMinutes={post.estimatedReadingMinutes || estimateReadingMinutes(post)}
         relatedArticles={flagshipArticles
           .filter((article) => article.slug.current !== post.slug.current)
           .slice(0, 4)

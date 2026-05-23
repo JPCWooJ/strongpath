@@ -46,7 +46,7 @@ Filename:
 3. Draft: prepare article through normal editorial process.
 4. Editorial/source/claim QA: verify sourcing, claims, disclaimer/disclosure needs, and brand voice.
 5. Google Search readiness: apply `docs/governance/GOOGLE_SEARCH_OPERATING_SYSTEM.md` and `docs/growth/STRONGPATH_GOOGLE_SEARCH_PLAYBOOK.md`.
-6. CMS publishing package: prepare title, description, slug, canonical, OG/social metadata, excerpt, and publish status.
+6. CMS publishing package: prepare title, description, slug, canonical, OG/social metadata, excerpt, and publish status; exclude public read-time display.
 7. Internal linking: define inbound and outbound article links.
 8. Amazon/e-commerce module: recommend none, book, quiz, program, or product path; include disclosure requirement.
 9. X distribution package: apply `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md` and `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`.

@@ -439,7 +439,6 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
             <div>
               <div className="font-utility text-[13px] leading-[1.35] text-[#5A6472]">
                 {article.category && <p>{article.category}</p>}
-                {article.readingMinutes && <p className="mt-4">{article.readingMinutes} min read</p>}
               </div>
               <Link href={article.href} className="group">
                 <h3 className="mt-8 font-display text-[25px] font-normal leading-[1.12] text-[#0B2545] group-hover:underline md:text-[28px]">
@@ -461,11 +460,9 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
 
 export function ArticleLayout({
   post,
-  readingMinutes,
   relatedArticles = [],
 }: {
   post: Post
-  readingMinutes?: number
   relatedArticles?: ArticleMeta[]
 }) {
   const publishedAt = formatArticleDate(post.publishedAt)
@@ -493,7 +490,6 @@ export function ArticleLayout({
                 {post.category && <p>{post.category}</p>}
                 {publishedAt && <p>{publishedAt}</p>}
                 {updatedAt && updatedAt !== publishedAt && <p>Updated {updatedAt}</p>}
-                {readingMinutes && <p>{readingMinutes} min read</p>}
               </div>
               <h1 className="mt-16 max-w-[760px] font-display text-[44px] font-normal leading-[1.03] text-[#0B2545] md:text-[66px] md:leading-[0.99]">
                 {post.title}
