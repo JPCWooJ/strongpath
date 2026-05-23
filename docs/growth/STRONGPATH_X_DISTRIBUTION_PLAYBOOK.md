@@ -8,6 +8,9 @@ The algorithm operating system governs. This playbook defines the StrongPath app
 
 ## 1. Operating Rules
 
+- StrongPath is a low-history account
+- first priority: topic identity, credible adjacency, useful replies
+- grow the qualified graph slowly
 - qualified attention > creator growth
 - every post stands alone without click dependency
 - replies are distribution assets
@@ -63,6 +66,7 @@ Rules:
 - do not overuse founder amplification
 - do not make claims stronger than `@StrongPathHQ`
 - keep founder voice warmer, not looser
+- avoid double-amplification that looks coordinated or spammy
 
 ## 4. Approved Topic Lanes
 
@@ -112,8 +116,12 @@ Approved angles:
 
 Rules:
 
+- one primary link post per article
+- 1-3 reframed angles over several days
+- no same-day repetitive link drops
 - no identical reposts
 - no duplicate scheduling
+- no article link unless the post stands alone
 - no article without distribution path
 - no distribution without KPI expectations
 
@@ -155,9 +163,26 @@ Build credible adjacency in:
 
 Reply when a credible conversation is a better distribution opportunity than a standalone post.
 
+Daily search lanes:
+
+- sarcopenia
+- strength training older adults
+- resistance training after 50
+- GLP-1 muscle loss
+- aging parents exercise
+- protein older adults
+- physical therapy aging strength
+
+Candidate rule:
+
+- reply if credible, relevant, and a useful distinction can be added
+- pass if spammy, supplement-heavy, politics-heavy, rage bait, low-trust, or off-lane
+
 Reply rules:
 
+- acknowledge or align
 - add evidence, distinction, or practical framing
+- connect to daily-life capacity, evidence, or practical next step
 - link only when directly useful
 - avoid self-promotion as the first move
 - ignore bad-faith accounts
@@ -196,9 +221,10 @@ Rule:
 
 Decide:
 
-- Post when the idea is strong enough to stand alone.
-- Reply when the conversation creates the better distribution opportunity.
-- Wait when the post would be filler, repetitive, or likely to attract the wrong audience.
+- If a credible target conversation exists, reply before posting.
+- If no credible target exists, publish one no-link insight only if strong.
+- If recent link posts underperformed, do not post another link immediately.
+- If nothing is strong, wait.
 
 Daily execution:
 
@@ -244,6 +270,12 @@ Weekly decisions:
 - retire
 - hold
 - run one controlled experiment
+
+Low-view rule:
+
+- do not assume the idea failed
+- diagnose graph, timing, hook, link behavior, and topic fit
+- next action is usually reply seeding or a no-link post, not another link
 
 ## 11. What To Avoid
 
