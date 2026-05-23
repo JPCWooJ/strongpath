@@ -249,7 +249,7 @@ function getCommerceModule(post: Post): CommerceModule | null {
     return {
       heading: 'Balance and mobility basics',
       body:
-        'We keep a short list of practical basics for balance, mobility, stretching, and recovery after 50.',
+        'We keep a short list of practical supports for balance, mobility, stretching, and recovery practice after 50.',
       href: 'https://www.amazon.com/shop/stron02/list/SIMAOLZ5IIZI?ref_=aip_sf_list_spv_ons_mixed_d',
       items: [
         {

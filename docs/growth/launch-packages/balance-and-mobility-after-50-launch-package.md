@@ -10,7 +10,7 @@
 - Secondary persona: David
 - Topic cluster: strength as independence / mobility after 50
 - Canonical URL: `https://www.strongpath.com/blog/balance-and-mobility-after-50`
-- Meta description: Why balance and mobility after 50 support daily independence, ordinary movement, and conservative at-home practice.
+- Meta description: Why balance and mobility after 50 matter for stairs, reaching, carrying, and moving with more control.
 
 ## Google Search Readiness
 
@@ -44,7 +44,7 @@ Inbound candidates:
 
 ## Commerce Module
 
-- Recommendation: publish early in article
+- Recommendation: publish early in article as practice supports, not solutions
 - Heading: Balance and mobility basics
 - CTA: Shop the list
 - URL: `https://www.amazon.com/shop/stron02/list/SIMAOLZ5IIZI?ref_=aip_sf_list_spv_ons_mixed_d`

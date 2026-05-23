@@ -102,7 +102,7 @@ const launchArticleImages: Record<string, NonNullable<Post['heroImage']>> = {
     sourceUrl:
       'https://www.pexels.com/photo/woman-helping-elderly-woman-to-walk-on-sidewalk-18968358/',
     licenseUrl: pexelsLicenseUrl,
-    caption: 'Balance and mobility matter most when they support ordinary movement.',
+    caption: 'Balance and mobility matter when they help everyday movement feel steadier.',
     objectPosition: 'center 55%',
   },
 }
@@ -960,7 +960,7 @@ This article is educational and is not medical advice. If you have a medical con
     tags: ['Balance', 'Mobility', 'Strength After 50', 'Healthy Aging'],
     seoTitle: 'Balance and Mobility After 50',
     seoDescription:
-      'Why balance and mobility after 50 support daily independence, ordinary movement, and conservative at-home practice.',
+      'Why balance and mobility after 50 matter for stairs, reaching, carrying, and moving with more control.',
     estimatedReadingMinutes: 7,
     sources: [
       {
@@ -1030,6 +1030,8 @@ The goal is not to prove anything. The goal is to rebuild movement options caref
 Tools do not create balance or mobility by themselves. Practice does.
 
 Simple tools can make practice easier to set up. A balance pad can make supported stance work more specific. Yoga blocks can bring the floor closer. A foam roller can support recovery and positioning. A stretching strap can help with controlled range without forcing it.
+
+If balance feels unreliable, start near support and consider professional guidance before using unstable surfaces.
 
 Use tools as supports, not promises.
 
