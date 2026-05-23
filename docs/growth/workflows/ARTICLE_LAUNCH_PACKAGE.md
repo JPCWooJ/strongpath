@@ -87,6 +87,16 @@ Each package includes:
 - KPI tracking row
 - unresolved issues
 
+Required checks:
+
+- Google Search readiness
+- StrongPath Google Search Playbook
+- internal links
+- Amazon affiliate module
+- X distribution handoff
+- Beehiiv handoff
+- KPI row / measurement
+
 ## 7. KPI Row
 
 Create a row with:
