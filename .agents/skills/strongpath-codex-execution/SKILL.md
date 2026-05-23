@@ -1,21 +1,33 @@
 ---
 name: strongpath-codex-execution
-description: Use for every StrongPath implementation task that should ship. Enforces repo-first execution, simple proven solutions, narrow file scope, verification, commit/push/deploy discipline, and concise delivery reporting.
+description: Use broadly for StrongPath Codex implementation tasks, code changes, repo edits, markdown or governance updates, deployment/release tasks, and any task where scope control, small diffs, verification, duplicate-document prevention, or production safety matters.
 ---
 
 # StrongPath Codex Execution
 
-- GITHUB IS CANONICAL.
-- Read the repo before deciding or editing.
-- Use the simplest proven solution.
-- Touch only required files.
-- No drive-by refactors.
-- No unrelated dependency installs.
-- No new governance docs unless explicitly requested.
-- Commit, push, and deploy unless explicitly excluded.
-- Run build verification.
-- Run typecheck when available.
-- Run visual and mobile QA for frontend changes.
-- Run citation and claim QA for health content.
-- After two failed iterations, stop and switch to a proven baseline or rollback.
-- Return only deployment URL, commit hash, files changed, PASS/FAIL, and unresolved issues when shipping.
+Reference, do not duplicate:
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
+- `docs/governance/CTO_AGENT_PROFILE.md`
+- `docs/governance/spkarpathy-rules.md`
+
+Use this operating loop:
+
+1. Think before acting. Identify the goal, scope, protected areas, and verification path.
+2. Read the relevant repo files before editing.
+3. Choose the simplest sufficient change.
+4. Make surgical diffs. Avoid drive-by refactors, unrelated dependencies, and new files unless required.
+5. Do not create duplicate authority documents or new governance unless explicitly requested.
+6. Protect production, CMS, analytics, affiliate links, env vars, Vercel, DNS, secrets, and publication surfaces.
+7. Verify before claiming done. If verification is blocked, say exactly what is unverified.
+8. Keep chat output short. Do not dump long artifacts into chat when a repo file is the deliverable.
+
+Default return format:
+
+```txt
+FILES CHANGED
+VERIFICATION
+COMMIT HASH
+PUSH STATUS
+UNRESOLVED ISSUES
+```
