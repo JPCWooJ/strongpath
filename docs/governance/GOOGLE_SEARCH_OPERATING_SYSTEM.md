@@ -2,82 +2,99 @@
 
 ## Purpose
 
-Govern how StrongPath prepares content and pages for Google Search.
+Define a reusable operating standard for durable Google visibility.
 
-SEO exists to help Google discover, understand, and present useful StrongPath content.
+SEO exists to make useful, reliable content discoverable, crawlable, understandable, and eligible to be served.
 
-It must not override:
+SEO does not replace content value.
 
-- editorial quality
-- evidence standards
-- brand voice
-- reader usefulness
-- medical/legal caution
+## 1. Search Operating Thesis
 
-## 1. People-First Content Standard
+- Google visibility compounds when useful content is technically accessible and trusted by users.
+- Technical SEO supports discovery and understanding.
+- Content quality controls whether visibility is worth earning.
+- Search optimization starts after the page has a clear audience, intent, and useful answer.
+- No tactic outranks sustained usefulness, trust, and crawlable execution.
 
-Search content must:
+## 2. Crawl / Index / Serve Model
 
-- serve Margaret, David, or a founder-approved audience
-- answer a real reader intent
-- provide non-commodity value
-- add StrongPath's editorial point of view
-- use current sources where claims require support
-- leave the reader with a useful next step
+Google Search operates in three stages:
 
-Do not publish content that:
+- Crawl: Google discovers URLs through links, sitemaps, redirects, and prior crawl history.
+- Index: Google analyzes content, metadata, canonical signals, media, language, and page quality.
+- Serve: Google selects results based on relevance, quality, usability, query context, and search appearance.
 
-- exists mainly to capture traffic
-- summarizes other pages without adding value
-- chases trending topics outside StrongPath authority
-- targets arbitrary word counts
-- creates one page per keyword variation
-- leaves the reader needing to search again
+Operational rules:
 
-## 2. E-E-A-T / YMYL Standard
+- Discovery requires crawlable links or sitemap inclusion.
+- Crawlability requires accessible pages and unblocked critical resources.
+- Indexability requires no accidental `noindex`, no login wall, and sufficient page quality.
+- Canonicalization tells Google which URL represents duplicate or similar content.
+- Serving depends on usefulness, trust, query fit, title/snippet quality, page experience, and eligibility.
+- Search Console is the feedback system; it does not replace judgment.
+- Google does not guarantee crawling, indexing, serving, or ranking.
+
+## 3. People-First Content Gate
+
+Publish only when:
+
+- audience is defined
+- intent is specific
+- page satisfies the reader's actual goal
+- content adds original or non-commodity value
+- source use adds trust rather than filler
+- title accurately describes the page
+- page is complete enough for the task
+- reader has a useful next step
+
+Reject or revise when:
+
+- page exists mainly to rank
+- page summarizes others without added value
+- page targets arbitrary word count
+- topic is outside site purpose or expertise
+- reader would need to search again
+- page is mass-produced, thin, or generic
+- date is updated without substantive improvement
+
+## 4. E-E-A-T / YMYL Gate
 
 Trust is the controlling standard.
 
-StrongPath health content requires:
+For all content, show:
 
-- current third-party sourcing
-- conservative claim language
-- clear education vs. medical advice boundary
-- medical disclaimer where applicable
-- no unsupported treatment, cure, prevention, reversal, or guarantee claims
-- book-as-credibility, not book-as-substantiation
-
-Show trust through:
-
-- byline or publisher clarity
+- clear author, publisher, or site responsibility
 - clear site purpose
-- visible sourcing
-- specific mechanisms
-- practical reader utility
-- page quality that does not look mass-produced
+- visible sourcing where claims need support
+- factual accuracy
+- original work or useful synthesis
+- page quality that does not look rushed or mass-produced
 
-YMYL escalation:
+YMYL topics require higher scrutiny when content can affect:
 
-- sensitive health claim
-- acute medical scenario
-- supplement or product claim
-- disease treatment/prevention implication
-- unsupported timeline or outcome promise
+- health
+- finance
+- safety
+- legal rights
+- civic welfare
+- major life decisions
 
-If triggered:
+YMYL requirements:
 
-- route to Editorial Systems Agent
-- require stronger sourcing
-- use conservative language
-- escalate to founder when judgment materially matters
+- stronger sourcing
+- qualified review where needed
+- conservative claims
+- clear education vs. advice boundary
+- disclaimers where appropriate
+- no unsupported treatment, cure, prevention, guarantee, or outcome promises
 
-## 3. AI And Automation Rules
+## 5. AI / Automation Gate
 
 AI may support:
 
 - research organization
 - outline generation
-- source comparison
+- drafting support
 - metadata drafts
 - internal-link suggestions
 - Search Console analysis
@@ -85,156 +102,115 @@ AI may support:
 
 AI must not:
 
-- mass-produce thin pages
-- publish without human review
+- create scaled low-value content
 - invent sources
-- make health claims without verification
-- create keyword-variation pages
+- publish without human review
+- make factual claims without verification
+- produce keyword-variation pages
 - rewrite for search at the expense of readers
 - create fake freshness
+- obscure who is responsible for the page
 
-Human review required for:
+Rules:
 
-- health/YMYL claims
-- final article readiness
-- AI-assisted factual claims
-- AI-generated metadata for strategic pages
-- any page created partly from automation
+- verify all factual claims
+- verify metadata and structured data
+- disclose automation when a reader would reasonably ask how the content was created
+- pause automation that produces low-quality, inaccurate, or duplicate output
 
-Disclose automation when a reader would reasonably ask how the content was created.
-
-## 4. Article Search-Readiness Checklist
-
-Before publish, confirm:
-
-- defined audience
-- clear search intent
-- unique title
-- useful meta description
-- stable slug
-- current third-party sources
-- visible DOM text
-- clear H1
-- scannable headings
-- internal links to related StrongPath pages
-- external links only to trusted sources
-- medical disclaimer where applicable
-- FTC affiliate disclosure where applicable
-- no keyword stuffing
-- no fake freshness
-- no claim stronger than evidence
-
-Article must stand on reader value before search value.
-
-## 5. Technical Visibility Checklist
+## 6. Technical Visibility Gate
 
 Strategic pages must have:
 
 - crawlable URL
-- crawlable `<a>` links
-- indexable status unless intentionally excluded
+- crawlable `<a>` internal links
+- no accidental `noindex`
 - canonical URL
-- sitemap inclusion
+- sitemap inclusion when strategically important
 - robots/noindex behavior aligned
 - unique title
 - useful meta description
-- Open Graph / social metadata
-- mobile-readable page
-- key content in DOM text
-- accessible images with relevant alt text
-- no broken primary CTA
-- no broken core internal links
-- no deceptive redirect
+- visible DOM text for key content
+- mobile-readable layout
+- acceptable page experience
+- useful image alt text where images carry meaning
+- no blocked critical resources
+- no broken primary links or CTAs
+- valid structured data when used
 
-Use `noindex`, not `robots.txt`, when the page may be crawled but should not appear in results.
+Rules:
 
-Use redirects for moved URLs.
+- use `noindex`, not `robots.txt`, to keep crawlable pages out of results
+- use `robots.txt` to control crawling of low-value or state-changing URLs
+- use redirects for moved URLs
+- use canonicals for duplicate or similar URLs
+- do not rely on images, video, canvas, CSS content, or plugin-rendered text for key meaning
 
-Use canonical URLs to reduce duplicate confusion.
+## 7. Search Feedback Loop
 
-## 6. Search Console Feedback Loop
+Monitor:
 
-GTM Agent tracks:
-
-- organic impressions
-- organic clicks
-- organic CTR
+- impressions
+- clicks
+- CTR
+- average position
 - indexed pages
 - indexing errors
-- top organic landing pages
-- high-impression / low-CTR pages
-
-Editorial Systems Agent reviews:
-
-- pages with weak intent satisfaction
-- pages needing stronger sourcing
-- pages with outdated claims
-- internal-link opportunities
-- content gaps inside approved topic lanes
-
-CTO reviews:
-
 - crawl errors
-- indexing errors
-- sitemap issues
-- canonical issues
-- noindex mistakes
-- mobile/page experience problems
-- structured data errors where applicable
+- top queries
+- top landing pages
+- high-impression / low-CTR pages
+- pages discovered but not indexed
+- pages indexed but not performing
 
-Weekly:
+Decide:
 
-- review search movement
-- identify blockers
-- assign owner
-- define next action
+- publish: new page satisfies a real need
+- refresh: page is useful but stale or incomplete
+- consolidate: multiple pages compete or overlap
+- noindex: page is useful operationally but not search-worthy
+- redirect: URL moved or a better canonical destination exists
+- hold: data is inconclusive or page is too new
 
-Monthly:
+Rules:
 
-- promote repeatable search patterns
-- retire weak patterns
-- update pages only when substance changes
+- wait long enough for search changes to settle
+- update only when reader usefulness improves
+- never change dates for freshness alone
+- use Search Console to find issues, not to chase every fluctuation
 
-## 7. Prohibited Tactics
+## 8. Prohibited Tactics
 
 Do not use:
 
 - keyword stuffing
 - doorway pages
+- thin AI-scaled pages
 - shadow domains
 - deceptive redirects
 - link schemes
 - paid or inauthentic mentions
 - fake freshness/date changes
-- scaled AI content without unique value
-- scraped or lightly rewritten content
-- pages created primarily to rank
-- unsupported AEO/GEO hacks
-- `llms.txt` or special AI files as a visibility tactic
+- copied or scraped content
 - hidden text or hidden links
-- title/meta clickbait
-- rankings guarantees
+- pages created primarily to rank
+- misleading title/meta clickbait
+- ranking guarantees
+- special AEO/GEO hacks
+- `llms.txt` or special AI files as a visibility tactic
 
-## 8. StrongPath Owner Model
+## 9. Owner Model
 
-Editorial Systems Agent owns:
+Content quality owner:
 
-- people-first content quality
-- E-E-A-T / YMYL review
-- article readiness
-- sourcing and claim discipline
-- internal links
-- metadata intent fit
+- audience
+- intent
+- originality
+- sourcing
+- E-E-A-T/YMYL review
+- usefulness
 
-GTM Agent owns:
-
-- search performance loop
-- Search Console readout
-- organic landing-page review
-- high-impression / low-CTR triage
-- distribution connection
-
-CTO owns:
+Technical visibility owner:
 
 - crawlability
 - indexability
@@ -245,17 +221,26 @@ CTO owns:
 - structured data
 - mobile/page experience
 
-Founder owns:
+Search performance owner:
 
-- strategic topic approval
-- sensitive positioning
-- new audience approval
-- high-risk health or claim judgment
+- Search Console review
+- impressions/clicks/CTR
+- indexing triage
+- top-page analysis
+- refresh/consolidate recommendations
+
+Strategic approval owner:
+
+- new topic areas
+- high-risk claims
+- major site architecture changes
+- external SEO vendor approval
+- decisions that affect brand trust
 
 ## Status
 
 Status: Canonical
 
-Owner: Editorial Systems / GTM / CTO
+Owner: Search / Editorial / Technical Operations
 
-Scope: StrongPath Google Search Governance
+Scope: Generic Google Search Operating Standard
