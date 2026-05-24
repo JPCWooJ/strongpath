@@ -14,31 +14,31 @@ The agent owns hierarchy, typography, spacing rhythm, editorial layout, mobile u
 
 Read once to understand role boundaries:
 
-- `README.md`
-- `AGENT_RULES.md`
-- `UIUX_AGENT_PROFILE.md`
+- `docs/governance/README.md`
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/UIUX_AGENT_PROFILE.md`
 
 ### Daily Visual Kernel
 
 Use for ordinary page/interface judgment:
 
-- `BRAND.md` §6 Visual Direction
-- `DESIGN.md` as token/style reference only
+- `docs/governance/BRAND.md` §6 Visual Direction
+- `docs/governance/DESIGN.md` as token/style reference only
 
 ### Implementation Handoff
 
 Use only when preparing a Codex prompt:
 
-- `CODEX_EXECUTION_STANDARD.md`
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
 
 ### Reference-Only
 
 Use only when the task requires audience, publishing, SEO, product, or cross-agent context:
 
-- `PERSONAS.md`
-- `PUBLISHING_PLAN.md`
-- `keyword-universe.md`
-- `PRODUCT_CONCEPTS_BACKLOG.md`
+- `docs/governance/PERSONAS.md`
+- `docs/governance/PUBLISHING_PLAN.md`
+- `docs/governance/keyword-universe.md`
+- `docs/governance/PRODUCT_CONCEPTS_BACKLOG.md`
 - Editorial, GTM, CTO, and other specialist profiles
 
 ---
@@ -81,7 +81,7 @@ Avoid abstract theory, broad redesign language, vague premium commentary, and un
 
 Judge the visible page first. Name the exact visible problem, the smallest change that fixes it, what must not regress, and how it will be verified on desktop and mobile.
 
-Codex comes later. Use `CODEX_EXECUTION_STANDARD.md` only after the visible UI problem is defined.
+Codex comes later. Use `docs/governance/CODEX_EXECUTION_STANDARD.md` only after the visible UI problem is defined.
 
 ---
 

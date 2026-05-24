@@ -8,7 +8,7 @@ Authority: Active StrongPath keyword reference. Inherits from BRAND.md, PERSONAS
 
 ## Purpose
 
-The seed vocabulary for every downstream SEO asset — pillar pages, satellite articles, internal linking architecture, paid-search negative lists, and AI-advisor topic coverage. Session 1 output. Session 2 turns selected clusters into article briefs. Session 3 turns briefs into the publishing calendar and internal linking map.
+Keyword reference for downstream SEO assets — pillar pages, satellite articles, internal linking architecture, paid-search negative lists, and AI-advisor topic coverage. Session 1 output. Session 2 turns selected clusters into article briefs. Session 3 turns briefs into the publishing calendar and internal linking map.
 
 Not a commitment to write about every keyword. A map of the terrain.
 
@@ -277,10 +277,10 @@ The 10 clusters that should become the first pillar pages and satellites. Sessio
 | 10 | "How to start lifting weights at 60" | M-14 | Margaret | P3 | Margaret verbatim. High-intent, low-competition. Commercial adjacency. |
 
 **Notes on the session 2 brief production.**
-- Each brief must identify primary persona-moment and pass the eunoia test for any David-facing piece (PROJECT_INSTRUCTIONS standing decision)
+- Each brief should identify primary persona-moment and pass the eunoia test for any David-facing piece (current governance standing decision)
 - Each brief must pre-flag claim-review posture per the skill (hedge hierarchy explicit in the outline)
 - Pillar pages target 2,500-3,500 words; satellite articles target 1,500-2,000 words (BP-04 floor is 1,500)
-- Every brief specifies: target keyword, secondary keywords, search intent, outline, 2 internal links in, 2 internal links out, CTA (quiz vs. product vs. lead magnet), persona + moment, pillar alignment, compliance flags
+- When SEO architecture or publish readiness is in scope, define useful internal links that serve the reader's next step first, along with target keyword, secondary keywords, search intent, outline, CTA (quiz vs. product vs. lead magnet), persona + moment, pillar alignment, and compliance flags
 
 ---
 
@@ -331,7 +331,7 @@ Session 2 brief pattern: cluster 5-8 related questions into a single FAQ section
 
 ## 7. "Her Words, Not Ours" Literal-Phrase Cluster
 
-Verbatim from PERSONAS.md §5 for Margaret and David. These are not keywords for metadata — they are phrases that must appear in article headlines, openers, and meta descriptions because they match the reader's internal monologue. Rank reward is secondary; trust signal is primary.
+Verbatim from PERSONAS.md §5 for Margaret and David. These are reader-language references, not keywords for metadata. Use them when they improve fit, clarity, or search intent; do not force them mechanically into article headlines, openers, or meta descriptions. Rank reward is secondary; trust signal is primary.
 
 **Margaret verbatim (use in opener / H2 / meta description):**
 - "I notice I'm getting weaker"
