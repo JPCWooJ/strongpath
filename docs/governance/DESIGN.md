@@ -1,267 +1,96 @@
-# Orson — Style Reference
-> Warm parchment elegance.
+# DESIGN.md
 
-**Theme:** light
+## Purpose
 
-Orson uses an academic-editorial design language, combining classic serif typography with subtle, sophisticated color gradients. The system emphasizes generous white space and a calming, almost analog, background tone. Interactions are minimal and text-focused, with outlines and understated hovers. The visual identity exudes trusted authority through a restrained palette and mature typographic choices, avoiding bold or high-contrast elements for actions.
+UI/UX token and style reference for StrongPath interfaces.
 
-## Tokens — Colors
+Use this file for visual consistency only. `BRAND.md` governs brand positioning and visual direction. If this file conflicts with `BRAND.md`, `BRAND.md` wins.
 
-| Name | Value | Token | Role |
-|------|-------|-------|------|
-| Parchment | `#f0ebdd` | `--color-parchment` | Page backgrounds, large content sections, subtle surface elevation |
-| Inkwell | `#302f2c` | `--color-inkwell` | Primary text, headings, accent borders, and semantic UI elements for structure and emphasis |
-| Activated Black | `#000000` | `--color-activated-black` | Strongest text contrast, button text and borders when a precise contrast is needed |
-| Sunbeam Gradient | `radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%)` | `--color-sunbeam-gradient` | Decorative background gradients, soft visual accents. The primary hue implies warmth and a gentle glow |
+---
 
-## Tokens — Typography
+## Visual Standard
 
-### Big Daily Short — Headlines, subheadings, and emphasized textual content. The custom font provides a sophisticated, almost editorial gravitas through its classic serif forms. Weight 300 for lead headlines feels light and refined, suggesting authority through understatement. · `--font-big-daily-short`
-- **Substitute:** Playfair Display
-- **Weights:** 300, 400
-- **Sizes:** 16px, 22px, 36px, 42px, 64px, 86px
-- **Line height:** 1.00, 1.12, 1.25, 1.50
-- **Role:** Headlines, subheadings, and emphasized textual content. The custom font provides a sophisticated, almost editorial gravitas through its classic serif forms. Weight 300 for lead headlines feels light and refined, suggesting authority through understatement.
+StrongPath should look editorial, institutional, calm, and trustworthy.
 
-### Basel Grotesk — Body text, navigation, and detailed content. Its clean, sans-serif structure balances the serif headlines, ensuring readability for longer passages. · `--font-basel-grotesk`
-- **Substitute:** Inter
-- **Weights:** 500
-- **Sizes:** 16px, 17px
-- **Line height:** 1.00, 1.41
-- **Role:** Body text, navigation, and detailed content. Its clean, sans-serif structure balances the serif headlines, ensuring readability for longer passages.
+It should not look like SaaS, influencer wellness, aggressive ecommerce, supplement marketing, generic startup design, or decorative design for its own sake.
 
-### Arial — Small functional text, legal disclosures, and system-level button labels where maximum legibility and neutrality are required. · `--font-arial`
-- **Substitute:** Arial
-- **Weights:** 400
-- **Sizes:** 13px
-- **Line height:** 1.20
-- **Role:** Small functional text, legal disclosures, and system-level button labels where maximum legibility and neutrality are required.
+---
 
-### Type Scale
+## Color Tokens
 
-| Role | Size | Line Height | Letter Spacing | Token |
-|------|------|-------------|----------------|-------|
-| caption | 13px | 1.2 | — | `--text-caption` |
-| body | 16px | 1.41 | — | `--text-body` |
-| subheading | 22px | 1.25 | — | `--text-subheading` |
-| heading | 36px | 1.25 | — | `--text-heading` |
-| heading-lg | 64px | 1.12 | — | `--text-heading-lg` |
-| display | 86px | 1 | — | `--text-display` |
+| Role | Hex | Use |
+|---|---:|---|
+| Deep Navy | `#0B2545` | Primary brand weight, hero sections, primary buttons |
+| Warm Gold | `#B8860B` | Accent only: CTAs, book callouts, small highlights |
+| Near Black | `#1A1D24` | Primary body copy |
+| Warm Gray | `#5A6472` | Secondary copy, captions, metadata |
+| Warm White | `#FAF8F5` | Page background |
+| Muted Teal | `#2E6171` | Sparse links or highlight accents |
+| Success Green | `#2D7A4F` | Confirmation states only |
+| Alert Red | `#8B2E2E` | Error states and medical disclaimers only |
 
-## Tokens — Spacing & Shapes
+Rules:
+- Navy carries authority.
+- Gold is a condiment, not a background.
+- Do not introduce vivid decorative colors.
 
-**Density:** comfortable
+---
 
-### Spacing Scale
+## Typography
 
-| Name | Value | Token |
-|------|-------|-------|
-| 8 | 8px | `--spacing-8` |
-| 9 | 9px | `--spacing-9` |
-| 10 | 10px | `--spacing-10` |
-| 12 | 12px | `--spacing-12` |
-| 14 | 14px | `--spacing-14` |
-| 18 | 18px | `--spacing-18` |
-| 30 | 30px | `--spacing-30` |
-| 40 | 40px | `--spacing-40` |
-| 60 | 60px | `--spacing-60` |
-| 90 | 90px | `--spacing-90` |
+| Role | Font | Fallback | Rule |
+|---|---|---|---|
+| Headlines | Tiempos Headline or Source Serif 4 | Georgia, serif | Editorial authority |
+| Body | Inter | system sans-serif | Readability |
+| UI elements | Inter | system sans-serif | Clarity |
 
-### Border Radius
+Rules:
+- Body copy minimum: 18px desktop, 17px mobile.
+- Do not use body weights below 400.
+- Use 500-600 only for emphasis or UI labels.
+- Headline hierarchy must be visibly clear before decorative refinements.
 
-| Element | Value |
-|---------|-------|
-| links | 40px |
+---
 
-### Layout
+## Spacing and Layout
 
-- **Section gap:** 30px
-- **Card padding:** 18px
-- **Element gap:** 12px
+Rules:
+- Whitespace should create calm reading momentum.
+- Sections need clear vertical separation.
+- Avoid dense card stacks.
+- Avoid competing CTAs above the fold.
+- One dominant action per section.
+- Mobile layouts must preserve readable line length, tap comfort, and clean headline wrapping.
 
-## Components
-
-### Ghost Button
-**Role:** Navigation links and secondary actions.
-
-Text in Activated Black or Inkwell on a transparent background, with a 0px border-radius, 10px vertical padding, and 0px horizontal padding. Borders are not visible by default but appear on hover for subtle feedback.
-
-### Navigation Link
-**Role:** Primary navigation items.
-
-Text in Inkwell (Big Daily Short, 16px) with 8px top/bottom padding and 9px left padding, 14px right padding. Applies a 40px border radius on hover/active states for a 'pill' shape.
-
-### Implicit Badge
-**Role:** Contextual labels or category indicators.
-
-Text in Inkwell without any background or border. Used for discrete labeling, similar to inline text but carrying semantic meaning. No padding or border-radius.
-
-## Do's and Don'ts
-
-### Do
-- Use Parchment (#f0ebdd) as the primary background color for all main content areas.
-- Employ Inkwell (#302f2c) for primary text content and essential structural elements like borders.
-- Apply Big Daily Short font at weight 300 for large headings and weight 400 for subheadings to maintain the editorial tone.
-- Ensure navigation links have 8px vertical padding and 9px-14px horizontal padding, with a 40px border-radius upon interaction.
-- Maintain a comfortable information density by using '12px' for element gaps and '30px' for section gaps.
-- Integrate the Sunbeam Gradient into hero sections or subtle atmospheric backgrounds to add warmth and depth.
-- Use radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%) for decorative background effects.
-
-### Don't
-- Avoid high-contrast, vivid colors for interactive elements; use the existing neutral palette with subtle activations.
-- Do not introduce strong visual borders or shadows on cards or buttons; maintain a flat, uncluttered aesthetic.
-- Do not deviate from the Big Daily Short and Basel Grotesk fonts for headlines and body text to preserve brand consistency.
-- Do not use letter-spacing other than 'normal' for any type roles, as it's not present in the extracted data and would alter the typographic rhythm.
-- Avoid heavy imagery or large visual elements that clash with the text-dominant, editorial aesthetic.
-- Do not use generic system borders; all borders should be 1px solid with Inkwell (#302f2c) as the color.
-- Avoid using any geometric shapes or sharp angles for interactive elements; prefer soft curves or ghost outlines.
-
-## Surfaces
-
-| Level | Name | Value | Purpose |
-|-------|------|-------|---------|
-| 1 | Canvas | `#f0ebdd` | Dominant background for the entire page, conveying a warm, inviting foundation. |
-| 2 | Accent Surface | `#ffb801` | Used subtly for decorative backgrounds, often in gradient form, creating gentle visual interest without sharp contrast. |
-| 3 | Interactive Text/Stroke | `#302f2c` | Main text, outlines for subtle interactive elements, and key structural lines. |
+---
 
 ## Imagery
 
-The visual language for imagery is minimal and functional. Photography, when present, is often contained within clear boundaries, focusing on human subjects or concepts relevant to professional settings. There are abstract, geometric line-art illustrations used as decorative elements, typically rendered in outline form with a strong visual connection to the brand's Inkwell color. Icons are simple, outlined, and monochromatic, used sparingly for navigation or conceptual representation. The density is text-dominant, with imagery serving as an atmospheric or explanatory complement rather than the primary focus, aiming for a refined, almost academic aesthetic.
+Prefer:
+- real customers, real gyms, real homes
+- research or academic imagery when supporting science
+- the book cover as an authority object
+- realistic editorial photography of adults doing real movement
 
-## Layout
+Avoid:
+- posed active-senior stock
+- beach/yoga/sunset wellness imagery
+- gym selfies
+- transformation imagery
+- pharmaceutical-ad aesthetics
+- decorative imagery that does not improve trust or comprehension
 
-The page uses a maximum content width that is visually contained, often with generous horizontal margins, giving a sense of spaciousness. The hero section features a centered headline over a soft radial gradient, creating an immediate atmospheric impression. Content sections generally employ consistent vertical spacing, creating an even rhythm. The arrangement often features centered text blocks or occasionally multi-column layouts, particularly for feature descriptions below decorative line-art. Navigation is a minimalist top bar with a hamburger menu for expanded options, reflecting a focus on clear, uncluttered presentation rather than constant access to many links. The overall density is spacious, emphasizing readability and a calm user experience.
+---
 
-## Agent Prompt Guide
+## Review Use
 
-Quick Color Reference:
-text: #302f2c
-background: #f0ebdd
-border: #302f2c
-accent: #ffb801
-primary action: no distinct CTA color
+When reviewing a page, use this file only to check:
+- palette consistency
+- typography consistency
+- spacing rhythm
+- visual hierarchy
+- mobile readability
+- CTA clarity
+- restrained commerce presentation
 
-Example Component Prompts:
-Create a hero section: Parchment background with an overlay of radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%). Headline 'Building Trust' using Big Daily Short, weight 64px, lineHeight 1.12, Inkwell color.
-Create a navigation link: Text 'Our Mission' using Basel Grotesk, 16px, weight 500, Inkwell color. Apply 8px top/bottom padding, 9px left padding, 14px right padding. On hover, apply a 40px border-radius with a 1px solid Inkwell border.
-Create a body text paragraph: Content 'Whether executives are steering through...' using Basel Grotesk, 16px, weight 500, Inkwell color, 1.41 lineHeight, 12px right margin.
-
-## Similar Brands
-
-- **AIGA** — Similar classic serif typography combined with sophisticated use of neutrals and generous white space for an editorial feel.
-- **The New York Times** — Shared emphasis on classic, authoritative typography and a restrained color palette, prioritizing content legibility and an academic tone.
-- **Future Fonts** — Similar focus on unique, high-quality typography as a core brand element, paired with sparse, elegant design.
-- **The Information** — Uses a light, parchment-like background with dark, traditional typography for a serious, content-focused feel.
-
-## Quick Start
-
-### CSS Custom Properties
-
-```css
-:root {
-  /* Colors */
-  --color-parchment: #f0ebdd;
-  --color-inkwell: #302f2c;
-  --color-activated-black: #000000;
-  --color-sunbeam-gradient: #ffb801;
-  --gradient-sunbeam-gradient: radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%);
-
-  /* Typography — Font Families */
-  --font-big-daily-short: 'Big Daily Short', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-basel-grotesk: 'Basel Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-arial: 'Arial', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Typography — Scale */
-  --text-caption: 13px;
-  --leading-caption: 1.2;
-  --text-body: 16px;
-  --leading-body: 1.41;
-  --text-subheading: 22px;
-  --leading-subheading: 1.25;
-  --text-heading: 36px;
-  --leading-heading: 1.25;
-  --text-heading-lg: 64px;
-  --leading-heading-lg: 1.12;
-  --text-display: 86px;
-  --leading-display: 1;
-
-  /* Typography — Weights */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-
-  /* Spacing */
-  --spacing-8: 8px;
-  --spacing-9: 9px;
-  --spacing-10: 10px;
-  --spacing-12: 12px;
-  --spacing-14: 14px;
-  --spacing-18: 18px;
-  --spacing-30: 30px;
-  --spacing-40: 40px;
-  --spacing-60: 60px;
-  --spacing-90: 90px;
-
-  /* Layout */
-  --section-gap: 30px;
-  --card-padding: 18px;
-  --element-gap: 12px;
-
-  /* Border Radius */
-  --radius-3xl: 40px;
-
-  /* Named Radii */
-  --radius-links: 40px;
-
-  /* Surfaces */
-  --surface-canvas: #f0ebdd;
-  --surface-accent-surface: #ffb801;
-  --surface-interactive-textstroke: #302f2c;
-}
-```
-
-### Tailwind v4
-
-```css
-@theme {
-  /* Colors */
-  --color-parchment: #f0ebdd;
-  --color-inkwell: #302f2c;
-  --color-activated-black: #000000;
-  --color-sunbeam-gradient: #ffb801;
-
-  /* Typography */
-  --font-big-daily-short: 'Big Daily Short', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-basel-grotesk: 'Basel Grotesk', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-arial: 'Arial', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Typography — Scale */
-  --text-caption: 13px;
-  --leading-caption: 1.2;
-  --text-body: 16px;
-  --leading-body: 1.41;
-  --text-subheading: 22px;
-  --leading-subheading: 1.25;
-  --text-heading: 36px;
-  --leading-heading: 1.25;
-  --text-heading-lg: 64px;
-  --leading-heading-lg: 1.12;
-  --text-display: 86px;
-  --leading-display: 1;
-
-  /* Spacing */
-  --spacing-8: 8px;
-  --spacing-9: 9px;
-  --spacing-10: 10px;
-  --spacing-12: 12px;
-  --spacing-14: 14px;
-  --spacing-18: 18px;
-  --spacing-30: 30px;
-  --spacing-40: 40px;
-  --spacing-60: 60px;
-  --spacing-90: 90px;
-
-  /* Border Radius */
-  --radius-3xl: 40px;
-}
-```
+Cut any design note that does not change what is visible on the page.
