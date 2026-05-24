@@ -90,7 +90,7 @@ Run the checks that match the change:
 - `npm run lint`
 - tests when touched behavior has tests
 - build when routing, config, or deployment behavior changes
-- screenshots for material UI changes
+- desktop/mobile verification for UI changes; screenshots only when needed for visual debugging, regression review, or when reviewers cannot reliably inspect the deployment directly
 
 UI review should include desktop and mobile. Significant public UI changes should include a deploy preview or local browser verification.
 
@@ -112,8 +112,10 @@ For code changes:
 
 ```txt
 FILES CHANGED
+KEY CHANGES
 VERIFICATION
 COMMIT / PR
+PUSH STATUS
 UNRESOLVED ISSUES
 ```
 
