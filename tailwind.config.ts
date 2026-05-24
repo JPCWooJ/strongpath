@@ -10,17 +10,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        parchment: "#f0ebdd",
-        inkwell: "#302f2c",
-        "activated-black": "#000000",
-        sunbeam: "#ffb801",
-        verdigris: "#526c64",
-        "verdigris-wash": "#dfe5dc",
+        navy: "#0B2545",
+        gold: "#B8860B",
+        "near-black": "#1A1D24",
+        "warm-gray": "#5A6472",
+        "warm-white": "#FAF8F5",
+        "muted-teal": "#2E6171",
+        "success-green": "#2D7A4F",
+        "alert-red": "#8B2E2E",
       },
       fontFamily: {
-        display: ["var(--font-big-daily-short)", "Playfair Display", "Georgia", "serif"],
-        body: ["var(--font-basel-grotesk)", "Inter", "system-ui", "sans-serif"],
-        utility: ["Arial", "system-ui", "sans-serif"],
+        display: ["Source Serif 4", "Georgia", "serif"],
+        headline: ["Source Serif 4", "Georgia", "serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+        utility: ["Inter", "system-ui", "sans-serif"],
       },
       fontSize: {
         caption: ["14px", { lineHeight: "1.2" }],
@@ -70,10 +73,6 @@ const config: Config = {
       },
       borderRadius: {
         links: "40px",
-      },
-      backgroundImage: {
-        "sunbeam-gradient":
-          "radial-gradient(41.33% 41.33%, rgb(255, 199, 56) 0px, rgba(248, 233, 226, 0) 100%)",
       },
       maxWidth: {
         editorial: "760px",

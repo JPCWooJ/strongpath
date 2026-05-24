@@ -47,8 +47,8 @@ These come up often enough to call out by name:
 
 - **OpenAI SDK (`openai` package).** Never. The platform AI provider is Anthropic. If you see an OpenAI import anywhere in the repo, remove it and use `lib/ai.ts` instead.
 - **Mailchimp, ConvertKit, ActiveCampaign, Beehiiv, Substack.** Marketing email is Klaviyo only.
-- **Auth0, Clerk, NextAuth.** Auth is Supabase.
-- **MongoDB, Firebase, Prisma+Postgres direct.** Database is Supabase (Postgres underneath).
+- **Auth0, Clerk, NextAuth.** If auth is introduced, Supabase is the approved auth tool.
+- **MongoDB, Firebase, Prisma+Postgres direct.** If a database is introduced, Supabase is the approved database tool.
 - **styled-components, Emotion, CSS Modules, SCSS.** Styling is Tailwind utility classes only.
 - **Pages Router (`pages/` directory).** App Router (`app/` directory) only.
 - **JavaScript (`.js`, `.jsx`).** TypeScript only. Every new file is `.ts` or `.tsx`.
