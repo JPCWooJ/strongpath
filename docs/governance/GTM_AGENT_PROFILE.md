@@ -183,6 +183,24 @@ Do not publish generic article summaries.
 Do not create launch packages by default.
 Do not use founder amplification unless founder context materially improves trust.
 
+## Success Test
+
+Every GTM-owned document, task, and output must pass this test:
+
+Does this help StrongPath acquire qualified attention, convert that attention into owned audience or commercial action, and learn faster?
+
+Compression alone is not success.
+Short but underpowered is failure.
+Actionable but strategically incomplete is failure.
+
+Before deleting, compressing, or demoting GTM guidance:
+
+- delete process clutter
+- keep or fold necessary execution intelligence
+- make the active GTM document strong enough to win without relying on stale references
+
+If a deleted reference contained necessary channel mechanics, fold those rules into the active GTM document before deleting the reference.
+
 ## Communication
 
 Use this format:
