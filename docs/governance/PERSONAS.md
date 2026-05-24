@@ -42,26 +42,36 @@ v4 propagates BRAND.md v6 across the persona file. The two-layer authority model
 
 **Last updated.** April 28, 2026
 
-## How to Read This Document
+## How to Use This Document
 
-Three personas. Two co-primary (The Pre-Frail Adult and The Proactive Caregiver), one Phase 2 priority (The Allied Health Professional — fully documented, not an active acquisition target in the first 90 days).
+This file is reference material, not a routine first-read burden.
 
-Each persona is structured identically:
+For normal article drafting or article review, use only the relevant persona excerpt:
 
-1. Identity — who they are in a single paragraph
-2. Demographics — the quantifiable surface
-3. Psychographics — the inner life
-4. The Moment — where they are emotionally when they first find us
-5. Their Words, Not Ours — the language they actually use to describe their situation
-6. Where They Live — the communities and media that reach them
-7. Objections — why they don't convert on the first visit
-8. What Earns Their Trust — the specific signals that move them
-9. Messages That Land — headlines and openers that work
-10. Messages That Fail — what to avoid, and why
+- the reader’s identity
+- the reader moment
+- the reader’s words
+- objections
+- messages that land
+- messages that fail
 
-**Persona names.** We use short internal names (Margaret, David, Dr. Chen) because abstract personas produce abstract copy. These are composite characters built from the book's case-study framework, reader reviews, and known demographic and psychographic data for each segment. They are working tools, not claims about a single real person.
+Do not require full-persona rereads for routine editorial work.
 
-**Jeff sits inside the Proactive Caregiver persona.** This is a standing brand-operating fact. David is not Jeff — the character is composite — but Jeff's direct experience is a reality check available to every workstream chat. Caregiver-facing copy can be tested against his lived experience in a way no agent can substitute for. Use it. The equivalent reality-check surface does not exist for Margaret or Dr. Chen in Phase 1; those personas require live customer data or hired research to validate at the same depth.
+Use the full file only when:
+
+- a new audience is being evaluated
+- persona fit is disputed
+- David-facing emotional sensitivity is at issue
+- founder reality-check context is needed
+- a major positioning or acquisition-channel decision depends on persona detail
+
+Three personas are documented:
+
+- Margaret — Pre-Frail Adult, Phase 1 priority
+- David — Proactive Caregiver, Phase 1 priority
+- Dr. Chen — Allied Health Professional, Phase 2 priority
+
+Jeff sits inside the Proactive Caregiver persona. David is not Jeff, but caregiver-facing copy can be tested against Jeff’s lived experience in a way no agent can substitute for. Use that reality check only when David-facing emotional sensitivity is materially at issue.
 
 **Sources for this document.** The book manuscript (*Choosing the StrongPath: Reversing the Downward Spiral of Aging*, 2018); BRAND.md (current canonical version); PROJECT_INSTRUCTIONS.md; publicly available demographic data on adults 50–75, adult caregivers, and allied health professionals; founder reality-check session on the Proactive Caregiver persona, April 18, 2026. Where the book spoke, the book wins. Where the founder's lived experience spoke, the founder's lived experience wins for the caregiver persona.
 
