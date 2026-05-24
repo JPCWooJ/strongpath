@@ -8,6 +8,14 @@ SEO exists to make useful, reliable content discoverable, crawlable, understanda
 
 SEO does not replace content value.
 
+This file is reference-only for Editorial. Use it only when search visibility, indexing, search-policy, or search-quality disputes are the active question.
+
+Daily article drafting and article-substance review are governed by:
+
+- `BRAND.md`
+- `EDITORIAL_STANDARDS.md`
+- the relevant `PERSONAS.md` excerpt only
+
 This standard follows Google Search source guidance. When SEO folklore conflicts with Google guidance, Google guidance wins.
 
 ## 1. Search Operating Thesis
