@@ -73,7 +73,7 @@ One operational reality to name at the top: this calendar assumes StrongPath can
 
 ### Structure
 
-Each week has either a publish target, a founder-review target, or both. The plan front-loads the pillar pages that unlock internal linking; satellites come later and benefit from the hub articles already being live.
+Each week has a publish target, an editorial-preparation target, or both. The plan front-loads the pillar pages that unlock internal linking; satellites come later and benefit from the hub articles already being live.
 
 ### Cadence pattern
 
@@ -85,7 +85,7 @@ Total: **12 articles across 13 weeks.**
 
 ### The calendar
 
-| Week | Publish | Under founder review | Content Writer drafting | Notes |
+| Week | Publish | Editorial preparation | Content Writer drafting | Notes |
 |---|---|---|---|---|
 | **W1** | **Brief 1 — Sarcopenia Pillar** | — | Brief 10 | Day 1. The educational backbone. Pillar 1 anchor. Every downstream article links back to this. |
 | **W2** | **Brief 10 — Book Page** | Brief 10 → live | Brief 7 | Authority moat visible on the site. Book affiliate live. BRAND.md §5 hierarchy satisfied. |
@@ -93,7 +93,7 @@ Total: **12 articles across 13 weeks.**
 | **W4** | **Brief 3 — Resistance Training for Older Adults** | Brief 3 → live | Brief 5 | Pillar 3 execution anchor. Highest commercial-intent pillar of the four. Links back to Briefs 1, 7. |
 | **W5** | **Brief 5 — How Much Protein for Older Adults** | Brief 5 → live | Brief 9 | Pillar 3 nutrition. Links to Briefs 1, 3. |
 | **W6** | **Brief 9 — How to Start Lifting Weights at 60** | Brief 9 → live | Brief 2 | Beginner-execution satellite. Margaret verbatim anchor. Links to Briefs 1, 3, 5. |
-| **W7** | *(review week)* | Brief 2 | Brief 4 | No publish this week. Founder uses reduced-publish week to catch up on review and for any mid-plan reassessment. |
+| **W7** | *(review week)* | Brief 2 | Brief 4 | No publish this week. Use reduced-publish week for editorial catch-up, source verification, and any mid-plan reassessment. |
 | **W8** | **Brief 2 — Strength Training for Women Over 50/60** | Brief 2 → live | Brief 6 | First commercial-intent pillar. Targets Margaret + the perimenopausal over-50 audience. Links to Briefs 1, 3, 5, 9. |
 | **W9** | **Brief 4 — Can an 85-Year-Old Get Stronger?** | Brief 4 → live | Brief 8 | Fiatarone evidence article. David-After setup. Links to Briefs 1, 3, 5, 7. |
 | **W10** | **Brief 6 — Signs of Muscle Loss** | Brief 6 → live | Brief 8 | Margaret self-diagnosis entry. Links to Briefs 1, 3, 5, 8, 9. |
@@ -120,7 +120,7 @@ Three architectural decisions drove the week-by-week ordering:
 
 ### Weeks that deliberately do NOT publish
 
-- **Week 7 is a review-only week.** No article ships. Reasoning: the founder-review bottleneck is real, and weeks 1–6 front-load substantial review work (two pillars + a caregiver pillar + a protein pillar). Week 7 lets the founder catch up without the calendar slipping. If week 7 is not needed, the Brief 2 publication can slide forward to week 7 and every subsequent article shifts forward, completing the calendar at week 12 instead of week 13.
+- **Week 7 is a review-only week.** No article ships. Reasoning: weeks 1–6 front-load substantial editorial work, source verification, and pillar-quality review. Week 7 creates room to protect quality without pretending the calendar can outrun review capacity. If week 7 is not needed, the Brief 2 publication can slide forward to week 7 and every subsequent article shifts forward, completing the calendar at week 12 instead of week 13.
 
 ### Scenario planning
 
@@ -128,9 +128,9 @@ Three realistic paths:
 
 **Path A (on schedule).** 12 articles in 13 weeks. What the calendar above describes.
 
-**Path B (1 article/week slips to 3 weeks per article).** Founder review is slower than hoped. 12 articles would take ~18 weeks (April–August). In that case: compress scope. Publish 10 (drop Briefs 6 and 8 to session 4); hit BP-04 minimum at week 14; skip the stretch satellites. This is an operational decision, not a strategic failure.
+**Path B (1 article/week slips to 3 weeks per article).** Editorial review and source verification are slower than hoped. 12 articles would take ~18 weeks (April–August). In that case: compress scope. Publish 10 (drop Briefs 6 and 8 to session 4); hit BP-04 minimum at week 14; skip the stretch satellites. This is an operational decision, not a strategic failure.
 
-**Path C (faster than expected).** Founder review is faster, or a writer is hired. 12 articles at 1.5/week = 8 weeks. In that case: accelerate to paid traffic sooner and use the extra weeks 9–13 for satellites that extend the 10-brief set (FAQ articles, test-specific satellites, supplement review articles once the session 1 Q1 "supplement keyword posture" decision is made).
+**Path C (faster than expected).** Editorial review is faster, or a writer is hired. 12 articles at 1.5/week = 8 weeks. In that case: accelerate to paid traffic sooner and use the extra weeks 9–13 for satellites that extend the 10-brief set (FAQ articles, test-specific satellites, supplement review articles once the session 1 Q1 "supplement keyword posture" decision is made).
 
 ### What gets published only after Day 90
 
