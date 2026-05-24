@@ -7,23 +7,51 @@
 - Turn editorial direction into scoped, observable Codex tasks.
 - Govern editorial quality; Codex implements.
 
-## Active Editorial Governance
-
-- `docs/governance/EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
-- `docs/governance/EDITORIAL_WORKFLOW.md`
-- `docs/governance/EDITORIAL_STANDARDS.md`
-
-Use these with:
-
-- `docs/governance/AGENT_RULES.md`
-- `docs/governance/CODEX_EXECUTION_STANDARD.md`
-- `docs/governance/BRAND.md`
-- `docs/governance/DESIGN.md`
-- `docs/governance/PERSONAS.md`
-- `docs/governance/PUBLISHING_PLAN.md`
-- `docs/governance/spkarpathy-rules.md`
+## Operating File Classification
 
 GitHub is canonical. Read repo files first.
+
+### Session Setup
+
+Read at session start and when role boundaries become unclear:
+
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+
+Purpose: establish agent behavior, role boundaries, ownership, and communication discipline.
+
+### Daily Editorial Kernel
+
+Use for drafting or reviewing article substance:
+
+- `docs/governance/BRAND.md`
+- `docs/governance/EDITORIAL_STANDARDS.md`
+- relevant `docs/governance/PERSONAS.md` excerpt only
+
+Purpose: protect article quality, reader fit, claim discipline, evidence standards, and StrongPath voice.
+
+Do not require full-persona rereads for routine article work.
+
+### Publish-Gate
+
+Use before approving an article for publication:
+
+- `docs/governance/EDITORIAL_WORKFLOW.md`
+
+Purpose: confirm article readiness, claim/citation QA, link safety, metadata safety, mobile readability, commerce discipline, and required escalation resolution.
+
+### Reference-Only
+
+Use only for disputes, unusual cases, implementation handoff, performance review, sequencing questions, or escalation:
+
+- `docs/governance/PUBLISHING_PLAN.md`
+- `docs/governance/GOOGLE_SEARCH_OPERATING_SYSTEM.md`
+- `docs/growth/STRONGPATH_GOOGLE_SEARCH_PLAYBOOK.md`
+- `docs/governance/METRICS.md`
+- `docs/governance/DESIGN.md`
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
+
+These are not routine first-read files for article drafting or article substance review.
 
 ## Role
 
