@@ -23,130 +23,52 @@ Do not build enterprise BI.
 - Conversion clarity beats attribution complexity.
 - Learning signals beat vanity metrics.
 
-## Primary KPIs
+## GTM Decision Metrics
 
-### Publishing
+Track only metrics that change GTM decisions.
 
-Track:
+### Public Distribution
 
-- articles published per week
-- publishing consistency
-- draft backlog
-- article update cadence
-
-Target:
-
-- 1-2 high-quality articles/week
-
-### Audience
-
-Track:
-
-- sessions
-- organic sessions
-- returning visitors
-- pages/session
-- average engagement time
-- top landing pages
-- top acquisition sources
-
-Google Search:
-
-- organic impressions
-- organic clicks
-- organic CTR
-- indexed pages / indexing errors
-- top organic landing pages
-- high-impression / low-CTR pages
-
-### Email
-
-Track:
-
-- total subscribers
-- subscriber growth/week
-- signup conversion rate
-- article email CTR
-- top signup pages
-
-### X/Twitter
-
-Track:
-
-- qualified article clicks from X
-- newsletter signups from X
+- qualified article clicks
 - saves/bookmarks
 - credible replies
 - relevant profile visits
 - repeat engagement from target networks
+- low-trust engagement or bad-faith replies
 
-Reference:
+### Email
 
-- `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`
+- subscriber growth
+- signup conversion rate
+- article email clicks
+- top signup pages
 
-### Quiz
-
-Track:
+### Conversion Paths
 
 - quiz starts
 - quiz completion rate
 - article-to-quiz conversion
-- abandonment points
+- book clicks
+- affiliate clicks where applicable
 
-### Commerce
+### Search
 
-Track:
+- organic clicks
+- organic CTR
+- top organic landing pages
+- high-impression / low-CTR pages
+- indexed pages / indexing errors
 
-- affiliate clicks
-- affiliate CTR
-- top affiliate pages
-- top-converting content
+## Weekly GTM Review
 
-## Review Cadence
+Every weekly GTM review must answer:
 
-Weekly:
+1. What earned qualified attention?
+2. What failed to earn signal?
+3. What converted to email, quiz, book, or affiliate action?
+4. What should be promoted, reframed, retired, held, or fixed?
 
-- publishing consistency
-- traffic movement
-- email growth
-- quiz conversion
-- top pages
-- X distribution signals
-
-Monthly:
-
-- content cluster performance
-- traffic-source quality
-- returning visitor trend
-- conversion-path performance
-- subscriber compounding
-
-## Dashboard Standard
-
-Preferred:
-
-- Vercel Analytics
-- GA4
-- Beehiiv metrics
-- lightweight spreadsheet tracking
-- simple KPI summaries
-
-Avoid:
-
-- custom BI
-- premature attribution modeling
-- over-instrumentation
-- vanity dashboards
-
-## Warnings
-
-Do not:
-
-- optimize for traffic spikes
-- chase low-quality acquisition
-- distort editorial quality for clicks
-- create SEO-content farms
-- overreact to short-term volatility
+No weekly review is complete without a decision.
 
 ## Status
 
