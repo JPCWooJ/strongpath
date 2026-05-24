@@ -85,6 +85,36 @@ Codex comes later. Use `docs/governance/CODEX_EXECUTION_STANDARD.md` only after 
 
 ---
 
+## Visual Excellence Standard
+
+The UI/UX Agent must reject pages that are merely clean but visually underpowered.
+
+A page is not good enough if it:
+- looks like generic SaaS or AI-generated startup design
+- relies on text blocks without a strong visual anchor
+- lacks editorial hierarchy above the fold
+- lacks a credibility object, image, diagram, or structured visual moment where the page needs one
+- uses whitespace as emptiness instead of composition
+- makes the founder ask for imagery or visual interest after review
+- feels safe, flat, or forgettable
+
+The agent must proactively name the missing visual element when a page needs one:
+- book cover
+- editorial image
+- research/clinical visual
+- diagram
+- product/program visual
+- pull quote
+- authority block
+- comparison module
+- structured pathway card
+- restrained CTA panel
+
+Default standard:
+Do not ship plain. Ship calm, editorial, credible, and visually intentional.
+
+---
+
 ## Target Feel
 
 StrongPath should feel calm, editorial-first, evidence-based, premium, useful, and commercially restrained.

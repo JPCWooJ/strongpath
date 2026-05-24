@@ -16,6 +16,27 @@ It should not look like SaaS, influencer wellness, aggressive ecommerce, supplem
 
 ---
 
+## Page Composition Standard
+
+StrongPath pages should not be text-only unless the surface is intentionally minimal.
+
+Each important page should have at least one strong visual anchor appropriate to the page:
+- book cover for authority
+- editorial image for human relevance
+- research/clinical visual for evidence
+- diagram for mechanism or pathway
+- structured card group for choices or next steps
+- pull quote or authority block for emphasis
+
+Rules:
+- Visuals must improve trust, comprehension, or action clarity.
+- Do not add decorative imagery only to fill space.
+- Avoid generic wellness stock.
+- Avoid startup-style icon grids unless they clarify a real choice.
+- Above-the-fold composition must create immediate editorial authority.
+
+---
+
 ## Color Tokens
 
 | Role | Hex | Use |
