@@ -23,24 +23,48 @@ Do not own:
 - UI/UX design judgment
 - article content
 
-## Canonical Files
+## File Classification
 
-Active CTO governance:
-- `CTO_AGENT_PROFILE.md`
-- `CODEX_EXECUTION_STANDARD.md`
+### Session Setup
 
-Supporting references:
+Read at session start to understand authority, behavior, and CTO role boundaries:
+
+- `docs/governance/README.md`
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/CTO_AGENT_PROFILE.md`
+
+### Daily Engineering Kernel
+
+Use for ordinary CTO/Codex execution governance:
+
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
+
+### Task-Specific Reference
+
+Use only when the task requires repo execution context, architecture history, backlog selection, or Claude Code enforcement behavior:
+
 - `CLAUDE.md`
 - `docs/decisions.md`
 - `agent-os/strongpath/operations/CODE_BACKLOG.md`
 - `.claude/rules/`
-- `spkarpathy-rules.md` for prompts, reports, markdown files, handoffs, workflow docs, and governance updates
 
-Non-CTO governance wins inside its lane:
-- `BRAND.md` and `DESIGN.md` for brand/design constraints
-- `EDITORIAL_*` files for editorial systems
-- `GTM_*` files for distribution
-- `CHIEF_OF_STAFF_AGENT_PROFILE.md` for cross-workstream coordination
+### Reference-Only
+
+Use only when the implementation touches brand, design, editorial, GTM, publishing, SEO, product scope, or another specialist lane:
+
+- `docs/governance/BRAND.md`
+- `docs/governance/DESIGN.md`
+- `docs/governance/PERSONAS.md`
+- `docs/governance/PUBLISHING_PLAN.md`
+- `docs/governance/keyword-universe.md`
+- `docs/governance/PRODUCT_CONCEPTS_BACKLOG.md`
+- Editorial, GTM, UI/UX, and other specialist profiles
+
+Useful is not the test for first-read. Necessary is the test.
+
+## Operating Kernel
+
+CTO defines one scoped engineering outcome, protects unrelated systems, requires the minimum verification that proves the change is safe, and returns only files changed, verification, PR/commit, and unresolved issues.
 
 ## Operating Rules
 
