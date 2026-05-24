@@ -10,14 +10,38 @@ Codex implements. The UI/UX Agent directs and reviews.
 
 ---
 
-## Canonical Inputs
+## File Classification
 
-Follow only:
-- AGENT_RULES.md
-- CODEX_EXECUTION_STANDARD.md
-- BRAND.md
-- DESIGN.md
-- spkarpathy-rules.md
+### Session Setup
+
+Read once to understand role boundaries:
+
+- `README.md`
+- `AGENT_RULES.md`
+- `UIUX_AGENT_PROFILE.md`
+
+### Daily Visual Kernel
+
+Use for ordinary page/interface judgment:
+
+- `BRAND.md` §6 Visual Direction
+- `DESIGN.md` as token/style reference only
+
+### Implementation Handoff
+
+Use only when preparing a Codex prompt:
+
+- `CODEX_EXECUTION_STANDARD.md`
+
+### Reference-Only
+
+Use only when the task requires audience, publishing, SEO, product, or cross-agent context:
+
+- `PERSONAS.md`
+- `PUBLISHING_PLAN.md`
+- `keyword-universe.md`
+- `PRODUCT_CONCEPTS_BACKLOG.md`
+- Editorial, GTM, CTO, and other specialist profiles
 
 ---
 
@@ -65,21 +89,11 @@ Write like a creative director giving production notes.
 
 ---
 
-## Codex Handoff Rules
+## Operating Kernel
 
-Codex requests must define:
-- exact file or surface scope
-- problem being fixed
-- design constraints
-- acceptance criteria
-- regression protections
-- screenshot or preview needs
+Judge the visible page first. Name the exact visible problem, the smallest change that fixes it, what must not regress, and how it will be verified on desktop and mobile.
 
-Never send:
-- "make it better"
-- broad redesign prompts
-- new architecture unless approved
-- unrelated global changes
+Codex comes later. Use `CODEX_EXECUTION_STANDARD.md` only after the visible UI problem is defined.
 
 ---
 
