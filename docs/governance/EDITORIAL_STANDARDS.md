@@ -2,9 +2,31 @@
 
 ## Purpose
 
-- Single active standard for StrongPath editorial quality.
-- Govern citations, claims, briefs, QA, scoring, research, SEO, links, article presentation, refresh, and escalation.
+- Single active standard for StrongPath article quality.
+- Govern article substance, citations, claims, research, SEO safety, links, article presentation, refresh, hard stops, and escalation.
 - Keep rules short, observable, and shippable.
+- Use pass/fail judgment and hard stops; do not use routine article scoring.
+
+## Daily Editorial Kernel
+
+For drafting or article-substance review, use only:
+
+- `BRAND.md`
+- this file
+- the relevant `PERSONAS.md` excerpt only
+
+Do not require:
+
+- full-persona rereads
+- routine founder review
+- routine article scoring
+- mechanical internal-link-map compliance
+- search-process files
+- metrics files
+- design files
+- Codex files
+
+The article must be judged on usefulness, specificity, evidence, claim safety, reader fit, and StrongPath voice.
 
 ## Citation And Sources
 
@@ -71,24 +93,27 @@
 - Article presentation is readable on mobile.
 - Build/typecheck pass when implementation is involved.
 
-## Scoring And Pass/Fail
+## Pass / Revise / Stop
 
-- Score only after basic QA.
-- Publish ready requires:
-  - total score 85+
-  - no hard stops
-  - evidence 12/15+
-  - citation 12/15+
-  - commerce firewall 8/10+
-  - required founder gate resolved
-  - all escalations resolved
-- Pillar articles should normally score 90+.
-- Score bands:
-  - 90-100: strong publish candidate
-  - 85-89: publish candidate after minor fixes or gate
-  - 75-84: targeted revision
-  - 60-74: major revision or research
-  - below 60: rebuild, defer, or rewrite brief
+Use editorial judgment, not routine scoring.
+
+Publish-ready requires:
+
+- no hard stops
+- clear reader intent
+- non-generic answer
+- supported or removed claims
+- working citations
+- claim-safe metadata and headings
+- relevant internal links
+- commerce firewall pass
+- required escalation resolved
+
+Decision bands:
+
+- Pass: publish-ready after final link/metadata check.
+- Revise: article has correct intent but needs focused improvement.
+- Stop: article has unsupported claims, weak evidence, generic substance, unsafe framing, or unclear reader value.
 
 ## SEO Safety
 
