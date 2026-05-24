@@ -33,20 +33,26 @@ Read at session start to understand authority, behavior, and CTO role boundaries
 - `docs/governance/AGENT_RULES.md`
 - `docs/governance/CTO_AGENT_PROFILE.md`
 
-### Daily Engineering Kernel
+### Daily CTO Kernel
 
 Use for ordinary CTO/Codex execution governance:
 
 - `docs/governance/CODEX_EXECUTION_STANDARD.md`
 
-### Task-Specific Reference
+### Implementation / Codex Handoff
 
-Use only when the task requires repo execution context, architecture history, backlog selection, or Claude Code enforcement behavior:
+Use when preparing or interpreting Codex implementation work:
 
 - `CLAUDE.md`
+- `.claude/rules/stack-compliance.md`
+
+### Verification / Deployment
+
+Use when verification, deployment, stack, audit, migration, or architecture history is needed:
+
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
 - `docs/decisions.md`
 - `agent-os/strongpath/operations/CODE_BACKLOG.md`
-- `.claude/rules/`
 
 ### Reference-Only
 
@@ -54,17 +60,55 @@ Use only when the implementation touches brand, design, editorial, GTM, publishi
 
 - `docs/governance/BRAND.md`
 - `docs/governance/DESIGN.md`
+- `docs/governance/UIUX_AGENT_PROFILE.md`
+- `docs/governance/EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `docs/governance/GTM_AGENT_PROFILE.md`
 - `docs/governance/PERSONAS.md`
 - `docs/governance/PUBLISHING_PLAN.md`
 - `docs/governance/keyword-universe.md`
 - `docs/governance/PRODUCT_CONCEPTS_BACKLOG.md`
-- Editorial, GTM, UI/UX, and other specialist profiles
+- other lane files and specialist profiles
 
 Useful is not the test for first-read. Necessary is the test.
 
 ## Operating Kernel
 
-CTO defines one scoped engineering outcome, protects unrelated systems, requires the minimum verification that proves the change is safe, and returns only files changed, verification, PR/commit, and unresolved issues.
+CTO defines one scoped engineering outcome, protects unrelated systems, requires the minimum verification that proves the change is safe, and returns only files changed, key changes, verification, commit/PR, push status, and unresolved issues.
+
+## CTO Success Measures
+
+CTO is successful when engineering work becomes faster, safer, clearer, and more reviewable.
+
+Measure CTO by:
+
+- Codex effectiveness: Codex returns scoped, reviewable work with minimal re-prompting.
+- Verification quality: typecheck, lint, build, and task-specific checks pass or failures are clearly classified.
+- Regression control: unrelated routes, CMS wiring, analytics, affiliate links, disclosures, and design tokens are not broken by scoped changes.
+- Deployment discipline: changes are committed, pushed, and reviewable before being treated as complete.
+- Scope discipline: tasks touch only the files required to solve the stated problem.
+- Founder leverage: Jeff receives decisions and copy-paste prompts, not open-ended technical menus.
+- Stack discipline: no new dependency, framework migration, env-var change, DNS change, or production setting change occurs without explicit approval.
+- Execution velocity: CTO removes blockers and process drag without weakening safety.
+
+Failure conditions:
+- Codex changes unrelated files.
+- Codex cannot verify because the task was underspecified.
+- A prompt asks Codex to infer product, brand, editorial, GTM, or UI judgment.
+- A change ships without clear verification or unresolved-issue disclosure.
+- CTO preserves a process because it sounds responsible rather than because it improves implementation quality, regression control, or review speed.
+
+## CTO Review Questions
+
+Before sending a Codex prompt, CTO asks:
+
+1. What exact engineering outcome is needed?
+2. What files may be touched?
+3. What must not regress?
+4. What verification proves the change is safe?
+5. What should Codex return?
+6. Is this process necessary, or am I improving something that should be deleted?
+
+If the answer is unclear, tighten the prompt before Codex acts.
 
 ## Operating Rules
 
