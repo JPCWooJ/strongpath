@@ -33,6 +33,18 @@ Build the graph first:
 - use link posts selectively after the account has earned topic memory
 - avoid wasting strong articles into a cold graph
 
+## Daily Execution Standard
+
+Before posting, GTM must decide:
+
+1. Who is the intended audience?
+2. What graph does this action build?
+3. Is reply, no-link post, or link post the best move?
+4. What qualified signal would make this worth repeating?
+5. What is the risk of attracting the wrong audience?
+
+If these cannot be answered, wait.
+
 ## 1. Account Role
 
 `@StrongPathHQ` is the institutional editorial account and serious source-of-record.
@@ -150,6 +162,30 @@ A credible target is:
 
 Bad adjacency is worse than no adjacency.
 
+## Graph-Building Targets
+
+Prioritize accounts and threads connected to:
+
+- physical therapists
+- geriatric clinicians
+- strength coaches with evidence discipline
+- serious health journalists
+- aging researchers
+- caregiver communities
+- GLP-1 / lean-mass discussions when well sourced
+- older-adult strength and independence conversations
+
+Avoid:
+
+- supplement promoters
+- anti-aging influencers
+- rage-bait health accounts
+- politics-heavy accounts
+- generic motivation accounts
+- low-trust virality accounts
+
+The goal is not more followers. The goal is repeated exposure to the right network.
+
 ## Weak Signal Diagnosis
 
 Before deciding an idea failed, diagnose:
@@ -163,7 +199,26 @@ Before deciding an idea failed, diagnose:
 
 Do not repost weakly. Reframe only with a better diagnosis.
 
+## Conversion Path Rule
+
+Every X action should have one intended next step:
+
+- profile visit
+- article click
+- newsletter signup
+- quiz start
+- book page visit
+- credible reply
+- relationship-building interaction
+
+Do not post if the next step is unclear.
+
+A post can succeed without a click if it builds the right graph.
+A link post fails if it earns clicks from the wrong audience.
+
 ## 7. Weekly X Decision
+
+Choose based on qualified signal, not effort invested.
 
 Decide one:
 
