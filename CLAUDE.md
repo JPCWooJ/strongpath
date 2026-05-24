@@ -62,10 +62,10 @@ Before declaring work complete, run the relevant checks:
 ```bash
 npm run typecheck
 npm run lint
-npm test
 ```
 
 Run `npm run build` when routing, config, deployment, or server behavior changes.
+Run tests only when a test script exists or when touched behavior has tests.
 
 For UI changes, verify desktop and mobile. If a dashboard, credential, or external account blocks verification, state exactly what remains unverified.
 
@@ -75,7 +75,9 @@ Use the standard completion format:
 
 ```txt
 FILES CHANGED
+KEY CHANGES
 VERIFICATION
 COMMIT / PR
+PUSH STATUS
 UNRESOLVED ISSUES
 ```
