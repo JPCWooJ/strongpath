@@ -28,6 +28,46 @@ Do not require:
 
 The article must be judged on usefulness, specificity, evidence, claim safety, reader fit, and StrongPath voice.
 
+## Research Tool Standard
+
+StrongPath health articles must use current external research before drafting or major revision.
+
+Use research tools when claims depend on:
+- sarcopenia, muscle loss, resistance training, protein, frailty, fall risk, hospitalization, surgery, supplements, safety, or clinical outcomes
+- current guidelines, medical consensus, or quantitative claims
+- search demand, keyword intent, or competing SERP positioning
+
+Required research posture:
+- use peer-reviewed research, reviews, meta-analyses, guidelines, NIH/NIA/CDC/Mayo/Harvard Health/ACSM, or academic medical centers
+- use Scite or equivalent literature tools for peer-reviewed support when available
+- use web/search tools for current institutional guidance and SERP reality when needed
+- use Semrush or equivalent search tools only for demand and discoverability questions, not article substance
+- never cite AI summaries, unsourced blogs, influencer posts, retailer pages, or competitor marketing as evidence
+
+No article should be drafted from memory when current evidence or search reality matters.
+
+## Human Voice Gate
+
+Before publish-ready review, every article must pass a human voice check.
+
+Reject or revise if the article:
+- sounds like generic AI health content
+- opens with broad setup instead of the reader's actual concern
+- repeats StrongPath points already made elsewhere without a new angle
+- uses filler transitions such as "it is important to note," "when it comes to," "let's explore," or "as we age"
+- explains research without translating it into a reader decision
+- lacks a concrete reader situation, objection, example, or tradeoff
+- feels safe and cited but emotionally flat
+
+A publishable StrongPath article must:
+- make the reader feel recognized
+- sound serious, direct, and human
+- connect evidence to a concrete decision or next step
+- add something distinct from nearby StrongPath articles
+- preserve trust without sounding clinical, academic, promotional, or mechanical
+
+If it does not sound like a serious human specialist wrote it for this reader, revise it.
+
 ## Citation And Sources
 
 - Specific health, safety, mechanism, intervention, nutrition, quantitative, or outcome claims need current, named, third-party support.
