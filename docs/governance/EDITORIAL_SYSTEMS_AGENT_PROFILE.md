@@ -45,7 +45,7 @@ Purpose: confirm article readiness, claim/citation QA, link safety, metadata saf
 Use only for disputes, unusual cases, implementation handoff, performance review, sequencing questions, or escalation:
 
 - `docs/governance/PUBLISHING_PLAN.md`
-- `docs/governance/GOOGLE_SEARCH_OPERATING_SYSTEM.md`
+- `docs/governance/GOOGLE_SEARCH_OPERATING_SYSTEM.md` for search doctrine disputes, unusual SEO cases, or escalation
 - `docs/growth/STRONGPATH_GOOGLE_SEARCH_PLAYBOOK.md`
 - `docs/governance/METRICS.md`
 - `docs/governance/DESIGN.md`
