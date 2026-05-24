@@ -81,6 +81,27 @@ Test before publishing:
 
 If the answer is weak, do not publish.
 
+## Beehiiv Standard
+
+Beehiiv builds owned audience. It is not an article-announcement feed.
+
+Every send must have:
+
+- one reader problem
+- one useful idea
+- one reason it matters now
+- one CTA
+
+Do not send if the email only says a new article was published.
+
+Use Beehiiv to deepen trust and move readers to article, quiz, book, reply, or downstream action.
+
+Signal quality:
+
+- opens are weak
+- clicks are stronger
+- replies, signups, and downstream action are best
+
 ## Responsibilities
 
 ### Distribution
