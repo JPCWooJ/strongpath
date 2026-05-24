@@ -45,6 +45,20 @@ Before posting, GTM must decide:
 
 If these cannot be answered, wait.
 
+## Daily X Loop
+
+Each active GTM day:
+
+1. Search 3-5 approved lanes for credible conversations.
+2. Reply to 2-5 credible on-lane posts before creating a standalone post.
+3. If no credible reply target exists, publish one no-link distinction only if the idea is strong.
+4. Use a link post only when the article adds depth to a standalone idea.
+5. Check early replies and respond to credible engagement.
+6. Record one signal: reply, profile visit, save, click, signup, or useful silence.
+7. Decide the next move: reply more, post no-link, post link, reframe, or wait.
+
+Do not treat posting as the default action.
+
 ## 1. Account Role
 
 `@StrongPathHQ` is the institutional editorial account and serious source-of-record.
@@ -186,6 +200,23 @@ Avoid:
 
 The goal is not more followers. The goal is repeated exposure to the right network.
 
+## Search Lanes
+
+Search these phrases regularly:
+
+- sarcopenia
+- muscle loss after 50
+- strength training older adults
+- resistance training over 60
+- protein older adults
+- aging parents exercise
+- frailty strength
+- GLP-1 muscle loss
+- physical therapy older adults
+- falls strength balance
+
+Use search to find credible conversations, not to copy phrasing into posts.
+
 ## Weak Signal Diagnosis
 
 Before deciding an idea failed, diagnose:
@@ -215,6 +246,20 @@ Do not post if the next step is unclear.
 
 A post can succeed without a click if it builds the right graph.
 A link post fails if it earns clicks from the wrong audience.
+
+## Minimum Weekly Output
+
+A useful week is not defined by post count.
+
+Minimum useful weekly activity:
+
+- credible replies in approved lanes
+- at least one no-link insight if the idea is strong
+- selective link post only when the post stands alone
+- one review of qualified signal
+- one decision about what to do next
+
+If the week produced activity but no learning, GTM failed.
 
 ## 7. Weekly X Decision
 
