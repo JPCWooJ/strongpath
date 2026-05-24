@@ -2,136 +2,76 @@
 
 ## Purpose
 
-- Define the minimum workflow for StrongPath articles.
-- Keep article production fast, evidence-safe, and low ceremony.
-- Point detailed standards to `EDITORIAL_STANDARDS.md`.
+- Define the publish-gate standard for StrongPath articles.
+- Prevent weak, unsupported, unsafe, or incomplete articles from being approved for publication.
+- Keep workflow lightweight so process does not replace editorial judgment.
 
-## Active Editorial Governance
+This file is not a drafting guide.
 
-- `EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
-- `EDITORIAL_WORKFLOW.md`
+Drafting and article-substance review are governed by:
+- `BRAND.md`
 - `EDITORIAL_STANDARDS.md`
+- the relevant `PERSONAS.md` excerpt only
 
-Detailed rules for citations, claims, briefs, QA, scoring, research, SEO, links, presentation, refresh, deprecation, hard stops, and escalation live in `EDITORIAL_STANDARDS.md`.
+## Publish-Gate Role
 
-## Core Rules
+Use this file only when an article is being considered for publish-ready status.
 
-- GitHub is canonical.
-- Simplest proven workflow wins.
-- Founder is not QA.
-- Founder review is for founder-level judgment only.
-- Template first for article presentation.
-- Deploy implementation work by default unless explicitly excluded.
-- After two failed editorial or visual iterations, switch to proven baseline or rollback.
-- No governance sprawl.
+Do not use this file to:
+- draft articles
+- force routine founder review
+- require full-persona rereads
+- require mechanical internal-link-map compliance
+- score articles by default
+- create extra workflow steps
 
-## Lifecycle
+## Publish-Ready Standard
 
-- Idea
-- Approved topic
-- Research packet
-- Brief
-- Draft
-- Editorial review
-- Claim/citation QA
-- Visual/mobile QA
-- Founder gate, only when required
-- Publish ready
-- Published
-- Refresh, merge, deprecate, or archive
+An article is publish-ready only when:
 
-Do not skip from draft to publish ready.
-
-## Topic Gate
-
-Approve only when clear:
-
-- reader
-- intent
-- article role
-- claim territory
-- evidence support
-- internal-linking role
-
-Defer unsafe claims, weak evidence, unclear reader need, duplicate intent, or premature commerce.
-
-## Brief Gate
-
-Minimum brief:
-
-- title
-- reader/persona
-- intent
-- article role
-- approved claims
-- do-not-claim list
-- source requirements
-- internal links
-- CTA direction
-- risk/founder questions, if any
-
-The brief is the contract. Cut or escalate unsupported additions.
-
-## QA Gate
-
-Before publish ready:
-
-- structure passes
-- brand/persona fit passes
-- claims are supported or removed
-- citations and source links work
-- metadata and headings are claim-safe
-- internal links are relevant and safe
-- commerce firewall passes
-- article presentation follows baseline
-- desktop/mobile pass
-- build/typecheck pass when implementation is involved
+- it answers one clear reader intent early
+- it is specific, useful, and non-generic
+- major claims are supported, hedged, or removed
+- citations resolve and sit close to the claims they support
+- title, headings, metadata, and CTA are claim-safe
+- internal links serve the reader's next step
+- evidence links, book links, internal links, and commerce links are not confused
+- commerce language does not exceed article evidence
+- medical, legal, affiliate, supplement, or disease-adjacent risks are resolved
+- article presentation is readable on mobile
+- no hard stops from `EDITORIAL_STANDARDS.md` remain
 
 ## Founder Gate
 
 Use founder review only for:
 
 - strategic positioning
-- pillar authority decisions
 - David-facing emotional sensitivity
-- medical/legal risk
-- commerce or affiliate sensitivity
-- book, founder, author, product, quiz, program, or platform framing
+- book, founder, author, platform, quiz, program, or product framing
+- medical/legal/commerce sensitivity
 - unresolved reviewer disagreement
+- new topic clusters or major pillar-positioning decisions
 
-Founder packet:
+Do not ask the founder to find routine QA defects.
+
+Founder packet must include:
 
 - exact decision needed
 - risk
 - recommendation
 - draft or deployment link
 
-Do not ask founder to find routine QA defects.
-
-## Publish Ready
-
-Publish ready means:
-
-- QA passed
-- no hard stops remain
-- required founder gate is resolved
-- sources and links are verified
-- title, metadata, headings, and CTA are claim-safe
-- page is deployable and readable on mobile
-
 ## Maintenance
 
-- Refresh when sources age out, links break, research changes, governance changes, article overlaps stronger page, or claim language no longer fits.
-- Merge or replace duplicate/weak pages.
-- Deprecate/archive inaccurate, unsupported, risky, or out-of-scope pages.
-- Do not leave deprecated pages in active reader pathways.
+Refresh, merge, replace, deprecate, or archive an article only when reader usefulness, evidence accuracy, safety, search clarity, or active reader pathways materially improve.
+
+Do not refresh for fake freshness, vanity SEO, or minor wording churn.
 
 ## Escalation Format
 
 - Issue
 - Location
 - Risk
-- Options
 - Recommendation
 
 ## Status
