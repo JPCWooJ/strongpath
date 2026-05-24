@@ -8,24 +8,46 @@ Authority: Active StrongPath publishing reference. Inherits from BRAND.md, PERSO
 
 ## Purpose
 
-Session 3 deliverable. Turns the 10 article briefs in `CONTENT_PLAN.md` into a sequenced publishing plan and an internal link architecture.
+Reference-only publishing sequence and internal-link map for the first StrongPath article cluster.
 
-Two halves:
+This file is not a daily drafting file and is not a daily article-substance review file.
 
-- **Part A — Calendar.** Week-by-week sequence. Tool-agnostic: Day 1 = first article published. Founder translates to real dates when the first article ships.
-- **Part B — Internal Link Map.** Which articles link to which, in what order, with anchor text specified. Built to be implemented alongside publishing — not retrofitted later.
+Use it only for:
 
-Metrics live in a separate file (`METRICS.md`) per the standing decision.
+- publication sequencing
+- planned pillar/satellite order
+- internal-link architecture questions
+- slug consistency
+- launch-path coordination
+- disputes about whether an article fits the initial cluster plan
+
+Article quality is governed by:
+
+- `BRAND.md`
+- `EDITORIAL_STANDARDS.md`
+- the relevant `PERSONAS.md` excerpt only
+
+## Classification
+
+Classification: Reference-only for Editorial.
+
+This file is not part of the Daily Editorial Kernel.
+
+Editorial uses it only when publication sequence, internal-link architecture, slug consistency, or cluster fit is the active question.
 
 ## How to read this file
 
-- **§1** — Planning assumptions. The model this plan is built on.
-- **§2** — The 90-day calendar (week 1 through week 13).
-- **§3** — The internal link map, full graph.
-- **§4** — Link-build sequence (what to wire when).
-- **§5** — Standing operational rules for the Content Writer chat.
-- **§6** — Founder checkpoints during the 90 days.
-- **§7** — Change log.
+Use only the section needed for the current publishing question:
+
+- §1 — Planning assumptions
+- §2 — 90-day article sequence
+- §3 — internal link map
+- §4 — link-build sequence
+- §7 — change log
+
+Do not use this file to force mechanical links during drafting.
+Do not use this file to require routine founder review.
+Do not use this file to override article quality judgment.
 
 ---
 
@@ -36,14 +58,14 @@ Per session 3 calibration (founder, April 21, 2026):
 | Decision | Value |
 |---|---|
 | **Day 1 anchor** | First article published. Not a fixed calendar date. Founder translates to real dates when Day 1 arrives (expected May–June 2026 after P0 fixes ship). |
-| **Writer model** | AI-first drafting (Content Writer chat) + Jeff founder review. |
-| **Throughput bottleneck** | Founder review, not drafting. |
+| **Writer model** | AI-assisted drafting plus Editorial review. Founder review only when required by `EDITORIAL_WORKFLOW.md`. |
+| **Throughput bottleneck** | Editorial quality review and source verification, not default founder review. |
 | **Realistic cadence** | 1–2 articles finalized per week. |
 | **90-day output target** | 12 articles published (matches BP-04 cadence of 2 articles per week for months 1–3). |
 | **Minimum-to-ship-paid-traffic** | 10 articles live per BP-04. 12 gives 2-article buffer above the floor. |
 | **Amazon Associates tag** | `stron02-20`. Use for every Amazon affiliate link across all articles. |
 
-One operational reality to name at the top: this calendar assumes the founder can sustain 1–2 articles of review per week. If review-time drops, the bottleneck shifts and the calendar slips. Session 6 (or whenever mid-plan) will reassess.
+One operational reality to name at the top: this calendar assumes StrongPath can sustain 1–2 high-quality articles per week after Editorial review and source verification. If article quality, sourcing, or review capacity drops, the calendar slips.
 
 ---
 
@@ -290,64 +312,6 @@ BP-09 is explicit: "no broken CTAs at launch." Placeholder pages are not broken 
 ### The one exception
 
 **Brief 1 publishes in week 1 with no upstream links to *it* yet.** That's fine. Brief 1's SEO value doesn't depend on incoming internal links from other StrongPath articles in week 1 — it depends on the external links and the page's own content depth. Incoming internal links from Briefs 2, 3, 4, etc., will start flowing in weeks 2, 4, etc., as those articles publish. By week 11, Brief 1 has 9 incoming internal links — full hub authority.
-
----
-
-## 5. Standing Operational Rules for Content Writer Chat
-
-When the Content Writer chat stands up (expected session 4 or 5), these are the rules it operates under. Captured here so the brief-handoff is clean.
-
-1. **Read CONTENT_PLAN.md first, always.** Every article draft starts with the brief in CONTENT_PLAN.md. No drafting without the brief.
-
-2. **Match brief structure exactly.** Outline, word count, internal links, CTAs, compliance flags, persona-voice anchors. Each brief is a contract. Deviate only with founder approval.
-
-3. **Use persona-voice anchors verbatim.** The "Her/His words, not ours" phrases are not suggestions. They appear in H2s, openers, or meta descriptions as specified.
-
-4. **Run every draft through the `ftc-fda-claim-review` skill before handing to founder.** Sentence-level review. Hedge hierarchy honored. Disclaimers present.
-
-5. **Brand Ambassador eunoia review for all David-facing drafts.** Briefs 4, 7, 8 mandate this. A David-facing draft that hasn't been eunoia-reviewed goes back to the Content Writer, not forward to the founder.
-
-6. **Cite book chapters exactly.** CONTENT_PLAN.md flags this as a founder question (open question 1). Content Writer does not fabricate chapter numbers. If the chapter isn't verifiable, the citation reads "as described in *Choosing the StrongPath*" without a chapter number — not "Chapter 4" unless Chapter 4 has been confirmed.
-
-7. **Respect the book/product firewall.** Research claims attach to the book. Product claims attach only to products we sell. Never the reverse. BRAND.md §9.1.
-
-8. **Every article ships with internal links wired to placeholder pages for not-yet-live articles.** Content Writer does not remove internal links just because the target isn't live. The Sanity implementation handles the placeholder pattern.
-
-9. **Affiliate tag `stron02-20` on every Amazon link.** Non-negotiable. The link doesn't ship with a wrong tag.
-
-10. **Draft in Sanity, not in Word.** The CMS is the canonical source per BP-08. Founder reviews in Sanity. `.docx` companion only if the founder explicitly requests one for a specific article.
-
----
-
-## 6. Founder Checkpoints During the 90 Days
-
-Moments across the 13-week plan when founder decisions, approvals, or reviews are required. Flagged here so they don't arrive as surprises.
-
-### Before Day 1 (week 0, the week before first publish)
-
-- **Answer the five founder questions from CONTENT_PLAN.md §4.** Most critical: book chapter references (§4 Q1) and family-adherence product posture in Brief 7 (§4 Q5). Without these, the Content Writer chat cannot start Brief 1 cleanly.
-- **Confirm Amazon Associates tag integration.** `stron02-20`. Verify the tag is set in Sanity as an environment variable and that the affiliate disclosure is in the article template footer.
-- **Brand Ambassador eunoia review for Brief 7 is already required before publish.** Schedule it now, not week 3.
-
-### Week 4 (end of foundation phase)
-
-- **Review Brief 1 performance at day 28.** Is it indexed in Google? Any traffic? Any backlinks? First data point on whether the SERP analysis predictions hold.
-- **Confirm or adjust the Week 7 review-week plan.** If review is on track, Week 7 is a catch-up week. If review is falling behind, Week 7 becomes mandatory buffer and downstream articles shift.
-
-### Week 6–7 (mid-plan review)
-
-- **Answer session 1 open question 1 (supplement keyword posture).** By week 7, first pillar is live and first commercial-intent pillar is imminent. If supplement reviews are going to land as stretch-satellites in weeks 12–13, the posture decision needs to be made by week 7.
-- **Assess founder review throughput.** Can the next 6 weeks sustain 1 article/week? Honest answer, not aspirational.
-
-### Week 11 (10-article minimum crossed)
-
-- **BP-04 paid-traffic gate opens.** First 10 articles live. Decision point: start Meta or Google Ads spending (session 5 for the Paid Media Buyer workstream), or hold for another 2–3 weeks of organic baseline first.
-- **Dr. Chen / clinician page decision** (session 1 open question 3). If the `/for-clinicians` page has not been built yet, decide whether to stand it up as a stretch-satellite in weeks 12–13 or defer to Phase 2.
-
-### Week 13 (Day 90)
-
-- **Phase 1 Day 90 retrospective.** Per PROJECT_INSTRUCTIONS, targets are: 1,200 subscribers, 4,000 organic sessions, $400–600 cumulative affiliate revenue, 45+ indexed pages. Measured in METRICS.md.
-- **Phase 2 go/no-go.** ACTIVE_VERTICALS.md frames Phase 2 as requiring Phase 1 targets to be hit. If hit, Phase 2 planning begins (supplement line, medical advisor hire, family-adherence app concept from PRODUCT_CONCEPTS_BACKLOG.md). If missed, retrospective on why and adjust.
 
 ---
 
