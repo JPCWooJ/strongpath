@@ -4,6 +4,23 @@ Significant technical decisions for the StrongPath repo. Each entry records what
 
 ---
 
+## 2026-05-24 — npm audit posture after Anthropic SDK patch
+
+**Status:** Accepted
+
+**Decision:** Treat the remaining npm audit findings as monitored framework/CMS migration inputs, not automatic fix targets.
+
+**Details:**
+- `@anthropic-ai/sdk` vulnerability was resolved by patch upgrade to `0.98.0`.
+- Remaining npm audit issues are primarily tied to Next, `eslint-config-next`, Sanity, and `next-sanity` dependency chains.
+- Do not run `npm audit fix` automatically.
+- Next/eslint remediation appears to require semver-major upgrade and must be handled as a planned migration, not a drive-by fix.
+- Sanity/next-sanity remediation path is unclear/major and must be handled carefully because Sanity Studio and blog CMS wiring are production-relevant.
+- Current posture: monitor and defer major framework/CMS upgrades until there is a scoped CTO-approved migration task.
+- Safe patches may be applied individually when they do not change framework/CMS major versions and verification passes.
+
+---
+
 ## 2026-04-25 — FTC disclosure enforcement: ESLint rule (P0-05)
 
 **Status:** Accepted
