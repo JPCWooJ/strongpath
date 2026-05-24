@@ -85,7 +85,7 @@ Total: **12 articles across 13 weeks.**
 
 ### The calendar
 
-| Week | Publish | Editorial preparation | Content Writer drafting | Notes |
+| Week | Publish | Editorial preparation | Next draft | Notes |
 |---|---|---|---|---|
 | **W1** | **Brief 1 — Sarcopenia Pillar** | — | Brief 10 | Day 1. The educational backbone. Pillar 1 anchor. Every downstream article links back to this. |
 | **W2** | **Brief 10 — Book Page** | Brief 10 → live | Brief 7 | Authority moat visible on the site. Book affiliate live. BRAND.md §5 hierarchy satisfied. |
@@ -269,7 +269,9 @@ Set these at first-publish and never change. Changing a URL slug breaks external
 
 ## 4. Link-Build Sequence
 
-Publishing happens one article per week. Internal links must be wired as each article goes live — not in a retrofit pass at week 14. The sequence:
+This section preserves the original reference link-build sequence.
+
+Use it only when publication sequence, slug consistency, or internal-link architecture is the active question. Do not use it to force mechanical internal-link compliance during drafting.
 
 ### How the link graph gets built over 13 weeks
 
@@ -293,7 +295,11 @@ Same pattern: each new publication triggers a round of link-swapping in every ea
 
 ### The "placeholder page" pattern
 
-Every article that isn't live yet gets a placeholder at its permanent URL slug. The placeholder contains:
+The original plan used a placeholder-page pattern for not-yet-live article URLs.
+
+This is publishing architecture reference only. It is not mandatory editorial doctrine for routine article drafting or article review.
+
+The placeholder contains:
 
 1. The article title ("Resistance Training for Older Adults" — exactly what it will be when published).
 2. A 40-50 word description of what the article covers. Written once in session 4 briefing; pulled from the CONTENT_PLAN.md meta description and opener.
@@ -319,9 +325,9 @@ BP-09 is explicit: "no broken CTAs at launch." Placeholder pages are not broken 
 
 | Date | Change | Session |
 |---|---|---|
-| April 21, 2026 | Initial version. 13-week calendar with 12-article output target. Full 61-link internal link graph for the 10 briefs + future satellites. Link-build sequence specified via placeholder-page pattern. Content Writer chat operating rules captured. Five founder-checkpoint moments across the 90 days flagged. | SEO Strategist session 3 |
+| April 21, 2026 | Initial version. 13-week calendar with 12-article output target. Full 61-link internal link graph for the 10 briefs + future satellites. Link-build sequence specified via placeholder-page pattern. Original operational rules and founder checkpoints were later removed during Editorial governance compression. | SEO Strategist session 3 |
 | April 24, 2026 | **v2 — BRAND.md v6 ripple.** Header inheritance chain updated to BRAND.md v6, PERSONAS.md v4, brand-references.md v2, CONTENT_PLAN.md v3. Author bio pages line deleted from "What gets published only after Day 90" — under v6 these pages cannot ship (book is the credibility anchor; author names appear only as the small-type credit line below the book title on the homepage book section and the Brief 10 book page, and inside the book cover image wherever rendered). One adjacent ripple folded in during production: §2 "Why this sequence" point 2 reframed BP-06 reference from "author and book credibility" to "book credibility" — same v6 territory, mechanical fix. Founder bio page (Jeff Camp as operator) on the After Day 90 list stands; v6 carves Jeff's first-person About page voice as the explicit exception per BRAND.md §9.1 Rule 3. Backlog flag preserved from CONTENT_PLAN.md v3: keyword-universe.md §9 reference to author bio pages needs to be retired in that file's next pass. | Brand Ambassador session 6 (BRAND.md v6 ripple) |
 
 ---
 
-*This file is the session 3 deliverable for publishing and linking. Metrics live in `METRICS.md`. Session 4 will brief the Content Writer chat and hand off the calendar.*
+*This file is the session 3 deliverable for publishing and linking. Metrics live in `METRICS.md`.*
