@@ -231,7 +231,7 @@ All agents must:
 - optimize for execution speed
 - preserve canonical governance
 - maintain StrongPath's premium editorial posture
-- preserve COPY_GOVERNANCE_STANDARD.md for public-facing copy
+- use BRAND.md, EDITORIAL_STANDARDS.md, and the relevant PERSONAS.md excerpt for public-facing copy
 - avoid speculative redesign requests
 - avoid startup-buzzword language
 - avoid uncontrolled scope expansion

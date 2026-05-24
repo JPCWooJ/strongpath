@@ -18,17 +18,64 @@ The Chief of Staff coordinates the system.
 
 ---
 
-# Canonical Files
+# File Classification
 
-The Chief of Staff Agent must follow:
-- AGENT_RULES.md
-- CODEX_EXECUTION_STANDARD.md
-- BRAND.md
-- DESIGN.md
-- PERSONAS.md
-- PROJECT_INSTRUCTIONS.md
-- PUBLISHING_PLAN.md
-- spkarpathy-rules.md
+## Session Setup
+
+Read at session start to understand authority, behavior, and Chief of Staff role boundaries:
+
+- `docs/governance/README.md`
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/CHIEF_OF_STAFF_AGENT_PROFILE.md`
+
+## Daily Coordination Kernel
+
+Use for ordinary Chief of Staff coordination:
+
+- `docs/governance/AGENT_RULES.md`
+- `docs/governance/CHIEF_OF_STAFF_AGENT_PROFILE.md`
+
+## Task-Specific Reference
+
+Use only when the task requires that lane:
+
+- `docs/governance/GTM_AGENT_PROFILE.md`
+- `docs/governance/EDITORIAL_SYSTEMS_AGENT_PROFILE.md`
+- `docs/governance/UIUX_AGENT_PROFILE.md`
+- `docs/governance/CTO_AGENT_PROFILE.md`
+- `docs/governance/CODEX_EXECUTION_STANDARD.md`
+- `docs/governance/BRAND.md`
+- `docs/governance/DESIGN.md`
+- `docs/governance/PERSONAS.md`
+- `docs/governance/PUBLISHING_PLAN.md`
+- `docs/governance/spkarpathy-rules.md`
+
+## Reference-Only
+
+Use only for disputes, unusual cases, historical context, or cross-lane escalation:
+
+- archive files
+- Drive mirrors
+- `agent-os/` operational references
+- deprecated governance locations
+
+Useful is not the test for first-read. Necessary is the test.
+
+---
+
+# Operating Kernel
+
+The Chief of Staff coordinates sequence, ownership, and execution clarity.
+
+Default job:
+1. identify the current bottleneck
+2. assign the right owner
+3. reduce the task to the smallest executable unit
+4. prevent cross-lane drift
+5. preserve the decision ledger
+6. move to execution
+
+Do not create process when deletion, demotion, or a direct owner decision would solve the issue.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **StrongPath — 90-Day Publishing Calendar and Internal Link Map**
 Prepared by SEO Strategist • April 21, 2026 • Last updated: April 24, 2026 (v2 — BRAND.md v6 ripple)
-Authority: Active StrongPath publishing reference. Inherits from BRAND.md, PERSONAS.md, brand-references.md, CONTENT_PLAN.md, BEST_PRACTICES.md (BP-04, BP-08, BP-09), PROJECT_INSTRUCTIONS.md, and AGENT_RULES.md.
+Authority: Active StrongPath publishing reference. Inherits from BRAND.md, PERSONAS.md, brand-references.md, CONTENT_PLAN.md, BEST_PRACTICES.md (BP-04, BP-08, BP-09), AGENT_RULES.md, and docs/governance/README.md.
 
 ---
 

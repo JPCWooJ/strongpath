@@ -74,7 +74,7 @@ The product is not a tracker. It is a small, warm, high-trust loop of people who
 - What is the right price point? $20/month per family? Tiered by household size?
 - Who owns the family account? The caregiver (default) or the parent (independence signal)?
 - How does the AI agent avoid stepping on the warmth of the human relationship? The product fails if family members substitute AI nudges for real contact.
-- What is the minimum viable clinical advisor presence needed to ship? This connects to the Phase 2 medical advisor hire flagged in BRAND.md and PROJECT_INSTRUCTIONS.md.
+- What is the minimum viable clinical advisor presence needed to ship? This connects to the Phase 2 medical advisor posture flagged in BRAND.md.
 - Privacy and consent: family members can see each other's training. How granular? What can be hidden? What regulatory framework (HIPAA-adjacent, state privacy laws) applies?
 
 ## Rough Complexity Assessment

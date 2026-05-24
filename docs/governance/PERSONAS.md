@@ -73,7 +73,7 @@ Three personas are documented:
 
 Jeff sits inside the Proactive Caregiver persona. David is not Jeff, but caregiver-facing copy can be tested against Jeff’s lived experience in a way no agent can substitute for. Use that reality check only when David-facing emotional sensitivity is materially at issue.
 
-**Sources for this document.** The book manuscript (*Choosing the StrongPath: Reversing the Downward Spiral of Aging*, 2018); BRAND.md (current canonical version); PROJECT_INSTRUCTIONS.md; publicly available demographic data on adults 50–75, adult caregivers, and allied health professionals; founder reality-check session on the Proactive Caregiver persona, April 18, 2026. Where the book spoke, the book wins. Where the founder's lived experience spoke, the founder's lived experience wins for the caregiver persona.
+**Sources for this document.** The book manuscript (*Choosing the StrongPath: Reversing the Downward Spiral of Aging*, 2018); BRAND.md (current canonical version); publicly available demographic data on adults 50–75, adult caregivers, and allied health professionals; founder reality-check session on the Proactive Caregiver persona, April 18, 2026. Where the book spoke, the book wins. Where the founder's lived experience spoke, the founder's lived experience wins for the caregiver persona.
 
 ---
 

@@ -22,7 +22,7 @@ Role-specific profiles:
 - `GTM_AGENT_PROFILE.md`
 - `UIUX_AGENT_PROFILE.md`
 
-Lane-specific governance includes brand, design, copy, personas, editorial, GTM, metrics, publishing, keyword, and product-backlog files.
+Lane-specific governance includes brand, design, personas, editorial, GTM, metrics, publishing, keyword, and product-backlog files.
 
 ## Active Canonical Files
 
@@ -35,10 +35,8 @@ Lane-specific governance includes brand, design, copy, personas, editorial, GTM,
 - `GTM_EXECUTION_PIPELINE.md`
 - `UIUX_AGENT_PROFILE.md`
 - `BRAND.md`
-- `COPY_GOVERNANCE_STANDARD.md`
 - `DESIGN.md`
 - `PERSONAS.md`
-- `PROJECT_INSTRUCTIONS.md`
 - `spkarpathy-rules.md`
 - `PUBLISHING_PLAN.md`
 - `EDITORIAL_WORKFLOW.md`
