@@ -48,7 +48,7 @@ function ChoiceButton({
       aria-pressed={active}
       className={`border px-14 py-10 text-left font-body text-[16px] leading-[1.35] transition-colors ${
         active
-          ? 'border-[#0B2545] bg-[#0B2545] text-parchment'
+          ? 'border-[#0B2545] bg-[#0B2545] text-warm-white'
           : 'border-[#2E6171]/30 bg-[#FAF8F5] text-[#1A1D24] hover:border-[#0B2545]'
       }`}
     >
@@ -68,7 +68,7 @@ function FieldGroup({ title, children }: { title: string; children: React.ReactN
 
 function PreviewResult({ plan }: { plan: StarterPlan }) {
   return (
-    <section className="border border-[#2E6171]/28 bg-parchment p-16 md:p-20">
+    <section className="border border-[#2E6171]/28 bg-warm-white p-16 md:p-20">
       <p className="font-utility text-[13px] leading-none text-[#2E6171]">Your preview</p>
       <h2 className="mt-8 font-display text-[36px] font-normal leading-[1.06] text-[#0B2545]">
         {plan.level}
@@ -291,8 +291,8 @@ export function StarterPlanGenerator() {
         <PreviewResult plan={plan} />
 
         {status === 'idle' || status === 'loading' ? (
-          <form onSubmit={handleSubmit} className="border border-[#2E6171]/24 bg-[#0B2545] p-16 text-parchment md:p-20">
-            <p className="font-utility text-[13px] leading-none text-parchment/70">Unlock the full plan</p>
+          <form onSubmit={handleSubmit} className="border border-[#2E6171]/24 bg-[#0B2545] p-16 text-warm-white md:p-20">
+            <p className="font-utility text-[13px] leading-none text-warm-white/70">Unlock the full plan</p>
             <h2 className="mt-8 font-display text-[34px] font-normal leading-[1.06]">
               Send me the 2-week starter plan.
             </h2>
@@ -306,16 +306,16 @@ export function StarterPlanGenerator() {
               onChange={(event) => setEmail(event.target.value)}
               required
               placeholder="your@email.com"
-              className="mt-14 w-full border border-parchment/50 bg-transparent px-14 py-11 font-body text-[17px] leading-none text-parchment placeholder:text-parchment/55 focus:outline-none"
+              className="mt-14 w-full border border-warm-white/50 bg-transparent px-14 py-11 font-body text-[17px] leading-none text-warm-white placeholder:text-warm-white/55 focus:outline-none"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="mt-10 inline-flex min-h-[44px] w-full items-center justify-center bg-parchment px-18 py-11 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5] disabled:opacity-60"
+              className="mt-10 inline-flex min-h-[44px] w-full items-center justify-center bg-warm-white px-18 py-11 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5] disabled:opacity-60"
             >
               {status === 'loading' ? 'Sending...' : 'Show full plan'}
             </button>
-            <p className="mt-10 font-utility text-[12px] leading-[1.4] text-parchment/55">
+            <p className="mt-10 font-utility text-[12px] leading-[1.4] text-warm-white/55">
               Trust first: the preview is visible before capture. The full plan appears after signup.
             </p>
           </form>

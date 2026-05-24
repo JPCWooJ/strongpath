@@ -48,13 +48,13 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
 
   return (
     <main>
-      <section className="border-b border-inkwell">
+      <section className="border-b border-near-black">
         <div className="sp-container py-[72px]">
-          <p className="sp-kicker mb-18 text-inkwell/70">Topic</p>
-          <h1 className="font-display text-[54px] font-normal leading-[1] text-inkwell md:text-[82px]">
+          <p className="sp-kicker mb-18 text-near-black/70">Topic</p>
+          <h1 className="font-display text-[54px] font-normal leading-[1] text-near-black md:text-[82px]">
             {label}
           </h1>
-          <p className="mt-30 max-w-[680px] font-body text-[22px] font-medium leading-[1.45] text-inkwell/85">
+          <p className="mt-30 max-w-[680px] font-body text-[22px] font-medium leading-[1.45] text-near-black/85">
             StrongPath articles on {label.toLowerCase()}, written for careful readers who want
             evidence before advice.
           </p>

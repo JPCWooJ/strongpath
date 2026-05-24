@@ -294,7 +294,7 @@ function ArticleCommerceCta({ module }: { module: CommerceModule }) {
         </div>
         <div className={gridClassName}>
           {module.items.map((item) => (
-            <div key={item.label} className="border border-[#2E6171]/22 bg-parchment p-10">
+            <div key={item.label} className="border border-[#2E6171]/22 bg-warm-white p-10">
               <div className="flex aspect-[4/3] items-center justify-center bg-white p-8">
                 <Image
                   src={item.imageUrl}
@@ -315,7 +315,7 @@ function ArticleCommerceCta({ module }: { module: CommerceModule }) {
           href={module.href}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0B2545] px-18 py-12 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] sm:w-fit sm:min-w-[148px]"
+          className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0B2545] px-18 py-12 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f] sm:w-fit sm:min-w-[148px]"
         >
           Shop the list
         </a>
@@ -350,7 +350,7 @@ function KeyTakeaways() {
 
 function EvidenceBox() {
   return (
-    <section className="my-30 border border-[#2E6171]/34 bg-[#dfe5dc]/65 px-16 py-16 md:my-36 md:px-20 md:py-18">
+    <section className="my-30 border border-[#2E6171]/34 bg-muted-teal/10 px-16 py-16 md:my-36 md:px-20 md:py-18">
       <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">What the evidence says</p>
       <p className="mt-10 font-display text-[24px] leading-[1.18] text-[#0B2545] md:text-[28px]">
         Strength and function matter, not muscle size alone.
@@ -481,7 +481,7 @@ export function ArticleLayout({
     commerceCtaIndex >= 0 ? renderedArticleBody.slice(commerceCtaIndex + 1) : []
 
   return (
-    <main className="bg-parchment">
+    <main className="bg-warm-white">
       <article>
         <header className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
           <div className="sp-container py-26 md:py-34">
@@ -514,7 +514,7 @@ export function ArticleLayout({
               )}
             </div>
             {heroImage && (
-              <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-parchment md:mt-24">
+              <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-warm-white md:mt-24">
                 <Image
                   src={heroImage.src}
                   alt={heroImage.alt}

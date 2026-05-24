@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-parchment: #f0ebdd;
-  --color-inkwell: #302f2c;
-  --color-activated-black: #000000;
-  --color-sunbeam-gradient: #ffb801;
-  --color-verdigris: #526c64;
-  --color-verdigris-wash: #dfe5dc;
-  --gradient-sunbeam-gradient: radial-gradient(
+  --color-warm-white: #FAF8F5;
+  --color-near-black: #1A1D24;
+  --color-gold: #B8860B;
+  --color-muted-teal: #2E6171;
+  --gradient-gold-glow: radial-gradient(
     41.33% 41.33%,
-    rgb(255, 199, 56) 0px,
-    rgba(248, 233, 226, 0) 100%
+    rgba(184, 134, 11, 0.62) 0px,
+    rgba(250, 248, 245, 0) 100%
   );
 
   --font-arial: Arial, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -51,11 +49,11 @@
   --element-gap: 12px;
   --radius-links: 40px;
 
-  --surface-canvas: #f0ebdd;
-  --surface-accent-surface: #ffb801;
-  --surface-complementary-accent: #526c64;
-  --surface-complementary-wash: #dfe5dc;
-  --surface-interactive-textstroke: #302f2c;
+  --surface-canvas: #FAF8F5;
+  --surface-accent-surface: #B8860B;
+  --surface-complementary-accent: #2E6171;
+  --surface-complementary-wash: rgba(46, 97, 113, 0.1);
+  --surface-interactive-textstroke: #1A1D24;
 }
 
 @media (min-width: 768px) {
@@ -67,16 +65,16 @@
 @layer base {
   html {
     background: var(--surface-canvas);
-    color: var(--color-inkwell);
+    color: var(--color-near-black);
     text-rendering: optimizeLegibility;
   }
 
   body {
     min-height: 100vh;
     background:
-      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.22), rgba(248, 233, 226, 0) 34rem),
+      radial-gradient(circle at 50% 0%, rgba(184, 134, 11, 0.16), rgba(250, 248, 245, 0) 34rem),
       var(--surface-canvas);
-    color: var(--color-inkwell);
+    color: var(--color-near-black);
     font-family: var(--font-basel-grotesk), Inter, system-ui, sans-serif;
     font-size: var(--text-body);
     font-weight: var(--font-weight-medium);
@@ -88,7 +86,7 @@
   h2,
   h3,
   h4 {
-    color: var(--color-inkwell);
+    color: var(--color-near-black);
     font-family: var(--font-big-daily-short), "Playfair Display", Georgia, serif;
     font-weight: var(--font-weight-regular);
     letter-spacing: normal;
@@ -101,13 +99,13 @@
   }
 
   :focus-visible {
-    outline: 1px solid var(--color-inkwell);
+    outline: 1px solid var(--color-near-black);
     outline-offset: 4px;
   }
 
   ::selection {
-    background: rgba(255, 184, 1, 0.32);
-    color: var(--color-activated-black);
+    background: rgba(184, 134, 11, 0.28);
+    color: var(--color-near-black);
   }
 }
 
@@ -115,7 +113,7 @@
   .sp-page-shell {
     min-height: 100vh;
     background:
-      radial-gradient(circle at 50% 0%, rgba(255, 199, 56, 0.2), rgba(248, 233, 226, 0) 32rem),
+      radial-gradient(circle at 50% 0%, rgba(184, 134, 11, 0.14), rgba(250, 248, 245, 0) 32rem),
       var(--surface-canvas);
   }
 
@@ -160,7 +158,7 @@
   }
 
   .sp-rule {
-    border-color: var(--color-inkwell);
+    border-color: var(--color-near-black);
     opacity: 0.32;
   }
 }

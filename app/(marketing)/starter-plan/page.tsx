@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function StarterPlanPage() {
   return (
-    <main className="bg-parchment">
+    <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container py-24 md:py-36">
           <p className="font-utility text-[13px] leading-none text-[#2E6171]">StrongPath Starter Plan</p>

@@ -22,7 +22,7 @@ export default async function BlogPage() {
   const articles = publishedPosts.map(toArticleMeta)
 
   return (
-    <main className="bg-parchment">
+    <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/28 bg-[#FAF8F5]">
         <div className="sp-container grid gap-18 py-34 md:py-48 lg:grid-cols-[0.38fr_0.62fr] lg:items-end lg:gap-34">
           <div>

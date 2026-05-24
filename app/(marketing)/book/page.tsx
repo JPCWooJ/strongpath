@@ -33,7 +33,7 @@ const readingPath = [
 
 export default function BookPage() {
   return (
-    <main className="bg-parchment">
+    <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container grid gap-28 py-32 md:py-48 lg:grid-cols-[minmax(0,0.58fr)_minmax(300px,0.42fr)] lg:gap-48 lg:items-start">
           <div className="max-w-[780px]">
@@ -54,7 +54,7 @@ export default function BookPage() {
             <div className="mt-22 flex flex-col gap-10 sm:flex-row">
               <AmazonLink
                 asin="1626344760"
-                className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f]"
+                className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
               >
                 View on Amazon
               </AmazonLink>
@@ -76,7 +76,7 @@ export default function BookPage() {
             width={333}
             height={500}
             sizes="(min-width: 1024px) 333px, 220px"
-            className="w-full max-w-[250px] border border-[#2E6171]/24 bg-parchment md:max-w-[300px] lg:justify-self-end"
+            className="w-full max-w-[250px] border border-[#2E6171]/24 bg-warm-white md:max-w-[300px] lg:justify-self-end"
             priority
           />
         </div>

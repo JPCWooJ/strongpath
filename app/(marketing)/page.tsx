@@ -130,7 +130,7 @@ function ArticleMeta({
   tone?: 'dark' | 'light'
 }) {
   const date = formatArticleDate(publishedAt)
-  const color = tone === 'light' ? 'text-parchment/62' : 'text-[#5A6472]'
+  const color = tone === 'light' ? 'text-warm-white/62' : 'text-[#5A6472]'
 
   return (
     <div className={`flex flex-wrap gap-x-10 gap-y-4 font-utility text-[13px] leading-[1.35] ${color}`}>
@@ -166,7 +166,7 @@ function CommerceLink({
 
 export default function HomePage() {
   return (
-    <main className="bg-parchment">
+    <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container grid gap-26 py-24 md:py-36 lg:grid-cols-[minmax(0,1fr)_330px] lg:gap-44">
           <div className="max-w-[820px]">
@@ -181,7 +181,7 @@ export default function HomePage() {
             <div className="mt-18 flex flex-col gap-10 sm:flex-row sm:items-center">
               <Link
                 href="/blog/what-is-sarcopenia"
-                className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f]"
+                className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
               >
                 Read about sarcopenia
               </Link>
@@ -194,7 +194,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <aside className="border border-[#2E6171]/28 bg-parchment p-14 md:p-16">
+          <aside className="border border-[#2E6171]/28 bg-warm-white p-14 md:p-16">
             <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
               Amazon bestseller
             </p>
@@ -217,7 +217,7 @@ export default function HomePage() {
                 </p>
                 <AmazonLink
                   asin="1626344760"
-                  className="mt-12 inline-flex min-h-[42px] w-full items-center justify-center bg-[#0B2545] px-14 py-10 font-body text-[15px] font-medium leading-none text-parchment transition-colors hover:bg-[#16385f] sm:w-fit"
+                  className="mt-12 inline-flex min-h-[42px] w-full items-center justify-center bg-[#0B2545] px-14 py-10 font-body text-[15px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f] sm:w-fit"
                 >
                   Buy on Amazon
                 </AmazonLink>
@@ -263,7 +263,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#0B2545] text-parchment">
+      <section className="bg-[#0B2545] text-warm-white">
         <div className="sp-container py-30 md:py-44">
           {featuredGuide && (
             <article className="grid gap-20 md:grid-cols-[0.43fr_0.57fr] md:items-start md:gap-32">
@@ -275,14 +275,14 @@ export default function HomePage() {
                     width={1000}
                     height={700}
                     priority
-                    className="aspect-[4/3] w-full border border-parchment/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
+                    className="aspect-[4/3] w-full border border-warm-white/18 object-cover transition-opacity group-hover:opacity-90 md:aspect-[5/4]"
                     style={{ objectPosition: featuredGuide.image.objectPosition }}
                   />
                 </Link>
               )}
               <div className="md:pt-2">
                 <div>
-                  <p className="font-utility text-[13px] leading-none text-[#dfe5dc]">Featured article</p>
+                  <p className="font-utility text-[13px] leading-none text-warm-white/72">Featured article</p>
                   <div className="mt-12">
                     <ArticleMeta
                       publishedAt={featuredGuide.publishedAt}
@@ -291,25 +291,25 @@ export default function HomePage() {
                     />
                   </div>
                   {featuredGuide.useCase && (
-                    <p className="mt-14 border-l border-[#B8860B] pl-12 font-body text-[16px] leading-[1.5] text-parchment/74 md:text-[18px]">
+                    <p className="mt-14 border-l border-[#B8860B] pl-12 font-body text-[16px] leading-[1.5] text-warm-white/74 md:text-[18px]">
                       {featuredGuide.useCase}
                     </p>
                   )}
                 </div>
                 <div className="mt-16 md:mt-20">
                   <Link href={featuredGuide.href} className="group">
-                    <h2 className="max-w-[820px] font-display text-[40px] font-normal leading-[1.03] text-parchment group-hover:underline md:text-[62px] md:leading-[1]">
+                    <h2 className="max-w-[820px] font-display text-[40px] font-normal leading-[1.03] text-warm-white group-hover:underline md:text-[62px] md:leading-[1]">
                       {featuredGuide.title}
                     </h2>
                   </Link>
                   {featuredGuide.excerpt && (
-                    <p className="mt-14 max-w-[720px] font-body text-[18px] leading-[1.55] text-parchment/74 md:text-[21px]">
+                    <p className="mt-14 max-w-[720px] font-body text-[18px] leading-[1.55] text-warm-white/74 md:text-[21px]">
                       {featuredGuide.excerpt}
                     </p>
                   )}
                   <Link
                     href={featuredGuide.href}
-                    className="mt-18 inline-flex min-h-[42px] items-center bg-parchment px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
+                    className="mt-18 inline-flex min-h-[42px] items-center bg-warm-white px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
                   >
                     Read the article
                   </Link>
@@ -436,20 +436,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#0B2545] text-parchment">
+      <section className="bg-[#0B2545] text-warm-white">
         <div className="sp-container py-34 md:py-48">
           <div className="mx-auto max-w-[760px] text-center">
-            <h2 className="font-display text-[38px] font-normal leading-[1.05] text-parchment md:text-[58px]">
+            <h2 className="font-display text-[38px] font-normal leading-[1.05] text-warm-white md:text-[58px]">
               Get clearer about what helps.
             </h2>
-            <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-parchment/74 md:text-[19px]">
+            <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-warm-white/74 md:text-[19px]">
               Get practical notes on strength, protein, recovery, and helping a parent begin
               without pressure.
             </p>
             <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
               <EmailForm source="homepage_publication_baseline" />
             </div>
-            <p className="mx-auto mt-16 max-w-[620px] font-utility text-[13px] leading-[1.45] text-parchment/52">
+            <p className="mx-auto mt-16 max-w-[620px] font-utility text-[13px] leading-[1.45] text-warm-white/52">
               Educational content only. StrongPath does not diagnose, treat, cure, or replace care
               from your physician, physical therapist, or other qualified professional.
             </p>

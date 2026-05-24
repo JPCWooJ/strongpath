@@ -34,7 +34,7 @@ export function EmailForm({ source = 'unknown' }: { dark?: boolean; source?: str
 
   if (status === 'success') {
     return (
-      <p className="font-body text-[17px] font-medium leading-body text-inkwell">
+      <p className="font-body text-[17px] font-medium leading-body text-near-black">
         You&apos;re on the list. We&apos;ll be in touch.
       </p>
     )
@@ -52,17 +52,17 @@ export function EmailForm({ source = 'unknown' }: { dark?: boolean; source?: str
         onChange={(e) => setEmail(e.target.value)}
         placeholder="your@email.com"
         required
-        className="w-full border border-inkwell bg-transparent px-18 py-10 font-body text-[17px] font-medium leading-none text-inkwell placeholder:text-inkwell/60 focus:outline-none sm:w-72"
+        className="w-full border border-near-black bg-transparent px-18 py-10 font-body text-[17px] font-medium leading-none text-near-black placeholder:text-near-black/60 focus:outline-none sm:w-72"
       />
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="border border-inkwell bg-transparent px-18 py-10 font-body text-[16px] font-medium leading-none text-inkwell transition-colors hover:bg-inkwell hover:text-parchment disabled:opacity-60"
+        className="border border-near-black bg-transparent px-18 py-10 font-body text-[16px] font-medium leading-none text-near-black transition-colors hover:bg-near-black hover:text-warm-white disabled:opacity-60"
       >
         {status === 'loading' ? 'Submitting...' : 'Notify me'}
       </button>
       {status === 'error' && (
-        <p role="alert" className="mt-2 font-utility text-caption leading-caption text-inkwell sm:col-span-2">
+        <p role="alert" className="mt-2 font-utility text-caption leading-caption text-near-black sm:col-span-2">
           {errorMsg}
         </p>
       )}

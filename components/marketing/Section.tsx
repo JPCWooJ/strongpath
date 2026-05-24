@@ -9,7 +9,7 @@ type SectionProps = {
 export function Section({ children, className = '', variant = 'default' }: SectionProps) {
   const variantClass =
     variant === 'ruled'
-      ? 'border-y border-inkwell/30'
+      ? 'border-y border-near-black/30'
       : variant === 'narrow'
         ? 'py-60'
         : ''
