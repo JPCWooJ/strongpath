@@ -4,7 +4,21 @@
 
 Tell GTM how to write and judge StrongPath X output.
 
-Use `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md` for algorithm doctrine. This file governs public copy quality.
+This file governs public copy quality.
+
+## Algorithm Realities
+
+X rewards useful signal from the right audience.
+
+Operate from these rules:
+
+- relationship memory and topic consistency compound distribution
+- useful replies can be stronger distribution assets than standalone posts
+- negative feedback hurts more than casual likes help
+- links must extend value, not replace it
+- repeated hooks, repeated links, and bursts of similar posts weaken account quality
+- post only when the unit of value is strong
+- judge performance by qualified signal, not raw impressions
 
 ## 1. Account Role
 
@@ -80,6 +94,10 @@ Do not assume every article deserves multiple posts.
 
 Link only when the post is useful without the click.
 
+Do not post bursts of similar article links.
+
+Space reframes only when each one has a distinct idea.
+
 ## 6. Reply Rule
 
 Reply before posting when a credible thread is a better distribution opportunity.
@@ -92,6 +110,8 @@ A reply must add one:
 
 Link only when directly useful.
 
+Prioritize credible replies over quota posting.
+
 Pass on threads that are spammy, supplement-heavy, politics-heavy, rage bait, low-trust, or off-lane.
 
 ## 7. Weekly X Decision
@@ -103,3 +123,5 @@ Decide one:
 - retire
 - hold
 - run one controlled experiment
+
+Do not promote an angle that earned reach without qualified engagement.

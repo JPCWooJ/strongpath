@@ -45,7 +45,6 @@ Lane-specific governance includes brand, design, personas, editorial, GTM, metri
 - `PERSONAS.md`
 - `PUBLISHING_PLAN.md`
 - `GOOGLE_SEARCH_OPERATING_SYSTEM.md`
-- `X_ALGORITHM_OPERATING_SYSTEM.md`
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
