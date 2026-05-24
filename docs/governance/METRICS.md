@@ -82,7 +82,7 @@ Track:
 
 Reference:
 
-- `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+- `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`
 
 ### Quiz
 

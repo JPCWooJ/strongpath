@@ -396,7 +396,7 @@ GTM Agent prepares:
 
 Rules:
 
-- use `X_DISTRIBUTION_OPERATING_SYSTEM.md`
+- use `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`
 - every post stands alone
 - first-hour X coverage required
 - no duplicate scheduling
