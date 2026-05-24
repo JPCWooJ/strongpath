@@ -46,7 +46,6 @@ Lane-specific governance includes brand, design, copy, personas, editorial, GTM,
 - `keyword-universe.md`
 - `METRICS.md`
 - `PRODUCT_CONCEPTS_BACKLOG.md`
-- `X_DISTRIBUTION_OPERATING_SYSTEM.md`
 
 ## Active CTO Governance
 
