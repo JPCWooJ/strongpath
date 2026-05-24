@@ -112,6 +112,8 @@ const trustSignals = [
   },
 ]
 
+const [bookTrustSignal, ...supportingTrustSignals] = trustSignals
+
 const topics = [
   ['Sarcopenia', '/blog/tags/sarcopenia'],
   ['Strength After 50', '/blog/tags/strength-after-50'],
@@ -379,17 +381,46 @@ export default function HomePage() {
               Strength is how you keep more of your life.
             </h2>
           </div>
-          <div className="grid gap-12 md:grid-cols-3">
-            {trustSignals.map((item) => (
-              <article key={item.title} className="border-t border-[#2E6171]/28 pt-12">
-                <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
-                  {item.title}
-                </h3>
-                <p className="mt-8 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
-                  {item.copy}
-                </p>
+          <div className="grid gap-12">
+            {bookTrustSignal && (
+              <article className="grid gap-14 border border-[#2E6171]/24 bg-warm-white p-14 md:grid-cols-[132px_minmax(0,1fr)] md:items-center md:gap-20 md:p-18">
+                <Image
+                  src={bookCoverUrl}
+                  alt="Choosing the StrongPath book cover"
+                  width={333}
+                  height={500}
+                  sizes="(min-width: 768px) 132px, 92px"
+                  className="w-[92px] border border-[#2E6171]/18 bg-[#FAF8F5] md:w-full"
+                />
+                <div>
+                  <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
+                    Amazon bestseller
+                  </p>
+                  <h3 className="mt-10 max-w-[560px] font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[40px]">
+                    {bookTrustSignal.title}
+                  </h3>
+                  <p className="mt-9 max-w-[620px] font-body text-[17px] leading-[1.55] text-[#1A1D24]/76 md:text-[18px]">
+                    {bookTrustSignal.copy}
+                  </p>
+                </div>
               </article>
-            ))}
+            )}
+
+            <div className="grid gap-0 border-y border-[#2E6171]/24 md:grid-cols-2 md:border-y-0">
+              {supportingTrustSignals.map((item) => (
+                <article
+                  key={item.title}
+                  className="border-b border-[#2E6171]/22 py-14 last:border-b-0 md:border-b-0 md:border-l md:border-[#2E6171]/22 md:px-16 md:py-4 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
+                >
+                  <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-8 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
+                    {item.copy}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
