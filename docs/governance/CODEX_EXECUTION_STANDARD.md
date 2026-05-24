@@ -30,7 +30,7 @@ ACCEPTANCE CRITERIA
 <binary checks>
 
 DELIVERABLE
-<files changed, verification, commit/PR/review URL, unresolved issues>
+<files changed, key changes, verification, commit/PR, push status, unresolved issues>
 ```
 
 Keep the brief short. Remove anything that does not change implementation behavior.
@@ -92,7 +92,7 @@ Run the checks that match the change:
 - build when routing, config, or deployment behavior changes
 - desktop/mobile verification for UI changes; screenshots only when needed for visual debugging, regression review, or when reviewers cannot reliably inspect the deployment directly
 
-UI review should include desktop and mobile. Significant public UI changes should include a deploy preview or local browser verification.
+Significant public UI changes should include a deploy preview or local browser verification.
 
 If verification cannot be completed, say exactly what was not verified and why.
 
