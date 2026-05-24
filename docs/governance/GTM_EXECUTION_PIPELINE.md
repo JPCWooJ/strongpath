@@ -2,32 +2,22 @@
 
 ## Purpose
 
-Define the minimum execution loop for StrongPath GTM.
+GTM turns approved or live StrongPath assets into:
 
-GTM exists to turn approved StrongPath assets into qualified audience formation, conversion learning, and better public output.
+- one sharp public angle
+- one clear CTA
+- one measurable signal
+- one next decision
 
-## Operating Rule
+GTM does not create launch packages by default.
 
-Do not create launch packages by default.
-
-For each asset, GTM must identify:
-
-1. the one non-obvious idea
-2. the sharp public angle
-3. the channel purpose
-4. the CTA
-5. the signal to measure
-6. the next decision
-
-If the output only summarizes the article, do not publish it.
-
-## Owner Model
+## Owner Boundaries
 
 Editorial Systems owns:
 
 - article readiness
-- claims
 - sourcing
+- claims
 - internal links
 - CTA integrity
 
@@ -37,18 +27,18 @@ GTM owns:
 - X execution
 - Beehiiv packaging
 - selective founder amplification
-- source-quality review
-- weekly signal decision
+- signal review
+- next GTM decision
 
 CTO owns:
 
 - live URL
 - analytics
-- tracking
 - metadata implementation
+- tracking
 - technical publishing verification
 
-Founder reviews only when judgment risk exists:
+Founder reviews only for:
 
 - sensitive claim
 - new positioning
@@ -59,50 +49,34 @@ Founder reviews only when judgment risk exists:
 ## Execution Loop
 
 1. Confirm the asset is approved or live.
-2. Extract the one non-obvious idea.
-3. Create one sharp channel-specific angle.
-4. Attach one clear CTA.
-5. Distribute only if the asset is useful without the click.
-6. Measure signal quality.
-7. Decide: promote, reframe, retire, hold, or fix CTA.
+2. Extract one non-obvious idea.
+3. Write one sharp channel-specific angle.
+4. Attach one CTA.
+5. Hold if the output is not useful without the click.
+6. Distribute only if strong.
+7. Measure signal quality.
+8. Decide the next move.
 
-## Required GTM Checks
+## Stop Rules
 
-Before distribution:
+Do not publish if the output:
 
-- live URL or scheduled publish time is known
-- primary persona is clear
-- CTA path is clear
-- public copy does not merely summarize the article
-- public copy does not exceed the article’s claims
-- founder amplification is justified or omitted
-- KPI expectation is defined
+- summarizes the article
+- lacks a non-obvious idea
+- is not useful without the click
+- sounds like generic wellness copy
+- uses founder amplification without a clear trust reason
 
-## Weekly Signal Review
+## Add-Back Rule
 
-Track only what changes decisions:
+Deleted process returns only if the same execution failure happens twice and the missing rule would have prevented it.
 
-- qualified article clicks
-- newsletter signups
-- quiz/book/affiliate clicks where applicable
-- saves/bookmarks
-- credible replies
-- relevant profile visits
-- source quality
-- one qualitative learning
+## Signal Decisions
 
-Every review ends with one decision:
+Every GTM review ends with one decision:
 
 - promote
 - reframe
 - retire
 - hold
 - fix CTA
-
-## Status
-
-Status: Canonical
-
-Owner: GTM / Editorial Operations
-
-Scope: StrongPath GTM Execution Pipeline
