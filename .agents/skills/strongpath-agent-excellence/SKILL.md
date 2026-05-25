@@ -37,6 +37,13 @@ Examples:
 
 The agent must not rely only on internal preference. It must compare its work against serious external standards.
 
+Research discipline:
+- If best-in-class examples are current, market-dependent, or not already verified, the agent must research before judging.
+- Do not rely on memory for current tools, competitors, websites, GTM examples, platform norms, design patterns, or technical standards.
+- Use current external references when defining excellence.
+- Distinguish stable principles from current-market facts.
+- Cite or name the examples used to define the standard.
+
 Ask:
 1. Does this agent know what success looks like?
 2. Does this agent know what failure looks like?
