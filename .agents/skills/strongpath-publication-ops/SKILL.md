@@ -9,7 +9,6 @@ Reference, do not duplicate:
 - `docs/governance/spkarpathy-rules.md`
 - `docs/governance/GOOGLE_SEARCH_OPERATING_SYSTEM.md`
 - `docs/growth/STRONGPATH_GOOGLE_SEARCH_PLAYBOOK.md`
-- `docs/governance/X_ALGORITHM_OPERATING_SYSTEM.md`
 - `docs/growth/STRONGPATH_X_DISTRIBUTION_PLAYBOOK.md`
 - `docs/governance/GTM_EXECUTION_PIPELINE.md`
 - `docs/governance/METRICS.md`
@@ -48,6 +47,7 @@ Default return format:
 
 ```txt
 FILES CHANGED
+KEY CHANGES
 VERIFICATION
 COMMIT HASH
 PUSH STATUS

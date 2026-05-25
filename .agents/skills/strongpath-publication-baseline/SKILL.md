@@ -15,7 +15,7 @@ description: Use for StrongPath publication, article, blog index, homepage publi
 - Preserve the current Next.js, Vercel, Sanity, SEO, sitemap, and RSS architecture.
 - Keep article bodies narrow, readable, and mobile-first.
 - Keep spacing continuous; avoid oversized gaps and component stacks.
-- Use StrongPath navy, verdigris, and restrained gold only for hierarchy.
+- Use StrongPath navy, muted teal, warm white, near black, and restrained gold for hierarchy.
 - Preserve article copy and claims unless the user explicitly asks for editorial changes.
 - Founder is not QA.
-- Run Codex visual, mobile, build, typecheck, and deployment verification before returning.
+- Run build, typecheck, and task-specific verification before returning; use desktop/mobile verification for UI changes and screenshots only when needed.
