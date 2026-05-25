@@ -41,6 +41,36 @@ Approved when needed does not mean install by default. Add these tools only when
 
 ---
 
+## 1A. Stack Excellence Standard
+
+StrongPath uses the best stack for its stage, not the newest stack by default.
+
+The stack is excellent when it:
+- ships fast with low operational drag
+- keeps Codex changes simple and reviewable
+- protects SEO, CMS, analytics, affiliate links, and public trust surfaces
+- minimizes dependency and infrastructure complexity
+- uses boring, proven tools unless a sharper tool clearly improves execution
+- supports publication, email capture, affiliate monetization, and future quiz/product paths
+- can be verified with typecheck, lint, build, and deployment review
+- avoids major migrations unless the business or security case is clear
+
+Current major-version watchlist:
+- Next.js / React
+- Tailwind CSS
+- Sanity / next-sanity
+
+Do not upgrade major framework, styling, or CMS versions as a drive-by fix.
+Major upgrades require a scoped CTO migration task with:
+- reason
+- risk
+- files likely affected
+- rollback path
+- verification plan
+- production impact
+
+---
+
 ## 2. Explicitly forbidden
 
 These come up often enough to call out by name:
@@ -63,6 +93,13 @@ Before running `npm install <anything>`:
 2. If the new dependency is small, well-maintained, and covers a clear gap (utilities like `date-fns`, `zod`, `clsx`), it's usually fine - but still document it in `docs/decisions.md` with a one-line reason.
 3. If the new dependency competes with or replaces an approved tool (a different AI SDK, a different email client, a different CMS), **stop.** Do not install. Ask the founder. This is a stack decision, not an implementation choice.
 4. When adding any dependency, prefer the smallest, most actively-maintained option. Check last publish date, weekly downloads, and open issue count before installing.
+
+Before adding a new dependency, ask:
+- Does an approved tool already solve this?
+- Does this reduce implementation complexity or add it?
+- Will Codex understand and maintain it reliably?
+- Does this improve the business outcome now?
+- What breaks if we do not add it?
 
 ---
 
@@ -94,6 +131,8 @@ If you encounter a hardcoded key or URL in source code, stop and flag it. Do not
 ## 6. When the stack is wrong for the task
 
 Sometimes the canonical stack genuinely doesn't fit a task. When that happens:
+
+A stack change is justified only when the current stack blocks execution, creates material security risk, creates unacceptable maintenance drag, or prevents a business-critical product path.
 
 1. Say so explicitly. Don't silently install a competing tool.
 2. Write a proposed alternative in the plan.
