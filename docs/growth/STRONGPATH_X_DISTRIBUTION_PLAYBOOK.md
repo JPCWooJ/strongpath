@@ -6,6 +6,17 @@ Tell GTM how to write and judge StrongPath X output.
 
 This file governs public copy quality.
 
+## Excellence Standard
+
+Excellent StrongPath X execution:
+
+- builds repeated exposure in the right health, aging, strength, and caregiver networks
+- earns qualified attention that can move to article, email, quiz, book, reply, or relationship
+- makes StrongPath sound like a serious editorial source, not a wellness account
+- rejects technically complete posts that are bland, generic, or graph-wasting
+
+Weak X output wastes strong editorial assets into the wrong graph.
+
 ## Algorithm Realities
 
 X rewards useful signal from the right audience.
