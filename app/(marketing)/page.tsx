@@ -58,15 +58,15 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 const startingPoints = [
   {
     title: 'I want to stay strong.',
-    copy: 'Strength keeps your world from getting smaller.',
+    copy: 'For adults noticing that stairs, chairs, luggage, balance, or recovery feel different.',
     href: '/blog/what-is-sarcopenia',
-    action: 'Start here',
+    action: 'Start with muscle loss',
   },
   {
     title: 'I want to help someone I love.',
-    copy: 'You can help without taking over.',
+    copy: 'For adult children and families who want to help without taking over.',
     href: '/blog/help-aging-parents-stay-strong',
-    action: 'Start here',
+    action: 'Start with helping a parent',
   },
 ]
 
@@ -179,9 +179,6 @@ export default function HomePage() {
                 Book-backed guidance on sarcopenia, the age-related muscle loss that
                 changes strength, balance, and independence.
               </p>
-              <p className="mt-10 font-utility text-[13px] leading-none text-[#2E6171]">
-                Take the StrongPath, not the frail trail.
-              </p>
               <div className="mt-15 flex flex-col gap-10 sm:flex-row sm:items-center md:mt-18">
                 <Link
                   href="/blog/what-is-sarcopenia"
@@ -242,37 +239,52 @@ export default function HomePage() {
                 Start with the path that fits your life.
               </h2>
               <p className="mt-10 max-w-[340px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/72">
-                Two common reasons people arrive here, each with one useful place to begin.
+                Two ways people arrive here: protecting their own independence, or helping someone
+                they love act earlier.
+              </p>
+              <p className="mt-12 border-l-2 border-[#B8860B] pl-10 font-utility text-[13px] leading-[1.35] text-[#2E6171]">
+                Take the StrongPath, not the frail trail.
               </p>
             </div>
             <div>
               <div className="grid gap-12 md:grid-cols-2">
                 {startingPoints.map((item, index) => (
-                  <article key={item.title} className="border-y border-[#2E6171]/25 py-16 md:py-18">
+                  <article
+                    key={item.title}
+                    className="border border-[#2E6171]/26 bg-[#FAF8F5] p-16 md:p-18"
+                  >
                     <p className="font-utility text-[13px] leading-none text-[#2E6171]">
                       {String(index + 1).padStart(2, '0')}
                     </p>
-                    <h3 className="mt-10 font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
+                    <h3 className="mt-12 font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
                       {item.title}
                     </h3>
-                    <p className="mt-9 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
+                    <p className="mt-10 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
                       {item.copy}
                     </p>
                     <Link
                       href={item.href}
-                      className="mt-12 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                      className="mt-14 inline-flex min-h-[36px] items-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
                     >
                       {item.action}
                     </Link>
                   </article>
                 ))}
               </div>
-              <div className="mt-14 border-t border-[#2E6171]/20 pt-12">
+              <div className="mt-12 grid gap-10 border-y border-[#2E6171]/24 py-13 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+                <div>
+                  <p className="font-utility text-[13px] leading-none text-[#2E6171]">
+                    What does the science say?
+                  </p>
+                  <p className="mt-7 font-body text-[16px] leading-[1.5] text-[#1A1D24]/72 md:text-[17px]">
+                    Resistance training, protein, and recovery are the foundation behind both paths.
+                  </p>
+                </div>
                 <Link
                   href="/blog/resistance-training-older-adults"
-                  className="inline-flex border-b border-[#B8860B]/70 pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                  className="inline-flex min-h-[36px] items-center border-b border-[#B8860B]/70 pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
                 >
-                  What does the science say?
+                  Read the research
                 </Link>
               </div>
             </div>
