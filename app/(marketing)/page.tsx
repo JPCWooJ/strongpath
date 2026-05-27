@@ -10,7 +10,7 @@ import { EmailForm } from './EmailForm'
 export const metadata: Metadata = buildMetadata({
   title: 'StrongPath - Strength for life after 50',
   description:
-    'Practical strength guidance for adults and families who want to stay strong, active, and independent longer.',
+    'Practical strength guidance for adults after 50 and the families helping them stay strong, active, and independent longer.',
   path: '/',
 })
 
@@ -18,20 +18,26 @@ const bookCoverUrl = '/images/choosing-the-strongpath-cover.jpg'
 
 const homepageExcerptOverrides: Record<string, string> = {
   'what-is-sarcopenia':
-    'Muscle loss often shows up first in ordinary places: chairs, stairs, jars, luggage, and slower recovery.',
+    'Most families do not learn the word until weakness has already changed daily life. Stairs get harder. Chairs feel lower. Groceries feel heavier. A parent stops taking walks. We call it getting older, but often there is something more specific happening: age-related loss of muscle, strength, and function.',
   'help-aging-parents-stay-strong':
-    'How to help a parent have more good days without making them feel managed, pressured, or diminished.',
+    'How to help a parent stay strong without making them feel managed, pressured, or diminished.',
   'resistance-training-older-adults':
-    'What lifting means when the goal is standing up, carrying groceries, walking farther, and recovering better.',
+    'What strength training means when the goal is standing up, carrying groceries, climbing stairs, walking farther, and recovering better.',
   'protein-for-older-adults':
-    'How protein fits into strength and recovery without turning food into a sales pitch.',
+    'How protein supports strength and recovery without turning food into a sales pitch.',
   'how-to-start-lifting-weights-at-60':
-    'A practical first-month frame for lifting at 60 with the right challenge, recovery, and common sense.',
+    'A practical first-month guide for lifting at 60 with the right challenge, recovery, and common sense.',
+  'balance-and-mobility-after-50':
+    'Balance and mobility are part of daily strength: stairs, uneven ground, getting up and down, reaching, carrying, and recovering position.',
+}
+
+const homepageTitleOverrides: Record<string, string> = {
+  'what-is-sarcopenia': 'Sarcopenia may be the most common disease no one has ever heard of.',
 }
 
 const articleUseCases: Record<string, string> = {
   'what-is-sarcopenia':
-    'For the moment when stairs, chairs, luggage, or recovery start to feel different.',
+    'Sarcopenia may be the most common disease no one has ever heard of.',
   'help-aging-parents-stay-strong':
     'For adult children who want to help without making a parent feel managed.',
   'resistance-training-older-adults':
@@ -43,7 +49,7 @@ const articleUseCases: Record<string, string> = {
 }
 
 const featuredArticles = featuredFlagshipArticles.map((article) => ({
-  title: article.title,
+  title: homepageTitleOverrides[article.slug.current] ?? article.title,
   href: `/blog/${article.slug.current}`,
   excerpt: homepageExcerptOverrides[article.slug.current] ?? article.excerpt,
   useCase: articleUseCases[article.slug.current],
@@ -57,35 +63,35 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 
 const startingPoints = [
   {
-    title: 'I want to stay strong.',
-    copy: 'For adults noticing that stairs, chairs, luggage, balance, or recovery feel different.',
+    title: 'I want to stay independent.',
+    copy: 'For adults noticing that stairs, chairs, groceries, jars, balance, or recovery feel different.',
     href: '/blog/what-is-sarcopenia',
-    action: 'Start with muscle loss',
+    action: 'Start with sarcopenia',
   },
   {
-    title: 'I want to help someone I love.',
-    copy: 'For adult children and families who want to help without taking over.',
+    title: 'I want to help a parent.',
+    copy: 'For adult children and families who notice the walks getting shorter, the stairs taking longer, or the chair becoming harder to get out of.',
     href: '/blog/help-aging-parents-stay-strong',
-    action: 'Start with helping a parent',
+    action: 'Help a parent begin',
   },
 ]
 
 const nextSteps = [
   {
-    title: 'If you want the full story',
-    copy: 'Start with the book that gave StrongPath its name and its foundation.',
-    action: 'View the book',
-    href: 'amazon',
-  },
-  {
-    title: 'If your body feels different',
-    copy: 'Read the article on sarcopenia and why strength, muscle, and function change with age.',
+    title: 'Understand the problem.',
+    copy: 'Start with the article on sarcopenia and learn why muscle, strength, and independence are connected.',
     action: 'Read the article',
     href: '/blog/what-is-sarcopenia',
   },
   {
-    title: 'If you want help staying on the path',
-    copy: 'Get practical notes on strength, protein, recovery, and helping a parent begin.',
+    title: 'Help a parent begin.',
+    copy: 'Use the caregiver guide to start the conversation without pressure, shame, or fear.',
+    action: 'Read the guide',
+    href: '/blog/help-aging-parents-stay-strong',
+  },
+  {
+    title: 'Stay on the path.',
+    copy: 'Get practical notes on strength, protein, recovery, and helping a parent take the first step.',
     action: 'Get the notes',
     href: '/waitlist',
   },
@@ -93,16 +99,16 @@ const nextSteps = [
 
 const trustSignals = [
   {
-    title: 'The book started the path',
-    copy: 'Choosing the StrongPath helped name the problem: muscle loss changes how people live. StrongPath carries that work forward for adults and families today.',
+    title: 'The book gave the path its name.',
+    copy: 'Choosing the StrongPath named a problem many families recognize before they can explain it: when muscle and strength decline, life gets smaller. StrongPath carries that work forward with current research, plain guidance, and practical next steps.',
   },
   {
-    title: 'The work is practical',
-    copy: 'We focus on what people can actually use: strength training, protein, recovery, and small steps that support better days.',
+    title: 'The research points to action.',
+    copy: 'The useful advice is not complicated, but it has to be taken seriously: resistance training, enough protein, recovery, and progression. StrongPath exists to make those steps easier to understand and easier to begin.',
   },
   {
-    title: 'Families need a way in',
-    copy: 'When a parent is getting weaker, pressure rarely helps. A clear article, a better conversation, and one small next step can.',
+    title: 'Families need a better way to help.',
+    copy: 'A parent who is getting weaker does not need a lecture. They need dignity, encouragement, and a first step that feels possible. Caregivers need the same thing: a clear path that begins with love, not fear.',
   },
 ]
 
@@ -168,7 +174,7 @@ export default function HomePage() {
           <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-34">
             <div className="max-w-[820px]">
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-                Take the StrongPath. Stay strong for your family, your freedom, and the life you love.
+                Take the StrongPath. Stay strong for your family, freedom, and the life you love.
               </h1>
               <p className="mt-13 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:mt-15 md:text-[22px] md:leading-[1.55]">
                 Strength shows up in the moments that matter: walking with your spouse, playing with
@@ -210,10 +216,13 @@ export default function HomePage() {
                   Amazon bestseller
                 </p>
                 <p className="mt-9 font-display text-[27px] leading-[1.06] text-[#0B2545] md:text-[31px]">
-                  Choosing the StrongPath
+                  Choosing the StrongPath: Reversing the Downward Spiral of Aging
+                </p>
+                <p className="mt-6 font-body text-[14px] leading-[1.42] text-[#1A1D24]/68">
+                  by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018).
                 </p>
                 <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72 md:text-[16px]">
-                  Bestseller in Aging, Weight Training, Exercise, and Longevity.
+                  Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
                 </p>
                 <AmazonLink
                   asin="1626344760"
@@ -236,14 +245,11 @@ export default function HomePage() {
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
-                Start with the path that fits your life.
-              </h2>
-              <p className="mt-10 max-w-[340px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/72">
-                Two ways people arrive here: protecting their own independence, or helping someone
-                they love act earlier.
-              </p>
-              <p className="mt-12 border-l-2 border-[#B8860B] pl-10 font-utility text-[13px] leading-[1.35] text-[#2E6171]">
                 Take the StrongPath, not the frail trail.
+              </h2>
+              <p className="mt-10 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
+                Most people arrive here through one of two doors: protecting their own
+                independence, or helping someone they love act earlier.
               </p>
             </div>
             <div>
@@ -271,10 +277,11 @@ export default function HomePage() {
               <div className="mt-12 grid gap-10 border-y border-[#2E6171]/24 py-13 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
                 <div>
                   <p className="font-utility text-[13px] leading-none text-[#2E6171]">
-                    What does the science say?
+                    The path is practical.
                   </p>
                   <p className="mt-7 font-body text-[16px] leading-[1.5] text-[#1A1D24]/72 md:text-[17px]">
-                    Resistance training, protein, and recovery are the foundation behind both paths.
+                    Both paths start with the same foundation: resistance training, enough protein,
+                    recovery, and steady progression.
                   </p>
                 </div>
                 <Link
@@ -308,7 +315,7 @@ export default function HomePage() {
               )}
               <div className="md:pt-2">
                 <div>
-                  <p className="font-utility text-[13px] leading-none text-warm-white/72">Featured article</p>
+                  <p className="font-utility text-[13px] leading-none text-warm-white/72">Start here</p>
                   <div className="mt-12">
                     <ArticleMeta
                       publishedAt={featuredGuide.publishedAt}
@@ -337,7 +344,7 @@ export default function HomePage() {
                     href={featuredGuide.href}
                     className="mt-18 inline-flex min-h-[42px] items-center bg-warm-white px-18 py-10 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#FAF8F5]"
                   >
-                    Read the article
+                    Understand sarcopenia
                   </Link>
                 </div>
               </div>
@@ -402,7 +409,7 @@ export default function HomePage() {
           <div>
             <p className="font-utility text-[13px] leading-none text-[#2E6171]">Why StrongPath</p>
             <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-              Strength is how you keep more of your life.
+              Strength keeps life bigger.
             </h2>
           </div>
           <div className="grid gap-12">
@@ -455,7 +462,7 @@ export default function HomePage() {
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-                Start where the need is clearest.
+                Choose your next step.
               </h2>
             </div>
             <div className="grid gap-12 md:grid-cols-3">
@@ -498,8 +505,8 @@ export default function HomePage() {
               Get clearer about what helps.
             </h2>
             <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-warm-white/74 md:text-[19px]">
-              Get practical notes on strength, protein, recovery, and helping a parent begin
-              without pressure.
+              Practical notes on strength, protein, recovery, and helping a parent begin without
+              pressure.
             </p>
             <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
               <EmailForm source="homepage_publication_baseline" />
