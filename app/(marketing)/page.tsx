@@ -57,22 +57,16 @@ const [featuredGuide, ...supportingGuides] = featuredArticles
 
 const startingPoints = [
   {
-    title: "I'm noticing weakness",
-    copy: 'Maybe it is the stairs. Maybe it is a chair, a suitcase, or a walk that used to feel easy. Start by understanding what changes with age.',
+    title: 'I want to stay strong.',
+    copy: 'Strength keeps your world from getting smaller.',
     href: '/blog/what-is-sarcopenia',
-    action: 'Start with sarcopenia',
+    action: 'Start here',
   },
   {
-    title: 'I want to help a parent',
-    copy: 'When you love someone, you notice what they stop doing. StrongPath helps you support them without pressure or fear.',
+    title: 'I want to help someone I love.',
+    copy: 'You can help without taking over.',
     href: '/blog/help-aging-parents-stay-strong',
-    action: 'Read the article',
-  },
-  {
-    title: 'I want to know what actually helps',
-    copy: 'Walking matters. Protein matters. Lifting matters. The hard part is knowing what to do first.',
-    href: '/blog/resistance-training-older-adults',
-    action: 'Read the article',
+    action: 'Start here',
   },
 ]
 
@@ -185,6 +179,9 @@ export default function HomePage() {
                 Book-backed guidance on sarcopenia, the age-related muscle loss that
                 changes strength, balance, and independence.
               </p>
+              <p className="mt-10 font-utility text-[13px] leading-none text-[#2E6171]">
+                Take the StrongPath, not the frail trail.
+              </p>
               <div className="mt-15 flex flex-col gap-10 sm:flex-row sm:items-center md:mt-18">
                 <Link
                   href="/blog/what-is-sarcopenia"
@@ -238,38 +235,46 @@ export default function HomePage() {
 
       <section className="border-b border-[#2E6171]/24">
         <div className="sp-container py-24 md:py-34">
-          <div className="grid gap-16 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
+          <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
             <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Start here</p>
+              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
-                Start where strength is starting to matter.
+                Start with the path that fits your life.
               </h2>
               <p className="mt-10 max-w-[340px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/72">
-                Three common reasons people arrive here, with one useful place to begin.
+                Two common reasons people arrive here, each with one useful place to begin.
               </p>
             </div>
-            <div className="divide-y divide-[#2E6171]/22 border-y border-[#2E6171]/25">
-              {startingPoints.map((item, index) => (
-                <article key={item.title} className="grid gap-10 py-15 md:grid-cols-[48px_0.34fr_minmax(0,1fr)] md:gap-18 md:py-18">
-                  <p className="font-utility text-[13px] leading-none text-[#2E6171]">
-                    {String(index + 1).padStart(2, '0')}
-                  </p>
-                  <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545] md:text-[31px]">
-                    {item.title}
-                  </h3>
-                  <div className="md:pt-1">
-                    <p className="font-body text-[16px] leading-[1.52] text-[#1A1D24]/76 md:text-[17px]">
+            <div>
+              <div className="grid gap-12 md:grid-cols-2">
+                {startingPoints.map((item, index) => (
+                  <article key={item.title} className="border-y border-[#2E6171]/25 py-16 md:py-18">
+                    <p className="font-utility text-[13px] leading-none text-[#2E6171]">
+                      {String(index + 1).padStart(2, '0')}
+                    </p>
+                    <h3 className="mt-10 font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-9 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
                       {item.copy}
                     </p>
                     <Link
                       href={item.href}
-                      className="mt-10 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                      className="mt-12 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
                     >
                       {item.action}
                     </Link>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                ))}
+              </div>
+              <div className="mt-14 border-t border-[#2E6171]/20 pt-12">
+                <Link
+                  href="/blog/resistance-training-older-adults"
+                  className="inline-flex border-b border-[#B8860B]/70 pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                >
+                  What does the science say?
+                </Link>
+              </div>
             </div>
           </div>
         </div>
