@@ -69,7 +69,7 @@ const startingPoints = [
     action: 'Read the article',
   },
   {
-    title: 'I want to know what helps',
+    title: 'I want to know what actually helps',
     copy: 'Walking matters. Protein matters. Lifting matters. The hard part is knowing what to do first.',
     href: '/blog/resistance-training-older-adults',
     action: 'Read the article',
@@ -170,56 +170,60 @@ export default function HomePage() {
   return (
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container grid gap-26 py-24 md:py-36 lg:grid-cols-[minmax(0,1fr)_330px] lg:gap-44">
-          <div className="max-w-[820px]">
-            <h1 className="font-display text-[48px] font-normal leading-[1.01] text-[#0B2545] md:text-[76px] md:leading-[0.98]">
-              Walk the StrongPath. Stay strong for your family, your freedom, and the life you love.
-            </h1>
-            <p className="mt-16 max-w-[690px] font-body text-[18px] leading-[1.55] text-[#1A1D24]/80 md:text-[22px]">
-              Strength shows up in the moments that matter: walking with your spouse, playing with
-              your grandchildren, carrying your own bags, helping a parent, and staying independent
-              longer.
-            </p>
-            <div className="mt-18 flex flex-col gap-10 sm:flex-row sm:items-center">
-              <Link
-                href="/blog/what-is-sarcopenia"
-                className="inline-flex min-h-[44px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
-              >
-                Read about sarcopenia
-              </Link>
-              <Link
-                href="/blog"
-                className="inline-flex min-h-[44px] items-center justify-center border border-[#2E6171]/45 px-18 py-11 font-body text-[16px] font-medium leading-none text-[#0B2545] transition-colors hover:border-[#0B2545]"
-              >
-                Browse articles
-              </Link>
+        <div className="sp-container py-16 md:py-32">
+          <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-34">
+            <div className="max-w-[820px]">
+              <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
+                Walk the StrongPath. Stay strong for your family, your freedom, and the life you love.
+              </h1>
+              <p className="mt-13 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:mt-15 md:text-[22px] md:leading-[1.55]">
+                Strength shows up in the moments that matter: walking with your spouse, playing with
+                your grandchildren, carrying your own bags, helping a parent, and staying independent
+                longer.
+              </p>
+              <p className="mt-12 max-w-[620px] border-l-2 border-[#B8860B] pl-10 font-body text-[16px] leading-[1.45] text-[#1A1D24]/78 md:mt-14 md:text-[18px] md:leading-[1.5]">
+                Book-backed guidance on sarcopenia, the age-related muscle loss that
+                changes strength, balance, and independence.
+              </p>
+              <div className="mt-15 flex flex-col gap-10 sm:flex-row sm:items-center md:mt-18">
+                <Link
+                  href="/blog/what-is-sarcopenia"
+                  className="inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
+                >
+                  Learn about sarcopenia
+                </Link>
+                <Link
+                  href="/blog"
+                  className="inline-flex min-h-[44px] items-center justify-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171] sm:min-h-0"
+                >
+                  Browse all articles
+                </Link>
+              </div>
             </div>
-          </div>
 
-          <aside className="border border-[#2E6171]/28 bg-warm-white p-14 md:p-16">
-            <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
-              Amazon bestseller
-            </p>
-            <div className="mt-12 grid grid-cols-[88px_minmax(0,1fr)] gap-12 lg:grid-cols-1">
+            <aside className="grid grid-cols-[96px_minmax(0,1fr)] gap-14 border-t border-[#2E6171]/24 pt-16 lg:block lg:border-l lg:border-t-0 lg:pl-18 lg:pt-0">
               <Image
                 src={bookCoverUrl}
                 alt="Choosing the StrongPath book cover"
                 width={333}
                 height={500}
-                sizes="(min-width: 1024px) 230px, 88px"
-                className="h-auto w-full border border-[#2E6171]/18 bg-[#FAF8F5] lg:max-w-[230px]"
+                sizes="(min-width: 1024px) 250px, 96px"
+                className="h-auto w-full border border-[#2E6171]/18 bg-[#FAF8F5] lg:max-w-[250px]"
                 priority
               />
-              <div>
-                <p className="font-display text-[27px] leading-[1.06] text-[#0B2545]">
+              <div className="self-center lg:mt-14">
+                <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
+                  Amazon bestseller
+                </p>
+                <p className="mt-9 font-display text-[27px] leading-[1.06] text-[#0B2545] md:text-[31px]">
                   Choosing the StrongPath
                 </p>
-                <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72">
+                <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72 md:text-[16px]">
                   Bestseller in Aging, Weight Training, Exercise, and Longevity.
                 </p>
                 <AmazonLink
                   asin="1626344760"
-                  className="mt-12 inline-flex min-h-[42px] w-full items-center justify-center bg-[#0B2545] px-14 py-10 font-body text-[15px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f] sm:w-fit"
+                  className="mt-10 inline-flex min-h-[40px] items-center justify-center border border-[#0B2545]/70 bg-warm-white px-12 py-9 font-body text-[14px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-warm-white sm:w-fit"
                 >
                   Buy on Amazon
                 </AmazonLink>
@@ -227,27 +231,33 @@ export default function HomePage() {
                   StrongPath may earn from qualifying Amazon purchases.
                 </p>
               </div>
-            </div>
-          </aside>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-28 md:py-40">
-          <div className="grid gap-14 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
+        <div className="sp-container py-24 md:py-34">
+          <div className="grid gap-16 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Start here</p>
               <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
                 Start where strength is starting to matter.
               </h2>
+              <p className="mt-10 max-w-[340px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/72">
+                Three common reasons people arrive here, with one useful place to begin.
+              </p>
             </div>
             <div className="divide-y divide-[#2E6171]/22 border-y border-[#2E6171]/25">
-              {startingPoints.map((item) => (
-                <article key={item.title} className="grid gap-8 py-16 md:grid-cols-[0.36fr_0.64fr] md:gap-18 md:py-18">
+              {startingPoints.map((item, index) => (
+                <article key={item.title} className="grid gap-10 py-15 md:grid-cols-[48px_0.34fr_minmax(0,1fr)] md:gap-18 md:py-18">
+                  <p className="font-utility text-[13px] leading-none text-[#2E6171]">
+                    {String(index + 1).padStart(2, '0')}
+                  </p>
                   <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545] md:text-[31px]">
                     {item.title}
                   </h3>
-                  <div>
+                  <div className="md:pt-1">
                     <p className="font-body text-[16px] leading-[1.52] text-[#1A1D24]/76 md:text-[17px]">
                       {item.copy}
                     </p>

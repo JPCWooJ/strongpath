@@ -7,7 +7,7 @@ Portfolio status reference. Not primary StrongPath governance. docs/governance/ 
 
 **Purpose:** Single source of truth for all active, in-progress, and planned verticals in the portfolio.  
 **Update frequency:** After every significant milestone — launch, first revenue, first 1,000 subscribers, Phase 2 kickoff.  
-**Last updated:** April 18, 2026
+**Last updated:** May 27, 2026
 
 ---
 
@@ -86,10 +86,10 @@ Portfolio status reference. Not primary StrongPath governance. docs/governance/ 
 | Priority | Fix | Status | Source |
 |----------|-----|--------|--------|
 | ✅ P0 | Repo scaffold, Anthropic wiring, Sanity wiring, homepage, Klaviyo wiring, Amazon Associates tag | Shipped April 22 – May 1, 2026 (P0-00 → P0-05) | `CODE_BACKLOG.md` §4 Done |
-| 🔴 P0 | Implement design system from Brand-Ambassador-validated `DESIGN.md` | In flight (founder selecting Refero candidates; Brand Ambassador to evaluate) | `CODE_BACKLOG.md` §3.1 (P0-06) |
-| 🔴 P0 | Quiz funnel implementation | Blocked on P0-06 (slot ships as part of design system) | `CODE_BACKLOG.md` §3.2 (P0-07) |
-| 🟡 P2 | Defensive convention against fabricated social proof metrics | Active; defensive (no fabricated metrics shipped yet on fresh repo) | `CODE_BACKLOG.md` §3.3 (P2-01) |
-| 🟡 — | Full author credibility section content (book cover, three-author credit line, bestseller line, `<AmazonLink />`) | Layout slot ships in P0-06; content fills slot in a follow-up item | `CODE_BACKLOG.md` §5.1 Parked |
+| ✅ P0 | P0-06 launch-blocking UI baseline | Resolved for launch-blocking purposes; founder accepted current homepage/article UI baseline as sufficient to move forward. Further visual polish is later UI/UX refinement, not a P0 blocker. | `CODE_BACKLOG.md` §4 Done |
+| 🔴 P0 | Quiz funnel implementation | Top Active code item if Phase 1 funnel architecture remains the next priority | `CODE_BACKLOG.md` §3.1 (P0-07) |
+| 🟡 P2 | Defensive convention against fabricated social proof metrics | Active; defensive (no fabricated metrics shipped yet on fresh repo) | `CODE_BACKLOG.md` §3.2 (P2-01) |
+| 🟡 — | Full author credibility section content (book cover, three-author credit line, bestseller line, `<AmazonLink />`) | Parked as editorial/authority refinement; not a P0-06 UI/UX blocker | `CODE_BACKLOG.md` §5.1 Parked |
 | 🟡 — | Expand stub blog posts and add to 10 minimum | Owned by Content Writer + SEO Strategist; 13-week publishing calendar in `PUBLISHING_PLAN.md` | `PUBLISHING_PLAN.md` |
 
 ### Milestones
@@ -184,4 +184,6 @@ Add a "Phase 2" subsection covering:
 
 *This register is the portfolio's single source of truth. An investor, a new team member, or a new AI agent should be able to read this file and understand the entire portfolio's status in under 5 minutes.*
 
-*May 1, 2026 update: Tech Stack Audit, Revenue Model status icons, and Critical Fixes table refreshed to reflect fresh `JPCWooJ/strongpath` repo state. Old hackathon-build P0s (broken `/app` route, OpenAI-not-Anthropic, hardcoded blog content, unwired Klaviyo) are no longer applicable — the fresh repo's P0-00 through P0-05 superseded the entire setup. Current critical fixes maintained in `CODE_BACKLOG.md`; design system implementation (P0-06) is the new top gate. Chief of Staff session 6.*
+*May 1, 2026 update: Tech Stack Audit, Revenue Model status icons, and Critical Fixes table refreshed to reflect fresh `JPCWooJ/strongpath` repo state. Old hackathon-build P0s (broken `/app` route, OpenAI-not-Anthropic, hardcoded blog content, unwired Klaviyo) are no longer applicable — the fresh repo's P0-00 through P0-05 superseded the entire setup. Current critical fixes maintained in `CODE_BACKLOG.md`; design system implementation (P0-06) was added as the top gate. Chief of Staff session 6.*
+
+*May 27, 2026 update: P0-06 is resolved for launch-blocking purposes after founder acceptance of the current homepage/article UI baseline. Remaining copy/editorial quality work, if any, should be tracked as editorial/publication readiness or later UI/UX refinement, not as the P0-06 UI/UX blocker.*

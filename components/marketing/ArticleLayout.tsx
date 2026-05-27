@@ -9,16 +9,18 @@ import { formatArticleDate, normalizeTag } from '@/lib/articles'
 const portableTextComponents: PortableTextComponents = {
   block: {
     h2: ({ children }) => (
-      <h2 className="border-t border-[#2E6171]/24 pt-14 font-display font-normal text-[#0B2545]">
+      <h2 className="border-t border-[#2E6171]/24 pt-16 font-display font-normal text-[#0B2545]">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="font-display font-normal text-[#0B2545]">{children}</h3>
+      <h3 className="border-l-2 border-[#B8860B] pl-10 font-display font-normal text-[#0B2545]">
+        {children}
+      </h3>
     ),
     normal: ({ children }) => <p>{children}</p>,
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-[#B8860B] bg-[#FAF8F5] px-18 py-16 font-display font-normal not-italic text-[#0B2545]">
+      <blockquote className="border-y border-[#2E6171]/24 border-l-4 border-l-[#B8860B] bg-[#FAF8F5] px-16 py-16 font-display font-normal not-italic leading-[1.35] text-[#0B2545] md:px-18">
         {children}
       </blockquote>
     ),
@@ -276,52 +278,61 @@ function getCommerceModule(post: Post): CommerceModule | null {
 }
 
 function ArticleCommerceCta({ module }: { module: CommerceModule }) {
-  const gridClassName =
-    module.items.length === 3
-      ? 'grid gap-8 sm:grid-cols-3'
-      : 'grid gap-8 sm:grid-cols-2 lg:grid-cols-4'
-
   return (
-    <aside className="not-prose my-22 border border-[#2E6171]/32 bg-[#FAF8F5] p-16 md:my-28 md:p-20">
-      <div className="grid gap-16">
+    <aside className="not-prose my-24 border-y border-[#2E6171]/30 bg-[#FAF8F5] py-16 md:my-30 md:py-18">
+      <div className="grid gap-14 md:grid-cols-[minmax(0,1fr)_220px] md:items-start md:gap-18">
         <div>
-          <h2 className="font-display text-[30px] font-normal leading-[1.1] text-[#0B2545] md:text-[36px]">
+          <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">
+            Editorial resource
+          </p>
+          <h2 className="mt-8 font-display text-[28px] font-normal leading-[1.1] text-[#0B2545] md:text-[34px]">
             {module.heading}
           </h2>
-          <p className="mt-9 max-w-[580px] font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
+          <p className="mt-9 font-body text-[17px] leading-[1.58] text-[#1A1D24]/78 md:text-[18px]">
             {module.body}
           </p>
+          <a
+            href={module.href}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="mt-12 inline-flex min-h-[42px] items-center justify-center border border-[#0B2545]/70 bg-warm-white px-14 py-10 font-body text-[15px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-warm-white"
+          >
+            View the list
+          </a>
         </div>
-        <div className={gridClassName}>
+        <ul className="grid gap-7 border-t border-[#2E6171]/20 pt-10 md:border-t-0 md:pt-0">
           {module.items.map((item) => (
-            <div key={item.label} className="border border-[#2E6171]/22 bg-warm-white p-10">
-              <div className="flex aspect-[4/3] items-center justify-center bg-white p-8">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.label}
-                  width={500}
-                  height={500}
-                  sizes="(min-width: 640px) 180px, 100vw"
-                  className="h-full w-full object-contain"
-                />
-              </div>
-              <p className="mt-8 text-center font-utility text-[13px] font-medium leading-[1.25] text-[#0B2545]">
+            <li
+              key={item.label}
+              className="border-l-2 border-[#B8860B]/70 bg-warm-white py-7 pl-9 pr-8 font-utility text-[13px] font-medium leading-[1.25] text-[#0B2545]"
+            >
+              <span>
                 {item.label}
-              </p>
-            </div>
+              </span>
+            </li>
           ))}
-        </div>
-        <a
-          href={module.href}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="inline-flex min-h-[48px] w-full items-center justify-center bg-[#0B2545] px-18 py-12 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f] sm:w-fit sm:min-w-[148px]"
-        >
-          Shop the list
-        </a>
+        </ul>
       </div>
       <p className="mt-12 border-t border-[#2E6171]/20 pt-10 font-utility text-[12px] leading-[1.4] text-[#5A6472]">
         StrongPath may earn from qualifying Amazon purchases.
+      </p>
+    </aside>
+  )
+}
+
+function HeaderSources({ post }: { post: Post }) {
+  if (!post.sources?.length) return null
+
+  const publications = Array.from(new Set(post.sources.map((source) => source.publication).filter(Boolean)))
+
+  return (
+    <aside className="mt-18 border-y border-[#2E6171]/24 py-12 md:mt-22 md:max-w-[720px]">
+      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">
+        Evidence used in this article
+      </p>
+      <p className="mt-8 font-body text-[16px] leading-[1.5] text-[#1A1D24]/76 md:text-[17px]">
+        {post.sources.length} source{post.sources.length === 1 ? '' : 's'} reviewed
+        {publications.length > 0 ? `, including ${publications.slice(0, 3).join(', ')}` : ''}.
       </p>
     </aside>
   )
@@ -367,19 +378,19 @@ function EditorialSources({ post }: { post: Post }) {
   if (!post.sources?.length) return null
 
   return (
-    <section aria-labelledby="article-sources" className="mt-38 border-t border-[#2E6171]/32 pt-18">
-      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Sources</p>
+    <section aria-labelledby="article-sources" className="mt-38 border border-[#2E6171]/28 bg-[#FAF8F5] p-16 md:p-20">
+      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Evidence</p>
       <h2
         id="article-sources"
         className="mt-10 font-display text-[30px] font-normal leading-[1.15] text-[#0B2545] md:text-[34px]"
       >
-        Sources for this article
+        Sources reviewed
       </h2>
-      <div className="mt-20 border-t border-[#2E6171]/35">
+      <div className="mt-18 border-t border-[#2E6171]/35">
         {post.sources.map((source) => (
           <div
             key={`${source.title}-${source.publication}`}
-            className="grid gap-8 border-b border-[#2E6171]/25 py-14 md:grid-cols-[0.7fr_0.3fr]"
+            className="grid gap-8 border-b border-[#2E6171]/25 py-13 last:border-b-0 md:grid-cols-[0.7fr_0.3fr]"
           >
             <div>
               {source.href ? (
@@ -411,19 +422,22 @@ function RelatedReading({ articles }: { articles: ArticleMeta[] }) {
 
   return (
     <section aria-labelledby="related-reading" className="mt-38 border-t border-[#2E6171]/32 pt-18">
-      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Continue reading</p>
+      <p className="font-utility text-[12px] uppercase leading-none text-[#5A6472]">Curated next reads</p>
       <h2
         id="related-reading"
         className="mt-10 font-display text-[30px] font-normal leading-[1.15] text-[#0B2545] md:text-[34px]"
       >
-        Related reading
+        Keep going from here
       </h2>
       <div className="mt-20 grid border-t border-[#2E6171]/35">
-        {articles.slice(0, 4).map((article) => (
+        {articles.slice(0, 4).map((article, index) => (
           <article
             key={article.href}
-            className="grid gap-10 border-b border-[#2E6171]/25 py-16 md:grid-cols-[112px_minmax(0,1fr)] md:gap-14"
+            className="grid gap-10 border-b border-[#2E6171]/25 py-16 md:grid-cols-[42px_112px_minmax(0,1fr)] md:gap-14"
           >
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">
+              {String(index + 1).padStart(2, '0')}
+            </p>
             {article.image && (
               <Link href={article.href} className="group block">
                 <Image
@@ -512,6 +526,7 @@ export function ArticleLayout({
                   ))}
                 </div>
               )}
+              <HeaderSources post={post} />
             </div>
             {heroImage && (
               <figure className="mt-20 overflow-hidden border border-[#2E6171]/24 bg-warm-white md:mt-24">

@@ -66,39 +66,16 @@ Minimum reminders:
 
 **Top of list = next to execute.** When starting a Claude Code session, work on the top item.
 
-### 3.1 P0-06 — Implement design system from Refero spec
-
-**Priority:** P0
-**Source:** Founder directive (Chief of Staff session 6, May 1, 2026); `BRAND.md` §6 (Visual Direction) as authoritative input
-**Status:** Not started. Blocked on (a) founder selecting a Refero style, (b) Brand Ambassador validating the selected style against `BRAND.md` v6 §6 and signing off on `DESIGN.md`. Both clear in upcoming sessions.
-
-**Context.** P0-03 shipped a structurally complete homepage. The visual quality is "1992-looking" per founder review and is below the credibility threshold the brand requires. Driving traffic to this surface — via paid media, email subscribers, or affiliate links — wastes acquisition effort against a site that does not signal authority. Re-sequencing to ship a credible visual system before any further functional work, with placeholders for known future features (full credibility section, quiz funnel) so they slot in cleanly later. This item is the single largest gate in the portfolio right now: every downstream traffic-driving workstream depends on it.
-
-**Brief for Claude Code session:**
-> Implement the design system specified in `DESIGN.md` (Brand-Ambassador-validated Refero style) across the existing site. Scope: homepage, blog list, blog single-post, book page (Brief 10 destination), `/studio` route polish where it touches public surface. `DESIGN.md` is authoritative for tokens (color, typography, spacing, components, motion); `BRAND.md` §6 is authoritative for strategic visual direction (editorial-not-athletic, navy/gold palette anchor, white-space-as-credibility, one-primary-action-per-page). When `DESIGN.md` and `BRAND.md` §6 conflict, escalate to Brand Ambassador — do not silently resolve. Build placeholders for: (1) full author credibility section per `BP-06` and `BRAND.md` §5 — slot the book cover, three-author credit line, "Amazon bestseller" line, `<AmazonLink />` to the book; do not ship the placeholder text, ship the layout slot ready to receive real content in a follow-up; (2) quiz funnel entry point — hero or sub-hero CTA placement that links to a future `/quiz` route, with the route stubbed but not built. Implementation in the existing Next.js + Tailwind + shadcn/ui stack per `STACK.md`; do not introduce a new design framework.
-
-**Acceptance criteria:**
-- Homepage Lighthouse: Performance ≥85, SEO ≥95, Accessibility ≥90.
-- Visual review: side-by-side screenshot of current homepage and new homepage, founder approves before merge.
-- `BRAND.md` §6 rules verified — body copy ≥18px desktop / ≥17px mobile; serif headlines + Inter body; navy-dominant with gold-as-condiment; warm-white background not pure white.
-- Forbidden imagery patterns absent (no posed "active senior" stock, no transformation photography, no pharmaceutical-ad aesthetic).
-- Placeholders for full credibility section and quiz funnel entry are visible in the layout but clearly marked as placeholders (no fabricated content).
-- All four pages (homepage, blog list, blog single, book page) ship together — no half-redesigned site.
-
-**Out of scope.** Full credibility section content (P1-01, merged into the post-design follow-up). Quiz funnel logic (P0-07). Email sequence design (Email Marketer workstream, Phase 1). Paid media creative (Paid Media workstream, Phase 1b).
-
----
-
-### 3.2 P0-07 — Quiz funnel implementation
+### 3.1 P0-07 — Quiz funnel implementation
 
 **Priority:** P0
 **Source:** `ACTIVE_VERTICALS.md` (Phase 1 funnel architecture); CTO state-of-tech check, May 1, 2026 (gap surfaced)
-**Status:** Not started. Blocked on P0-06 — quiz entry point and `/quiz` route slot ship as part of the design system, then this item builds the actual flow into the slot.
+**Status:** Not started. Top Active code item after P0-06 was resolved for launch-blocking UI purposes.
 
 **Context.** The quiz funnel was assumed live during workstream-engagement sequencing but does not exist in the repo and is not in any prior backlog. CTO surfaced the gap during the May 1 state-of-tech check. Quiz funnel is the load-bearing email-capture and segmentation mechanism for Phase 1 — without it, footer email capture is the only acquisition surface and Klaviyo segmentation has no source signal. Paid Media workstream cannot engage until this ships (alongside BP-04's 10-articles-live gate).
 
 **Brief for Claude Code session:**
-> Build the quiz funnel into the `/quiz` route slot established by P0-06. Scope: 5–8 questions designed to segment subscribers by Margaret-vs-David persona signals (per `PERSONAS.md`) plus readiness/urgency. Result page renders persona-matched copy and CTA. Submission writes to Klaviyo via the wired integration (P0-04) with persona segment as a custom property and quiz answers as event metadata. No A/B testing infrastructure in this version — single canonical quiz flow. Founder will provide the question set and result-page copy; do not author quiz content from scratch — Brand Ambassador owns that input.
+> Build the quiz funnel into a dedicated `/quiz` route. Scope: 5–8 questions designed to segment subscribers by Margaret-vs-David persona signals (per `PERSONAS.md`) plus readiness/urgency. Result page renders persona-matched copy and CTA. Submission writes to Klaviyo via the wired integration (P0-04) with persona segment as a custom property and quiz answers as event metadata. No A/B testing infrastructure in this version — single canonical quiz flow. Founder will provide the question set and result-page copy; do not author quiz content from scratch — Brand Ambassador owns that input.
 
 **Acceptance criteria:**
 - `/quiz` route renders the question flow, validates inputs, submits to Klaviyo on completion.
@@ -111,7 +88,7 @@ Minimum reminders:
 
 ---
 
-### 3.3 P2-01 — Avoid fabricated social proof metrics
+### 3.2 P2-01 — Avoid fabricated social proof metrics
 
 **Priority:** P2
 **Source:** `ACTIVE_VERTICALS.md` §Critical Fixes; `BP-07`
@@ -195,13 +172,23 @@ Active StrongPath governance is normalized under `docs/governance/`. `agent-os/`
 
 ---
 
+### 4.8 P0-06 — Launch-blocking UI baseline
+
+**Shipped:** Current commit — "Resolve P0-06 launch-blocking UI baseline"
+
+P0-06 is resolved for launch-blocking purposes. The founder accepted the current homepage and article UI baseline as sufficient to move forward: homepage hierarchy, book authority treatment, article evidence visibility, restrained commerce modules, and related-reading presentation now meet the credibility threshold for the next operational step.
+
+Further visual polish is no longer a P0 blocker. Handle remaining UI/UX improvements as later refinement work; do not treat the design system as perfect or final.
+
+---
+
 ## 5. Parked
 
 *Items that surfaced during planning or execution but are deferred. Revisit periodically — parked items that become urgent are promoted back into Active.*
 
-### 5.1 P1-01 — Full author credibility section on homepage *(merged into P0-06 + follow-up)*
+### 5.1 P1-01 — Full author credibility section on homepage *(post-P0-06 follow-up)*
 
-**Status:** Parked May 1, 2026. Originally Active; superseded when P0-06 (design system implementation) entered the backlog. The credibility section is now built in two passes: (1) P0-06 ships the layout slot — the visual placeholder for the credibility section as part of the new design system; (2) a follow-up item (to be created when P0-06 closes) ships the actual content into the slot — book cover, three-author credit line, "Amazon bestseller" line, `<AmazonLink />` per `BP-06` and `BRAND.md` §5.
+**Status:** Parked May 1, 2026; still parked after P0-06 resolved for launch-blocking purposes. If promoted later, scope as editorial/authority refinement, not as a launch-blocking UI design-system gate.
 
 **Original brief preserved for reference** (do not execute as-is — execute the follow-up after P0-06):
 
@@ -263,6 +250,7 @@ When adding a new item to the Active list, follow this template. Keep it short �
 | May 1, 2026 | **Backlog refreshed to current repo state.** P0-00 through P0-05 moved from §3 Active to §4 Done with PR/commit references — all six items shipped to `main` between April 22 and May 1 in active Claude Code sessions on the founder's local machine. Active list now shows P1-01 (full author credibility) at top, followed by P2-01 (fabricated metrics convention). P1-01 unblocked: prior status said "Blocked on P0-03 and P0-05" — both now shipped. Owner line updated to note ownership transfer to CTO at end of CTO onboarding step 3. Prompted by Chief of Staff session 6 — CTO chat flagged the file was stale after founder confirmed active build in progress. | Chief of Staff session 6 |
 | May 1, 2026 (later) | **Design re-sequencing.** Added P0-06 (design system implementation from a Refero spec validated by Brand Ambassador) and P0-07 (quiz funnel) at top of Active, ahead of all prior items. P1-01 (full author credibility section) moved to §5 Parked — its layout slot ships as part of P0-06, content fills the slot in a follow-up item once P0-06 closes. Original P1-01 brief preserved in Parked entry; note added flagging that the original brief references `BRAND.md v4` conventions retired in v6 and must be updated before execution. P2-01 (fabricated metrics convention) renumbered to §3.3, content unchanged. Prompted by founder review of the current shipped homepage as below the credibility threshold the brand requires; design quality gate added as a P0 that was not previously in the backlog. Quiz funnel surfaced as a parallel P0 gap during the same CTO state-of-tech check that prompted the re-sequencing. | Chief of Staff session 6 (latest) |
 | May 4, 2026 | Historical note: GitHub markdown migration recorded as shipped via PR #11. §5.2 added — external non-markdown asset cleanup parked pending stay-vs-move decision. | Chief of Staff session 16 |
+| May 27, 2026 | P0-06 moved from Active to Done as resolved for launch-blocking purposes after founder acceptance of the current homepage/article UI baseline. P0-07 moved to the top Active slot. Further visual polish is now later UI/UX refinement, not a P0 blocker. | Codex implementation session |
 
 ---
 
