@@ -1,24 +1,23 @@
 ---
 name: strongpath-copy-quality
-description: Review and improve StrongPath reader-facing copy at line level. Use when editing homepage copy, article teasers, CTAs, book modules, caregiver copy, sarcopenia entry points, newsletter copy, or other visible StrongPath copy for adults after 50 and adult children helping parents.
+description: Review and improve StrongPath reader-facing copy at line level. Use when editing homepage copy, article openers, article teasers, CTAs, book modules, caregiver copy, sarcopenia explanations, newsletter copy, or other visible StrongPath copy for adults after 50 and adult children helping parents.
 ---
 
 # StrongPath Copy Quality
 
-Use this skill to make StrongPath copy concrete, human, claim-safe, and hard to misread.
+Make StrongPath copy concrete, human, claim-safe, and hard to misread.
 
 ## Scope
 
 Focus on line-level copy quality.
 
 Support two primary audiences:
-
 - Adults after 50 who want to stay independent.
 - Adult children and caregivers who want to help a parent.
 
-Keep clinicians Phase 2. Do not frame them as the primary homepage audience.
+Keep clinicians Phase 2. Do not make clinicians the primary homepage audience.
 
-Do not replace brand governance. Use this as a fast copy pass, not a strategy document.
+Use this as a fast copy pass, not a strategy document.
 
 ## Rewrite Method
 
@@ -30,10 +29,9 @@ Do not replace brand governance. Use this as a fast copy pass, not a strategy do
 6. Remove hype, fear, shame, and vague wellness language.
 7. Check claims for medical and commerce safety.
 
-## Use StrongPath Language
+## StrongPath Lines
 
-Use these lines when they fit naturally:
-
+Use these only when they fit naturally:
 - "Take the StrongPath."
 - "Take the StrongPath, not the frail trail."
 - "Stay strong for your family, freedom, and the life you love."
@@ -44,8 +42,7 @@ Do not force these lines into every page.
 
 ## Replace Weak Patterns
 
-Replace vague or internal phrases:
-
+Rewrite vague or internal phrases:
 - "book-backed guidance"
 - "practical resources"
 - "what matters"
@@ -58,7 +55,6 @@ Prefer copy that names what the reader feels, sees, or can do next.
 ## Forbidden Patterns
 
 Do not use:
-
 - Nursing-home threats, panic, shame, or fear pressure.
 - Generic wellness language such as "optimize your vitality" or "unlock your best self."
 - Claims that StrongPath cures, treats, prevents, reverses, guarantees, or is clinically proven.
@@ -78,11 +74,20 @@ Keep affiliate copy separate from evidence/source copy.
 
 ## Examples
 
-Bad: "Book-backed guidance on sarcopenia."
-Better: "Learn why strength loss happens and what to do before it changes daily life."
+Bad:
+"Book-backed guidance on sarcopenia."
 
-Bad: "Support aging parents with practical resources."
-Better: "Help a parent start without turning every conversation into a lecture."
+Better:
+"Learn why strength loss happens and what to do before it changes daily life."
 
-Bad: "Take control of your wellness journey."
-Better: "Start with the stairs, the chair, the grocery bags, or the walk that has started to feel different."
+Bad:
+"Support aging parents with practical resources."
+
+Better:
+"Help a parent start without turning every conversation into a lecture."
+
+Bad:
+"Take control of your wellness journey."
+
+Better:
+"Start with the stairs, the chair, the grocery bags, or the walk that has started to feel different."
