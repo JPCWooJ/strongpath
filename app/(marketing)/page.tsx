@@ -164,11 +164,11 @@ export default function HomePage() {
   return (
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container py-16 md:py-32">
+        <div className="sp-container pb-10 pt-16 md:pb-20 md:pt-32">
           <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-34">
             <div className="max-w-[820px]">
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-                Walk the StrongPath. Stay strong for your family, your freedom, and the life you love.
+                Take the StrongPath. Stay strong for your family, your freedom, and the life you love.
               </h1>
               <p className="mt-13 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:mt-15 md:text-[22px] md:leading-[1.55]">
                 Strength shows up in the moments that matter: walking with your spouse, playing with
@@ -231,7 +231,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-24 md:py-34">
+        <div className="sp-container pb-24 pt-18 md:pb-34 md:pt-24">
           <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
@@ -248,15 +248,12 @@ export default function HomePage() {
             </div>
             <div>
               <div className="grid gap-12 md:grid-cols-2">
-                {startingPoints.map((item, index) => (
+                {startingPoints.map((item) => (
                   <article
                     key={item.title}
                     className="border border-[#2E6171]/26 bg-[#FAF8F5] p-16 md:p-18"
                   >
-                    <p className="font-utility text-[13px] leading-none text-[#2E6171]">
-                      {String(index + 1).padStart(2, '0')}
-                    </p>
-                    <h3 className="mt-12 font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
+                    <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
                       {item.title}
                     </h3>
                     <p className="mt-10 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
