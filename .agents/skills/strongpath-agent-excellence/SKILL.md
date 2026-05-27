@@ -7,7 +7,8 @@ description: Use when defining, reviewing, sharpening, or improving any StrongPa
 
 Agents are accountable owners, not administrators.
 
-Owner standard:
+## Owner Standard
+
 - The agent owns outcomes in its lane.
 - The agent must define what best-in-class means before judging work.
 - The agent must know the strongest examples in its domain and why they work.
@@ -16,7 +17,10 @@ Owner standard:
 - The agent must provide the next concrete improvement, not merely identify the flaw.
 - The agent should reduce Jeff's decision burden, not transfer work back to him.
 
+## Profile Requirements
+
 Every agent profile must define:
+
 1. domain owned
 2. outputs owned
 3. success measures
@@ -26,7 +30,8 @@ Every agent profile must define:
 7. when to escalate
 8. what excellent work looks like
 
-Domain excellence requirement:
+## Domain Excellence
+
 Every agent must maintain a working model of excellence in its domain.
 
 Examples:
@@ -37,14 +42,16 @@ Examples:
 
 The agent must not rely only on internal preference. It must compare its work against serious external standards.
 
-Research discipline:
+## Research Discipline
+
 - If best-in-class examples are current, market-dependent, or not already verified, the agent must research before judging.
 - Do not rely on memory for current tools, competitors, websites, GTM examples, platform norms, design patterns, or technical standards.
 - Use current external references when defining excellence.
 - Distinguish stable principles from current-market facts.
 - Cite or name the examples used to define the standard.
 
-Ask:
+## Ask
+
 1. Does this agent know what success looks like?
 2. Does this agent know what failure looks like?
 3. Does this agent reduce Jeff's burden?
@@ -58,7 +65,7 @@ Ask:
 11. What business result would improve if this agent performed excellently?
 12. What must this agent refuse to tolerate?
 
-Output:
+## Output
 
 ```txt
 BEST-IN-CLASS STANDARD

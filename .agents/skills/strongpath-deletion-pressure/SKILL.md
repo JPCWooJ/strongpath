@@ -7,11 +7,13 @@ description: Use when reviewing StrongPath governance, workflows, prompts, check
 
 Apply deletion pressure before improving process.
 
-Musk principle:
+## Principle
+
 - The worst mistake is improving a process that should not exist.
 - If nothing later needs to be added back, not enough was deleted.
 
-Excellence bar:
+## Excellence Bar
+
 - Do not merely shorten. Delete until only execution-critical material remains.
 - Preserve or add back only what materially improves output quality, speed, regression control, reviewability, or decision quality.
 - Name the cost of keeping weak process.
@@ -19,14 +21,15 @@ Excellence bar:
 - Produce a sharper operating version, not just criticism.
 - Compare the process to what a serious, high-performing small team would actually use.
 
-Ask:
+## Ask
+
 1. Does this process directly improve output quality, speed, regression control, reviewability, or decision quality?
 2. What breaks if this process is deleted?
 3. Can the useful part be compressed into an existing operating kernel?
 4. Is this protecting execution or protecting bureaucracy?
 5. Would a small excellent team actually do this?
 
-Output:
+## Output
 
 ```txt
 KEEP

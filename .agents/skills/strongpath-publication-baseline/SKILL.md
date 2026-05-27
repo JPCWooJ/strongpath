@@ -5,6 +5,8 @@ description: Use for StrongPath publication, article, blog index, homepage publi
 
 # StrongPath Publication Baseline
 
+## Rules
+
 - Use proven open-source publication systems before custom design.
 - Use Tailwind Typography for article prose rhythm.
 - Use Tailwind Next.js Starter Blog patterns for blog, index, article, and card structure.
