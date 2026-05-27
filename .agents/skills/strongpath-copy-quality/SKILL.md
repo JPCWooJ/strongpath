@@ -1,93 +1,52 @@
 ---
 name: strongpath-copy-quality
-description: Review and improve StrongPath reader-facing copy at line level. Use when editing homepage copy, article openers, article teasers, CTAs, book modules, caregiver copy, sarcopenia explanations, newsletter copy, or other visible StrongPath copy for adults after 50 and adult children helping parents.
+description: Copy-quality review skill for StrongPath outputs, enforcing concise, direct, implementation-ready writing with no hype, no filler, no em dashes, and no unnecessary verbosity.
 ---
 
 # StrongPath Copy Quality
 
-Make StrongPath copy concrete, human, claim-safe, and hard to misread.
+Use this skill to improve the quality of StrongPath-facing output.
 
-## Scope
+Keep copy:
+- concise
+- direct
+- operational
+- specific
+- copy/paste-ready
+- easy to act on
 
-Focus on line-level copy quality.
+Reject:
+- hype
+- filler
+- em dashes
+- vague polish language
+- bloated explanations
+- generic business copy
+- soft recommendations without a next action
 
-Support two primary audiences:
-- Adults after 50 who want to stay independent.
-- Adult children and caregivers who want to help a parent.
+For Codex prompts:
+1. State the objective.
+2. Define exact scope.
+3. Name protected files or systems.
+4. Give acceptance criteria.
+5. Give verification steps.
+6. Give the required return format.
 
-Keep clinicians Phase 2. Do not make clinicians the primary homepage audience.
+For StrongPath voice:
+- Use plain language.
+- Prefer judgment over decoration.
+- Keep claims grounded.
+- Make the next action obvious.
+- Do not inflate weak output with confident wording.
 
-Use this as a fast copy pass, not a strategy document.
+Escalate when brand, editorial, medical, legal, compliance, or lane ownership is unclear.
 
-## Rewrite Method
+Output:
 
-1. Identify the reader and the real-life moment.
-2. Replace insider language with reader language.
-3. Name concrete signs: stairs, chairs, groceries, jars, shorter walks, balance, recovery, or a parent who stopped taking walks.
-4. Connect the moment to independence, dignity, family, choice, capability, or good days.
-5. Keep the next step small and possible.
-6. Remove hype, fear, shame, and vague wellness language.
-7. Check claims for medical and commerce safety.
-
-## StrongPath Lines
-
-Use these only when they fit naturally:
-- "Take the StrongPath."
-- "Take the StrongPath, not the frail trail."
-- "Stay strong for your family, freedom, and the life you love."
-- "Strength keeps life bigger."
-- "You can help without taking over."
-
-Do not force these lines into every page.
-
-## Replace Weak Patterns
-
-Rewrite vague or internal phrases:
-- "book-backed guidance"
-- "practical resources"
-- "what matters"
-- "ordinary freedom"
-- "reader pathways"
-- "evidence-based support" without a concrete next step
-
-Prefer copy that names what the reader feels, sees, or can do next.
-
-## Forbidden Patterns
-
-Do not use:
-- Nursing-home threats, panic, shame, or fear pressure.
-- Generic wellness language such as "optimize your vitality" or "unlock your best self."
-- Claims that StrongPath cures, treats, prevents, reverses, guarantees, or is clinically proven.
-- ICD codes or medical billing-code language in reader-facing copy.
-- Clinicians as the homepage-primary audience.
-- Em dashes.
-
-Use current credible sources for health claims.
-
-## Claim Discipline
-
-Say "may," "can," or "is associated with" when evidence requires caution.
-
-Do not turn strength training, protein, recovery, supplements, or equipment into treatment claims.
-
-Keep affiliate copy separate from evidence/source copy.
-
-## Examples
-
-Bad:
-"Book-backed guidance on sarcopenia."
-
-Better:
-"Learn why strength loss happens and what to do before it changes daily life."
-
-Bad:
-"Support aging parents with practical resources."
-
-Better:
-"Help a parent start without turning every conversation into a lecture."
-
-Bad:
-"Take control of your wellness journey."
-
-Better:
-"Start with the stairs, the chair, the grocery bags, or the walk that has started to feel different."
+```txt
+COPY ISSUE
+WHY IT IS WEAK
+REVISED COPY
+OWNER / ESCALATION
+NEXT ACTION
+```
