@@ -190,7 +190,7 @@ export default function HomePage() {
 
             <div className="order-1 lg:order-last max-w-[820px]">
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-                Strength for the family, freedom, and life you want to keep.
+                Take the StrongPath. Stay strong for your family, freedom, and the life you love.
               </h1>
               <p className="mt-13 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:mt-15 md:text-[22px] md:leading-[1.55]">
                 Strength shows up in the moments that matter: walking with your spouse, playing with
