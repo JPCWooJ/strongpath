@@ -53,6 +53,7 @@ Lane-specific governance includes brand, design, personas, editorial, GTM, metri
 
 - `CTO_AGENT_PROFILE.md`
 - `CODEX_EXECUTION_STANDARD.md`
+- `STACK.md`
 
 Superseded CTO role/process material is archived under `docs/governance/archive/cto/` and is not active governance.
 
