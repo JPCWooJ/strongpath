@@ -133,6 +133,9 @@ export default function HomePage() {
           <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start lg:gap-28">
 
             <div className="order-2 lg:order-first">
+              <p className="mb-8 font-utility text-[11px] font-medium uppercase tracking-[0.08em] leading-none text-[#5A6472]">
+                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+              </p>
               <Image
                 src={bookCoverUrl}
                 alt="Choosing the StrongPath book cover"
@@ -142,9 +145,6 @@ export default function HomePage() {
                 className="h-auto w-[160px] border border-[#2E6171]/18 bg-[#FAF8F5] lg:w-full"
                 priority
               />
-              <p className="mt-8 font-utility text-[12px] leading-[1.35] text-[#5A6472]">
-                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-              </p>
             </div>
 
             <div className="order-1 lg:order-last max-w-[820px]">
