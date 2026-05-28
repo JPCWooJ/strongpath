@@ -125,6 +125,41 @@ function ArticleMeta({
   )
 }
 
+function IndependenceIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="24" cy="13" r="7" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M6 46c0-9.9 8.1-18 18-18s18 8.1 18 18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+function CaregivingIcon() {
+  return (
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="14" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M1 44c0-7.1 5.8-13 13-13s13 5.8 13 13"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <circle cx="32" cy="13" r="5.5" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M20 44c0-6.6 5.4-12 12-12s12 5.4 12 12"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
 export default function HomePage() {
   return (
     <main className="bg-warm-white">
@@ -191,11 +226,14 @@ export default function HomePage() {
             </div>
             <div>
               <div className="grid gap-16 md:grid-cols-2">
-                {startingPoints.map((item) => (
+                {startingPoints.map((item, index) => (
                   <article
                     key={item.title}
                     className="border border-[#2E6171]/26 bg-[#FAF8F5] p-20 md:p-28"
                   >
+                    <div className="mb-20 text-near-black">
+                      {index === 0 ? <IndependenceIcon /> : <CaregivingIcon />}
+                    </div>
                     <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
                       {item.title}
                     </h3>
