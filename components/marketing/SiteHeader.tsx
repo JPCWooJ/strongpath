@@ -15,9 +15,9 @@ export function SiteHeader() {
         <div className="max-w-[780px]">
           <Link
             href="/"
-            className="inline-block rounded-links bg-[#302f2c] px-14 py-8 font-display text-[48px] font-semibold leading-none tracking-[-0.02em] text-[#f0ebdd] md:text-[64px]"
+            className="inline-flex items-center rounded-links bg-[var(--color-navy-pill)] pl-14 pr-18 py-10 font-display text-[48px] font-semibold tracking-[-0.02em] text-[#f0ebdd] md:text-[64px]"
           >
-            StrongPath<sup className="text-[0.38em] align-super opacity-60">®</sup>
+            <span className="leading-none">StrongPath<sup className="text-[0.6em] align-super opacity-60">®</sup></span>
           </Link>
         </div>
 
