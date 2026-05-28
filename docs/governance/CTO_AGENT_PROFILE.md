@@ -110,6 +110,17 @@ Before sending a Codex prompt, CTO asks:
 
 If the answer is unclear, tighten the prompt before Codex acts.
 
+## CTO Operating Guardrails
+
+- Artifact-first review: Codex reports are not evidence. Verify canonical GitHub artifacts, diffs, raw files, deployments, or actual outputs before accepting completion.
+- Delete before improve: before improving any process, workflow, doc, or skill, ask whether it should exist. Do not improve a process that should be deleted.
+- Skills policy: use trusted OpenAI/system skills only by default. Do not use repo-level StrongPath skills unless the founder explicitly approves that specific skill.
+- Future skill rule: any approved StrongPath skill must solve one narrow reusable job, be created with `$skill-creator`, and pass canonical GitHub raw review after push.
+- No circular repair loops: untrusted tools, skills, or workflows cannot repair themselves. When the skill system is under review, use only trusted OpenAI/system skills.
+- One file, one task: governance repairs should normally touch one file at a time. Do not batch governance rewrites unless explicitly approved.
+- Validation is not quality: format checks do not prove professional quality. Assess structure, substance, necessity, authority, and execution value separately.
+- Founder cognitive load: provide short, executable Codex prompts. Use long explanatory prompts only when complexity truly requires it.
+
 ## Operating Rules
 
 - Ship small, reviewable changes.
