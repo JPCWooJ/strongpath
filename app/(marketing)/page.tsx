@@ -160,53 +160,55 @@ export default function HomePage() {
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container pb-8 pt-12 md:pb-14 md:pt-[90px]">
-          <div className="max-w-[820px] border-y border-[#2E6171]/24 py-10 md:py-72">
+          <div className="grid gap-16 border-y border-[#2E6171]/24 py-10 md:gap-20 md:py-72 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start lg:gap-28">
 
-            <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-              Strength for the family, freedom, and life you want to keep.
-            </h1>
+            <div>
+              <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
+                Strength for the family, freedom, and life you want to keep.
+              </h1>
 
-            <p className="mt-30 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:text-[22px] md:leading-[1.55]">
-              Resistance training, adequate protein, and recovery — the research-backed path to
-              staying strong as you age.
-            </p>
+              <p className="mt-30 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:text-[22px] md:leading-[1.55]">
+                Resistance training, adequate protein, and recovery — the research-backed path to
+                staying strong as you age.
+              </p>
 
-            <div className="mt-40 flex flex-col gap-12 sm:flex-row sm:items-center">
-              <Link href="/book" className="shrink-0">
-                <Image
-                  src={bookCoverUrl}
-                  alt="Choosing the StrongPath book cover"
-                  width={160}
-                  height={240}
-                  className="h-auto w-[64px] border border-[#2E6171]/18 sm:w-[80px]"
-                />
-              </Link>
-              <div>
-                <p className="font-utility text-[13px] leading-[1.45] text-[#1A1D24]/72">
-                  <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>{' '}
-                  by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
-                </p>
-                <p className="mt-8 font-utility text-[13px] font-medium leading-none text-[#302f2c]">
-                  Amazon bestseller in Aging, Weight Training, Exercise, and Longevity
-                </p>
+              <div className="mt-30">
+                <Link
+                  href="/blog/what-is-sarcopenia"
+                  className="inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
+                >
+                  Learn about sarcopenia
+                </Link>
+                <div className="mt-12">
+                  <Link
+                    href="/blog"
+                    className="font-utility text-[14px] leading-none text-[#1A1D24] decoration-[#1A1D24]/40 underline-offset-4 hover:underline"
+                  >
+                    Browse all articles
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="mt-30">
-              <Link
-                href="/blog/what-is-sarcopenia"
-                className="inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
-              >
-                Learn about sarcopenia
+            <div>
+              <p className="mb-8 font-utility text-[13px] font-medium leading-none text-[#302f2c]">
+                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity
+              </p>
+              <Link href="/book">
+                <Image
+                  src={bookCoverUrl}
+                  alt="Choosing the StrongPath book cover"
+                  width={333}
+                  height={500}
+                  sizes="(min-width: 1024px) 280px, 160px"
+                  className="h-auto w-[160px] border border-[#2E6171]/18 bg-[#FAF8F5] lg:w-full"
+                  priority
+                />
               </Link>
-              <div className="mt-12">
-                <Link
-                  href="/blog"
-                  className="font-utility text-[14px] leading-none text-[#1A1D24] decoration-[#1A1D24]/40 underline-offset-4 hover:underline"
-                >
-                  Browse all articles
-                </Link>
-              </div>
+              <p className="mt-8 font-utility text-[13px] leading-[1.45] text-[#1A1D24]/72">
+                <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>{' '}
+                by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
+              </p>
             </div>
 
           </div>
