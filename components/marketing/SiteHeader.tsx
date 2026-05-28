@@ -21,7 +21,24 @@ export function SiteHeader() {
             href="/"
             className="font-display text-[48px] font-semibold leading-none tracking-[-0.02em] text-near-black md:text-[64px]"
           >
-            StrongPath
+            <svg
+              width="0.55em"
+              height="0.55em"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+              className="mr-[0.14em] inline-block align-middle"
+            >
+              <path
+                d="M12 20V4M4 12l8-8 8 8"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            StrongPath<sup className="text-[0.38em] align-super">®</sup>
           </Link>
         </div>
 
