@@ -129,8 +129,8 @@ export default function HomePage() {
   return (
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container pb-10 pt-16 md:pb-20 md:pt-32">
-          <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start lg:gap-28">
+        <div className="sp-container pb-8 pt-12 md:pb-14 md:pt-[90px]">
+          <div className="grid gap-16 border-y border-[#2E6171]/24 py-10 md:gap-20 md:py-72 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start lg:gap-28">
 
             <div className="order-2 lg:order-first">
               <p className="mb-8 font-utility text-[11px] font-medium uppercase tracking-[0.08em] leading-none text-[#5A6472]">
@@ -177,7 +177,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-24 md:py-44">
+        <div className="sp-container py-16 md:py-[120px]">
           <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
@@ -217,7 +217,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#0B2545] text-warm-white">
-        <div className="sp-container py-30 md:py-44">
+        <div className="sp-container py-20 md:py-[120px]">
           {featuredGuide && (
             <article className="grid gap-20 md:grid-cols-[0.43fr_0.57fr] md:items-start md:gap-32">
               {featuredGuide.image && (
@@ -275,7 +275,7 @@ export default function HomePage() {
 
       <section className="border-b border-[#2E6171]/24">
         <div className="sp-container">
-          <div className="grid gap-10 border-y border-[#2E6171]/24 py-13 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+          <div className="grid gap-10 border-y border-[#2E6171]/24 py-[36px] md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">
                 The path is practical.
@@ -296,7 +296,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-18 md:py-24">
+        <div className="sp-container py-12 md:py-16">
           <div className="flex flex-col justify-between gap-12 border-b border-[#2E6171]/28 pb-16 md:flex-row md:items-end">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Latest articles</p>
@@ -347,7 +347,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-18 md:py-24">
+        <div className="sp-container py-12 md:py-16">
           <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
@@ -384,7 +384,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-22 flex flex-wrap gap-8 border-t border-[#2E6171]/24 pt-16">
+          <div className="mt-16 flex flex-wrap gap-8 border-t border-[#2E6171]/24 pt-12">
             {topics.map(([label, href]) => (
               <Link
                 key={label}
@@ -399,7 +399,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#0B2545] text-warm-white">
-        <div className="sp-container py-20 md:py-28">
+        <div className="sp-container py-14 md:py-20">
           <div className="mx-auto max-w-[760px] text-center">
             <h2 className="font-display text-[38px] font-normal leading-[1.05] text-warm-white md:text-[58px]">
               Get clearer about what helps.
@@ -408,7 +408,7 @@ export default function HomePage() {
               Practical notes on strength, protein, recovery, and helping a parent begin without
               pressure.
             </p>
-            <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
+            <div className="mx-auto mt-14 max-w-[560px] md:mt-16">
               <EmailForm source="homepage_publication_baseline" />
             </div>
             <p className="mx-auto mt-16 max-w-[620px] font-utility text-[13px] leading-[1.45] text-warm-white/52">
