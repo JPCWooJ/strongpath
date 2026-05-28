@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AmazonLink } from '@/components/AmazonLink'
 import { formatArticleDate } from '@/lib/articles'
 import { featuredFlagshipArticles } from '@/lib/flagship-articles'
 import { buildMetadata } from '@/lib/seo'
@@ -191,10 +192,20 @@ export default function HomePage() {
             </div>
 
             <div>
-              <p className="mb-8 font-utility text-[13px] font-medium leading-none text-[#302f2c]">
-                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity
-              </p>
-              <Link href="/book">
+              <div className="mb-18 inline-flex items-center gap-8 rounded-[40px] bg-[var(--color-navy-pill)] py-10 pl-14 pr-16">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#ffb801" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                <div>
+                  <p className="font-utility text-[14px] font-medium uppercase leading-none tracking-[0.08em] text-[#f0ebdd]">
+                    Amazon Bestseller
+                  </p>
+                  <p className="mt-4 font-utility text-[11px] leading-none text-[#f0ebdd]/80">
+                    Aging · Weight Training · Exercise · Longevity
+                  </p>
+                </div>
+              </div>
+              <Link href="/book" className="block">
                 <Image
                   src={bookCoverUrl}
                   alt="Choosing the StrongPath book cover"
@@ -209,6 +220,12 @@ export default function HomePage() {
                 <em>Choosing the StrongPath: Reversing the Downward Spiral of Aging</em>{' '}
                 by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018)
               </p>
+              <AmazonLink
+                asin="1626344760"
+                className="mt-18 inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
+              >
+                Buy on Amazon
+              </AmazonLink>
             </div>
 
           </div>
