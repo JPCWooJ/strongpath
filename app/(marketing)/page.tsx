@@ -97,23 +97,6 @@ const nextSteps = [
   },
 ]
 
-const trustSignals = [
-  {
-    title: 'The book gave the path its name.',
-    copy: 'Choosing the StrongPath named a problem many families recognize before they can explain it: when muscle and strength decline, life gets smaller. StrongPath carries that work forward with current research, plain guidance, and practical next steps.',
-  },
-  {
-    title: 'The research points to action.',
-    copy: 'The useful advice is not complicated, but it has to be taken seriously: resistance training, enough protein, recovery, and progression. StrongPath exists to make those steps easier to understand and easier to begin.',
-  },
-  {
-    title: 'Families need a better way to help.',
-    copy: 'A parent who is getting weaker does not need a lecture. They need dignity, encouragement, and a first step that feels possible. Caregivers need the same thing: a clear path that begins with love, not fear.',
-  },
-]
-
-const [bookTrustSignal, ...supportingTrustSignals] = trustSignals
-
 const topics = [
   ['Sarcopenia', '/blog/tags/sarcopenia'],
   ['Strength After 50', '/blog/tags/strength-after-50'],
@@ -139,30 +122,6 @@ function ArticleMeta({
       {date && <p>{date}</p>}
       {readingMinutes && <p>{readingMinutes} min read</p>}
     </div>
-  )
-}
-
-function CommerceLink({
-  href,
-  action,
-  className,
-}: {
-  href: string
-  action: string
-  className: string
-}) {
-  if (href === 'amazon') {
-    return (
-      <AmazonLink asin="1626344760" className={className}>
-        {action}
-      </AmazonLink>
-    )
-  }
-
-  return (
-    <Link href={href} className={className}>
-      {action}
-    </Link>
   )
 }
 
@@ -332,7 +291,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-30 md:py-42">
+        <div className="sp-container py-18 md:py-24">
           <div className="flex flex-col justify-between gap-12 border-b border-[#2E6171]/28 pb-16 md:flex-row md:items-end">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Latest articles</p>
@@ -382,60 +341,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container grid gap-20 py-30 md:py-42 lg:grid-cols-[0.38fr_0.62fr] lg:gap-34">
-          <div>
-            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Why StrongPath</p>
-            <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-              Strength keeps life bigger.
-            </h2>
-          </div>
-          <div className="grid gap-12">
-            {bookTrustSignal && (
-              <article className="grid gap-14 border border-[#2E6171]/24 bg-warm-white p-14 md:grid-cols-[132px_minmax(0,1fr)] md:items-center md:gap-20 md:p-18">
-                <Image
-                  src={bookCoverUrl}
-                  alt="Choosing the StrongPath book cover"
-                  width={333}
-                  height={500}
-                  sizes="(min-width: 768px) 132px, 92px"
-                  className="w-[92px] border border-[#2E6171]/18 bg-[#FAF8F5] md:w-full"
-                />
-                <div>
-                  <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
-                    Amazon bestseller
-                  </p>
-                  <h3 className="mt-10 max-w-[560px] font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[40px]">
-                    {bookTrustSignal.title}
-                  </h3>
-                  <p className="mt-9 max-w-[620px] font-body text-[17px] leading-[1.55] text-[#1A1D24]/76 md:text-[18px]">
-                    {bookTrustSignal.copy}
-                  </p>
-                </div>
-              </article>
-            )}
-
-            <div className="grid gap-0 border-y border-[#2E6171]/24 md:grid-cols-2 md:border-y-0">
-              {supportingTrustSignals.map((item) => (
-                <article
-                  key={item.title}
-                  className="border-b border-[#2E6171]/22 py-14 last:border-b-0 md:border-b-0 md:border-l md:border-[#2E6171]/22 md:px-16 md:py-4 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
-                >
-                  <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-8 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
-                    {item.copy}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-30 md:py-42">
+        <div className="sp-container py-18 md:py-24">
           <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
@@ -444,7 +351,7 @@ export default function HomePage() {
               </h2>
             </div>
             <div className="grid gap-12 md:grid-cols-3">
-              {nextSteps.map((item) => (
+              {nextSteps.map((item, index) => (
                 <article key={item.title} className="border border-[#2E6171]/24 bg-[#FAF8F5] p-16">
                   <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
                     {item.title}
@@ -452,11 +359,21 @@ export default function HomePage() {
                   <p className="mt-9 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
                     {item.copy}
                   </p>
-                  <CommerceLink
-                    href={item.href}
-                    action={item.action}
-                    className="mt-14 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
-                  />
+                  {index === 0 ? (
+                    <Link
+                      href={item.href}
+                      className="mt-14 inline-flex min-h-[42px] items-center bg-[#0B2545] px-16 py-10 font-body text-[15px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
+                    >
+                      {item.action}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="mt-14 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                    >
+                      {item.action}
+                    </Link>
+                  )}
                 </article>
               ))}
             </div>
@@ -477,7 +394,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#0B2545] text-warm-white">
-        <div className="sp-container py-34 md:py-48">
+        <div className="sp-container py-20 md:py-28">
           <div className="mx-auto max-w-[760px] text-center">
             <h2 className="font-display text-[38px] font-normal leading-[1.05] text-warm-white md:text-[58px]">
               Get clearer about what helps.
