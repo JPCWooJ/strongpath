@@ -177,11 +177,11 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container pb-24 pt-18 md:pb-34 md:pt-24">
+        <div className="sp-container py-24 md:py-44">
           <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
-              <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
+              <h2 className="mt-10 font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
                 Take the StrongPath, not the frail trail.
               </h2>
               <p className="mt-10 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
@@ -190,11 +190,11 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <div className="grid gap-12 md:grid-cols-2">
+              <div className="grid gap-16 md:grid-cols-2">
                 {startingPoints.map((item) => (
                   <article
                     key={item.title}
-                    className="border border-[#2E6171]/26 bg-[#FAF8F5] p-16 md:p-18"
+                    className="border border-[#2E6171]/26 bg-[#FAF8F5] p-20 md:p-28"
                   >
                     <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
                       {item.title}
@@ -204,7 +204,7 @@ export default function HomePage() {
                     </p>
                     <Link
                       href={item.href}
-                      className="mt-14 inline-flex min-h-[36px] items-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
+                      className="mt-16 inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
                     >
                       {item.action}
                     </Link>
