@@ -171,19 +171,31 @@ export default function HomePage() {
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
         <div className="sp-container pb-10 pt-16 md:pb-20 md:pt-32">
-          <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-34">
-            <div className="max-w-[820px]">
+          <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start lg:gap-28">
+
+            <div className="order-2 lg:order-first">
+              <Image
+                src={bookCoverUrl}
+                alt="Choosing the StrongPath book cover"
+                width={333}
+                height={500}
+                sizes="(min-width: 1024px) 280px, 160px"
+                className="h-auto w-[160px] border border-[#2E6171]/18 bg-[#FAF8F5] lg:w-full"
+                priority
+              />
+              <p className="mt-8 font-utility text-[12px] leading-[1.35] text-[#5A6472]">
+                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+              </p>
+            </div>
+
+            <div className="order-1 lg:order-last max-w-[820px]">
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-                Take the StrongPath. Stay strong for your family, freedom, and the life you love.
+                Strength for the family, freedom, and life you want to keep.
               </h1>
               <p className="mt-13 max-w-[690px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/80 md:mt-15 md:text-[22px] md:leading-[1.55]">
                 Strength shows up in the moments that matter: walking with your spouse, playing with
                 your grandchildren, carrying your own bags, helping a parent, and staying independent
                 longer.
-              </p>
-              <p className="mt-12 max-w-[620px] border-l-2 border-[#B8860B] pl-10 font-body text-[16px] leading-[1.45] text-[#1A1D24]/78 md:mt-14 md:text-[18px] md:leading-[1.5]">
-                Book-backed guidance on sarcopenia, the age-related muscle loss that
-                changes strength, balance, and independence.
               </p>
               <div className="mt-15 flex flex-col gap-10 sm:flex-row sm:items-center md:mt-18">
                 <Link
@@ -192,49 +204,15 @@ export default function HomePage() {
                 >
                   Learn about sarcopenia
                 </Link>
-                <Link
-                  href="/blog"
+                <AmazonLink
+                  asin="1626344760"
                   className="inline-flex min-h-[44px] items-center justify-center border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171] sm:min-h-0"
                 >
-                  Browse all articles
-                </Link>
+                  Read the book on Amazon
+                </AmazonLink>
               </div>
             </div>
 
-            <aside className="grid grid-cols-[96px_minmax(0,1fr)] gap-14 border-t border-[#2E6171]/24 pt-16 lg:block lg:border-l lg:border-t-0 lg:pl-18 lg:pt-0">
-              <Image
-                src={bookCoverUrl}
-                alt="Choosing the StrongPath book cover"
-                width={333}
-                height={500}
-                sizes="(min-width: 1024px) 250px, 96px"
-                className="h-auto w-full border border-[#2E6171]/18 bg-[#FAF8F5] lg:max-w-[250px]"
-                priority
-              />
-              <div className="self-center lg:mt-14">
-                <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
-                  Amazon bestseller
-                </p>
-                <p className="mt-9 font-display text-[27px] leading-[1.06] text-[#0B2545] md:text-[31px]">
-                  Choosing the StrongPath: Reversing the Downward Spiral of Aging
-                </p>
-                <p className="mt-6 font-body text-[14px] leading-[1.42] text-[#1A1D24]/68">
-                  by Fred Bartlit, Steven Droullard, and Marni Boppart, ScD (2018).
-                </p>
-                <p className="mt-8 font-body text-[15px] leading-[1.48] text-[#1A1D24]/72 md:text-[16px]">
-                  Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
-                </p>
-                <AmazonLink
-                  asin="1626344760"
-                  className="mt-10 inline-flex min-h-[40px] items-center justify-center border border-[#0B2545]/70 bg-warm-white px-12 py-9 font-body text-[14px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-warm-white sm:w-fit"
-                >
-                  Buy on Amazon
-                </AmazonLink>
-                <p className="mt-8 font-utility text-[11px] leading-[1.35] text-[#5A6472]">
-                  StrongPath may earn from qualifying Amazon purchases.
-                </p>
-              </div>
-            </aside>
           </div>
         </div>
       </section>

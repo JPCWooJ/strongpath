@@ -11,12 +11,6 @@ const navItems: Array<{ href: string; label: string; primary?: boolean }> = [
 export function SiteHeader() {
   return (
     <header className="border-b border-near-black/60 bg-warm-white">
-      <div className="sp-container border-b border-near-black/18 py-4">
-        <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-near-black/58">
-          <p>Strength for family, freedom, and daily life</p>
-          <p>For adults, families, and clinicians</p>
-        </div>
-      </div>
       <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
         <div className="relative isolate max-w-[780px] pb-2 pr-18">
           <span
@@ -29,9 +23,6 @@ export function SiteHeader() {
           >
             StrongPath
           </Link>
-          <p className="mt-6 max-w-[580px] border-t border-near-black/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-near-black/82">
-            Stay strong for the people you love and the days you want to keep.
-          </p>
         </div>
 
         <nav
