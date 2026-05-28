@@ -12,33 +12,12 @@ export function SiteHeader() {
   return (
     <header className="border-b border-near-black/60 bg-warm-white">
       <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
-        <div className="relative isolate max-w-[780px] pb-2 pr-18">
-          <span
-            aria-hidden="true"
-            className="absolute -left-14 top-3 -z-10 h-[52px] w-[calc(100%+28px)] border-l-[6px] border-muted-teal bg-muted-teal/42 md:h-[68px]"
-          />
+        <div className="max-w-[780px]">
           <Link
             href="/"
-            className="font-display text-[48px] font-semibold leading-none tracking-[-0.02em] text-near-black md:text-[64px]"
+            className="inline-block rounded-links bg-[#302f2c] px-14 py-8 font-display text-[48px] font-semibold leading-none tracking-[-0.02em] text-[#f0ebdd] md:text-[64px]"
           >
-            <svg
-              width="0.55em"
-              height="0.55em"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              focusable="false"
-              className="mr-[0.14em] inline-block align-middle"
-            >
-              <path
-                d="M12 20V4M4 12l8-8 8 8"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            StrongPath<sup className="text-[0.38em] align-super">®</sup>
+            StrongPath<sup className="text-[0.38em] align-super opacity-60">®</sup>
           </Link>
         </div>
 

@@ -8,7 +8,6 @@ function MetaLine({ article }: { article: ArticleMeta }) {
     <div className="flex flex-wrap gap-x-10 gap-y-4 font-utility text-[13px] leading-[1.35] text-[#5A6472]">
       {article.category && <p>{article.category}</p>}
       {article.publishedAt && <p>{formatArticleDate(article.publishedAt)}</p>}
-      {article.readingMinutes && <p>{article.readingMinutes} min read</p>}
     </div>
   )
 }
