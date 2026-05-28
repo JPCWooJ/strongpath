@@ -31,20 +31,20 @@ Ship, review, refine, iterate.
 
 ---
 
-# 1A. Required Skills
+# 1A. Codex Skills Policy
 
-All StrongPath agents must apply the relevant repo skills when the task calls for them. Jeff should not have to remember to invoke skills manually.
+Use trusted OpenAI/system skills only by default.
 
-Default review skills:
-- `.agents/skills/strongpath-agent-excellence/SKILL.md` for agent profiles, role standards, ownership, success measures, pushback rules, and best-in-class expectations.
-- `.agents/skills/strongpath-deletion-pressure/SKILL.md` for governance, workflows, prompts, checklists, backlog items, and operating processes.
+Do not create, use, repair, or rely on repo-level StrongPath skills unless the founder explicitly approves that specific skill.
 
-Execution skills:
-- `.agents/skills/strongpath-codex-execution/SKILL.md` for Codex implementation, code changes, repo edits, markdown/governance updates, deployment/release tasks, and production-safety work.
-- `.agents/skills/strongpath-publication-baseline/SKILL.md` for publication, article, blog index, homepage publishing, typography, and editorial layout work.
-- `.agents/skills/strongpath-publication-ops/SKILL.md` for publication/distribution deliverables, SEO readiness, internal-link reviews, Amazon affiliate module reviews, X/Beehiiv packages, KPI rows, and repeatable publication operations.
+If a StrongPath skill is ever approved, it must:
 
-Agents are responsible for selecting the relevant skill. Do not require Jeff to specify the skill in each prompt.
+* solve one narrow reusable job
+* be created with `$skill-creator`
+* pass canonical GitHub raw review after push
+
+Codex prompts should state:
+"Use trusted OpenAI/system skills only. Do not create or use repo-level StrongPath skills unless explicitly instructed."
 
 ---
 
