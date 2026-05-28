@@ -15,11 +15,11 @@ export function SiteHeader() {
         <div className="relative isolate max-w-[780px] pb-2 pr-18">
           <span
             aria-hidden="true"
-            className="absolute -left-14 top-3 -z-10 h-[46px] w-[calc(100%+28px)] border-l-[6px] border-muted-teal bg-muted-teal/42 md:h-[58px]"
+            className="absolute -left-14 top-3 -z-10 h-[52px] w-[calc(100%+28px)] border-l-[6px] border-muted-teal bg-muted-teal/42 md:h-[68px]"
           />
           <Link
             href="/"
-            className="font-display text-[42px] font-normal leading-none text-near-black md:text-[56px]"
+            className="font-display text-[48px] font-semibold leading-none tracking-[-0.02em] text-near-black md:text-[64px]"
           >
             StrongPath
           </Link>
