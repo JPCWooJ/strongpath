@@ -55,7 +55,6 @@ const featuredArticles = featuredFlagshipArticles.map((article) => ({
   useCase: articleUseCases[article.slug.current],
   category: article.category,
   publishedAt: article.publishedAt,
-  readingMinutes: article.estimatedReadingMinutes,
   image: article.heroImage,
 }))
 
@@ -107,11 +106,9 @@ const topics = [
 
 function ArticleMeta({
   publishedAt,
-  readingMinutes,
   tone = 'dark',
 }: {
   publishedAt?: string
-  readingMinutes?: number
   tone?: 'dark' | 'light'
 }) {
   const date = formatArticleDate(publishedAt)
@@ -120,7 +117,6 @@ function ArticleMeta({
   return (
     <div className={`flex flex-wrap gap-x-10 gap-y-4 font-utility text-[13px] leading-[1.35] ${color}`}>
       {date && <p>{date}</p>}
-      {readingMinutes && <p>{readingMinutes} min read</p>}
     </div>
   )
 }
@@ -168,8 +164,8 @@ export default function HomePage() {
           <div className="grid gap-16 border-y border-[#2E6171]/24 py-10 md:gap-20 md:py-72 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start lg:gap-28">
 
             <div className="order-2 lg:order-first">
-              <p className="mb-8 font-utility text-[11px] font-medium uppercase tracking-[0.08em] leading-none text-[#5A6472]">
-                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity.
+              <p className="mb-8 font-utility text-[13px] font-medium leading-none text-[#302f2c]">
+                Amazon bestseller in Aging, Weight Training, Exercise, and Longevity
               </p>
               <Image
                 src={bookCoverUrl}
@@ -277,7 +273,6 @@ export default function HomePage() {
                   <div className="mt-12">
                     <ArticleMeta
                       publishedAt={featuredGuide.publishedAt}
-                      readingMinutes={featuredGuide.readingMinutes}
                       tone="light"
                     />
                   </div>
@@ -366,7 +361,7 @@ export default function HomePage() {
                   </Link>
                 )}
                 <div>
-                  <ArticleMeta publishedAt={article.publishedAt} readingMinutes={article.readingMinutes} />
+                  <ArticleMeta publishedAt={article.publishedAt} />
                   <Link href={article.href} className="group">
                     <h3 className="mt-8 max-w-[760px] font-display text-[29px] font-normal leading-[1.08] text-[#0B2545] group-hover:underline md:text-[38px]">
                       {article.title}
