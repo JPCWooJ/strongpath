@@ -233,7 +233,7 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-16 md:py-[60px]">
+        <div className="sp-container pb-28 pt-16 md:pb-20 md:pt-[60px]">
           <div className="max-w-[820px]">
             <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
             <h2 className="mt-10 font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
