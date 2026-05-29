@@ -233,44 +233,40 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-16 md:py-[120px]">
-          <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
-            <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
-              <h2 className="mt-10 font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
-                Take the StrongPath, not the frail trail.
-              </h2>
-              <p className="mt-10 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
-                Most people arrive here through one of two doors: protecting their own
-                independence, or helping someone they love act earlier.
-              </p>
-            </div>
-            <div>
-              <div className="grid gap-16 md:grid-cols-2">
-                {startingPoints.map((item, index) => (
-                  <article
-                    key={item.title}
-                    className="border border-[#2E6171]/26 bg-[#FAF8F5] p-20 md:p-28"
-                  >
-                    <div className="mb-20 text-near-black">
-                      {index === 0 ? <IndependenceIcon /> : <CaregivingIcon />}
-                    </div>
-                    <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-10 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
-                      {item.copy}
-                    </p>
-                    <Link
-                      href={item.href}
-                      className="mt-16 inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
-                    >
-                      {item.action}
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
+        <div className="sp-container py-16 md:py-[60px]">
+          <div className="max-w-[820px]">
+            <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
+            <h2 className="mt-10 font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
+              Take the StrongPath, not the frail trail.
+            </h2>
+            <p className="mt-10 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
+              Most people arrive here through one of two doors: protecting their own
+              independence, or helping someone they love act earlier.
+            </p>
+          </div>
+          <div className="mt-40 grid gap-24 lg:grid-cols-2">
+            {startingPoints.map((item, index) => (
+              <article
+                key={item.title}
+                className="border border-[#2E6171]/26 bg-[#FAF8F5] p-28 lg:p-40"
+              >
+                <div className="mb-20 text-near-black">
+                  {index === 0 ? <IndependenceIcon /> : <CaregivingIcon />}
+                </div>
+                <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
+                  {item.title}
+                </h3>
+                <p className="mt-12 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
+                  {item.copy}
+                </p>
+                <Link
+                  href={item.href}
+                  className="mt-24 inline-flex min-h-[46px] items-center justify-center bg-[#0B2545] px-18 py-11 font-body text-[16px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
+                >
+                  {item.action}
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
