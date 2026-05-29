@@ -467,7 +467,7 @@ export default function HomePage() {
               pressure.
             </p>
             <div className="mx-auto mt-14 max-w-[560px] md:mt-16">
-              <EmailForm source="homepage_publication_baseline" />
+              <EmailForm dark source="homepage_publication_baseline" />
             </div>
             <p className="mx-auto mt-16 max-w-[620px] font-utility text-[13px] leading-[1.45] text-warm-white/52">
               Educational content only. StrongPath does not diagnose, treat, cure, or replace care
