@@ -75,27 +75,6 @@ const startingPoints = [
   },
 ]
 
-const nextSteps = [
-  {
-    title: 'Understand the problem.',
-    copy: 'Start with the article on sarcopenia and learn why muscle, strength, and independence are connected.',
-    action: 'Read the article',
-    href: '/blog/what-is-sarcopenia',
-  },
-  {
-    title: 'Help a parent begin.',
-    copy: 'Use the caregiver guide to start the conversation without pressure, shame, or fear.',
-    action: 'Read the guide',
-    href: '/blog/help-aging-parents-stay-strong',
-  },
-  {
-    title: 'Stay on the path.',
-    copy: 'Get practical notes on strength, protein, recovery, and helping a parent take the first step.',
-    action: 'Get the notes',
-    href: '/waitlist',
-  },
-]
-
 const topics = [
   ['Sarcopenia', '/blog/tags/sarcopenia'],
   ['Strength After 50', '/blog/tags/strength-after-50'],
@@ -380,43 +359,7 @@ export default function HomePage() {
 
       <section className="border-b border-[#2E6171]/24">
         <div className="sp-container py-12 md:py-16">
-          <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
-            <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
-              <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
-                Choose your next step.
-              </h2>
-            </div>
-            <div className="grid gap-12 md:grid-cols-3">
-              {nextSteps.map((item, index) => (
-                <article key={item.title} className="border border-[#2E6171]/24 bg-[#FAF8F5] p-16">
-                  <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-9 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
-                    {item.copy}
-                  </p>
-                  {index === 0 ? (
-                    <Link
-                      href={item.href}
-                      className="mt-14 inline-flex min-h-[42px] items-center bg-[#0B2545] px-16 py-10 font-body text-[15px] font-medium leading-none text-warm-white transition-colors hover:bg-[#16385f]"
-                    >
-                      {item.action}
-                    </Link>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="mt-14 inline-flex border-b border-[#B8860B] pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
-                    >
-                      {item.action}
-                    </Link>
-                  )}
-                </article>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-16 flex flex-wrap gap-8 border-t border-[#2E6171]/24 pt-12">
+          <div className="flex flex-wrap gap-8">
             {topics.map(([label, href]) => (
               <Link
                 key={label}
