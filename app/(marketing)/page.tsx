@@ -160,8 +160,8 @@ export default function HomePage() {
   return (
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container pb-8 pt-12 md:pb-14 md:pt-[90px]">
-          <div className="grid gap-16 border-y border-[#2E6171]/24 py-10 md:gap-20 md:py-72 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start lg:gap-28">
+        <div className="sp-container pb-8 pt-20 md:pb-14 md:pt-20">
+          <div className="grid gap-16 border-y border-[#2E6171]/24 pb-10 pt-28 md:gap-20 md:pb-72 md:pt-60 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-start lg:gap-28">
 
             <div>
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
