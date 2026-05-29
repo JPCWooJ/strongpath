@@ -272,7 +272,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#0B2545] text-warm-white">
-        <div className="sp-container py-20 md:py-[120px]">
+        <div className="sp-container pb-20 pt-20 md:pb-[120px] md:pt-[60px]">
           {featuredGuide && (
             <article className="grid gap-20 md:grid-cols-[0.43fr_0.57fr] md:items-start md:gap-32">
               {featuredGuide.image && (
