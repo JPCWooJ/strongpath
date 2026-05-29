@@ -328,28 +328,6 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container">
-          <div className="grid gap-10 border-y border-[#2E6171]/24 py-[36px] md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
-            <div>
-              <p className="font-utility text-[13px] leading-none text-[#2E6171]">
-                The path is practical.
-              </p>
-              <p className="mt-7 font-body text-[16px] leading-[1.5] text-[#1A1D24]/72 md:text-[17px]">
-                Both paths start with the same foundation: resistance training, enough protein,
-                recovery, and steady progression.
-              </p>
-            </div>
-            <Link
-              href="/blog/resistance-training-older-adults"
-              className="inline-flex min-h-[36px] items-center border-b border-[#B8860B]/70 pb-3 font-utility text-[13px] leading-none text-[#0B2545] transition-colors hover:text-[#2E6171]"
-            >
-              Read the research
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-[#2E6171]/24">
         <div className="sp-container py-12 md:py-16">
           <div className="flex flex-col justify-between gap-12 border-b border-[#2E6171]/28 pb-16 md:flex-row md:items-end">
             <div>
