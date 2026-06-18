@@ -5,9 +5,7 @@ export function SiteFooter() {
     <footer className="border-t border-near-black bg-warm-white">
       <div className="sp-container grid gap-30 py-40 text-near-black md:grid-cols-[1.12fr_0.88fr_0.88fr]">
         <div>
-          <p className="inline-flex items-center rounded-links bg-[var(--color-navy-pill)] pl-14 pr-18 py-10 font-display text-[32px] text-[#f0ebdd]">
-            <span className="leading-none">StrongPath<sup className="text-[0.6em] align-super opacity-60">®</sup></span>
-          </p>
+          <p className="font-display text-[32px] leading-none">StrongPath</p>
           <p className="mt-18 font-utility text-caption leading-caption text-near-black/75">
             Practical strength guidance for adults, families, and clinicians who want people to
             stay strong, active, and independent longer.
