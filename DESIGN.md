@@ -2,13 +2,15 @@
 
 Project-local Impeccable visual context for Codex UI/UX work.
 
-This file is not canonical governance. Use it only to help Impeccable understand StrongPath's visual lane. Canonical visual direction remains:
+This file is a subordinate tool/context shim, not canonical governance. Use it only to help Impeccable and Codex understand StrongPath's visual lane.
+
+`docs/governance/DESIGN.md` remains the canonical StrongPath design-governance document. Canonical visual direction remains:
 
 - `docs/governance/BRAND.md`
 - `docs/governance/DESIGN.md`
 - `docs/governance/UIUX_AGENT_PROFILE.md`
 
-If this file conflicts with governance, governance wins.
+If this root file conflicts with `docs/governance/DESIGN.md` or any other governance file, governance wins.
 
 ## Visual Standard
 
@@ -51,4 +53,3 @@ Avoid posed active-senior stock, beach/yoga/sunset wellness imagery, gym selfies
 Use Impeccable for UI/UX critique, layout, spacing, typography, visual rhythm, polish, and anti-pattern detection.
 
 Do not use Impeccable as a replacement for StrongPath governance, and do not invoke it for non-UI tasks unless explicitly requested.
-
