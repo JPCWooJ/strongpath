@@ -164,9 +164,9 @@ export default function HomePage() {
   return (
     <main className="bg-warm-white">
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container pb-10 pt-16 md:pb-20 md:pt-32">
-          <div className="grid gap-16 border-y border-[#2E6171]/24 py-14 md:gap-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-34">
-            <div className="max-w-[820px]">
+        <div className="sp-container pb-12 pt-14 md:pb-22 md:pt-28">
+          <div className="grid gap-16 border-y border-[#2E6171]/28 py-14 md:gap-22 md:py-24 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-28">
+            <div className="max-w-[860px] lg:pr-10">
               <h1 className="font-display text-[42px] font-normal leading-[1.01] text-[#0B2545] md:text-[74px] md:leading-[0.98]">
                 Take the StrongPath. Stay strong for your family, your freedom, and the life you love.
               </h1>
@@ -195,7 +195,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className="grid grid-cols-[96px_minmax(0,1fr)] gap-14 border-t border-[#2E6171]/24 pt-16 lg:block lg:border-l lg:border-t-0 lg:pl-18 lg:pt-0">
+            <aside className="grid grid-cols-[96px_minmax(0,1fr)] gap-14 border-t border-[#2E6171]/24 pt-16 lg:block lg:border-l lg:border-t-0 lg:pl-18 lg:pt-2">
               <Image
                 src={bookCoverUrl}
                 alt="Choosing the StrongPath book cover"
@@ -205,8 +205,8 @@ export default function HomePage() {
                 className="h-auto w-full border border-[#2E6171]/18 bg-[#FAF8F5] lg:max-w-[250px]"
                 priority
               />
-              <div className="self-center lg:mt-14">
-                <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
+              <div className="self-center lg:mt-12">
+                <p className="font-utility text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-[#B8860B]">
                   Amazon bestseller
                 </p>
                 <p className="mt-9 font-display text-[27px] leading-[1.06] text-[#0B2545] md:text-[31px]">
@@ -217,7 +217,7 @@ export default function HomePage() {
                 </p>
                 <AmazonLink
                   asin="1626344760"
-                  className="mt-10 inline-flex min-h-[40px] items-center justify-center border border-[#0B2545]/70 bg-warm-white px-12 py-9 font-body text-[14px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-warm-white sm:w-fit"
+                  className="mt-10 inline-flex min-h-[40px] items-center justify-center border border-[#0B2545]/55 bg-transparent px-12 py-9 font-body text-[14px] font-medium leading-none text-[#0B2545] transition-colors hover:bg-[#0B2545] hover:text-warm-white sm:w-fit"
                 >
                   Buy on Amazon
                 </AmazonLink>
@@ -231,11 +231,11 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container pb-24 pt-18 md:pb-34 md:pt-24">
-          <div className="grid gap-16 md:grid-cols-[0.34fr_0.66fr] md:gap-28">
+        <div className="sp-container pb-24 pt-16 md:pb-34 md:pt-22">
+          <div className="grid gap-16 md:grid-cols-[0.32fr_0.68fr] md:gap-30">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your StrongPath</p>
-              <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[46px]">
+              <h2 className="mt-9 font-display text-[35px] font-normal leading-[1.04] text-[#0B2545] md:text-[50px]">
                 Start with the path that fits your life.
               </h2>
               <p className="mt-10 max-w-[340px] font-body text-[17px] leading-[1.5] text-[#1A1D24]/72">
@@ -247,13 +247,13 @@ export default function HomePage() {
               </p>
             </div>
             <div>
-              <div className="grid gap-12 md:grid-cols-2">
+              <div className="grid border-y border-[#2E6171]/28 md:grid-cols-2">
                 {startingPoints.map((item) => (
                   <article
                     key={item.title}
-                    className="border border-[#2E6171]/26 bg-[#FAF8F5] p-16 md:p-18"
+                    className="border-b border-[#2E6171]/22 bg-[#FAF8F5] py-16 last:border-b-0 md:border-b-0 md:border-l md:px-18 md:py-18 md:first:border-l-0"
                   >
-                    <h3 className="font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[36px]">
+                    <h3 className="font-display text-[32px] font-normal leading-[1.04] text-[#0B2545] md:text-[39px]">
                       {item.title}
                     </h3>
                     <p className="mt-10 font-body text-[17px] leading-[1.52] text-[#1A1D24]/76 md:text-[18px]">
@@ -268,7 +268,7 @@ export default function HomePage() {
                   </article>
                 ))}
               </div>
-              <div className="mt-12 grid gap-10 border-y border-[#2E6171]/24 py-13 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
+              <div className="mt-12 grid gap-10 border-b border-[#2E6171]/24 pb-13 md:grid-cols-[minmax(0,1fr)_auto] md:items-center">
                 <div>
                   <p className="font-utility text-[13px] leading-none text-[#2E6171]">
                     What does the science say?
@@ -398,16 +398,16 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24 bg-[#FAF8F5]">
-        <div className="sp-container grid gap-20 py-30 md:py-42 lg:grid-cols-[0.38fr_0.62fr] lg:gap-34">
+        <div className="sp-container grid gap-20 py-28 md:py-40 lg:grid-cols-[0.36fr_0.64fr] lg:gap-32">
           <div>
             <p className="font-utility text-[13px] leading-none text-[#2E6171]">Why StrongPath</p>
-            <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
+            <h2 className="mt-10 font-display text-[36px] font-normal leading-[1.04] text-[#0B2545] md:text-[52px]">
               Strength is how you keep more of your life.
             </h2>
           </div>
-          <div className="grid gap-12">
+          <div className="grid gap-14 border-y border-[#2E6171]/26 py-14 md:gap-16 md:py-18">
             {bookTrustSignal && (
-              <article className="grid gap-14 border border-[#2E6171]/24 bg-warm-white p-14 md:grid-cols-[132px_minmax(0,1fr)] md:items-center md:gap-20 md:p-18">
+              <article className="grid gap-14 md:grid-cols-[132px_minmax(0,1fr)] md:items-center md:gap-20">
                 <Image
                   src={bookCoverUrl}
                   alt="Choosing the StrongPath book cover"
@@ -417,10 +417,10 @@ export default function HomePage() {
                   className="w-[92px] border border-[#2E6171]/18 bg-[#FAF8F5] md:w-full"
                 />
                 <div>
-                  <p className="inline-flex border border-[#B8860B]/45 bg-[#FAF8F5] px-8 py-5 font-utility text-[12px] font-medium uppercase leading-none text-[#0B2545]">
+                  <p className="font-utility text-[12px] font-medium uppercase leading-none tracking-[0.08em] text-[#B8860B]">
                     Amazon bestseller
                   </p>
-                  <h3 className="mt-10 max-w-[560px] font-display text-[31px] font-normal leading-[1.06] text-[#0B2545] md:text-[40px]">
+                  <h3 className="mt-9 max-w-[560px] font-display text-[32px] font-normal leading-[1.05] text-[#0B2545] md:text-[42px]">
                     {bookTrustSignal.title}
                   </h3>
                   <p className="mt-9 max-w-[620px] font-body text-[17px] leading-[1.55] text-[#1A1D24]/76 md:text-[18px]">
@@ -430,11 +430,11 @@ export default function HomePage() {
               </article>
             )}
 
-            <div className="grid gap-0 border-y border-[#2E6171]/24 md:grid-cols-2 md:border-y-0">
+            <div className="grid gap-0 border-t border-[#2E6171]/24 pt-14 md:grid-cols-2 md:pt-16">
               {supportingTrustSignals.map((item) => (
                 <article
                   key={item.title}
-                  className="border-b border-[#2E6171]/22 py-14 last:border-b-0 md:border-b-0 md:border-l md:border-[#2E6171]/22 md:px-16 md:py-4 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
+                  className="border-b border-[#2E6171]/22 py-13 last:border-b-0 md:border-b-0 md:border-l md:border-[#2E6171]/22 md:px-16 md:py-2 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
                 >
                   <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
                     {item.title}
@@ -450,18 +450,21 @@ export default function HomePage() {
       </section>
 
       <section className="border-b border-[#2E6171]/24">
-        <div className="sp-container py-30 md:py-42">
-          <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-28">
+        <div className="sp-container py-28 md:py-40">
+          <div className="grid gap-18 md:grid-cols-[0.32fr_0.68fr] md:gap-30">
             <div>
               <p className="font-utility text-[13px] leading-none text-[#2E6171]">Choose your next step</p>
-              <h2 className="mt-10 font-display text-[34px] font-normal leading-[1.06] text-[#0B2545] md:text-[48px]">
+              <h2 className="mt-10 font-display text-[36px] font-normal leading-[1.04] text-[#0B2545] md:text-[52px]">
                 Start where the need is clearest.
               </h2>
             </div>
-            <div className="grid gap-12 md:grid-cols-3">
+            <div className="grid border-y border-[#2E6171]/26 md:grid-cols-3">
               {nextSteps.map((item) => (
-                <article key={item.title} className="border border-[#2E6171]/24 bg-[#FAF8F5] p-16">
-                  <h3 className="font-display text-[27px] font-normal leading-[1.08] text-[#0B2545]">
+                <article
+                  key={item.title}
+                  className="border-b border-[#2E6171]/22 py-15 last:border-b-0 md:border-b-0 md:border-l md:px-16 md:py-16 md:first:border-l-0 md:first:pl-0 md:last:pr-0"
+                >
+                  <h3 className="font-display text-[28px] font-normal leading-[1.07] text-[#0B2545]">
                     {item.title}
                   </h3>
                   <p className="mt-9 font-body text-[16px] leading-[1.52] text-[#1A1D24]/74">
@@ -492,22 +495,24 @@ export default function HomePage() {
       </section>
 
       <section className="bg-[#0B2545] text-warm-white">
-        <div className="sp-container py-34 md:py-48">
-          <div className="mx-auto max-w-[760px] text-center">
-            <h2 className="font-display text-[38px] font-normal leading-[1.05] text-warm-white md:text-[58px]">
+        <div className="sp-container py-30 md:py-42">
+          <div className="grid gap-18 border-t border-warm-white/18 pt-16 md:grid-cols-[0.48fr_0.52fr] md:items-start md:gap-28 md:pt-20">
+            <div>
+              <h2 className="font-display text-[38px] font-normal leading-[1.05] text-warm-white md:text-[58px]">
               Get clearer about what helps.
-            </h2>
-            <p className="mx-auto mt-14 max-w-[620px] font-body text-[17px] leading-[1.55] text-warm-white/74 md:text-[19px]">
-              Get practical notes on strength, protein, recovery, and helping a parent begin
-              without pressure.
-            </p>
-            <div className="mx-auto mt-20 max-w-[560px] md:mt-24">
-              <EmailForm source="homepage_publication_baseline" />
+              </h2>
+              <p className="mt-12 max-w-[620px] font-body text-[17px] leading-[1.55] text-warm-white/74 md:text-[19px]">
+                Get practical notes on strength, protein, recovery, and helping a parent begin
+                without pressure.
+              </p>
             </div>
-            <p className="mx-auto mt-16 max-w-[620px] font-utility text-[13px] leading-[1.45] text-warm-white/52">
-              Educational content only. StrongPath does not diagnose, treat, cure, or replace care
-              from your physician, physical therapist, or other qualified professional.
-            </p>
+            <div>
+              <EmailForm source="homepage_publication_baseline" />
+              <p className="mt-12 max-w-[620px] font-utility text-[13px] leading-[1.45] text-warm-white/52">
+                Educational content only. StrongPath does not diagnose, treat, cure, or replace care
+                from your physician, physical therapist, or other qualified professional.
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -10,33 +10,29 @@ const navItems: Array<{ href: string; label: string; primary?: boolean }> = [
 
 export function SiteHeader() {
   return (
-    <header className="border-b border-near-black/60 bg-warm-white">
-      <div className="sp-container border-b border-near-black/18 py-4">
-        <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-near-black/58">
+    <header className="border-b border-near-black/50 bg-warm-white">
+      <div className="sp-container border-b border-near-black/16 py-4">
+        <div className="flex flex-wrap items-center justify-between gap-x-28 gap-y-6 font-utility text-caption leading-caption text-near-black/62">
           <p>Strength for family, freedom, and daily life</p>
           <p>For adults, families, and clinicians</p>
         </div>
       </div>
-      <div className="sp-container flex min-h-[96px] flex-col justify-center gap-12 py-14 md:min-h-[104px] md:flex-row md:items-end md:justify-between md:py-16">
-        <div className="relative isolate max-w-[780px] pb-2 pr-18">
-          <span
-            aria-hidden="true"
-            className="absolute -left-14 top-3 -z-10 h-[46px] w-[calc(100%+28px)] border-l-[6px] border-muted-teal bg-muted-teal/42 md:h-[58px]"
-          />
+      <div className="sp-container grid min-h-[104px] gap-12 py-12 md:min-h-[118px] md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-18 md:py-14">
+        <div className="max-w-[780px] border-l-[5px] border-muted-teal pl-10 md:pl-12">
           <Link
             href="/"
-            className="font-display text-[42px] font-normal leading-none text-near-black md:text-[56px]"
+            className="block font-display text-[44px] font-normal leading-none text-near-black md:text-[62px]"
           >
             StrongPath
           </Link>
-          <p className="mt-6 max-w-[580px] border-t border-near-black/42 pt-5 font-utility text-[15px] font-medium leading-[1.22] text-near-black/82">
+          <p className="mt-5 max-w-[620px] border-t border-near-black/34 pt-5 font-utility text-[15px] font-medium leading-[1.25] text-near-black/78">
             Stay strong for the people you love and the days you want to keep.
           </p>
         </div>
 
         <nav
           aria-label="Primary navigation"
-          className="flex flex-wrap items-center gap-x-16 gap-y-8 border-t border-near-black/18 pt-8 self-stretch md:self-end md:border-t-0 md:pt-0"
+          className="flex flex-wrap items-center gap-x-14 gap-y-8 border-t border-near-black/18 pt-8 md:self-end md:border-t-0 md:pt-0"
         >
           {navItems.map((item) => (
             <Link
